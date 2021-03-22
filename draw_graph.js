@@ -13,7 +13,6 @@ $(function(){
             autounselectify: false,
             selectionType: "additive"
         });
-        let graph_data = JSON.parse("dot_graph_ver2.json");
         // グラフにノードを追加
         for(let i in graph_data["elements"]["nodes"]){
             for(let j in graph_data["elements"]["nodes"][i]){
