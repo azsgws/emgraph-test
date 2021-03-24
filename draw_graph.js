@@ -3,6 +3,8 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 グラフの描画を行う
 */
 $(function(){
+    let json_graph = select_layout();
+    console.log(json_graph)
     $.getJSON("./dot_graph_ver2.json", function(graph_data) {
         //描画(graph_draw()をここに書き写す)
         // cytoscapeグラフの作成(初期化)
@@ -238,7 +240,6 @@ $(function(){
                 return ele.data("name") == select_node_name;
             });
             // ノードが存在するか確認し、処理
-            // 関数化?
             if(select_node.data("name")){
                 reset_elements_style(cy);
                 cy.$(select_node).addClass("selected");
@@ -454,4 +455,18 @@ function search_not_dummy_node(cy, select_elements, is_targets) {
         }
     }
     return connect_node_collection;
+}
+
+/**
+ * HTMLファイル内からlayoutを読み込み，対応したjsonファイル（グラフファイル）名を返す．
+ * @param {cytoscape object} cy cytoscape.jsのグラフ本体
+ * @param {cytoscape object} select_element 選択状態になった要素の集合
+ * @param {boolean} is_target 祖先をたどるか
+ * @return {cytoscape object} connect_node_collection 新たに強調表示になったノードの集合
+**/
+function select_layout() {
+    let layout = document.getElementById("layout").value;
+    console.log(layout)
+
+    return layout
 }
