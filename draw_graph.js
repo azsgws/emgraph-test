@@ -3,7 +3,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 グラフの描画を行う
 */
 $(function(){
-    function _getjson(url){
+    function _getjson(url="./dot_graph_ver2.json"){
         $.getJSON(url, function(graph_data) {
             //描画(graph_draw()をここに書き写す)
             // cytoscapeグラフの作成(初期化)
