@@ -21,16 +21,9 @@
             <p style="display:inline;">Lower Level</p>
             <input type="number" name="ancestor_generations" id="descendant_generations" value="1" min="0" max="100">
             <br>
+            <input type="submit" value="Hierarchical graph" id="dot_layout">
+            <input type="submit" value="Clustering graph" id="sfdp_layout">
             <button type="button" value="reload" id="reload">reload</button>
-            <!--
-            <form>
-                <select name="layout" id="layout" method="post">
-                    <option value="./dot_graph_ver2.json">hierachal graph</option>
-                    <option value="./sfdp_graph.json">clustering graph</option>
-                </select>
-            </form>
-            <input type="submit" value="change_layout" onclick="_getjson()">
-            -->
         </div>
         <div id="graph">
         </div>
