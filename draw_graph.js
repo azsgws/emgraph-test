@@ -3,8 +3,11 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 グラフの描画を行う
 */
 $(function(){
-    $.getJSON("./dot_graph_ver2.json", function(graph_data) {
-        //描画(graph_draw()をここに書き写す)
+    $.when(
+        $.getJSON('./dot_graph_ver2.json'),
+        $.getJSON('./sfdp_graph.json')
+    )
+    .then((dot_graph, sfdp_graph) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -13,32 +16,50 @@ $(function(){
             autounselectify: false,
             selectionType: "additive"
         });
+        let dot_node2pos = {};
+        let sfdp_node2pos = {};
+        // dot(階層グラフ)の各ノードの座標値を記録
+        for(let i in dot_graph[0]["elements"]["nodes"]){
+            for(let j in dot_graph[0]["elements"]["nodes"][i]){
+                dot_node2pos[dot_graph[0]["elements"]["nodes"][i][j]["name"]] = 
+                {'x': (dot_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300, 'y': (dot_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300}
+            }
+        }
+        // sfdp(クラスタリンググラフ)の各ノードの座標値を記録
+        for(let i in dot_graph[0]["elements"]["nodes"]){
+            for(let j in dot_graph[0]["elements"]["nodes"][i]){
+                sfdp_node2pos[dot_graph[0]["elements"]["nodes"][i][j]["name"]] = 
+                {'x': (sfdp_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300, 'y': (sfdp_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300}
+            }
+        }
+ 
         // グラフにノードを追加
-        for(let i in graph_data["elements"]["nodes"]){
-            for(let j in graph_data["elements"]["nodes"][i]){
+        // dot_graph[0], sfdp_graph[0]にグラフデータが入っている
+        for(let i in dot_graph[0]["elements"]["nodes"]){
+            for(let j in dot_graph[0]["elements"]["nodes"][i]){
                 cy.add({
                     group: "nodes",
                     data:{
-                        id: graph_data["elements"]["nodes"][i][j]["id"],
-                        name: graph_data["elements"]["nodes"][i][j]["name"],
-                        is_dummy: graph_data["elements"]["nodes"][i][j]["is_dummy"],
-                        href: graph_data["elements"]["nodes"][i][j]["href"]
+                        id: dot_graph[0]["elements"]["nodes"][i][j]["id"],
+                        name: dot_graph[0]["elements"]["nodes"][i][j]["name"],
+                        is_dummy: dot_graph[0]["elements"]["nodes"][i][j]["is_dummy"],
+                        href: dot_graph[0]["elements"]["nodes"][i][j]["href"]
                     },
                     position:{
-                        x: (graph_data["elements"]["nodes"][i][j]["x"] + 1) * 300,
-                        y: (graph_data["elements"]["nodes"][i][j]["y"] + 1) * 300
+                        x: (dot_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300,
+                        y: (dot_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300
                     }
                 });
             }
         }
         // グラフにエッジを追加
-        for(let i in graph_data["elements"]["edges"]){
-            for(let j in graph_data["elements"]["edges"][i]){
+        for(let i in dot_graph[0]["elements"]["edges"]){
+            for(let j in dot_graph[0]["elements"]["edges"][i]){
                 cy.add({
                     group: "edges",
                     data:{
-                        source: graph_data["elements"]["edges"][i][j]["source"],
-                        target: graph_data["elements"]["edges"][i][j]["target"]
+                        source: dot_graph[0]["elements"]["edges"][i][j]["source"],
+                        target: dot_graph[0]["elements"]["edges"][i][j]["target"]
                     }
                 });
             }
@@ -298,7 +319,29 @@ $(function(){
                 location.reload();
             });
         });
-    });    
+
+        // Hierarchical graphボタンでレイアウトを階層グラフに変更する
+        $("#dot_layout").click(function() {
+            for(let n in dot_node2pos){
+                let node = cy.nodes().filter(function(ele){
+                    return ele.data("name") == n;
+                });
+                cy.$(node).position({x: dot_node2pos[n]['x'], y: dot_node2pos[n]['y']});
+            }
+        });
+        // Clustering graphボタンでレイアウトをクラスタリンググラフに変更する
+        $("#sfdp_layout").click(function() {
+            for(let n in sfdp_node2pos){
+                let node = cy.nodes().filter(function(ele){
+                    return ele.data("name") == n;
+                });
+                cy.$(node).position({x: sfdp_node2pos[n]['x'], y: sfdp_node2pos[n]['y']});
+            }
+        });
+
+    }, () => {
+        alert("ERROR: Failed to read JSON file.");
+    });
 });
 
 
