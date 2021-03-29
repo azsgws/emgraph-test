@@ -379,8 +379,6 @@ function reset_elements_style(cy) {
  * @return
 **/
 function highlight_select_elements(cy, select_node, ancestor_generations, descendant_generations){
-    // 選択したノードにフォーカスを合わせる
-    focus_on_selected_node(cy, select_node);
     // 選択したノードの処理
     cy.$(select_node).addClass("highlight");
     cy.$(select_node).addClass("selected");
