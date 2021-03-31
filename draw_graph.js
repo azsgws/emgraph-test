@@ -393,10 +393,6 @@ function highlight_select_elements(cy, select_node, ancestor_generations, descen
 
     // fadedクラスの物は、動かせないようにする
     cy.$(".faded").lock();
-    // fadedクラスはイベント無効
-    //cy.$(".faded").removeAllListeners();
-
-    console.log(cy.nodes(".highlight").length);
 
 }
 
