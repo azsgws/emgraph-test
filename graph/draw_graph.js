@@ -4,8 +4,8 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./dot_graph_ver2.json'),
-        $.getJSON('./sfdp_graph.json')
+        $.getJSON('./graph_attrs/dot_graph_ver2.json'),
+        $.getJSON('./graph_attrs/sfdp_graph.json')
     )
     .then((dot_graph, sfdp_graph) => {
         // cytoscapeグラフの作成(初期化)
@@ -16,50 +16,40 @@ $(function(){
             autounselectify: false,
             selectionType: "additive"
         });
-        let dot_node2pos = {};
-        let sfdp_node2pos = {};
-        // dot(階層グラフ)の各ノードの座標値を記録
-        for(let i in dot_graph[0]["elements"]["nodes"]){
-            for(let j in dot_graph[0]["elements"]["nodes"][i]){
-                dot_node2pos[dot_graph[0]["elements"]["nodes"][i][j]["name"]] = 
-                {'x': (dot_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300, 'y': (dot_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300}
-            }
+        let graph = {};
+        if(layout==='dot'){
+            graph = dot_graph[0];
         }
-        // sfdp(クラスタリンググラフ)の各ノードの座標値を記録
-        for(let i in dot_graph[0]["elements"]["nodes"]){
-            for(let j in dot_graph[0]["elements"]["nodes"][i]){
-                sfdp_node2pos[dot_graph[0]["elements"]["nodes"][i][j]["name"]] = 
-                {'x': (sfdp_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300, 'y': (sfdp_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300}
-            }
+        else{
+            graph = sfdp_graph[0];
         }
  
         // グラフにノードを追加
-        // dot_graph[0], sfdp_graph[0]にグラフデータが入っている
-        for(let i in dot_graph[0]["elements"]["nodes"]){
-            for(let j in dot_graph[0]["elements"]["nodes"][i]){
+        for(let i in graph["elements"]["nodes"]){
+            for(let j in graph["elements"]["nodes"][i]){
                 cy.add({
                     group: "nodes",
                     data:{
-                        id: dot_graph[0]["elements"]["nodes"][i][j]["id"],
-                        name: dot_graph[0]["elements"]["nodes"][i][j]["name"],
-                        is_dummy: dot_graph[0]["elements"]["nodes"][i][j]["is_dummy"],
-                        href: dot_graph[0]["elements"]["nodes"][i][j]["href"]
+                        id: graph["elements"]["nodes"][i][j]["id"],
+                        name: graph["elements"]["nodes"][i][j]["name"],
+                        is_dummy: graph["elements"]["nodes"][i][j]["is_dummy"],
+                        href: graph["elements"]["nodes"][i][j]["href"]
                     },
                     position:{
-                        x: (dot_graph[0]["elements"]["nodes"][i][j]["x"] + 1) * 300,
-                        y: (dot_graph[0]["elements"]["nodes"][i][j]["y"] + 1) * 300
+                        x: (graph["elements"]["nodes"][i][j]["x"] + 1) * 300,
+                        y: (graph["elements"]["nodes"][i][j]["y"] + 1) * 300
                     }
                 });
             }
         }
         // グラフにエッジを追加
-        for(let i in dot_graph[0]["elements"]["edges"]){
-            for(let j in dot_graph[0]["elements"]["edges"][i]){
+        for(let i in graph["elements"]["edges"]){
+            for(let j in graph["elements"]["edges"][i]){
                 cy.add({
                     group: "edges",
                     data:{
-                        source: dot_graph[0]["elements"]["edges"][i][j]["source"],
-                        target: dot_graph[0]["elements"]["edges"][i][j]["target"]
+                        source: graph["elements"]["edges"][i][j]["source"],
+                        target: graph["elements"]["edges"][i][j]["target"]
                     }
                 });
             }
