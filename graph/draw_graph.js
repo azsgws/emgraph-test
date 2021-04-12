@@ -14,7 +14,8 @@ $(function(){
             elements: [],
             boxSelectionEnabled: true,
             autounselectify: false,
-            selectionType: "additive"
+            selectionType: "additive",
+            wheelSensitivity: 0.1
         });
         let graph = {};
         if(layout==='dot'){
@@ -23,8 +24,7 @@ $(function(){
         else{
             graph = sfdp_graph[0];
         }
- 
-        // グラフにノードを追加
+        // Add nodes to a graph
         for(let i in graph["elements"]["nodes"]){
             for(let j in graph["elements"]["nodes"][i]){
                 cy.add({
@@ -42,7 +42,7 @@ $(function(){
                 });
             }
         }
-        // グラフにエッジを追加
+        // Add edges to a graph
         for(let i in graph["elements"]["edges"]){
             for(let j in graph["elements"]["edges"][i]){
                 cy.add({
@@ -55,7 +55,7 @@ $(function(){
             }
         }
 
-        // グラフのスタイルを決定
+        // Set graph style
         cy.style([
             /* 初期状態のスタイル */
             {
@@ -217,7 +217,6 @@ $(function(){
             },
         ]);
 
-
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
         let all_nodes = cy.nodes();
@@ -226,8 +225,8 @@ $(function(){
 
 
         // 強調表示する祖先、子孫の世代数の初期化
-        let ancestor_generations = 1
-        let descendant_generations = 1
+        let ancestor_generations = 1;
+        let descendant_generations = 1;
 
 
         /* 検索機能の追加 */
@@ -310,28 +309,10 @@ $(function(){
             });
         });
 
-        // Hierarchical graphボタンでレイアウトを階層グラフに変更する
-        $("#dot_layout").click(function() {
-            for(let n in dot_node2pos){
-                let node = cy.nodes().filter(function(ele){
-                    return ele.data("name") == n;
-                });
-                cy.$(node).position({x: dot_node2pos[n]['x'], y: dot_node2pos[n]['y']});
-            }
-        });
-        // Clustering graphボタンでレイアウトをクラスタリンググラフに変更する
-        $("#sfdp_layout").click(function() {
-            for(let n in sfdp_node2pos){
-                let node = cy.nodes().filter(function(ele){
-                    return ele.data("name") == n;
-                });
-                cy.$(node).position({x: sfdp_node2pos[n]['x'], y: sfdp_node2pos[n]['y']});
-            }
-        });
-
     }, () => {
         alert("ERROR: Failed to read JSON file.");
     });
+
 });
 
 
@@ -480,18 +461,4 @@ function search_not_dummy_node(cy, select_elements, is_targets) {
         }
     }
     return connect_node_collection;
-}
-
-/**
- * HTMLファイル内からlayoutを読み込み，対応したjsonファイル（グラフファイル）名を返す．
- * @param {cytoscape object} cy cytoscape.jsのグラフ本体
- * @param {cytoscape object} select_element 選択状態になった要素の集合
- * @param {boolean} is_target 祖先をたどるか
- * @return {cytoscape object} connect_node_collection 新たに強調表示になったノードの集合
-**/
-function select_layout() {
-    let layout = document.getElementById("layout").value;
-    console.log(layout)
-
-    return layout
 }
