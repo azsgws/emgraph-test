@@ -1,7 +1,7 @@
 #graph{
-    position: relative;
-    height: 780px;  /*755px*/
-    width: 1910px;  /*1910px*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: #f0f0f0;
 }
 
