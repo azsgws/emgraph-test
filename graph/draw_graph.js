@@ -307,14 +307,6 @@ $(function(){
 });
 
 
-function reset_graph(cy, all_nodes_positions) {
-    /**
-    * 移動したノードなどを初期の位置に戻す。
-    **/
-    location.reload();  //画面をリロード
-}
-
-
 /**
  * グラフの要素のスタイルを初期状態(ノード：赤い丸、エッジ：黒矢印)に戻す。
  * ただし、移動したノードの位置は戻らない。
@@ -360,51 +352,35 @@ function highlight_select_elements(cy, select_node, ancestor_generations, descen
 
 
 /**
- * 選んだ1つのノードに近づく、焦点を当てる。
- * @param {cytoscape object} cy: cytoscapeグラフ本体
- * @param {cytoscape object} selected_node: cyの単一のノード。近づきたいノード。
- * @return
-**/
-function focus_on_selected_node(cy, selected_node){
-    cy.animate({
-        fit:{
-            eles: selected_node,
-            padding: 310
-        }
-    });
-}
-
-
-/**
- * 選択したノード(select_node)とその祖先または子孫を任意の世代数(generations)までを
+ * 選択したノード(select_node)とその祖先または子孫を任意の世代数(generation)までを
  * 強調表示するクラスに追加する。
  * アルゴリズム
  *      次の処理を辿りたい世代数まで繰り返す
-            1. node_to_get_connectionの親(もしくは子)ノードとそのエッジを強調表示させるクラスに追加する
-            2. 1でクラスに追加したノードをnode_to_get_connectionとして更新する
-            3. 2でnode_to_get_connectionが空ならループを中断する
+            1. first_connected_elementsの親(もしくは子)ノードとそのエッジを強調表示させるクラスに追加する
+            2. 1でクラスに追加したノードをfirst_connected_elementsとして更新する
+            3. 2でfirst_connected_elementsが空ならループを中断する
  * @param {cytoscape object} cy cytoscapeのグラフ本体
- * @param {int} generations 辿りたい世代数
+ * @param {int} generation 辿りたい世代数
  * @param {cytoscape object} select_node 選択したノード
  * @param {boolean} is_ancestor 辿りたいのは祖先かどうか。trueなら祖先、falseなら子孫を強調表示させていく。
  * @return
 **/
-function highlight_connected_elements(cy, generations, select_node, is_ancestor){
-    let node_to_get_connection = cy.collection();  // 親(もしくは子)を取得したいノードのコレクション（≒リスト）
-    node_to_get_connection = node_to_get_connection.union(select_node);
-    for (let i=0; i<generations; i++){
+function highlight_connected_elements(cy, generation, select_node, is_ancestor){
+    let first_connected_elements = cy.collection();  // 親(もしくは子)を取得したいノードのコレクション（≒リスト）
+    first_connected_elements = first_connected_elements.union(select_node);
+    for (let i=0; i<generation; i++){
         let class_name = is_ancestor ? "selected_ancestors" : "selected_descendants";
         class_name += Math.min(9, i);
-        let next_node_to_get_connection = cy.collection();
-        cy.$(node_to_get_connection).forEach(function(n){
+        let second_connected_elements = cy.collection();
+        cy.$(first_connected_elements).forEach(function(n){
             let connect_elements = is_ancestor ? n.outgoers() : n.incomers();
             connect_elements = connect_elements.difference(cy.$(connect_elements).filter(".highlight"));
             cy.$(connect_elements).addClass("highlight");
             cy.$(connect_elements).nodes().addClass(class_name);
-            next_node_to_get_connection = next_node_to_get_connection.union(connect_elements.nodes());
+            second_connected_elements = second_connected_elements.union(connect_elements.nodes());
         });
-        node_to_get_connection = next_node_to_get_connection;
-        if (node_to_get_connection.length === 0){
+        first_connected_elements = second_connected_elements;
+        if (first_connected_elements.length === 0){
             break;
         }
     }
