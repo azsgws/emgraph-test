@@ -32,7 +32,8 @@ $(function(){
             for(let j in nodes[i]){
                 let node = {};
                 node["group"] = "nodes";
-                node["data"] = {"id": nodes[i][j]["id"], "name": nodes[i][j]["name"], "href": nodes[i][j]["href"]};
+                node["data"] = {"id": nodes[i][j]["id"], "name": nodes[i][j]["name"], 
+                                "href": nodes[i][j]["href"], "size": nodes[i][j]["size"]};
                 node["position"] = {"x": (nodes[i][j]["x"] + 1) * 300, "y": (nodes[i][j]["y"] + 1) * 300};
                 nodes_and_edges.push(node);
             }

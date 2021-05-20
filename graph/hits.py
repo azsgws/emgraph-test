@@ -22,7 +22,7 @@ hubs, authorities = nx.hits(G, max_iter = 5000, normalized = True)
 # authoritiesをノードのサイズに適用する
 node_size = dict()
 for k, v in authorities.items():
-    node_size[k] = {'node_size': v*100.0 + 150.0}
+    node_size[k] = {'size': v*100.0 + 150.0}
 print(node_size)
 
 # node_sizeをグラフの属性値として定義する
