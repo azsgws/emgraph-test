@@ -17,6 +17,32 @@ def min_max_normalization(data_dict, max_val, min_val):
     return node_size
 
 
+def decide_node_size_from_authority_log(authorities):
+    log_val_list = list()
+
+    for k,v in authorities.items():
+        if v:
+            node2size[k] = math.log10(v)
+            log_val_list.append(math.log10(v))
+        # v = 0.0の処理
+        else:
+            node2size[k] = False
+
+    # v = 0.0の処理
+    for k,v in node2size.items():
+        if not v:
+            node2size[k] = min(log_val_list) - float(1)
+
+    node2size_min = min(node2size.values())
+    print(node2size_min)
+
+    for k,v in node2size.items():
+        node2size[k] = v - node2size_min + float(1)
+
+    return node2size
+
+
+
 cwd = os.getcwd()
 
 try:
@@ -42,28 +68,9 @@ print(min(authorities.values()))
 # min authority 0.0000000000
 
 # min_max_normalization(authorities, 1.0, 0.1)
-log_val_list = list()
+node2size = decide_node_size_from_authority_log(authorities)
 
-for k,v in authorities.items():
-    if v:
-        node2size[k] = math.log10(v)
-        log_val_list.append(math.log10(v))
-    # v = 0.0の処理
-    else:
-        node2size[k] = False
-
-# v = 0.0の処理
-for k,v in node2size.items():
-    if not v:
-        node2size[k] = min(log_val_list) - float(1)
-
-node2size_min = min(node2size.values())
-print(node2size_min)
-
-for k,v in node2size.items():
-    node2size[k] = v - node2size_min + float(1)
-
-with open("node_size.txt", "w") as f:
+with open("node2size.txt", "w") as f:
     f.write(str(node2size))
 
 node_size = dict()
