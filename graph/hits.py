@@ -1,7 +1,6 @@
 import os
 import json
 import networkx as nx
-import pprint
 import math
 
 def min_max_normalization(data_dict, max_val, min_val):
@@ -19,6 +18,7 @@ def min_max_normalization(data_dict, max_val, min_val):
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
+    node2size = dict()
 
     for k,v in authorities.items():
         if v:
@@ -34,7 +34,6 @@ def decide_node_size_from_authority_log(authorities):
             node2size[k] = min(log_val_list) - float(1)
 
     node2size_min = min(node2size.values())
-    print(node2size_min)
 
     for k,v in node2size.items():
         node2size[k] = v - node2size_min + float(1)
@@ -42,49 +41,56 @@ def decide_node_size_from_authority_log(authorities):
     return node2size
 
 
-
 cwd = os.getcwd()
 
 try:
     os.chdir("graph_attrs")
+    with open("sfdp_graph.json", "r") as f:
+        sfdp_graph = json.load(f)
     with open("dot_graph_ver2.json", "r") as f:
-        graph = json.load(f)
+        dot_graph = json.load(f)
 
 finally:
     os.chdir(cwd)
 
 # networkxのグラフを作成
-G = nx.cytoscape_graph(graph)
+sfdp_G = nx.cytoscape_graph(sfdp_graph)
+dot_G = nx.cytoscape_graph(dot_graph)
 
 # 作成したグラフをもとに，hits.authoritiesを計算
-hubs, authorities = nx.hits(G, max_iter = 10000, normalized = True)
+sfdp_hubs, sfdp_authorities = nx.hits(sfdp_G, max_iter = 10000, normalized = True)
+dot_hubs, dot_authorities = nx.hits(dot_G, max_iter = 10000, normalized = True)
 
 # authoritiesをノードのサイズに適用する
-node2size = dict()
-
-#pprint.pprint(node_size)
-print(min(authorities.values()))
-# max authority 0.04532309683747147
-# min authority 0.0000000000
+sfdp_node2size = dict()
+dot_node2size = dict()
 
 # min_max_normalization(authorities, 1.0, 0.1)
-node2size = decide_node_size_from_authority_log(authorities)
+sfdp_node2size = decide_node_size_from_authority_log(sfdp_authorities)
+dot_node2size = decide_node_size_from_authority_log(dot_authorities)
 
-with open("node2size.txt", "w") as f:
-    f.write(str(node2size))
+sfdp_node_size = dict()
+for k,v in sfdp_node2size.items():
+    sfdp_node_size[k] = {'size': v}
 
-node_size = dict()
-for k,v in node2size.items():
-    node_size[k] = {'size': v}
+dot_node_size = dict()
+for k,v in dot_node2size.items():
+    dot_node_size[k] = {'size': v}
 
 # node_sizeをグラフの属性値として定義する
-nx.set_node_attributes(G, node_size)
+nx.set_node_attributes(sfdp_G, sfdp_node_size)
+nx.set_node_attributes(dot_G, dot_node_size)
 
 # グラフの描画
-nx.draw_networkx(G)
+nx.draw_networkx(sfdp_G)
+nx.draw_networkx(dot_G)
 #fig = plt.savefig("test.png")
 
-graph_json = nx.cytoscape_data(G, attrs=None)
+sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
+dot_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 
-with open("dot_graph_ver3_pre.json", "w") as f:
-    f.write(json.dumps(graph_json))
+with open("sfdp_graph_ver2_log10.json", "w") as f:
+    f.write(json.dumps(sfdp_graph_json))
+
+with open("dot_graph_ver3_log10.json", "w") as f:
+    f.write(json.dumps(dot_graph_json))

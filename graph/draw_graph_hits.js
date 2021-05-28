@@ -5,7 +5,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_ver3_log10.json'),
-        $.getJSON('./graph_attrs/sfdp_graph.json')
+        $.getJSON('./graph_attrs/sfdp_graph_ver2_log10.json')
     )
     .then((dot_graph, sfdp_graph) => {
         // cytoscapeグラフの作成(初期化)
@@ -52,41 +52,36 @@ $(function(){
             /* 初期状態のスタイル */
             {
                 selector: "node",
-                css: {"background-color": "#ff0000", "shape": "ellipse", "width": "data(size)", "height": "data(size)",
-                        "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
-                        "text-halign":"center", "text-valign": "center", "font-style": "normal",
-                        "font-weight": "bold", "color": "#000000",
-                        "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
+                css: {"shape": "ellipse", "width": "data(size)", "height": "data(size)",
+                      "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
+                      "text-halign":"center", "text-valign": "center", "font-style": "normal",
+                      "font-weight": "bold", "color": "#000000",
+                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
             },
             {
                 selector: "node[size<=50]", 
-                css: {"background-color": "#ffd5ff",
-                      "text-outline-color": "#ffd5ff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#0000ff", "color": "#ffffff",
+                      "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size>50]", 
-                css: {"background-color": "#ff80ff",
-                      "text-outline-color": "#ff80ff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#00ffff",
+                      "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size>100]", 
-                css: {"background-color": "#ff2bff",
-                      "text-outline-color": "#ff2bff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ffd000",
+                      "text-outline-color": "#ffd000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size>150]", 
-                css: {"background-color": "#d500d5",
-                      "text-outline-color": "#d500d5", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ff7700",
+                      "text-outline-color": "#ff7700", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size>200]", 
-                css: {"background-color": "#800080",
-                      "text-outline-color": "#800080", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node[size>250]", 
-                css: {"background-color": "#550055",
-                      "text-outline-color": "#550055", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ff0000", "color": "#ffffff", 
+                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "edge",
@@ -238,6 +233,8 @@ $(function(){
                 css: {"opacity": 0.4, "z-index": 0}  // 0.05, 0
             }
         ]);
+
+        //cy.layout({ name: 'dagre'}).run();
 
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
