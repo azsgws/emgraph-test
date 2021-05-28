@@ -8,7 +8,7 @@
         <script type="text/javascript">
             let layout = "dot";
         </script>
-        <script src="./draw_graph_hits.js"></script>
+        <script src="./draw_graph.js"></script>
     </head>
     <body>
         <div>
@@ -26,31 +26,7 @@
             <br>
             <button type="button" value="reload" id="reload">reload</button>
             <a href="./clustering_graph.html">Clustering graph</a>
-        </div>
-        <div class="color_index">
-            <ul class="color_labels">
-                <li id="color_labels_title">"Authority"</li>
-                <li id="node_under_50">
-                    <span style="background-color: #0000ff;"></span>
-                    "    ~  50"
-                </li>
-                <li id="node_51to100">
-                    <span style="background-color: #00ffff;"></span>
-                    " 51 ~ 100"
-                </li>
-                <li id="node_under_50">
-                    <span style="background-color: #ffd000;"></span>
-                    "101 ~ 150"
-                </li>
-                <li id="node_under_50">
-                    <span style="background-color: #ff7700;"></span>
-                    "151 ~ 200"
-                </li>
-                <li id="node_under_50">
-                    <span style="background-color: #ff0000;"></span>
-                    "201 ~ "
-                </li>
-            </ul>
+            <a href="./hierarchical_graph_hits.html">Apply Hits Authority</a>
         </div>
         <div id="graph"></div>
     </body>

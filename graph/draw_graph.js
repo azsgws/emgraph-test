@@ -4,7 +4,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph_ver3_log10.json'),
+        $.getJSON('./graph_attrs/dot_graph_ver2.json'),
         $.getJSON('./graph_attrs/sfdp_graph.json')
     )
     .then((dot_graph, sfdp_graph) => {
@@ -52,7 +52,7 @@ $(function(){
             /* 初期状態のスタイル */
             {
                 selector: "node",
-                css: {"background-color": "#ff0000", "shape": "ellipse", "width": "data(size)", "height": "data(size)",
+                css: {"background-color": "#ff0000", "shape": "ellipse", "width": "150", "height": "150",
                         "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                         "text-halign":"center", "text-valign": "center", "font-style": "normal",
                         "font-weight": "bold", "color": "#ffffff",
