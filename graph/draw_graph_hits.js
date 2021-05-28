@@ -5,7 +5,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_hits.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_ver2_log10.json')
+        $.getJSON('./graph_attrs/sfdp_graph_hits.json')
     )
     .then((dot_graph, sfdp_graph) => {
         // cytoscapeグラフの作成(初期化)
