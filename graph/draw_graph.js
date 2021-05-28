@@ -4,7 +4,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph_ver2.json'),
+        $.getJSON('./graph_attrs/dot_graph.json'),
         $.getJSON('./graph_attrs/sfdp_graph.json')
     )
     .then((dot_graph, sfdp_graph) => {
