@@ -89,8 +89,8 @@ nx.draw_networkx(dot_G)
 sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
 
-with open("sfdp_graph_ver2_hits.json", "w") as f:
+with open("sfdp_graph_hits.json", "w") as f:
     f.write(json.dumps(sfdp_graph_json))
 
-with open("dot_graph_ver3_hits.json", "w") as f:
+with open("dot_graph_hits.json", "w") as f:
     f.write(json.dumps(dot_graph_json))
