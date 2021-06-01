@@ -131,8 +131,8 @@ $(function(){
             },
             {
                 selector: "node.selected_descendants4",
-                css: {"background-color": "#00ffff", "color": "#ffffff",
-                "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#0000ff", "color": "#ffffff",
+                "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             /* ダミーノードを指すエッジが選択された場合 */
             {
