@@ -134,6 +134,12 @@ $(function(){
                 css: {"background-color": "#0000ff", "color": "#ffffff",
                 "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
+            // 強調表示されたノードをつなぐエッジのスタイル
+            {
+                selector: "edge.highlight",
+                css: {"line-color": "#006400", "curve-style": "straight",
+                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 10, "opacity": 1, "z-index": 20}
+            },
             /* ダミーノードを指すエッジが選択された場合 */
             {
                 selector: cy.nodes().edgesTo("node.selected[?is_dummy]"),
