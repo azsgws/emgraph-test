@@ -64,7 +64,7 @@ $(function(){
                 css: {"shape": "ellipse", "width": "data(size)", "height": "data(size)",
                       "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                       "text-halign":"center", "text-valign": "center", "font-style": "normal",
-                      "font-weight": "bold", "color": "#000000",
+                      "font-weight": "bold", "color": "#ffffff",
                       "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
             },
             {
