@@ -2,6 +2,19 @@ import os
 import json
 import networkx as nx
 
+
+def min_max_normalization(node2size, max_val, min_val):
+    node_size = dict()
+    node2size_max = max(node2size.values())
+    node2size_min = min(node2size.values())
+
+    for k, v in node2size.items():
+        node_size[k] = {'size': 
+            ((v - node2size_min) / (node2size_max - node2size_min)) * (max_val - min_val) + min_val}
+
+    return node_size
+
+
 cwd = os.getcwd()
 
 try:
@@ -23,13 +36,8 @@ dot_node2pagerank = nx.pagerank(dot_G, max_iter=1000)
 sfdp_node2pagerank = nx.pagerank(sfdp_G, max_iter=1000)
 
 # authoritiesをノードのサイズに適用する
-dot_node_size = dict()
-sfdp_node_size = dict()
-for k,v in dot_node2pagerank.items():
-    dot_node_size[k] = {'size': v*20000}
-
-for k,v in sfdp_node2pagerank.items():
-    sfdp_node_size[k] = {'size': v*20000}
+dot_node_size = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
+sfdp_node_size = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
 
 # node_sizeをグラフの属性値として定義する
 nx.set_node_attributes(dot_G, dot_node_size)
