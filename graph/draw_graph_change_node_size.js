@@ -5,9 +5,11 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_hits.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_hits.json')
+        $.getJSON('./graph_attrs/sfdp_graph_hits.json'),
+        $.getJSON('./graph_attrs/dot_graph_pagerank.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_pagerank.json'),
     )
-    .then((dot_graph, sfdp_graph) => {
+    .then((dot_graph_hits, sfdp_graph_hits, dot_graph_pagerank, sfdp_graph_pagerank) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -18,12 +20,19 @@ $(function(){
             wheelSensitivity: 0.1
         });
         let graph = {};
-        if(layout==='dot'){
-            graph = dot_graph[0];
+        if(layout==='dot_hits'){
+            graph = dot_graph_hits[0];
+        }
+        else if(layout==='sfdp_hits'){
+            graph = sfdp_graph_hits[0];
+        }
+        else if(layout==='dot_pagerank'){
+            graph = dot_graph_pagerank[0];
         }
         else{
-            graph = sfdp_graph[0];
+            graph = sfdp_graph_pagerank[0];
         }
+
         let nodes = graph["elements"]["nodes"];
         let edges = graph["elements"]["edges"];
         let nodes_and_edges = [];
