@@ -268,10 +268,25 @@ $(function(){
                 reset_elements_style(cy);
             }
         });
+        // エッジをクリックしたとき，グラフを初期状態のスタイルにする
+        cy.edges().on("tap", function(event){
+            reset_elements_style(cy);
+        });
+
+        // ノードの上にカーソルが来たとき，ノード名を表示する
+        cy.nodes().on("mouseover", function(event){
+            cy.add({
+                group: 'nodes',
+                data: {id: "name-plate", name: event.target.data("name")},
+                position: {x: event.target.position("x"), y: event.target.position("y")+50}
+            });
+        });
+        cy.nodes().on("mouseout", function(event){
+            cy.remove(cy.$('#name-plate'));
+        });
 
 
         // ノードをクリックした場合、リンクに飛ぶ(htmlリンクの設定)
-        // faded状態ならば反応しない
         cy.nodes().on("cxttap", function(event){
             let clicked_node = event.target;
             try {  // your browser may block popups
