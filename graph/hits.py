@@ -3,18 +3,6 @@ import json
 import networkx as nx
 import math
 
-def min_max_normalization(data_dict, max_val, min_val):
-    node_size = dict()
-    data_dict_max = max(data_dict.values())
-    data_dict_min = min(data_dict.values())
-
-    for k, v in data_dict.items():
-        node_size[k] = {'size': 
-            ((v - data_dict_min) / (data_dict_max - data_dict_min)) * (max_val - min_val) + min_val}
-        node_size[k]['size'] *= 1500
-
-    return node_size
-
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
