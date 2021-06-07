@@ -97,144 +97,16 @@ $(function(){
                 css: {"line-color": "black", "target-arrow-shape": "triangle", "curve-style": "straight",
                 "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}  //0.3
             },
-            /* リンクのないノードは灰色 */
-            {
-                selector: "node[!href][!is_dummy]",
-                css: {"background-color": "#a9a9a9", "z-index": 1}
-            },
-            /* ノードが左クリックされたときに適応されるスタイル */
-            // 選択されたノード全てのスタイル
-            {
-                selector: "node.highlight",
-                css: {"font-size": 20,  "width": 250, "height": 250, "font-size": 100,
-                "content": "data(name)", "opacity": 1, "z-index": 10}
-            },
-            // 選択(左クリック)されたノードのスタイル
-            {
-                selector: "node.selected",
-                css: {"background-color": "#fff100", "color": "#ff0000", "width": 300, "height": 300,
-                "text-outline-color": "#fff100", "text-outline-opacity": 1, "text-outline-width": 10
-                }
-            },
-            // 選択された(強調表示する)祖先のスタイル
-            {
-                selector: "node.selected_ancestors0",
-                css: {"background-color": "#fcc800",  "color": "#ffffff",
-                "text-outline-color": "#fcc800", "text-outline-opacity": 1, "text-outline-width": 10} 
-            },
-            {
-                selector: "node.selected_ancestors1",
-                css: {"background-color": "#f39800",  "color": "#ffffff",
-                "text-outline-color": "#f39800", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors2",
-                css: {"background-color": "#eb6100", "color": "#ffffff",
-                "text-outline-color": "#eb6100", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors3",
-                css: {"background-color": "#e60012", "color": "#ffffff",
-                "text-outline-color": "#e60012", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors4",
-                css: {"background-color": "#ff4477", "color": "#ffffff",
-                "text-outline-color": "#ff4477", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors5",
-                css: {"background-color": "#ff6699", "color": "#ffffff",
-                "text-outline-color": "#ff6699", "text-outline-opacity": 1, "text-outline-width": 10} 
-            },
-            {
-                selector: "node.selected_ancestors6",
-                css: {"background-color": "#cc4499", "color": "#ffffff",
-                "text-outline-color": "#cc4499", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors7",
-                css: {"background-color": "#be0081", "color": "#ffffff",
-                "text-outline-color": "#be0081", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors8",
-                css: {"background-color": "#920783", "color": "#ffffff",
-                "text-outline-color": "#920783", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors9",
-                css: {"background-color": "#601986", "color": "#ffffff",
-                "text-outline-color": "#601986", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            // 選択された(強調表示する)子孫のスタイル
-            {
-                selector: "node.selected_descendants0",
-                css: {"background-color": "#cfdb00", "color": "#ffffff",
-                "text-outline-color": "#cfdb00", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants1",
-                css: {"background-color": "#8fc31f", "color": "#ffffff",
-                "text-outline-color": "#8fc31f", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants2",
-                css: {"background-color": "#22ac38", "color": "#ffffff",
-                "text-outline-color": "#22ac38", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants3",
-                css: {"background-color": "#009944", "color": "#ffffff",
-                "text-outline-color": "#009944", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants4",
-                css: {"background-color": "#009b6b", "color": "#ffffff",
-                "text-outline-color": "#009b6b", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants5",
-                css: {"background-color": "#009e96", "color": "#ffffff",
-                "text-outline-color": "#009e96", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants6",
-                css: {"background-color": "#00a0c1", "color": "#ffffff",
-                "text-outline-color": "#00a0c1", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants7",
-                css: {"background-color": "#00a0e9", "color": "#ffffff",
-                "text-outline-color": "#00a0e9", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants8",
-                css: {"background-color": "#0086d1", "color": "#ffffff",
-                "text-outline-color": "#0086d1", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants9",
-                css: {"background-color": "#0068b7", "color": "#ffffff",
-                "text-outline-color": "#0068b7", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
             // 強調表示されたノードをつなぐエッジのスタイル
             {
                 selector: "edge.highlight",
                 css: {"line-color": "#006400", "curve-style": "straight",
-                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 10, "opacity": 1, "z-index": 20}
-            },
-
-            /* ダミーノードを指すエッジが選択された場合 */
-            {
-                selector: cy.nodes().edgesTo("node.selected[?is_dummy]"),
-                css: {"line-color": "green", "target-arrow-shape": "none", "curve-style": "straight",
-                "arrow-scale": 10, "width": 5, "z-index": 10, width: 20}  //arrow-scale 0
+                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 7, "opacity": 1, "z-index": 20}
             },
             // 選択されていないノードの色を変更
             {
                 selector: "node.faded",
-                css: {"background-color": "#808080"}
+                css: {"background-color": "#808080", "text-outline-color": "#808080"}
             },
             // 選択されていないノードとエッジは薄く表示する
             {
