@@ -65,7 +65,7 @@ $(function(){
                       "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                       "text-halign":"center", "text-valign": "center", "font-style": "normal",
                       "font-weight": "bold", "color": "#ffffff",
-                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
+                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size<=50]", 
@@ -95,7 +95,7 @@ $(function(){
             {
                 selector: "edge",
                 css: {"line-color": "black", "target-arrow-shape": "triangle", "curve-style": "straight",
-                "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}  //0.3
+                "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}
             },
             // 強調表示されたノードをつなぐエッジのスタイル
             {
@@ -111,11 +111,9 @@ $(function(){
             // 選択されていないノードとエッジは薄く表示する
             {
                 selector: ".faded",
-                css: {"opacity": 0.4, "z-index": 0}  // 0.05, 0
+                css: {"opacity": 0.4, "z-index": 0}
             }
         ]);
-
-        //cy.layout({ name: 'dagre'}).run();
 
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
@@ -278,14 +276,11 @@ function highlight_connected_elements(cy, generation, select_node, is_ancestor){
     let first_connected_elements = cy.collection();  // 親(もしくは子)を取得したいノードのコレクション（≒リスト）
     first_connected_elements = first_connected_elements.union(select_node);
     for (let i=0; i<generation; i++){
-        let class_name = is_ancestor ? "selected_ancestors" : "selected_descendants";
-        class_name += Math.min(4, i);
         let second_connected_elements = cy.collection();
         cy.$(first_connected_elements).forEach(function(n){
             let connect_elements = is_ancestor ? n.outgoers() : n.incomers();
             connect_elements = connect_elements.difference(cy.$(connect_elements).filter(".highlight"));
             cy.$(connect_elements).addClass("highlight");
-            cy.$(connect_elements).nodes().addClass(class_name);
             second_connected_elements = second_connected_elements.union(connect_elements.nodes());
         });
         first_connected_elements = second_connected_elements;
