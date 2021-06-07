@@ -19,10 +19,10 @@
             <input type="submit" value="search" id="search">
             <p style="display:inline;" id="select_article">SELECT: </p>
             <br>
-            <p style="display:inline;">Highlight Scale: </p>
-            <p style="display:inline;">Upper Level</p>
+            <p style="display:inline;">Highlight Coloring: </p>
+            <p style="display:inline;">Ancestor nodes</p>
             <input type="number" name="ancestor_generations" id="ancestor_generations" value="1" min="0" max="100">
-            <p style="display:inline;">Lower Level</p>
+            <p style="display:inline;">Descendant nodes</p>
             <input type="number" name="ancestor_generations" id="descendant_generations" value="1" min="0" max="100">
             <br>
             <button type="button" value="reload" id="reload">reload</button>
@@ -35,7 +35,7 @@
                 <li id="color_labels_title">Highlight Coloring
                 <li id="node_anc5">
                     <span style="background-color: #ff0000;"></span>
-                    <pre>Parents generations</pre>
+                    <pre>Ancestor generations</pre>
                 </li>
                 <li id="node_anc4">
                     <span style="background-color: #ff4400;"></span>
@@ -75,7 +75,7 @@
                 </li>
                 <li id="node_des5">
                     <span style="background-color: #0000ff;"></span>
-                    <pre>Child generations</pre>
+                    <pre>Descendant generations</pre>
                 </li>
             </ul>
         </div>

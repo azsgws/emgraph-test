@@ -65,7 +65,7 @@ $(function(){
                       "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                       "text-halign":"center", "text-valign": "center", "font-style": "normal",
                       "font-weight": "bold", "color": "#ffffff",
-                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
+                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[size<=50]", 
@@ -95,91 +95,13 @@ $(function(){
             {
                 selector: "edge",
                 css: {"line-color": "black", "target-arrow-shape": "triangle", "curve-style": "straight",
-                "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}  //0.3
-            },
-            /* リンクのないノードは灰色 */
-            {
-                selector: "node[!href][!is_dummy]",
-                css: {"background-color": "#a9a9a9", "z-index": 1}
-            },
-            /* ノードが左クリックされたときに適応されるスタイル */
-            // 選択されたノード全てのスタイル
-            {
-                selector: "node.highlight",
-                css: {"font-size": 20, "width": 250, "height": 250, "font-size": 100,
-                "content": "data(name)", "opacity": 1, "z-index": 10}
-            },
-            // 選択(左クリック)されたノードのスタイル
-            {
-                selector: "node.selected",
-                css: {"background-color": "#fff100", "color": "#ff0000", "width": 300, "height": 300, 
-                "text-outline-color": "#fff100", "text-outline-opacity": 1, "text-outline-width": 10
-                }
-            },
-            // 選択された(強調表示する)祖先のスタイル
-            {
-                selector: "node.selected_ancestors0",
-                css: {"background-color": "#ffbb00",  "color": "#ffffff",
-                "text-outline-color": "#ffbb00", "text-outline-opacity": 1, "text-outline-width": 10} 
-            },
-            {
-                selector: "node.selected_ancestors1",
-                css: {"background-color": "#ff9900",  "color": "#ffffff",
-                "text-outline-color": "#ff9900", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors2",
-                css: {"background-color": "#ff7700", "color": "#ffffff",
-                "text-outline-color": "#ff7700", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors3",
-                css: {"background-color": "#ff4400", "color": "#ffffff",
-                "text-outline-color": "#ff4400", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_ancestors4",
-                css: {"background-color": "#ff0000", "color": "#ffffff",
-                "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            // 選択された(強調表示する)子孫のスタイル
-            {
-                selector: "node.selected_descendants0",
-                css: {"background-color": "#00ffff", "color": "#ffffff",
-                "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants1",
-                css: {"background-color": "#00ddff", "color": "#ffffff",
-                "text-outline-color": "#00ddff", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants2",
-                css: {"background-color": "#00bbff", "color": "#ffffff",
-                "text-outline-color": "#00bbff", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants3",
-                css: {"background-color": "#0077ff", "color": "#ffffff",
-                "text-outline-color": "#0077ff", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            {
-                selector: "node.selected_descendants4",
-                css: {"background-color": "#0000ff", "color": "#ffffff",
-                "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
+                "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}
             },
             // 強調表示されたノードをつなぐエッジのスタイル
             {
                 selector: "edge.highlight",
                 css: {"line-color": "#006400", "curve-style": "straight",
-                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 10, "opacity": 1, "z-index": 20}
-            },
-
-            /* ダミーノードを指すエッジが選択された場合 */
-            {
-                selector: cy.nodes().edgesTo("node.selected[?is_dummy]"),
-                css: {"line-color": "green", "target-arrow-shape": "none", "curve-style": "straight",
-                "arrow-scale": 10, "width": 5, "z-index": 10, width: 20}  //arrow-scale 0
+                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 7, "opacity": 1, "z-index": 20}
             },
             // 選択されていないノードの色を変更
             {
@@ -189,11 +111,9 @@ $(function(){
             // 選択されていないノードとエッジは薄く表示する
             {
                 selector: ".faded",
-                css: {"opacity": 0.4, "z-index": 0}  // 0.05, 0
+                css: {"opacity": 0.4, "z-index": 0}
             }
         ]);
-
-        //cy.layout({ name: 'dagre'}).run();
 
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
@@ -356,14 +276,11 @@ function highlight_connected_elements(cy, generation, select_node, is_ancestor){
     let first_connected_elements = cy.collection();  // 親(もしくは子)を取得したいノードのコレクション（≒リスト）
     first_connected_elements = first_connected_elements.union(select_node);
     for (let i=0; i<generation; i++){
-        let class_name = is_ancestor ? "selected_ancestors" : "selected_descendants";
-        class_name += Math.min(4, i);
         let second_connected_elements = cy.collection();
         cy.$(first_connected_elements).forEach(function(n){
             let connect_elements = is_ancestor ? n.outgoers() : n.incomers();
             connect_elements = connect_elements.difference(cy.$(connect_elements).filter(".highlight"));
             cy.$(connect_elements).addClass("highlight");
-            cy.$(connect_elements).nodes().addClass(class_name);
             second_connected_elements = second_connected_elements.union(connect_elements.nodes());
         });
         first_connected_elements = second_connected_elements;
