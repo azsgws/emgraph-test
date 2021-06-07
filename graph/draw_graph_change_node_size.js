@@ -279,7 +279,7 @@ function highlight_connected_elements(cy, generation, select_node, is_ancestor){
     first_connected_elements = first_connected_elements.union(select_node);
     for (let i=0; i<generation; i++){
         let class_name = is_ancestor ? "selected_ancestors" : "selected_descendants";
-        class_name += Math.min(9, i);
+        class_name += Math.min(4, i);
         let second_connected_elements = cy.collection();
         cy.$(first_connected_elements).forEach(function(n){
             let connect_elements = is_ancestor ? n.outgoers() : n.incomers();
