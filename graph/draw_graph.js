@@ -227,7 +227,7 @@ $(function(){
             cy.add({
                 group: 'nodes',
                 data: {id: "name-plate", name: event.target.data("name")},
-                position: {x: event.target.position("x"), y: event.target.position("y")+50}
+                position: {x: event.target.position("x"), y: event.target.position("y")+100}
             });
         });
         cy.nodes().on("mouseout", function(event){
