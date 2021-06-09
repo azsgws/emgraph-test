@@ -57,7 +57,7 @@ ul.color_labels li span{
 
 #name-plate{
     position: absolute;
-    z-index: 10;
-    top: 20px;
-    left: 20px;
+    z-index: 1000;
+    font-size: 25px;
+    background-color: #ffe4c4;
 }
