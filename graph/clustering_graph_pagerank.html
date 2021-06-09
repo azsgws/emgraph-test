@@ -13,7 +13,8 @@
     <body>
         <div>
             <input type="text" name="article_name" id="article_name" autocomplete="on"
-                placeholder="&#xf002; Search Article" list="article_list" spellcheck="false">
+                placeholder="&#xf002; Search Article" list="article_list" spellcheck="false"
+                onkeyup="this.value=this.value.toUpperCase()">
             <datalist id="article_list">
             </datalist>
             <input type="submit" value="search" id="search">
