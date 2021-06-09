@@ -54,3 +54,10 @@ ul.color_labels li span{
     right: 10px;
     list-style-type: none;
 }
+
+#name-plate{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+}

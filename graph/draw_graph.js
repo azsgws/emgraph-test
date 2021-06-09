@@ -223,21 +223,17 @@ $(function(){
         });
 
         // ノードの上にカーソルが来たとき，ノード名を表示する
-        cy.nodes().on("mouseover", function(event){
-            cy.add({
-                group: 'nodes',
-                data: {id: "name-plate", name: event.target.data("name")},
-                position: {x: event.target.position("x"), y: event.target.position("y")+100}
+        $(window).on("mousemove", function(window_event){ 
+            cy.nodes().on("mouseover", function(cy_event){
+                document.getElementById("name-plate").style.top = window_event.offsetX + "px";
+                document.getElementById("name-plate").style.left = window_event.offsetY + "px";
+                document.getElementById("name-plate").textContent = cy_event.target.data("name");
             });
-        });
-        cy.nodes().on("mouseout", function(event){
-            cy.remove(cy.$('#name-plate'));
         });
 
 
         // ノードをクリックした場合、リンクに飛ぶ(htmlリンクの設定)
         cy.nodes().on("cxttap", function(event){
-            let clicked_node = event.target;
             try {  // your browser may block popups
                 window.open(this.data("href"));
             } catch(e){  // fall back on url change
