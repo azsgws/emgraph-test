@@ -54,3 +54,7 @@ ul.color_labels li span{
     right: 10px;
     list-style-type: none;
 }
+
+.hide {
+    visibility: hidden;
+}
