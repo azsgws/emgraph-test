@@ -13,7 +13,8 @@
     <body>
         <div>
             <input type="text" name="article_name" id="article_name" autocomplete="on"
-                placeholder="&#xf002; Search Article" list="article_list" spellcheck="false">
+                placeholder="&#xf002; Search Article" list="article_list" spellcheck="false"
+                onkeyup="this.value=this.value.toUpperCase()">
             <datalist id="article_list">
             </datalist>
             <input type="submit" value="search" id="search">
@@ -23,9 +24,10 @@
             <p style="display:inline;">Ancestor generation</p>
             <input type="number" name="ancestor_generations" id="ancestor_generations" value="1" min="0" max="100">
             <p style="display:inline;">Descendant generation</p>
-            <input type="number" name="ancestor_generations" id="descendant_generations" value="1" min="0" max="100">
+            <input type="number" name="descendant_generations" id="descendant_generations" value="1" min="0" max="100">
+            <button type="button" value="re-highlight" id="re-highlight">re-highlight</button>
             <br>
-            <button type="button" value="reload" id="reload">reload</button>
+            <button type="button" value="reset" id="reset">reset</button>
             <a href="./clustering_graph.html">Clustering graph</a>
             <a href="./hierarchical_graph_hits.html">Apply Hits Authority</a>
             <a href="./hierarchical_graph.html">Non Apply Pagerank Authority</a>
@@ -55,6 +57,7 @@
                 </li>
             </ul>
         </div>
+        <div id="name-plate"></div>
         <div id="graph"></div>
     </body>
 </html>

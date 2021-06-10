@@ -174,6 +174,23 @@ $(function(){
                 reset_elements_style(cy);
             }
         });
+        // エッジをクリックしたとき，グラフを初期状態のスタイルにする
+        cy.edges().on("tap", function(event){
+            reset_elements_style(cy);
+        });
+
+
+        // ノードの上にカーソルが来たとき，ノード名を表示する
+        $(window).on("mousemove", function(window_event){ 
+            cy.nodes().on("mouseover", function(cy_event){
+                document.getElementById("name-plate").style.top = window_event.clientY + (10) + "px";
+                document.getElementById("name-plate").style.left = window_event.clientX + (10) +"px";
+                document.getElementById("name-plate").textContent = cy_event.target.data("name");
+            });
+            cy.nodes().on("mouseout", function(){
+                document.getElementById("name-plate").textContent = "";
+            })
+        });
 
 
         // ノードをクリックした場合、リンクに飛ぶ(htmlリンクの設定)
@@ -198,11 +215,23 @@ $(function(){
             let clicked_node_name = clicked_node.data("name");
             $("#select_article").text("SELECT: " + clicked_node_name);
         });
+        
+
+        // re-highlightボタンで再度ハイライトする
+        $("#re-highlight").click(function() {
+            if(cy.nodes(".selected").data()){
+                let selected_node = cy.nodes().filter(function(ele){
+                    return ele.data("name") == cy.nodes(".selected").data("name");
+                });
+                reset_elements_style(cy);
+                highlight_select_elements(cy, selected_node, ancestor_generations, descendant_generations);
+            }
+        });
 
 
-        // reloadボタンでリロードにする
+        // resetボタンでリロードにする
         $(document).ready(function(){
-            $("#reload").click(function(){
+            $("#reset").click(function(){
                 location.reload();
             });
         });
