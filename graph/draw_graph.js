@@ -225,8 +225,8 @@ $(function(){
         // ノードの上にカーソルが来たとき，ノード名を表示する
         $(window).on("mousemove", function(window_event){ 
             cy.nodes().on("mouseover", function(cy_event){
-                document.getElementById("name-plate").style.top = window_event.clientY + (-30) + "px";
-                document.getElementById("name-plate").style.left = window_event.clientX + "px";
+                document.getElementById("name-plate").style.top = window_event.clientY + (10) + "px";
+                document.getElementById("name-plate").style.left = window_event.clientX + (10) +"px";
                 document.getElementById("name-plate").textContent = cy_event.target.data("name");
             });
             cy.nodes().on("mouseout", function(){
