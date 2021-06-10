@@ -257,9 +257,21 @@ $(function(){
         });
 
 
-        // reloadボタンでリロードにする
+        // re-highlightボタンで再度ハイライトする
+        $("#re-highlight").click(function() {
+            if(cy.nodes(".selected").data()){
+                let selected_node = cy.nodes().filter(function(ele){
+                    return ele.data("name") == cy.nodes(".selected").data("name");
+                });
+                reset_elements_style(cy);
+                highlight_select_elements(cy, selected_node, ancestor_generations, descendant_generations);
+            }
+        });
+
+
+        // resetボタンでグラフを初期状態に戻す
         $(document).ready(function(){
-            $("#reload").click(function(){
+            $("#reset").click(function(){
                 location.reload();
             });
         });
