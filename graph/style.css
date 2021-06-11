@@ -55,10 +55,6 @@ ul.color_labels li span{
     list-style-type: none;
 }
 
-.hide {
-    visibility: hidden;
-}
-
 #name-plate{
     position: absolute;
     z-index: 1000;
