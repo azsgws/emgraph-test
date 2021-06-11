@@ -164,11 +164,9 @@ $(function(){
         let all_elements = cy.elements();
         cy.fit(cy.nodes().orphans());
 
-
         // 強調表示する祖先、子孫の世代数の初期化
         let ancestor_generations = 1;
         let descendant_generations = 1;
-
 
         /* 検索機能の追加 */
         // 全ノード名の取得
@@ -234,7 +232,6 @@ $(function(){
             })
         });
 
-
         // ノードをクリックした場合、リンクに飛ぶ(htmlリンクの設定)
         cy.nodes().on("cxttap", function(event){
             try {  // your browser may block popups
@@ -243,7 +240,6 @@ $(function(){
                 window.location.href = this.data("href");
             }
         });
-
 
         // クリックしたノードの親と子、自身を色変更
         cy.nodes().on("tap", function(e){
@@ -256,7 +252,6 @@ $(function(){
             $("#select_article").text("SELECT: " + clicked_node_name);
         });
 
-
         // re-highlightボタンで再度ハイライトする
         $("#re-highlight").click(function() {
             if(cy.nodes(".selected").data()){
@@ -267,7 +262,6 @@ $(function(){
                 highlight_select_elements(cy, selected_node, ancestor_generations, descendant_generations);
             }
         });
-
 
         // resetボタンでグラフを初期状態に戻す
         $(document).ready(function(){
