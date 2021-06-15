@@ -192,9 +192,7 @@ $(function(){
                 cy.$(select_node).addClass("selected");
                 highlight_select_elements(cy, select_node, ancestor_generations, descendant_generations);
                 $("#select_article").text("SELECT: " + select_node_name);
-                $("#highlight_coloring_index").show();
-                //$("#highlight_coloring_index").removeClass("hidden_show");
-                //document.getElementById("highlight_coloring_index").style.visibility = visible;
+                $(".color_index").removeClass("hidden_show");
             }
             else{
                 alert("ERROR: Don't have '" + select_node_name + "' node. Please select existed nodes.");
@@ -216,17 +214,13 @@ $(function(){
             let clicked_point = event.target;
             if (clicked_point === cy){
                 reset_elements_style(cy);
+                $(".color_index").addClass("hidden_show");
             }
-            $("#highlight_coloring_index").hide();
-            //$("#highlight_coloring_index").addClass("hidden_show");
-            //document.getElementById("highlight_coloring_index").style.visibility = hidden;
         });
         // エッジをクリックしたとき，グラフを初期状態のスタイルにする
         cy.edges().on("tap", function(event){
             reset_elements_style(cy);
-            $("#highlight_coloring_index").hide();
-            //$("#highlight_coloring_index").addClass("hidden_show");
-            //document.getElementById("highlight_coloring_index").style.visibility = hidden;
+            $(".color_index").addClass("hidden_show");
         });
 
         // ノードの上にカーソルが来たとき，ノード名を表示する
@@ -259,9 +253,7 @@ $(function(){
             highlight_select_elements(cy, clicked_node, ancestor_generations, descendant_generations);
             let clicked_node_name = clicked_node.data("name");
             $("#select_article").text("SELECT: " + clicked_node_name);
-            $("#highlight_coloring_index").show();
-            //$("#highlight_coloring_index").removeClass("hidden_show");
-            //document.getElementById("highlight_coloring_index").style.visibility = visible;
+            $(".color_index").removeClass("hidden_show");
         });
 
         // re-highlightボタンで再度ハイライトする
