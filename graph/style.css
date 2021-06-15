@@ -17,42 +17,29 @@ button:active{
     z-index: 10;
 }
 
-.color_index ul{
-    margin: 0;
-    margin-right: 10px;
-    padding: 0;
+
+.color_index{
     position: absolute;
+    z-index: 10;
     top: 30px;
-    right: 10px;
-    list-style-type: none;
+    right: 20px;
 }
 
-ul.color_labels li{
-    font-size: 80%;
-    list-style: none;
-    margin-left: 0;
-    line-height: 18px;
-    padding-bottom: 0;
+.color_labels .number_row{
+    width: 20px;
 }
 
-ul.color_labels li span{
-    display: inline-block;
-    float: left;
-    height: 16px;
-    width: 30px;
-    margin-right: 5px;
-    margin-left: 0;
-    border: 1px solid #999999;
+.color_labels .color_row{
+    width: 40px;
 }
 
-#highlight-coloring {
-    margin: 0;
-    margin-right: 30px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    list-style-type: none;
+.color_labels .generation_param_row{
+    width: 140px;
+    font-size: 70%;
+}
+
+.color_labels .node_size_param_row{
+    width: 80px;
 }
 
 #name-plate{
@@ -60,4 +47,8 @@ ul.color_labels li span{
     z-index: 1000;
     font-size: 25px;
     background-color: #ffe4c4;
+}
+
+.hidden_show {
+    visibility: hidden;
 }
