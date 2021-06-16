@@ -171,9 +171,6 @@ $(function(){
                 $("#select_article").text("SELECT: " + select_node_name);
                 $(".color_index").removeClass("hidden_show");
             }
-            else{
-                alert("ERROR: Don't have '" + select_node_name + "' node. Please select existed nodes.");
-            }
         });
 
 
