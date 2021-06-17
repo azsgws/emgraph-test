@@ -27,6 +27,7 @@ button:active{
 
 .color_labels .number_row{
     width: 20px;
+    text-align: center;
 }
 
 .color_labels .color_row{
