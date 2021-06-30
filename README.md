@@ -1,1 +1,1 @@
-# emgraph-test
+# test-emgraph
