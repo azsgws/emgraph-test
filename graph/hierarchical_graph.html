@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>emgraph</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./style.css"></link>
+        <script type="text/javascript">
+            let layout = "dot";
+        </script>
+        <script src="./draw_graph.js"></script>
+    </head>
+    <body>
+        <div>
+            <input type="text" name="article_name" id="article_name" autocomplete="on"
+                placeholder="&#xf002; Search Article" list="article_list" spellcheck="false"
+                onkeyup="this.value=this.value.toUpperCase()">
+            <datalist id="article_list">
+            </datalist>
+            <input type="button" value="search" id="search">
+            <p style="display:inline;" id="select_article">SELECT: </p>
+            <br>
+            <p style="display:inline;">Highlight: </p>
+            <p style="display:inline;">Ancestor generations</p>
+            <input type="number" name="ancestor_generations" id="ancestor_generations" value="1" min="0" max="100">
+            <p style="display:inline;">Descendant generations</p>
+            <input type="number" name="descendant_generations" id="descendant_generations" value="1" min="0" max="100">
+            <button type="button" value="re-highlight" id="re-highlight">re-highlight</button>
+            <br>
+            <button type="button" value="reset" id="reset">reset</button>
+            <a href="./clustering_graph.html">Clustering graph</a>
+            <a href="./hierarchical_graph_hits.html">Apply Hits Authority</a>
+            <a href="./hierarchical_graph_pagerank.html">Apply Pagerank Authority</a>
+        </div>
+        <div class="color_index hidden_show" id="highlight_coloring_index">
+            <p><b>Highlight Coloring</b></p>
+            <table class="color_labels">
+                <tr>
+                    <td class="number_row">5~</td>
+                    <td class="color_row"><span style="background-color: #ff0000;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row">Ancestor generations</td>
+                </tr>
+                <tr>
+                    <td class="number_row">4</td>
+                    <td class="color_row"><span style="background-color: #ff4400;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">3</td>
+                    <td class="color_row"><span style="background-color: #ff7700;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">2</td>
+                    <td class="color_row"><span style="background-color: #ff9900;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">1</td>
+                    <td class="color_row"><span style="background-color: #ffbb00;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">0</td>
+                    <td class="color_row"><span style="background-color: #fff100;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row">Select</td>
+                </tr>
+                <tr>
+                    <td class="number_row">1</td>
+                    <td class="color_row"><span style="background-color: #00ffff;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">2</td>
+                    <td class="color_row"><span style="background-color: #00ddff;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">3</td>
+                    <td class="color_row"><span style="background-color: #00bbff;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">4</td>
+                    <td class="color_row"><span style="background-color: #0077ff;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row"></td>
+                </tr>
+                <tr>
+                    <td class="number_row">5~</td>
+                    <td class="color_row"><span style="background-color: #0000ff;">&emsp;&emsp;</span></td>
+                    <td class="generation_param_row">Descendant generations</td>
+                </tr>
+            </table>
+        </div>
+        <div id="name-plate"></div>
+        <div id="graph"></div>
+    </body>
+</html>
