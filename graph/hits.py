@@ -3,6 +3,8 @@ import json
 import networkx as nx
 import math
 
+from networkx.algorithms.link_analysis.hits_alg import authority_matrix
+
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
@@ -35,7 +37,7 @@ try:
     os.chdir("graph_attrs")
     with open("sfdp_graph.json", "r") as f:
         sfdp_graph = json.load(f)
-    with open("dot_graph_ver2.json", "r") as f:
+    with open("dot_graph.json", "r") as f:
         dot_graph = json.load(f)
 
 finally:
@@ -50,24 +52,38 @@ sfdp_hubs, sfdp_authorities = nx.hits(sfdp_G, max_iter = 10000, normalized = Tru
 dot_hubs, dot_authorities = nx.hits(dot_G, max_iter = 10000, normalized = True)
 
 # authoritiesをノードのサイズに適用する
-sfdp_node2size = dict()
-dot_node2size = dict()
+sfdp_node2authorities = dict()
+dot_node2authorities = dict()
 
 # min_max_normalization(authorities, 1.0, 0.1)
-sfdp_node2size = decide_node_size_from_authority_log(sfdp_authorities)
-dot_node2size = decide_node_size_from_authority_log(dot_authorities)
+sfdp_node2authorities = decide_node_size_from_authority_log(sfdp_authorities)
+dot_node2authorities = decide_node_size_from_authority_log(dot_authorities)
 
-sfdp_node_size = dict()
-for k,v in sfdp_node2size.items():
-    sfdp_node_size[k] = {'size': v}
+# authorityを順位付け
+authorities = list()
+for v in sfdp_node2authorities.values():
+    authorities.append(v)
 
-dot_node_size = dict()
-for k,v in dot_node2size.items():
-    dot_node_size[k] = {'size': v}
+authorities = list(set(authorities))
+authorities_sorted = sorted(authorities, reverse=True)
+rank2authorities = dict()
+rank = 0
+for v in authorities_sorted:
+    rank2authorities[rank] = v
+    rank += 1
+
+
+sfdp_node_authorities = dict()
+for k,v in sfdp_node2authorities.items():
+    sfdp_node_authorities[k] = {'authority': v}
+
+dot_node_authorities = dict()
+for k,v in dot_node2authorities.items():
+    dot_node_authorities[k] = {'authority': v}
 
 # node_sizeをグラフの属性値として定義する
-nx.set_node_attributes(sfdp_G, sfdp_node_size)
-nx.set_node_attributes(dot_G, dot_node_size)
+nx.set_node_attributes(sfdp_G, sfdp_node_authorities)
+nx.set_node_attributes(dot_G, dot_node_authorities)
 
 # グラフの描画
 nx.draw_networkx(sfdp_G)
@@ -77,8 +93,13 @@ nx.draw_networkx(dot_G)
 sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
 
-with open("sfdp_graph_hits.json", "w") as f:
-    f.write(json.dumps(sfdp_graph_json))
+# try:
+#     os.chdir("graph_attrs")
+#     with open("sfdp_graph_hits_2.json", "w") as f:
+#         f.write(json.dumps(sfdp_graph_json))
 
-with open("dot_graph_hits.json", "w") as f:
-    f.write(json.dumps(dot_graph_json))
+#     with open("dot_graph_hits_2.json", "w") as f:
+#         f.write(json.dumps(dot_graph_json))
+
+# finally:
+#     os.chdir(cwd)
