@@ -283,6 +283,43 @@ $(function(){
             }
         });
 
+        
+        // dialogページの切り替え
+        $(document).on("click", "#help_page_next_btn", function(){
+            // page1を開いている場合
+            if (document.getElementById("help_page1").style.display != "none"){
+                document.getElementById("help_page1").style.display = "none";
+                document.getElementById("help_page2").style.display = "inline";
+                document.getElementById("help_page_prev_btn").style.display = "inline";
+                document.getElementById("graph_usage").innerText = "Usage (2/3)";
+            }
+            // page2を開いている場合
+            else {
+                document.getElementById("help_page2").style.display = "none";
+                document.getElementById("help_page3").style.display = "inline";
+                document.getElementById("help_page_next_btn").style.display = "none";
+                document.getElementById("graph_usage").innerText = "Usage (3/3)";
+            }
+        });
+
+        $(document).on("click", "#help_page_prev_btn", function(){
+            // page3を開いている場合
+            if (document.getElementById("help_page3").style.display != "none"){
+                document.getElementById("help_page3").style.display = "none";
+                document.getElementById("help_page2").style.display = "inline";
+                document.getElementById("help_page_next_btn").style.display = "inline";
+                document.getElementById("graph_usage").innerText = "Usage (2/3)";
+            }
+            // page2を開いている場合
+            else {
+                document.getElementById("help_page2").style.display = "none";
+                document.getElementById("help_page1").style.display = "inline";
+                document.getElementById("help_page_prev_btn").style.display = "none";
+                document.getElementById("graph_usage").innerText = "Usage (1/3)";
+            }
+        });
+
+
         // resetボタンでグラフを初期状態に戻す
         $(document).ready(function(){
             $("#reset").click(function(){

@@ -36,7 +36,7 @@ button:active{
 
 .color_labels .generation_param_row{
     width: 140px;
-    font-size: 70%;
+    font-size: 100%;
 }
 
 .color_labels .node_size_param_row{
@@ -52,4 +52,13 @@ button:active{
 
 .hidden_show {
     visibility: hidden;
+}
+
+#help_page2 {
+    display: none;
+}
+
+
+#help_page3 {
+    display: none;
 }
