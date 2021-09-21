@@ -1,5 +1,6 @@
 import os
 import json
+from pprint import pprint
 import networkx as nx
 import math
 
@@ -31,6 +32,22 @@ def decide_node_size_from_authority_log(authorities):
     return node2size
 
 
+def rank_nodes_with_authority(node2authority):
+    authorities = list(set(node2authority.values()))
+    authorities_sorted = sorted(authorities, reverse=True)
+    authority2ranking = dict()
+    ranking = 0
+    for v in authorities_sorted:
+        authority2ranking[v] = ranking
+        ranking += 1
+
+    node2ranking = dict()
+    for k,v in node2authority.items():
+        node2ranking[k] = {"ranking": authority2ranking[v]}
+    
+    return node2ranking
+
+
 cwd = os.getcwd()
 
 try:
@@ -52,33 +69,23 @@ sfdp_hubs, sfdp_authorities = nx.hits(sfdp_G, max_iter = 10000, normalized = Tru
 dot_hubs, dot_authorities = nx.hits(dot_G, max_iter = 10000, normalized = True)
 
 # authoritiesをノードのサイズに適用する
-sfdp_node2authorities = dict()
-dot_node2authorities = dict()
+sfdp_node2authority = dict()
+dot_node2authority = dict()
 
 # min_max_normalization(authorities, 1.0, 0.1)
-sfdp_node2authorities = decide_node_size_from_authority_log(sfdp_authorities)
-dot_node2authorities = decide_node_size_from_authority_log(dot_authorities)
+sfdp_node2authority = decide_node_size_from_authority_log(sfdp_authorities)
+dot_node2authority = decide_node_size_from_authority_log(dot_authorities)
 
 # authorityを順位付け
-authorities = list()
-for v in sfdp_node2authorities.values():
-    authorities.append(v)
-
-authorities = list(set(authorities))
-authorities_sorted = sorted(authorities, reverse=True)
-rank2authorities = dict()
-rank = 0
-for v in authorities_sorted:
-    rank2authorities[rank] = v
-    rank += 1
-
+sfdp_node2ranking = rank_nodes_with_authority(sfdp_node2authority)
+dot_node2ranking = rank_nodes_with_authority(dot_node2authority)
 
 sfdp_node_authorities = dict()
-for k,v in sfdp_node2authorities.items():
+for k,v in sfdp_node2authority.items():
     sfdp_node_authorities[k] = {'authority': v}
 
 dot_node_authorities = dict()
-for k,v in dot_node2authorities.items():
+for k,v in dot_node2authority.items():
     dot_node_authorities[k] = {'authority': v}
 
 # node_sizeをグラフの属性値として定義する
@@ -95,11 +102,11 @@ dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
 
 try:
     os.chdir("graph_attrs")
-    with open("sfdp_graph_hits_2.json", "w") as f:
-        f.write(json.dumps(sfdp_graph_json))
+    with open("sfdp_graph_hits_3.json", "w") as f:
+        f.write(json.dumps(sfdp_graph_json, indent=4))
 
-    with open("dot_graph_hits_2.json", "w") as f:
-        f.write(json.dumps(dot_graph_json))
+    with open("dot_graph_hits_3.json", "w") as f:
+        f.write(json.dumps(dot_graph_json, indent=4))
 
 finally:
     os.chdir(cwd)
