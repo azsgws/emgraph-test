@@ -76,10 +76,6 @@ dot_node2authority = dict()
 sfdp_node2authority = decide_node_size_from_authority_log(sfdp_authorities)
 dot_node2authority = decide_node_size_from_authority_log(dot_authorities)
 
-# authorityを順位付け
-sfdp_node2ranking = rank_nodes_with_authority(sfdp_node2authority)
-dot_node2ranking = rank_nodes_with_authority(dot_node2authority)
-
 sfdp_node_authorities = dict()
 for k,v in sfdp_node2authority.items():
     sfdp_node_authorities[k] = {'authority': v}
@@ -88,9 +84,15 @@ dot_node_authorities = dict()
 for k,v in dot_node2authority.items():
     dot_node_authorities[k] = {'authority': v}
 
+# authorityを順位付け
+sfdp_node2ranking = rank_nodes_with_authority(sfdp_node2authority)
+dot_node2ranking = rank_nodes_with_authority(dot_node2authority)
+
 # node_sizeをグラフの属性値として定義する
 nx.set_node_attributes(sfdp_G, sfdp_node_authorities)
 nx.set_node_attributes(dot_G, dot_node_authorities)
+nx.set_node_attributes(sfdp_G, sfdp_node2ranking)
+nx.set_node_attributes(dot_G, dot_node2ranking)
 
 # グラフの描画
 nx.draw_networkx(sfdp_G)
@@ -102,10 +104,10 @@ dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
 
 try:
     os.chdir("graph_attrs")
-    with open("sfdp_graph_hits_3.json", "w") as f:
+    with open("sfdp_graph_hits.json", "w") as f:
         f.write(json.dumps(sfdp_graph_json, indent=4))
 
-    with open("dot_graph_hits_3.json", "w") as f:
+    with open("dot_graph_hits.json", "w") as f:
         f.write(json.dumps(dot_graph_json, indent=4))
 
 finally:

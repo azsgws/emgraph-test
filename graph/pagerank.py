@@ -28,8 +28,6 @@ def rank_nodes_with_pagerank(node2pagerank):
     for k,v in node2pagerank.items():
         node2ranking[k] = {"ranking": pagerank2ranking[v]}
 
-    print(ranking)
-    
     return node2ranking
 
 
@@ -78,9 +76,9 @@ sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 
 try:
     os.chdir("graph_attrs")
-    with open("dot_graph_pagerank_3.json", "w") as f:
+    with open("dot_graph_pagerank.json", "w") as f:
         f.write(json.dumps(dot_graph_json, indent=4))
-    with open("sfdp_graph_pagerank_3.json", "w") as f:
+    with open("sfdp_graph_pagerank.json", "w") as f:
         f.write(json.dumps(sfdp_graph_json, indent=4))
 
 finally:
