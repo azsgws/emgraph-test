@@ -42,7 +42,7 @@ $(function(){
                 let node = {};
                 node["group"] = "nodes";
                 node["data"] = {"id": nodes[i][j]["id"], "name": nodes[i][j]["name"], 
-                                "href": nodes[i][j]["href"], "size": nodes[i][j]["size"]};
+                                "href": nodes[i][j]["href"], "ranking": nodes[i][j]["ranking"]};
                 node["position"] = {"x": (nodes[i][j]["x"] + 1) * 300, "y": (nodes[i][j]["y"] + 1) * 300};
                 nodes_and_edges.push(node);
             }
@@ -61,35 +61,61 @@ $(function(){
             /* 初期状態のスタイル */
             {
                 selector: "node",
-                css: {"shape": "ellipse", "width": "data(size)", "height": "data(size)",
+                css: {"shape": "ellipse", "width": "250", "height": "250",
                       "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                       "text-halign":"center", "text-valign": "center", "font-style": "normal",
                       "font-weight": "bold", "color": "#ffffff",
                       "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[size<=50]", 
-                css: {"background-color": "#0000ff", "color": "#ffffff",
+                selector: "node[ranking>=900]", 
+                css: {"background-color": "#0000ff", "color": "#ffffff", 
                       "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[size>50]", 
-                css: {"background-color": "#00ffff",
-                      "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
+                selector: "node[ranking<900]", 
+                css: {"background-color": "#4477ff", "color": "#ffffff", 
+                      "text-outline-color": "#4477ff", "text-outline-opacity": 1, "text-outline-width": 10}
+            },
+            
+            {
+                selector: "node[ranking<800]", 
+                css: {"background-color": "#99bbfff", "color": "#000000", 
+                      "text-outline-color": "#99bbff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[size>100]", 
-                css: {"background-color": "#ffd000",
-                      "text-outline-color": "#ffd000", "text-outline-opacity": 1, "text-outline-width": 10}
+                selector: "node[ranking<700]", 
+                css: {"background-color": "#bbffff", "color": "#000000", 
+                      "text-outline-color": "#bbffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[size>150]", 
-                css: {"background-color": "#ff7700",
-                      "text-outline-color": "#ff7700", "text-outline-opacity": 1, "text-outline-width": 10}
+                selector: "node[ranking<600]",
+                css: {"background-color": "#ddffff", "color": "#000000",
+                      "text-outline-color": "#ddffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[size>200]", 
-                css: {"background-color": "#ff0000", "color": "#ffffff", 
+                selector: "node[ranking<500]", 
+                css: {"background-color": "#ffdddd", "color": "#000000", 
+                      "text-outline-color": "#ffdddd", "text-outline-opacity": 1, "text-outline-width": 10}
+            },
+            {
+                selector: "node[ranking<400]", 
+                css: {"background-color": "#ffbbbb", "color": "#000000",
+                      "text-outline-color": "#ffbbbb", "text-outline-opacity": 1, "text-outline-width": 10}
+            },
+            {
+                selector: "node[ranking<300]", 
+                css: {"background-color": "#ff9999", "color": "#000000",
+                      "text-outline-color": "#ff9999", "text-outline-opacity": 1, "text-outline-width": 10}
+            },
+            {
+                selector: "node[ranking<200]", 
+                css: {"background-color": "#ff7777", "color": "#ffffff",
+                      "text-outline-color": "#ff7777", "text-outline-opacity": 1, "text-outline-width": 10}
+            },
+            {
+                selector: "node[ranking<100]", 
+                css: {"background-color": "#ff0000", "color": "#ffffff",
                       "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {

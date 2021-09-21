@@ -1,18 +1,34 @@
 import os
 import json
 import networkx as nx
+from pprint import pp, pprint
 
-
-def min_max_normalization(node2size, max_val, min_val):
+def min_max_normalization(node2value, max_val, min_val):
     node_size = dict()
-    node2size_max = max(node2size.values())
-    node2size_min = min(node2size.values())
+    node2value_max = max(node2value.values())
+    node2value_min = min(node2value.values())
 
-    for k, v in node2size.items():
-        node_size[k] = {'size': 
-            ((v - node2size_min) / (node2size_max - node2size_min)) * (max_val - min_val) + min_val}
+    for k, v in node2value.items():
+        node_size[k] = {'pagerank': 
+            ((v - node2value_min) / (node2value_max - node2value_min)) * (max_val - min_val) + min_val}
 
     return node_size
+
+
+def rank_nodes_with_pagerank(node2pagerank):
+    pagerank = list(set(node2pagerank.values()))
+    pagerank_sorted = sorted(pagerank, reverse=True)
+    pagerank2ranking = dict()
+    ranking = 0
+    for v in pagerank_sorted:
+        pagerank2ranking[v] = ranking
+        ranking += 1
+
+    node2ranking = dict()
+    for k,v in node2pagerank.items():
+        node2ranking[k] = {"ranking": pagerank2ranking[v]}
+
+    return node2ranking
 
 
 cwd = os.getcwd()
@@ -31,17 +47,25 @@ finally:
 dot_G = nx.cytoscape_graph(dot_graph)
 sfdp_G = nx.cytoscape_graph(sfdp_graph)
 
-# 作成したグラフをもとに，hits.authoritiesを計算
+# 作成したグラフをもとに，pagerankを計算
 dot_node2pagerank = nx.pagerank(dot_G, max_iter=1000)
 sfdp_node2pagerank = nx.pagerank(sfdp_G, max_iter=1000)
 
-# authoritiesをノードのサイズに適用する
-dot_node_size = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
-sfdp_node_size = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
+# pagerankに順位付け
+dot_node2ranking = rank_nodes_with_pagerank(dot_node2pagerank)
+sfdp_node2ranking = rank_nodes_with_pagerank(sfdp_node2pagerank)
 
-# node_sizeをグラフの属性値として定義する
-nx.set_node_attributes(dot_G, dot_node_size)
-nx.set_node_attributes(sfdp_G, dot_node_size)
+# pagerankの値を正規化して，属性値'pagerank'に登録
+dot_node_pagerank = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
+sfdp_node_pagerank = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
+
+# pagerankの値，順位をグラフの属性値として定義する
+nx.set_node_attributes(dot_G, dot_node2ranking)
+nx.set_node_attributes(sfdp_G, sfdp_node2ranking)
+
+nx.set_node_attributes(dot_G, dot_node_pagerank)
+nx.set_node_attributes(sfdp_G, sfdp_node_pagerank)
+
 
 # グラフの描画
 nx.draw_networkx(dot_G)
@@ -53,9 +77,9 @@ sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 try:
     os.chdir("graph_attrs")
     with open("dot_graph_pagerank.json", "w") as f:
-        f.write(json.dumps(dot_graph_json))
+        f.write(json.dumps(dot_graph_json, indent=4))
     with open("sfdp_graph_pagerank.json", "w") as f:
-        f.write(json.dumps(sfdp_graph_json))
+        f.write(json.dumps(sfdp_graph_json, indent=4))
 
 finally:
     os.chdir(cwd)
