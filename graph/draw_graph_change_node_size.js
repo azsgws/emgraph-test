@@ -64,8 +64,7 @@ $(function(){
                 css: {"shape": "ellipse", "width": "250", "height": "250",
                       "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                       "text-halign":"center", "text-valign": "center", "font-style": "normal",
-                      "font-weight": "bold", "color": "#ffffff",
-                      "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
+                      "font-weight": "bold", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node[ranking>=900]", 
@@ -76,11 +75,10 @@ $(function(){
                 selector: "node[ranking<900]", 
                 css: {"background-color": "#4477ff", "color": "#ffffff", 
                       "text-outline-color": "#4477ff", "text-outline-opacity": 1, "text-outline-width": 10}
-            },
-            
+            },            
             {
                 selector: "node[ranking<800]", 
-                css: {"background-color": "#99bbfff", "color": "#000000", 
+                css: {"background-color": "#99bbff", "color": "#000000", 
                       "text-outline-color": "#99bbff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
