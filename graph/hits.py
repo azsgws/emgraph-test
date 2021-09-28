@@ -1,12 +1,8 @@
 import os
 import sys
 import json
-from pprint import pprint
 import networkx as nx
 import math
-
-from networkx.algorithms.link_analysis.hits_alg import authority_matrix
-
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
@@ -99,6 +95,10 @@ dot_G = nx.cytoscape_graph(dot_graph)
 # 作成したグラフをもとに，hits.authoritiesを計算
 sfdp_hubs, sfdp_authorities = nx.hits(sfdp_G, max_iter = 10000, normalized = True)
 dot_hubs, dot_authorities = nx.hits(dot_G, max_iter = 10000, normalized = True)
+
+# authorityを順位付け
+sfdp_node2ranking = rank_nodes_with_value(sfdp_authorities)
+dot_node2ranking = rank_nodes_with_value(dot_authorities)
 
 # authoritiesをノードのサイズに適用する
 sfdp_node2authority = dict()
