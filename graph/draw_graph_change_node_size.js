@@ -4,12 +4,14 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph_hits.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_hits.json'),
+        $.getJSON('./graph_attrs/dot_graph_hits_authority.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_hits_authority.json'),
+        $.getJSON('./graph_attrs/dot_graph_hits_hub.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_pagerank.json'),
         $.getJSON('./graph_attrs/sfdp_graph_pagerank.json'),
     )
-    .then((dot_graph_hits, sfdp_graph_hits, dot_graph_pagerank, sfdp_graph_pagerank) => {
+    .then((dot_graph_auth, sfdp_graph_auth, dot_graph_hub, sfdp_graph_hub, dot_graph_pagerank, sfdp_graph_pagerank) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -20,11 +22,17 @@ $(function(){
             wheelSensitivity: 0.1
         });
         let graph = {};
-        if(layout==='dot_hits'){
-            graph = dot_graph_hits[0];
+        if(layout==='dot_auth'){
+            graph = dot_graph_auth[0];
         }
-        else if(layout==='sfdp_hits'){
-            graph = sfdp_graph_hits[0];
+        else if(layout==='sfdp_auth'){
+            graph = sfdp_graph_auth[0];
+        }
+        else if(layout==='dot_hub'){
+            graph = dot_graph_hub[0];
+        }
+        else if(layout==='sfdp_hub'){
+            graph = sfdp_graph_hub[0];
         }
         else if(layout==='dot_pagerank'){
             graph = dot_graph_pagerank[0];
@@ -42,7 +50,8 @@ $(function(){
                 let node = {};
                 node["group"] = "nodes";
                 node["data"] = {"id": nodes[i][j]["id"], "name": nodes[i][j]["name"], 
-                                "href": nodes[i][j]["href"], "ranking": nodes[i][j]["ranking"]};
+                                "href": nodes[i][j]["href"], "ranking": nodes[i][j]["ranking"],
+                                "group": nodes[i][j]["group"]};
                 node["position"] = {"x": (nodes[i][j]["x"] + 1) * 300, "y": (nodes[i][j]["y"] + 1) * 300};
                 nodes_and_edges.push(node);
             }
@@ -67,52 +76,52 @@ $(function(){
                       "font-weight": "bold", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking>=900]", 
+                selector: "node[group=9]", 
                 css: {"background-color": "#0000ff", "color": "#ffffff", 
                       "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<900]", 
+                selector: "node[group=8]", 
                 css: {"background-color": "#4477ff", "color": "#ffffff", 
                       "text-outline-color": "#4477ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },            
             {
-                selector: "node[ranking<800]", 
+                selector: "node[group=7]", 
                 css: {"background-color": "#99bbff", "color": "#000000", 
                       "text-outline-color": "#99bbff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<700]", 
+                selector: "node[group=6]", 
                 css: {"background-color": "#bbffff", "color": "#000000", 
                       "text-outline-color": "#bbffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<600]",
+                selector: "node[group=5]",
                 css: {"background-color": "#ddffff", "color": "#000000",
                       "text-outline-color": "#ddffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<500]", 
+                selector: "node[group=4]", 
                 css: {"background-color": "#ffdddd", "color": "#000000", 
                       "text-outline-color": "#ffdddd", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<400]", 
+                selector: "node[group=3]", 
                 css: {"background-color": "#ffbbbb", "color": "#000000",
                       "text-outline-color": "#ffbbbb", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<300]", 
+                selector: "node[group=2]", 
                 css: {"background-color": "#ff9999", "color": "#000000",
                       "text-outline-color": "#ff9999", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<200]", 
+                selector: "node[group=1]", 
                 css: {"background-color": "#ff7777", "color": "#ffffff",
                       "text-outline-color": "#ff7777", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
-                selector: "node[ranking<100]", 
+                selector: "node[group=0]", 
                 css: {"background-color": "#ff0000", "color": "#ffffff",
                       "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },

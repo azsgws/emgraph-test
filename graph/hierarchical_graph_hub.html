@@ -3,10 +3,10 @@
     <head>
         <title>emgraph</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+        <script src="https://unpkg.com/cytoscape@3.19.1/dist/cytoscape.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./style.css"></link>
         <script type="text/javascript">
-            let layout = "dot_hits";
+            let layout = "dot_hub";
         </script>
         <script src="./draw_graph_change_node_size.js"></script>
     </head>
@@ -28,12 +28,13 @@
             <button type="button" value="re-highlight" id="re-highlight">re-highlight</button>
             <br>
             <button type="button" value="reset" id="reset">reset</button>
+            <a href="./hierarchical_graph.html">Hierarchical graph</a>
             <a href="./clustering_graph.html">Clustering graph</a>
-            <a href="./hierarchical_graph.html">Non Apply Hits Authority</a>
+            <a href="./hierarchical_graph_auth.html">Hits Authority</a>
             <a href="./hierarchical_graph_pagerank.html">Apply Pagerank</a>
         </div>
         <div class="color_index" id="hits_authority_coloring_index">
-            <p><b>Hits Authority</b></p>
+            <p><b>Hits Hub</b></p>
             <table class="color_labels">
                 <tr>
                     <td class="color_row"><span style="background-color: #ff0000;">&emsp;&emsp;</span></td>
@@ -45,10 +46,6 @@
                 </tr>
                 <tr>
                     <td class="color_row"><span style="background-color: #ff9999;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #ffbbbb;">&emsp;&emsp;</span></td>
                     <td class="node_size_param_row"></td>
                 </tr>
                 <tr>
