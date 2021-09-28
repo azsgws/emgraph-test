@@ -1,7 +1,7 @@
 import os
 import json
 import networkx as nx
-from pprint import pp, pprint
+from hits import grouping_for_ranking
 
 def min_max_normalization(node2value, max_val, min_val):
     node_size = dict()
@@ -55,6 +55,10 @@ sfdp_node2pagerank = nx.pagerank(sfdp_G, max_iter=1000)
 dot_node2ranking = rank_nodes_with_pagerank(dot_node2pagerank)
 sfdp_node2ranking = rank_nodes_with_pagerank(sfdp_node2pagerank)
 
+# pagerankの順位をもとにグループ分け
+dot_node2group = grouping_for_ranking(dot_node2ranking)
+sfdp_node2group = grouping_for_ranking(sfdp_node2ranking)
+
 # pagerankの値を正規化して，属性値'pagerank'に登録
 dot_node_pagerank = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
 sfdp_node_pagerank = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
@@ -66,6 +70,8 @@ nx.set_node_attributes(sfdp_G, sfdp_node2ranking)
 nx.set_node_attributes(dot_G, dot_node_pagerank)
 nx.set_node_attributes(sfdp_G, sfdp_node_pagerank)
 
+nx.set_node_attributes(dot_G, dot_node2group)
+nx.set_node_attributes(sfdp_G, sfdp_node2group)
 
 # グラフの描画
 nx.draw_networkx(dot_G)
