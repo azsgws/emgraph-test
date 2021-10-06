@@ -16,7 +16,7 @@
     <body>
         <form class="p-2">
             <div class="form-row">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="article_name">Article</label>
                     <div class="input-group">
                         <input type="text" name="article_name" id="article_name" autocomplete="on"
@@ -50,19 +50,20 @@
                     </button>
                 </div>
                 <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">other graph style</label>
+                    <label for="clustering_graph">Original Graph Style</label>
+                    <a class="btn btn-link form-control" href="./clustering_graph.html" role="button">Clustering Graph</a>
+                </div>
+                <div class="col-md-1 col-sm-1 col-3">
+                    <label for="clustering_graph">Other Graph Style</label>
                     <a class="btn btn-link form-control" href="./hierarchical_graph.html" role="button">Hierarchical Graph</a>
                 </div>
                 <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">other graph style</label>
+                    <label for="clustering_graph">HITS Ranking</label>
                     <a class="btn btn-link form-control" href="./clustering_graph_auth.html" role="button">Hits(Authority)</a>
-                </div>
-                <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">other graph style</label>
                     <a class="btn btn-link form-control" href="./clustering_graph_hub.html" role="button">Hits(Hub)</a>
                 </div>
                 <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">other graph style</label>
+                    <label for="clustering_graph">Pagerank Ranking</label>
                     <a class="btn btn-link form-control" href="./clustering_graph_pagerank.html" role="button">Pagerank</a>
                 </div>
             </div>
