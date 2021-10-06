@@ -4,7 +4,6 @@
     top: 100px;
     bottom: 0;
     right: 0;
-    z-index: 800;
 }
 
 button:active{
@@ -21,7 +20,7 @@ button:active{
 .color_index{
     position: absolute;
     z-index: 10;
-    top: 30px;
+    top: 20%;
     right: 20px;
 }
 
