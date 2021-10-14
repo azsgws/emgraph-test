@@ -139,12 +139,12 @@ $(function(){
             // 選択されていないノードの色を変更
             {
                 selector: "node.faded",
-                css: {"background-color": "#808080", "text-outline-color": "#808080"}
+                css: {"background-color": "#808080", "text-outline-color": "#808080", "color": "#ffffff"}
             },
             // 選択されていないノードとエッジは薄く表示する
             {
                 selector: ".faded",
-                css: {"opacity": 0.4, "z-index": 0}
+                css: {"opacity": 0.15, "z-index": 0}
             }
         ]);
 
