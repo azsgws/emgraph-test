@@ -104,9 +104,9 @@ dot_node2ranking = rank_nodes_with_value(dot_authorities)
 sfdp_node2authority = dict()
 dot_node2authority = dict()
 
-# min_max_normalization(authorities, 1.0, 0.1)
-sfdp_node2authority = decide_node_size_from_authority_log(sfdp_authorities)
-dot_node2authority = decide_node_size_from_authority_log(dot_authorities)
+# 正規化(しない)
+sfdp_node2authority = sfdp_authorities
+dot_node2authority = dot_authorities
 
 sfdp_node_authorities = dict()
 for k,v in sfdp_node2authority.items():
