@@ -31,7 +31,7 @@ y = node2pagerank.values()
 
 plt.title("PageRank-HITS(Authority)")
 plt.xlabel("authority")
-plt.xlabel("PageRank")
+plt.ylabel("PageRank")
 plt.grid(True)
 
 plt.scatter(x,y,vmin=0.0, vmax=1.0, s=100)
