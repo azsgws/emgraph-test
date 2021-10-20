@@ -1,7 +1,6 @@
 import os
 import json
 import networkx as nx
-from hits import grouping_for_ranking
 
 def min_max_normalization(node2value, max_val, min_val):
     node_size = dict()
@@ -30,6 +29,43 @@ def rank_nodes_with_pagerank(node2pagerank):
 
     return node2ranking
 
+
+def update_pagerank_for_set_node_attribute(node2pagerank):
+    a = dict()
+    for k,v in node2pagerank.items():
+        a[k] = {'pagerank': v}
+    return a
+
+
+def grouping_for_ranking(node2ranking):
+    max_ranking = 0
+    for v in node2ranking.values():
+        if v["ranking"] > max_ranking:
+            max_ranking = v["ranking"]
+    
+    node2group = dict()
+    for k,v in node2ranking.items():
+        if v["ranking"] < max_ranking/10:
+            node2group[k] = {"group": 0}
+        elif v["ranking"] < max_ranking/10 * 2:
+            node2group[k] = {"group": 1}
+        elif v["ranking"] < max_ranking/10 * 3:
+            node2group[k] = {"group": 2}
+        elif v["ranking"] < max_ranking/10 * 4:
+            node2group[k] = {"group": 3}
+        elif v["ranking"] < max_ranking/10 * 5:
+            node2group[k] = {"group": 4}
+        elif v["ranking"] < max_ranking/10 * 6:
+            node2group[k] = {"group": 5}
+        elif v["ranking"] < max_ranking/10 * 7:
+            node2group[k] = {"group": 6}
+        elif v["ranking"] < max_ranking/10 * 8:
+            node2group[k] = {"group": 7}
+        elif v["ranking"] < max_ranking/10 * 9:
+            node2group[k] = {"group": 8}
+        else:
+            node2group[k] = {"group": 9}
+    return node2group
 
 cwd = os.getcwd()
 
@@ -60,15 +96,18 @@ dot_node2group = grouping_for_ranking(dot_node2ranking)
 sfdp_node2group = grouping_for_ranking(sfdp_node2ranking)
 
 # pagerankの値を正規化して，属性値'pagerank'に登録
-dot_node_pagerank = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
-sfdp_node_pagerank = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
+# dot_node_pagerank = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
+# sfdp_node_pagerank = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
+dot_node2pagerank = update_pagerank_for_set_node_attribute(dot_node2pagerank)
+sfdp_node2pagerank = update_pagerank_for_set_node_attribute(sfdp_node2pagerank)
+
 
 # pagerankの値，順位をグラフの属性値として定義する
 nx.set_node_attributes(dot_G, dot_node2ranking)
 nx.set_node_attributes(sfdp_G, sfdp_node2ranking)
 
-nx.set_node_attributes(dot_G, dot_node_pagerank)
-nx.set_node_attributes(sfdp_G, sfdp_node_pagerank)
+nx.set_node_attributes(dot_G, dot_node2pagerank)
+nx.set_node_attributes(sfdp_G, sfdp_node2pagerank)
 
 nx.set_node_attributes(dot_G, dot_node2group)
 nx.set_node_attributes(sfdp_G, sfdp_node2group)
