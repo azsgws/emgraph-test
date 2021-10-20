@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import os
 import json
 
@@ -15,8 +14,6 @@ try:
 finally:
     os.chdir(cwd)
 
-fig = plt.figure()
-
 node2pagerank = dict()
 node2hits_authority = dict()
 
@@ -26,14 +23,11 @@ for i in dot_graph_pagerank['elements']['nodes']:
 for i in dot_graph_authority['elements']['nodes']:
     node2hits_authority[i['data']['id']] = i['data']['authority']
 
-x = node2hits_authority.values()
-y = node2pagerank.values()
+node2pagerank_minus_hits = dict()
+for k in node2pagerank.keys():
+    node2pagerank_minus_hits[k] = \
+        node2pagerank[k] - node2hits_authority[k]
 
-plt.title("PageRank-HITS(Authority)")
-plt.xlabel("authority")
-plt.xlabel("PageRank")
-plt.grid(True)
-
-plt.scatter(x,y,vmin=0.0, vmax=1.0, s=100)
-
-fig.savefig("pagerank-authority-table.png")
+with open("pagerank_minus_hits.txt", 'w') as fout:
+    for k,v in sorted(node2pagerank_minus_hits.items(), key=lambda x:x[1]):
+        fout.write(f'{k} {v} \n')
