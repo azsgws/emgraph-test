@@ -78,20 +78,20 @@ $(function(){
             // 選択(左クリック)されたノードのスタイル
             {
                 selector: "node.selected",
-                css: {"background-color": "#fff100", "color": "#ff0000", "width": 300, "height": 300,
-                "text-outline-color": "#fff100", "text-outline-opacity": 1, "text-outline-width": 10
+                css: {"background-color": "#000000", "color": "#ffffff", "width": 300, "height": 300,
+                "text-outline-color": "#000000", "text-outline-opacity": 1, "text-outline-width": 10
                 }
             },
             // 選択された(強調表示する)祖先のスタイル
             {
-                selector: "node.selected_ancestors0",
-                css: {"background-color": "#ffbb00",  "color": "#ffffff",
-                "text-outline-color": "#ffbb00", "text-outline-opacity": 1, "text-outline-width": 10} 
+                selector: "node.selected_ancestors0", 
+                css: {"background-color": "#ff0000", "color": "#ffffff",
+                "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_ancestors1",
-                css: {"background-color": "#ff9900",  "color": "#ffffff",
-                "text-outline-color": "#ff9900", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ff4400", "color": "#ffffff",
+                "text-outline-color": "#ff4400", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_ancestors2",
@@ -100,24 +100,24 @@ $(function(){
             },
             {
                 selector: "node.selected_ancestors3",
-                css: {"background-color": "#ff4400", "color": "#ffffff",
-                "text-outline-color": "#ff4400", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ff9900",  "color": "#ffffff",
+                "text-outline-color": "#ff9900", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_ancestors4",
-                css: {"background-color": "#ff0000", "color": "#ffffff",
-                "text-outline-color": "#ff0000", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#ffbb00",  "color": "#ffffff",
+                "text-outline-color": "#ffbb00", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             // 選択された(強調表示する)子孫のスタイル
             {
                 selector: "node.selected_descendants0",
-                css: {"background-color": "#00ffff", "color": "#ffffff",
-                "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#0000ff", "color": "#ffffff",
+                "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_descendants1",
-                css: {"background-color": "#00ddff", "color": "#ffffff",
-                "text-outline-color": "#00ddff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#0077ff", "color": "#ffffff",
+                "text-outline-color": "#0077ff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_descendants2",
@@ -126,13 +126,13 @@ $(function(){
             },
             {
                 selector: "node.selected_descendants3",
-                css: {"background-color": "#0077ff", "color": "#ffffff",
-                "text-outline-color": "#0077ff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#00ddff", "color": "#ffffff",
+                "text-outline-color": "#00ddff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_descendants4",
-                css: {"background-color": "#0000ff", "color": "#ffffff",
-                "text-outline-color": "#0000ff", "text-outline-opacity": 1, "text-outline-width": 10}
+                css: {"background-color": "#00ffff", "color": "#ffffff",
+                "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             // 強調表示されたノードをつなぐエッジのスタイル
             {
