@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
+import math
 import os
 import json
+
 
 cwd = os.getcwd()
 
@@ -29,6 +31,11 @@ for i in dot_graph_authority['elements']['nodes']:
 x = node2hits_authority.values()
 y = node2pagerank.values()
 
-plt.scatter(x,y)
+plt.title("PageRank-HITS(Authority)")
+plt.xlabel("authority")
+plt.xlabel("PageRank")
+plt.grid(True)
 
-fig.savefig("table.png")
+plt.scatter(x,y,vmin=0.0, vmax=1.0, s=100)
+
+fig.savefig("pagerank-authority-table.png")
