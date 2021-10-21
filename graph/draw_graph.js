@@ -52,11 +52,11 @@ $(function(){
             /* 初期状態のスタイル */
             {
                 selector: "node",
-                css: {"background-color": "#ff0000", "shape": "ellipse", "width": "150", "height": "150",
+                css: {"background-color": "#000000", "shape": "ellipse", "width": "150", "height": "150",
                         "content": "data(name)", "font-size": 40, "opacity": 1, "z-index": 1,
                         "text-halign":"center", "text-valign": "center", "font-style": "normal",
                         "font-weight": "bold", "color": "#ffffff",
-                        "text-outline-color": "red", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
+                        "text-outline-color": "#000000", "text-outline-opacity": 1, "text-outline-width": 10}  // 0.8 30
             },
             {
                 selector: "edge",
@@ -78,8 +78,8 @@ $(function(){
             // 選択(左クリック)されたノードのスタイル
             {
                 selector: "node.selected",
-                css: {"background-color": "#000000", "color": "#ffffff", "width": 300, "height": 300,
-                "text-outline-color": "#000000", "text-outline-opacity": 1, "text-outline-width": 10
+                css: {"background-color": "#ffff00", "color": "#ff0000", "width": 300, "height": 300,
+                "text-outline-color": "#ffff00", "text-outline-opacity": 1, "text-outline-width": 10
                 }
             },
             // 選択された(強調表示する)祖先のスタイル
