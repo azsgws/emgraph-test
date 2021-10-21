@@ -19,7 +19,7 @@ button:active{
 .color_index{
     position: absolute;
     z-index: 10;
-    top: 30px;
+    top: 20%;
     right: 20px;
 }
 

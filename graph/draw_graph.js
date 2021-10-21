@@ -144,17 +144,17 @@ $(function(){
             {
                 selector: cy.nodes().edgesTo("node.selected[?is_dummy]"),
                 css: {"line-color": "green", "target-arrow-shape": "none", "curve-style": "straight",
-                "arrow-scale": 10, "width": 5, "z-index": 10, width: 20}  //arrow-scale 0
+                "arrow-scale": 10, "width": 5, "z-index": 10, width: 20}
             },
             // 選択されていないノードの色を変更
             {
                 selector: "node.faded",
-                css: {"background-color": "#808080", "text-outline-color": "#808080"}
+                css: {"background-color": "#808080", "text-outline-color": "#808080", "color": "#ffffff"}
             },
             // 選択されていないノードとエッジは薄く表示する
             {
                 selector: ".faded",
-                css: {"opacity": 0.4, "z-index": 0}  // 0.05, 0
+                css: {"opacity": 0.15, "z-index": 0}
             },
         ]);
 
