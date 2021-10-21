@@ -78,8 +78,8 @@ $(function(){
             // 選択(左クリック)されたノードのスタイル
             {
                 selector: "node.selected",
-                css: {"background-color": "#ffff00", "color": "#ff0000", "width": 300, "height": 300,
-                "text-outline-color": "#ffff00", "text-outline-opacity": 1, "text-outline-width": 10
+                css: {"background-color": "#99ff00", "color": "#006633", "width": 300, "height": 300,
+                "text-outline-color": "#99ff00", "text-outline-opacity": 1, "text-outline-width": 10
                 }
             },
             // 選択された(強調表示する)祖先のスタイル
@@ -126,19 +126,19 @@ $(function(){
             },
             {
                 selector: "node.selected_descendants3",
-                css: {"background-color": "#00ddff", "color": "#ffffff",
+                css: {"background-color": "#00ddff", "color": "#000000",
                 "text-outline-color": "#00ddff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_descendants4",
-                css: {"background-color": "#00ffff", "color": "#ffffff",
+                css: {"background-color": "#00ffff", "color": "#000000",
                 "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             // 強調表示されたノードをつなぐエッジのスタイル
             {
                 selector: "edge.highlight",
-                css: {"line-color": "#006400", "curve-style": "straight",
-                "target-arrow-color": "#006400", "arrow-scale": 5, "width": 10, "opacity": 1, "z-index": 20}
+                css: {"line-color": "#004400", "curve-style": "straight",
+                "target-arrow-color": "#004400", "arrow-scale": 5, "width": 10, "opacity": 1, "z-index": 20}
             },
             /* ダミーノードを指すエッジが選択された場合 */
             {
