@@ -16,7 +16,6 @@ button:active{
     z-index: 10;
 }
 
-
 .color_index{
     position: absolute;
     z-index: 10;
@@ -44,7 +43,7 @@ button:active{
 
 #name-plate{
     position: absolute;
-    z-index: 1000;
+    z-index: 30;
     font-size: 25px;
     background-color: #ffe4c4;
 }
