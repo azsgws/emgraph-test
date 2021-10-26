@@ -36,7 +36,7 @@ def make_miz_dependency():
             miz_file_contents = f.read()
         directive2articles = extract_articles(miz_file_contents)
         dependency_articles = merge_values(
-            directive2articles, remove_keys=["vocabulary"])
+            directive2articles, remove_keys=["vocabularies"])  # vocabulary
         article2dependency_articles[format_mizfile_name_to_import_style(
             miz_file)] = dependency_articles
 
@@ -85,7 +85,7 @@ def extract_articles(contents):
         if re.match(r"begin", word):
             break
         # ディレクティブ名が来たとき
-        if word in DIRECTIVES_2003:
+        if word in DIRECTIVES_2020:
             directive_name = word
             continue
         # ;でそのディレクティブでの参照が終わったとき

@@ -5,9 +5,10 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph.json'),
-        $.getJSON('./graph_attrs/sfdp_graph.json')
+        $.getJSON('./graph_attrs/sfdp_graph.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003.json'),
     )
-    .then((dot_graph, sfdp_graph) => {
+    .then((dot_graph, sfdp_graph, dot_graph_2003) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -21,8 +22,11 @@ $(function(){
         if(layout==='dot'){
             graph = dot_graph[0];
         }
-        else{
+        else if(layout==='sfdp'){
             graph = sfdp_graph[0];
+        }
+        else {
+            graph = dot_graph_2003[0];
         }
         let nodes = graph["elements"]["nodes"];
         let edges = graph["elements"]["edges"];

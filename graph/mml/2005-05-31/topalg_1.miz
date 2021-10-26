@@ -1,0 +1,2513 @@
+:: The Fundamental Group
+::  by Artur Korni{\l}owicz , Yasunari Shidama and Adam Grabowski
+::
+:: Received March 18, 2004
+:: Copyright (c) 2004 Association of Mizar Users
+
+environ
+
+ vocabularies PRE_TOPC, ORDINAL2, FUNCT_1, EUCLID, RELAT_1, ARYTM_1, BORSUK_2,
+      GRAPH_1, BORSUK_1, ALGSTR_1, WAYBEL20, PARTFUN1, RELAT_2, EQREL_1,
+      VECTSP_1, BINOP_1, GROUP_1, SEQM_3, FUNCT_2, BOOLE, REALSET1, TOPS_1,
+      ARYTM, RCOMP_1, ARYTM_3, METRIC_1, COMPLEX1, FINSEQ_2, ABSVALUE,
+      SUBSET_1, WELLORD1, GROUP_6, SGRAPH1, BORSUK_6, TOPALG_1;
+ notations TARSKI, XBOOLE_0, ZFMISC_1, SUBSET_1, RELSET_1, EQREL_1, FUNCT_1,
+      PARTFUN1, FUNCT_2, RELAT_2, BINOP_1, SEQM_3, NUMBERS, ORDINAL1, XCMPLX_0,
+      XREAL_0, REAL_1, NAT_1, RCOMP_1, RCOMP_2, RVSUM_1, FINSEQ_2, COMPLEX1,
+      STRUCT_0, GRCAT_1, METRIC_1, PRE_TOPC, YELLOW_2, TOPS_1, TOPS_2, GROUP_1,
+      BORSUK_1, EUCLID, BORSUK_2, GROUP_6, BORSUK_6;
+ constructors TOPS_2, EUCLID, XCMPLX_0, NAT_1, BORSUK_2, VECTSP_1, FILTER_1,
+      GROUP_1, SEQM_3, REALSET2, COMPTS_1, TREAL_1, GRCAT_1, TOPS_1, YELLOW_2,
+      REAL_1, RCOMP_1, RCOMP_2, T_0TOPSP, GROUP_6, BORSUK_6, BINOP_2, COMPLEX1,
+      INT_2;
+ registrations RELSET_1, NAT_1, BORSUK_1, BORSUK_2, STRUCT_0, PARTFUN1,
+      FILTER_1, XBOOLE_0, JORDAN5A, TEX_2, XREAL_0, REAL_1, EUCLID, TOPS_1,
+      NUMBERS, GROUP_1;
+ requirements BOOLE, SUBSET, NUMERALS, ARITHM, REAL;
+ definitions TARSKI, XBOOLE_0, RELAT_1, FUNCT_1, FUNCT_2, STRUCT_0, GROUP_1,
+      BORSUK_2, GROUP_6, BORSUK_6;
+ theorems BORSUK_2, ZFMISC_1, EQREL_1, TOLER_1, BINOP_1, FUNCT_2, REALSET2,
+      TARSKI, BORSUK_1, GRCAT_1, TOPS_2, EUCLID, JORDAN6, XBOOLE_0, TOPS_1,
+      BORSUK_6, YELLOW16, JORDAN5B, JGRAPH_2, XBOOLE_1, XCMPLX_1, FUNCT_1,
+      SEQ_2, REAL_1, TOPREAL3, GOBOARD6, XREAL_0, METRIC_1, AXIOMS, SPPOL_1,
+      RVSUM_1, ABSVALUE, PRE_TOPC, SEQ_4, RCOMP_1, FUNCT_3, UNIFORM1, RCOMP_2,
+      SQUARE_1, REAL_2, BORSUK_4, JORDAN5A, TOPREAL5, SUBSET_1, JORDAN2C,
+      GROUP_6, WAYBEL_1, JGRAPH_6, GROUP_1;
+ schemes EQREL_1, BINOP_1, XBOOLE_0, FUNCT_2;
+
+begin :: Preliminaries
+
+reserve
+  p, q, x, y for real number,
+  n for Nat;
+
+theorem
+  for G, H being Group, h being Homomorphism of G,H st
+  h * h" = id H & h" * h = id G holds h is_isomorphism
+proof
+  let G, H be Group,
+      h be Homomorphism of G,H;
+  assume h*h" = id H;
+  then
+A1: rng h = the carrier of H by YELLOW16:8;
+  assume h"*h = id G;
+  then h is one-to-one by WAYBEL_1:25;
+  hence h is_isomorphism by A1,GROUP_6:70;
+end;
+
+theorem Th2:
+  for X being Subset of I[01], a being Point of I[01] st X = ]. a, 1 .] holds
+  X` = [. 0, a .]
+proof
+  let X be Subset of I[01],
+      a be Point of I[01] such that
+A1: X = ]. a, 1 .];
+  set I = the carrier of I[01];
+  set Y = [. 0,a .];
+A2: X` = I \ X by SUBSET_1:def 5;
+  hereby
+    let x be set;
+    assume
+A3:   x in X`;
+    then reconsider y = x as Point of I[01];
+A4: 0 <= y by JORDAN5A:2;
+    not x in X by A2,A3,XBOOLE_0:def 4;
+    then y <= a or y > 1 by A1,RCOMP_2:4;
+    hence x in Y by A4,JORDAN5A:2,TOPREAL5:1;
+  end;
+  let x be set;
+  assume
+A5: x in Y;
+  then reconsider y = x as Real;
+A6: 0 <= y by A5,TOPREAL5:1;
+A7:y <= a by A5,TOPREAL5:1;
+   a <= 1 by JORDAN5A:2;
+   then y <= 1 by A7,AXIOMS:22;
+   then
+A8:y in I by A6,JORDAN5A:2;
+  not y in X by A1,A7,RCOMP_2:4;
+  hence x in X` by A2,A8,XBOOLE_0:def 4;
+end;
+
+theorem Th3:
+  for X being Subset of I[01], a being Point of I[01] st X = [. 0, a .[ holds
+  X` = [. a, 1 .]
+proof
+  let X be Subset of I[01],
+      a be Point of I[01] such that
+A1: X = [. 0, a .[;
+  set I = the carrier of I[01];
+  set Y = [. a,1 .];
+A2: X` = I \ X by SUBSET_1:def 5;
+  hereby
+    let x be set;
+    assume
+A3:   x in X`;
+    then reconsider y = x as Point of I[01];
+A4: y <= 1 by JORDAN5A:2;
+    not x in X by A2,A3,XBOOLE_0:def 4;
+    then y >= a or y < 0 by A1,RCOMP_2:3;
+    hence x in Y by A4,JORDAN5A:2,TOPREAL5:1;
+  end;
+  let x be set;
+  assume
+A5: x in Y;
+  then reconsider y = x as Real;
+A6: y <= 1 by A5,TOPREAL5:1;
+A7:a <= y by A5,TOPREAL5:1;
+   0 <= a by JORDAN5A:2;
+   then
+A8:y in I by A6,A7,JORDAN5A:2;
+  not y in X by A1,A7,RCOMP_2:3;
+  hence x in X` by A2,A8,XBOOLE_0:def 4;
+end;
+
+theorem Th4:
+  for X being Subset of I[01], a being Point of I[01] st X = ]. a, 1 .] holds
+  X is open
+proof
+  let X be Subset of I[01],
+      a be Point of I[01] such that
+A1: X = ]. a, 1 .];
+  set Y = [. 0,a .];
+  Y c= the carrier of I[01]
+  proof
+    let x be set;
+    assume
+A2:   x in Y;
+    then reconsider x as Real;
+A3: 0 <= x by A2,TOPREAL5:1;
+A4: x <= a by A2,TOPREAL5:1;
+    a <= 1 by JORDAN5A:2;
+    then x <= 1 by A4,AXIOMS:22;
+    hence thesis by A3,JORDAN5A:2;
+  end;
+  then reconsider Y as Subset of I[01];
+A5: Y is closed by BORSUK_4:48;
+  X` = Y by A1,Th2;
+  hence X is open by A5,TOPS_1:30;
+end;
+
+theorem Th5:
+  for X being Subset of I[01], a being Point of I[01] st X = [. 0, a .[ holds
+  X is open
+proof
+  let X be Subset of I[01],
+      a be Point of I[01] such that
+A1: X = [. 0, a .[;
+  set Y = [. a,1 .];
+  Y c= the carrier of I[01]
+  proof
+    let x be set;
+    assume
+A2:   x in Y;
+    then reconsider x as Real;
+A3: x <= 1 by A2,TOPREAL5:1;
+A4: a <= x by A2,TOPREAL5:1;
+    0 <= a by JORDAN5A:2;
+    hence thesis by A3,A4,JORDAN5A:2;
+  end;
+  then reconsider Y as Subset of I[01];
+A5: Y is closed by BORSUK_4:48;
+  X` = Y by A1,Th3;
+  hence X is open by A5,TOPS_1:30;
+end;
+
+theorem Th6:
+  for f being Element of n-tuples_on REAL holds x * (-f) = - (x*f)
+proof
+  let f be Element of n-tuples_on REAL;
+A1: x is Real by XREAL_0:def 1;
+  thus x * (-f) = x*((-1)*f) by RVSUM_1:76
+    .= (-1) * x*f by A1,RVSUM_1:71
+    .= (-1) * (x*f) by A1,RVSUM_1:71
+    .= - x*f by RVSUM_1:76;
+end;
+
+theorem Th7:
+  for f, g being Element of n-tuples_on REAL holds x * (f-g) = x*f - x*g
+proof
+  let f, g be Element of n-tuples_on REAL;
+A1: x is Real by XREAL_0:def 1;
+  thus x * (f-g) = x * (f+-g) by RVSUM_1:52
+    .= (x*f) + (x*(-g)) by A1,RVSUM_1:73
+    .= (x*f) + -(x*g) by Th6
+    .= x*f - x*g by RVSUM_1:52;
+end;
+
+theorem Th8:
+  for f being Element of n-tuples_on REAL holds (x-y) * f = x*f - y*f
+proof
+  let f be Element of n-tuples_on REAL;
+A1: REAL n = n-tuples_on REAL by EUCLID:def 1;
+  then reconsider g = f as Point of TOP-REAL n by EUCLID:25;
+A2:(x-y) * g = x*g - y*g by EUCLID:54;
+  (x-y) * g = (x-y) * f & x*g = x*f & y*g = y*f by A1,EUCLID:def 11;
+  hence (x-y) * f = x*f - y*f by A1,A2,EUCLID:def 13;
+end;
+
+theorem Th9:
+  for f, g, h, k being Element of n-tuples_on REAL holds
+  (f+g)-(h+k) = (f-h)+(g-k)
+proof
+  let f, g, h, k be Element of n-tuples_on REAL;
+  thus f+g-(h+k) = f+g+-(h+k) by RVSUM_1:52
+    .= f+(g+-(h+k)) by RVSUM_1:32
+    .= f+(g+(-h+-k)) by RVSUM_1:45
+    .= f+(-h+(g+-k)) by RVSUM_1:32
+    .= f+-h+(g+-k) by RVSUM_1:32
+    .= (f-h)+(g+-k) by RVSUM_1:52
+    .= (f-h) + (g-k) by RVSUM_1:52;
+end;
+
+theorem Th10:
+  for f being Element of REAL n st 0 <= x & x <= 1 holds |.x*f.| <= |.f.|
+proof
+  let f be Element of REAL n such that
+A1: 0 <= x and
+A2: x <= 1;
+A3:|.x*f.| = abs(x)*|.f.| by EUCLID:14;
+A4: 0 <= |.f.| by EUCLID:12;
+  x = abs(x) by A1,ABSVALUE:def 1;
+  then |.x*f.| <= 1*|.f.| by A1,A2,A3,A4,SEQ_4:7;
+  hence |.x*f.| <= |.f.|;
+end;
+
+theorem
+  for f being Element of REAL n, p being Point of I[01] holds |.p*f.| <= |.f.|
+proof
+  let f be Element of REAL n,
+      p be Point of I[01];
+A1: [. 0,1 .] = {r where r is Real: 0 <= r & r <= 1 } by RCOMP_1:def 1;
+  p in the carrier of I[01];
+  then ex r being Real st r = p & 0 <= r & r <= 1 by A1,BORSUK_1:83;
+  hence |.p*f.| <= |.f.| by Th10;
+end;
+
+theorem
+  for e1, e2, e3, e4, e5, e6 being Point of Euclid n,
+      p1, p2, p3, p4 being Point of TOP-REAL n st
+   e1 = p1 & e2 = p2 & e3 = p3 & e4 = p4 & e5 = p1+p3 & e6 = p2+p4 &
+   dist(e1,e2) < x & dist(e3,e4) < y
+   holds dist(e5,e6) < x+y
+proof
+  let e1, e2, e3, e4, e5, e6 be Point of Euclid n,
+      p1, p2, p3, p4 be Point of TOP-REAL n such that
+A1: e1 = p1 & e2 = p2 & e3 = p3 & e4 = p4 and
+A2: e5 = p1+p3 and
+A3: e6 = p2+p4 and
+A4: dist(e1,e2) < x and
+A5: dist(e3,e4) < y;
+  reconsider f1 = e1, f2 = e2, f3 = e3, f4 = e4, f5 = e5, f6 = e6 as
+    Element of REAL n by A1,A2,A3,EUCLID:25;
+A6: REAL n = n-tuples_on REAL by EUCLID:def 1;
+A7: dist(e5,e6) = |. f5-f6 .| by SPPOL_1:20
+    .= |. f1+f3-f6 .| by A1,A2,EUCLID:def 10
+    .= |. f1+f3-(f2+f4) .| by A1,A3,EUCLID:def 10
+    .= |. (f1-f2) + (f3-f4) .| by A6,Th9;
+A8: dist(e1,e2) = |. f1-f2 .| & dist(e3,e4) = |. f3-f4 .| by SPPOL_1:20;
+A9: |. f1-f2 + (f3-f4) .| <= |. f1-f2 .| + |. f3-f4 .| by EUCLID:15;
+  dist(e1,e2) + dist(e3,e4) < x + y by A4,A5,REAL_1:67;
+  hence dist(e5,e6) < x+y by A7,A8,A9,AXIOMS:22;
+end;
+
+theorem Th13:
+  for e1, e2, e5, e6 being Point of Euclid n,
+      p1, p2 being Point of TOP-REAL n st
+   e1 = p1 & e2 = p2 & e5 = y*p1 & e6 = y*p2 & dist(e1,e2) < x & y <> 0
+   holds dist(e5,e6) < abs(y)*x
+proof
+  let e1, e2, e5, e6 be Point of Euclid n,
+      p1, p2 be Point of TOP-REAL n such that
+A1: e1 = p1 & e2 = p2 and
+A2: e5 = y*p1 and
+A3: e6 = y*p2 and
+A4: dist(e1,e2) < x and
+A5: y <> 0;
+  reconsider f1 = e1, f2 = e2, f5 = e5, f6 = e6 as Element of REAL n
+    by A1,A2,A3,EUCLID:25;
+A6: REAL n = n-tuples_on REAL by EUCLID:def 1;
+A7: dist(e5,e6) = |. f5-f6 .| by SPPOL_1:20
+    .= |. y*f1-f6 .| by A1,A2,EUCLID:def 11
+    .= |. y*f1-y*f2 .| by A1,A3,EUCLID:def 11
+    .= |. y*(f1-f2) .| by A6,Th7
+    .= abs(y) * |. f1-f2 .| by EUCLID:14;
+A8: dist(e1,e2) = |. f1-f2 .| by SPPOL_1:20;
+  0 < abs(y) by A5,ABSVALUE:6;
+  hence dist(e5,e6) < abs(y)*x by A4,A7,A8,REAL_1:70;
+end;
+
+theorem Th14:
+  for e1, e2, e3, e4, e5, e6 being Point of Euclid n,
+      p1, p2, p3, p4 being Point of TOP-REAL n st
+   e1 = p1 & e2 = p2 & e3 = p3 & e4 = p4 & e5 = x*p1+y*p3 & e6 = x*p2+y*p4 &
+   dist(e1,e2) < p & dist(e3,e4) < q & x <> 0 & y <> 0
+   holds dist(e5,e6) < abs(x)*p + abs(y)*q
+proof
+  let e1, e2, e3, e4, e5, e6 be Point of Euclid n,
+      p1, p2, p3, p4 be Point of TOP-REAL n such that
+A1: e1 = p1 & e2 = p2 & e3 = p3 & e4 = p4 and
+A2: e5 = x*p1+y*p3 and
+A3: e6 = x*p2+y*p4 and
+A4: dist(e1,e2) < p and
+A5: dist(e3,e4) < q and
+A6: x <> 0 and
+A7: y <> 0;
+  reconsider f1 = e1, f2 = e2, f3 = e3, f4 = e4, f5 = e5, f6 = e6 as
+    Element of REAL n by A1,A2,A3,EUCLID:25;
+A8: REAL n = n-tuples_on REAL by EUCLID:def 1;
+    x*p1 = x*f1 & y*p3 = y*f3 by A1,EUCLID:def 11;
+    then
+A9: f5 = x*f1+y*f3 by A2,EUCLID:def 10;
+    x*p2 = x*f2 & y*p4 = y*f4 by A1,EUCLID:def 11;
+    then f6 = x*f2+y*f4 by A3,EUCLID:def 10;
+    then
+A10: dist(e5,e6) = |. x*f1+y*f3 - (x*f2+y*f4) .| by A9,SPPOL_1:20
+    .= |. (x*f1-x*f2) + (y*f3-y*f4) .| by A8,Th9
+    .= |. x*(f1-f2) + (y*f3-y*f4) .| by A8,Th7
+    .= |. x*(f1-f2) + y*(f3-f4) .| by A8,Th7;
+A11: dist(e1,e2) = |. f1-f2 .| & dist(e3,e4) = |. f3-f4 .| by SPPOL_1:20;
+    |. x*(f1-f2) + y*(f3-f4) .| <= |. x*(f1-f2) .| + |. y*(f3-f4) .|
+      by EUCLID:15;
+    then |. x*(f1-f2) + y*(f3-f4) .| <= |.x*(f1-f2).| + abs(y)*|.(f3-f4).|
+      by EUCLID:14;
+    then
+A12: |. x*(f1-f2) + y*(f3-f4) .| <= abs(x)*|.f1-f2.| + abs(y)*|.f3-f4.|
+      by EUCLID:14;
+  0 < abs(x) & 0 < abs(y) by A6,A7,ABSVALUE:6;
+  then abs(x)*|.f1-f2.| < abs(x)*p & abs(y)*|.f3-f4.| < abs(y)*q
+    by A4,A5,A11,REAL_1:70;
+  then abs(x)*|.f1-f2.| + abs(y)*|.f3-f4.| < abs(x)*p + abs(y)*q by REAL_1:67;
+  hence dist(e5,e6) < abs(x)*p+abs(y)*q by A10,A12,AXIOMS:22;
+end;
+
+canceled;
+
+Lm1:
+  for X being non empty TopSpace,
+      f1, f2, g being map of X,TOP-REAL n st
+    f1 is continuous & f2 is continuous &
+    for p being Point of X holds g.p = f1.p + f2.p
+  holds g is continuous
+proof
+  let X being non empty TopSpace,
+      f1, f2, g be map of X,TOP-REAL n such that
+A1: f1 is continuous and
+A2: f2 is continuous and
+A3: for p being Point of X holds g.p = f1.p + f2.p;
+  consider h being map of X,TOP-REAL n such that
+A4: for r being Point of X holds h.r = f1.r + f2.r and
+A5: h is continuous by A1,A2,JGRAPH_6:20;
+  for x being Point of X holds g.x = h.x
+  proof
+    let x be Point of X;
+    thus g.x = f1.x + f2.x by A3
+      .= h.x by A4;
+  end;
+  then g = h by FUNCT_2:113;
+  hence g is continuous by A5;
+end;
+
+theorem Th16:
+  for X being non empty TopSpace,
+      f, g being map of X,TOP-REAL n st
+    f is continuous & for p being Point of X holds g.p = y * f.p
+  holds g is continuous
+proof
+  let X being non empty TopSpace,
+      f, g be map of X,TOP-REAL n such that
+A1: f is continuous and
+A2: for p being Point of X holds g.p = y * f.p;
+  for p being Point of X, V being Subset of TOP-REAL n st g.p in V & V is open
+   ex W being Subset of X st p in W & W is open & g.:W c= V
+  proof
+    let p be Point of X,
+        V be Subset of TOP-REAL n;
+    assume g.p in V & V is open;
+    then
+A3: g.p in Int V by TOPS_1:55;
+    reconsider r = g.p as Point of Euclid n by TOPREAL3:13;
+    consider r0 being real number such that
+A4:   r0 > 0 and
+A5:  Ball(r,r0) c= V by A3,GOBOARD6:8;
+A6: r0/abs(y) is Real by XREAL_0:def 1;
+    reconsider r1 = f.p as Point of Euclid n by TOPREAL3:13;
+    reconsider G1 = Ball(r1,r0/abs(y)) as Subset of TOP-REAL n by TOPREAL3:13;
+    per cases;
+    suppose
+A7:   y <> 0;
+    then
+A8: 0 < abs(y) by ABSVALUE:6;
+    then
+A9: r0/abs(y) > 0 by A4,SEQ_2:6;
+A10: r1 in G1 by A9,GOBOARD6:4;
+    G1 is open by A6,GOBOARD6:6;
+    then consider W1 being Subset of X such that
+A11:   p in W1 and
+A12:   W1 is open and
+A13:   f.:W1 c= G1 by A1,A10,JGRAPH_2:20;
+    take W1;
+    thus p in W1 by A11;
+    thus W1 is open by A12;
+    g.:W1 c= Ball(r,r0)
+    proof
+      let x be set;
+      assume x in g.:W1;
+      then consider z being set such that
+A14:    z in dom g and
+A15:    z in W1 and
+A16:    g.z = x by FUNCT_1:def 12;
+      reconsider z as Point of X by A14;
+      z in the carrier of X;
+      then z in dom f by FUNCT_2:def 1;
+      then
+A17:  f.z in f.:W1 by A15,FUNCT_1:def 12;
+      reconsider ea1 = f.z as Point of Euclid n by TOPREAL3:13;
+A18:  x = y * f.z by A2,A16;
+      then reconsider e1x = x as Point of Euclid n by TOPREAL3:13;
+A19:   dist(r1,ea1) < r0/abs(y) by A13,A17,METRIC_1:12;
+      r = y * f.p by A2;
+      then dist(r,e1x) < abs(y)*(r0/abs(y)) by A7,A18,A19,Th13;
+      then dist(r,e1x) < r0 by A8,XCMPLX_1:88;
+      hence x in Ball(r,r0) by METRIC_1:12;
+    end;
+    hence g.:W1 c= V by A5,XBOOLE_1:1;
+  end;
+  suppose
+A20: y = 0;
+  take W = [#]X;
+  thus p in W by PRE_TOPC:13;
+  thus W is open;
+  let x be set;
+  assume x in g.:W;
+  then consider z being set such that
+     z in dom g and
+A21:  z in W and
+A22:  g.z = x by FUNCT_1:def 12;
+  reconsider z as Point of X by A21;
+A23:x = y * f.z by A2,A22
+     .= 0.REAL n by A20,EUCLID:33;
+  r = y * f.p by A2
+   .= 0.REAL n by A20,EUCLID:33;
+  then x in Ball(r,r0) by A4,A23,GOBOARD6:4;
+  hence x in V by A5;
+  end;
+  end;
+  hence g is continuous by JGRAPH_2:20;
+end;
+
+theorem
+  for X being non empty TopSpace,
+      f1, f2, g being map of X,TOP-REAL n st
+    f1 is continuous & f2 is continuous &
+    for p being Point of X holds g.p = x * f1.p + y * f2.p
+  holds g is continuous
+proof
+  let X being non empty TopSpace,
+      f1, f2, g be map of X,TOP-REAL n such that
+A1: f1 is continuous and
+A2: f2 is continuous and
+A3: for p being Point of X holds g.p = x*f1.p + y*f2.p;
+  per cases;
+  suppose that
+A4: x <> 0 and
+A5: y <> 0;
+  for p being Point of X, V being Subset of TOP-REAL n st g.p in V & V is open
+   ex W being Subset of X st p in W & W is open & g.:W c= V
+  proof
+    let p be Point of X,
+        V be Subset of TOP-REAL n;
+    assume g.p in V & V is open;
+    then
+A6: g.p in Int V by TOPS_1:55;
+    reconsider r = g.p as Point of Euclid n by TOPREAL3:13;
+    consider r0 being real number such that
+A7:   r0 > 0 and
+A8:  Ball(r,r0) c= V by A6,GOBOARD6:8;
+A9: r0/2/abs(x) is Real by XREAL_0:def 1;
+A10: r0/2/abs(y) is Real by XREAL_0:def 1;
+A11: r0/2 > 0 by A7,SEQ_2:3;
+    reconsider r1 = f1.p as Point of Euclid n by TOPREAL3:13;
+    reconsider G1 = Ball(r1,r0/2/abs(x)) as Subset of TOP-REAL n
+      by TOPREAL3:13;
+A12: abs(x) > 0 by A4,ABSVALUE:6;
+A13: abs(y) > 0 by A5,ABSVALUE:6;
+    r0/2/abs(x) > 0 by A11,A12,SEQ_2:6;
+    then
+A14: r1 in G1 by GOBOARD6:4;
+    G1 is open by A9,GOBOARD6:6;
+    then consider W1 being Subset of X such that
+A15:   p in W1 and
+A16:   W1 is open and
+A17:   f1.:W1 c= G1 by A1,A14,JGRAPH_2:20;
+    reconsider r2 = f2.p as Point of Euclid n by TOPREAL3:13;
+    reconsider G2 = Ball(r2,r0/2/abs(y)) as Subset of TOP-REAL n
+      by TOPREAL3:13;
+    r0/2/abs(y) > 0 by A11,A13,SEQ_2:6;
+    then
+A18: r2 in G2 by GOBOARD6:4;
+    G2 is open by A10,GOBOARD6:6;
+    then consider W2 being Subset of X such that
+A19:  p in W2 and
+A20:  W2 is open and
+A21:  f2.:W2 c= G2 by A2,A18,JGRAPH_2:20;
+    take W = W1 /\ W2;
+    thus p in W by A15,A19,XBOOLE_0:def 3;
+    thus W is open by A16,A20,TOPS_1:38;
+    g.:W c= Ball(r,r0)
+    proof
+      let a be set;
+      assume a in g.:W;
+      then consider z being set such that
+A22:    z in dom g and
+A23:    z in W and
+A24:    g.z = a by FUNCT_1:def 12;
+A25:  z in W1 by A23,XBOOLE_0:def 3;
+      reconsider z as Point of X by A22;
+A26:  z in the carrier of X;
+      then z in dom f1 by FUNCT_2:def 1;
+      then
+A27:  f1.z in f1.:W1 by A25,FUNCT_1:def 12;
+      reconsider ea1 = f1.z as Point of Euclid n by TOPREAL3:13;
+A28:  z in W2 by A23,XBOOLE_0:def 3;
+      z in dom f2 by A26,FUNCT_2:def 1;
+      then
+A29:  f2.z in f2.:W2 by A28,FUNCT_1:def 12;
+      reconsider ea2 = f2.z as Point of Euclid n by TOPREAL3:13;
+A30:  a = x*f1.z + y*f2.z by A3,A24;
+      then reconsider e1x = a as Point of Euclid n by TOPREAL3:13;
+A31:   dist(r1,ea1) < r0/2/abs(x) by A17,A27,METRIC_1:12;
+A32:   dist(r2,ea2) < r0/2/abs(y) by A21,A29,METRIC_1:12;
+      r = x*f1.p + y*f2.p by A3;
+      then dist(r,e1x) < abs(x)*(r0/2/abs(x)) + abs(y)*(r0/2/abs(y))
+        by A4,A5,A30,A31,A32,Th14;
+      then dist(r,e1x) < abs(x)*(r0/abs(x)/2) + abs(y)*(r0/2/abs(y))
+        by XCMPLX_1:48;
+      then dist(r,e1x) < abs(x)*(r0/abs(x)/2) + abs(y)*(r0/abs(y)/2)
+        by XCMPLX_1:48;
+      then dist(r,e1x) < r0/2 + abs(y)*(r0/abs(y)/2) by A12,XCMPLX_1:98;
+      then dist(r,e1x) < r0/2 + r0/2 by A13,XCMPLX_1:98;
+      hence a in Ball(r,r0) by METRIC_1:12;
+    end;
+    hence g.:W c= V by A8,XBOOLE_1:1;
+  end;
+  hence g is continuous by JGRAPH_2:20;
+  end;
+  suppose
+A33: x = 0;
+  for p being Point of X holds g.p = y * f2.p
+  proof
+    let p be Point of X;
+    thus g.p = x*f1.p + y*f2.p by A3
+      .= 0.REAL n + y*f2.p by A33,EUCLID:33
+      .= y*f2.p by EUCLID:31;
+  end;
+  hence thesis by A2,Th16;
+  end;
+  suppose
+A34: y = 0;
+  for p being Point of X holds g.p = x * f1.p
+  proof
+    let p be Point of X;
+    thus g.p = x*f1.p + y*f2.p by A3
+      .= x*f1.p + 0.REAL n by A34,EUCLID:33
+      .= x*f1.p by EUCLID:31;
+  end;
+  hence thesis by A1,Th16;
+  end;
+end;
+
+theorem Th18:
+  for F being map of [:TOP-REAL n,I[01]:], TOP-REAL n st
+   for x being Point of TOP-REAL n, i being Point of I[01] holds
+    F.(x,i) = (1-i) * x holds
+  F is continuous
+proof
+  let F be map of [:TOP-REAL n,I[01]:], TOP-REAL n such that
+A1: for x being Point of TOP-REAL n, i being Point of I[01] holds
+    F.(x,i) = (1-i) * x;
+   set I = the carrier of I[01];
+A2: [#]I[01] = I by PRE_TOPC:12;
+A3: REAL n = n-tuples_on REAL by EUCLID:def 1;
+  for p being Point of [:TOP-REAL n,I[01]:], V being Subset of TOP-REAL n st
+   F.p in V & V is open
+   ex W being Subset of [:TOP-REAL n,I[01]:] st p in W & W is open & F.:W c= V
+  proof
+    let p be Point of [:TOP-REAL n,I[01]:],
+        V be Subset of TOP-REAL n;
+    assume F.p in V & V is open;
+    then
+A4: F.p in Int V by TOPS_1:55;
+    reconsider ep = F.p as Point of Euclid n by TOPREAL3:13;
+    consider x being Point of TOP-REAL n, i being Point of I[01] such that
+A5:   p = [x,i] by BORSUK_1:50;
+    consider r0 being real number such that
+A6:   r0 > 0 and
+A7:  Ball(ep,r0) c= V by A4,GOBOARD6:8;
+    reconsider lx = x as Point of Euclid n by TOPREAL3:13;
+    reconsider fx = x as Element of REAL n by EUCLID:25;
+A8: r0/2/(1-i) is Real by XREAL_0:def 1;
+A9: r0/2 > 0 by A6,SEQ_2:6;
+A10: 0 <= |.fx.| by EUCLID:12;
+A11: ep = F.(x,i) by A5,BINOP_1:def 1
+      .= (1-i)*x by A1;
+    per cases;
+    suppose
+A12:   1-i > 0;
+    then
+A13: r0/2/(1-i) > 0 by A9,SEQ_2:6;
+    reconsider B = Ball(lx,r0/2/(1-i)) as Subset of TOP-REAL n by TOPREAL3:13;
+    set t = 2*(1-i)*|.fx.|+r0;
+    set c = (1-i)*r0 / t;
+    set X1 = ]. i-c, i+c .[;
+    set X2 = X1 /\ I;
+A14: 0 < 2*(1-i) by A12,SQUARE_1:21;
+A15: 0 <= 2*(1-i)*|.fx.| by A10,A14,SQUARE_1:19;
+    then
+A16: 0 + 0 < t by A6,REAL_1:67;
+    0 < (1-i)*r0 by A6,A12,SQUARE_1:21;
+    then
+A17: 0 < c by A16,REAL_2:127;
+    reconsider X2 as Subset of I[01] by XBOOLE_1:17;
+    take W = [:B,X2:];
+A18: x in B by A13,GOBOARD6:4;
+    abs(i-i) < c by A17,ABSVALUE:def 1;
+    then i in X1 by RCOMP_1:8;
+    then i in X2 by XBOOLE_0:def 3;
+    hence p in W by A5,A18,ZFMISC_1:106;
+    0 <= i by JORDAN5A:2;
+    then
+A19: 0 <= i*(2*(1-i)*|.fx.|) by A15,SQUARE_1:19;
+A20: i*2*(1-i)*|.fx.|+0 <= i*2*(1-i)*|.fx.|+r0 by A6,AXIOMS:24;
+
+A21: i+c = i*t/t + ((1-i)*r0 / t) by A16,XCMPLX_1:90
+       .= (i*t + (1-i)*r0) / t by XCMPLX_1:63
+       .= (i*2*(1-i)*|.fx.| + r0) / t;
+    then
+A22: 0 <= i+c by A16,A19,A20,REAL_2:125;
+A23: i+c-1 = (i*2*(1-i)*|.fx.|+r0) / t - t / t by A16,A21,XCMPLX_1:60
+         .= (i*2*(1-i)*|.fx.|+r0 - t) / t by XCMPLX_1:121;
+    --(1-i) > -0 by A12;
+    then -(1-i) < 0 by REAL_1:50;
+    then (i-1)*(2*(1-i)*|.fx.|) <= 0 by A15,SQUARE_1:23;
+    then i+c-1 <= 0 by A16,A23,REAL_2:126;
+    then
+A24: i+c-1+1 <= 0+1 by REAL_1:55;
+    then
+A25: i+c is Point of I[01] by A22,JORDAN5A:2;
+A26: now
+      per cases;
+      suppose
+A27:     0 <= i-c;
+      X1 c= the carrier of I[01]
+      proof
+        let a be set;
+        assume
+A28:       a in X1;
+        then reconsider a as Real;
+        i-c < a & a < i+c by A28,JORDAN6:45;
+        then 0 < a & a < 1 by A24,A27,AXIOMS:22;
+        hence thesis by JORDAN5A:2;
+      end;
+      then reconsider X1 as Subset of I[01];
+      now per cases;
+        suppose i-c <= i+c;
+        then i-c <= 1 by A24,AXIOMS:22;
+        then i-c is Point of I[01] by A27,JORDAN5A:2;
+        hence X1 is open by A25,BORSUK_4:70;
+        end;
+        suppose i-c > i+c;
+        then X1 = {} by RCOMP_1:12;
+        then X1 = {}I[01] by PRE_TOPC:def 2;
+        hence X1 is open by TOPS_1:52;
+        end;
+      end;
+      hence X2 is open by A2,TOPS_1:38;
+      end;
+      suppose
+A29:     i-c < 0;
+      X2 = [. 0, i+c .[
+      proof
+        hereby
+          let a be set;
+          assume
+A30:         a in X2;
+          then
+A31:       a in X1 by XBOOLE_0:def 3;
+          then reconsider b = a as Real;
+A32:       b < i+c by A31,JORDAN6:45;
+          0 <= b by A30,JORDAN5A:2;
+          hence a in [. 0,i+c.[ by A32,RCOMP_2:3;
+        end;
+        let a be set;
+        assume
+A33:       a in [. 0,i+c .[;
+        then reconsider b = a as Real;
+A34:     b < i+c by A33,RCOMP_2:3;
+A35:     0 <= b by A33,RCOMP_2:3;
+        then
+A36:     a in X1 by A29,A34,JORDAN6:45;
+        b <= 1 by A24,A34,AXIOMS:22;
+        then a in I by A35,BORSUK_1:83,TOPREAL5:1;
+        hence a in X2 by A36,XBOOLE_0:def 3;
+      end;
+      hence X2 is open by A25,Th5;
+      end;
+    end;
+    B is open by A8,GOBOARD6:6;
+    hence W is open by A26,BORSUK_1:46;
+    F.:W c= Ball(ep,r0)
+    proof
+      let m be set;
+      assume m in F.:W;
+      then consider z being set such that
+A37:    z in dom F and
+A38:    z in W and
+A39:    F.z = m by FUNCT_1:def 12;
+      reconsider z as Point of [:TOP-REAL n,I[01]:] by A37;
+      consider y being Point of TOP-REAL n, j being Point of I[01] such that
+A40:     z = [y,j] by BORSUK_1:50;
+      reconsider ez = F.z, ey = y as Point of Euclid n by TOPREAL3:13;
+A41:   ez = F.(y,j) by A40,BINOP_1:def 1
+        .= (1-j)*y by A1;
+      reconsider fp = ep, fz = ez, fe = (1-i)*y, fy = y as Element of REAL n
+        by EUCLID:25;
+A42:   dist(ep,ez) = |.fp-fz.| by SPPOL_1:20;
+A43:   |.fp-fz.| <= |.fp-fe.| + |.fe-fz.| by EUCLID:22;
+      fy in B by A38,A40,ZFMISC_1:106;
+      then
+A44:   dist(lx,ey) < r0/2/(1-i) by METRIC_1:12;
+A45:   dist(lx,ey) = |.fx-fy.| by SPPOL_1:20;
+      then
+A46:   (1-i) * |.fx-fy.| < (1-i) * (r0/2/(1-i)) by A12,A44,REAL_1:70;
+A47:   (1-i) * (r0/(1-i)/2) = r0/2 by A12,XCMPLX_1:98;
+A48:   i is Real & j is Real by XREAL_0:def 1;
+      fe = (1-i)*fy & fz = (1-j)*fy by A41,EUCLID:def 11;
+      then
+A49:   |.fe-fz.| = |.(1-i-(1-j))*fy.| by A3,Th8
+        .= abs(j-i)*|.fy.| by EUCLID:14
+        .= abs(i-j)*|.fy.| by A48,UNIFORM1:13;
+A50:   0 <= |.fy.| by EUCLID:12;
+      j in X2 by A38,A40,ZFMISC_1:106;
+      then j in X1 by XBOOLE_0:def 3;
+      then abs(j-i) < c by RCOMP_1:8;
+      then abs(i-j) < c by A48,UNIFORM1:13;
+      then
+A51:   abs(i-j)*|.fy.| <= c*|.fy.| by A50,AXIOMS:25;
+A52:   |.fx-fy.| = |.fy-fx.| by EUCLID:21;
+      |.fy.| - |.fx.| <= |.fy-fx.| by EUCLID:18;
+      then |.fy.| - |.fx.| < r0/2/(1-i) by A44,A45,A52,AXIOMS:22;
+      then |.fy.| < |.fx.| + r0/2/(1-i) by REAL_1:84;
+      then
+A53:   c*|.fy.| < c * (|.fx.| + r0/2/(1-i)) by A17,REAL_1:70;
+      c * (|.fx.| + r0/2/(1-i)) = c * (|.fx.| + r0/(2*(1-i))) by XCMPLX_1:79
+       .= c * ((|.fx.|*(2*(1-i)))/(2*(1-i))+r0/(2*(1-i))) by A14,XCMPLX_1:90
+       .= c * ((|.fx.|*(2*(1-i))+r0)/(2*(1-i))) by XCMPLX_1:63
+       .= (1-i)*r0 / (2*(1-i)) by A16,XCMPLX_1:99
+       .= r0/2 by A12,XCMPLX_1:92;
+      then
+A54:   abs(i-j)*|.fy.| <= r0/2 by A51,A53,AXIOMS:22;
+      r0/2/(1-i) = r0/(1-i)/2 by XCMPLX_1:48;
+      then abs(1-i) * |.fx-fy.| < r0/2 by A12,A46,A47,ABSVALUE:def 1;
+      then |.(1-i)*(fx-fy).| < r0/2 by EUCLID:14;
+      then |.(1-i)*fx-(1-i)*fy.| < r0/2 by A3,Th7;
+      then |.(1-i)*fx-fe.| < r0/2 by EUCLID:def 11;
+      then |.fp-fe.| < r0/2 by A11,EUCLID:def 11;
+      then |.fp-fe.| + |.fe-fz.| < r0/2 + r0/2 by A49,A54,REAL_1:67;
+      then dist(ep,ez) < r0 by A42,A43,AXIOMS:22;
+      hence thesis by A39,METRIC_1:12;
+  end;
+  hence F.:W c= V by A7,XBOOLE_1:1;
+  end;
+  suppose 1-i <= 0;
+  then
+A55: 1-i+i <= 0+i by AXIOMS:24;
+  i <= 1 by JORDAN5A:2;
+  then
+A56: i = 1 by A55,AXIOMS:21;
+A57: r0 is Real by XREAL_0:def 1;
+  reconsider B = Ball(lx,r0) as Subset of TOP-REAL n by TOPREAL3:13;
+  set t = |.fx.|+r0;
+  set c = r0 / t;
+  set X1 = ]. 1-c, 1 .];
+A58: 0 + 0 < t by A6,A10,REAL_1:67;
+A59: 0 < c by A6,A58,REAL_2:127;
+    0+r0 <= t by A10,REAL_1:55;
+    then
+A60: c <= 1 by A58,REAL_2:117;
+    then
+A61: c-c <= 1-c by REAL_1:49;
+    c is Point of I[01] by A59,A60,JORDAN5A:2;
+    then
+A62: 1-c is Point of I[01] by JORDAN5B:4;
+    X1 c= I
+    proof
+      let s be set;
+      assume
+A63:     s in X1;
+      then reconsider s as Real;
+A64:   s <= 1 by A63,RCOMP_2:4;
+      1-c < s by A63,RCOMP_2:4;
+      then 0 <= s by A61;
+      hence thesis by A64,JORDAN5A:2;
+    end;
+    then reconsider X1 as Subset of I[01];
+    take W = [:B,X1:];
+A65: x in B by A6,GOBOARD6:4;
+    1-c < 1-0 by A59,REAL_1:92;
+    then i in X1 by A56,RCOMP_2:4;
+    hence p in W by A5,A65,ZFMISC_1:106;
+A66: X1 is open by A62,Th4;
+    B is open by A57,GOBOARD6:6;
+    hence W is open by A66,BORSUK_1:46;
+    F.:W c= Ball(ep,r0)
+    proof
+      let m be set;
+      assume m in F.:W;
+      then consider z being set such that
+A67:    z in dom F and
+A68:    z in W and
+A69:    F.z = m by FUNCT_1:def 12;
+      reconsider z as Point of [:TOP-REAL n,I[01]:] by A67;
+      consider y being Point of TOP-REAL n, j being Point of I[01] such that
+A70:     z = [y,j] by BORSUK_1:50;
+      reconsider ez = F.z, ey = y as Point of Euclid n by TOPREAL3:13;
+A71:   ez = F.(y,j) by A70,BINOP_1:def 1
+        .= (1-j)*y by A1;
+      reconsider fp = ep, fz = ez, fe = (1-i)*y, fy = y, f0 = 0.REAL n
+        as Element of REAL n by EUCLID:25;
+A72:   F.z - 0.REAL n = F.z by JORDAN2C:13;
+A73:   fz = (1-j)*fy by A71,EUCLID:def 11;
+      1-j is Point of I[01] by JORDAN5B:4;
+      then
+A74:   0 <= 1-j by JORDAN5A:2;
+A75:   fz-fp = fz-f0 by A11,A56,EUCLID:33
+        .= fz by A72,EUCLID:def 13;
+A76:   dist(ep,ez) = |.fz-fp.| by SPPOL_1:20
+        .= abs(1-j)*|.fy.| by A73,A75,EUCLID:14
+        .= (1-j)*|.fy.| by A74,ABSVALUE:def 1;
+      fy in B by A68,A70,ZFMISC_1:106;
+      then
+A77:   dist(lx,ey) < r0 by METRIC_1:12;
+A78:   dist(lx,ey) = |.fx-fy.| by SPPOL_1:20;
+A79:   |.fx-fy.| = |.fy-fx.| by EUCLID:21;
+      |.fy.| - |.fx.| <= |.fy-fx.| by EUCLID:18;
+      then |.fy.| - |.fx.| < r0 by A77,A78,A79,AXIOMS:22;
+      then
+A80:   |.fy.| < t by REAL_1:84;
+      now
+      per cases;
+      suppose j < 1;
+      then
+A81:   j-j < 1-j by REAL_1:92;
+      j in X1 by A68,A70,ZFMISC_1:106;
+      then 1-c < j by RCOMP_2:4;
+      then 1-c+c < j+c by REAL_1:67;
+      then 1-j < j+c-j by REAL_1:92;
+      then 1-j < c;
+      then r0/(1-j) > r0/c by A6,A81,REAL_2:200;
+      then t < r0/(1-j) by A59,XCMPLX_1:54;
+      then |.fy.| < r0/(1-j) by A80,AXIOMS:22;
+      then (1-j)*|.fy.| < (1-j)*(r0/(1-j)) by A81,REAL_1:70;
+      hence (1-j)*|.fy.| < r0 by A81,XCMPLX_1:88;
+      end;
+      suppose
+A82:     j >= 1;
+      j <= 1 by JORDAN5A:2;
+      then j = 1 by A82,AXIOMS:21;
+      hence (1-j)*|.fy.| < r0 by A6;
+      end;
+      end;
+      hence thesis by A69,A76,METRIC_1:12;
+  end;
+  hence F.:W c= V by A7,XBOOLE_1:1;
+  end;
+  end;
+  hence F is continuous by JGRAPH_2:20;
+end;
+
+theorem Th19:
+  for F being map of [:TOP-REAL n,I[01]:], TOP-REAL n st
+   for x being Point of TOP-REAL n, i being Point of I[01] holds
+    F.(x,i) = i * x holds
+  F is continuous
+proof
+  let F be map of [:TOP-REAL n,I[01]:], TOP-REAL n such that
+A1: for x being Point of TOP-REAL n, i being Point of I[01] holds
+    F.(x,i) = i * x;
+   set I = the carrier of I[01];
+A2: [#]I[01] = I by PRE_TOPC:12;
+A3: REAL n = n-tuples_on REAL by EUCLID:def 1;
+  for p being Point of [:TOP-REAL n,I[01]:], V being Subset of TOP-REAL n st
+   F.p in V & V is open
+   ex W being Subset of [:TOP-REAL n,I[01]:] st p in W & W is open & F.:W c= V
+  proof
+    let p be Point of [:TOP-REAL n,I[01]:],
+        V be Subset of TOP-REAL n;
+    assume F.p in V & V is open;
+    then
+A4: F.p in Int V by TOPS_1:55;
+    reconsider ep = F.p as Point of Euclid n by TOPREAL3:13;
+    consider x being Point of TOP-REAL n, i being Point of I[01] such that
+A5:   p = [x,i] by BORSUK_1:50;
+    consider r0 being real number such that
+A6:   r0 > 0 and
+A7:  Ball(ep,r0) c= V by A4,GOBOARD6:8;
+    reconsider lx = x as Point of Euclid n by TOPREAL3:13;
+    reconsider fx = x as Element of REAL n by EUCLID:25;
+A8: r0/2/i is Real by XREAL_0:def 1;
+A9: r0/2 > 0 by A6,SEQ_2:6;
+A10: 0 <= |.fx.| by EUCLID:12;
+A11: ep = F.(x,i) by A5,BINOP_1:def 1
+      .= i*x by A1;
+    per cases;
+    suppose
+A12:   i > 0;
+A13: r0/2/i > 0 by A9,A12,SEQ_2:6;
+    reconsider B = Ball(lx,r0/2/i) as Subset of TOP-REAL n by TOPREAL3:13;
+    set t = 2*i*|.fx.|+r0;
+    set c = i*r0 / t;
+    set X1 = ]. i-c, i+c .[;
+    set X2 = X1 /\ I;
+A14: 0 < 2*i by A12,SQUARE_1:21;
+A15: 0 <= 2*i*|.fx.| by A10,A14,SQUARE_1:19;
+    then
+A16: 0 + 0 < t by A6,REAL_1:67;
+    0 < i*r0 by A6,A12,SQUARE_1:21;
+    then
+A17: 0 < c by A16,REAL_2:127;
+    reconsider X2 as Subset of I[01] by XBOOLE_1:17;
+    take W = [:B,X2:];
+A18: x in B by A13,GOBOARD6:4;
+    abs(i-i) < c by A17,ABSVALUE:def 1;
+    then i in X1 by RCOMP_1:8;
+    then i in X2 by XBOOLE_0:def 3;
+    hence p in W by A5,A18,ZFMISC_1:106;
+A19: 0 <= i*(2*i*|.fx.|) by A12,A15,SQUARE_1:19;
+A20: i-c = i*t/t - (i*r0 / t) by A16,XCMPLX_1:90
+       .= (i*t - i*r0) / t by XCMPLX_1:121
+       .= i*(2*i*|.fx.|) / t;
+    then
+A21: 0 <= i-c by A16,A19,REAL_2:125;
+A22: i-c-1 = i*(2*i*|.fx.|) / t - t / t by A16,A20,XCMPLX_1:60
+         .= (i*(2*i*|.fx.|) - t) / t by XCMPLX_1:121;
+    i <= 1 by JORDAN5A:2;
+    then 1-1 >= i-1 by REAL_1:49;
+    then 2*i*|.fx.| * (i-1) <= 0 by A15,SQUARE_1:23;
+    then i*(2*i*|.fx.|) - 2*i*|.fx.| - r0 < r0 - r0 by A6,REAL_1:92;
+    then i-c-1 < 0 by A16,A22,REAL_2:128;
+    then i-c-1+1 < 0+1 by REAL_1:67;
+    then
+A23: i-c is Point of I[01] by A21,JORDAN5A:2;
+A24: now
+      per cases;
+      suppose
+A25:     i+c <= 1;
+      X1 c= the carrier of I[01]
+      proof
+        let a be set;
+        assume
+A26:       a in X1;
+        then reconsider a as Real;
+        i-c < a & a < i+c by A26,JORDAN6:45;
+        then 0 < a & a < 1 by A16,A19,A20,A25,AXIOMS:22,REAL_2:125;
+        hence thesis by JORDAN5A:2;
+      end;
+      then reconsider X1 as Subset of I[01];
+      0+0 <= i+c by A12,A17,REAL_1:55;
+      then i+c is Point of I[01] by A25,JORDAN5A:2;
+      then X1 is open by A23,BORSUK_4:70;
+      hence X2 is open by A2,TOPS_1:38;
+      end;
+      suppose
+A27:     i+c > 1;
+      X2 = ]. i-c, 1 .]
+      proof
+        hereby
+          let a be set;
+          assume
+A28:         a in X2;
+          then
+A29:       a in X1 by XBOOLE_0:def 3;
+          then reconsider b = a as Real;
+A30:       i-c < b by A29,JORDAN6:45;
+          b <= 1 by A28,JORDAN5A:2;
+          hence a in ]. i-c, 1 .] by A30,RCOMP_2:4;
+        end;
+        let a be set;
+        assume
+A31:       a in ]. i-c, 1 .];
+        then reconsider b = a as Real;
+A32:     i-c < b by A31,RCOMP_2:4;
+A33:     b <= 1 by A31,RCOMP_2:4;
+        then b < i+c by A27,AXIOMS:22;
+        then
+A34:     a in X1 by A32,JORDAN6:45;
+        0 <= b by A21,A32;
+        then a in I by A33,BORSUK_1:83,TOPREAL5:1;
+        hence a in X2 by A34,XBOOLE_0:def 3;
+      end;
+      hence X2 is open by A23,Th4;
+      end;
+    end;
+    B is open by A8,GOBOARD6:6;
+    hence W is open by A24,BORSUK_1:46;
+    F.:W c= Ball(ep,r0)
+    proof
+      let m be set;
+      assume m in F.:W;
+      then consider z being set such that
+A35:    z in dom F and
+A36:    z in W and
+A37:    F.z = m by FUNCT_1:def 12;
+      reconsider z as Point of [:TOP-REAL n,I[01]:] by A35;
+      consider y being Point of TOP-REAL n, j being Point of I[01] such that
+A38:     z = [y,j] by BORSUK_1:50;
+      reconsider ez = F.z, ey = y as Point of Euclid n by TOPREAL3:13;
+A39:   ez = F.(y,j) by A38,BINOP_1:def 1
+        .= j*y by A1;
+      reconsider fp = ep, fz = ez, fe = i*y, fy = y as Element of REAL n
+        by EUCLID:25;
+A40:   dist(ep,ez) = |.fp-fz.| by SPPOL_1:20;
+A41:   |.fp-fz.| <= |.fp-fe.| + |.fe-fz.| by EUCLID:22;
+      fy in B by A36,A38,ZFMISC_1:106;
+      then
+A42:   dist(lx,ey) < r0/2/i by METRIC_1:12;
+A43:   dist(lx,ey) = |.fx-fy.| by SPPOL_1:20;
+      then
+A44:   i * |.fx-fy.| < i * (r0/2/i) by A12,A42,REAL_1:70;
+A45:   i * (r0/i/2) = r0/2 by A12,XCMPLX_1:98;
+      fe = i*fy & fz = j*fy by A39,EUCLID:def 11;
+      then
+A46:   |.fe-fz.| = |.(i-j)*fy.| by A3,Th8
+        .= abs(i-j)*|.fy.| by EUCLID:14;
+A47:   i is Real & j is Real by XREAL_0:def 1;
+A48:   0 <= |.fy.| by EUCLID:12;
+      j in X2 by A36,A38,ZFMISC_1:106;
+      then j in X1 by XBOOLE_0:def 3;
+      then abs(j-i) < c by RCOMP_1:8;
+      then abs(i-j) < c by A47,UNIFORM1:13;
+      then
+A49:   abs(i-j)*|.fy.| <= c*|.fy.| by A48,AXIOMS:25;
+A50:   |.fx-fy.| = |.fy-fx.| by EUCLID:21;
+      |.fy.| - |.fx.| <= |.fy-fx.| by EUCLID:18;
+      then |.fy.| - |.fx.| < r0/2/i by A42,A43,A50,AXIOMS:22;
+      then |.fy.| < |.fx.| + r0/2/i by REAL_1:84;
+      then
+A51:   c*|.fy.| < c * (|.fx.| + r0/2/i) by A17,REAL_1:70;
+      c * (|.fx.| + r0/2/i) = c * (|.fx.| + r0/(2*i)) by XCMPLX_1:79
+       .= c * ((|.fx.|*(2*i))/(2*i)+r0/(2*i)) by A14,XCMPLX_1:90
+       .= c * ((|.fx.|*(2*i)+r0)/(2*i)) by XCMPLX_1:63
+       .= i*r0 / (2*i) by A16,XCMPLX_1:99
+       .= r0/2 by A12,XCMPLX_1:92;
+      then
+A52:   abs(i-j)*|.fy.| <= r0/2 by A49,A51,AXIOMS:22;
+      r0/2/i = r0/i/2 by XCMPLX_1:48;
+      then abs(i) * |.fx-fy.| < r0/2 by A12,A44,A45,ABSVALUE:def 1;
+      then |.i*(fx-fy).| < r0/2 by EUCLID:14;
+      then |.i*fx-i*fy.| < r0/2 by A3,Th7;
+      then |.i*fx-fe.| < r0/2 by EUCLID:def 11;
+      then |.fp-fe.| < r0/2 by A11,EUCLID:def 11;
+      then |.fp-fe.| + |.fe-fz.| < r0/2 + r0/2 by A46,A52,REAL_1:67;
+      then dist(ep,ez) < r0 by A40,A41,AXIOMS:22;
+      hence thesis by A37,METRIC_1:12;
+  end;
+  hence F.:W c= V by A7,XBOOLE_1:1;
+  end;
+  suppose i <= 0;
+  then
+A53: i = 0 by JORDAN5A:2;
+A54: r0 is Real by XREAL_0:def 1;
+  reconsider B = Ball(lx,r0) as Subset of TOP-REAL n by TOPREAL3:13;
+  set t = |.fx.|+r0;
+  set c = r0 / t;
+  set X1 = [. 0, c .[;
+A55: 0 + 0 < t by A6,A10,REAL_1:67;
+A56: 0 < c by A6,A55,REAL_2:127;
+    0+r0 <= t by A10,REAL_1:55;
+    then
+A57: c <= 1 by A55,REAL_2:117;
+    then
+A58: c is Point of I[01] by A56,JORDAN5A:2;
+    X1 c= I
+    proof
+      let s be set;
+      assume
+A59:     s in X1;
+      then reconsider s as Real;
+A60:   0 <= s  by A59,RCOMP_2:3;
+      s < c by A59,RCOMP_2:3;
+      then s <= 1 by A57,AXIOMS:22;
+      hence thesis by A60,JORDAN5A:2;
+    end;
+    then reconsider X1 as Subset of I[01];
+    take W = [:B,X1:];
+A61: x in B by A6,GOBOARD6:4;
+    i in X1 by A53,A56,RCOMP_2:3;
+    hence p in W by A5,A61,ZFMISC_1:106;
+A62: X1 is open by A58,Th5;
+    B is open by A54,GOBOARD6:6;
+    hence W is open by A62,BORSUK_1:46;
+    F.:W c= Ball(ep,r0)
+    proof
+      let m be set;
+      assume m in F.:W;
+      then consider z being set such that
+A63:    z in dom F and
+A64:    z in W and
+A65:    F.z = m by FUNCT_1:def 12;
+      reconsider z as Point of [:TOP-REAL n,I[01]:] by A63;
+      consider y being Point of TOP-REAL n, j being Point of I[01] such that
+A66:     z = [y,j] by BORSUK_1:50;
+      reconsider ez = F.z, ey = y as Point of Euclid n by TOPREAL3:13;
+A67:   ez = F.(y,j) by A66,BINOP_1:def 1
+        .= j*y by A1;
+      reconsider fp = ep, fz = ez, fe = i*y, fy = y, f0 = 0.REAL n
+        as Element of REAL n by EUCLID:25;
+A68:   F.z - 0.REAL n = F.z by JORDAN2C:13;
+A69:   fz = j*fy by A67,EUCLID:def 11;
+A70:   0 <= j by JORDAN5A:2;
+A71:   fz-fp = fz-f0 by A11,A53,EUCLID:33
+        .= fz by A68,EUCLID:def 13;
+A72:   dist(ep,ez) = |.fz-fp.| by SPPOL_1:20
+        .= abs(j)*|.fy.| by A69,A71,EUCLID:14
+        .= j*|.fy.| by A70,ABSVALUE:def 1;
+      fy in B by A64,A66,ZFMISC_1:106;
+      then
+A73:   dist(lx,ey) < r0 by METRIC_1:12;
+A74:   dist(lx,ey) = |.fx-fy.| by SPPOL_1:20;
+A75:   |.fx-fy.| = |.fy-fx.| by EUCLID:21;
+      |.fy.| - |.fx.| <= |.fy-fx.| by EUCLID:18;
+      then |.fy.| - |.fx.| < r0 by A73,A74,A75,AXIOMS:22;
+      then
+A76:   |.fy.| < t by REAL_1:84;
+      now
+      per cases;
+      suppose
+A77:   0 < j;
+      j in X1 by A64,A66,ZFMISC_1:106;
+      then j < c by RCOMP_2:3;
+      then r0/j > r0/c by A6,A77,REAL_2:200;
+      then t < r0/j by A56,XCMPLX_1:54;
+      then |.fy.| < r0/j by A76,AXIOMS:22;
+      then j*|.fy.| < j*(r0/j) by A77,REAL_1:70;
+      hence j*|.fy.| < r0 by A77,XCMPLX_1:88;
+      end;
+      suppose j <= 0;
+      then j = 0 by JORDAN5A:2;
+      hence j*|.fy.| < r0 by A6;
+      end;
+      end;
+      hence thesis by A65,A72,METRIC_1:12;
+  end;
+  hence F.:W c= V by A7,XBOOLE_1:1;
+  end;
+  end;
+  hence F is continuous by JGRAPH_2:20;
+end;
+
+begin :: Paths
+
+reserve
+  X for non empty TopSpace,
+  a, b, c, d, e, f for Point of X,
+  T for non empty arcwise_connected TopSpace,
+  a1, b1, c1, d1, e1, f1 for Point of T;
+
+theorem Th20:
+  a,b are_connected & b,c are_connected implies
+  for A being Path of a,b, B being Path of b,c holds
+  A, A+B+-B are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected;
+  let A be Path of a,b,
+      B be Path of b,c;
+  consider X being constant Path of b,b;
+A3: A, A are_homotopic by A1,BORSUK_2:15;
+  B+-B, X are_homotopic by A2,BORSUK_6:92;
+  then
+A4: A+(B+-B), A+X are_homotopic by A1,A3,BORSUK_6:83;
+  A, A+X are_homotopic by A1,BORSUK_6:88;
+  then
+A5: A+(B+-B), A are_homotopic by A4,BORSUK_6:87;
+  A+(B+-B), A+B+-B are_homotopic by A1,A2,BORSUK_6:81;
+  hence A, A+B+-B are_homotopic by A5,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of b1,c1 holds
+  A, A+B+-B are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th20;
+end;
+
+theorem Th22:
+  a,b are_connected & c,b are_connected implies
+  for A being Path of a,b, B being Path of c,b holds
+  A, A+-B+B are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: c,b are_connected;
+  let A be Path of a,b,
+      B be Path of c,b;
+  consider X being constant Path of b,b;
+A3: A, A are_homotopic by A1,BORSUK_2:15;
+  -B+B, X are_homotopic by A2,BORSUK_6:94;
+  then
+A4: A+(-B+B), A+X are_homotopic by A1,A3,BORSUK_6:83;
+  A, A+X are_homotopic by A1,BORSUK_6:88;
+  then
+A5: A+(-B+B), A are_homotopic by A4,BORSUK_6:87;
+  A+(-B+B), A+-B+B are_homotopic by A1,A2,BORSUK_6:81;
+  hence A, A+-B+B are_homotopic by A5,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of c1,b1 holds
+  A, A+-B+B are_homotopic
+proof
+  a1,b1 are_connected & c1,b1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th22;
+end;
+
+theorem Th24:
+  a,b are_connected & c,a are_connected implies
+  for A being Path of a,b, B being Path of c,a holds
+  A, -B+B+A are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: c,a are_connected;
+  let A be Path of a,b,
+      B be Path of c,a;
+  consider X being constant Path of a,a;
+A3: A, A are_homotopic by A1,BORSUK_2:15;
+  -B+B, X are_homotopic by A2,BORSUK_6:94;
+  then
+A4: -B+B+A, X+A are_homotopic by A1,A3,BORSUK_6:83;
+  A, X+A are_homotopic by A1,BORSUK_6:90;
+  hence A, -B+B+A are_homotopic by A4,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of c1,a1 holds
+  A, -B+B+A are_homotopic
+proof
+  a1,b1 are_connected & c1,a1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th24;
+end;
+
+theorem Th26:
+  a,b are_connected & a,c are_connected implies
+  for A being Path of a,b, B being Path of a,c holds
+  A, B+-B+A are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: a,c are_connected;
+  let A be Path of a,b,
+      B be Path of a,c;
+  consider X being constant Path of a,a;
+A3: A, A are_homotopic by A1,BORSUK_2:15;
+  B+-B, X are_homotopic by A2,BORSUK_6:92;
+  then
+A4: B+-B+A, X+A are_homotopic by A1,A3,BORSUK_6:83;
+  A, X+A are_homotopic by A1,BORSUK_6:90;
+  hence A, B+-B+A are_homotopic by A4,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of a1,c1 holds
+  A, B+-B+A are_homotopic
+proof
+  a1,b1 are_connected & a1,c1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th26;
+end;
+
+theorem Th28:
+  a,b are_connected & c,b are_connected implies
+  for A, B being Path of a,b, C being Path of b,c st
+  A+C, B+C are_homotopic holds A, B are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: c,b are_connected;
+  let A, B be Path of a,b,
+      C be Path of b,c;
+  assume
+A3: A+C, B+C are_homotopic;
+  consider X being constant Path of b,b;
+A4: a,c are_connected by A1,A2,BORSUK_6:46;
+  -C, -C are_homotopic by A2,BORSUK_2:15;
+  then
+A5: A+C+-C, B+C+-C are_homotopic by A2,A3,A4,BORSUK_6:83;
+  A+C+-C, A are_homotopic by A1,A2,Th20;
+  then
+A6: A, B+C+-C are_homotopic by A5,BORSUK_6:87;
+  B+C+-C, B are_homotopic by A1,A2,Th20;
+  hence A, B are_homotopic by A6,BORSUK_6:87;
+end;
+
+theorem
+  for A, B being Path of a1,b1, C being Path of b1,c1 st
+  A+C, B+C are_homotopic holds A, B are_homotopic
+proof
+  a1,b1 are_connected & c1,b1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th28;
+end;
+
+theorem Th30:
+  a,b are_connected & a,c are_connected implies
+  for A, B being Path of a,b, C being Path of c,a st
+  C+A, C+B are_homotopic holds A, B are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: a,c are_connected;
+  let A, B be Path of a,b,
+      C be Path of c,a;
+  assume
+A3: C+A, C+B are_homotopic;
+  consider X being constant Path of b,b;
+A4: b,c are_connected by A1,A2,BORSUK_6:46;
+  -C, -C are_homotopic by A2,BORSUK_2:15;
+  then
+A5: -C+(C+A), -C+(C+B) are_homotopic by A2,A3,A4,BORSUK_6:83;
+A6: -C+C+A, -C+(C+A) are_homotopic by A1,A2,BORSUK_6:81;
+A7: -C+C+B, -C+(C+B) are_homotopic by A1,A2,BORSUK_6:81;
+  -C+C+A, -C+(C+B) are_homotopic by A5,A6,BORSUK_6:87;
+  then
+A8: -C+C+A, -C+C+B are_homotopic by A7,BORSUK_6:87;
+  -C+C+A, A are_homotopic by A1,A2,Th24;
+  then
+A9: A, -C+C+B are_homotopic by A8,BORSUK_6:87;
+  -C+C+B, B are_homotopic by A1,A2,Th24;
+  hence A, B are_homotopic by A9,BORSUK_6:87;
+end;
+
+theorem
+  for A, B being Path of a1,b1, C being Path of c1,a1 st
+  C+A, C+B are_homotopic holds A, B are_homotopic
+proof
+  a1,b1 are_connected & a1,c1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th30;
+end;
+
+theorem Th32:
+  a,b are_connected & b,c are_connected & c,d are_connected &
+  d,e are_connected implies
+  for A being Path of a,b, B being Path of b,c, C being Path of c,d,
+      D being Path of d,e holds
+  A+B+C+D, A+(B+C)+D are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected and
+A3: c,d are_connected and
+A4: d,e are_connected;
+  let A be Path of a,b, B be Path of b,c, C be Path of c,d,
+      D be Path of d,e;
+A5: A+B+C, A+(B+C) are_homotopic by A1,A2,A3,BORSUK_6:81;
+   a,c are_connected by A1,A2,BORSUK_6:46;
+   then
+A6: a,d are_connected by A3,BORSUK_6:46;
+  D, D are_homotopic by A4,BORSUK_2:15;
+  hence A+B+C+D, A+(B+C)+D are_homotopic by A4,A5,A6,BORSUK_6:83;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of b1,c1, C being Path of c1,d1,
+      D being Path of d1,e1 holds
+  A+B+C+D, A+(B+C)+D are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected & c1,d1 are_connected &
+  d1,e1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th32;
+end;
+
+theorem Th34:
+  a,b are_connected & b,c are_connected & c,d are_connected &
+  d,e are_connected implies
+  for A being Path of a,b, B being Path of b,c, C being Path of c,d,
+      D being Path of d,e holds
+  A+B+C+D, A+(B+C+D) are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected and
+A3: c,d are_connected and
+A4: d,e are_connected;
+  let A be Path of a,b, B be Path of b,c, C be Path of c,d,
+      D be Path of d,e;
+A5: b,d are_connected by A2,A3,BORSUK_6:46;
+  then
+A6: A+(B+C)+D, A+(B+C+D) are_homotopic by A1,A4,BORSUK_6:81;
+A7: A+(B+C), A+B+C are_homotopic by A1,A2,A3,BORSUK_6:81;
+A8: a,d are_connected by A1,A5,BORSUK_6:46;
+  D, D are_homotopic by A4,BORSUK_2:15;
+  then A+(B+C)+D, A+B+C+D are_homotopic by A4,A7,A8,BORSUK_6:83;
+  hence A+B+C+D, A+(B+C+D) are_homotopic by A6,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of b1,c1, C being Path of c1,d1,
+      D being Path of d1,e1 holds
+  A+B+C+D, A+(B+C+D) are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected & c1,d1 are_connected &
+  d1,e1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th34;
+end;
+
+theorem Th36:
+  a,b are_connected & b,c are_connected & c,d are_connected &
+  d,e are_connected implies
+  for A being Path of a,b, B being Path of b,c, C being Path of c,d,
+      D being Path of d,e holds
+  A+(B+C)+D, A+B+(C+D) are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected and
+A3: c,d are_connected and
+A4: d,e are_connected;
+  let A be Path of a,b, B be Path of b,c, C be Path of c,d,
+      D be Path of d,e;
+A5: A+B+C+D, A+(B+C)+D are_homotopic by A1,A2,A3,A4,Th32;
+  a,c are_connected by A1,A2,BORSUK_6:46;
+  then A+B+C+D, A+B+(C+D) are_homotopic by A3,A4,BORSUK_6:81;
+  hence A+(B+C)+D, A+B+(C+D) are_homotopic by A5,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of b1,c1, C being Path of c1,d1,
+      D being Path of d1,e1 holds
+  A+(B+C)+D, A+B+(C+D) are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected & c1,d1 are_connected &
+  d1,e1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th36;
+end;
+
+theorem Th38:
+  a,b are_connected & b,c are_connected & b,d are_connected implies
+  for A being Path of a,b, B being Path of d,b, C being Path of b,c holds
+  A+-B+B+C, A+C are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected and
+A3: b,d are_connected;
+  let A be Path of a,b, B be Path of d,b, C be Path of b,c;
+  consider X being constant Path of b,b;
+A4: A,A are_homotopic by A1,BORSUK_2:15;
+A5: C,C are_homotopic by A2,BORSUK_2:15;
+  -B+B, X are_homotopic by A3,BORSUK_6:94;
+  then
+A6: -B+B+C, X+C are_homotopic by A2,A5,BORSUK_6:83;
+  X+C, C are_homotopic by A2,BORSUK_6:90;
+  then -B+B+C, C are_homotopic by A6,BORSUK_6:87;
+  then
+A7: A+(-B+B+C), A+C are_homotopic by A1,A2,A4,BORSUK_6:83;
+  A+-B+B+C, A+(-B+B+C) are_homotopic by A1,A2,A3,Th34;
+  hence A+-B+B+C, A+C are_homotopic by A7,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of d1,b1, C being Path of b1,c1 holds
+  A+-B+B+C, A+C are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected & b1,d1 are_connected
+  by BORSUK_2:def 3;
+  hence thesis by Th38;
+end;
+
+theorem Th40:
+  a,b are_connected & a,c are_connected & c,d are_connected implies
+  for A being Path of a,b, B being Path of c,d, C being Path of a,c holds
+  A+-A+C+B+-B, C are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: a,c are_connected and
+A3: c,d are_connected;
+  let A be Path of a,b, B be Path of c,d, C be Path of a,c;
+A4: B+-B, B+-B are_homotopic by BORSUK_2:15;
+  A+-A+C, C are_homotopic by A1,A2,Th26;
+  then
+A5: A+-A+C+(B+-B), C+(B+-B) are_homotopic by A2,A4,BORSUK_6:83;
+  A+-A+C+B+-B, A+-A+C+(B+-B) are_homotopic by A2,A3,BORSUK_6:81;
+  then
+A6: A+-A+C+B+-B, C+(B+-B) are_homotopic by A5,BORSUK_6:87;
+A7: C, C+B+-B are_homotopic by A2,A3,Th20;
+  C+B+-B, C+(B+-B) are_homotopic by A2,A3,BORSUK_6:81;
+  then C, C+(B+-B) are_homotopic by A7,BORSUK_6:87;
+  hence A+-A+C+B+-B, C are_homotopic by A6,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of c1,d1, C being Path of a1,c1 holds
+  A+-A+C+B+-B, C are_homotopic
+proof
+  a1,b1 are_connected & a1,c1 are_connected & c1,d1 are_connected
+  by BORSUK_2:def 3;
+  hence thesis by Th40;
+end;
+
+theorem Th42:
+  a,b are_connected & a,c are_connected & d,c are_connected implies
+  for A being Path of a,b, B being Path of c,d, C being Path of a,c holds
+  A+(-A+C+B)+-B, C are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: a,c are_connected and
+A3: d,c are_connected;
+  let A be Path of a,b, B be Path of c,d, C be Path of a,c;
+A4: A+(-A+C+B), A+-A+C+B are_homotopic by A1,A2,A3,Th34;
+A5: a,d are_connected by A2,A3,BORSUK_6:46;
+  -B, -B are_homotopic by A3,BORSUK_2:15;
+  then
+A6: A+(-A+C+B)+-B, A+-A+C+B+-B are_homotopic by A3,A4,A5,BORSUK_6:83;
+  A+-A+C+B+-B, C are_homotopic by A1,A2,A3,Th40;
+  hence A+(-A+C+B)+-B, C are_homotopic by A6,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of c1,d1, C being Path of a1,c1 holds
+  A+(-A+C+B)+-B, C are_homotopic
+proof
+  a1,b1 are_connected & d1,c1 are_connected & a1,c1 are_connected
+  by BORSUK_2:def 3;
+  hence thesis by Th42;
+end;
+
+theorem Th44:
+  a,b are_connected & b,c are_connected & c,d are_connected &
+  d,e are_connected & a,f are_connected implies
+  for A being Path of a,b, B being Path of b,c, C being Path of c,d,
+      D being Path of d,e, E being Path of f,c holds
+  A+(B+C)+D, A+B+-E+(E+C+D) are_homotopic
+proof
+  assume that
+A1: a,b are_connected and
+A2: b,c are_connected and
+A3: c,d are_connected and
+A4: d,e are_connected and
+A5: a,f are_connected;
+A6: a,c are_connected by A1,A2,BORSUK_6:46;
+A7: c,e are_connected by A3,A4,BORSUK_6:46;
+  let A be Path of a,b, B be Path of b,c, C be Path of c,d,
+      D be Path of d,e, E be Path of f,c;
+  consider X being constant Path of c,c;
+A8: f,c are_connected by A5,A6,BORSUK_6:46;
+  then
+A9: A+B+-E+E+(C+D), A+B+(C+D) are_homotopic by A6,A7,Th38;
+  A+B+(C+D), A+(B+C)+D are_homotopic by A1,A2,A3,A4,Th36;
+  then
+A10: A+(B+C)+D, A+B+-E+E+(C+D) are_homotopic by A9,BORSUK_6:87;
+A11: E+(C+D), E+C+D are_homotopic by A3,A4,A8,BORSUK_6:81;
+A12: f,e are_connected by A7,A8,BORSUK_6:46;
+  A+B+-E, A+B+-E are_homotopic by A5,BORSUK_2:15;
+  then
+A13: A+B+-E+(E+(C+D)), A+B+-E+(E+C+D) are_homotopic by A5,A11,A12,BORSUK_6:83;
+  A+B+-E+(E+(C+D)), A+B+-E+E+(C+D) are_homotopic by A5,A7,A8,BORSUK_6:81;
+  then A+B+-E+E+(C+D), A+B+-E+(E+C+D) are_homotopic by A13,BORSUK_6:87;
+  hence A+(B+C)+D, A+B+-E+(E+C+D) are_homotopic by A10,BORSUK_6:87;
+end;
+
+theorem
+  for A being Path of a1,b1, B being Path of b1,c1, C being Path of c1,d1,
+      D being Path of d1,e1, E being Path of f1,c1 holds
+  A+(B+C)+D, A+B+-E+(E+C+D) are_homotopic
+proof
+  a1,b1 are_connected & b1,c1 are_connected & c1,d1 are_connected &
+  d1,e1 are_connected & a1,f1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th44;
+end;
+
+begin :: Fundamental group
+
+definition
+  let T be TopStruct, t be Point of T;
+  mode Loop of t is Path of t,t;
+end;
+
+definition
+  let T be non empty TopStruct, t be Point of T;
+  func Loops(t) means :Def1:
+  for x being set holds x in it iff x is Loop of t;
+existence
+proof
+  defpred P[set] means $1 is Loop of t;
+  consider X being set such that
+A1: for x being set holds x in X iff
+     x in Funcs(the carrier of I[01],the carrier of T) & P[x]
+       from XBOOLE_0:sch 1;
+  take X;
+  let x be set;
+  thus x in X implies x is Loop of t by A1;
+  assume
+A2: x is Loop of t;
+  then x in Funcs(the carrier of I[01],the carrier of T) by FUNCT_2:11;
+  hence thesis by A1,A2;
+end;
+uniqueness
+proof
+  defpred P[set] means $1 is Loop of t;
+  thus for X1,X2 being set st
+   (for x being set holds x in X1 iff P[x]) &
+   (for x being set holds x in X2 iff P[x]) holds X1 = X2 from XBOOLE_0:sch 3;
+end;
+end;
+
+registration
+  let T be non empty TopStruct, t be Point of T;
+  cluster Loops(t) -> non empty;
+coherence
+proof
+  consider x being Loop of t;
+  x in Loops(t) by Def1;
+  hence thesis;
+end;
+end;
+
+Lm2:
+  for X being non empty TopSpace, a being Point of X
+   ex E being Equivalence_Relation of Loops(a) st
+   for x,y being set holds [x,y] in E iff x in Loops(a) & y in Loops(a) &
+    ex P,Q being Loop of a st P = x & Q = y & P,Q are_homotopic
+proof
+  let X be non empty TopSpace,
+      a be Point of X;
+  defpred P[set,set] means
+  ex P,Q being Loop of a st P = $1 & Q = $2 & P,Q are_homotopic;
+A1: for x being set st x in Loops(a) holds P[x,x]
+  proof
+    let x be set;
+    assume x in Loops(a);
+    then reconsider x as Loop of a by Def1;
+    x,x are_homotopic by BORSUK_2:15;
+    hence thesis;
+  end;
+A2: for x,y being set st P[x,y] holds P[y,x];
+A3: for x,y,z being set st P[x,y] & P[y,z] holds P[x,z]
+  proof
+    let x,y,z be set;
+    assume P[x,y];
+    then consider P,Q being Loop of a such that
+A4:   P = x & Q = y & P,Q are_homotopic;
+    assume P[y,z];
+    then consider R,S being Loop of a such that
+A5:   R = y & S = z & R,S are_homotopic;
+    take P,S;
+    thus thesis by A4,A5,BORSUK_6:87;
+  end;
+  thus ex EqR being Equivalence_Relation of Loops(a) st
+    for x,y being set holds [x,y] in EqR iff x in Loops(a) & y in Loops(a) &
+     P[x,y] from EQREL_1:sch 1(A1,A2,A3);
+end;
+
+definition
+  let X be non empty TopSpace, a be Point of X;
+  func EqRel(X,a) -> Relation of Loops(a) means :Def2:
+  for P, Q being Loop of a holds [P,Q] in it iff P,Q are_homotopic;
+existence
+proof
+  consider E being Equivalence_Relation of Loops(a) such that
+A1: for x,y being set holds [x,y] in E iff x in Loops(a) & y in Loops(a) &
+     ex P,Q being Loop of a st P = x & Q = y & P,Q are_homotopic by Lm2;
+  take E;
+  let P, Q be Loop of a;
+  thus [P,Q] in E implies P,Q are_homotopic
+  proof
+    assume [P,Q] in E;
+    then ex P1,Q1 being Loop of a st P1 = P & Q1 = Q & P1,Q1 are_homotopic
+      by A1;
+    hence thesis;
+  end;
+  P in Loops(a) & Q in Loops(a) by Def1;
+  hence thesis by A1;
+end;
+uniqueness
+proof
+  let E,F be Relation of Loops(a) such that
+A2: for P, Q being Loop of a holds [P,Q] in E iff P,Q are_homotopic and
+A3: for P, Q being Loop of a holds [P,Q] in F iff P,Q are_homotopic;
+  let x,y be set;
+  thus [x,y] in E implies [x,y] in F
+  proof
+    assume
+A4:   [x,y] in E;
+    then x in Loops(a) & y in Loops(a) by ZFMISC_1:106;
+    then reconsider x,y as Loop of a by Def1;
+    x,y are_homotopic by A2,A4;
+    hence thesis by A3;
+  end;
+  assume
+A5: [x,y] in F;
+  then x in Loops(a) & y in Loops(a) by ZFMISC_1:106;
+  then reconsider x,y as Loop of a by Def1;
+  x,y are_homotopic by A3,A5;
+  hence thesis by A2;
+end;
+end;
+
+registration
+  let X be non empty TopSpace, a be Point of X;
+  cluster EqRel(X,a) -> non empty total symmetric transitive;
+coherence
+proof
+  set E = EqRel(X,a);
+  consider EqR being Equivalence_Relation of Loops(a) such that
+A1: for x,y being set holds [x,y] in EqR iff x in Loops(a) & y in Loops(a) &
+    ex P,Q being Loop of a st P = x & Q = y & P,Q are_homotopic by Lm2;
+  E = EqR
+  proof
+    let x,y be set;
+    thus [x,y] in E implies [x,y] in EqR
+    proof
+      assume
+A2:     [x,y] in E;
+      then
+A3:   x in Loops(a) & y in Loops(a) by ZFMISC_1:106;
+      then reconsider x,y as Loop of a by Def1;
+      x,y are_homotopic by A2,Def2;
+      hence thesis by A1,A3;
+    end;
+    assume
+A4:   [x,y] in EqR;
+    then x in Loops(a) & y in Loops(a) by ZFMISC_1:106;
+    then reconsider x,y as Loop of a by Def1;
+    ex P,Q being Loop of a st P = x & Q = y & P,Q are_homotopic by A1,A4;
+    hence thesis by Def2;
+  end;
+  hence thesis by EQREL_1:16,TOLER_1:1;
+end;
+end;
+
+theorem Th46:
+  for P, Q being Loop of a holds
+  Q in Class(EqRel(X,a),P) iff P,Q are_homotopic
+proof
+  let P, Q be Loop of a;
+  set E = EqRel(X,a);
+  hereby
+    assume Q in Class(E,P);
+    then [Q,P] in E by EQREL_1:27;
+    hence P,Q are_homotopic by Def2;
+  end;
+  assume P,Q are_homotopic;
+  then [Q,P] in E by Def2;
+  hence thesis by EQREL_1:27;
+end;
+
+theorem Th47:
+  for P, Q being Loop of a holds
+  Class(EqRel(X,a),P) = Class(EqRel(X,a),Q) iff P,Q are_homotopic
+proof
+  let P, Q be Loop of a;
+  set E = EqRel(X,a);
+A1: Q in Loops(a) by Def1;
+  hereby
+    assume Class(E,P) = Class(E,Q);
+    then P in Class(E,Q) by A1,EQREL_1:31;
+    hence P,Q are_homotopic by Th46;
+  end;
+  assume P,Q are_homotopic;
+  then P in Class(E,Q) by Th46;
+  hence thesis by A1,EQREL_1:31;
+end;
+
+definition
+  let X be non empty TopSpace, a be Point of X;
+  func FundamentalGroup(X,a) -> strict HGrStr means :Def3:
+  the carrier of it = Class EqRel (X,a) &
+  for x,y being Element of it
+   ex P,Q being Loop of a st x = Class(EqRel(X,a),P) & y = Class(EqRel(X,a),Q)
+    & (the mult of it).(x,y) = Class(EqRel(X,a),P+Q);
+existence
+proof
+  set A = Class EqRel(X,a);
+  defpred P[set,set,set] means
+   ex P,Q being Loop of a st $1 = Class(EqRel(X,a),P) &
+    $2 = Class(EqRel(X,a),Q) & $3 = Class(EqRel(X,a),P+Q);
+A1: for x,y being Element of A ex z being Element of A st P[x,y,z]
+  proof
+    let x, y be Element of A;
+    x in A;
+    then consider P being set such that
+A2:   P in Loops(a) and
+A3:   x = Class(EqRel(X,a),P) by EQREL_1:def 5;
+    y in A;
+    then consider Q being set such that
+A4:   Q in Loops(a) and
+A5:   y = Class(EqRel(X,a),Q) by EQREL_1:def 5;
+    reconsider P,Q as Loop of a by A2,A4,Def1;
+    P+Q in Loops(a) by Def1;
+    then reconsider z = Class(EqRel(X,a),P+Q) as Element of A by EQREL_1:def 5;
+    take z;
+    thus thesis by A3,A5;
+  end;
+  consider g being BinOp of A such that
+A6: for a,b being Element of A holds P[a,b,g.(a,b)] from BINOP_1:sch 1(A1);
+  take G = HGrStr(# A,g #);
+  thus thesis by A6;
+end;
+uniqueness
+proof
+  let F,G be strict HGrStr such that
+A7:  the carrier of F = Class EqRel (X,a) and
+A8:  for x,y being Element of F
+   ex P,Q being Loop of a st x = Class(EqRel(X,a),P) & y = Class(EqRel(X,a),Q)
+    & (the mult of F).(x,y) = Class(EqRel(X,a),P+Q) and
+A9:  the carrier of G = Class EqRel (X,a) and
+A10:  for x,y being Element of G
+   ex P,Q being Loop of a st x = Class(EqRel(X,a),P) & y = Class(EqRel(X,a),Q)
+    & (the mult of G).(x,y) = Class(EqRel(X,a),P+Q);
+  set f = the mult of F;
+  set g = the mult of G;
+  for c,d being Element of the carrier of F holds f.(c,d) = g.(c,d)
+  proof
+    let c,d be Element of the carrier of F;
+    consider P1,Q1 being Loop of a such that
+A11:   c = Class(EqRel(X,a),P1) and
+A12:   d = Class(EqRel(X,a),Q1) and
+A13:   f.(c,d) = Class(EqRel(X,a),P1+Q1) by A8;
+    consider P2,Q2 being Loop of a such that
+A14:   c = Class(EqRel(X,a),P2) and
+A15:   d = Class(EqRel(X,a),Q2) and
+A16:   g.(c,d) = Class(EqRel(X,a),P2+Q2) by A7,A9,A10;
+    P1,P2 are_homotopic & Q1,Q2 are_homotopic by A11,A12,A14,A15,Th47;
+    then P1+Q1,P2+Q2 are_homotopic by BORSUK_6:83;
+    hence f.(c,d) = g.(c,d) by A13,A16,Th47;
+  end;
+  hence thesis by A7,A9,BINOP_1:2;
+end;
+end;
+
+notation
+  let X be non empty TopSpace, a be Point of X;
+  synonym pi_1(X,a) for FundamentalGroup(X,a);
+end;
+
+registration
+  let X be non empty TopSpace;
+  let a be Point of X;
+  cluster pi_1(X,a) -> non empty;
+coherence
+proof
+  the carrier of pi_1(X,a) = Class EqRel (X,a) by Def3;
+  hence the carrier of pi_1(X,a) is non empty;
+end;
+end;
+
+theorem Th48:
+  for x being set holds x in the carrier of pi_1(X,a) iff
+  ex P being Loop of a st x = Class(EqRel(X,a),P)
+proof
+  let x be set;
+A1: the carrier of pi_1(X,a) = Class EqRel (X,a) by Def3;
+  hereby
+    assume x in the carrier of pi_1(X,a);
+    then consider P being Element of Loops(a) such that
+A2:   x = Class(EqRel(X,a),P) by A1,EQREL_1:45;
+    reconsider P as Loop of a by Def1;
+    take P;
+    thus x = Class(EqRel(X,a),P) by A2;
+  end;
+  given P being Loop of a such that
+A3: x = Class(EqRel(X,a),P);
+  P in Loops(a) by Def1;
+  hence thesis by A1,A3,EQREL_1:def 5;
+end;
+
+registration
+  let X be non empty TopSpace;
+  let a be Point of X;
+  cluster pi_1(X,a) -> associative Group-like;
+coherence
+proof
+  set G = pi_1(X,a);
+  set g = the mult of G;
+  set E = EqRel(X,a);
+  thus G is associative
+  proof
+    let x,y,z be Element of G;
+    consider P1,Q1 being Loop of a such that
+A1:   x = Class(E,P1) and
+A2:   y = Class(E,Q1) and
+A3:   g.(x,y) = Class(E,P1+Q1) by Def3;
+    consider P2,Q2 being Loop of a such that
+A4:   y = Class(E,P2) and
+A5:   z = Class(E,Q2) and
+A6:   g.(y,z) = Class(E,P2+Q2) by Def3;
+    consider P3,Q3 being Loop of a such that
+A7:   Class(E,P1+Q1) = Class(E,P3) and
+A8:   Class(E,Q2) = Class(E,Q3) and
+A9:   g.(Class(E,P1+Q1),Class(E,Q2)) = Class(E,P3+Q3) by A3,A5,Def3;
+    consider P4,Q4 being Loop of a such that
+A10:   Class(E,P1) = Class(E,P4) and
+A11:   Class(E,P2+Q2) = Class(E,Q4) and
+A12:   g.(Class(E,P1),Class(E,P2+Q2)) = Class(E,P4+Q4) by A1,A6,Def3;
+A13: Q1,P2 are_homotopic by A2,A4,Th47;
+A14: P1+Q1,P3 are_homotopic by A7,Th47;
+A15: Q2,Q3 are_homotopic by A8,Th47;
+A16: P1,P4 are_homotopic by A10,Th47;
+A17: P2+Q2,Q4 are_homotopic by A11,Th47;
+    Q3,Q3 are_homotopic by BORSUK_2:15;
+    then
+A18: P1+Q1+Q3,P3+Q3 are_homotopic by A14,BORSUK_6:83;
+    P4,P4 are_homotopic by BORSUK_2:15;
+    then
+A19: P4+(P2+Q2),P4+Q4 are_homotopic by A17,BORSUK_6:83;
+    P1+Q1,P4+P2 are_homotopic by A13,A16,BORSUK_6:83;
+    then
+A20: P1+Q1+Q3,P4+P2+Q2 are_homotopic by A15,BORSUK_6:83;
+    P4+P2+Q2,P4+(P2+Q2) are_homotopic by BORSUK_6:81;
+    then P1+Q1+Q3,P4+(P2+Q2) are_homotopic by A20,BORSUK_6:87;
+    then P3+Q3,P4+(P2+Q2) are_homotopic by A18,BORSUK_6:87;
+    then
+A21: P3+Q3,P4+Q4 are_homotopic by A19,BORSUK_6:87;
+    thus (x*y)*z = g.(x*y,z) by GROUP_1:def 1
+      .= g.(g.(x,y),z) by GROUP_1:def 1
+      .= g.(x,g.(y,z)) by A1,A3,A5,A6,A9,A12,A21,Th47
+      .= g.(x,y*z) by GROUP_1:def 1
+      .= x*(y*z) by GROUP_1:def 1;
+  end;
+  consider C being constant Loop of a;
+  set e = Class(E,C);
+  C in Loops a by Def1;
+  then e in Class EqRel (X,a) by EQREL_1:def 5;
+  then reconsider e as Element of G by Def3;
+  take e;
+  let h be Element of G;
+  consider P1,Q1 being Loop of a such that
+A22: h = Class(E,P1) and
+A23: e = Class(E,Q1) and
+A24: g.(h,e) = Class(E,P1+Q1) by Def3;
+A25:P1,P1 are_homotopic by BORSUK_2:15;
+  C,Q1 are_homotopic by A23,Th47;
+  then
+A26: P1+C,P1+Q1 are_homotopic by A25,BORSUK_6:83;
+  P1+C,P1 are_homotopic by BORSUK_6:88;
+  then
+A27: P1,P1+Q1 are_homotopic by A26,BORSUK_6:87;
+  thus h * e = g.(h,e) by GROUP_1:def 1
+    .= h by A22,A24,A27,Th47;
+  consider P1,Q1 being Loop of a such that
+A28: e = Class(E,P1) and
+A29: h = Class(E,Q1) and
+A30: g.(e,h) = Class(E,P1+Q1) by Def3;
+A31:Q1,Q1 are_homotopic by BORSUK_2:15;
+  C,P1 are_homotopic by A28,Th47;
+  then
+A32: C+Q1,P1+Q1 are_homotopic by A31,BORSUK_6:83;
+  C+Q1,Q1 are_homotopic by BORSUK_6:90;
+  then
+A33: Q1,P1+Q1 are_homotopic by A32,BORSUK_6:87;
+  thus e * h = g.(e,h) by GROUP_1:def 1
+    .= h by A29,A30,A33,Th47;
+  h in the carrier of G;
+  then h in Class EqRel (X,a) by Def3;
+  then consider H being Element of Loops a such that
+A34:  h = Class(E,H) by EQREL_1:45;
+  reconsider H as Loop of a by Def1;
+  set x = Class(E,-H);
+  -H in Loops a by Def1;
+  then x in Class EqRel (X,a) by EQREL_1:def 5;
+  then reconsider x as Element of G by Def3;
+  take x;
+  consider P,Q being Loop of a such that
+A35: h = Class(E,P) and
+A36: x = Class(E,Q) and
+A37: g.(h,x) = Class(E,P+Q) by Def3;
+A38:P,H are_homotopic by A34,A35,Th47;
+   Q,-H are_homotopic by A36,Th47;
+   then
+A39:P+Q,H+-H are_homotopic by A38,BORSUK_6:83;
+   C,H+-H are_homotopic by BORSUK_6:92;
+   then
+A40: C,P+Q are_homotopic by A39,BORSUK_6:87;
+  thus h * x = g.(h,x) by GROUP_1:def 1
+    .= e by A37,A40,Th47;
+  consider P,Q being Loop of a such that
+A41: x = Class(E,P) and
+A42: h = Class(E,Q) and
+A43: g.(x,h) = Class(E,P+Q) by Def3;
+A44:Q,H are_homotopic by A34,A42,Th47;
+   P,-H are_homotopic by A41,Th47;
+   then
+A45:P+Q,-H+H are_homotopic by A44,BORSUK_6:83;
+   C,-H+H are_homotopic by BORSUK_6:94;
+   then
+A46: C,P+Q are_homotopic by A45,BORSUK_6:87;
+  thus x * h = g.(x,h) by GROUP_1:def 1
+    .= e by A43,A46,Th47;
+end;
+end;
+
+definition
+  let T be non empty TopSpace,
+      x0, x1 be Point of T,
+      P being Path of x0,x1;
+  assume
+A1:    x0,x1 are_connected;
+  func pi_1-iso(P) -> map of pi_1(T,x1), pi_1(T,x0) means :Def4:
+  for Q being Loop of x1 holds
+   it.Class(EqRel(T,x1),Q) = Class(EqRel(T,x0),P+Q+-P);
+existence
+proof
+  defpred P[set,set] means
+   ex L being Loop of x1 st $1 = Class(EqRel(T,x1),L) &
+     $2 = Class(EqRel(T,x0),P+L+-P);
+A2: the carrier of pi_1(T,x1) = Class EqRel (T,x1) by Def3;
+A3: for x being Element of the carrier of pi_1(T,x1)
+     ex y being Element of the carrier of pi_1(T,x0) st P[x,y]
+  proof
+    let x be Element of the carrier of pi_1(T,x1);
+    consider Q being Loop of x1 such that
+A4:   x = Class(EqRel(T,x1),Q) by Th48;
+    reconsider y = Class(EqRel(T,x0),P+Q+-P) as
+     Element of the carrier of pi_1(T,x0) by Th48;
+    take y;
+    thus thesis by A4;
+  end;
+  consider f being Function of the carrier of pi_1(T,x1),
+     the carrier of pi_1(T,x0) such that
+A5: for x being Element of the carrier of pi_1(T,x1) holds P[x,f.x]
+     from FUNCT_2:sch 3(A3);
+  reconsider f as map of pi_1(T,x1), pi_1(T,x0);
+  take f;
+  let Q be Loop of x1;
+  Q in Loops(x1) by Def1;
+  then Class(EqRel(T,x1),Q) is Element of the carrier of pi_1(T,x1)
+    by A2,EQREL_1:def 5;
+  then consider L being Loop of x1 such that
+A6:  Class(EqRel(T,x1),Q) = Class(EqRel(T,x1),L) and
+A7:  f.Class(EqRel(T,x1),Q) = Class(EqRel(T,x0),P+L+-P) by A5;
+A8: P,P are_homotopic by A1,BORSUK_2:15;
+A9: -P,-P are_homotopic by A1,BORSUK_2:15;
+  L,Q are_homotopic by A6,Th47;
+  then P+L,P+Q are_homotopic by A1,A8,BORSUK_6:83;
+  then P+L+-P,P+Q+-P are_homotopic by A1,A9,BORSUK_6:83;
+  hence f.Class(EqRel(T,x1),Q) = Class(EqRel(T,x0),P+Q+-P) by A7,Th47;
+end;
+uniqueness
+proof
+  let f1, f2 be map of pi_1(T,x1), pi_1(T,x0) such that
+A10: for Q being Loop of x1 holds
+     f1.Class(EqRel(T,x1),Q) = Class(EqRel(T,x0),P+Q+-P) and
+A11: for Q being Loop of x1 holds
+     f2.Class(EqRel(T,x1),Q) = Class(EqRel(T,x0),P+Q+-P);
+  for x being Element of the carrier of pi_1(T,x1) holds f1.x = f2.x
+  proof
+    let x be Element of the carrier of pi_1(T,x1);
+    consider L being Loop of x1 such that
+A12:   x = Class(EqRel(T,x1),L) by Th48;
+    thus f1.x = Class(EqRel(T,x0),P+L+-P) by A10,A12
+      .= f2.x by A11,A12;
+  end;
+  hence thesis by FUNCT_2:113;
+end;
+end;
+
+reserve
+  x0, x1 for Point of X,
+  P, Q for Path of x0,x1,
+  y0, y1 for Point of T,
+  R, V for Path of y0,y1;
+
+theorem Th49:
+  x0,x1 are_connected & P,Q are_homotopic implies pi_1-iso(P) = pi_1-iso(Q)
+proof
+  assume that
+A1: x0,x1 are_connected and
+A2: P,Q are_homotopic;
+  for x being Element of the carrier of pi_1(X,x1) holds
+    (pi_1-iso(P)).x = (pi_1-iso(Q)).x
+  proof
+    let x be Element of the carrier of pi_1(X,x1);
+    consider L being Loop of x1 such that
+A3:   x = Class(EqRel(X,x1),L) by Th48;
+    L, L are_homotopic by BORSUK_2:15;
+    then
+A4: P+L, Q+L are_homotopic by A1,A2,BORSUK_6:83;
+    -P, -Q are_homotopic by A1,A2,BORSUK_6:85;
+    then
+A5: P+L+-P, Q+L+-Q are_homotopic by A1,A4,BORSUK_6:83;
+    thus (pi_1-iso(P)).x = Class(EqRel(X,x0),P+L+-P) by A1,A3,Def4
+      .= Class(EqRel(X,x0),Q+L+-Q) by A5,Th47
+      .= (pi_1-iso(Q)).x by A1,A3,Def4;
+  end;
+  hence thesis by FUNCT_2:113;
+end;
+
+theorem
+  R,V are_homotopic implies pi_1-iso(R) = pi_1-iso(V)
+proof
+  y0,y1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th49;
+end;
+
+theorem Th51:
+  x0,x1 are_connected implies
+  pi_1-iso(P) is Homomorphism of pi_1(X,x1), pi_1(X,x0)
+proof
+  assume
+A1: x0,x1 are_connected;
+  set f = pi_1-iso(P);
+  set m0 = the mult of pi_1(X,x0);
+  set m1 = the mult of pi_1(X,x1);
+  let x, y be Element of pi_1(X,x1);
+  consider Z, Y being Loop of x1 such that
+A2:  x = Class(EqRel(X,x1),Z) and
+A3:  y = Class(EqRel(X,x1),Y) and
+A4:  m1.(x,y) = Class(EqRel(X,x1),Z+Y) by Def3;
+  consider fX, fY being Loop of x0 such that
+A5:  f.x = Class(EqRel(X,x0),fX) and
+A6:  f.y = Class(EqRel(X,x0),fY) and
+A7:  m0.(f.x,f.y) = Class(EqRel(X,x0),fX+fY) by Def3;
+   f.x = Class(EqRel(X,x0),P+Z+-P) by A1,A2,Def4;
+   then
+A8:fX,P+Z+-P are_homotopic by A5,Th47;
+   f.y = Class(EqRel(X,x0),P+Y+-P) by A1,A3,Def4;
+   then fY,P+Y+-P are_homotopic by A6,Th47;
+   then
+A9: fX+fY,P+Z+-P+(P+Y+-P) are_homotopic by A8,BORSUK_6:83;
+   P+(Z+Y)+-P,P+Z+-P+(P+Y+-P) are_homotopic by A1,Th44;
+   then
+A10:P+(Z+Y)+-P,fX+fY are_homotopic by A9,BORSUK_6:87;
+  thus f.(x*y) = f.(m1.(x,y)) by GROUP_1:def 1
+    .= Class(EqRel(X,x0),P+(Z+Y)+-P) by A1,A4,Def4
+    .= m0.(f.x,f.y) by A7,A10,Th47
+    .= f.x * f.y by GROUP_1:def 1;
+end;
+
+definition
+  let T be non empty arcwise_connected TopSpace,
+      x0, x1 be Point of T,
+      P be Path of x0,x1;
+  redefine func pi_1-iso(P) -> Homomorphism of pi_1(T,x1), pi_1(T,x0);
+coherence
+proof
+  x0,x1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th51;
+end;
+end;
+
+theorem Th52:
+  x0,x1 are_connected implies pi_1-iso(P) is one-to-one
+proof
+  assume
+A1: x0,x1 are_connected;
+  set f = pi_1-iso(P);
+  let a, b be set such that
+A2: a in dom f and
+A3: b in dom f and
+A4: f.a = f.b;
+  consider A being Loop of x1 such that
+A5: a = Class(EqRel(X,x1),A) by A2,Th48;
+  consider B being Loop of x1 such that
+A6: b = Class(EqRel(X,x1),B) by A3,Th48;
+A7: f.a = Class(EqRel(X,x0),P+A+-P) by A1,A5,Def4;
+  f.b = Class(EqRel(X,x0),P+B+-P) by A1,A6,Def4;
+  then P+A+-P, P+B+-P are_homotopic by A4,A7,Th47;
+  then P+A, P+B are_homotopic by A1,Th28;
+  then A,B are_homotopic by A1,Th30;
+  hence a = b by A5,A6,Th47;
+end;
+
+theorem Th53:
+  x0,x1 are_connected implies pi_1-iso(P) is onto
+proof
+  assume
+A1: x0,x1 are_connected;
+  set f = pi_1-iso(P);
+  thus rng f c= the carrier of pi_1(X,x0);
+  let y be set;
+  assume y in the carrier of pi_1(X,x0);
+  then consider Y being Loop of x0 such that
+A2:  y = Class(EqRel(X,x0),Y) by Th48;
+  set Z = Class(EqRel(X,x1),-P+Y+P);
+  dom f = the carrier of pi_1(X,x1) by FUNCT_2:def 1;
+  then
+A3: Z in dom f by Th48;
+A4: P+(-P+Y+P)+-P, Y are_homotopic by A1,Th42;
+  f.Z = Class(EqRel(X,x0),P+(-P+Y+P)+-P) by A1,Def4
+     .= y by A2,A4,Th47;
+  hence y in rng f by A3,FUNCT_1:def 5;
+end;
+
+registration
+  let T be non empty arcwise_connected TopSpace,
+      x0, x1 be Point of T,
+      P be Path of x0,x1;
+  cluster pi_1-iso(P) -> one-to-one onto;
+coherence
+proof
+  x0,x1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th52,Th53;
+end;
+end;
+
+theorem Th54:
+  x0,x1 are_connected implies (pi_1-iso(P))" = pi_1-iso(-P)
+proof
+  assume
+A1: x0,x1 are_connected;
+  set f = pi_1-iso(P);
+  set g = pi_1-iso(-P);
+A2: f is one-to-one by A1,Th52;
+  f is onto by A1,Th53;
+  then
+  rng f = the carrier of pi_1(X,x0) by FUNCT_2:def 3
+     .= [#]pi_1(X,x0) by PRE_TOPC:12;
+   then
+A3: f" = (f qua Function)" by A2,TOPS_2:def 4;
+  for x being Element of the carrier of pi_1(X,x0) holds f".x = g.x
+  proof
+    let x be Element of the carrier of pi_1(X,x0);
+    consider Q being Loop of x0 such that
+A4:   x = Class(EqRel(X,x0),Q) by Th48;
+    dom f = the carrier of pi_1(X,x1) by FUNCT_2:def 1;
+    then
+A5: Class(EqRel(X,x1),-P+Q+--P) in dom f by Th48;
+    --P = P by A1,BORSUK_6:50;
+    then
+A6: P+(-P+Q+--P)+-P, Q are_homotopic by A1,Th42;
+    f.Class(EqRel(X,x1),-P+Q+--P) = Class(EqRel(X,x0),P+(-P+Q+--P)+-P)
+       by A1,Def4
+      .= x by A4,A6,Th47;
+    hence f".x = Class(EqRel(X,x1),-P+Q+--P) by A2,A3,A5,FUNCT_1:54
+       .= g.x by A1,A4,Def4;
+  end;
+  hence thesis by FUNCT_2:113;
+end;
+
+theorem
+  (pi_1-iso(R))" = pi_1-iso(-R)
+proof
+  y0,y1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th54;
+end;
+
+theorem Th56:
+  x0,x1 are_connected implies
+  for h being Homomorphism of pi_1(X,x1), pi_1(X,x0) st h = pi_1-iso(P) holds
+  h is_isomorphism
+proof
+  assume
+A1: x0,x1 are_connected;
+  let h be Homomorphism of pi_1(X,x1), pi_1(X,x0) such that
+A2: h = pi_1-iso(P);
+A3: h is one-to-one by A1,A2,Th52;
+  h is onto by A1,A2,Th53;
+  then rng h = the carrier of pi_1(X,x0) by FUNCT_2:def 3;
+  hence thesis by A3,GROUP_6:70;
+end;
+
+theorem Th57:
+  pi_1-iso(R) is_isomorphism
+proof
+  y0,y1 are_connected by BORSUK_2:def 3;
+  hence thesis by Th56;
+end;
+
+theorem
+  x0,x1 are_connected implies
+  pi_1(X,x0), pi_1(X,x1) are_isomorphic
+proof
+  assume
+A1: x0,x1 are_connected;
+  consider P being Path of x1,x0;
+  reconsider h = pi_1-iso(P) as Homomorphism of pi_1(X,x0), pi_1(X,x1)
+    by A1,Th51;
+  take h;
+  thus h is_isomorphism by A1,Th56;
+end;
+
+theorem
+  pi_1(T,y0), pi_1(T,y1) are_isomorphic
+proof
+  consider R being Path of y1,y0;
+  take pi_1-iso(R);
+  thus pi_1-iso(R) is_isomorphism by Th57;
+end;
+
+begin :: TOP-REAL n
+
+definition
+  let n be Nat,
+      a, b be Point of TOP-REAL n,
+      P, Q be Path of a,b;
+  func RealHomotopy(P,Q) -> map of [:I[01],I[01]:], TOP-REAL n means :Def5:
+  for s, t being Element of I[01] holds it.(s,t) = (1-t) * P.s + t * Q.s;
+existence
+proof
+  set I = the carrier of I[01];
+  deffunc F(Element of I, Element of I) = (1-$2) * P.$1 + $2 * Q.$1;
+  consider F being Function of [:I,I:],the carrier of TOP-REAL n such that
+A1: for x, y being Element of I holds F. [x,y] = F(x,y) from FUNCT_2:sch 8;
+  the carrier of [:I[01],I[01]:] = [:I,I:] by BORSUK_1:def 5;
+  then reconsider F as map of [:I[01],I[01]:], TOP-REAL n;
+  take F;
+  let x, y be Element of I;
+  thus F.(x,y) = F. [x,y] by BINOP_1:def 1
+    .= F(x,y) by A1;
+end;
+uniqueness
+proof
+  let f, g be map of [:I[01],I[01]:], TOP-REAL n such that
+A2: for s, t being Element of I[01] holds f.(s,t) = (1-t) * P.s + t * Q.s and
+A3: for s, t being Element of I[01] holds g.(s,t) = (1-t) * P.s + t * Q.s;
+  set I = the carrier of I[01];
+A4:the carrier of [:I[01],I[01]:] = [:I,I:] by BORSUK_1:def 5;
+  for s, t being Element of I holds f.(s,t) = g.(s,t)
+  proof
+    let s, t be Element of I;
+    thus f.(s,t) = (1-t) * P.s + t * Q.s by A2
+      .= g.(s,t) by A3;
+  end;
+  hence f = g by A4,BINOP_1:2;
+end;
+end;
+
+Lm3:
+  for a, b being Point of TOP-REAL n,
+      P, Q being Path of a,b holds RealHomotopy(P,Q) is continuous
+proof
+  let a, b be Point of TOP-REAL n,
+      P, Q being Path of a,b;
+  set F = RealHomotopy(P,Q);
+  set I = the carrier of I[01];
+  set T = the carrier of TOP-REAL n;
+  set PI = [:P,id I[01]:];
+  set QI = [:Q,id I[01]:];
+A1: PI is continuous & QI is continuous by BORSUK_2:12;
+  deffunc Fa(Element of the carrier of TOP-REAL n,Element of I) = (1-$2)*$1;
+  deffunc Fb(Element of the carrier of TOP-REAL n,Element of I) = $2*$1;
+  consider Pa being Function of [:T,I:],T such that
+A2: for x being Element of T, i being Element of I holds
+    Pa. [x,i] = Fa(x,i) from FUNCT_2:sch 8;
+  consider Pb being Function of [:T,I:],T such that
+A3: for x being Element of T, i being Element of I holds
+    Pb. [x,i] = Fb(x,i) from FUNCT_2:sch 8;
+  the carrier of [:TOP-REAL n,I[01]:] = [:T,I:] by BORSUK_1:def 5;
+  then reconsider Pa, Pb as map of [:TOP-REAL n,I[01]:],TOP-REAL n;
+A4: for x being Element of T, i being Element of I holds
+    Pa.(x,i) = Fa(x,i)
+  proof
+    let x be Element of T, i be Element of I;
+    thus Pa.(x,i) = Pa. [x,i] by BINOP_1:def 1
+      .= Fa(x,i) by A2;
+  end;
+  for x being Element of T, i being Element of I holds
+    Pb.(x,i) = Fb(x,i)
+  proof
+    let x be Element of T, i be Element of I;
+    thus Pb.(x,i) = Pb. [x,i] by BINOP_1:def 1
+      .= Fb(x,i) by A3;
+  end;
+  then Pa is continuous & Pb is continuous by A4,Th18,Th19;
+  then
+A5: Pa*PI is continuous & Pb*QI is continuous by A1,TOPS_2:58;
+  for p being Point of [:I[01],I[01]:] holds F.p = (Pa*PI).p + (Pb*QI).p
+  proof
+    let p be Point of [:I[01],I[01]:];
+    consider s, t being Point of I[01] such that
+A6:   p = [s,t] by BORSUK_1:50;
+A7: dom P = I by FUNCT_2:def 1;
+A8: dom Q = I by FUNCT_2:def 1;
+A9: dom id I[01] = I by FUNCT_2:def 1;
+A10: (id I[01]).t = t by GRCAT_1:11;
+A11: (Pa*PI).p = Pa.(PI.p) by FUNCT_2:21
+      .= Pa. [P.s,t] by A6,A7,A9,A10,FUNCT_3:def 9
+      .= (1-t) * P.s by A2;
+A12: (Pb*QI).p = Pb.(QI.p) by FUNCT_2:21
+      .= Pb. [Q.s,t] by A6,A8,A9,A10,FUNCT_3:def 9
+      .= t * Q.s by A3;
+    thus F.p = F.(s,t) by A6,BINOP_1:def 1
+      .= (Pa*PI).p + (Pb*QI).p by A11,A12,Def5;
+  end;
+  hence F is continuous by A5,Lm1;
+end;
+
+Lm4:
+  for a, b being Point of TOP-REAL n,
+      P, Q being Path of a,b holds
+  for s being Point of I[01] holds RealHomotopy(P,Q).(s,0) = P.s &
+                                   RealHomotopy(P,Q).(s,1) = Q.s &
+  for t being Point of I[01] holds RealHomotopy(P,Q).(0,t) = a &
+                                   RealHomotopy(P,Q).(1,t) = b
+proof
+  let a, b be Point of TOP-REAL n,
+      P, Q be Path of a,b;
+  set F = RealHomotopy(P,Q);
+  let s be Point of I[01];
+  thus F.(s,0) = (1-0) * P.s + 0 * Q.s by Def5,BORSUK_1:def 17
+    .= P.s + 0 * Q.s by EUCLID:33
+    .= P.s + 0.REAL n by EUCLID:33
+    .= P.s by EUCLID:31;
+  thus F.(s,1) = (1-1) * P.s + 1 * Q.s by Def5,BORSUK_1:def 18
+    .= 0.REAL n + 1 * Q.s by EUCLID:33
+    .= 0.REAL n + Q.s by EUCLID:33
+    .= Q.s by EUCLID:31;
+  let t be Point of I[01];
+A1: P.0[01] = a by BORSUK_1:def 17,BORSUK_2:def 4;
+A2: Q.0[01] = a by BORSUK_1:def 17,BORSUK_2:def 4;
+A3: P.1[01] = b by BORSUK_1:def 18,BORSUK_2:def 4;
+A4: Q.1[01] = b by BORSUK_1:def 18,BORSUK_2:def 4;
+  thus F.(0,t) = (1-t) * P.0[01] + t * Q.0[01] by Def5,BORSUK_1:def 17
+    .= 1*a - t*a + t*a by A1,A2,EUCLID:54
+    .= 1*a by EUCLID:52
+    .= a by EUCLID:33;
+  thus F.(1,t) = (1-t) * P.1[01] + t * Q.1[01] by Def5,BORSUK_1:def 18
+    .= 1*b - t*b + t*b by A3,A4,EUCLID:54
+    .= 1*b by EUCLID:52
+    .= b by EUCLID:33;
+end;
+
+theorem Th60:
+  for a, b being Point of TOP-REAL n,
+      P, Q being Path of a,b holds
+  P, Q are_homotopic
+proof
+  let a, b be Point of TOP-REAL n,
+      P, Q be Path of a,b;
+  take F = RealHomotopy(P,Q);
+  thus F is continuous by Lm3;
+  thus thesis by Lm4;
+end;
+
+definition
+  let n be Nat,
+      a, b be Point of TOP-REAL n,
+      P, Q be Path of a,b;
+  redefine func RealHomotopy(P,Q) -> Homotopy of P,Q;
+coherence
+proof
+  thus P, Q are_homotopic by Th60;
+  thus RealHomotopy(P,Q) is continuous by Lm3;
+  thus thesis by Lm4;
+end;
+end;
+
+registration
+  let n be Nat,
+      a, b be Point of TOP-REAL n,
+      P, Q be Path of a,b;
+  cluster -> continuous Homotopy of P,Q;
+coherence
+proof
+  let F be Homotopy of P,Q;
+  P, Q are_homotopic by Th60;
+  hence F is continuous by BORSUK_6:def 13;
+end;
+end;
+
+theorem Th61:
+  for a being Point of TOP-REAL n,
+      C being Loop of a holds
+  the carrier of pi_1(TOP-REAL n,a) = { Class(EqRel(TOP-REAL n,a),C) }
+proof
+  let a be Point of TOP-REAL n,
+      C be Loop of a;
+  set X = TOP-REAL n;
+  set E = EqRel(X,a);
+  hereby
+    let x be set;
+    assume x in the carrier of pi_1(X,a);
+    then consider P being Loop of a such that
+A1:   x = Class(E,P) by Th48;
+    P,C are_homotopic by Th60;
+    then x = Class(E,C) by A1,Th47;
+    hence x in { Class(E,C) } by TARSKI:def 1;
+  end;
+  let x be set;
+  assume x in { Class(E,C) };
+  then
+A2: x = Class(E,C) by TARSKI:def 1;
+  C in Loops a by Def1;
+  then x in Class E by A2,EQREL_1:def 5;
+  hence thesis by Def3;
+end;
+
+registration
+  let n be Nat;
+  let a be Point of TOP-REAL n;
+  cluster pi_1(TOP-REAL n,a) -> trivial;
+coherence
+proof
+  set X = TOP-REAL n;
+  set E = EqRel(X,a);
+  consider C being constant Loop of a;
+A1: the carrier of pi_1(X,a) = Class E by Def3;
+  then { Class(E,C) } = Class E by Th61;
+  hence thesis by A1,REALSET2:def 5;
+end;
+end;

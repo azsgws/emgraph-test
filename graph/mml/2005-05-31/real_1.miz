@@ -1,0 +1,175 @@
+:: Basic Properties of Real Numbers
+::  by Krzysztof Hryniewiecki
+::
+:: Received January 8, 1989
+:: Copyright (c) 1990 Association of Mizar Users
+
+environ
+
+ vocabularies ARYTM, ARYTM_1, RELAT_1, ARYTM_3;
+ notations TARSKI, SUBSET_1, ORDINAL1, NUMBERS, XCMPLX_0, XREAL_0;
+ constructors ARYTM_0, XREAL_0, XCMPLX_0, XBOOLE_0;
+ registrations NUMBERS, XREAL_0, ARYTM_3, ZFMISC_1, XBOOLE_0;
+ requirements REAL, SUBSET, BOOLE, NUMERALS, ARITHM;
+ definitions TARSKI, XREAL_0;
+ theorems AXIOMS, XREAL_0, XCMPLX_0, XCMPLX_1, XREAL_1;
+ schemes XBOOLE_0;
+
+begin
+
+ reserve x,y,z,t for real number;
+
+registration
+ cluster -> real Element of REAL;
+coherence
+proof
+  let r be Element of REAL;
+  thus r in REAL;
+end;
+end;
+
+definition
+  mode Real is Element of REAL;
+end;
+
+definition let x be Real;
+  redefine func -x -> Real;
+coherence by XREAL_0:def 1;
+  redefine func x" -> Real;
+coherence by XREAL_0:def 1;
+end;
+
+definition let x,y be Real;
+  redefine func x+y -> Real;
+coherence by XREAL_0:def 1;
+  redefine func x*y -> Real;
+coherence by XREAL_0:def 1;
+  redefine func x-y -> Real;
+coherence by XREAL_0:def 1;
+  redefine func x/y -> Real;
+coherence by XREAL_0:def 1;
+end;
+
+canceled 24;
+
+theorem
+     x-0=x;
+
+theorem
+     -0=0;
+
+canceled 22;
+
+theorem
+  x <= y implies x - z <= y - z by XREAL_1:11;
+
+theorem
+  x<=y iff -y<=-x by XREAL_1:26;
+
+canceled;
+
+theorem
+  x<=y & z<=0 implies y*z<=x*z by XREAL_1:67;
+
+theorem
+  x+z<=y+z implies x <= y by XREAL_1:8;
+
+theorem
+     x-z<=y-z implies x <= y by XREAL_1:11;
+
+theorem
+  x<=y & z<=t implies x+z<=y+t by XREAL_1:9;
+
+definition let y,x be real number;
+  redefine canceled 4;
+
+pred x<y means  x<=y & x<>y;
+  compatibility by AXIOMS:21;
+end;
+
+canceled 10;
+
+theorem
+     x < 0 iff 0 < -x by XREAL_1:60;
+
+theorem
+  x<y & z<=t implies x+z<y+t by XREAL_1:10;
+
+canceled;
+
+theorem
+     0<x implies y<y+x by XREAL_1:31;
+
+theorem
+  0<z & x<y implies x*z<y*z by XREAL_1:70;
+
+theorem
+  z<0 & x<y implies y*z<x*z by XREAL_1:71;
+
+theorem
+  0<z implies 0<z" by XREAL_1:124;
+
+theorem
+  0<z implies (x<y iff x/z<y/z) by XREAL_1:74,76;
+
+theorem
+     z<0 implies (x<y iff y/z<x/z) by XREAL_1:75,77;
+
+:: REAL is dense
+
+theorem
+     x<y implies ex z st x<z & z<y by XREAL_1:7;
+
+:: REAL is unlimited
+
+theorem
+     for x ex y st x<y by XREAL_1:3;
+
+theorem
+     for x ex y st y<x by XREAL_1:4;
+
+:: Continuity of REAL
+
+scheme SepReal { P[Real]}:
+   ex X being Subset of REAL st
+     for x being Real holds x in X iff P[x]
+proof
+  defpred Z[set] means  ex x being Real st x=$1 & P[x];
+  consider X being set such that
+A1:  for r being set holds r in X iff r in REAL & Z[r] from XBOOLE_0:sch 1;
+        X c= REAL
+     proof
+      let r be set;
+      assume r in X;
+      hence thesis by A1;
+     end;
+     then reconsider X as Subset of REAL;
+     take X;
+     let x be Real;
+        x in X implies P[x]
+       proof
+         assume x in X;
+          then ex y being Real st y = x & P[y] by A1;
+         hence thesis;
+       end;
+   hence thesis by A1;
+end;
+
+canceled 6;
+
+theorem
+  x+y <= z iff x <= z-y by XREAL_1:21;
+
+canceled;
+
+theorem
+     x <= y+z iff x-y <= z by XREAL_1:22;
+
+canceled 5;
+
+theorem
+     (x <= y & z <= t implies x - t <= y - z) &
+  (x < y & z <= t or x <= y & z < t implies x-t < y-z) by XREAL_1:15,16,17;
+
+theorem
+     0 <= x*x by XREAL_1:65;

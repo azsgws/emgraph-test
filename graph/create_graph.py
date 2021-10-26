@@ -125,6 +125,45 @@ def create_nodes(node2targets):
 
 
 """
+循環除去
+"""
+def remove_cycle(nodes):
+    cycles = discover_cycle(nodes)
+    if cycles:
+        name2node = create_name2node(nodes)
+        for cycle in cycles:
+            name2node[cycle[0]].targets.remove(name2node[cycle[1]])
+            name2node[cycle[1]].sources.remove(name2node[cycle[0]])
+        return cycles
+    else:
+        return list()
+
+
+def discover_cycle(nodes):
+    G = nx.DiGraph()
+    create_dependency_graph(nodes, G)
+    try:
+        cycles = list(nx.find_cycle(G, orientation='original'))
+    except nx.exception.NetworkXNoCycle:
+        cycles = list()
+    return cycles
+
+
+def create_name2node(nodes):
+    name2node = dict()
+    for node in nodes:
+        name2node[node.name] = node
+    return name2node
+
+
+def restore_removed_cycles(nodes, cycles):
+    name2node = create_name2node(nodes)
+    for cycle in cycles:
+        name2node[cycle[0]].targets.add(name2node[cycle[1]])
+        name2node[cycle[1]].sources.add(name2node[cycle[0]])
+        
+
+"""
 間引き
 """
 
@@ -274,9 +313,15 @@ def create_graph(node2targets, output_json_file):
     Return:
     """
     nodes = create_nodes(node2targets)
+
+    # 閉路除去
+    cycles = remove_cycle(nodes)
     # 間引き
     sys.setrecursionlimit(1000)
     remove_redundant_dependency(nodes)
+
+    if cycles:
+        restore_removed_cycles(nodes, cycles)
 
     # レイアウト
     assgin_dot_coordinate(nodes)
@@ -297,11 +342,10 @@ def create_graph(node2targets, output_json_file):
     # cytoscape.jsの記述形式(JSON)でグラフを記述
     graph_json = nx.cytoscape_data(graph, attrs=None)
 
-    with open('/graph_attrs/' + output_json_file, 'w') as f:
+    with open('graph_attrs/' + output_json_file, 'w') as f:
         f.write(json.dumps(graph_json, indent=4))
 
 
 if __name__ == '__main__':
     article2ref_articles = retrieve_dependency.make_miz_dependency()
-    print(len(article2ref_articles))
     create_graph(article2ref_articles, "dot_graph_2003.json")

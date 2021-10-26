@@ -1,0 +1,1239 @@
+:: Concept of Fuzzy Set and Membership Function and Basic
+:: Properties of Fuzzy Set Operation
+::  by Takashi Mitsuishi , Noboru Endou and Yasunari Shidama
+::
+:: Received May 18, 2000
+:: Copyright (c) 2000 Association of Mizar Users
+
+environ
+
+ vocabularies RELAT_1, FUNCT_3, RCOMP_1, PARTFUN1, FUNCT_1, SQUARE_1, INTEGRA1,
+      ORDINAL2, ARYTM_1, BOOLE, ABSVALUE, ARYTM_3, FUZZY_1, SEQ_1, LATTICE3;
+ notations TARSKI, XBOOLE_0, SUBSET_1, NUMBERS, XREAL_0, SQUARE_1, COMPLEX1,
+      REAL_1, RELAT_1, RELSET_1, FUNCT_1, PARTFUN1, SEQ_1, RFUNCT_1, INTEGRA1,
+      RCOMP_1, PSCOMP_1;
+ constructors ABSVALUE, RFUNCT_1, REAL_1, INTEGRA1, SQUARE_1, PSCOMP_1,
+      COMPLEX1;
+ registrations XREAL_0, RELSET_1, INTEGRA1, MEMBERED, SEQ_1;
+ requirements NUMERALS, REAL, SUBSET, BOOLE, ARITHM;
+ theorems TARSKI, AXIOMS, FUNCT_1, FUNCT_3, REAL_1, REAL_2, ABSVALUE, SQUARE_1,
+      PARTFUN1, RFUNCT_3, ZFMISC_1, INTEGRA1, INTEGRA2, TOPREAL5, XBOOLE_0,
+      XBOOLE_1, COMPLEX1;
+ schemes SEQ_1, PARTFUN1;
+
+begin
+
+ reserve x,y,y1,y2 for set;
+ reserve C for non empty set;
+ reserve c for Element of C;
+
+::::::Definition of Membership Function and Fuzzy Set
+
+theorem Th1:
+rng chi(x,y) c= [.0,1.]
+proof
+A1: rng chi(x,y) c= {0,1} by FUNCT_3:48;
+   {0,1} c= [.0,1.]
+ proof
+    1 in [.0,1.] & 0 in [.0,1.] by TOPREAL5:1;
+ hence thesis by ZFMISC_1:38;
+ end;
+hence thesis by A1,XBOOLE_1:1;
+end;
+
+definition let C;
+mode Membership_Func of C -> PartFunc of C,REAL means :Def1:
+dom it = C & rng it c= [.0,1.];
+existence
+ proof
+  take chi(C,C);
+ thus thesis by Th1,FUNCT_3:def 3;
+ end;
+end;
+
+theorem Th2:
+chi(C,C) is Membership_Func of C
+proof
+A1:rng chi(C,C) c= [.0,1.] by Th1;
+   dom chi(C,C) =C by FUNCT_3:def 3;
+hence thesis by A1,Def1;
+end;
+
+reserve f,h,g,h1 for Membership_Func of C;
+
+registration
+  let X be non empty set;
+  cluster -> real-yielding Membership_Func of X;
+  coherence;
+end;
+
+definition
+  let f,g be real-yielding Function;
+  pred f is_less_than g means:Def2:
+   dom f c= dom g &
+   for x being set st x in dom f holds f.x <= g.x;
+  reflexivity;
+end;
+
+notation
+ let X be non empty set;
+ let f,g be Membership_Func of X;
+ synonym f c= g for f is_less_than g;
+end;
+
+definition
+ let X be non empty set;
+ let f,g be Membership_Func of X;
+ redefine pred f is_less_than g means :Def4:
+  for x being Element of X holds f.x <= g.x;
+  compatibility
+  proof
+   thus f is_less_than g iff for x being Element of X holds f.x <= g.x
+    proof
+     hereby assume
+A1:     f is_less_than g;
+     thus for x being Element of X holds f.x <= g.x
+      proof
+       let x be Element of X;
+        dom f = X by Def1;
+       hence thesis by A1,Def2;
+      end;
+     end;
+     assume
+A2:  for x being Element of X holds f.x <= g.x;
+A3:  dom f = X & dom g = X by Def1;
+      for x being set st x in dom f holds f.x <= g.x by A2;
+     hence f is_less_than g by A3,Def2;
+    end;
+  end;
+  end;
+
+:: definition
+:: let C be non empty set;
+:: let h,g be Membership_Func of C;
+:: pred h c= g means :Def4:
+:: for c being Element of C holds h.c <= g.c;
+:: reflexivity;
+:: end;
+
+Lm1:
+f c= g & g c= f implies f = g
+proof set A = f, B = g;
+assume A1:A c= B & B c= A;
+A2:C = dom f & C = dom g by Def1;
+   for c being Element of C st c in C holds f.c = g.c
+ proof
+ let c be Element of C;
+    f.c <= g.c & g.c <= f.c by A1,Def4;
+ hence thesis by AXIOMS:21;
+end;
+ hence f = g by A2,PARTFUN1:34;
+end;
+
+theorem
+   f = g iff f c= g & g c= f by Lm1;
+
+theorem
+   f c= f;
+
+theorem
+f c= g & g c= h implies g c= h;
+
+begin
+::::::Intersection,Union and Complement
+
+definition
+let C be non empty set;
+let h,g be Membership_Func of C;
+func min(h,g) -> Membership_Func of C means :Def5:
+for c being Element of C holds it.c = min(h.c,g.c);
+existence
+proof
+ defpred P[set,set] means $2 = min(h.$1,g.$1);
+ A1:for x,y st x in C & P[x,y] holds y in REAL;
+ A2:for x,y1,y2 st x in C & P[x,y1] & P[x,y2] holds y1=y2;
+  consider IT being PartFunc of C,REAL such that
+ A3:(for x holds x in dom IT iff x in C & ex y st P[x,y]) &
+    (for x st x in dom IT holds P[x,IT.x]) from PARTFUN1:sch 2(A1,A2);
+ A4:dom IT = C & rng IT c= [.0,1.]
+  proof
+  A5:dom IT = C
+   proof
+      C c= dom IT
+    proof
+        for x being set st x in C holds x in dom IT
+     proof
+      let x be set;
+      assume A6:x in C;
+         ex y st y = min(h.x,g.x);
+      hence thesis by A3,A6;
+     end;
+     hence thesis by TARSKI:def 3;
+    end;
+    hence thesis by XBOOLE_0:def 10;
+   end;
+     rng IT c= [.0,1.]
+  proof
+A7:rng h c= [.0,1.] & rng g c= [.0,1.] by Def1;
+      for y being set st y in rng IT holds y in [.0,1.]
+   proof
+    let y be set; assume y in rng IT;
+    then consider x being Element of C such that
+A8:x in dom IT & y = IT.x by PARTFUN1:26;
+    reconsider A=[.0,1.] as closed-interval Subset of REAL by INTEGRA1:def 1;
+       A = [. inf A, sup A .] by INTEGRA1:5;
+then A9:0=inf A & 1=sup A by INTEGRA1:6;
+       x in C;
+    then x in dom h & x in dom g by Def1;
+    then h.x in rng h & g.x in rng g by FUNCT_1:def 5;
+then A10:0 <= h.x & h.x <= 1 & 0 <= g.x & g.x <= 1 by A7,A9,INTEGRA2:1;
+       (h.x >= min(h.x,g.x) & g.x >= min(h.x,g.x)) by SQUARE_1:35;
+    then 0 <= min(h.x,g.x) & min(h.x,g.x) <= 1 by A10,AXIOMS:22,SQUARE_1:39;
+    then 0 <= IT.x & IT.x <= 1 by A3,A8;
+    hence thesis by A8,A9,INTEGRA2:1;
+   end;
+   hence thesis by TARSKI:def 3;
+  end;
+  hence thesis by A5;
+  end;
+ then A11:IT is Membership_Func of C by Def1;
+    for c being Element of C holds IT.c = min(h.c,g.c) by A3,A4;
+ hence thesis by A11;
+ end;
+uniqueness
+proof
+  let F,G be Membership_Func of C;
+  assume that
+A12:for c being Element of C holds F.c = min(h.c,g.c)
+  and
+A13:for c being Element of C holds G.c = min(h.c,g.c);
+A14:C = dom F & C = dom G by Def1;
+     for c being Element of C st c in C holds F.c = G.c
+  proof
+   let c be Element of C;
+      F.c = min(h.c,g.c) & G.c = min(h.c,g.c) by A12,A13;
+   hence thesis;
+  end;
+ hence thesis by A14,PARTFUN1:34;
+ end;
+ idempotence;
+ commutativity;
+end;
+
+definition
+let C be non empty set;
+let h,g be Membership_Func of C;
+func max(h,g) -> Membership_Func of C means :Def6:
+for c being Element of C holds it.c = max(h.c,g.c);
+existence
+proof
+ defpred P[set,set] means $2 = max(h.$1,g.$1);
+ A1:for x,y st x in C & P[x,y] holds y in REAL;
+ A2:for x,y1,y2 st x in C & P[x,y1] & P[x,y2] holds y1=y2;
+  consider IT being PartFunc of C,REAL such that
+ A3:(for x holds x in dom IT iff x in C & ex y st P[x,y]) &
+    (for x st x in dom IT holds P[x,IT.x]) from PARTFUN1:sch 2(A1,A2);
+ A4:dom IT = C & rng IT c= [.0,1.]
+  proof
+  A5:dom IT = C
+   proof
+       C c= dom IT
+    proof
+        for x being set st x in C holds x in dom IT
+     proof
+      let x be set;
+      assume A6:x in C;
+         ex y st y = max(h.x,g.x);
+      hence thesis by A3,A6;
+     end;
+     hence thesis by TARSKI:def 3;
+    end;
+    hence thesis by XBOOLE_0:def 10;
+   end;
+     rng IT c= [.0,1.]
+  proof
+A7:rng h c= [.0,1.] & rng g c= [.0,1.] by Def1;
+      for y being set st y in rng IT holds y in [.0,1.]
+   proof
+    let y be set; assume y in rng IT;
+    then consider x being Element of C such that
+A8:x in dom IT & y = IT.x by PARTFUN1:26;
+    reconsider A=[.0,1.] as closed-interval Subset of REAL by INTEGRA1:def 1;
+       A = [. inf A, sup A .] by INTEGRA1:5;
+then A9:0=inf A & 1=sup A by INTEGRA1:6;
+       x in C;
+    then x in dom h & x in dom g by Def1;
+    then h.x in rng h & g.x in rng g by FUNCT_1:def 5;
+    then 0 <= h.x & h.x <= 1 & 0 <= g.x & g.x <= 1 by A7,A9,INTEGRA2:1;
+    then 0 <= max(h.x,g.x) & max(h.x,g.x) <= 1 by SQUARE_1:50;
+    then 0 <= IT.x & IT.x <= 1 by A3,A8;
+    hence thesis by A8,A9,INTEGRA2:1;
+   end;
+   hence thesis by TARSKI:def 3;
+  end;
+  hence thesis by A5;
+  end;
+ then A10:IT is Membership_Func of C by Def1;
+    for c being Element of C holds IT.c = max(h.c,g.c) by A3,A4;
+ hence thesis by A10;
+ end;
+uniqueness
+proof
+  let F,G be Membership_Func of C;
+  assume that
+A11:for c being Element of C holds F.c = max(h.c,g.c)
+  and
+A12:for c being Element of C holds G.c = max(h.c,g.c);
+A13:C = dom F & C = dom G by Def1;
+     for c being Element of C st c in C holds F.c = G.c
+  proof
+   let c be Element of C;
+      F.c = max(h.c,g.c) & G.c = max(h.c,g.c) by A11,A12;
+   hence thesis;
+  end;
+ hence thesis by A13,PARTFUN1:34;
+ end;
+ idempotence;
+ commutativity;
+end;
+
+definition
+let C be non empty set;
+let h be Membership_Func of C;
+func 1_minus h -> Membership_Func of C means :Def7:
+for c being Element of C holds it.c = 1-h.c;
+existence
+proof
+ defpred P[set] means $1 in dom h;
+ deffunc F(set) = 1 - h.$1;
+ consider IT being PartFunc of C,REAL such that
+A1:(for x be Element of C holds x in dom IT iff P[x]) &
+   (for x be Element of C st x in dom IT holds IT.x = F(x)) from SEQ_1:sch 3;
+A2:dom IT = C & rng IT c= [.0,1.]
+ proof
+ A3:dom IT = C
+    proof
+        C c= dom IT
+     proof
+         for x being set st x in C holds x in dom IT
+      proof
+       let x be set;
+       assume A4:x in C;
+          dom h = C by Def1;
+       hence thesis by A1,A4;
+      end;
+      hence thesis by TARSKI:def 3;
+     end;
+     hence thesis by XBOOLE_0:def 10;
+    end;
+      rng IT c= [.0,1.]
+   proof
+ A5:rng h c= [.0,1.] by Def1;
+       for y being set st y in rng IT holds y in [.0,1.]
+    proof
+     let y be set; assume y in rng IT;
+     then consider x being Element of C such that
+ A6:x in dom IT & y = IT.x by PARTFUN1:26;
+     reconsider A=[.0,1.] as closed-interval Subset of REAL by INTEGRA1:def 1;
+        A = [. inf A, sup A .] by INTEGRA1:5;
+ then A7:0=inf A & 1=sup A by INTEGRA1:6;
+        x in C;
+     then x in dom h by Def1;
+     then h.x in rng h by FUNCT_1:def 5;
+     then A8:0 <= h.x & h.x <= 1 by A5,A7,INTEGRA2:1;
+     then 0+1 <= 1+h.x by AXIOMS:24;
+     then 1-h.x <= 1 & 0 <= 1- h.x by A8,REAL_1:86,SQUARE_1:12;
+     then 0 <= IT.x & IT.x <= 1 by A1,A6;
+     hence thesis by A6,A7,INTEGRA2:1;
+    end;
+    hence thesis by TARSKI:def 3;
+   end;
+   hence thesis by A3;
+ end;
+then A9:IT is Membership_Func of C by Def1;
+    for c being Element of C holds IT.c = 1 - h.c by A1,A2;
+ hence thesis by A9;
+end;
+uniqueness
+ proof
+  let F,G be Membership_Func of C;
+  assume that
+A10:for c being Element of C holds F.c = 1-h.c
+  and
+A11:for c being Element of C holds G.c = 1-h.c;
+A12:C = dom F & C = dom G by Def1;
+     for c being Element of C st c in C holds F.c = G.c
+  proof
+   let c be Element of C;
+      F.c = 1-h.c & G.c = 1-h.c by A10,A11;
+   hence thesis;
+  end;
+ hence thesis by A12,PARTFUN1:34;
+ end;
+ involutiveness
+ proof
+   let h1,h2 be Membership_Func of C;
+   assume
+A: for c being Element of C holds h1.c = 1-h2.c;
+   let c be Element of C;
+   thus h2.c = 1-(1-h2.c) .= 1-h1.c by A;
+ end;
+end;
+
+theorem
+   min(h.c,g.c) = min(h,g).c & max(h.c,g.c) = max(h,g).c by Def5,Def6;
+
+theorem
+max(h,h) = h & min(h,h) = h & max(h,h) = min(h,h) &
+min(f,g) = min(g,f) & max(f,g) = max(g,f);
+
+theorem Th11:
+max(max(f,g),h) = max(f,max(g,h)) &
+min(min(f,g),h) = min(f,min(g,h))
+proof
+A1:C = dom max(max(f,g),h) & C = dom max(f,max(g,h)) &
+ C = dom min(min(f,g),h) & C = dom min(f,min(g,h)) by Def1;
+A2:for x being Element of C st x in C holds
+ max(max(f,g),h).x = max(f,max(g,h)).x
+ proof
+  let x be Element of C;
+     max(max(f,g),h).x = max(max(f,g).x,h.x) by Def6
+            .= max(max(f.x,g.x),h.x) by Def6
+            .= max(f.x,max(g.x,h.x)) by SQUARE_1:51
+            .= max(f.x,max(g,h).x) by Def6
+            .= max(f,max(g,h)).x by Def6;
+  hence thesis;
+ end;
+    for x being Element of C st x in C holds
+ min(min(f,g),h).x = min(f,min(g,h)).x
+ proof
+  let x be Element of C;
+     min(min(f,g),h).x = min(min(f,g).x,h.x) by Def5
+            .= min(min(f.x,g.x),h.x) by Def5
+            .= min(f.x,min(g.x,h.x)) by SQUARE_1:40
+            .= min(f.x,min(g,h).x) by Def5
+            .= min(f,min(g,h)).x by Def5;
+   hence thesis;
+ end;
+ hence thesis by A1,A2,PARTFUN1:34;
+end;
+
+theorem Th14:
+max(f,min(f,g)) = f & min(f,max(f,g)) = f
+proof
+A1:C = dom max(f,min(f,g)) & C = dom f & C = dom min(f,max(f,g)) by Def1;
+A2:for x being Element of C st x in C holds
+ max(f,min(f,g)).x = f.x
+ proof
+  let x be Element of C;
+     max(f,min(f,g)).x = max(f.x,min(f,g).x) by Def6
+                   .= max(f.x,min(f.x,g.x)) by Def5
+                   .= f.x by SQUARE_1:54;
+  hence thesis;
+ end;
+    for x being Element of C st x in C holds
+ min(f,max(f,g)).x = f.x
+ proof
+  let x be Element of C;
+     min(f,max(f,g)).x = min(f.x,max(f,g).x) by Def5
+                   .= min(f.x,max(f.x,g.x)) by Def6
+                   .= f.x by SQUARE_1:55;
+  hence thesis;
+ end;
+ hence thesis by A1,A2,PARTFUN1:34;
+end;
+
+theorem Th16:
+min(f,max(g,h)) = max(min(f,g),min(f,h)) &
+max(f,min(g,h)) = min(max(f,g),max(f,h))
+proof
+A1:C = dom min(f,max(g,h)) & C = dom max(min(f,g),min(f,h)) &
+ C = dom max(f,min(g,h)) & C = dom min(max(f,g),max(f,h)) by Def1;
+A2:for x being Element of C st x in C holds
+ min(f,max(g,h)).x = max(min(f,g),min(f,h)).x
+ proof
+  let x be Element of C;
+     min(f,max(g,h)).x = min(f.x,max(g,h).x) by Def5
+                   .= min(f.x,max(g.x,h.x)) by Def6
+                   .= max(min(f.x,g.x),min(f.x,h.x)) by SQUARE_1:56
+                   .= max(min(f,g).x,min(f.x,h.x)) by Def5
+                   .= max(min(f,g).x,min(f,h).x) by Def5
+                   .= max(min(f,g),min(f,h)).x by Def6;
+  hence thesis;
+ end;
+    for x being Element of C st x in C holds
+ max(f,min(g,h)).x = min(max(f,g),max(f,h)).x
+ proof
+  let x be Element of C;
+     max(f,min(g,h)).x = max(f.x,min(g,h).x) by Def6
+                   .= max(f.x,min(g.x,h.x)) by Def5
+                   .= min(max(f.x,g.x),max(f.x,h.x)) by SQUARE_1:57
+                   .= min(max(f,g).x,max(f.x,h.x)) by Def6
+                   .= min(max(f,g).x,max(f,h).x) by Def6
+                   .= min(max(f,g),max(f,h)).x by Def5;
+  hence thesis;
+ end;
+ hence thesis by A1,A2,PARTFUN1:34;
+end;
+
+theorem
+1_minus(1_minus(h)) = h;
+
+theorem Th20:
+1_minus(max(f,g)) = min(1_minus(f),1_minus(g)) &
+1_minus(min(f,g)) = max(1_minus(f),1_minus(g))
+proof
+A1:C = dom 1_minus(max(f,g)) & C = dom min(1_minus(f),1_minus(g)) &
+ C = dom 1_minus(min(f,g)) & C = dom max(1_minus(f),1_minus(g)) by Def1;
+A2:for x being Element of C st x in C holds
+ (1_minus(max(f,g))).x = min(1_minus(f),1_minus(g)).x
+ proof
+  let x be Element of C;
+A3: (1_minus(max(f,g))).x
+   =1 - max(f,g).x by Def7
+  .=1 - max(f.x,g.x) by Def6
+  .=1 - (f.x + g.x + abs(f.x - g.x))/2 by COMPLEX1:160;
+       min(1_minus(f),1_minus(g)).x
+   =min((1_minus(f)).x,(1_minus(g)).x) by Def5
+  .=min((1 - f.x),(1_minus(g)).x) by Def7
+  .=min((1 - f.x),(1- g.x)) by Def7
+  .=((1-f.x) + (1-g.x) - abs((1-f.x) - (1-g.x)))/2 by COMPLEX1:159
+  .=(2-f.x -g.x- abs(-(f.x-g.x)))/2
+  .=(2-(f.x + g.x) - abs(f.x-g.x))/2 by ABSVALUE:17
+  .=1 - ((f.x + g.x) + abs(f.x-g.x))/2;
+  hence thesis by A3;
+ end;
+    for x being Element of C st x in C holds
+ (1_minus(min(f,g))).x = max(1_minus(f),1_minus(g)).x
+ proof
+    let x be Element of C;
+  A4: (1_minus(min(f,g))).x
+     =1 - min(f,g).x by Def7
+    .=1 - min(f.x,g.x) by Def5
+    .=1 - (f.x + g.x - abs(f.x - g.x))/2 by COMPLEX1:159;
+         max(1_minus(f),1_minus(g)).x
+     =max((1_minus(f)).x,(1_minus(g)).x) by Def6
+    .=max((1 - f.x),(1_minus(g)).x) by Def7
+    .=max((1 - f.x),(1- g.x)) by Def7
+    .=((1-f.x) + (1-g.x) + abs((1-f.x) - (1-g.x)))/2 by COMPLEX1:160
+    .=(2-f.x -g.x + abs(-(f.x-g.x)))/2
+    .=(2-(f.x + g.x) + abs(f.x-g.x))/2 by ABSVALUE:17
+    .=1 - ((f.x + g.x) - abs(f.x-g.x))/2;
+    hence thesis by A4;
+ end;
+ hence thesis by A1,A2,PARTFUN1:34;
+end;
+
+begin
+::::::Empty Fuzzy Set and Universal Fuzzy Set
+
+theorem Th23:
+chi({},C) is Membership_Func of C
+proof
+A1:rng chi({},C) c= [.0,1.] by Th1;
+   dom chi({},C) =C by FUNCT_3:def 3;
+hence thesis by A1,Def1;
+end;
+
+definition
+let C be non empty set;
+func EMF(C) -> Membership_Func of C equals :Def13:
+chi({},C);
+correctness by Th23;
+end;
+
+definition
+let C be non empty set;
+func UMF(C) -> Membership_Func of C equals :Def14:
+chi(C,C);
+correctness by Th2;
+end;
+
+theorem Th28:
+for a,b be Element of REAL,
+f be PartFunc of C,REAL st rng f c= [.a,b.] & a <= b holds
+(for x being Element of C st x in dom f holds a <= f.x & f.x <= b)
+proof
+ let a,b be Element of REAL;
+ let f be PartFunc of C,REAL;
+ assume A1:rng f c= [.a,b.] & a <= b;
+    for x being Element of C st x in dom f holds a <= f.x & f.x <= b
+ proof
+  let x be Element of C;
+  assume x in dom f;
+  then A2:f.x in rng f by FUNCT_1:def 5;
+  reconsider A=[.a,b.] as closed-interval Subset of REAL by A1,INTEGRA1:def 1;
+     A = [. inf A, sup A .] by INTEGRA1:5;
+  then a=inf A & b=sup A by INTEGRA1:6;
+  hence thesis by A1,A2,INTEGRA2:1;
+ end;
+ hence thesis;
+end;
+
+theorem Th29:
+   EMF(C) c= f
+proof
+  let x be Element of C;
+A1:  dom f = C by Def1;
+     chi({},C) = EMF(C) by Def13;
+  then A2:(EMF(C)).x = 0 by FUNCT_3:def 3;
+     rng f c= [.0,1.] by Def1;
+  hence thesis by A1,A2,Th28;
+end;
+
+theorem Th30:
+   f c= UMF(C)
+proof
+  let x be Element of C;
+A1:dom f = C by Def1;
+     chi(C,C) = UMF(C) by Def14;
+  then A2:(UMF(C)).x = 1 by FUNCT_3:def 3;
+     rng f c= [.0,1.] by Def1;
+  hence thesis by A1,A2,Th28;
+end;
+
+theorem Th31:
+for x be Element of C,h be Membership_Func of C holds
+(EMF(C)).x <= h.x & h.x <= (UMF(C)).x
+proof
+ let x be Element of C;
+ let h be Membership_Func of C;
+ EMF C c= h & h c= UMF C by Th29,Th30;
+hence thesis by Def4;
+end;
+
+theorem Th35:
+ min(f,g) c= f & f c= max(f,g)
+proof
+  thus min(f,g) c= f
+  proof
+    let x be Element of C;
+    min(f,g).x = min(f.x,g.x) by Def5;
+    hence thesis by SQUARE_1:35;
+  end;
+  let x be Element of C;
+  max(f,g).x = max(f.x,g.x) by Def6;
+  hence thesis by SQUARE_1:46;
+ end;
+
+theorem Th32:
+max(f,UMF(C)) = UMF(C) & min(f,UMF(C)) = f &
+max(f,EMF(C)) = f & min(f,EMF(C)) = EMF(C)
+proof
+  max(f,UMF(C)) c= UMF(C) & UMF(C) c= max(f,UMF(C)) by Th30,Th35;
+  hence max(f,UMF(C)) = UMF(C) by Lm1;
+A4:min(f,UMF(C)) = f
+ proof
+A5:C = dom min(f,UMF(C)) & C = dom f by Def1;
+     for x being Element of C st x in C holds
+  min(f,UMF(C)).x = f.x
+   proof
+    let x be Element of C;
+A6: f.x <= (UMF(C)).x by Th31;
+       min(f,UMF(C)).x
+     = min(f.x,(UMF(C)).x) by Def5
+    .=f.x by A6,SQUARE_1:def 1;
+    hence thesis;
+   end;
+  hence thesis by A5,PARTFUN1:34;
+ end;
+A7:max(f,EMF(C)) = f
+ proof
+A8:C = dom max(f,EMF(C)) & C = dom f by Def1;
+     for x being Element of C st x in C holds
+  max(f,EMF(C)).x = f.x
+   proof
+    let x be Element of C;
+A9: (EMF(C)).x <= f.x by Th31;
+       max(f,EMF(C)).x
+     = max(f.x,(EMF(C)).x) by Def6
+    .=f.x by A9,SQUARE_1:def 2;
+    hence thesis;
+   end;
+  hence thesis by A8,PARTFUN1:34;
+ end;
+    min(f,EMF(C)) = EMF(C)
+ proof
+A10:C = dom min(f,EMF(C)) & C = dom EMF(C) by Def1;
+     for x being Element of C st x in C holds
+  min(f,EMF(C)).x = (EMF(C)).x
+   proof
+    let x be Element of C;
+A11: (EMF(C)).x <= f.x by Th31;
+       min(f,EMF(C)).x
+     = min(f.x,(EMF(C)).x) by Def5
+    .=(EMF(C)).x by A11,SQUARE_1:def 1;
+    hence thesis;
+   end;
+  hence thesis by A10,PARTFUN1:34;
+  end;
+ hence thesis by A4,A7;
+end;
+
+theorem Th36:
+f c= h & g c= h implies max(f,g) c= h
+proof
+  assume
+A1: f c= h & g c= h;
+   let x be Element of C;
+A2: f.x <= h.x & g.x <= h.x by A1,Def4;
+    max(f.x,g.x) = max(f,g).x by Def6;
+    hence thesis by A2,SQUARE_1:50;
+ end;
+
+theorem
+   f c= g implies max(f,h) c= max(g,h)
+proof
+ assume
+A1:f c= g;
+  let x be Element of C;
+     f.x <= g.x by A1,Def4;
+  then max(f.x,h.x) <= max(g.x,h.x) by RFUNCT_3:7;
+  then max(f.x,h.x) <= max(g,h).x by Def6;
+  hence thesis by Def6;
+end;
+
+theorem
+   f c= g & h c= h1 implies max(f,h) c= max(g,h1)
+proof
+ assume A1:f c= g & h c= h1;
+  let x be Element of C;
+     f.x <= g.x & h.x <= h1.x by A1,Def4;
+  then max(f.x,h.x) <= max(g.x,h1.x) by RFUNCT_3:7;
+  then max(f,h).x <= max(g.x,h1.x) by Def6;
+  hence thesis by Def6;
+end;
+
+theorem
+   f c= g implies max(f,g)  = g
+proof
+  assume f c= g;
+  then max(f,g) c= g & g c= max(f,g) by Th36,Th35;
+  hence thesis by Lm1;
+end;
+
+theorem
+  min(f,g) c= max(f,g)
+proof
+  let x be Element of C;
+A1:min(f.x,g.x) <= f.x by SQUARE_1:35;
+     f.x <= max(f.x,g.x) by SQUARE_1:46;
+  then min(f.x,g.x) <= max(f.x,g.x) by A1,AXIOMS:22;
+  then min(f.x,g.x) <= max(f,g).x by Def6;
+  hence thesis by Def5;
+end;
+
+theorem Th43:
+h c= f & h c= g implies h c= min(f,g)
+proof
+ assume A1:h c= f & h c= g;
+  let x be Element of C;
+     h.x <= f.x & h.x <= g.x by A1,Def4;
+  then h.x <= min(f.x,g.x) by SQUARE_1:39;
+  hence thesis by Def5;
+end;
+
+theorem Th44:
+for a,b,c,d be Element of REAL st a <= b & c <= d holds
+min(a,c) <= min(b,d)
+proof
+ let a,b,c,d be Real;
+ assume A1:a <= b & c <= d;
+    min(a,c) <= a & min(a,c) <= c by SQUARE_1:35;
+ then min(a,c) <= b & min(a,c) <= d by A1,AXIOMS:22;
+ hence thesis by SQUARE_1:39;
+end;
+
+theorem
+   for a,b,c be Element of REAL st a <= b holds
+min(a,c) <= min(b,c) by Th44;
+
+theorem
+   f c= g implies min(f,h) c= min(g,h)
+proof
+ assume
+A1:f c= g;
+  let x be Element of C;
+     f.x <= g.x by A1,Def4;
+  then min(f.x,h.x) <= min(g.x,h.x) by Th44;
+  then min(f,h).x <= min(g.x,h.x) by Def5;
+  hence thesis by Def5;
+end;
+
+theorem
+   f c= g & h c= h1 implies min(f,h) c= min(g,h1)
+proof
+ assume A1:f c= g & h c= h1;
+  let x be Element of C;
+     f.x <= g.x & h.x <= h1.x by A1,Def4;
+  then min(f.x,h.x) <= min(g.x,h1.x) by Th44;
+  then min(f,h).x <= min(g.x,h1.x) by Def5;
+  hence thesis by Def5;
+end;
+
+theorem Th48:
+f c= g implies min(f,g) = f
+proof
+ assume A1:f c= g;
+A2:C = dom min(f,g) & C = dom f by Def1;
+     for x being Element of C st x in C holds min(f,g).x = f.x
+  proof
+   let x be Element of C;
+      f.x <= g.x by A1,Def4;
+   then f.x = min(f.x,g.x) by SQUARE_1:def 1
+      .= min(f,g).x by Def5;
+   hence thesis;
+  end;
+  hence thesis by A2,PARTFUN1:34;
+end;
+
+theorem
+   f c= g & f c= h & min(g,h) = EMF(C) implies f = EMF(C)
+proof
+ assume A1:f c= g & f c= h & min(g,h)= EMF(C);
+A2:C = dom f & C = dom EMF(C) by Def1;
+      for x being Element of C st x in C holds f.x = (EMF(C)).x
+   proof
+    let x be Element of C;
+       f.x <= g.x & f.x <= h.x by A1,Def4;
+    then f.x <= min(g.x,h.x) by SQUARE_1:39;
+    then f.x <= min(g,h).x by Def5;
+    then A3: f.x <= (EMF(C)).x by A1;
+       (EMF(C)).x <= f.x by Th31;
+    hence thesis by A3,AXIOMS:21;
+   end;
+   hence thesis by A2,PARTFUN1:34;
+end;
+
+theorem
+  max(min(f,g),min(f,h)) = f implies f c= max(g,h)
+proof
+ assume A1:max(min(f,g),min(f,h)) = f;
+  let x be Element of C;
+       max(min(f,g),min(f,h)).x = max(min(f,g).x,min(f,h).x) by Def6
+  .=max(min(f,g).x,min(f.x,h.x)) by Def5
+  .=max(min(f.x,g.x),min(f.x,h.x)) by Def5
+  .=min(f.x,max(g.x,h.x)) by SQUARE_1:56;
+  then f.x = min(f.x,max(g.x,h.x)) by A1;
+  then f.x <= max(g.x,h.x) by SQUARE_1:def 1;
+  hence thesis by Def6;
+ end;
+
+theorem
+   f c= g & min(g,h) = EMF(C) implies min(f,h) = EMF(C)
+proof
+ assume A1:f c= g & min(g,h) = EMF(C);
+A2:C = dom min(f,h) & C = dom EMF(C) by Def1;
+     for x being Element of C st x in C holds min(f,h).x = (EMF(C)).x
+  proof
+   let x be Element of C;
+      f.x <= g.x & min(g,h) = EMF(C) by A1,Def4;
+   then min(f.x,h.x) <= min(g.x,h.x) by Th44;
+   then min(f.x,h.x) <= min(g,h).x by Def5;
+   then min(f,h).x <= min(g,h).x by Def5;
+   then A3:min(f,h).x <= (EMF(C)).x by A1;
+      (EMF(C)).x <= min(f,h).x by Th31;
+   hence thesis by A3,AXIOMS:21;
+  end;
+  hence thesis by A2,PARTFUN1:34;
+end;
+
+theorem
+   f c= EMF(C) implies f = EMF(C)
+proof
+ EMF(C) c= f by Th29;
+ hence thesis by Lm1;
+end;
+
+theorem
+   max(f,g) = EMF(C) iff f = EMF(C) & g = EMF(C)
+proof
+thus max(f,g) = EMF(C) implies f = EMF(C) & g = EMF(C)
+ proof
+  assume A2:max(f,g) = EMF(C);
+  thus f = EMF(C)
+    proof
+A4:  C = dom f & C = dom EMF(C) by Def1;
+        for x being Element of C st x in C holds f.x = (EMF(C)).x
+     proof
+      let x be Element of C;
+A5:  (EMF(C)).x <= f.x by Th31;
+         max(f.x,g.x) = max(f,g).x by Def6
+                  .=(EMF(C)).x by A2;
+      then f.x <= (EMF(C)).x by SQUARE_1:46;
+      hence thesis by A5,AXIOMS:21;
+     end;
+     hence thesis by A4,PARTFUN1:34;
+    end;
+    thus g = EMF(C)
+    proof
+A6:  C = dom g & C = dom EMF(C) by Def1;
+        for x being Element of C st x in C holds g.x = (EMF(C)).x
+     proof
+      let x be Element of C;
+A7:  (EMF(C)).x <= g.x by Th31;
+         max(f.x,g.x) = max(f,g).x by Def6
+                  .=(EMF(C)).x by A2;
+      then g.x <= (EMF(C)).x by SQUARE_1:46;
+      hence thesis by A7,AXIOMS:21;
+     end;
+     hence thesis by A6,PARTFUN1:34;
+    end;
+ end;
+  assume A8:f = EMF(C) & g = EMF(C);
+A9: C = dom max(f,g) & C = dom EMF(C) by Def1;
+       for x being Element of C st x in C holds max(f,g).x = (EMF(C)).x
+    by A8;
+    hence thesis by A9,PARTFUN1:34;
+end;
+
+theorem
+  f = max(g,h) iff g c= f & h c= f & for h1 st g c= h1 & h c= h1 holds f c= h1
+  proof
+    hereby
+      assume
+A1:   f = max(g,h);
+      hence g c= f & h c= f by Th35;
+      let h1; assume
+A3:   g c= h1 & h c= h1;
+      thus f c= h1
+      proof let x be Element of C;
+        g.x <= h1.x & h.x <= h1.x by A3,Def4;
+        then max(g.x,h.x) <= h1.x by SQUARE_1:50;
+        hence f.x <= h1.x by A1,Def6;
+      end;
+    end;
+    assume that
+A4: g c= f and
+A5: h c= f and
+A6: for h1 st g c= h1 & h c= h1 holds f c= h1;
+A7: max(g,h) c= f by A4,A5,Th36;
+    g c= max(g,h) & h c= max(g,h) by Th35; then
+    f c= max(g,h) by A6;
+    hence thesis by A7,Lm1;
+  end;
+
+theorem
+  f = min(g,h) iff f c= g & f c= h & for h1 st h1 c= g & h1 c= h holds h1 c= f
+  proof
+    hereby
+      assume
+A1:   f = min(g,h);
+      hence f c= g & f c= h by Th35;
+      let h1; assume
+A3:   h1 c= g & h1 c= h;
+      thus h1 c= f
+      proof let x be Element of C;
+        h1.x <= g.x & h1.x <= h.x by A3,Def4;
+        then min(g.x,h.x) >= h1.x by SQUARE_1:39;
+        hence f.x >= h1.x by A1,Def5;
+      end;
+    end;
+    assume that
+A4: f c= g and
+A5: f c= h and
+A6: for h1 st h1 c= g & h1 c= h holds h1 c= f;
+A7: f c= min(g,h) by A4,A5,Th43;
+    min(g,h) c= g & min(g,h) c= h by Th35; then
+    min(g,h) c= f by A6;
+    hence thesis by A7,Lm1;
+  end;
+
+theorem
+  f c= max(g,h) & min(f,h) = EMF(C) implies f c= g
+  proof
+    assume
+A1: f c= max(g,h) & min(f,h) = EMF(C); then
+    min(f,max(g,h)) = f by Th48; then
+A3: f = max(min(f,g),min(f,h)) by Th16 .= min(f,g) by A1,Th32;
+    let x be Element of C;
+    f.x = min(f.x,g.x) by A3,Def5;
+    hence thesis by SQUARE_1:def 1;
+ end;
+
+Lm4: f c= g implies 1_minus g c= 1_minus f
+     proof assume
+A2:    f c= g;
+       let x be Element of C;
+       f.x <= g.x by A2,Def4; then
+       1-(g.x) <= 1-(f.x) by REAL_2:106; then
+       (1_minus(g)).x <= 1-(f.x) by Def7;
+       hence thesis by Def7;
+     end;
+
+theorem Th57:
+  f c= g iff 1_minus g c= 1_minus f
+  proof
+    1_minus 1_minus f = f & 1_minus 1_minus g = g;
+    hence thesis by Lm4;
+  end;
+
+theorem
+  f c= 1_minus g iff g c= 1_minus f
+  proof
+    1_minus 1_minus f = f & 1_minus 1_minus g = g;
+    hence thesis by Th57;
+  end;
+
+theorem
+  1_minus max(f,g) c= 1_minus f
+  proof
+    f c= max(f,g) by Th35;
+    hence thesis by Th57;
+  end;
+
+theorem
+  1_minus f c= 1_minus min(f,g)
+  proof
+    min(f,g) c= f by Th35;
+    hence thesis by Th57;
+  end;
+
+theorem Lm3:
+  for x being Element of C holds (EMF(C)).x = 0 & (UMF(C)).x = 1
+proof
+ let x be Element of C;
+A1:(UMF(C)).x = 1
+ proof
+     chi(C,C).x = 1 by FUNCT_3:def 3;
+  hence thesis by Def14;
+ end;
+    chi({},C).x = 0 by FUNCT_3:def 3;
+ hence thesis by A1,Def13;
+end;
+
+theorem Th62:
+  1_minus(EMF(C)) = UMF(C) & 1_minus(UMF(C)) = EMF(C)
+  proof
+A1: C = dom 1_minus(EMF(C)) & C = dom UMF(C) by Def1;
+    for x being Element of C st x in C holds (1_minus(EMF(C))).x = (UMF(C)).x
+    proof
+      let x be Element of C;
+      (1_minus(EMF(C))).x = 1 - (EMF(C)).x by Def7
+                      .= 1 - 0 by Lm3
+                      .= 1;
+      hence thesis by Lm3;
+    end;
+    hence 1_minus(EMF(C)) = UMF(C) by A1,PARTFUN1:34;
+A2: C = dom 1_minus(UMF(C)) & C = dom EMF(C) by Def1;
+    for x being Element of C st x in C holds (1_minus(UMF(C))).x = (EMF(C)).x
+    proof
+      let x be Element of C;
+      (1_minus(UMF(C))).x = 1 - (UMF(C)).x by Def7
+                      .= 1 - 1 by Lm3
+                      .= 0;
+      hence thesis by Lm3;
+    end;
+    hence thesis by A2,PARTFUN1:34;
+  end;
+
+
+::::::Exclusive Sum, Absolute Difference
+
+definition
+  let C be non empty set;
+  let h,g be Membership_Func of C;
+  func h \+\ g -> Membership_Func of C equals:
+DefDif:
+  max(min(h,1_minus(g)),min(1_minus(h),g));
+  coherence;
+  commutativity;
+end;
+
+theorem
+  f \+\ EMF(C) = f
+  proof
+    thus f \+\ EMF(C)
+       = max(min(f,1_minus(EMF(C))),min(1_minus(f),EMF(C))) by DefDif
+      .= max(min(f,UMF(C)),min(1_minus(f),EMF(C))) by Th62
+      .= max(f,min(1_minus(f),EMF(C))) by Th32
+      .= max(f,EMF(C)) by Th32
+      .= f by Th32;
+  end;
+
+theorem
+  f \+\ UMF(C) = 1_minus f
+  proof
+    thus f \+\ UMF(C)
+       = max(min(f,1_minus(UMF(C))),min(1_minus(f),UMF(C))) by DefDif
+      .= max(min(f,EMF(C)),min(1_minus(f),UMF(C))) by Th62
+      .= max(EMF(C),min(1_minus(f),UMF(C))) by Th32
+      .= min(1_minus(f),UMF(C)) by Th32
+      .= 1_minus f by Th32;
+  end;
+
+theorem
+  min(min(max(f,g),max(g,h)),max(h,f)) = max(max(min(f,g),min(g,h)),min(h,f))
+  proof
+    thus  min(min(max(f,g),max(g,h)),max(h,f))
+     = max(min(min(max(f,g),max(g,h)),h),min(min(max(f,g),max(g,h)),f)) by Th16
+    .=max(min(max(f,g),min(max(g,h),h)),min(min(max(f,g),max(g,h)),f)) by Th11
+    .=max(min(max(f,g),min(max(g,h),h)),min(max(f,g),min(max(g,h),f))) by Th11
+    .=max(min(max(f,g),min(max(g,h),h)),min(max(f,g),min(f,max(g,h))))
+    .=max(min(max(f,g),min(max(g,h),h)),min(min(max(f,g),f),max(g,h))) by Th11
+    .=max(min(max(f,g),min(max(h,g),h)),min(min(max(f,g),f),max(g,h)))
+    .=max(min(max(f,g),min(h,max(h,g))),min(min(max(f,g),f),max(g,h)))
+    .=max(min(max(f,g),h),min(min(max(f,g),f),max(g,h))) by Th14
+    .=max(min(max(f,g),h),min(min(f,max(f,g)),max(g,h)))
+    .=max(min(max(f,g),h),min(f,max(g,h))) by Th14
+    .=max(min(max(f,g),h),max(min(f,g),min(f,h) )) by Th16
+    .=max(min(h,max(f,g)),max(min(f,g),min(f,h) ))
+    .=max(max(min(h,f),min(h,g)),max(min(f,g),min(f,h) )) by Th16
+    .=max(max(min(f,g),min(f,h)),max(min(h,f),min(h,g)))
+    .=max(max(min(f,g),min(f,h)),max(min(f,h),min(h,g)))
+    .=max(max(max(min(f,g),min(f,h)),min(f,h)),min(h,g)) by Th11
+    .=max(max(min(f,g),max(min(f,h),min(f,h))),min(h,g)) by Th11
+    .=max(max(min(f,g),min(f,h)),min(h,g))
+    .=max(min(f,g),max(min(f,h),min(h,g))) by Th11
+    .=max(min(f,g),max(min(h,g),min(f,h)))
+    .=max(max(min(f,g),min(h,g)),min(f,h)) by Th11
+    .=max(max(min(f,g),min(g,h)),min(f,h))
+    .=max(max(min(f,g),min(g,h)),min(h,f));
+  end;
+
+theorem
+  max(min(f,g),min(1_minus f, 1_minus g)) c= 1_minus (f \+\ g)
+  proof
+    set f1 = 1_minus f,
+        g1 = 1_minus g;
+    let x be Element of C;
+    1_minus (f \+\ g) = 1_minus max(min(f,g1),min(f1,g)) by DefDif
+    .= min( 1_minus min(f,g1) , 1_minus min(f1,g)) by Th20
+    .= min( max(f1,1_minus g1),1_minus min(f1,g)) by Th20
+    .= min( max(f1,g),1_minus min(f1,g))
+    .= min( max(f1,g),max(1_minus f1,g1)) by Th20
+    .= min( max(f1,g),max(f,g1))
+    .= max(min(max(f1,g),f),min(max(f1,g),g1)) by Th16
+    .= max(min(f,max(f1,g)),min(max(f1,g),g1))
+    .= max( max(min(f,f1),min(f,g)) ,min(max(f1,g),g1)) by Th16
+    .= max( max(min(f,f1),min(f,g)) ,min(g1,max(f1,g)))
+    .= max( max(min(f,f1),min(f,g)) , max(min(g1,f1),min(g1,g))) by Th16
+    .= max(max(max(min(f,f1),min(f,g)),min(g1,f1)),min(g1,g)) by Th11
+    .= max( max(max(min(f,g),min(f,f1)),min(g1,f1)) , min(g1,g))
+    .= max( max(min(g1,f1),max(min(f,g),min(f,f1))) , min(g1,g))
+    .= max( max(max(min(g1,f1),min(f,g)),min(f,f1)) , min(g1,g)) by Th11
+    .= max( max(min(g1,f1),min(f,g)), max(min(f,f1) , min(g1,g))) by Th11; then
+    (1_minus (f \+\ g)).x
+     = max(max(min(g1,f1),min(f,g)).x,max(min(f,f1),min(g1,g)).x) by Def6
+    .= max(max(min(f,g),min(g1,f1)).x,max(min(f,f1),min(g1,g)).x)
+    .= max(max(min(f,g),min(f1,g1)).x,max(min(f,f1),min(g1,g)).x);
+    hence thesis by SQUARE_1:46;
+  end;
+
+theorem
+  max(f \+\ g, min(f,g)) c= max(f,g)
+  proof
+    set f1 = 1_minus f,
+        g1 = 1_minus g;
+    let x be Element of C;
+    max(f \+\ g, min(f,g)) = max(max(min(f,g1),min(f1,g)) ,min(f,g)) by DefDif
+    .= max(min(f,g1),max(min(f1,g),min(f,g))) by Th11
+    .= max(min(f,g1),min(max(min(f1,g),f),max(min(f1,g),g))) by Th16
+    .= max(min(f,g1),min(max(min(f1,g),f),max(g,min(f1,g))))
+    .= max(min(f,g1),min(max(min(f1,g),f),max(g,min(g,f1))))
+    .= max(min(f,g1),min(max(min(f1,g),f),g)) by Th14
+    .= min(max(min(f,g1),max(min(f1,g),f)),max(min(f,g1),g)) by Th16
+    .= min(max(min(f,g1),max(f,min(f1,g))),max(min(f,g1),g))
+    .= min(max(max(min(f,g1),f),min(f1,g)) ,max(min(f,g1),g)) by Th11
+    .= min(max(max(f,min(f,g1)),min(f1,g)) ,max(min(f,g1),g))
+    .= min(max(f,min(f1,g)) ,max(min(f,g1),g)) by Th14
+    .= min( min(max(f,f1),max(f,g)) ,max(min(f,g1),g)) by Th16
+    .= min( min(max(f,f1),max(f,g)) ,max(g,min(f,g1)))
+    .= min( min(max(f,f1),max(f,g)) , min(max(g,f),max(g,g1)) ) by Th16
+    .= min(min( min(max(f,f1),max(f,g)),max(g,f) ),max(g,g1) ) by Th11
+    .= min(min( max(f,f1),min(max(f,g),max(g,f)) ),max(g,g1) ) by Th11
+    .= min(min( max(f,f1),min(max(f,g),max(f,g)) ),max(g,g1) )
+    .= min(min( max(f,f1),max(f,g) ),max(g,g1) )
+    .= min(min(max(f,g),max(f,f1)),max(g,g1))
+    .= min(max(f,g),min(max(f,f1),max(g,g1))) by Th11; then
+    max(f \+\ g, min(f,g)).x = min(max(f,g).x,min(max(f,f1),max(g,g1)).x)
+    by Def5;
+    hence thesis by SQUARE_1:35;
+ end;
+
+theorem
+  f \+\ f = min(f, 1_minus f)
+  proof
+    thus f \+\ f = max(min(f,1_minus f),min(1_minus f,f)) by DefDif
+    .= min(f,1_minus f);
+  end;
+
+definition
+let C be non empty set;
+let h,g be Membership_Func of C;
+func ab_difMF(h,g) -> Membership_Func of C means
+   for c being Element of C holds it.c = abs(h.c - g.c);
+existence
+proof
+ defpred P[set,set] means $2 = abs(h.$1 - g.$1);
+ A1:for x,y st x in C & P[x,y] holds y in REAL;
+ A2:for x,y1,y2 st x in C & P[x,y1] & P[x,y2] holds y1=y2;
+  consider IT being PartFunc of C,REAL such that
+ A3:(for x holds x in dom IT iff x in C & ex y st P[x,y]) &
+    (for x st x in dom IT holds P[x,IT.x]) from PARTFUN1:sch 2(A1,A2);
+ A4:dom IT = C & rng IT c= [.0,1.]
+  proof
+  A5:dom IT = C
+   proof
+       C c= dom IT
+    proof
+        for x being set st x in C holds x in dom IT
+     proof
+      let x be set;
+      assume A6:x in C;
+         ex y st y = abs(h.x - g.x);
+      hence thesis by A3,A6;
+     end;
+     hence thesis by TARSKI:def 3;
+    end;
+    hence thesis by XBOOLE_0:def 10;
+   end;
+     rng IT c= [.0,1.]
+  proof
+A7:rng h c= [.0,1.] & rng g c= [.0,1.] by Def1;
+      for y being set st y in rng IT holds y in [.0,1.]
+   proof
+    let y be set; assume y in rng IT;
+    then consider x being Element of C such that
+A8:x in dom IT & y = IT.x by PARTFUN1:26;
+    reconsider A=[.0,1.] as closed-interval Subset of REAL by INTEGRA1:def 1;
+       A = [. inf A, sup A .] by INTEGRA1:5;
+then A9:0=inf A & 1=sup A by INTEGRA1:6;
+       x in C;
+    then x in dom h & x in dom g by Def1;
+    then h.x in rng h & g.x in rng g by FUNCT_1:def 5;
+    then 0 <= h.x & h.x <= 1 & 0 <= g.x & g.x <= 1 by A7,A9,INTEGRA2:1;
+    then h.x - g.x <= 1 - g.x & 1-0 >= 1-g.x &
+    0 - g.x <= h.x - g.x & -g.x >= -1
+      by REAL_1:49,50,REAL_2:106;
+    then h.x - g.x <= 1 & -1 <= h.x - g.x by AXIOMS:22;
+    then 0 <= abs(h.x - g.x) & abs(h.x - g.x) <= 1 by ABSVALUE:5,12;
+    then 0 <= IT.x & IT.x <= 1 by A3,A8;
+    hence thesis by A8,A9,INTEGRA2:1;
+   end;
+   hence thesis by TARSKI:def 3;
+  end;
+  hence thesis by A5;
+  end;
+ then A10:IT is Membership_Func of C by Def1;
+    for c being Element of C holds IT.c = abs(h.c - g.c) by A3,A4;
+ hence thesis by A10;
+ end;
+uniqueness
+proof
+  let F,G be Membership_Func of C;
+  assume that
+A11:for c being Element of C holds F.c = abs(h.c - g.c)
+  and
+A12:for c being Element of C holds G.c = abs(h.c - g.c);
+A13:C = dom F & C = dom G by Def1;
+     for c being Element of C st c in C holds F.c = G.c
+  proof
+   let c be Element of C;
+      F.c = abs(h.c - g.c) & G.c = abs(h.c - g.c) by A11,A12;
+   hence thesis;
+  end;
+ hence thesis by A13,PARTFUN1:34;
+ end;
+end;
+

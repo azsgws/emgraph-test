@@ -1,0 +1,2148 @@
+:: Go-Board Theorem
+::  by Jaros{\l}aw Kotowicz and Yatsuka Nakamura
+::
+:: Received August 24, 1992
+:: Copyright (c) 1992 Association of Mizar Users
+
+environ
+
+ vocabularies PRE_TOPC, EUCLID, FINSEQ_1, GOBOARD1, FINSEQ_4, RELAT_1, INCSP_1,
+      MATRIX_1, TREES_1, BOOLE, FUNCT_1, ARYTM_1, ABSVALUE, MATRIX_2, TOPREAL1,
+      GOBOARD2, MCART_1, TOPREAL4, GOBOARD4;
+ notations TARSKI, XBOOLE_0, ZFMISC_1, SUBSET_1, NUMBERS, XREAL_0, REAL_1,
+      COMPLEX1, NAT_1, FUNCT_1, FINSEQ_1, STRUCT_0, PRE_TOPC, FINSEQ_4,
+      MATRIX_1, EUCLID, TOPREAL1, TOPREAL4, GOBOARD1, GOBOARD2;
+ constructors REAL_1, NAT_1, ABSVALUE, TOPREAL1, MATRIX_2, TOPREAL4, GOBOARD2,
+      FINSEQ_4, INT_1, MEMBERED, XBOOLE_0, COMPLEX1;
+ registrations GOBOARD1, RELSET_1, GOBOARD2, STRUCT_0, EUCLID, INT_1, MEMBERED,
+      ORDINAL2, FINSEQ_1;
+ requirements REAL, NUMERALS, BOOLE, SUBSET, ARITHM;
+ definitions TARSKI, GOBOARD1;
+ theorems AXIOMS, TARSKI, REAL_1, NAT_1, ZFMISC_1, FINSEQ_1, ABSVALUE,
+      SQUARE_1, FINSEQ_2, REAL_2, MATRIX_1, TOPREAL1, TOPREAL4, GOBOARD1,
+      GOBOARD2, FINSEQ_3, FINSEQ_4, PROB_1, FUNCT_1, PARTFUN2, INT_1, XBOOLE_0,
+      XBOOLE_1, XCMPLX_1;
+ schemes NAT_1, GOBOARD2, GOBOARD1;
+
+begin
+
+ reserve p,p1,p2,q1,q2 for Point of TOP-REAL 2,
+          P1,P2 for Subset of TOP-REAL 2,
+          f,f1,f2,g1,g2 for FinSequence of TOP-REAL 2,
+          n,m,i,j,k for Nat,
+          G,G1 for Go-board,
+          x,y for set;
+
+theorem Th1:
+for G,f1,f2 st 1<=len f1 & 1<=len f2 &
+ f1 is_sequence_on G & f2 is_sequence_on G &
+ f1/.1 in rng Line(G,1) & f1/.len f1 in rng Line(G,len G) &
+ f2/.1 in rng Col(G,1) & f2/.len f2 in rng Col(G,width G) holds
+ rng f1 meets rng f2
+ proof let G,f1,f2; assume
+  A1: 1<=len f1 & 1<=len f2 & f1 is_sequence_on G & f2 is_sequence_on G &
+      f1/.1 in rng Line(G,1) & f1/.len f1 in rng Line(G,len G) &
+      f2/.1 in rng Col(G,1) & f2/.len f2 in rng Col(G,width G);
+  defpred P[Nat] means
+  for G1,g1,g2 st $1=width G1 & $1>0 &
+   1<=len g1 & 1<=len g2 & g1 is_sequence_on G1 & g2 is_sequence_on G1 &
+           g1/.1 in rng Line(G1,1) & g1/.len g1 in rng Line(G1,len G1) &
+           g2/.1 in rng Col(G1,1) &
+           g2/.len g2 in rng Col(G1,width G1) holds
+   rng g1 /\ rng g2 <> {};
+  A2: P[0];
+  A3: for k st P[k] holds P[k+1]
+   proof let k such that
+    A4: P[k];
+    let G1,g1,g2 such that
+    A5: k+1=width G1 & k+1>0 & 1<=len g1 & 1<=len g2 &
+      g1 is_sequence_on G1 & g2 is_sequence_on G1 &
+      g1/.1 in rng Line(G1,1) & g1/.len g1 in rng Line(G1,len G1) &
+      g2/.1 in rng Col(G1,1) & g2/.len g2 in rng Col(G1,width G1);
+    A6: dom g1 = Seg len g1 & dom g2 = Seg len g2 by FINSEQ_1:def 3;
+    defpred P[Nat] means $1 in dom g2 & g2/.$1 in rng Col(G1,width G1);
+    A7: ex m st P[m]
+     proof
+      take n=len g2;
+      thus n in dom g2 by A5,FINSEQ_3:27;
+      thus thesis by A5;
+     end;
+    consider m such that
+    A8: P[m] & for i st P[i] holds m<=i from NAT_1:sch 5(A7);
+    set g = g2|m;
+    A9: 1<=len g by A8,GOBOARD1:38;
+    A10: g is_sequence_on G1 by A5,GOBOARD1:38;
+    A11: g/.1 in rng Col(G1,1) by A5,A8,GOBOARD1:22;
+    A12: g/.len g in rng Col(G1,width G1) by A8,GOBOARD1:23;
+       0<>width G1 & 0<>len G1 by GOBOARD1:def 5;
+then A13:    0+1<=width G1 & 0+1<=len G1 by NAT_1:39;
+    then A14: 1 in Seg width G1 by FINSEQ_1:3;
+    A15: width G1 in Seg width G1 by A13,FINSEQ_1:3;
+    A16: 1 in dom G1 by A13,FINSEQ_3:27;
+    A17: len G1 in dom G1 by A13,FINSEQ_3:27;
+    A18: 1 in dom g by A9,FINSEQ_3:27;
+    A19: dom g = Seg len g by FINSEQ_1:def 3;
+    reconsider L1 = Line(G1,1), Ll = Line(G1,len G1)
+     as FinSequence of TOP-REAL 2;
+    defpred P[Nat] means $1 in dom G1 & rng g /\ rng Line(G1,$1) <> {};
+    A20: ex n st P[n]
+     proof
+      consider i such that
+      A21: i in dom Col(G1,1) & g/.1=Col(G1,1).i
+       by A11,FINSEQ_2:11;
+A22:  i in Seg len Col(G1,1) by A21,FINSEQ_1:def 3;
+      take i;
+        len Col(G1,1)=len G1 & len Line(G1,i)=width G1
+        by MATRIX_1:def 8,def 9;
+then A23: dom Line(G1,i) = Seg width G1 by FINSEQ_1:def 3;
+         i in Seg len G1 by A22,MATRIX_1:def 9;
+      hence i in dom G1 by FINSEQ_1:def 3;
+      then g/.1=Line(G1,i).1 by A14,A21,GOBOARD1:17;
+      then g/.1 in rng Line(G1,i) & g/.1 in rng g
+       by A14,A18,A23,FUNCT_1:def 5,PARTFUN2:4;
+      hence rng g /\ rng Line(G1,i) <> {} by XBOOLE_0:def 3;
+     end;
+    A24: for n st P[n] holds n<=len G1 by FINSEQ_3:27;
+    consider mi be Nat such that
+    A25: P[mi] & for n st P[n] holds mi<=n from NAT_1:sch 5(A20);
+A26:  dom G1 = Seg len G1 by FINSEQ_1:def 3;
+    consider ma be Nat such that
+    A27: P[ma] & for n st P[n] holds n<=ma from NAT_1:sch 6(A24,A20);
+    defpred P[Nat] means $1 in dom g1 & g1/.$1 in rng Line(G1,mi);
+    A28: 1<=mi & mi<=len G1 & ma<=len G1 by A25,A27,FINSEQ_3:27;
+    then A29: ex n st P[n] by A5,GOBOARD1:45;
+    A30: for n st P[n] holds n<=len g1 by FINSEQ_3:27;
+    consider ma1 be Nat such that
+    A31: P[ma1] & for n st P[n] holds n<= ma1 from NAT_1:sch 6(A30,A29);
+    A32: 1<=m & m<=len g2 by A8,FINSEQ_3:27;
+    then A33: len g = m by FINSEQ_1:80;
+    A34: rng g c= rng g2
+     proof let x; assume x in rng g; then consider n such that
+      A35: n in dom g & x=g/.n by PARTFUN2:4;
+         n in Seg m by A33,A35,FINSEQ_1:def 3;
+      then x=g2/.n & n in dom g2 by A8,A35,FINSEQ_4:86;
+      hence thesis by PARTFUN2:4;
+     end;
+    reconsider Lmi = Line(G1,mi) as FinSequence of TOP-REAL 2;
+    A36: mi=ma implies rng g1 /\ rng g2 <> {}
+     proof assume
+      A37: mi=ma;
+      consider n such that
+      A38: n in dom g1 & g1/.n in rng Line(G1,mi) by A5,A28,GOBOARD1:45;
+      consider i such that
+      A39: i in dom Line(G1,mi) & g1/.n=Lmi/.i by A38,PARTFUN2:4;
+A40:  dom Line(G1,mi) = Seg len Line(G1,mi) by FINSEQ_1:def 3;
+      reconsider Ci = Col(G1,i) as FinSequence of TOP-REAL 2;
+      A41: len Line(G1,mi)=width G1 & len Col(G1,i)= len G1
+       by MATRIX_1:def 8,def 9;
+      then 1<=i & i<=width G1 by A39,FINSEQ_3:27;
+      then consider m such that
+      A42: m in dom g & g/.m in rng Col(G1,i)
+      by A9,A10,A11,A12,GOBOARD1:49;
+A43:  dom Col(G1,i) = Seg len G1 by A41,FINSEQ_1:def 3
+       .= dom G1 by FINSEQ_1:def 3;
+      consider j such that
+      A44: j in dom Ci & g/.m=Ci/.j by A42,PARTFUN2:4;
+A45:  dom Ci = Seg len Ci by FINSEQ_1:def 3;
+      reconsider Lj = Line(G1,j) as FinSequence of TOP-REAL 2;
+A46:  g/.m in rng g by A42,PARTFUN2:4;
+A47:  g1/.n in rng g1 by A38,PARTFUN2:4;
+         len Line(G1,mi) = width G1 by MATRIX_1:def 8
+         .= len Lj by MATRIX_1:def 8;
+then A48:   dom Line(G1,mi) = dom Lj by A40,FINSEQ_1:def 3;
+A49:  g/.m = Ci.j by A44,FINSEQ_4:def 4
+            .= Lj.i by A39,A40,A41,A43,A44,GOBOARD1:17
+            .= Lj/.i by A39,A48,FINSEQ_4:def 4;
+         len Lj=width G1 by MATRIX_1:def 8;
+      then i in dom Lj by A39,A40,A41,FINSEQ_1:def 3;
+      then g/.m in rng Lj by A49,PARTFUN2:4;
+      then A50: rng g /\ rng Line(G1,j) <> {} by A46,XBOOLE_0:def 3;
+          now assume j<>mi;
+        then j<mi or j>mi by REAL_1:def 5;
+        hence contradiction by A25,A26,A27,A37,A41,A44,A45,A50;
+       end; hence thesis by A34,A39,A46,A47,A49,XBOOLE_0:def 3;
+     end;
+    consider k1 be Nat such that
+    A51: k1 in dom Lmi & g1/.ma1 = Lmi/.k1 by A31,PARTFUN2:4;
+A52: Seg len Lmi = dom Lmi by FINSEQ_1:def 3;
+    reconsider Ck1 = Col(G1,k1) as FinSequence of TOP-REAL 2;
+       1<=mi & ma<=len G1 by A25,A27,FINSEQ_3:27;
+    then reconsider l1=mi-1, l2=len G1-ma as Nat by INT_1:18;
+    deffunc F(Nat) = G1*($1,k1);
+    consider h1 be FinSequence of TOP-REAL 2 such that
+    A53: len h1 = l1 & for n st n in dom h1 holds h1/.n=F(n) from
+GOBOARD2:sch 1;
+    A54: k1 in Seg width G1 by A51,A52,MATRIX_1:def 8;
+        now per cases;
+     suppose A55: k=0;
+      reconsider c1 = Col(G1,1) as FinSequence of TOP-REAL 2;
+      consider x being Nat such that
+      A56: x in dom c1 & g2/.1=c1/.x by A5,PARTFUN2:4;
+      A57: Seg len c1 = dom c1 & dom c1 c= NAT & len c1 = len G1
+          & dom G1 = Seg len G1 by FINSEQ_1:def 3,MATRIX_1:def 9;
+      reconsider lx = Line(G1,x) as FinSequence of TOP-REAL 2;
+         0<>width G1 by GOBOARD1:def 5;
+      then 0+1<=width G1 by NAT_1:39;
+      then A58: 1 in Seg width G1 & x in dom G1 &
+      Seg len lx=dom lx & len lx=width G1 & Seg len g2=dom g2
+        by A56,A57,FINSEQ_1:3,def 3,MATRIX_1:def 8;
+         1<=x & x<=len G1 by A56,A57,FINSEQ_3:27;
+      then consider m such that
+      A59: m in dom g1 & g1/.m in rng lx by A5,GOBOARD1:45;
+      consider y being Nat such that
+      A60: y in dom lx & lx/.y=g1/.m by A59,PARTFUN2:4;
+A61:   lx/.y = lx.y & c1/.x = c1.x by A56,A60,FINSEQ_4:def 4;
+A62:   y=1 & 1 in dom g2 by A5,A55,A58,A60,FINSEQ_1:4,FINSEQ_3:27,TARSKI:def 1
+;
+then A63:   g1/.m=g2/.1 by A56,A58,A60,A61,GOBOARD1:17;
+A64:   g1/.m in rng g1 by A59,PARTFUN2:4;
+         g2/.1 in rng g2 by A62,PARTFUN2:4;
+      hence thesis by A63,A64,XBOOLE_0:def 3;
+     end;
+     suppose A65: k<>0;
+      then A66: 0<k by NAT_1:19;
+          now per cases;
+       suppose mi=ma; hence thesis by A36;
+       end;
+       suppose A67: mi<>ma;
+        defpred P[Nat] means
+          $1 in dom g1 & ma1<$1 & g1/.$1 in rng Line(G1,ma);
+        A68: mi<=ma by A25,A27;
+        then A69: mi<ma by A67,REAL_1:def 5;
+        then A70: ex n st P[n] by A5,A25,A28,A31,GOBOARD1:53;
+        consider mi1 be Nat such that
+        A71: P[mi1] & for n st P[n] holds mi1<=n from NAT_1:sch 5(A70);
+        set f1=g1|mi1;
+            ma1<=mi1 & mi1<=mi1+1 by A71,NAT_1:29;
+        then ma1<=mi1+1 by AXIOMS:22;
+        then reconsider l=mi1+1-ma1 as Nat by INT_1:18;
+            1<=ma1 by A31,FINSEQ_3:27;
+        then reconsider w=ma1-1 as Nat by INT_1:18;
+        A72: for n st n in Seg l holds f1/.(w+n)=g1/.(w+n) & w+n in dom g1
+         proof let n such that
+          A73: n in Seg l;
+             0+1<=ma1 by A31,FINSEQ_3:27;
+          then 0<=ma1-1 & 1<=n & n<=l by A73,FINSEQ_1:3,REAL_1:84;
+          then A74: 0+1<=ma1-1+n & n+ma1<=l+ma1 by REAL_1:55;
+          then n+ma1-1<=mi1 by REAL_1:86;
+          then w+n in Seg mi1 by A74,FINSEQ_1:3;
+          hence thesis by A71,FINSEQ_4:86;
+         end;
+        defpred P[Nat,Element of TOP-REAL 2] means
+          $2=f1/.(w+$1);
+        A75: for n st n in Seg l ex p st P[n,p];
+        consider f such that
+        A76: len f = l & for n st n in Seg l holds P[n,f/.n]
+         from GOBOARD1:sch 1(A75);
+A77:    dom f = Seg l by A76,FINSEQ_1:def 3;
+        reconsider Lma = Line(G1,ma) as FinSequence of TOP-REAL 2;
+        consider k2 be Nat such that
+        A78: k2 in dom Lma & g1/.mi1=Lma/.k2 by A71,PARTFUN2:4;
+A79:    dom Lma = Seg len Lma by FINSEQ_1:def 3;
+        reconsider Ck2 = Col(G1,k2) as FinSequence of TOP-REAL 2;
+        A80: k2 in Seg width G1 by A78,A79,MATRIX_1:def 8;
+        deffunc F(Nat) = G1*(ma+$1,k2);
+        consider h2 be FinSequence of TOP-REAL 2 such that
+        A81: len h2 = l2 & for n st n in dom h2 holds h2/.n = F(n)
+           from GOBOARD2:sch 1;
+A82:    dom h2 = Seg len h2 by FINSEQ_1:def 3;
+        set ff = h1^f^h2;
+           ma1+1<=mi1 & mi1<=mi1+1 by A71,NAT_1:38;
+        then A83: ma1+1<=mi1+1 & Seg len f=dom f & Seg len h2=dom h2 &
+            dom h1=Seg len h1 by AXIOMS:22,FINSEQ_1:def 3;
+        then A84: 1<=l & len f=l by A76,REAL_1:84;
+        A85: Indices G1=[:dom G1,Seg width G1:] by MATRIX_1:def 5;
+        A86: now let n; assume n in dom h1;
+then A87:   1<=n & n<=l1 & l1<=mi & mi<=len G1
+          by A25,A53,FINSEQ_3:27,PROB_1:2;
+          then n<=mi by AXIOMS:22; then n<=len G1 by A87,AXIOMS:22;
+          hence n in dom G1 by A87,FINSEQ_3:27;
+         end;
+        A88: now let n; assume n in dom h2;
+          then 1<=n & n<=l2 & n<=n+ma by A81,FINSEQ_3:27,NAT_1:29;
+          then 1<=n+ma & ma+n<=ma+l2 by AXIOMS:22,REAL_1:55;
+          hence ma+n in dom G1 by FINSEQ_3:27;
+         end;
+        A89: now let n; assume n in dom h1;
+          then A90: h1/.n=G1*(n,k1) & n in dom G1 by A53,A86;
+          take i=n,k1;
+          thus [i,k1] in Indices G1 &
+          h1/.n=G1*(i,k1) by A54,A85,A90,ZFMISC_1:106;
+         end;
+        A91: now let n; assume n in dom h2;
+          then A92: h2/.n=G1*(ma+n,k2) & ma+n in dom G1 by A81,A88;
+          take m=ma+n,k2;
+          thus [m,k2] in Indices G1 & h2/.n=G1*(m,k2)
+          by A80,A85,A92,ZFMISC_1:106;
+         end;
+        A93: now let n; assume n in dom f;
+then A94:          n in Seg l & dom f=Seg l & f/.n=f1/.(w+n) by A76,A77;
+           then w is Nat & w+n in dom g1 & f/.n=g1/.(w+n) by A72;
+          then consider i,j such that
+          A95: [i,j] in Indices G1 & g1/.(w+n)=G1*(i,j) by A5,GOBOARD1:def 11;
+          take i,j;
+          thus [i,j] in Indices G1 & f/.n=G1*(i,j) by A72,A94,A95;
+         end;
+        then for n st n in dom(h1^f)
+        ex i,j st [i,j] in Indices G1 & (h1^f)/.n=G1*(i,j)
+           by A89,GOBOARD1:39;
+        then A96: for n st n in dom ff
+        ex i,j st [i,j] in Indices G1 & ff/.n=G1*(i,j)
+           by A91,GOBOARD1:39;
+        A97: now let n; assume
+             n in dom h1 & n+1 in dom h1;
+          then A98: n in dom G1 & n+1 in dom G1 & h1/.n=G1*(n,k1) &
+              h1/.(n+1)=G1*(n+1,k1) by A53,A86;
+          then A99: [n,k1] in Indices G1 & [n+1,k1] in Indices G1
+          by A54,A85,ZFMISC_1:106;
+          let i1,i2,j1,j2 be Nat; assume
+             [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & h1/.n=G1*(i1,i2) &
+          h1/.(n+1)=G1*(j1,j2);
+           then i1=n & i2=k1 & j1=n+1 & j2=k1 & 0<=1 by A98,A99,GOBOARD1:21;
+          hence abs(i1-j1)+abs(i2-j2)= abs(n-n+-1)+0 by ABSVALUE:7
+          .= abs(1) by ABSVALUE:17
+          .= 1 by ABSVALUE:def 1;
+         end;
+        A100: w+l= mi1;
+        A101: now let n; assume
+             n in dom h2 & n+1 in dom h2;
+          then A102: ma+n in dom G1 & ma+(n+1) in dom G1 & h2/.n=G1*(ma+n,k2) &
+          h2/.(n+1)=G1*(ma+(n+1),k2) & ma+(n+1)=ma+n+1
+            by A81,A88;
+          then A103: [ma+n,k2] in Indices G1 & [ma+n+1,k2] in Indices G1
+            by A80,A85,ZFMISC_1:106;
+          let i1,i2,j1,j2 be Nat; assume
+             [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & h2/.n=G1*
+(i1,i2) &
+          h2/.(n+1)=G1*(j1,j2);
+           then i1=ma+n & i2=k2 & j1=ma+n+1 & j2=k2 & 0<=1 by A102,A103,
+GOBOARD1:21;
+          hence abs(i1-j1)+abs(i2-j2)= abs(ma+n-(ma+n)+-1)+0 by ABSVALUE:7
+          .= abs(1) by ABSVALUE:17
+          .= 1 by ABSVALUE:def 1;
+         end;
+        A104: now let n; assume
+             n in dom f & n+1 in dom f;
+          then n in Seg l & n+1 in Seg l & dom f=Seg l & f/.n=f1/.(w+n) &
+          f/.(n+1)=f1/.(w+(n+1)) & w+(n+1)=w+n+1 by A76,A77;
+          then A105: w is Nat & w+n in dom g1 & f/.n=g1/.(w+n) &
+           w+n+1 in dom g1 & f/.(n+1)=g1/.(w+n+1) by A72;
+          let i1,i2,j1,j2 be Nat; assume
+              [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & f/.n=G1*(i1,i2) &
+          f/.(n+1)=G1*(j1,j2);
+          hence abs(i1-j1)+abs(i2-j2)=1 by A5,A105,GOBOARD1:def 11;
+         end;
+            now let i1,i2,j1,j2 be Nat; assume
+          A106: [i1,i2] in Indices G1 & [j1,j2] in Indices G1 &
+           h1/.len h1=G1*(i1,i2) & f/.1=G1*(j1,j2) &
+           len h1 in dom h1 & 1 in dom f;
+          then A107: h1/.len h1=G1*(l1,k1) & l1 in dom G1 by A53,A86;
+          then [l1,k1] in Indices G1 by A54,A85,ZFMISC_1:106;
+          then A108: i1=l1 & i2=k1 & 0<=1 by A106,A107,GOBOARD1:21;
+A109:       Lmi/.k1 = Lmi.k1 by A51,FINSEQ_4:def 4;
+A110:       w+1=ma1;
+          then 1 in Seg l & dom f=Seg l & f/.1=f1/.ma1 by A76,A77,A106;
+          then A111: f/.1=g1/.ma1 by A72,A110
+          .= G1*(mi,k1) by A51,A54,A109,MATRIX_1:def 8;
+             [mi,k1] in Indices G1 by A25,A54,A85,ZFMISC_1:106;
+          then j1=mi & j2=k1 by A106,A111,GOBOARD1:21;
+          hence abs(i1-j1)+abs(i2-j2)= abs(mi-1-mi)+0 by A108,ABSVALUE:7
+          .= abs(-1)
+          .= abs(1) by ABSVALUE:17
+          .= 1 by ABSVALUE:def 1;
+         end;
+        then A112: for n st n in dom(h1^f) & n+1 in dom(h1^f)
+         for i1,i2,j1,j2 be Nat st [i1,i2] in Indices G1 &
+         [j1,j2] in Indices G1 &
+          (h1^f)/.n=G1*(i1,i2) & (h1^f)/.(n+1)=G1*(j1,j2) holds
+          abs(i1-j1)+abs(i2-j2)=1 by A97,A104,GOBOARD1:40;
+        set hf=h1^f;
+            now let i1,i2,j1,j2 be Nat; assume
+A113: [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & hf/.len hf=G1*(i1,i2)
+           & h2/.1=G1*(j1,j2) & len hf in dom hf & 1 in dom h2;
+          then A114: h2/.1=G1*(ma+1,k2) & ma+1 in dom G1 by A81,A88;
+          then [ma+1,k2] in Indices G1 by A80,A85,ZFMISC_1:106;
+          then A115: j1=ma+1 & j2=k2 by A113,A114,GOBOARD1:21;
+          A116: len f in dom f & 0<=1 by A77,A84,FINSEQ_1:3;
+A117:       Lma/.k2 = Lma.k2 by A78,FINSEQ_4:def 4;
+          A118: hf/.len hf=hf/.(len h1+len f) by FINSEQ_1:35
+          .= f/.len f by A116,FINSEQ_4:84
+          .= f1/.(w+l) by A76,A77,A116
+          .= g1/.mi1 by A72,A76,A77,A116
+          .= G1*(ma,k2) by A78,A80,A117,MATRIX_1:def 8;
+             [ma,k2] in Indices G1 by A27,A80,A85,ZFMISC_1:106;
+          then i1=ma & i2=k2 by A113,A118,GOBOARD1:21;
+          hence abs(i1-j1)+abs(i2-j2)=abs(ma-(ma+1))+0 by A115,ABSVALUE:7
+          .=abs(-(ma+1 -ma))
+          .=abs(1) by ABSVALUE:17
+          .=1 by ABSVALUE:def 1;
+         end;
+        then for n st n in dom ff & n+1 in dom ff
+        for m,k,i,j st [m,k] in Indices G1 & [i,j] in Indices G1 &
+          ff/.n=G1*(m,k) & ff/.(n+1)=G1*(i,j) holds abs(m-i)+abs(k-j)=1
+           by A101,A112,GOBOARD1:40;
+        then A119: ff is_sequence_on G1 by A96,GOBOARD1:def 11;
+        A120: now per cases;
+         suppose A121: mi=1;
+          then h1 = {} by A53,FINSEQ_1:25;
+          then A122: ff=f^h2 by FINSEQ_1:47;
+          A123: 1 in Seg l & 1<=ma1 by A6,A31,A84,FINSEQ_1:3;
+          then A124: ma1 in Seg mi1 by A71,FINSEQ_1:3;
+A125:       w+1=ma1;
+             ff/.1=f/.1 by A77,A122,A123,FINSEQ_4:83
+          .= f1/.ma1 by A76,A123,A125
+          .= g1/.ma1 by A71,A124,FINSEQ_4:86;
+          hence ff/.1 in rng Line(G1,1) by A31,A121;
+         end;
+         suppose A126: mi<>1;
+             1<=mi by A25,FINSEQ_3:27;
+          then 1<mi by A126,REAL_1:def 5;
+          then 1+1<=mi by NAT_1:38;
+          then A127: 1<=l1 by REAL_1:84;
+          then A128: 1 in dom h1 by A53,FINSEQ_3:27;
+          A129: len(h1^f)=len h1 + len f by FINSEQ_1:35;
+A130:       len Line(G1,1)=width G1 by MATRIX_1:def 8;
+          then dom Line(G1,1) = Seg width G1 by FINSEQ_1:def 3;
+then A131:       L1/.k1 = L1.k1 by A54,FINSEQ_4:def 4;
+             0<=len f by NAT_1:18;
+          then 0+1<=len(h1^f) by A53,A127,A129,REAL_1:55;
+          then 1 in dom(h1^f) by FINSEQ_3:27;
+          then A132: ff/.1=(h1^f)/.1 by FINSEQ_4:83
+          .=h1/.1 by A128,FINSEQ_4:83
+          .=G1*(1,k1) by A53,A128
+          .=L1/.k1 by A54,A131,MATRIX_1:def 8;
+              k1 in dom L1 by A54,A130,FINSEQ_1:def 3;
+          hence ff/.1 in rng Line(G1,1) by A132,PARTFUN2:4;
+         end;
+         end;
+        A133: len ff=len(h1^f)+len h2 by FINSEQ_1:35
+         .=len h1+len f+len h2 by FINSEQ_1:35;
+           0+0<=len h1+len h2 by NAT_1:18;
+        then A134: 0+1<=len f+(len h1+len h2) by A84,REAL_1:55;
+        A135: now per cases;
+         suppose A136: ma=len G1;
+          then h2 = {} by A81,FINSEQ_1:25;
+          then A137: ff=h1^f & 1<=mi1 by A71,FINSEQ_1:47,FINSEQ_3:27;
+          then A138: len f in dom f & mi1 in Seg mi1 by A83,A84,FINSEQ_1:3;
+             ff/.len ff=ff/.(len h1+len f) by A137,FINSEQ_1:35
+          .= f/.l by A76,A137,A138,FINSEQ_4:84
+          .= f1/.mi1 by A76,A77,A100,A138
+          .= g1/.mi1 by A71,A138,FINSEQ_4:86;
+          hence ff/.len ff in rng Line(G1,len G1) by A71,A136;
+         end;
+         suppose A139: ma<>len G1;
+             ma<=len G1 by A27,FINSEQ_3:27;
+          then ma<len G1 by A139,REAL_1:def 5;
+          then ma+1<=len G1 by NAT_1:38;
+then A140:          1<=l2 by REAL_1:84;
+          then A141: l2 in Seg l2 by FINSEQ_1:3;
+          A142: len h2 in dom h2 by A81,A140,FINSEQ_3:27;
+A143:       len Line(G1,len G1)=width G1 by MATRIX_1:def 8;
+          then k2 in dom Ll by A80,FINSEQ_1:def 3;
+then A144:       Ll/.k2 = Ll.k2 by FINSEQ_4:def 4;
+          A145: ff/.len ff=ff/.(len(h1^f)+len h2) by FINSEQ_1:35
+          .=h2/.l2 by A81,A142,FINSEQ_4:84
+          .=G1*(ma+l2,k2) by A81,A82,A141
+          .=Ll/.k2 by A80,A144,MATRIX_1:def 8;
+              k2 in dom Ll by A80,A143,FINSEQ_1:def 3;
+          hence ff/.len ff in rng Line(G1,len G1) by A145,PARTFUN2:4;
+         end;
+         end;
+        A146: rng ff = rng(h1^f) \/ rng h2 by FINSEQ_1:44
+          .= rng h1 \/ rng f \/ rng h2 by FINSEQ_1:44;
+        A147: for k st k in Seg width G1 & rng f /\ rng Col(G1,k)={} holds
+             rng ff /\ rng Col(G1,k)={}
+         proof let k; assume that
+          A148: k in Seg width G1 and
+          A149: rng f /\ rng Col(G1,k)={};
+          set gg=Col(G1,k); assume
+A150:       rng ff /\ rng gg <> {};
+          consider x being Element of rng ff /\ rng gg;
+A151:       w+1=ma1;
+             rng ff = rng f \/ (rng h1 \/ rng h2) by A146,XBOOLE_1:4;
+          then A152: rng ff /\ rng gg = {}
+ \/ (rng h1 \/ rng h2) /\ rng gg by A149,XBOOLE_1:23
+          .= rng h1 /\ rng gg \/ rng h2 /\ rng gg by XBOOLE_1:23;
+          A153: len Col(G1,k1)=len G1 & len Col(G1,k2)=len G1
+             by MATRIX_1:def 9;
+              now per cases by A150,A152,XBOOLE_0:def 2;
+           suppose x in rng h1 /\ rng gg;
+            then A154: x in rng h1 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A155: i in dom h1 & x=h1/.i by PARTFUN2:4;
+            A156: x=G1*(i,k1) by A53,A155;
+            reconsider y=x as Point of TOP-REAL 2 by A155;
+         A157: dom Col(G1,k1) = Seg len G1 by A153,FINSEQ_1:def 3
+               .= dom G1 by FINSEQ_1:def 3;
+then A158:        i in dom Ck1 by A86,A155;
+A159:       Lmi/.k1 = Lmi.k1 & Ck1/.mi = Ck1.mi
+              by A25,A51,A157,FINSEQ_4:def 4;
+               Ck1/.i = Ck1.i by A158,FINSEQ_4:def 4;
+            then y=Ck1/.i by A156,A157,A158,MATRIX_1:def 9;
+            then y in rng Ck1 by A158,PARTFUN2:4;
+then A160: k1=k & 1 in Seg l by A54,A84,A148,A154,FINSEQ_1:3,GOBOARD1:20;
+            then f/.1=f1/.ma1 & f1/.ma1=g1/.(w+1) by A72,A76,A151;
+            then f/.1= Ck1/.mi by A25,A51,A54,A159,GOBOARD1:17;
+            then f/.1 in rng Col(G1,k) & f/.1 in rng f
+              by A25,A77,A157,A160,PARTFUN2:4;
+            hence contradiction by A149,XBOOLE_0:def 3;
+           end;
+           suppose x in rng h2 /\ rng gg;
+            then A161: x in rng h2 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A162: i in dom h2 & x=h2/.i by PARTFUN2:4;
+            A163: x=G1*(ma+i,k2) by A81,A162;
+            reconsider y=x as Point of TOP-REAL 2 by A162;
+         A164: dom Col(G1,k2) = Seg len G1 by A153,FINSEQ_1:def 3
+               .= dom G1 by FINSEQ_1:def 3;
+             then A165:        ma+i in dom Ck2 by A88,A162;
+A166:         Lma/.k2 = Lma.k2 &
+Ck2/.ma = Ck2.ma by A27,A78,A164,FINSEQ_4:def 4;
+               Ck2/.(ma+i) = Ck2.(ma+i) by A165,FINSEQ_4:def 4;
+            then y=Ck2/.(ma+i) by A163,A164,A165,MATRIX_1:def 9;
+            then y in rng Ck2 by A165,PARTFUN2:4;
+            then A167: k2=k & l in Seg l by A80,A84,A148,A161,FINSEQ_1:3
+,GOBOARD1:20
+;
+            then f/.l=f1/.(w+l) & f1/.(w+l)=g1/.(w+l) by A72,A76;
+            then f/.l=Ck2/.ma by A27,A78,A80,A166,GOBOARD1:17;
+            then f/.l in rng Col(G1,k) & f/.l in rng f
+              by A27,A77,A164,A167,PARTFUN2:4;
+            hence contradiction by A149,XBOOLE_0:def 3;
+           end;
+           end;
+          hence contradiction;
+         end;
+       A168: rng h1 /\ rng g = {}
+        proof assume
+A169:      not thesis; consider x being Element of rng h1 /\ rng g;
+         A170: x in rng h1 & x in rng g by A169,XBOOLE_0:def 3;
+         then consider n1 be Nat such that
+         A171: n1 in dom h1 & x=h1/.n1 by PARTFUN2:4;
+         A172: x=G1*(n1,k1) & 1<=n1 & n1<=l1 by A53,A171,FINSEQ_3:27;
+         consider n2 be Nat such that
+         A173: n2 in dom g & x=g/.n2 by A170,PARTFUN2:4;
+         consider i1,i2 be Nat such that
+         A174: [i1,i2] in Indices G1 & g/.n2=G1*(i1,i2)
+          by A10,A173,GOBOARD1:def 11;
+         reconsider L=Line(G1,i1) as FinSequence of TOP-REAL 2;
+A175:      Seg len L = dom L by FINSEQ_1:def 3;
+         A176: i1 in dom G1 & i2 in Seg width G1 by A85,A174,ZFMISC_1:106;
+A177:      len L=width G1 by MATRIX_1:def 8;
+         then L/.i2 = L.i2 by A175,A176,FINSEQ_4:def 4;
+         then g/.n2=L/.i2 by A174,A176,MATRIX_1:def 8;
+         then g/.n2 in rng L & g/.n2 in rng g
+         by A173,A175,A176,A177,PARTFUN2:4;
+         then rng g /\ rng L <> {} by XBOOLE_0:def 3;
+         then A178: mi<=i1 by A25,A176;
+            n1 in dom G1 by A86,A171;
+         then [n1,k1] in Indices G1 by A54,A85,ZFMISC_1:106;
+         then i1=n1 & 0<1 by A172,A173,A174,GOBOARD1:21;
+         then mi<=mi-1 & mi-1<mi by A172,A178,AXIOMS:22,SQUARE_1:29;
+         hence contradiction;
+        end;
+          rng h2 /\ rng g = {}
+        proof assume
+A179:      not thesis; consider x being Element of rng h2 /\ rng g;
+         A180: x in rng h2 & x in rng g by A179,XBOOLE_0:def 3;
+         then consider n1 be Nat such that
+         A181: n1 in dom h2 & x=h2/.n1 by PARTFUN2:4;
+         A182: x=G1*(ma+n1,k2) & 1<=n1 & n1<=l2 by A81,A181,FINSEQ_3:27;
+         consider n2 be Nat such that
+         A183: n2 in dom g & x=g/.n2 by A180,PARTFUN2:4;
+         consider i1,i2 be Nat such that
+         A184: [i1,i2] in Indices G1 & g/.n2=G1*(i1,i2)
+          by A10,A183,GOBOARD1:def 11;
+         reconsider L=Line(G1,i1) as FinSequence of TOP-REAL 2;
+A185:      Seg len L = dom L by FINSEQ_1:def 3;
+         A186: i1 in dom G1 & i2 in Seg width G1 by A85,A184,ZFMISC_1:106;
+A187:      len L=width G1 by MATRIX_1:def 8;
+      then L/.i2 = L.i2 by A185,A186,FINSEQ_4:def 4;
+         then g/.n2=L/.i2 by A184,A186,MATRIX_1:def 8;
+         then g/.n2 in rng L & g/.n2 in rng g
+         by A183,A185,A186,A187,PARTFUN2:4;
+         then rng g /\ rng L <> {} by XBOOLE_0:def 3;
+         then A188: i1<=ma by A27,A186;
+            ma+n1 in dom G1 by A88,A181;
+         then [ma+n1,k2] in Indices G1 by A80,A85,ZFMISC_1:106;
+         then i1=ma+n1 by A182,A183,A184,GOBOARD1:21;
+         then n1<=0 by A188,REAL_2:174;
+         hence contradiction by A182,AXIOMS:22;
+        end;
+       then A189: rng ff /\ rng g = ((rng h1 \/ rng f) /\ rng g) \/
+ {} by A146,XBOOLE_1:23
+       .= {} \/ rng f /\ rng g by A168,XBOOLE_1:23
+       .= rng f /\ rng g;
+       A190: rng f c= rng g1
+        proof let x; assume x in rng f;
+         then consider n such that
+         A191: n in dom f & x=f/.n by PARTFUN2:4;
+            n in Seg l & n in Seg l & f/.n=f1/.(w+n) by A76,A83,A191;
+         then w is Nat & w+n in dom g1 & f/.n=g1/.(w+n) by A72;
+         hence x in rng g1 by A191,PARTFUN2:4;
+        end;
+       then A192: rng ff /\ rng g c= rng g1 /\ rng g2 by A34,A189,XBOOLE_1:27;
+       A193: 0+1<width G1 by A5,A66,REAL_1:53;
+       then A194: len DelCol(G1,1)=len G1 & len DelCol(G1,width G1)=len G1 &
+           Seg len ff=dom ff by A14,A15,FINSEQ_1:def 3,GOBOARD1:def 10;
+       then A195: 1 in dom ff & len ff in dom ff by A133,A134,FINSEQ_1:3;
+A196:   dom DelCol(G1,1) = Seg len G1 by A194,FINSEQ_1:def 3
+       .= dom G1 by FINSEQ_1:def 3;
+  thus thesis
+  proof per cases;
+  suppose rng f /\ rng Col(G1,1)={};
+   then rng ff /\ rng Col(G1,1)={} by A14,A147;
+   then A197: rng ff misses rng Col(G1,1) by XBOOLE_0:def 7;
+   defpred P[Nat] means $1 in dom g & g/.$1 in rng Col(G1,1);
+   A198: for m st P[m] holds m<=len g by FINSEQ_3:27;
+   A199: ex m st P[m]
+    proof
+     take 1;
+     thus thesis by A5,A8,A9,FINSEQ_3:27,GOBOARD1:22;
+    end;
+   consider m such that
+   A200: P[m] & for k st P[k] holds k<=m from NAT_1:sch 6(A198,A199);
+   reconsider p=g/.m as Point of TOP-REAL 2;
+A201:    now assume A202: m>=len g;
+        m<=len g by A200,FINSEQ_3:27;
+     then p in rng Col(G1,1) & p in rng Col(G1,width G1)
+      by A12,A200,A202,AXIOMS:21;
+     then 1=k+1 by A5,A14,A15,GOBOARD1:20;
+     hence contradiction by A65,XCMPLX_1:3;
+    end;
+   then reconsider ll = len g-m as Nat by INT_1:18;
+   deffunc F(Nat) = g/.(m+$1);
+   consider t be FinSequence of TOP-REAL 2 such that
+   A203: len t = ll &
+   for n st n in dom t holds t/.n = F(n) from GOBOARD2:sch 1;
+A204: Seg len t = dom t by FINSEQ_1:def 3;
+   A205: dom t = Seg ll by A203,FINSEQ_1:def 3;
+   A206: for n st n in dom t holds m+n in dom g
+    proof let n; assume n in dom t;
+     then 1<=n & n<=ll & n<=n+m by A205,FINSEQ_1:3,NAT_1:29;
+     then 1<=n+m & m+n<=m+ll by AXIOMS:22,REAL_1:55;
+     hence thesis by FINSEQ_3:27;
+    end;
+   A207: rng t c= rng g
+    proof let y; assume y in rng t; then consider x being Nat such that
+     A208: x in dom t & t/.x=y by PARTFUN2:4;
+        1<=x & x<=ll & x<=x+m by A205,A208,FINSEQ_1:3,NAT_1:29;
+     then 1<=x+m & m+x<=m+ll by AXIOMS:22,REAL_1:55;
+     then m+x in dom g by FINSEQ_3:27;
+     then g/.(m+x) in rng g by PARTFUN2:4;
+     hence thesis by A203,A208;
+    end;
+   reconsider t as FinSequence of TOP-REAL 2;
+   set D = DelCol(G1,1);
+   A209: width D = k by A5,A14,A66,GOBOARD1:26;
+      0<>width D by GOBOARD1:def 5;
+   then 0<width D by NAT_1:19;
+   then A210: 0+1<=width D by NAT_1:38;
+      m+1<=len g by A201,NAT_1:38;
+   then A211: 1<=len t by A203,REAL_1:84;
+   then 1 in Seg ll by A203,FINSEQ_1:3;
+   then A212: t/.1 = g/.(m+1) by A203,A204;
+      Col(D,1)=Col(G1,1+1) & 1+1 in Seg width G1
+    by A5,A14,A66,A209,A210,GOBOARD1:30;
+   then A213: t/.1 in rng Col(D,1)
+    by A9,A10,A12,A14,A200,A212,GOBOARD1:48;
+      len t in Seg ll by A203,A211,FINSEQ_1:3;
+    then t/.len t = g/.(m+ll) by A203,A204
+    .= g/.len g;
+   then A214: t/.len t in rng Col(D,width D)
+    by A5,A12,A14,A66,A209,A210,GOBOARD1:30;
+   A215: Indices D = [:dom D,Seg width D:] by MATRIX_1:def 5;
+   A216: now let n; assume A217: n in dom t;
+     then m+n in dom g by A206; then consider i1,i2 be Nat such that
+     A218: [i1,i2] in Indices G1 & g/.(m+n)=G1*(i1,i2)
+      by A10,GOBOARD1:def 11;
+     take i1;
+     reconsider Ci2 = Col(G1,i2) as FinSequence of TOP-REAL 2;
+     A219: i1 in dom G1 & i2 in Seg width G1 & t/.n=g/.(m+n) & m+n in dom g
+      by A85,A203,A206,A217,A218,ZFMISC_1:106;
+     len Ci2 = len G1 by MATRIX_1:def 9;
+then A220:  dom Ci2 = Seg len G1 by FINSEQ_1:def 3
+            .= dom G1 by FINSEQ_1:def 3;
+     then Ci2/.i1 = Ci2.i1 by A219,FINSEQ_4:def 4;
+     then Ci2/.i1 = G1*(i1,i2) & dom Col(G1,i2)=dom Col(G1,i2) &
+     len Col(G1,i2)=len G1 by A219,MATRIX_1:def 9;
+     then A221: g/.(m+n) in rng Col(G1,i2) by A218,A219,A220,PARTFUN2:4;
+         now assume i2=1;
+       then A222: m+n<=m & 1<=n by A200,A205,A217,A219,A221,FINSEQ_1:3;
+       then m+1<=m+n by REAL_1:55;
+       then m+1<=m by A222,AXIOMS:22;
+       then 1<=m-m by REAL_1:84;
+       then 1<=0;
+       hence contradiction;
+      end;
+     then A223: 1<>i2 & 1<=i2 & i2<=width G1 by A219,FINSEQ_1:3;
+     then A224: 1<i2 by REAL_1:def 5;
+     reconsider l=i2-1 as Nat by A223,INT_1:18;
+     take l;
+        1+1<=i2 by A224,NAT_1:38;
+     then A225: 1<=l & l<=width D & l+1=i2 by A5,A209,A223,REAL_1:84,86;
+     then l in Seg width D by FINSEQ_1:3;
+     hence [i1,l] in Indices D by A196,A215,A219,ZFMISC_1:106;
+     thus t/.n = D*(i1,l) by A5,A14,A66,A209,A218,A219,A225,GOBOARD1:32;
+    end;
+       now let n; assume
+     A226: n in dom t & n+1 in dom t;
+     then A227: t/.n=g/.(m+n) & t/.(n+1)=g/.(m+(n+1)) by A203;
+     let i1,i2,j1,j2 be Nat; assume
+     A228: [i1,i2] in Indices D & [j1,j2] in Indices D & t/.n=D*(i1,i2) &
+      t/.(n+1)=D*(j1,j2);
+     then A229: i1 in dom D & i2 in Seg k & j1 in dom D &
+     j2 in Seg k & m+(n+1)=m+n+1
+           by A209,A215,ZFMISC_1:106;
+     then 1<=i2 & i2<=k & 1<=j2 & j2<=k by FINSEQ_1:3;
+     then A230: g/.(m+n)=G1*(i1,i2+1) & g/.(m+n+1)=G1*(j1,j2+1) &
+     i2+1 in Seg width G1 & j2+1 in Seg width G1
+            by A5,A14,A66,A196,A227,A228,A229,GOBOARD1:32;
+     then A231: [i1,i2+1] in Indices G1 & [j1,j2+1] in Indices G1
+          by A85,A196,A229,ZFMISC_1:106;
+        m+n in dom g & m+n+1 in dom g by A206,A226,A229;
+     hence 1= abs(i1-j1)+abs(i2+1 -(j2+1))
+      by A10,A230,A231,GOBOARD1:def 11
+      .=abs(i1-j1)+abs(i2-j2);
+    end;
+   then A232: t is_sequence_on D by A216,GOBOARD1:def 11;
+      ff is_sequence_on D &
+   ff/.1 in rng Line(D,1) & ff/.len ff in rng Line(D,len D)
+      by A14,A16,A17,A119,A120,A135,A193,A194,A195,A197,GOBOARD1:37,41;
+then A233:rng ff /\ rng t <> {} by A4,A66,A133,A134,A209,A211,A213,A214,A232;
+   consider x being Element of rng ff /\ rng t;
+      rng ff /\ rng t c= rng ff /\ rng g by A207,XBOOLE_1:26;
+   then x in rng ff /\ rng g by A233,TARSKI:def 3;
+   hence thesis by A192;
+  end;
+  suppose A234: rng f /\ rng Col(G1,1) <> {};
+   set D = DelCol(G1,width G1);
+   A235: 0+1<k+1 by A66,REAL_1:53;
+       now per cases;
+    suppose rng f /\ rng Col(G1,width G1) = {};
+     then rng ff /\ rng Col(G1,width G1) = {} by A15,A147;
+     then A236: rng ff misses rng Col(G1,width G1) by XBOOLE_0:def 7;
+     consider t be FinSequence of TOP-REAL 2 such that
+     A237: t/.1 in rng Col(D,1) & t/.len t in rng Col(D,width D) &
+         1<=len t & t is_sequence_on D & rng t c= rng g
+          by A5,A9,A10,A11,A12,A235,GOBOARD1:51;
+     A238: width D = k by A5,A15,A66,GOBOARD1:26;
+        ff/.1 in rng Line(D,1) & ff/.len ff in rng Line(D,len D) &
+     ff is_sequence_on D
+       by A15,A16,A17,A119,A120,A135,A193,A194,A195,A236,GOBOARD1:37,41;
+then A239:  rng ff /\ rng t <> {} by A4,A66,A133,A134,A237,A238;
+     consider x being Element of rng ff /\ rng t;
+        rng ff /\ rng t c= rng ff /\ rng g by A237,XBOOLE_1:26;
+     then x in rng ff /\ rng g by A239,TARSKI:def 3;
+     hence thesis by A192;
+    end;
+    suppose A240: rng f /\ rng Col(G1,width G1) <> {};
+     A241: f is_sequence_on G1 by A93,A104,GOBOARD1:def 11;
+     then consider t be FinSequence of TOP-REAL 2 such that
+     A242: rng t c= rng f & t/.1 in rng Col(G1,1) &
+     t/.len t in rng Col(G1,width G1)
+      & 1<=len t & t is_sequence_on G1 by A234,A240,GOBOARD1:52;
+     consider tt be FinSequence of TOP-REAL 2 such that
+A243: tt/.1 in rng Col(D,1) &
+      tt/.len tt in rng Col(D,width D) & 1<=len tt &
+         tt is_sequence_on D & rng tt c= rng t by A5,A235,A242,GOBOARD1:51;
+     defpred P[Nat] means $1 in dom g & g/.$1 in rng Line(G1,mi);
+     A244: now
+       consider x being Element of rng g /\ rng Line(G1,mi);
+           x in rng g & x in rng Line(G1,mi) by A25,XBOOLE_0:def 3;
+       then consider n such that
+       A245: n in dom g & x=g/.n by PARTFUN2:4;
+       take n;
+       thus P[n] by A25,A245,XBOOLE_0:def 3;
+      end;
+     defpred R[Nat] means $1 in dom g & g/.$1 in rng Line(G1,ma);
+     A246: now consider x being Element of rng g /\ rng Line(G1,ma);
+           x in rng g & x in rng Line(G1,ma) by A27,XBOOLE_0:def 3;
+       then consider n such that
+       A247: n in dom g & x=g/.n by PARTFUN2:4;
+       take n;
+       thus R[n] by A27,A247,XBOOLE_0:def 3;
+      end;
+     consider pf be Nat such that
+     A248: P[pf] & for n st P[n] holds pf<=n from NAT_1:sch 5(A244);
+     consider pl be Nat such that
+     A249: R[pl] & for n st R[n] holds pl<=n from NAT_1:sch 5(A246);
+A250:  pl <> pf by A25,A27,A67,A248,A249,GOBOARD1:19;
+     A251: 1<=pf & pf<=len g & 1<=pl & pl<=len g
+      by A248,A249,FINSEQ_3:27;
+         now per cases by A250,REAL_1:def 5;
+      suppose pf<pl; then pf<len g by A251,AXIOMS:22;
+       then 1<len g by A251,AXIOMS:22;
+       hence 1+1<=len g by NAT_1:38;
+      end;
+      suppose pf>pl; then pl<len g by A251,AXIOMS:22;
+       then 1<len g by A251,AXIOMS:22;
+       hence 1+1<=len g by NAT_1:38;
+      end;
+      end;
+     then A252: 1<=len g - 1 & 1<=len g by A8,GOBOARD1:38,REAL_1:84;
+     reconsider lg=len g-1 as Nat by A9,INT_1:18;
+        lg<=len g by PROB_1:2;
+     then A253: lg in dom g & len g in dom g & lg+1=len g
+      by A252,FINSEQ_3:27;
+     reconsider C = Col(G1,width G1),
+         Li= Line(G1,mi),
+         La= Line(G1,ma) as FinSequence of TOP-REAL 2;
+     A254: dom g c= dom g2 by A6,A19,A32,A33,FINSEQ_1:7;
+        len C=len G1 by MATRIX_1:def 9;
+then A255: dom C = Seg len G1 by FINSEQ_1:def 3
+     .= dom G1 by FINSEQ_1:def 3;
+     consider K1 be Nat such that
+     A256: K1 in dom Li & g/.pf=Li/.K1 by A248,PARTFUN2:4;
+A257: Seg len Li = dom Li by FINSEQ_1:def 3;
+     reconsider CK1 = Col(G1,K1) as FinSequence of TOP-REAL 2;
+     A258: len Li=width G1 by MATRIX_1:def 8;
+       A259: Li/.K1 = Li.K1 by A256,FINSEQ_4:def 4;
+     then A260: K1 in Seg width G1 & g/.pf=G1*(mi,K1)
+     by A256,A257,A258,MATRIX_1:def 8;
+         now assume
+       A261: pf=len g;
+       consider i2 be Nat such that
+       A262: i2 in dom C & C/.i2=g/.len g by A12,PARTFUN2:4;
+          C/.i2 = C.i2 by A262,FINSEQ_4:def 4;
+       then A263: i2 in dom G1 & g/.len g=G1*(i2,width G1)
+           by A255,A262,MATRIX_1:def 9;
+       A264: [i2,width G1] in Indices G1
+        by A15,A85,A255,A262,ZFMISC_1:106;
+          [mi,K1] in Indices G1 by A25,A85,A256,A257,A258,ZFMISC_1:106;
+       then A265: i2=mi & width G1=K1 by A260,A261,A263,A264,GOBOARD1:21;
+       consider n1,n2 be Nat such that
+       A266: [n1,n2] in Indices G1 & g/.lg=G1*(n1,n2)
+        by A10,A253,GOBOARD1:def 11;
+       A267: abs(n1-mi)+abs(n2- width G1)=1
+        by A10,A253,A263,A264,A265,A266,GOBOARD1:def 11;
+       A268: n1 in dom G1 & n2 in Seg width G1 by A85,A266,ZFMISC_1:106;
+           now per cases by A267,GOBOARD1:2;
+        suppose
+A269:      abs(n1-mi)=1 & n2=width G1;
+         A270: dom C = Seg len C by FINSEQ_1:def 3
+         .= Seg len G1 by MATRIX_1:def 9
+         .= dom G1 by FINSEQ_1:def 3;
+      then C/.n1 = C.n1 by A268,FINSEQ_4:def 4;
+         then g/.lg=C/.n1 by A266,A268,A269,MATRIX_1:def 9;
+         then g/.lg in rng C & 0<1 & g/.lg=g2/.lg
+           by A8,A19,A33,A253,A268,A270,FINSEQ_4:86,PARTFUN2:4;
+         then len g<=lg & lg<len g by A8,A33,A253,A254,SQUARE_1:29;
+         hence contradiction;
+        end;
+        suppose
+A271:      abs(n2-width G1)=1 & n1=mi;
+            len Li = width G1 by MATRIX_1:def 8;
+then A272:      n2 in dom Li by A268,FINSEQ_1:def 3;
+      then Li/.n2 = Li.n2 by FINSEQ_4:def 4;
+         then g/.lg=Li/.n2 by A266,A268,A271,MATRIX_1:def 8;
+         then g/.lg in rng Li & 0<1 by A272,PARTFUN2:4;
+         then len g<=lg & lg<len g by A248,A253,A261,SQUARE_1:29;
+         hence contradiction;
+        end;
+        end;
+       hence contradiction;
+      end;
+     then A273: pf<len g by A251,REAL_1:def 5;
+     consider K2 be Nat such that
+     A274: K2 in dom Lma & g/.pl=Lma/.K2 by A249,PARTFUN2:4;
+A275: Seg len Lma = dom Lma by FINSEQ_1:def 3;
+     reconsider CK2 = Col(G1,K2) as FinSequence of TOP-REAL 2;
+     A276: len Lma=width G1 by MATRIX_1:def 8;
+       A277: Lma/.K2 = Lma.K2 by A274,FINSEQ_4:def 4;
+     then A278: K2 in Seg width G1 & g/.pl=G1*(ma,K2)
+     by A274,A275,A276,MATRIX_1:def 8;
+         now assume
+       A279: pl=len g;
+       consider i2 be Nat such that
+       A280: i2 in dom C & C/.i2=g/.len g by A12,PARTFUN2:4;
+A281:  dom C = Seg len C by FINSEQ_1:def 3
+         .= Seg len G1 by MATRIX_1:def 9
+         .= dom G1 by FINSEQ_1:def 3;
+          C/.i2 = C.i2 by A280,FINSEQ_4:def 4;
+       then A282: i2 in dom G1 & g/.len g=G1*(i2,width G1)
+         by A280,A281,MATRIX_1:def 9;
+       A283: [i2,width G1] in Indices G1
+        by A15,A85,A280,A281,ZFMISC_1:106;
+          [ma,K2] in Indices G1 by A27,A85,A274,A275,A276,ZFMISC_1:106;
+       then A284: i2=ma & width G1=K2 by A278,A279,A282,A283,GOBOARD1:21;
+       consider n1,n2 be Nat such that
+       A285: [n1,n2] in Indices G1 & g/.lg=G1*(n1,n2)
+        by A10,A253,GOBOARD1:def 11;
+       A286: abs(n1-ma)+abs(n2- width G1)=1
+        by A10,A253,A282,A283,A284,A285,GOBOARD1:def 11;
+       A287: n1 in dom G1 & n2 in Seg width G1 by A85,A285,ZFMISC_1:106;
+           now per cases by A286,GOBOARD1:2;
+        suppose
+A288:      abs(n1-ma)=1 & n2=width G1;
+         A289: dom C = Seg len C by FINSEQ_1:def 3
+         .= Seg len G1 by MATRIX_1:def 9
+         .= dom G1 by FINSEQ_1:def 3;
+      then C/.n1 = C.n1 by A287,FINSEQ_4:def 4;
+         then g/.lg=C/.n1 by A285,A287,A288,MATRIX_1:def 9;
+         then g/.lg in rng C & 0<1 & g/.lg=g2/.lg
+           by A8,A19,A33,A253,A287,A289,FINSEQ_4:86,PARTFUN2:4;
+         then len g<=lg & lg<len g by A8,A33,A253,A254,SQUARE_1:29;
+         hence contradiction;
+        end;
+        suppose
+A290:      abs(n2-width G1)=1 & n1=ma;
+            len Lma = width G1 by MATRIX_1:def 8;
+then A291:      n2 in dom Lma by A287,FINSEQ_1:def 3;
+      then La/.n2 = Lma.n2 by FINSEQ_4:def 4;
+         then g/.lg=Lma/.n2 by A285,A287,A290,MATRIX_1:def 8;
+         then g/.lg in rng Lma & 0<1 by A291,PARTFUN2:4;
+         then len g<=lg & lg<len g by A249,A253,A279,SQUARE_1:29;
+         hence contradiction;
+        end;
+        end;
+       hence contradiction;
+      end;
+     then A292: pl<len g by A251,REAL_1:def 5;
+     deffunc F(Nat) = G1*($1,K1);
+     consider h1 be FinSequence of TOP-REAL 2 such that
+     A293: len h1 = l1 & for n st n in dom h1 holds h1/.n=F(n)
+      from GOBOARD2:sch 1;
+A294: Seg len h1 = dom h1 by FINSEQ_1:def 3;
+     deffunc F(Nat) = G1*(ma+$1,K2);
+     consider h2 be FinSequence of TOP-REAL 2 such that
+     A295: len h2=l2 & for n st n in dom h2 holds h2/.n=F(n)
+      from GOBOARD2:sch 1;
+A296: Seg len h2 = dom h2 by FINSEQ_1:def 3;
+     A297: now let n; assume n in dom h1;
+       then A298: 1<=n & n<=l1 & l1<=mi & mi<=len G1
+        by A25,A293,FINSEQ_3:27,PROB_1:2;
+       then n<=mi by AXIOMS:22;
+       then n<=len G1 by A298,AXIOMS:22;
+       hence n in dom G1 by A298,FINSEQ_3:27;
+      end;
+     A299: now let n; assume n in dom h2;
+       then 1<=n & n<=l2 & n<=n+ma by A295,FINSEQ_3:27,NAT_1:29;
+       then 1<=n+ma & ma+n<=ma+l2 by AXIOMS:22,REAL_1:55;
+       hence ma+n in dom G1 by FINSEQ_3:27;
+      end;
+     A300: now let n; assume n in dom h1;
+       then A301: h1/.n=G1*(n,K1) & n in dom G1 by A293,A297;
+       take i=n,K1;
+       thus [i,K1] in Indices G1 & h1/.n=G1*(i,K1)
+        by A85,A256,A257,A258,A301,ZFMISC_1:106;
+      end;
+     A302: now let n; assume n in dom h2;
+       then A303: h2/.n=G1*(ma+n,K2) & ma+n in dom G1 by A295,A299;
+       take m=ma+n,K2;
+       thus [m,K2] in Indices G1 & h2/.n=G1*(m,K2)
+        by A85,A274,A275,A276,A303,ZFMISC_1:106;
+      end;
+     A304: now let n; assume
+          n in dom h1 & n+1 in dom h1;
+       then A305: n in dom G1 & n+1 in dom G1 & h1/.n=G1*(n,K1) &
+        h1/.(n+1)=G1*(n+1,K1) by A293,A297;
+       then A306: [n,K1] in Indices G1 & [n+1,K1] in Indices G1
+        by A85,A256,A257,A258,ZFMISC_1:106;
+       let i1,i2,j1,j2 be Nat; assume
+          [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & h1/.n=G1*(i1,i2) &
+        h1/.(n+1)=G1*(j1,j2);
+        then i1=n & i2=K1 & j1=n+1 & j2=K1 & 0<=1 by A305,A306,GOBOARD1:21;
+       hence abs(i1-j1)+abs(i2-j2)= abs(n-n+-1)+0 by ABSVALUE:7
+        .= abs(1) by ABSVALUE:17
+        .= 1 by ABSVALUE:def 1;
+      end;
+     A307: now let n; assume
+          n in dom h2 & n+1 in dom h2;
+       then A308: ma+n in dom G1 & ma+(n+1) in dom G1 & h2/.n=G1*(ma+n,K2) &
+       h2/.(n+1)=G1*(ma+(n+1),K2) & ma+(n+1)=ma+n+1 by A295,A299;
+       then A309: [ma+n,K2] in Indices G1 & [ma+n+1,K2] in Indices G1
+         by A85,A274,A275,A276,ZFMISC_1:106;
+       let i1,i2,j1,j2 be Nat; assume
+          [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & h2/.n=G1*(i1,i2) &
+         h2/.(n+1)=G1*(j1,j2);
+        then i1=ma+n & i2=K2 & j1=ma+n+1 & j2=K2 & 0<=1 by A308,A309,
+GOBOARD1:21;
+       hence abs(i1-j1)+abs(i2-j2)= abs(ma+n-(ma+n)+-1)+0 by ABSVALUE:7
+        .= abs(1) by ABSVALUE:17
+        .= 1 by ABSVALUE:def 1;
+      end;
+     defpred PP[Nat] means
+     $1 in dom f implies
+      for m st m in dom G1 & f/.$1 in rng Line(G1,m) holds mi<=m;
+     A310: PP[0] by FINSEQ_3:27;
+     A311: for k st PP[k] holds PP[k+1]
+      proof let k such that
+       A312: PP[k]; assume
+       A313: k+1 in dom f;
+       let m such that
+       A314: m in dom G1 & f/.(k+1) in rng Line(G1,m);
+           now per cases;
+        suppose A315: k=0;
+A316:      w+1=ma1;
+            1 in Seg l by A84,FINSEQ_1:3;
+         then f/.1=f1/.ma1 & f1/.ma1=g1/.ma1 by A72,A76,A316;
+         then f/.(k+1) in rng Li by A51,A315,PARTFUN2:4;
+         hence mi<=m by A25,A314,GOBOARD1:19;
+        end;
+        suppose k<>0;
+         then 0<k & k<=k+1 & k+1<=len f by A313,FINSEQ_3:27,NAT_1:19,29;
+         then A317: 0+1<=k & k<=len f by NAT_1:38;
+         then A318: k in dom f by FINSEQ_3:27;
+         then consider i1,i2 be Nat such that
+         A319: [i1,i2] in Indices G1 & f/.k=G1*(i1,i2) by A93;
+         reconsider Li1 = Line(G1,i1) as FinSequence of TOP-REAL 2;
+A320:      Seg len Li1 = dom Li1 by FINSEQ_1:def 3;
+         A321: i1 in dom G1 & i2 in Seg width G1 by A85,A319,ZFMISC_1:106;
+A322:      len Li1=width G1 by MATRIX_1:def 8;
+then A323:      Li1/.i2 = Li1.i2 by A320,A321,FINSEQ_4:def 4;
+   then f/.k=Li1/.i2 by A319,A321,MATRIX_1:def 8;
+then A324:      f/.k in rng Li1 by A320,A321,A322,PARTFUN2:4;
+         then A325: mi<=i1 by A312,A317,A321,FINSEQ_3:27;
+         consider j1,j2 be Nat such that
+         A326: [j1,j2] in Indices G1 & f/.(k+1)=G1*(j1,j2) by A93,A313;
+         reconsider Lj1 = Line(G1,j1) as FinSequence of TOP-REAL 2;
+A327:     Seg len Lj1 = dom Lj1 by FINSEQ_1:def 3;
+         A328: j1 in dom G1 & j2 in Seg width G1 by A85,A326,ZFMISC_1:106;
+A329:     len Lj1=width G1 by MATRIX_1:def 8;
+      then Lj1/.j2 = Lj1.j2 by A327,A328,FINSEQ_4:def 4;
+         then f/.(k+1)=Lj1/.j2 by A326,A328,MATRIX_1:def 8;
+then A330:      f/.(k+1) in rng Lj1 by A327,A328,A329,PARTFUN2:4;
+             now per cases by A325,REAL_1:def 5;
+          suppose A331: mi=i1;
+           A332: f/.k=f1/.(w+k) & f1/.(w+k)=g1/.(w+k) &
+                w+k in dom g1
+                by A72,A76,A77,A318;
+              g1/.(w+k) = f1/.(w+k) by A72,A77,A318
+              .= f/.k by A76,A77,A318
+              .= Li1/.i2 by A319,A321,A323,MATRIX_1:def 8;
+           then A333:        g1/.(w+k) in rng Line(G1,mi) by A320,A321,A322
+,A331,PARTFUN2:4;
+              w+1<=w+k by A317,REAL_1:55;
+           then w+k<=ma1 & ma1<=w+k by A31,A332,A333;
+           then w+k=ma1 by AXIOMS:21;
+           then A334: ma1+1=w+(k+1);
+A335:        f/.(k+1)=f1/.(w+(k+1)) & f1/.(w+(k+1))=g1/.(w+(k+1)) &
+                w+(k+1) in dom g1 & ma-1+(k+1)=ma-1+k+1
+                by A72,A76,A77,A313;
+              mi+1<=ma & mi<=mi+1 by A69,NAT_1:38;
+           then 1<=mi+1 & mi+1<=len G1 by A28,AXIOMS:22;
+           then A336: mi+1 in dom G1 by FINSEQ_3:27;
+           then f/.(k+1) in rng Line(G1,mi+1)
+           by A5,A25,A31,A334,A335,GOBOARD1:44;
+           then m=mi+1 & mi<=mi+1 by A314,A336,GOBOARD1:19,NAT_1:29;
+           hence thesis;
+          end;
+          suppose A337: mi<i1;
+               now per cases by A241,A313,A318,A321,A324,GOBOARD1:43;
+            suppose f/.(k+1) in rng Line(G1,i1);
+             hence mi<=m by A314,A321,A337,GOBOARD1:19;
+            end;
+            suppose for l be Nat st f/.(k+1) in rng Line(G1,l) &
+            l in dom G1 holds
+             abs(i1-l)=1;
+             then A338: abs(i1-j1)=1 by A328,A330;
+                 now per cases by A338,GOBOARD1:1;
+              suppose j1<i1 & i1=j1+1;
+               then mi<=i1-1 & i1-1=j1 by A337,NAT_1:38;
+               hence mi<=m by A314,A328,A330,GOBOARD1:19;
+              end;
+              suppose i1<j1 & j1=i1+1;
+               then mi<j1 by A337,AXIOMS:22;
+               hence mi<=m by A314,A328,A330,GOBOARD1:19;
+              end;
+              end;
+             hence thesis;
+            end;
+            end;
+           hence thesis;
+          end;
+          end;
+         hence thesis;
+        end;
+        end;
+       hence thesis;
+      end;
+     A339: for n holds PP[n] from NAT_1:sch 1(A310,A311);
+     A340: rng h1 /\ rng tt = {}
+      proof
+       assume
+A341:     not thesis; consider x being Element of rng h1 /\ rng tt;
+       A342: x in rng h1 & x in rng tt by A341,XBOOLE_0:def 3;
+       then x in rng t by A243;
+       then consider i1 be Nat such that
+       A343: i1 in dom f & f/.i1=x by A242,PARTFUN2:4;
+       consider n1,n2 be Nat such that
+       A344: [n1,n2] in Indices G1 & f/.i1=G1*(n1,n2) by A93,A343;
+       reconsider Ln1 = Line(G1,n1) as FinSequence of TOP-REAL 2;
+A345:      Seg len Ln1 = dom Ln1 by FINSEQ_1:def 3;
+         A346: n1 in dom G1 & n2 in Seg width G1 by A85,A344,ZFMISC_1:106;
+A347:      len Ln1=width G1 by MATRIX_1:def 8;
+      then Ln1/.n2 = Ln1.n2 by A345,A346,FINSEQ_4:def 4;
+         then f/.i1=Ln1/.n2 by A344,A346,MATRIX_1:def 8;
+         then f/.i1 in rng Ln1 by A345,A346,A347,PARTFUN2:4;
+       then A348: mi<=n1 by A339,A343,A346;
+       consider i2 be Nat such that
+       A349: i2 in dom h1 & h1/.i2=x by A342,PARTFUN2:4;
+A350:   Seg len h1 = dom h1 by FINSEQ_1:def 3;
+       A351: x=G1*(i2,K1) & i2 in dom G1 by A293,A297,A349;
+       then [i2,K1] in Indices G1 by A85,A256,A257,A258,ZFMISC_1:106;
+       then A352: i2=n1 & n2=K1 by A343,A344,A351,GOBOARD1:21;
+    l1<mi & i2<=l1 by A293,A349,A350,FINSEQ_1:3,SQUARE_1:29;
+       hence contradiction by A348,A352,AXIOMS:22;
+      end;
+     defpred PP[Nat] means
+     $1 in dom f implies
+      for m st m in dom G1 & f/.$1 in rng Line(G1,m) holds m<=ma;
+     A353: PP[0] by FINSEQ_3:27;
+     A354: for k st PP[k] holds PP[k+1]
+      proof let k such that
+       A355: PP[k]; assume
+       A356: k+1 in dom f;
+       let m such that
+       A357: m in dom G1 & f/.(k+1) in rng Line(G1,m);
+           now per cases;
+        suppose A358: k=0;
+            1 in Seg l by A84,FINSEQ_1:3;
+         then f/.1=f1/.(w+1) & f1/.(w+1)=g1/.(w+1) by A72,A76;
+         then f/.(k+1) in rng Li by A51,A358,PARTFUN2:4;
+         hence m<=ma by A25,A68,A357,GOBOARD1:19;
+        end;
+        suppose k<>0;
+         then A359: 0<k & k<=k+1 & k+1<=
+len f by A83,A356,FINSEQ_1:3,NAT_1:19,29;
+         then A360: 0+1<=k & k<=len f by NAT_1:38;
+         then A361: k in dom f by FINSEQ_3:27;
+         then consider i1,i2 be Nat such that
+         A362: [i1,i2] in Indices G1 & f/.k=G1*(i1,i2) by A93;
+         reconsider Li1 = Line(G1,i1) as FinSequence of TOP-REAL 2;
+A363:      Seg len Li1 = dom Li1 by FINSEQ_1:def 3;
+         A364: i1 in dom G1 & i2 in Seg width G1 by A85,A362,ZFMISC_1:106;
+A365:      len Li1=width G1 by MATRIX_1:def 8;
+      then Li1/.i2 = Li1.i2 by A363,A364,FINSEQ_4:def 4;
+   then f/.k=Li1/.i2 by A362,A364,MATRIX_1:def 8;
+then A366:      f/.k in rng Li1 by A363,A364,A365,PARTFUN2:4;
+         then A367: i1<=ma by A355,A360,A364,FINSEQ_3:27;
+         consider j1,j2 be Nat such that
+         A368: [j1,j2] in Indices G1 & f/.(k+1)=G1*(j1,j2) by A93,A356;
+         reconsider Lj1 = Line(G1,j1) as FinSequence of TOP-REAL 2;
+A369:     Seg len Lj1 = dom Lj1 by FINSEQ_1:def 3;
+         A370: j1 in dom G1 & j2 in Seg width G1 by A85,A368,ZFMISC_1:106;
+A371:     len Lj1=width G1 by MATRIX_1:def 8;
+      then Lj1/.j2 = Lj1.j2 by A369,A370,FINSEQ_4:def 4;
+         then f/.(k+1)=Lj1/.j2 by A368,A370,MATRIX_1:def 8;
+then A372:      f/.(k+1) in rng Lj1 by A369,A370,A371,PARTFUN2:4;
+         then A373: j1=m by A357,A370,GOBOARD1:19;
+             now per cases by A367,REAL_1:def 5;
+          case A374: ma=i1;
+           A375: f/.k=f1/.(w+k) & w is Nat & f1/.(w+k)=g1/.(w+k) &
+            w+k in dom g1 & f/.(k+1)=f1/.(w+(k+1)) &
+            f1/.(w+(k+1))=g1/.(w+(k+1)) & w+(k+1) in dom g1 &
+            ma-1+(k+1)=ma-1+k+1 by A72,A76,A77,A356,A361;
+             A376: w+1<=w+k by A360,REAL_1:55;
+              ma1 <> w+k by A25,A27,A31,A67,A366,A374,A375,GOBOARD1:19;
+           then ma1<w+k by A376,REAL_1:def 5;
+           then A377: mi1<=w+k by A71,A366,A374,A375;
+              w+k<=mi1 by A76,A100,A360,REAL_1:55;
+           then w+k=mi1 by A377,AXIOMS:21;
+           hence contradiction by A76,A359,NAT_1:38;
+          end;
+          case A378: i1<ma;
+               now per cases by A241,A356,A361,A364,A366,GOBOARD1:43;
+            suppose f/.(k+1) in rng Line(G1,i1);
+             hence m<=ma by A357,A364,A378,GOBOARD1:19;
+            end;
+            suppose for l be Nat st f/.(k+1) in rng Line(G1,l) &
+            l in dom G1 holds
+             abs(i1-l)=1;
+             then A379: abs(i1-j1)=1 by A370,A372;
+                 now per cases by A379,GOBOARD1:1;
+              suppose j1<i1 & i1=j1+1;
+               hence m<=ma by A373,A378,AXIOMS:22;
+              end;
+              suppose i1<j1 & j1=i1+1;
+               hence m<=ma by A373,A378,NAT_1:38;
+              end;
+              end;
+             hence thesis;
+            end;
+            end;
+           hence thesis;
+          end;
+          end;
+         hence thesis;
+        end;
+        end;
+       hence thesis;
+      end;
+
+     A380: for n holds PP[n] from NAT_1:sch 1(A353,A354);
+     A381: rng h2 /\ rng tt = {}
+      proof assume
+A382:    not thesis; consider x being Element of rng h2 /\ rng tt;
+       A383: x in rng h2 & x in rng tt by A382,XBOOLE_0:def 3;
+       then x in rng t by A243;
+       then consider i1 be Nat such that
+       A384: i1 in dom f & f/.i1=x by A242,PARTFUN2:4;
+       consider n1,n2 be Nat such that
+       A385: [n1,n2] in Indices G1 & f/.i1=G1*(n1,n2) by A93,A384;
+       reconsider Ln1 = Line(G1,n1) as FinSequence of TOP-REAL 2;
+A386:      Seg len Ln1 = dom Ln1 by FINSEQ_1:def 3;
+         A387: n1 in dom G1 & n2 in Seg width G1 by A85,A385,ZFMISC_1:106;
+A388:      len Ln1=width G1 by MATRIX_1:def 8;
+      then Ln1/.n2 = Ln1.n2 by A386,A387,FINSEQ_4:def 4;
+         then f/.i1=Ln1/.n2 by A385,A387,MATRIX_1:def 8;
+         then f/.i1 in rng Ln1 by A386,A387,A388,PARTFUN2:4;
+       then A389: n1<=ma by A380,A384,A387;
+       consider i2 be Nat such that
+       A390: i2 in dom h2 & h2/.i2=x by A383,PARTFUN2:4;
+       A391: x=G1*(ma+i2,K2) & ma+i2 in dom G1 by A295,A299,A390;
+       then [ma+i2,K2] in Indices G1 by A85,A274,A275,A276,ZFMISC_1:106;
+       then A392: ma+i2=n1 & n2=K2 by A384,A385,A391,GOBOARD1:21;
+          0+1<=i2 by A390,FINSEQ_3:27;
+       then 0<i2 by NAT_1:38;
+       hence contradiction by A389,A392,REAL_2:174;
+      end;
+         now per cases by A250,REAL_1:def 5;
+      suppose A393: pf<pl;
+       set F1=g|pl;
+           pf<=pl & pl<=pl+1 by A393,NAT_1:29;
+       then pf<=pl+1 by AXIOMS:22;
+       then reconsider LL=pl+1-pf as Nat by INT_1:18;
+       reconsider w1=pf-1 as Nat by A251,INT_1:18;
+       A394: for n st n in Seg LL holds F1/.(w1+n)=g/.(w1+n) &
+                                   w1+n in dom g
+        proof let n such that
+         A395: n in Seg LL;
+            0+1<=pf by A19,A248,FINSEQ_1:3;
+         then 0<=w1 & 1<=n & n<=LL by A395,FINSEQ_1:3,REAL_1:84;
+         then A396: 0+1<=w1+n & n+pf<=LL+pf by REAL_1:55;
+         then n+pf-1<=pl by REAL_1:86;
+         then w1+n in Seg pl by A396,FINSEQ_1:3;
+         hence thesis by A249,FINSEQ_4:86;
+        end;
+       defpred P[Nat, Element of TOP-REAL 2] means
+       $2 = F1/.(w1+$1);
+       A397: for n st n in Seg LL ex p st P[n,p];
+       consider F be FinSequence of TOP-REAL 2 such that
+       A398: len F = LL & for n st n in Seg LL holds P[n,F/.n]
+             from GOBOARD1:sch 1(A397);
+A399:   Seg len F = dom F by FINSEQ_1:def 3;
+       set FF = h1^F^h2;
+          pf+1<=pl & pl<=pl+1 by A393,NAT_1:38;
+        then pf+1<=pl+1 & dom F=dom F by AXIOMS:22;
+       then A400: 1<=LL & len F=LL by A398,REAL_1:84;
+           now let n; assume n in dom F;
+then A401:         n in Seg LL & dom F=Seg LL & F/.n=
+F1/.(w1+n) by A398,A399;
+         then A402: w1 is Nat & w1+n in dom g & F/.n=g/.(w1+n) by A394;
+         reconsider w=w1 as Nat;
+         consider i,j such that
+         A403: [i,j] in Indices G1 & g/.(w+n)=G1*(i,j)
+          by A10,A402,GOBOARD1:def 11;
+         take i,j;
+         thus [i,j] in Indices G1 & F/.n=G1*(i,j) by A394,A401,A403;
+        end;
+then A404:   for n st n in dom(h1^F) ex i,j st [i,j] in Indices G1 &
+        (h1^F)/.n=G1*(i,j) by A300,GOBOARD1:39;
+       A405: w1+LL= pl;
+       A406: now let n; assume
+            n in dom F & n+1 in dom F;
+         then n in Seg LL & n+1 in Seg LL & dom F=Seg LL & F/.n=F1/.(w1+n) &
+         F/.(n+1)=F1/.(w1+(n+1)) & w1+(n+1)=w1+n+1 by A398,A399;
+         then A407: w1 is Nat & w1+n in dom g & F/.n=g/.(w1+n) &
+         w1+n+1 in dom g & F/.(n+1)=g/.(w1+n+1) by A394;
+         let i1,i2,j1,j2 be Nat; assume
+             [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & F/.n=G1*(i1,i2) &
+         F/.(n+1)=G1*(j1,j2);
+         hence abs(i1-j1)+abs(i2-j2)=1 by A10,A407,GOBOARD1:def 11;
+        end;
+A408:    now let i1,i2,j1,j2 be Nat; assume
+         A409: [i1,i2] in Indices G1 & [j1,j2] in Indices G1 &
+         h1/.len h1=G1*(i1,i2) &
+         F/.1=G1*(j1,j2) & len h1 in dom h1 & 1 in dom F;
+         then A410: h1/.len h1=G1*(l1,K1) & l1 in dom G1 by A293,A297;
+         then [l1,K1] in Indices G1 by A85,A256,A257,A258,ZFMISC_1:106;
+         then A411: i1=l1 & i2=K1 & 0<=1 by A409,A410,GOBOARD1:21;
+            1 in Seg LL & dom F=Seg LL & F/.1=F1/.(w1+1) by A398,A399,A409;
+         then A412: F/.1=g/.(w1+1) by A394
+          .= G1*(mi,K1) by A256,A257,A258,A259,MATRIX_1:def 8;
+            [mi,K1] in Indices G1 by A25,A85,A256,A257,A258,ZFMISC_1:106;
+         then j1=mi & j2=K1 by A409,A412,GOBOARD1:21;
+         hence abs(i1-j1)+abs(i2-j2)= abs(mi-1-mi)+0 by A411,ABSVALUE:7
+         .= abs(-1)
+         .= abs(1) by ABSVALUE:17
+         .= 1 by ABSVALUE:def 1;
+        end;
+        set hf=h1^F;
+A413:    now let i1,i2,j1,j2 be Nat; assume
+         A414: [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & hf/.len hf=G1*(
+i1,i2)
+          & h2/.1=G1*(j1,j2) & len hf in dom hf & 1 in dom h2;
+         then A415: h2/.1=G1*(ma+1,K2) & ma+1 in dom G1 by A295,A299;
+         then [ma+1,K2] in Indices G1 by A85,A274,A275,A276,ZFMISC_1:106;
+         then A416: j1=ma+1 & j2=K2 by A414,A415,GOBOARD1:21;
+         A417: len F in dom F & 0<=1 by A399,A400,FINSEQ_1:3;
+         A418: hf/.len hf=hf/.(len h1+len F) by FINSEQ_1:35
+         .= F/.len F by A417,FINSEQ_4:84
+         .= F1/.(w1+LL) by A398,A399,A417
+         .= G1*(ma,K2) by A278,A394,A398,A399,A417;
+            [ma,K2] in Indices G1 by A27,A85,A274,A275,A276,ZFMISC_1:106;
+         then i1=ma & i2=K2 by A414,A418,GOBOARD1:21;
+         hence abs(i1-j1)+abs(i2-j2)=abs(ma-(ma+1))+0 by A416,ABSVALUE:7
+         .=abs(-(ma+1 -ma))
+         .=abs(1) by ABSVALUE:17
+         .=1 by ABSVALUE:def 1;
+        end;
+       A419: FF is_sequence_on G1
+        proof
+       thus for n st n in dom FF
+       ex i,j st [i,j] in Indices G1 & FF/.n=G1*(i,j)
+           by A302,A404,GOBOARD1:39;
+            for n st n in dom(h1^F) & n+1 in dom(h1^F)
+         for i1,i2,j1,j2 be Nat st [i1,i2] in Indices G1 &
+         [j1,j2] in Indices G1 &
+          (h1^F)/.n=G1*(i1,i2) & (h1^F)/.(n+1)=G1*(j1,j2) holds
+          abs(i1-j1)+abs(i2-j2)=1 by A304,A406,A408,GOBOARD1:40;
+       hence for n st n in dom FF & n+1 in dom FF
+       for m,k,i,j st [m,k] in Indices G1 & [i,j] in Indices G1 &
+          FF/.n=G1*(m,k) & FF/.(n+1)=G1*(i,j) holds abs(m-i)+abs(k-j)=1
+           by A307,A413,GOBOARD1:40;
+        end;
+       A420: now per cases;
+         suppose A421: mi=1;
+         then h1 = {} by A293,FINSEQ_1:25;
+         then A422: FF=F^h2 by FINSEQ_1:47;
+         A423: 1 in Seg LL & 1<=pf by A19,A248,A400,FINSEQ_1:3;
+         A424: pf in Seg pl by A251,A393,FINSEQ_1:3;
+            FF/.1=F/.1 by A398,A399,A422,A423,FINSEQ_4:83
+         .= F1/.(w1+1) by A398,A423
+         .= g/.pf by A249,A424,FINSEQ_4:86;
+         hence FF/.1 in rng Line(G1,1) by A248,A421;
+         end;
+         suppose A425: mi<>1;
+             1<=mi by A25,FINSEQ_3:27;
+          then 1<mi by A425,REAL_1:def 5;
+          then 1+1<=mi by NAT_1:38;
+          then A426: 1<=l1 by REAL_1:84;
+          then A427: 1 in Seg l1 by FINSEQ_1:3;
+          A428: len(h1^F)=len h1 + len F by FINSEQ_1:35;
+             len Line(G1,1)=width G1 by MATRIX_1:def 8;
+then A429:       K1 in dom L1 by A256,A257,A258,FINSEQ_1:def 3;
+then A430:       L1/.K1 = L1.K1 by FINSEQ_4:def 4;
+             0<=len F by NAT_1:18;
+          then 0+1<=len(h1^F) by A293,A426,A428,REAL_1:55;
+          then 1 in dom(h1^F) by FINSEQ_3:27;
+           then FF/.1=(h1^F)/.1 by FINSEQ_4:83
+          .=h1/.1 by A293,A294,A427,FINSEQ_4:83
+          .=G1*(1,K1) by A293,A294,A427
+          .=L1/.K1 by A256,A257,A258,A430,MATRIX_1:def 8;
+          hence FF/.1 in rng Line(G1,1) by A429,PARTFUN2:4;
+         end;
+         end;
+        A431: len FF=len(h1^F)+len h2 by FINSEQ_1:35
+                 .=len h1+len F+len h2 by FINSEQ_1:35;
+           0+0<=len h1+len h2 by NAT_1:18;
+        then A432: 0+1<=len F+(len h1+len h2) by A400,REAL_1:55;
+        A433: now per cases;
+         suppose A434: ma=len G1;
+          then h2 = {} by A295,FINSEQ_1:25;
+          then A435: FF=h1^F & 1<=pl
+           by A19,A249,FINSEQ_1:3,47;
+          then A436: len F in dom F & pl in Seg pl by A400,FINSEQ_1:3
+,FINSEQ_3:27;
+             FF/.len FF=FF/.(len h1+len F) by A435,FINSEQ_1:35
+          .= F/.LL by A398,A435,A436,FINSEQ_4:84
+          .= F1/.pl by A398,A399,A405,A436
+          .= g/.pl by A249,A436,FINSEQ_4:86;
+          hence FF/.len FF in rng Line(G1,len G1) by A249,A434;
+         end;
+         suppose A437: ma<>len G1;
+             ma<=len G1 by A27,FINSEQ_3:27;
+          then ma<len G1 by A437,REAL_1:def 5;
+          then ma+1<=len G1 by NAT_1:38;
+then A438:          1<=l2 by REAL_1:84;
+          then A439: l2 in Seg l2 by FINSEQ_1:3;
+          len Line(G1,len G1)=width G1 by MATRIX_1:def 8;
+          then A440:       K2 in dom Ll by A274,A275,A276,FINSEQ_1:def 3;
+then A441:       Ll/.K2 = Ll.K2 by FINSEQ_4:def 4;
+          A442: len h2 in dom h2 by A295,A438,FINSEQ_3:27;
+              FF/.len FF=FF/.(len(h1^F)+len h2) by FINSEQ_1:35
+          .=h2/.l2 by A295,A442,FINSEQ_4:84
+          .=G1*(ma+l2,K2) by A295,A296,A439
+          .=Ll/.K2 by A274,A275,A276,A441,MATRIX_1:def 8;
+          hence FF/.len FF in rng Line(G1,len G1) by A440,PARTFUN2:4;
+         end;
+         end;
+        A443: rng FF = rng(h1^F) \/ rng h2 by FINSEQ_1:44
+          .= rng h1 \/ rng F \/ rng h2 by FINSEQ_1:44;
+        A444: for k st k in Seg width G1 & rng F /\ rng Col(G1,k)={} holds
+             rng FF /\ rng Col(G1,k)={}
+         proof let k; assume that
+          A445: k in Seg width G1 and
+          A446: rng F /\ rng Col(G1,k)={};
+          set gg=Col(G1,k); assume
+A447:       rng FF /\ rng gg <> {};
+          consider x being Element of rng FF /\ rng gg;
+             rng FF = rng F \/ (rng h1 \/ rng h2) by A443,XBOOLE_1:4;
+          then A448: rng FF /\ rng gg = {}
+ \/ (rng h1 \/ rng h2) /\ rng gg by A446,XBOOLE_1:23
+          .= rng h1 /\ rng gg \/ rng h2 /\ rng gg by XBOOLE_1:23;
+          A449: len Col(G1,K1)=len G1 & len Col(G1,K2)=len G1
+             by MATRIX_1:def 9;
+              now per cases by A447,A448,XBOOLE_0:def 2;
+           suppose x in rng h1 /\ rng gg;
+            then A450: x in rng h1 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A451: i in dom h1 & x=h1/.i by PARTFUN2:4;
+            A452: x=G1*(i,K1) by A293,A451;
+            reconsider y=x as Point of TOP-REAL 2 by A451;
+A453:        dom CK1 = Seg len G1 by A449,FINSEQ_1:def 3
+            .= dom G1 by FINSEQ_1:def 3;
+then A454:        i in dom CK1 by A297,A451;
+A455:         Lmi/.K1 = Lmi.K1 & CK1/.mi = CK1.mi
+              by A25,A256,A453,FINSEQ_4:def 4;
+               CK1/.i = CK1.i by A454,FINSEQ_4:def 4;
+            then y=CK1/.i by A452,A453,A454,MATRIX_1:def 9;
+            then y in rng CK1 by A454,PARTFUN2:4;
+            then A456: K1=k & 1 in Seg LL
+            by A256,A257,A258,A400,A445,A450,FINSEQ_1:3,GOBOARD1:20;
+            then F/.1=F1/.(w1+1) & F1/.(w1+1)=g/.(w1+1) by A394,A398;
+            then F/.1= CK1/.mi by A25,A256,A257,A258,A455,GOBOARD1:17;
+            then F/.1 in rng Col(G1,k) & F/.1 in rng F
+              by A25,A398,A399,A453,A456,PARTFUN2:4;
+            hence contradiction by A446,XBOOLE_0:def 3;
+           end;
+           suppose x in rng h2 /\ rng gg;
+            then A457: x in rng h2 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A458: i in dom h2 & x=h2/.i by PARTFUN2:4;
+            A459: x=G1*(ma+i,K2) by A295,A458;
+            reconsider y=x as Point of TOP-REAL 2 by A458;
+A460:        dom CK2 = Seg len G1 by A449,FINSEQ_1:def 3
+            .= dom G1 by FINSEQ_1:def 3;
+             then A461:        ma+i in dom CK2 by A299,A458;
+  A462:         Lma/.K2 = Lma.K2 & CK2/.ma = CK2.ma by A27,A274,A460,
+FINSEQ_4:def 4;
+               CK2/.(ma+i) = CK2.(ma+i) by A461,FINSEQ_4:def 4;
+            then y=CK2/.(ma+i) by A459,A460,A461,MATRIX_1:def 9;
+            then y in rng CK2 by A461,PARTFUN2:4;
+            then A463: K2=k by A274,A275,A276,A445,A457,GOBOARD1:20;
+A464:        LL in Seg LL by A400,FINSEQ_1:3;
+            then F/.LL=F1/.(w1+LL) & F1/.(w1+LL)=g/.(w1+LL) by A394,A398;
+            then F/.LL= CK2/.ma by A27,A274,A275,A276,A462,GOBOARD1:17;
+            then F/.LL in rng Col(G1,k) & F/.LL in rng F
+              by A27,A398,A399,A460,A463,A464,PARTFUN2:4;
+            hence contradiction by A446,XBOOLE_0:def 3;
+           end;
+           end;
+          hence contradiction;
+         end;
+       A465: rng tt /\ rng FF = ((rng h1 \/ rng F) /\ rng tt) \/
+ {} by A381,A443,XBOOLE_1:23
+       .= {} \/ rng F /\ rng tt by A340,XBOOLE_1:23
+       .= rng tt /\ rng F;
+          rng tt c= rng f by A242,A243,XBOOLE_1:1;
+       then A466: rng tt c= rng g1 by A190,XBOOLE_1:1;
+          rng F c= rng g2
+        proof let x; assume x in rng F;
+         then consider n such that
+         A467: n in dom F & x=F/.n by PARTFUN2:4;
+            n in Seg LL & n in Seg LL & F/.n=
+         F1/.(w1+n) by A398,A399,A467;
+         then w1 is Nat & w1+n in dom g & F/.n=g/.(w1+n) by A394;
+         then x in rng g by A467,PARTFUN2:4;
+         hence x in rng g2 by A34;
+        end;
+       then A468: rng FF /\ rng tt c= rng g1 /\ rng g2 by A465,A466,XBOOLE_1:27
+;
+       A469: 1 in dom FF & len FF in dom FF by A431,A432,FINSEQ_3:27;
+          rng F /\ rng C = {}
+        proof assume
+A470:      not thesis;
+         consider x being Element of rng F /\ rng C;
+         A471: x in rng F & x in rng C by A470,XBOOLE_0:def 3;
+         then consider i1 be Nat such that
+         A472: i1 in dom F & F/.i1=x by PARTFUN2:4;
+A473:     Seg len F = dom F by FINSEQ_1:def 3;
+         then A474: F/.i1=F1/.(w1+i1) & w1 is Nat & F1/.(w1+i1)=
+           g/.(w1+i1) & w1+i1 in dom g by A394,A398,A472;
+         reconsider w=w1 as Nat;
+            g2/.(w+i1) in rng C & w+i1 in dom g2
+          by A8,A19,A33,A471,A472,A474,FINSEQ_4:86;
+         then A475: m<=w+i1 & i1<=LL by A8,A398,A472,A473,FINSEQ_1:3;
+         then w+i1<=w+LL by REAL_1:55;
+         hence contradiction by A33,A292,A475,AXIOMS:22;
+        end;
+       then rng FF /\ rng Col(G1,width G1) = {} by A15,A444;
+       then rng FF misses rng Col(G1,width G1) by XBOOLE_0:def 7;
+       then A476: FF is_sequence_on D & FF/.1 in rng Line(D,1) &
+           FF/.len FF in rng Line(D,len D)
+          by A15,A16,A17,A193,A194,A419,A420,A433,A469,GOBOARD1:37,41;
+          width D=k by A5,A15,A66,GOBOARD1:26;
+then A477:    rng FF /\ rng tt <> {} by A4,A66,A243,A431,A432,A476;
+       consider x being Element of rng FF /\ rng tt;
+           x in rng FF /\ rng tt by A477;
+       hence thesis by A468;
+      end;
+      suppose A478: pl<pf;
+       set F1=g|pf;
+           pl<=pf & pf<=pf+1 by A478,NAT_1:29;
+       then pl<=pf+1 by AXIOMS:22;
+       then reconsider LL=pf+1-pl as Nat by INT_1:18;
+       A479: for n st n in Seg LL holds pf+1-n is Nat
+        proof let n; assume
+            n in Seg LL;
+         then A480: 1<=n & n<=LL & 0<=pl by FINSEQ_1:3,NAT_1:18;
+         then LL<=pf+1-0 by REAL_1:92;
+         then n<=pf+1 by A480,AXIOMS:22;
+         hence thesis by INT_1:18;
+        end;
+       A481: for n,k st n in Seg LL & k = pf+1-n holds
+       F1/.k=g/.k & k in dom g
+        proof let n,k; assume that
+A482:      n in Seg LL and
+A483:      k = pf+1-n;
+         A484: 1<=n & n<=LL & 0<=pl by A482,FINSEQ_1:3,NAT_1:18;
+         then LL<=pf+1-0 by REAL_1:92;
+         then n<=pf+1 by A484,AXIOMS:22;
+         then reconsider w=pf+1-n as Nat by INT_1:18;
+           A485: pf+1-n<=pf+1-1 & pf+1-LL<=pf+1-n by A484,REAL_1:92;
+         then 1<=pf+1-n by A251,AXIOMS:22;
+         then w in Seg pf by A485,FINSEQ_1:3;
+         hence thesis by A248,A483,FINSEQ_4:86;
+        end;
+       defpred P[Nat,Element of TOP-REAL 2] means
+       for k st k = pf+1-$1 holds $2 = F1/.k;
+       A486: for n st n in Seg LL ex p st P[n,p]
+        proof let n; assume
+A487:         n in Seg LL;
+          then reconsider k = pf+1-n as Nat by A479;
+         take g/.k;
+         thus thesis by A481,A487;
+        end;
+       consider F be FinSequence of TOP-REAL 2 such that
+       A488: len F = LL &
+        for n st n in Seg LL holds P[n,F/.n] from GOBOARD1:sch 1(A486);
+A489:   Seg len F = dom F by FINSEQ_1:def 3;
+       set FF = h1^F^h2;
+          pl+1<=pf & pf<=pf+1 by A478,NAT_1:38;
+        then pl+1<=pf+1 & dom F=dom F by AXIOMS:22;
+       then A490: 1<=LL & len F=LL by A488,REAL_1:84;
+           now let n;
+         assume A491: n in dom F;
+         then reconsider w=pf+1-n as Nat by A479,A488,A489;
+A492:   n in Seg LL & dom F=Seg LL & F/.n=F1/.w by A488,A489,A491;
+          then pf+1-n is Nat & pf+1-n in dom g & F/.n=g/.w by A481;
+         then consider i,j such that
+         A493: [i,j] in Indices G1 & g/.w=G1*(i,j)
+          by A10,GOBOARD1:def 11;
+         take i,j;
+         thus [i,j] in Indices G1 & F/.n=G1*(i,j) by A481,A492,A493;
+        end;
+       then for n st n in dom(h1^F)
+       ex i,j st [i,j] in Indices G1 & (h1^F)/.n=G1*(i,j)
+           by A300,GOBOARD1:39;
+       then A494: for n st n in dom FF
+       ex i,j st [i,j] in Indices G1 & FF/.n=G1*(i,j)
+           by A302,GOBOARD1:39;
+       A495: now let n;
+        assume
+A496:         n in dom F & n+1 in dom F;
+         then reconsider w3=pf+1-n, w2=pf+1-(n+1) as Nat by A479,A488,A489;
+          n in Seg LL & n+1 in Seg LL & dom F=Seg LL & F/.n=F1/.w3 &
+         F/.(n+1)=F1/.w2 & pf+1-(n+1)=pf+1-n-1 by A488,A489,A496;
+         then A497: pf+1-n in dom g & F/.n=g/.w3 & pf+1-(n+1) in dom g &
+         F/.(n+1)=g/.w2 by A481;
+         A498: w2+1=pf+1-n;
+         let i1,i2,j1,j2 be Nat; assume
+            [i1,i2] in Indices G1 & [j1,j2] in Indices G1 & F/.n=G1*(i1,i2) &
+         F/.(n+1)=G1*(j1,j2);
+         hence 1=abs(j1-i1)+abs(j2-i2)
+          by A10,A497,A498,GOBOARD1:def 11
+         .= abs(-(i1-j1))+abs(-(i2-j2))
+         .= abs(i1-j1)+abs(-(i2-j2)) by ABSVALUE:17
+         .= abs(i1-j1)+abs(i2-j2) by ABSVALUE:17;
+        end;
+A499:      pf+1-1 = pf;
+           now let i1,i2,j1,j2 be Nat; assume
+         A500: [i1,i2] in Indices G1 & [j1,j2] in Indices G1 &
+         h1/.len h1=G1*(i1,i2) &
+         F/.1=G1*(j1,j2) & len h1 in dom h1 & 1 in dom F;
+         then A501: h1/.len h1=G1*(l1,K1) & l1 in dom G1 by A293,A297;
+         then [l1,K1] in Indices G1 by A85,A256,A257,A258,ZFMISC_1:106;
+         then A502: i1=l1 & i2=K1 & 0<=1 by A500,A501,GOBOARD1:21;
+         reconsider w4 = pf + 1 - 1 as Nat;
+      A503: F/.1 = F1/.w4 by A488,A489,A500
+          .= g/.w4 by A481,A488,A489,A500
+          .= G1*(mi,K1) by A256,A257,A258,A259,MATRIX_1:def 8;
+            [mi,K1] in Indices G1 by A25,A85,A256,A257,A258,ZFMISC_1:106;
+         then j1=mi & j2=K1 by A500,A503,GOBOARD1:21;
+         hence abs(i1-j1)+abs(i2-j2)= abs(mi-1-mi)+0 by A502,ABSVALUE:7
+         .= abs(-1)
+         .= abs(1) by ABSVALUE:17
+         .= 1 by ABSVALUE:def 1;
+        end;
+        then A504: for n st n in dom(h1^F) & n+1 in dom(h1^F)
+         for i1,i2,j1,j2 be Nat st [i1,i2] in Indices G1 &
+         [j1,j2] in Indices G1 &
+          (h1^F)/.n=G1*(i1,i2) & (h1^F)/.(n+1)=G1*(j1,j2) holds
+          abs(i1-j1)+abs(i2-j2)=1 by A304,A495,GOBOARD1:40;
+        set hf=h1^F;
+           now let i1,i2,j1,j2 be Nat; assume
+A505:[i1,i2] in Indices G1 & [j1,j2] in Indices G1 & hf/.len hf=G1*(i1,i2)
+          & h2/.1=G1*(j1,j2) & len hf in dom hf & 1 in dom h2;
+         then A506: h2/.1=G1*(ma+1,K2) & ma+1 in dom G1 by A295,A299;
+         then [ma+1,K2] in Indices G1 by A85,A274,A275,A276,ZFMISC_1:106;
+         then A507: j1=ma+1 & j2=K2 by A505,A506,GOBOARD1:21;
+         A508: len F in dom F & 0<=1 by A490,FINSEQ_3:27;
+         reconsider u = pf+1-LL as Nat;
+         A509: hf/.len hf=hf/.(len h1+len F) by FINSEQ_1:35
+         .= F/.len F by A508,FINSEQ_4:84
+         .= F1/.u by A488,A489,A508
+         .= g/.u by A481,A488,A489,A508
+         .= G1*(ma,K2) by A274,A275,A276,A277,MATRIX_1:def 8;
+            [ma,K2] in Indices G1 by A27,A85,A274,A275,A276,ZFMISC_1:106;
+         then i1=ma & i2=K2 by A505,A509,GOBOARD1:21;
+         hence abs(i1-j1)+abs(i2-j2)=abs(ma-(ma+1))+0 by A507,ABSVALUE:7
+         .=abs(-(ma+1 -ma))
+         .=abs(1) by ABSVALUE:17
+         .=1 by ABSVALUE:def 1;
+        end;
+       then for n st n in dom FF & n+1 in dom FF
+       for m,k,i,j st [m,k] in Indices G1 & [i,j] in Indices G1 &
+          FF/.n=G1*(m,k) & FF/.(n+1)=G1*(i,j) holds abs(m-i)+abs(k-j)=1
+           by A307,A504,GOBOARD1:40;
+       then A510: FF is_sequence_on G1 by A494,GOBOARD1:def 11;
+       A511: now per cases;
+         suppose A512: mi=1;
+         then h1 = {} by A293,FINSEQ_1:25;
+         then A513: FF=F^h2 by FINSEQ_1:47;
+         A514: 1 in Seg LL & 1<=pl by A19,A249,A490,FINSEQ_1:3;
+         A515: pf in Seg pf by A251,FINSEQ_1:3;
+            FF/.1=F/.1 by A488,A489,A513,A514,FINSEQ_4:83
+         .= F1/.pf by A488,A499,A514
+         .= g/.pf by A248,A515,FINSEQ_4:86;
+         hence FF/.1 in rng Line(G1,1) by A248,A512;
+         end;
+         suppose A516: mi<>1;
+             1<=mi by A25,FINSEQ_3:27;
+          then 1<mi by A516,REAL_1:def 5;
+          then 1+1<=mi by NAT_1:38;
+          then A517: 1<=l1 by REAL_1:84;
+          then A518: 1 in Seg l1 by FINSEQ_1:3;
+          A519: len(h1^F)=len h1 + len F by FINSEQ_1:35;
+             len Line(G1,1)=width G1 by MATRIX_1:def 8;
+then A520:       K1 in dom L1 by A256,A257,A258,FINSEQ_1:def 3;
+then A521:       L1/.K1 = L1.K1 by FINSEQ_4:def 4;
+             0<=len F by NAT_1:18;
+          then 0+1<=len(h1^F) by A293,A517,A519,REAL_1:55;
+          then 1 in dom(h1^F) by FINSEQ_3:27;
+           then FF/.1=(h1^F)/.1 by FINSEQ_4:83
+          .=h1/.1 by A293,A294,A518,FINSEQ_4:83
+          .=G1*(1,K1) by A293,A294,A518
+          .=L1/.K1 by A256,A257,A258,A521,MATRIX_1:def 8;
+          hence FF/.1 in rng Line(G1,1) by A520,PARTFUN2:4;
+         end;
+         end;
+        A522: len FF=len(h1^F)+len h2 by FINSEQ_1:35
+                 .=len h1+len F+len h2 by FINSEQ_1:35;
+           0+0<=len h1+len h2 by NAT_1:18;
+        then A523: 0+1<=len F+(len h1+len h2) by A490,REAL_1:55;
+        A524: now per cases;
+         suppose A525: ma=len G1;
+          then h2 = {} by A295,FINSEQ_1:25;
+          then A526: FF=h1^F by FINSEQ_1:47;
+A527:       pf+1-(pf+1-pl) = pl;
+          A528: len F in dom F & pl in Seg pf
+          by A251,A478,A490,FINSEQ_1:3,FINSEQ_3:27;
+             FF/.len FF=FF/.(len h1+len F) by A526,FINSEQ_1:35
+          .= F/.LL by A488,A526,A528,FINSEQ_4:84
+          .= F1/.pl by A488,A489,A527,A528
+          .= g/.pl by A248,A528,FINSEQ_4:86;
+          hence FF/.len FF in rng Line(G1,len G1) by A249,A525;
+         end;
+         suppose A529: ma<>len G1;
+             ma<=len G1 by A27,FINSEQ_3:27;
+          then ma<len G1 by A529,REAL_1:def 5;
+          then ma+1<=len G1 by NAT_1:38;
+then A530:          1<=l2 by REAL_1:84;
+          then A531: l2 in Seg l2 by FINSEQ_1:3;
+          len Line(G1,len G1)=width G1 by MATRIX_1:def 8;
+          then A532:       K2 in dom Ll by A274,A275,A276,FINSEQ_1:def 3;
+then A533:       Ll/.K2 = Ll.K2 by FINSEQ_4:def 4;
+          A534: len h2 in dom h2 by A295,A530,FINSEQ_3:27;
+              FF/.len FF=FF/.(len(h1^F)+len h2) by FINSEQ_1:35
+          .=h2/.l2 by A295,A534,FINSEQ_4:84
+          .=G1*(ma+l2,K2) by A295,A296,A531
+          .=Ll/.K2 by A274,A275,A276,A533,MATRIX_1:def 8;
+          hence FF/.len FF in rng Line(G1,len G1) by A532,PARTFUN2:4;
+         end;
+         end;
+        A535: rng FF = rng(h1^F) \/ rng h2 by FINSEQ_1:44
+          .= rng h1 \/ rng F \/ rng h2 by FINSEQ_1:44;
+        A536: for k st k in Seg width G1 & rng F /\ rng Col(G1,k)={} holds
+             rng FF /\ rng Col(G1,k)={}
+         proof let k; assume that
+          A537: k in Seg width G1 and
+          A538: rng F /\ rng Col(G1,k)={};
+          set gg=Col(G1,k); assume
+A539:       rng FF /\ rng gg <> {};
+          consider x being Element of rng FF /\ rng gg;
+             rng FF = rng F \/ (rng h1 \/ rng h2) by A535,XBOOLE_1:4;
+          then A540: rng FF /\ rng gg = {}
+ \/ (rng h1 \/ rng h2) /\ rng gg by A538,XBOOLE_1:23
+          .= rng h1 /\ rng gg \/ rng h2 /\ rng gg by XBOOLE_1:23;
+          A541: len Col(G1,K1)=len G1 & len Col(G1,K2)=len G1
+             by MATRIX_1:def 9;
+              now per cases by A539,A540,XBOOLE_0:def 2;
+           suppose x in rng h1 /\ rng gg;
+            then A542: x in rng h1 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A543: i in dom h1 & x=h1/.i by PARTFUN2:4;
+            A544: x=G1*(i,K1) by A293,A543;
+            reconsider y=x as Point of TOP-REAL 2 by A543;
+A545:         pf+1-1 = pf;
+A546:        dom CK1 = Seg len G1 by A541,FINSEQ_1:def 3
+            .= dom G1 by FINSEQ_1:def 3;
+             then A547:        i in dom CK1 by A297,A543;
+A548:         Lmi/.K1 = Lmi.K1 &
+            CK1/.mi = CK1.mi by A25,A256,A546,FINSEQ_4:def 4;
+               CK1/.i = CK1.i by A547,FINSEQ_4:def 4;
+            then y=CK1/.i by A544,A546,A547,MATRIX_1:def 9;
+            then y in rng CK1 by A547,PARTFUN2:4;
+            then A549: K1=k & 1 in Seg LL
+            by A256,A257,A258,A490,A537,A542,FINSEQ_1:3,GOBOARD1:20;
+            then F/.1=F1/.pf & F1/.pf=g/.pf by A481,A488,A545;
+            then F/.1=CK1/.mi by A25,A256,A257,A258,A548,GOBOARD1:17;
+            then F/.1 in rng Col(G1,k) & F/.1 in rng F
+              by A25,A488,A489,A546,A549,PARTFUN2:4;
+            hence contradiction by A538,XBOOLE_0:def 3;
+           end;
+           suppose x in rng h2 /\ rng gg;
+            then A550: x in rng h2 & x in rng gg by XBOOLE_0:def 3;
+            then consider i such that
+            A551: i in dom h2 & x=h2/.i by PARTFUN2:4;
+            A552: x=G1*(ma+i,K2) by A295,A551;
+            reconsider y=x as Point of TOP-REAL 2 by A551;
+A553:        LL in Seg LL by A490,FINSEQ_1:3;
+            reconsider u = pf+1-LL as Nat;
+A554:        dom CK2 = Seg len G1 by A541,FINSEQ_1:def 3
+            .= dom G1 by FINSEQ_1:def 3;
+             then A555:        ma+i in dom CK2 by A299,A551;
+A556:         Lma/.K2 = Lma.K2 & CK2/.ma = CK2.ma by A27,A274,A554,
+FINSEQ_4:def 4;
+               CK2/.(ma+i) = CK2.(ma+i) by A555,FINSEQ_4:def 4;
+            then y=CK2/.(ma+i) by A552,A554,A555,MATRIX_1:def 9;
+            then y in rng CK2 by A555,PARTFUN2:4;
+            then A557: K2=k by A274,A275,A276,A537,A550,GOBOARD1:20;
+               F/.LL=F1/.u & F1/.u=g/.u by A481,A488,A553;
+            then F/.LL= CK2/.ma by A27,A274,A275,A276,A556,GOBOARD1:17;
+            then F/.LL in rng Col(G1,k) & F/.LL in rng F
+              by A27,A488,A489,A553,A554,A557,PARTFUN2:4;
+            hence contradiction by A538,XBOOLE_0:def 3;
+           end;
+           end;
+          hence contradiction;
+         end;
+       A558: rng tt /\ rng FF = ((rng h1 \/ rng F) /\ rng tt) \/
+ {} by A381,A535,XBOOLE_1:23
+       .= {} \/ rng F /\ rng tt by A340,XBOOLE_1:23
+       .= rng tt /\ rng F;
+          rng tt c= rng f by A242,A243,XBOOLE_1:1;
+       then A559: rng tt c= rng g1 by A190,XBOOLE_1:1;
+          rng F c= rng g2
+        proof let x; assume x in rng F; then consider n such that
+         A560: n in dom F & x=F/.n by PARTFUN2:4;
+      reconsider u = pf+1-n as Nat by A479,A488,A489,A560;
+            F/.n=F1/.u by A488,A489,A560;
+         then pf+1-n in dom g & F/.n=g/.u by A481,A488,A489,A560;
+         then x in rng g by A560,PARTFUN2:4;
+         hence x in rng g2 by A34;
+        end;
+       then A561: rng FF /\ rng tt c= rng g1 /\ rng g2 by A558,A559,XBOOLE_1:27
+;
+       A562: 1 in dom FF & len FF in dom FF by A522,A523,FINSEQ_3:27;
+          rng F /\ rng C = {}
+        proof assume
+A563:      not thesis; consider x being Element of rng F /\ rng C;
+         A564: x in rng F & x in rng C by A563,XBOOLE_0:def 3;
+         then consider i1 be Nat such that
+         A565: i1 in dom F & F/.i1=x by PARTFUN2:4;
+         reconsider w=pf+1-i1 as Nat by A479,A488,A489,A565;
+         A566: F/.i1=F1/.w & F1/.w=g/.w &
+             w in dom g by A481,A488,A489,A565;
+            1<=i1 & i1<=LL by A488,A565,FINSEQ_3:27;
+         then A567: w<=pf+1-1 & pf+1-LL<=w by REAL_1:92;
+A568:      w in dom g2 by A8,A19,A33,A566,FINSEQ_4:86;
+            g2/.w in rng C by A8,A19,A33,A564,A565,A566,FINSEQ_4:86;
+         then m<=w & w<m by A8,A33,A273,A567,A568,AXIOMS:22;
+         hence contradiction;
+        end;
+       then rng FF /\ rng Col(G1,width G1) = {} by A15,A536;
+       then rng FF misses rng Col(G1,width G1) by XBOOLE_0:def 7;
+       then A569: FF is_sequence_on D & FF/.1 in rng Line(D,1) &
+       FF/.len FF in rng Line(D,len D)
+          by A15,A16,A17,A193,A194,A510,A511,A524,A562,GOBOARD1:37,41;
+          width D=k by A5,A15,A66,GOBOARD1:26;
+then A570:    rng FF /\ rng tt <> {} by A4,A66,A243,A522,A523,A569;
+       consider x being Element of rng FF /\ rng tt;
+           x in rng FF /\ rng tt by A570;
+       hence thesis by A561;
+      end;
+      end;
+     hence thesis;
+    end;
+    end;
+   hence thesis;
+  end;
+  end;
+       end;
+       end;
+      hence thesis;
+     end;
+     end;
+    hence thesis;
+   end;
+  A571: for k holds P[k] from NAT_1:sch 1(A2,A3);
+A572: now let k; let G1,g1,g2; assume k=width G1 & k>0 &
+     1<=len g1 & 1<=len g2 & g1 is_sequence_on G1 & g2 is_sequence_on G1 &
+           g1/.1 in rng Line(G1,1) & g1/.len g1 in rng Line(G1,len G1) &
+           g2/.1 in rng Col(G1,1) &
+           g2/.len g2 in rng Col(G1,width G1);
+    then rng g1 /\ rng g2 <> {} by A571;
+    hence rng g1 meets rng g2 by XBOOLE_0:def 7;
+  end;
+     width G <> 0 by GOBOARD1:def 5;
+  then width G > 0 by NAT_1:19;
+  hence thesis by A1,A572;
+ end;
+
+theorem Th2:
+for G,f1,f2 st 2<=len f1 & 2<=len f2 &
+  f1 is_sequence_on G & f2 is_sequence_on G &
+  f1/.1 in rng Line(G,1) & f1/.len f1 in rng Line(G,len G) &
+  f2/.1 in rng Col(G,1) & f2/.len f2 in rng Col(G,width G) holds
+L~f1 meets L~f2
+ proof let G,f1,f2; assume
+  A1: 2<=len f1 & 2<=len f2 & f1 is_sequence_on G & f2 is_sequence_on G &
+  f1/.1 in rng Line(G,1) & f1/.len f1 in rng Line(G,len G) &
+  f2/.1 in rng Col(G,1) & f2/.len f2 in rng Col(G,width G);
+  then 1<=len f1 & 1<=len f2 by AXIOMS:22;
+ then rng f1 meets rng f2 by A1,Th1;
+  then consider x being set such that
+  A2: x in rng f1 & x in rng f2 by XBOOLE_0:3;
+A3:  ex n st n in dom f1 & f1/.n=x by A2,PARTFUN2:4;
+     ex m st m in dom f2 & f2/.m=x by A2,PARTFUN2:4;
+  then x in L~f1 & x in L~f2 by A1,A3,GOBOARD1:16;
+  hence thesis by XBOOLE_0:3;
+ end;
+
+theorem
+   for G,f1,f2 st 2 <= len f1 & 2 <= len f2 &
+  f1 is_sequence_on G & f2 is_sequence_on G &
+  f1/.1 in rng Line(G,1) & f1/.len f1 in rng Line(G,len G) &
+  f2/.1 in rng Col(G,1) & f2/.len f2 in rng Col(G,width G) holds
+L~f1 meets L~f2 by Th2;
+
+definition let f be FinSequence of REAL, r,s be Real;
+ pred f lies_between r,s means
+:Def1:  for n st n in dom f holds r <= f.n & f.n <= s;
+end;
+
+theorem Th4:
+for f1,f2 being FinSequence of TOP-REAL 2 st
+ 2<=len f1 & 2<=len f2 & f1 is special & f2 is special &
+ (for n st n in dom f1 & n+1 in dom f1 holds f1/.n <> f1/.(n+1)) &
+ (for n st n in dom f2 & n+1 in dom f2 holds f2/.n <> f2/.(n+1)) &
+ X_axis(f1) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) &
+ X_axis(f2) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) &
+ Y_axis(f1) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) &
+ Y_axis(f2) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) holds
+  L~f1 meets L~f2
+  proof let f1,f2 be FinSequence of TOP-REAL 2; assume that
+   A1: 2<=len f1 & 2<=len f2 and
+   A2: f1 is special and
+   A3: f2 is special and
+   A4: for n st n in dom f1 & n+1 in dom f1 holds f1/.n <> f1/.(n+1) and
+   A5: for n st n in dom f2 & n+1 in dom f2 holds f2/.n <> f2/.(n+1) and
+   A6: X_axis(f1) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) and
+   A7: X_axis(f2) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) and
+   A8: Y_axis(f1) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) and
+   A9: Y_axis(f2) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2);
+      len f1 <> 0 & len f2 <> 0 by A1;
+   then reconsider f1, f2 as non empty FinSequence of TOP-REAL 2 by FINSEQ_1:25
+;
+   reconsider f = f1^f2 as non empty FinSequence of TOP-REAL 2;
+      len f = len f1 + len f2 by FINSEQ_1:35;
+   then A10: 2+2<=len f by A1,REAL_1:55;
+   set G = GoB(f);
+       now let n; assume
+     A11: n in dom f1;
+      then f/.n=f1/.n & dom f1 c= dom f by FINSEQ_1:39,FINSEQ_4:83;
+     then consider i,j such that
+     A12: [i,j] in Indices G & f/.n=G*(i,j) by A11,GOBOARD2:25;
+     take i,j;
+     thus [i,j] in Indices G & f1/.n=G*(i,j) by A11,A12,FINSEQ_4:83;
+    end;
+   then consider g1 such that
+   A13: g1 is_sequence_on G & L~g1=L~f1 & g1/.1=f1/.1 &
+   g1/.len g1=f1/.len f1 &
+       len f1 <= len g1 by A2,A4,GOBOARD2:17;
+       now let n; assume
+A14:     n in dom f2;
+      then f/.(len f1+n)=f2/.n & len f1+n in dom f by FINSEQ_1:41,FINSEQ_4:84;
+      then consider i,j such that
+     A15: [i,j] in Indices G & f/.(len f1+n)=G*(i,j) by GOBOARD2:25;
+     take i,j;
+     thus [i,j] in Indices G & f2/.n=G*(i,j) by A14,A15,FINSEQ_4:84;
+    end;
+   then consider g2 such that
+   A16: g2 is_sequence_on G & L~g2=L~f2 & g2/.1=f2/.1 &
+   g2/.len g2=f2/.len f2 & len f2 <= len g2 by A3,A5,GOBOARD2:17;
+   set x = X_axis(f), y = Y_axis(f),
+       x1 = X_axis(f1), y1 = Y_axis(f1),
+       x2 = X_axis(f2), y2 = Y_axis(f2);
+   A17: Seg len f1=dom f1 & Seg len f2=dom f2 & Seg len f=dom f &
+    dom x = Seg len x & Seg len y = dom y & len x = len f & len y = len f &
+    Seg len x1=dom x1 & Seg len y1=dom y1 & len x1=len f1 & len y1=len f1 &
+    Seg len x2=dom x2 & Seg len y2=dom y2 & len x2=len f2 & len y2=len f2 &
+    dom f1 c= dom f &
+    rng f1 c= the carrier of TOP-REAL 2 & rng f2 c= the carrier of TOP-REAL 2
+     by FINSEQ_1:39,def 3,def 4,GOBOARD1:def 3,def 4;
+      1<=len f & 1<=len f1 & 1<=len f2 by A1,A10,AXIOMS:22;
+   then A18: 1 in dom f & 1 in dom f1 &
+   len f1 in dom f1 & 1 in dom f2 & len f2 in dom f2
+     by FINSEQ_3:27;
+   then A19: f/.1=f1/.1 & f/.len f1=f1/.len f1 & f/.(len f1+1)=f2/.1 &
+    f/.(len f1+len f2)=f2/.len f2 & len f1 in dom f & len f1+1 in dom f &
+    len f1+len f2 in dom f by A17,FINSEQ_1:41,FINSEQ_4:83,84;
+   reconsider p1=f1/.1, p2=f1/.len f1, q1=f2/.1, q2=f2/.len f2
+     as Point of TOP-REAL 2;
+   A20: x.1=p1`1 & x1.1=p1`1 & x.(len f1) = p2`1 & x1.(len f1) = p2`1 &
+   y.(len f1+1)=q1`2 & y2.1=q1`2 & y.(len f1+len f2)=q2`2 & y2.(len f2)=q2`2
+      by A17,A18,A19,GOBOARD1:def 3,def 4;
+A21:   len f = len f1 + len f2 by FINSEQ_1:35;
+       now let m; assume
+     A22: m in dom f;
+     then A23: 1<=m & m<=len f by FINSEQ_3:27;
+     set s = x.m;
+         now per cases;
+      suppose m<=len f1;
+       then A24: m in dom f1 by A23,FINSEQ_3:27;
+       reconsider u=f1/.m as Point of TOP-REAL 2;
+          f/.m=u by A24,FINSEQ_4:83;
+       then A25: x.m=u`1 by A17,A22,GOBOARD1:def 3;
+          x1.m=u`1 by A17,A24,GOBOARD1:def 3;
+       hence p1`1<=s by A6,A17,A20,A24,A25,Def1;
+      end;
+      suppose A26: len f1<m;
+       then reconsider w5 = m-len f1 as Nat by INT_1:18;
+A27:    m = w5 + len f1;
+          w5 > 0 by A26,SQUARE_1:11;
+       then A28: 1<=w5 & w5<=len f2 by A21,A23,A27,NAT_1:39,REAL_1:53;
+       then A29: f/.m = f2/.w5 & len f1 +1<=m by A26,A27,GOBOARD2:5,NAT_1:38;
+       reconsider m1=m-len f1 as Nat by A27;
+       A30: m1 in dom f2 by A28,FINSEQ_3:27;
+       reconsider u=f2/.m1 as Point of TOP-REAL 2;
+       A31: x.m=u`1 by A17,A22,A29,GOBOARD1:def 3;
+          x2.m1=u`1 by A17,A30,GOBOARD1:def 3;
+       hence p1`1<=s by A7,A17,A20,A30,A31,Def1;
+      end;
+      end;
+     hence p1`1<=s;
+    end;
+   then A32: f/.1 in rng Line(G,1) by A18,A20,GOBOARD2:26;
+       now let m; assume
+     A33: m in dom f;
+     then A34: 1<=m & m<=len f by FINSEQ_3:27;
+     set s = x.m;
+         now per cases;
+      suppose m<=len f1;
+       then A35: m in dom f1 by A34,FINSEQ_3:27;
+       reconsider u=f1/.m as Point of TOP-REAL 2;
+          f/.m=u by A35,FINSEQ_4:83;
+       then A36: x.m=u`1 by A17,A33,GOBOARD1:def 3;
+          x1.m=u`1 by A17,A35,GOBOARD1:def 3;
+       hence s<=p2`1 by A6,A17,A20,A35,A36,Def1;
+      end;
+      suppose A37: len f1<m;
+       then reconsider w5 = m-len f1 as Nat by INT_1:18;
+A38:    m = w5 + len f1;
+          w5 > 0 by A37,SQUARE_1:11;
+       then A39: 1<=w5 & w5<=len f2 by A21,A34,A38,NAT_1:39,REAL_1:53;
+       then A40: f/.m = f2/.w5 & len f1 +1<=m by A37,A38,GOBOARD2:5,NAT_1:38;
+       reconsider m1=m-len f1 as Nat by A38;
+       A41: m1 in dom f2 by A39,FINSEQ_3:27;
+       reconsider u=f2/.m1 as Point of TOP-REAL 2;
+       A42: x.m=u`1 by A17,A33,A40,GOBOARD1:def 3;
+          x2.m1=u`1 by A17,A41,GOBOARD1:def 3;
+       hence s<=p2`1 by A7,A17,A20,A41,A42,Def1;
+      end;
+      end;
+     hence s<=p2`1;
+    end;
+   then A43: f/.len f1 in rng Line(G,len G) by A17,A18,A20,GOBOARD2:27;
+       now let m; assume
+     A44: m in dom f;
+     then A45: 1<=m & m<=len f by FINSEQ_3:27;
+     set s = y.m;
+         now per cases;
+      suppose m<=len f1;
+       then A46: m in dom f1 by A45,FINSEQ_3:27;
+       reconsider u=f1/.m as Point of TOP-REAL 2;
+          f/.m=u by A46,FINSEQ_4:83;
+       then A47: y.m=u`2 by A17,A44,GOBOARD1:def 4;
+          y1.m=u`2 by A17,A46,GOBOARD1:def 4;
+       hence q1`2<=s by A8,A17,A20,A46,A47,Def1;
+      end;
+      suppose A48: len f1<m;
+       then reconsider w5 = m-len f1 as Nat by INT_1:18;
+A49:    m = w5 + len f1;
+          w5 > 0 by A48,SQUARE_1:11;
+       then A50: 1<=w5 & w5<=len f2 by A21,A45,A49,NAT_1:39,REAL_1:53;
+       then A51: f/.m = f2/.w5 & len f1 +1<=m by A48,A49,GOBOARD2:5,NAT_1:38;
+       reconsider m1=m-len f1 as Nat by A49;
+       A52: m1 in dom f2 by A50,FINSEQ_3:27;
+       reconsider u=f2/.m1 as Point of TOP-REAL 2;
+       A53: y.m=u`2 by A17,A44,A51,GOBOARD1:def 4;
+          y2.m1=u`2 by A17,A52,GOBOARD1:def 4;
+       hence q1`2<=s by A9,A17,A20,A52,A53,Def1;
+      end;
+      end;
+     hence q1`2<=s;
+    end;
+   then A54: f/.(len f1+1) in rng Col(G,1) by A19,A20,GOBOARD2:28;
+       now let m; assume
+     A55: m in dom f;
+     then A56: 1<=m & m<=len f by FINSEQ_3:27;
+     set s = y.m;
+         now per cases;
+      suppose m<=len f1;
+       then A57: m in dom f1 by A56,FINSEQ_3:27;
+       reconsider u=f1/.m as Point of TOP-REAL 2;
+          f/.m=u by A57,FINSEQ_4:83;
+       then A58: y.m=u`2 by A17,A55,GOBOARD1:def 4;
+          y1.m=u`2 by A17,A57,GOBOARD1:def 4;
+       hence s<=q2`2 by A8,A17,A20,A57,A58,Def1;
+      end;
+      suppose A59: len f1<m;
+       then reconsider w5 = m-len f1 as Nat by INT_1:18;
+A60:    m = w5 + len f1;
+          w5 > 0 by A59,SQUARE_1:11;
+       then A61: 1<=w5 & w5<=len f2 by A21,A56,A60,NAT_1:39,REAL_1:53;
+       then A62: f/.m = f2/.w5 & len f1 +1<=m by A59,A60,GOBOARD2:5,NAT_1:38;
+       reconsider m1=m-len f1 as Nat by A60;
+       A63: m1 in dom f2 by A61,FINSEQ_3:27;
+       reconsider u=f2/.m1 as Point of TOP-REAL 2;
+       A64: y.m=u`2 by A17,A55,A62,GOBOARD1:def 4;
+          y2.m1=u`2 by A17,A63,GOBOARD1:def 4;
+       hence s<=q2`2 by A9,A17,A20,A63,A64,Def1;
+      end;
+      end;
+     hence s<=q2`2;
+    end;
+   then A65: f/.(len f1+len f2) in rng Col(G,width G) by A19,A20,GOBOARD2:29;
+      2<=len g1 & 2<=len g2 by A1,A13,A16,AXIOMS:22;
+   hence thesis by A13,A16,A19,A32,A43,A54,A65,Th2;
+  end;
+
+theorem Th5:
+for f1,f2 being FinSequence of TOP-REAL 2 st
+ f1 is one-to-one special & 2 <= len f1 &
+ f2 is one-to-one special & 2 <= len f2 &
+ X_axis(f1) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) &
+ X_axis(f2) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) &
+ Y_axis(f1) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) &
+ Y_axis(f2) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) holds
+  L~f1 meets L~f2
+  proof let f1,f2 be FinSequence of TOP-REAL 2; assume that
+A1: f1 is one-to-one special & 2 <= len f1 &
+   f2 is one-to-one special & 2 <= len f2 and
+   A2: X_axis(f1) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) and
+   A3: X_axis(f2) lies_between (X_axis(f1)).1, (X_axis(f1)).(len f1) and
+   A4: Y_axis(f1) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2) and
+   A5: Y_axis(f2) lies_between (Y_axis(f2)).1, (Y_axis(f2)).(len f2);
+   A6: for n st n in dom f1 & n+1 in dom f1 holds f1/.n <> f1/.(n+1)
+    proof let n; assume
+        n in dom f1 & n+1 in dom f1 & f1/.n=f1/.(n+1);
+      then n=n+1 by A1,PARTFUN2:17;
+     hence contradiction by NAT_1:38;
+    end;
+      for n st n in dom f2 & n+1 in dom f2 holds f2/.n <> f2/.(n+1)
+    proof let n; assume
+        n in dom f2 & n+1 in dom f2 & f2/.n=f2/.(n+1);
+      then n=n+1 by A1,PARTFUN2:17;
+     hence contradiction by NAT_1:38;
+    end;
+   hence thesis by A1,A2,A3,A4,A5,A6,Th4;
+  end;
+
+canceled 2;
+
+theorem
+   for P1,P2,p1,p2,q1,q2 st
+   P1 is_S-P_arc_joining p1,q1 & P2 is_S-P_arc_joining p2,q2 &
+   (for p st p in P1 \/ P2 holds p1`1<=p`1 & p`1<=q1`1) &
+   (for p st p in P1 \/ P2 holds p2`2<=p`2 & p`2<=q2`2) holds
+P1 meets P2
+ proof let P1,P2,p1,p2,q1,q2; assume that
+  A1: P1 is_S-P_arc_joining p1,q1 & P2 is_S-P_arc_joining p2,q2 and
+  A2: for p st p in P1 \/ P2 holds p1`1<=p`1 & p`1<=q1`1 and
+  A3: for p st p in P1 \/ P2 holds p2`2<=p`2 & p`2<=q2`2;
+  consider f1 such that
+  A4: f1 is_S-Seq & P1=L~f1 & p1=f1/.1 & q1=f1/.len f1
+   by A1,TOPREAL4:def 1;
+     len f1 <> 0 by A4,TOPREAL1:def 10;
+  then reconsider f1 as non empty FinSequence of TOP-REAL 2 by FINSEQ_1:25;
+  consider f2 such that
+  A5: f2 is_S-Seq & P2=L~f2 & p2=f2/.1 & q2=f2/.len f2
+   by A1,TOPREAL4:def 1;
+     len f2 <> 0 by A5,TOPREAL1:def 10;
+  then reconsider f2 as non empty FinSequence of TOP-REAL 2 by FINSEQ_1:25;
+A6:f1 is one-to-one special & f2 is one-to-one special
+    by A4,A5,TOPREAL1:def 10;
+A7:  1<=2 & 2<=len f1 & 2<=len f2 by A4,A5,TOPREAL1:def 10;
+then 2<=len f1 & 2<=len f2 & 1<=len f1 & 1<=len f2 by AXIOMS:22;
+  then A8: 1 in dom f1 & 1 in dom f2 & len f1 in dom f1 & len f2 in dom f2
+    by FINSEQ_3:27;
+  set x1 = X_axis(f1),
+      y1 = Y_axis(f1),
+      x2 = X_axis(f2),
+      y2 = Y_axis(f2);
+  A9: Seg len f1=dom f1 & Seg len f2=dom f2 & Seg len x1=dom x1 &
+  dom x2=Seg len x2 & dom y1=Seg len y1 & dom y2=Seg len y2 &
+  len x1= len f1 & len y1=len f1 & len x2=len f2 & len y2=len f2 &
+  rng f1 c=the carrier of TOP-REAL 2 & rng f2 c=the carrier of TOP-REAL 2
+   by FINSEQ_1:def 3,def 4,GOBOARD1:def 3,def 4;
+  then A10: x1.1=p1`1 & x1.(len f1)=q1`1 & y2.1=p2`2 & y2.(len f2)=q2`2
+   by A4,A5,A8,GOBOARD1:def 3,def 4;
+  A11: x1 lies_between x1.1, x1.len f1
+   proof let n;
+    set q=f1/.n;
+    assume A12: n in dom x1;
+     then q in rng f1 & q in L~f1 by A7,A9,GOBOARD1:16,PARTFUN2:4;
+     then x1.n=q`1 & q in P1 \/ P2 by A4,A12,GOBOARD1:def 3,XBOOLE_0:def 2;
+    hence thesis by A2,A10;
+   end;
+  A13: x2 lies_between x1.1, x1.len f1
+   proof let n;
+    set q=f2/.n;
+     assume A14: n in dom x2;
+     then q in rng f2 & q in L~f2 by A7,A9,GOBOARD1:16,PARTFUN2:4;
+    then x2.n=q`1 & q in P1 \/ P2 by A5,A14,GOBOARD1:def 3,XBOOLE_0:def 2;
+    hence thesis by A2,A10;
+   end;
+  A15: y1 lies_between y2.1, y2.len f2
+   proof let n;
+    set q=f1/.n;
+    assume A16: n in dom y1;
+     then q in rng f1 & q in L~f1 by A7,A9,GOBOARD1:16,PARTFUN2:4;
+    then y1.n=q`2 & q in P1 \/ P2 by A4,A16,GOBOARD1:def 4,XBOOLE_0:def 2;
+    hence thesis by A3,A10;
+   end;
+    y2 lies_between y2.1, y2.len f2
+   proof let n;
+    set q = f2/.n;
+    assume A17: n in dom y2;
+     then q in rng f2 & q in L~f2 by A7,A9,GOBOARD1:16,PARTFUN2:4;
+    then y2.n=q`2 & q in P1 \/ P2 by A5,A17,GOBOARD1:def 4,XBOOLE_0:def 2;
+    hence thesis by A3,A10;
+   end;
+  hence thesis by A4,A5,A6,A7,A11,A13,A15,Th5;
+ end;

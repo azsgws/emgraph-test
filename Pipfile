@@ -4,9 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-networkx = "~=2.5"
+networkx = "~=2.6"
 matplotlib = "*"
 scipy = "*"
+pydot = "*"
 
 [dev-packages]
 
