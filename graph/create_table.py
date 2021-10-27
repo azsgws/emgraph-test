@@ -29,11 +29,11 @@ for i in dot_graph_authority['elements']['nodes']:
 x = node2hits_authority.values()
 y = node2pagerank.values()
 
-plt.title("PageRank-HITS(Authority)")
+plt.title("MML(2020) PageRank-HITS(Authority)")
 plt.xlabel("authority")
 plt.ylabel("PageRank")
 plt.grid(True)
 
 plt.scatter(x,y,vmin=0.0, vmax=1.0, s=100)
 
-fig.savefig("pagerank-authority-table.png")
+fig.savefig("MML(2020)_pagerank-authority-table.png")
