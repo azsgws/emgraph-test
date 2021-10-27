@@ -34,6 +34,6 @@ plt.xlabel("authority")
 plt.ylabel("PageRank")
 plt.grid(True)
 
-plt.scatter(x,y,vmin=0.0, vmax=1.0, s=100)
+plt.scatter(x,y,vmin=0.0, vmax=1.0, s=10)
 
 fig.savefig("MML(2020)_pagerank-authority-table.png")
