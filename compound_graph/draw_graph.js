@@ -4,11 +4,9 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph.json'),
-        $.getJSON('./graph_attrs/sfdp_graph.json'),
-        $.getJSON('./graph_attrs/dot_graph_2003.json'),
+        $.getJSON('./graph_attrs/compound_dot_graph.json')
     )
-    .then((dot_graph, sfdp_graph, dot_graph_2003) => {
+    .then((dot_graph) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -18,39 +16,7 @@ $(function(){
             selectionType: "additive",
             wheelSensitivity: 0.1
         });
-        let graph = {};
-        if(layout==='dot'){
-            graph = dot_graph[0];
-        }
-        else if(layout==='sfdp'){
-            graph = sfdp_graph[0];
-        }
-        else {
-            graph = dot_graph_2003[0];
-        }
-        let nodes = graph["elements"]["nodes"];
-        let edges = graph["elements"]["edges"];
-        let nodes_and_edges = [];
-    
-        for(let i in nodes){
-            for(let j in nodes[i]){
-                let node = {};
-                node["group"] = "nodes";
-                node["data"] = {"id": nodes[i][j]["id"], "name": nodes[i][j]["name"], 
-                                "href": nodes[i][j]["href"], "size": nodes[i][j]["size"]};
-                node["position"] = {"x": (nodes[i][j]["x"] + 1) * 300, "y": (nodes[i][j]["y"] + 1) * 300};
-                nodes_and_edges.push(node);
-            }
-        }
-        for(let i in edges){
-            for(let j in edges[i]){
-                let edge = {};
-                edge["group"] = "edges";
-                edge["data"] = {"source":edges[i][j]["source"], "target":edges[i][j]["target"]};
-                nodes_and_edges.push(edge);
-            }
-        }
-        cy.add(nodes_and_edges);
+        cy.add(dot_graph["eleObjs"]);
         // Set graph style
         cy.style([
             /* 初期状態のスタイル */
@@ -66,11 +32,6 @@ $(function(){
                 selector: "edge",
                 css: {"line-color": "black", "target-arrow-shape": "triangle", "curve-style": "straight",
                 "target-arrow-color": "black", "arrow-scale": 3, "width": 5, "opacity": 0.3, "z-index": 1}  //0.3
-            },
-            /* リンクのないノードは灰色 */
-            {
-                selector: "node[!href][!is_dummy]",
-                css: {"background-color": "#a9a9a9", "z-index": 1}
             },
             /* ノードが左クリックされたときに適応されるスタイル */
             // 選択されたノード全てのスタイル
@@ -164,8 +125,6 @@ $(function(){
 
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
-        let all_nodes = cy.nodes();
-        let all_elements = cy.elements();
         cy.fit(cy.nodes().orphans());
 
         // 強調表示する祖先、子孫の世代数の初期化
@@ -286,43 +245,6 @@ $(function(){
                 highlight_select_elements(cy, selected_node, ancestor_generations, descendant_generations);
             }
         });
-
-        
-        // dialogページの切り替え
-        $(document).on("click", "#help_page_next_btn", function(){
-            // page1を開いている場合
-            if (document.getElementById("help_page1").style.display != "none"){
-                document.getElementById("help_page1").style.display = "none";
-                document.getElementById("help_page2").style.display = "inline";
-                document.getElementById("help_page_prev_btn").style.display = "inline";
-                document.getElementById("graph_usage").innerText = "Usage (2/3)";
-            }
-            // page2を開いている場合
-            else {
-                document.getElementById("help_page2").style.display = "none";
-                document.getElementById("help_page3").style.display = "inline";
-                document.getElementById("help_page_next_btn").style.display = "none";
-                document.getElementById("graph_usage").innerText = "Usage (3/3)";
-            }
-        });
-
-        $(document).on("click", "#help_page_prev_btn", function(){
-            // page3を開いている場合
-            if (document.getElementById("help_page3").style.display != "none"){
-                document.getElementById("help_page3").style.display = "none";
-                document.getElementById("help_page2").style.display = "inline";
-                document.getElementById("help_page_next_btn").style.display = "inline";
-                document.getElementById("graph_usage").innerText = "Usage (2/3)";
-            }
-            // page2を開いている場合
-            else {
-                document.getElementById("help_page2").style.display = "none";
-                document.getElementById("help_page1").style.display = "inline";
-                document.getElementById("help_page_prev_btn").style.display = "none";
-                document.getElementById("graph_usage").innerText = "Usage (1/3)";
-            }
-        });
-
 
         // resetボタンでグラフを初期状態に戻す
         $(document).ready(function(){
