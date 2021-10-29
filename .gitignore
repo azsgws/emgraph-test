@@ -1,3 +1,4 @@
-./grpah/mml/2003-12-24/*.miz
-./grpah/mml/2005-05-31/*.miz
-./grpah/mml/2020-06-18/*.miz
+graph/mml/
+compound_graph/mml
+node_modules
+package-lock.json
