@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/azsgws/demo-emgraph/issues"
   },
-  "homepage": "https://github.com/azsgws/demo-emgraph#readme"
+  "homepage": "https://github.com/azsgws/demo-emgraph#readme",
+  "dependencies": {
+    "http-server": "^14.0.0"
+  }
 }

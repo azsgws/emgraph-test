@@ -1,0 +1,4016 @@
+{
+    "data": [],
+    "directed": true,
+    "multigraph": false,
+    "elements": {
+        "nodes": [
+            {
+                "data": {
+                    "href": "tarski.html",
+                    "x": 15.98,
+                    "y": 1.8,
+                    "is_dummy": false,
+                    "id": "TARSKI",
+                    "value": "TARSKI",
+                    "name": "TARSKI"
+                }
+            },
+            {
+                "data": {
+                    "href": "tarski_0.html",
+                    "x": 15.98,
+                    "y": 0.36,
+                    "is_dummy": false,
+                    "id": "TARSKI_0",
+                    "value": "TARSKI_0",
+                    "name": "TARSKI_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "xboole_0.html",
+                    "x": 13.82,
+                    "y": 3.24,
+                    "is_dummy": false,
+                    "id": "XBOOLE_0",
+                    "value": "XBOOLE_0",
+                    "name": "XBOOLE_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "boole.html",
+                    "x": 13.82,
+                    "y": 4.68,
+                    "is_dummy": false,
+                    "id": "BOOLE",
+                    "value": "BOOLE",
+                    "name": "BOOLE"
+                }
+            },
+            {
+                "data": {
+                    "href": "xboole_1.html",
+                    "x": 15.24,
+                    "y": 6.12,
+                    "is_dummy": false,
+                    "id": "XBOOLE_1",
+                    "value": "XBOOLE_1",
+                    "name": "XBOOLE_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "enumset1.html",
+                    "x": 15.1,
+                    "y": 7.5600000000000005,
+                    "is_dummy": false,
+                    "id": "ENUMSET1",
+                    "value": "ENUMSET1",
+                    "name": "ENUMSET1"
+                }
+            },
+            {
+                "data": {
+                    "href": "xtuple_0.html",
+                    "x": 14.94,
+                    "y": 9.0,
+                    "is_dummy": false,
+                    "id": "XTUPLE_0",
+                    "value": "XTUPLE_0",
+                    "name": "XTUPLE_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "xfamily.html",
+                    "x": 14.64,
+                    "y": 10.44,
+                    "is_dummy": false,
+                    "id": "XFAMILY",
+                    "value": "XFAMILY",
+                    "name": "XFAMILY"
+                }
+            },
+            {
+                "data": {
+                    "href": "xregular.html",
+                    "x": 14.98,
+                    "y": 11.88,
+                    "is_dummy": false,
+                    "id": "XREGULAR",
+                    "value": "XREGULAR",
+                    "name": "XREGULAR"
+                }
+            },
+            {
+                "data": {
+                    "href": "zfmisc_1.html",
+                    "x": 15.9,
+                    "y": 13.32,
+                    "is_dummy": false,
+                    "id": "ZFMISC_1",
+                    "value": "ZFMISC_1",
+                    "name": "ZFMISC_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "tarski_a.html",
+                    "x": 17.18,
+                    "y": 10.44,
+                    "is_dummy": false,
+                    "id": "TARSKI_A",
+                    "value": "TARSKI_A",
+                    "name": "TARSKI_A"
+                }
+            },
+            {
+                "data": {
+                    "href": "subset_1.html",
+                    "x": 15.9,
+                    "y": 14.76,
+                    "is_dummy": false,
+                    "id": "SUBSET_1",
+                    "value": "SUBSET_1",
+                    "name": "SUBSET_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "subset.html",
+                    "x": 15.9,
+                    "y": 16.2,
+                    "is_dummy": false,
+                    "id": "SUBSET",
+                    "value": "SUBSET",
+                    "name": "SUBSET"
+                }
+            },
+            {
+                "data": {
+                    "href": "setfam_1.html",
+                    "x": 14.58,
+                    "y": 17.64,
+                    "is_dummy": false,
+                    "id": "SETFAM_1",
+                    "value": "SETFAM_1",
+                    "name": "SETFAM_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "relat_1.html",
+                    "x": 17.240000000000002,
+                    "y": 17.64,
+                    "is_dummy": false,
+                    "id": "RELAT_1",
+                    "value": "RELAT_1",
+                    "name": "RELAT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_1.html",
+                    "x": 14.56,
+                    "y": 19.080000000000002,
+                    "is_dummy": false,
+                    "id": "FUNCT_1",
+                    "value": "FUNCT_1",
+                    "name": "FUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "grfunc_1.html",
+                    "x": 13.36,
+                    "y": 20.52,
+                    "is_dummy": false,
+                    "id": "GRFUNC_1",
+                    "value": "GRFUNC_1",
+                    "name": "GRFUNC_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "relat_2.html",
+                    "x": 19.0,
+                    "y": 20.52,
+                    "is_dummy": false,
+                    "id": "RELAT_2",
+                    "value": "RELAT_2",
+                    "name": "RELAT_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "ordinal1.html",
+                    "x": 16.2,
+                    "y": 21.96,
+                    "is_dummy": false,
+                    "id": "ORDINAL1",
+                    "value": "ORDINAL1",
+                    "name": "ORDINAL1"
+                }
+            },
+            {
+                "data": {
+                    "href": "wellord1.html",
+                    "x": 19.1,
+                    "y": 21.96,
+                    "is_dummy": false,
+                    "id": "WELLORD1",
+                    "value": "WELLORD1",
+                    "name": "WELLORD1"
+                }
+            },
+            {
+                "data": {
+                    "href": "relset_1.html",
+                    "x": 17.240000000000002,
+                    "y": 19.080000000000002,
+                    "is_dummy": false,
+                    "id": "RELSET_1",
+                    "value": "RELSET_1",
+                    "name": "RELSET_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "partfun1.html",
+                    "x": 13.34,
+                    "y": 21.96,
+                    "is_dummy": false,
+                    "id": "PARTFUN1",
+                    "value": "PARTFUN1",
+                    "name": "PARTFUN1"
+                }
+            },
+            {
+                "data": {
+                    "href": "mcart_1.html",
+                    "x": 10.6,
+                    "y": 21.96,
+                    "is_dummy": false,
+                    "id": "MCART_1",
+                    "value": "MCART_1",
+                    "name": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "wellord2.html",
+                    "x": 16.6,
+                    "y": 23.400000000000002,
+                    "is_dummy": false,
+                    "id": "WELLORD2",
+                    "value": "WELLORD2",
+                    "name": "WELLORD2"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_2.html",
+                    "x": 10.200000000000001,
+                    "y": 23.400000000000002,
+                    "is_dummy": false,
+                    "id": "FUNCT_2",
+                    "value": "FUNCT_2",
+                    "name": "FUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "binop_1.html",
+                    "x": 8.36,
+                    "y": 24.84,
+                    "is_dummy": false,
+                    "id": "BINOP_1",
+                    "value": "BINOP_1",
+                    "name": "BINOP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "domain_1.html",
+                    "x": 12.92,
+                    "y": 23.400000000000002,
+                    "is_dummy": false,
+                    "id": "DOMAIN_1",
+                    "value": "DOMAIN_1",
+                    "name": "DOMAIN_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_3.html",
+                    "x": 13.82,
+                    "y": 26.28,
+                    "is_dummy": false,
+                    "id": "FUNCT_3",
+                    "value": "FUNCT_3",
+                    "name": "FUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "numerals.html",
+                    "x": 14.780000000000001,
+                    "y": 24.84,
+                    "is_dummy": false,
+                    "id": "NUMERALS",
+                    "value": "NUMERALS",
+                    "name": "NUMERALS"
+                }
+            },
+            {
+                "data": {
+                    "href": "funcop_1.html",
+                    "x": 21.32,
+                    "y": 27.72,
+                    "is_dummy": false,
+                    "id": "FUNCOP_1",
+                    "value": "FUNCOP_1",
+                    "name": "FUNCOP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "realset1.html",
+                    "x": 21.32,
+                    "y": 29.16,
+                    "is_dummy": false,
+                    "id": "REALSET1",
+                    "value": "REALSET1",
+                    "name": "REALSET1"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_4.html",
+                    "x": 21.28,
+                    "y": 30.6,
+                    "is_dummy": false,
+                    "id": "FUNCT_4",
+                    "value": "FUNCT_4",
+                    "name": "FUNCT_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "ordinal2.html",
+                    "x": 18.5,
+                    "y": 29.16,
+                    "is_dummy": false,
+                    "id": "ORDINAL2",
+                    "value": "ORDINAL2",
+                    "name": "ORDINAL2"
+                }
+            },
+            {
+                "data": {
+                    "href": "ordinal3.html",
+                    "x": 18.5,
+                    "y": 30.6,
+                    "is_dummy": false,
+                    "id": "ORDINAL3",
+                    "value": "ORDINAL3",
+                    "name": "ORDINAL3"
+                }
+            },
+            {
+                "data": {
+                    "href": "wellset1.html",
+                    "x": 19.54,
+                    "y": 23.400000000000002,
+                    "is_dummy": false,
+                    "id": "WELLSET1",
+                    "value": "WELLSET1",
+                    "name": "WELLSET1"
+                }
+            },
+            {
+                "data": {
+                    "href": "multop_1.html",
+                    "x": 11.040000000000001,
+                    "y": 24.84,
+                    "is_dummy": false,
+                    "id": "MULTOP_1",
+                    "value": "MULTOP_1",
+                    "name": "MULTOP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "schems_1.html",
+                    "x": 34.78,
+                    "y": 86.76,
+                    "is_dummy": false,
+                    "id": "SCHEMS_1",
+                    "value": "SCHEMS_1",
+                    "name": "SCHEMS_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "sysrel.html",
+                    "x": 39.76,
+                    "y": 62.28,
+                    "is_dummy": false,
+                    "id": "SYSREL",
+                    "value": "SYSREL",
+                    "name": "SYSREL"
+                }
+            },
+            {
+                "data": {
+                    "href": "finset_1.html",
+                    "x": 21.080000000000002,
+                    "y": 32.04,
+                    "is_dummy": false,
+                    "id": "FINSET_1",
+                    "value": "FINSET_1",
+                    "name": "FINSET_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_1.html",
+                    "x": 18.0,
+                    "y": 33.480000000000004,
+                    "is_dummy": false,
+                    "id": "CARD_1",
+                    "value": "CARD_1",
+                    "name": "CARD_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "classes1.html",
+                    "x": 17.6,
+                    "y": 40.68,
+                    "is_dummy": false,
+                    "id": "CLASSES1",
+                    "value": "CLASSES1",
+                    "name": "CLASSES1"
+                }
+            },
+            {
+                "data": {
+                    "href": "pboole.html",
+                    "x": 17.76,
+                    "y": 43.56,
+                    "is_dummy": false,
+                    "id": "PBOOLE",
+                    "value": "PBOOLE",
+                    "name": "PBOOLE"
+                }
+            },
+            {
+                "data": {
+                    "href": "gate_1.html",
+                    "x": 10.46,
+                    "y": 4.68,
+                    "is_dummy": false,
+                    "id": "GATE_1",
+                    "value": "GATE_1",
+                    "name": "GATE_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "gate_2.html",
+                    "x": 12.700000000000001,
+                    "y": 6.12,
+                    "is_dummy": false,
+                    "id": "GATE_2",
+                    "value": "GATE_2",
+                    "name": "GATE_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "gate_3.html",
+                    "x": 10.46,
+                    "y": 6.12,
+                    "is_dummy": false,
+                    "id": "GATE_3",
+                    "value": "GATE_3",
+                    "name": "GATE_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "gate_4.html",
+                    "x": 5.98,
+                    "y": 6.12,
+                    "is_dummy": false,
+                    "id": "GATE_4",
+                    "value": "GATE_4",
+                    "name": "GATE_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "gate_5.html",
+                    "x": 8.22,
+                    "y": 6.12,
+                    "is_dummy": false,
+                    "id": "GATE_5",
+                    "value": "GATE_5",
+                    "name": "GATE_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "finsub_1.html",
+                    "x": 21.14,
+                    "y": 43.56,
+                    "is_dummy": false,
+                    "id": "FINSUB_1",
+                    "value": "FINSUB_1",
+                    "name": "FINSUB_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "orders_1.html",
+                    "x": 18.02,
+                    "y": 47.88,
+                    "is_dummy": false,
+                    "id": "ORDERS_1",
+                    "value": "ORDERS_1",
+                    "name": "ORDERS_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "setwiseo.html",
+                    "x": 24.88,
+                    "y": 47.88,
+                    "is_dummy": false,
+                    "id": "SETWISEO",
+                    "value": "SETWISEO",
+                    "name": "SETWISEO"
+                }
+            },
+            {
+                "data": {
+                    "href": "fraenkel.html",
+                    "x": 23.96,
+                    "y": 49.32,
+                    "is_dummy": false,
+                    "id": "FRAENKEL",
+                    "value": "FRAENKEL",
+                    "name": "FRAENKEL"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_5.html",
+                    "x": 19.38,
+                    "y": 36.36,
+                    "is_dummy": false,
+                    "id": "FUNCT_5",
+                    "value": "FUNCT_5",
+                    "name": "FUNCT_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "partfun2.html",
+                    "x": 22.96,
+                    "y": 37.800000000000004,
+                    "is_dummy": false,
+                    "id": "PARTFUN2",
+                    "value": "PARTFUN2",
+                    "name": "PARTFUN2"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_3.html",
+                    "x": 19.62,
+                    "y": 45.0,
+                    "is_dummy": false,
+                    "id": "CARD_3",
+                    "value": "CARD_3",
+                    "name": "CARD_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_6.html",
+                    "x": 19.7,
+                    "y": 46.44,
+                    "is_dummy": false,
+                    "id": "FUNCT_6",
+                    "value": "FUNCT_6",
+                    "name": "FUNCT_6"
+                }
+            },
+            {
+                "data": {
+                    "href": "arytm_3.html",
+                    "x": 18.42,
+                    "y": 32.04,
+                    "is_dummy": false,
+                    "id": "ARYTM_3",
+                    "value": "ARYTM_3",
+                    "name": "ARYTM_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "arytm_2.html",
+                    "x": 15.58,
+                    "y": 33.480000000000004,
+                    "is_dummy": false,
+                    "id": "ARYTM_2",
+                    "value": "ARYTM_2",
+                    "name": "ARYTM_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "arytm_1.html",
+                    "x": 13.200000000000001,
+                    "y": 34.92,
+                    "is_dummy": false,
+                    "id": "ARYTM_1",
+                    "value": "ARYTM_1",
+                    "name": "ARYTM_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "numbers.html",
+                    "x": 15.9,
+                    "y": 34.92,
+                    "is_dummy": false,
+                    "id": "NUMBERS",
+                    "value": "NUMBERS",
+                    "name": "NUMBERS"
+                }
+            },
+            {
+                "data": {
+                    "href": "arytm_0.html",
+                    "x": 13.24,
+                    "y": 36.36,
+                    "is_dummy": false,
+                    "id": "ARYTM_0",
+                    "value": "ARYTM_0",
+                    "name": "ARYTM_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "xcmplx_0.html",
+                    "x": 11.3,
+                    "y": 37.800000000000004,
+                    "is_dummy": false,
+                    "id": "XCMPLX_0",
+                    "value": "XCMPLX_0",
+                    "name": "XCMPLX_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "arithm.html",
+                    "x": 11.08,
+                    "y": 39.24,
+                    "is_dummy": false,
+                    "id": "ARITHM",
+                    "value": "ARITHM",
+                    "name": "ARITHM"
+                }
+            },
+            {
+                "data": {
+                    "href": "xxreal_0.html",
+                    "x": 13.64,
+                    "y": 39.24,
+                    "is_dummy": false,
+                    "id": "XXREAL_0",
+                    "value": "XXREAL_0",
+                    "name": "XXREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "xreal_0.html",
+                    "x": 13.64,
+                    "y": 40.68,
+                    "is_dummy": false,
+                    "id": "XREAL_0",
+                    "value": "XREAL_0",
+                    "name": "XREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "real.html",
+                    "x": 16.02,
+                    "y": 42.12,
+                    "is_dummy": false,
+                    "id": "REAL",
+                    "value": "REAL",
+                    "name": "REAL"
+                }
+            },
+            {
+                "data": {
+                    "href": "xcmplx_1.html",
+                    "x": 13.700000000000001,
+                    "y": 42.12,
+                    "is_dummy": false,
+                    "id": "XCMPLX_1",
+                    "value": "XCMPLX_1",
+                    "name": "XCMPLX_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "xreal_1.html",
+                    "x": 14.4,
+                    "y": 43.56,
+                    "is_dummy": false,
+                    "id": "XREAL_1",
+                    "value": "XREAL_1",
+                    "name": "XREAL_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "axioms.html",
+                    "x": 11.9,
+                    "y": 43.56,
+                    "is_dummy": false,
+                    "id": "AXIOMS",
+                    "value": "AXIOMS",
+                    "name": "AXIOMS"
+                }
+            },
+            {
+                "data": {
+                    "href": "real_1.html",
+                    "x": 16.52,
+                    "y": 45.0,
+                    "is_dummy": false,
+                    "id": "REAL_1",
+                    "value": "REAL_1",
+                    "name": "REAL_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "square_1.html",
+                    "x": 11.84,
+                    "y": 49.32,
+                    "is_dummy": false,
+                    "id": "SQUARE_1",
+                    "value": "SQUARE_1",
+                    "name": "SQUARE_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "nat_1.html",
+                    "x": 14.42,
+                    "y": 45.0,
+                    "is_dummy": false,
+                    "id": "NAT_1",
+                    "value": "NAT_1",
+                    "name": "NAT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "int_1.html",
+                    "x": 16.6,
+                    "y": 46.44,
+                    "is_dummy": false,
+                    "id": "INT_1",
+                    "value": "INT_1",
+                    "name": "INT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "rat_1.html",
+                    "x": 14.86,
+                    "y": 47.88,
+                    "is_dummy": false,
+                    "id": "RAT_1",
+                    "value": "RAT_1",
+                    "name": "RAT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "membered.html",
+                    "x": 14.86,
+                    "y": 49.32,
+                    "is_dummy": false,
+                    "id": "MEMBERED",
+                    "value": "MEMBERED",
+                    "name": "MEMBERED"
+                }
+            },
+            {
+                "data": {
+                    "href": "valued_0.html",
+                    "x": 19.78,
+                    "y": 50.76,
+                    "is_dummy": false,
+                    "id": "VALUED_0",
+                    "value": "VALUED_0",
+                    "name": "VALUED_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "complex1.html",
+                    "x": 14.86,
+                    "y": 50.76,
+                    "is_dummy": false,
+                    "id": "COMPLEX1",
+                    "value": "COMPLEX1",
+                    "name": "COMPLEX1"
+                }
+            },
+            {
+                "data": {
+                    "href": "absvalue.html",
+                    "x": 15.34,
+                    "y": 53.64,
+                    "is_dummy": false,
+                    "id": "ABSVALUE",
+                    "value": "ABSVALUE",
+                    "name": "ABSVALUE"
+                }
+            },
+            {
+                "data": {
+                    "href": "int_2.html",
+                    "x": 15.780000000000001,
+                    "y": 55.08,
+                    "is_dummy": false,
+                    "id": "INT_2",
+                    "value": "INT_2",
+                    "name": "INT_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "nat_d.html",
+                    "x": 19.36,
+                    "y": 56.52,
+                    "is_dummy": false,
+                    "id": "NAT_D",
+                    "value": "NAT_D",
+                    "name": "NAT_D"
+                }
+            },
+            {
+                "data": {
+                    "href": "binop_2.html",
+                    "x": 25.8,
+                    "y": 57.96,
+                    "is_dummy": false,
+                    "id": "BINOP_2",
+                    "value": "BINOP_2",
+                    "name": "BINOP_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "xxreal_1.html",
+                    "x": 27.560000000000002,
+                    "y": 52.2,
+                    "is_dummy": false,
+                    "id": "XXREAL_1",
+                    "value": "XXREAL_1",
+                    "name": "XXREAL_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_2.html",
+                    "x": 23.06,
+                    "y": 50.76,
+                    "is_dummy": false,
+                    "id": "CARD_2",
+                    "value": "CARD_2",
+                    "name": "CARD_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "xxreal_2.html",
+                    "x": 29.32,
+                    "y": 56.52,
+                    "is_dummy": false,
+                    "id": "XXREAL_2",
+                    "value": "XXREAL_2",
+                    "name": "XXREAL_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "xxreal_3.html",
+                    "x": 29.32,
+                    "y": 62.28,
+                    "is_dummy": false,
+                    "id": "XXREAL_3",
+                    "value": "XXREAL_3",
+                    "name": "XXREAL_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "member_1.html",
+                    "x": 29.2,
+                    "y": 65.16,
+                    "is_dummy": false,
+                    "id": "MEMBER_1",
+                    "value": "MEMBER_1",
+                    "name": "MEMBER_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "supinf_1.html",
+                    "x": 31.6,
+                    "y": 63.72,
+                    "is_dummy": false,
+                    "id": "SUPINF_1",
+                    "value": "SUPINF_1",
+                    "name": "SUPINF_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "quin_1.html",
+                    "x": 11.84,
+                    "y": 50.76,
+                    "is_dummy": false,
+                    "id": "QUIN_1",
+                    "value": "QUIN_1",
+                    "name": "QUIN_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "classes2.html",
+                    "x": 19.3,
+                    "y": 63.72,
+                    "is_dummy": false,
+                    "id": "CLASSES2",
+                    "value": "CLASSES2",
+                    "name": "CLASSES2"
+                }
+            },
+            {
+                "data": {
+                    "href": "ordinal4.html",
+                    "x": 19.3,
+                    "y": 68.04,
+                    "is_dummy": false,
+                    "id": "ORDINAL4",
+                    "value": "ORDINAL4",
+                    "name": "ORDINAL4"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_1.html",
+                    "x": 19.78,
+                    "y": 52.2,
+                    "is_dummy": false,
+                    "id": "FINSEQ_1",
+                    "value": "FINSEQ_1",
+                    "name": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "recdef_1.html",
+                    "x": 20.66,
+                    "y": 55.08,
+                    "is_dummy": false,
+                    "id": "RECDEF_1",
+                    "value": "RECDEF_1",
+                    "name": "RECDEF_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "eqrel_1.html",
+                    "x": 18.04,
+                    "y": 53.64,
+                    "is_dummy": false,
+                    "id": "EQREL_1",
+                    "value": "EQREL_1",
+                    "name": "EQREL_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_2.html",
+                    "x": 12.540000000000001,
+                    "y": 53.64,
+                    "is_dummy": false,
+                    "id": "FINSEQ_2",
+                    "value": "FINSEQ_2",
+                    "name": "FINSEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseqop.html",
+                    "x": 13.4,
+                    "y": 55.08,
+                    "is_dummy": false,
+                    "id": "FINSEQOP",
+                    "value": "FINSEQOP",
+                    "name": "FINSEQOP"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_3.html",
+                    "x": 14.200000000000001,
+                    "y": 56.52,
+                    "is_dummy": false,
+                    "id": "FINSEQ_3",
+                    "value": "FINSEQ_3",
+                    "name": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "valued_1.html",
+                    "x": 22.8,
+                    "y": 57.96,
+                    "is_dummy": false,
+                    "id": "VALUED_1",
+                    "value": "VALUED_1",
+                    "name": "VALUED_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "seq_1.html",
+                    "x": 22.44,
+                    "y": 60.84,
+                    "is_dummy": false,
+                    "id": "SEQ_1",
+                    "value": "SEQ_1",
+                    "name": "SEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "comseq_1.html",
+                    "x": 24.8,
+                    "y": 59.4,
+                    "is_dummy": false,
+                    "id": "COMSEQ_1",
+                    "value": "COMSEQ_1",
+                    "name": "COMSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "xboolean.html",
+                    "x": 9.96,
+                    "y": 40.68,
+                    "is_dummy": false,
+                    "id": "XBOOLEAN",
+                    "value": "XBOOLEAN",
+                    "name": "XBOOLEAN"
+                }
+            },
+            {
+                "data": {
+                    "href": "comseq_2.html",
+                    "x": 24.94,
+                    "y": 60.84,
+                    "is_dummy": false,
+                    "id": "COMSEQ_2",
+                    "value": "COMSEQ_2",
+                    "name": "COMSEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "seq_2.html",
+                    "x": 22.44,
+                    "y": 62.28,
+                    "is_dummy": false,
+                    "id": "SEQ_2",
+                    "value": "SEQ_2",
+                    "name": "SEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "margrel1.html",
+                    "x": 8.92,
+                    "y": 57.96,
+                    "is_dummy": false,
+                    "id": "MARGREL1",
+                    "value": "MARGREL1",
+                    "name": "MARGREL1"
+                }
+            },
+            {
+                "data": {
+                    "href": "toler_1.html",
+                    "x": 17.98,
+                    "y": 55.08,
+                    "is_dummy": false,
+                    "id": "TOLER_1",
+                    "value": "TOLER_1",
+                    "name": "TOLER_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_1.html",
+                    "x": 14.200000000000001,
+                    "y": 62.28,
+                    "is_dummy": false,
+                    "id": "TREES_1",
+                    "value": "TREES_1",
+                    "name": "TREES_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_4.html",
+                    "x": 16.88,
+                    "y": 57.96,
+                    "is_dummy": false,
+                    "id": "FINSEQ_4",
+                    "value": "FINSEQ_4",
+                    "name": "FINSEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "finsop_1.html",
+                    "x": 18.5,
+                    "y": 60.84,
+                    "is_dummy": false,
+                    "id": "FINSOP_1",
+                    "value": "FINSOP_1",
+                    "name": "FINSOP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "setwop_2.html",
+                    "x": 24.98,
+                    "y": 63.72,
+                    "is_dummy": false,
+                    "id": "SETWOP_2",
+                    "value": "SETWOP_2",
+                    "name": "SETWOP_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "rfunct_1.html",
+                    "x": 22.12,
+                    "y": 63.72,
+                    "is_dummy": false,
+                    "id": "RFUNCT_1",
+                    "value": "RFUNCT_1",
+                    "name": "RFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "rvsum_1.html",
+                    "x": 26.2,
+                    "y": 65.16,
+                    "is_dummy": false,
+                    "id": "RVSUM_1",
+                    "value": "RVSUM_1",
+                    "name": "RVSUM_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "newton.html",
+                    "x": 23.6,
+                    "y": 66.6,
+                    "is_dummy": false,
+                    "id": "NEWTON",
+                    "value": "NEWTON",
+                    "name": "NEWTON"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_4.html",
+                    "x": 23.94,
+                    "y": 68.04,
+                    "is_dummy": false,
+                    "id": "CARD_4",
+                    "value": "CARD_4",
+                    "name": "CARD_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_5.html",
+                    "x": 19.3,
+                    "y": 69.48,
+                    "is_dummy": false,
+                    "id": "CARD_5",
+                    "value": "CARD_5",
+                    "name": "CARD_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_2.html",
+                    "x": 16.6,
+                    "y": 68.04,
+                    "is_dummy": false,
+                    "id": "TREES_2",
+                    "value": "TREES_2",
+                    "name": "TREES_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "valued_2.html",
+                    "x": 21.1,
+                    "y": 65.16,
+                    "is_dummy": false,
+                    "id": "VALUED_2",
+                    "value": "VALUED_2",
+                    "name": "VALUED_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "seqm_3.html",
+                    "x": 23.68,
+                    "y": 65.16,
+                    "is_dummy": false,
+                    "id": "SEQM_3",
+                    "value": "SEQM_3",
+                    "name": "SEQM_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "rfinseq.html",
+                    "x": 26.2,
+                    "y": 66.6,
+                    "is_dummy": false,
+                    "id": "RFINSEQ",
+                    "value": "RFINSEQ",
+                    "name": "RFINSEQ"
+                }
+            },
+            {
+                "data": {
+                    "href": "seq_4.html",
+                    "x": 28.5,
+                    "y": 66.6,
+                    "is_dummy": false,
+                    "id": "SEQ_4",
+                    "value": "SEQ_4",
+                    "name": "SEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "rcomp_1.html",
+                    "x": 29.94,
+                    "y": 69.48,
+                    "is_dummy": false,
+                    "id": "RCOMP_1",
+                    "value": "RCOMP_1",
+                    "name": "RCOMP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "rfunct_2.html",
+                    "x": 29.98,
+                    "y": 70.92,
+                    "is_dummy": false,
+                    "id": "RFUNCT_2",
+                    "value": "RFUNCT_2",
+                    "name": "RFUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "cfunct_1.html",
+                    "x": 13.98,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "CFUNCT_1",
+                    "value": "CFUNCT_1",
+                    "name": "CFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "fcont_1.html",
+                    "x": 34.54,
+                    "y": 72.36,
+                    "is_dummy": false,
+                    "id": "FCONT_1",
+                    "value": "FCONT_1",
+                    "name": "FCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "fcont_2.html",
+                    "x": 31.52,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "FCONT_2",
+                    "value": "FCONT_2",
+                    "name": "FCONT_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "fdiff_1.html",
+                    "x": 39.38,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "FDIFF_1",
+                    "value": "FDIFF_1",
+                    "name": "FDIFF_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "rolle.html",
+                    "x": 42.36,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "ROLLE",
+                    "value": "ROLLE",
+                    "name": "ROLLE"
+                }
+            },
+            {
+                "data": {
+                    "href": "prepower.html",
+                    "x": 21.34,
+                    "y": 72.36,
+                    "is_dummy": false,
+                    "id": "PREPOWER",
+                    "value": "PREPOWER",
+                    "name": "PREPOWER"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_5.html",
+                    "x": 26.44,
+                    "y": 68.04,
+                    "is_dummy": false,
+                    "id": "FINSEQ_5",
+                    "value": "FINSEQ_5",
+                    "name": "FINSEQ_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "rewrite1.html",
+                    "x": 26.38,
+                    "y": 69.48,
+                    "is_dummy": false,
+                    "id": "REWRITE1",
+                    "value": "REWRITE1",
+                    "name": "REWRITE1"
+                }
+            },
+            {
+                "data": {
+                    "href": "funct_7.html",
+                    "x": 32.7,
+                    "y": 70.92,
+                    "is_dummy": false,
+                    "id": "FUNCT_7",
+                    "value": "FUNCT_7",
+                    "name": "FUNCT_7"
+                }
+            },
+            {
+                "data": {
+                    "href": "scheme1.html",
+                    "x": 26.42,
+                    "y": 70.92,
+                    "is_dummy": false,
+                    "id": "SCHEME1",
+                    "value": "SCHEME1",
+                    "name": "SCHEME1"
+                }
+            },
+            {
+                "data": {
+                    "href": "abian.html",
+                    "x": 28.38,
+                    "y": 72.36,
+                    "is_dummy": false,
+                    "id": "ABIAN",
+                    "value": "ABIAN",
+                    "name": "ABIAN"
+                }
+            },
+            {
+                "data": {
+                    "href": "power.html",
+                    "x": 21.34,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "POWER",
+                    "value": "POWER",
+                    "name": "POWER"
+                }
+            },
+            {
+                "data": {
+                    "href": "polyeq_1.html",
+                    "x": 11.44,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "POLYEQ_1",
+                    "value": "POLYEQ_1",
+                    "name": "POLYEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "series_1.html",
+                    "x": 19.740000000000002,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "SERIES_1",
+                    "value": "SERIES_1",
+                    "name": "SERIES_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "comseq_3.html",
+                    "x": 16.88,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "COMSEQ_3",
+                    "value": "COMSEQ_3",
+                    "name": "COMSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "cfcont_1.html",
+                    "x": 17.04,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "CFCONT_1",
+                    "value": "CFCONT_1",
+                    "name": "CFCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "cfdiff_1.html",
+                    "x": 16.96,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "CFDIFF_1",
+                    "value": "CFDIFF_1",
+                    "name": "CFDIFF_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "rpr_1.html",
+                    "x": 21.080000000000002,
+                    "y": 53.64,
+                    "is_dummy": false,
+                    "id": "RPR_1",
+                    "value": "RPR_1",
+                    "name": "RPR_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "supinf_2.html",
+                    "x": 32.64,
+                    "y": 69.48,
+                    "is_dummy": false,
+                    "id": "SUPINF_2",
+                    "value": "SUPINF_2",
+                    "name": "SUPINF_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_a.html",
+                    "x": 12.88,
+                    "y": 72.36,
+                    "is_dummy": false,
+                    "id": "TREES_A",
+                    "value": "TREES_A",
+                    "name": "TREES_A"
+                }
+            },
+            {
+                "data": {
+                    "href": "pre_ff.html",
+                    "x": 25.36,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "PRE_FF",
+                    "value": "PRE_FF",
+                    "name": "PRE_FF"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_3.html",
+                    "x": 14.08,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "TREES_3",
+                    "value": "TREES_3",
+                    "name": "TREES_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "partit1.html",
+                    "x": 16.12,
+                    "y": 59.4,
+                    "is_dummy": false,
+                    "id": "PARTIT1",
+                    "value": "PARTIT1",
+                    "name": "PARTIT1"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_4.html",
+                    "x": 14.08,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "TREES_4",
+                    "value": "TREES_4",
+                    "name": "TREES_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "card_fil.html",
+                    "x": 18.740000000000002,
+                    "y": 70.92,
+                    "is_dummy": false,
+                    "id": "CARD_FIL",
+                    "value": "CARD_FIL",
+                    "name": "CARD_FIL"
+                }
+            },
+            {
+                "data": {
+                    "href": "binarith.html",
+                    "x": 8.92,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "BINARITH",
+                    "value": "BINARITH",
+                    "name": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "href": "pre_circ.html",
+                    "x": 10.66,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "PRE_CIRC",
+                    "value": "PRE_CIRC",
+                    "name": "PRE_CIRC"
+                }
+            },
+            {
+                "data": {
+                    "href": "finseq_6.html",
+                    "x": 7.18,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "FINSEQ_6",
+                    "value": "FINSEQ_6",
+                    "name": "FINSEQ_6"
+                }
+            },
+            {
+                "data": {
+                    "href": "mboolean.html",
+                    "x": 13.200000000000001,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "MBOOLEAN",
+                    "value": "MBOOLEAN",
+                    "name": "MBOOLEAN"
+                }
+            },
+            {
+                "data": {
+                    "href": "wsierp_1.html",
+                    "x": 23.26,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "WSIERP_1",
+                    "value": "WSIERP_1",
+                    "name": "WSIERP_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "glib_000.html",
+                    "x": 19.36,
+                    "y": 59.4,
+                    "is_dummy": false,
+                    "id": "GLIB_000",
+                    "value": "GLIB_000",
+                    "name": "GLIB_000"
+                }
+            },
+            {
+                "data": {
+                    "href": "pzfmisc1.html",
+                    "x": 16.0,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "PZFMISC1",
+                    "value": "PZFMISC1",
+                    "name": "PZFMISC1"
+                }
+            },
+            {
+                "data": {
+                    "href": "genealg1.html",
+                    "x": 7.0600000000000005,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "GENEALG1",
+                    "value": "GENEALG1",
+                    "name": "GENEALG1"
+                }
+            },
+            {
+                "data": {
+                    "href": "binari_2.html",
+                    "x": 4.5200000000000005,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "BINARI_2",
+                    "value": "BINARI_2",
+                    "name": "BINARI_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "trees_9.html",
+                    "x": 4.32,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "TREES_9",
+                    "value": "TREES_9",
+                    "name": "TREES_9"
+                }
+            },
+            {
+                "data": {
+                    "href": "mssubfam.html",
+                    "x": 18.66,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "MSSUBFAM",
+                    "value": "MSSUBFAM",
+                    "name": "MSSUBFAM"
+                }
+            },
+            {
+                "data": {
+                    "href": "relset_2.html",
+                    "x": 31.78,
+                    "y": 83.88,
+                    "is_dummy": false,
+                    "id": "RELSET_2",
+                    "value": "RELSET_2",
+                    "name": "RELSET_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "recdef_2.html",
+                    "x": 1.8,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "RECDEF_2",
+                    "value": "RECDEF_2",
+                    "name": "RECDEF_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "prob_1.html",
+                    "x": 36.96,
+                    "y": 72.36,
+                    "is_dummy": false,
+                    "id": "PROB_1",
+                    "value": "PROB_1",
+                    "name": "PROB_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "prob_2.html",
+                    "x": 43.04,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "PROB_2",
+                    "value": "PROB_2",
+                    "name": "PROB_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "limfunc1.html",
+                    "x": 34.26,
+                    "y": 73.8,
+                    "is_dummy": false,
+                    "id": "LIMFUNC1",
+                    "value": "LIMFUNC1",
+                    "name": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "href": "limfunc2.html",
+                    "x": 37.12,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "LIMFUNC2",
+                    "value": "LIMFUNC2",
+                    "name": "LIMFUNC2"
+                }
+            },
+            {
+                "data": {
+                    "href": "seqfunc.html",
+                    "x": 39.94,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "SEQFUNC",
+                    "value": "SEQFUNC",
+                    "name": "SEQFUNC"
+                }
+            },
+            {
+                "data": {
+                    "href": "limfunc3.html",
+                    "x": 40.58,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "LIMFUNC3",
+                    "value": "LIMFUNC3",
+                    "name": "LIMFUNC3"
+                }
+            },
+            {
+                "data": {
+                    "href": "fcont_3.html",
+                    "x": 31.52,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "FCONT_3",
+                    "value": "FCONT_3",
+                    "name": "FCONT_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "limfunc4.html",
+                    "x": 39.62,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "LIMFUNC4",
+                    "value": "LIMFUNC4",
+                    "name": "LIMFUNC4"
+                }
+            },
+            {
+                "data": {
+                    "href": "l_hospit.html",
+                    "x": 42.42,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "L_HOSPIT",
+                    "value": "L_HOSPIT",
+                    "name": "L_HOSPIT"
+                }
+            },
+            {
+                "data": {
+                    "href": "fdiff_2.html",
+                    "x": 34.24,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "FDIFF_2",
+                    "value": "FDIFF_2",
+                    "name": "FDIFF_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "fdiff_3.html",
+                    "x": 35.62,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "FDIFF_3",
+                    "value": "FDIFF_3",
+                    "name": "FDIFF_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure1.html",
+                    "x": 47.92,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "MEASURE1",
+                    "value": "MEASURE1",
+                    "name": "MEASURE1"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure2.html",
+                    "x": 47.92,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "MEASURE2",
+                    "value": "MEASURE2",
+                    "name": "MEASURE2"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure3.html",
+                    "x": 47.92,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "MEASURE3",
+                    "value": "MEASURE3",
+                    "name": "MEASURE3"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure4.html",
+                    "x": 48.68,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "MEASURE4",
+                    "value": "MEASURE4",
+                    "name": "MEASURE4"
+                }
+            },
+            {
+                "data": {
+                    "href": "rfunct_3.html",
+                    "x": 34.24,
+                    "y": 75.24,
+                    "is_dummy": false,
+                    "id": "RFUNCT_3",
+                    "value": "RFUNCT_3",
+                    "name": "RFUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure5.html",
+                    "x": 35.52,
+                    "y": 70.92,
+                    "is_dummy": false,
+                    "id": "MEASURE5",
+                    "value": "MEASURE5",
+                    "name": "MEASURE5"
+                }
+            },
+            {
+                "data": {
+                    "href": "rearran1.html",
+                    "x": 36.9,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "REARRAN1",
+                    "value": "REARRAN1",
+                    "name": "REARRAN1"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure6.html",
+                    "x": 31.52,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "MEASURE6",
+                    "value": "MEASURE6",
+                    "name": "MEASURE6"
+                }
+            },
+            {
+                "data": {
+                    "href": "extreal1.html",
+                    "x": 13.44,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "EXTREAL1",
+                    "value": "EXTREAL1",
+                    "name": "EXTREAL1"
+                }
+            },
+            {
+                "data": {
+                    "href": "measure7.html",
+                    "x": 49.620000000000005,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "MEASURE7",
+                    "value": "MEASURE7",
+                    "name": "MEASURE7"
+                }
+            },
+            {
+                "data": {
+                    "href": "rfunct_4.html",
+                    "x": 44.22,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "RFUNCT_4",
+                    "value": "RFUNCT_4",
+                    "name": "RFUNCT_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "mesfunc1.html",
+                    "x": 31.78,
+                    "y": 85.32000000000001,
+                    "is_dummy": false,
+                    "id": "MESFUNC1",
+                    "value": "MESFUNC1",
+                    "name": "MESFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos.html",
+                    "x": 22.46,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "SIN_COS",
+                    "value": "SIN_COS",
+                    "name": "SIN_COS"
+                }
+            },
+            {
+                "data": {
+                    "href": "mesfunc2.html",
+                    "x": 31.78,
+                    "y": 86.76,
+                    "is_dummy": false,
+                    "id": "MESFUNC2",
+                    "value": "MESFUNC2",
+                    "name": "MESFUNC2"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos2.html",
+                    "x": 19.66,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "SIN_COS2",
+                    "value": "SIN_COS2",
+                    "name": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos3.html",
+                    "x": 18.8,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "SIN_COS3",
+                    "value": "SIN_COS3",
+                    "name": "SIN_COS3"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos4.html",
+                    "x": 22.38,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "SIN_COS4",
+                    "value": "SIN_COS4",
+                    "name": "SIN_COS4"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos5.html",
+                    "x": 21.54,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "SIN_COS5",
+                    "value": "SIN_COS5",
+                    "name": "SIN_COS5"
+                }
+            },
+            {
+                "data": {
+                    "href": "asympt_0.html",
+                    "x": 28.6,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "ASYMPT_0",
+                    "value": "ASYMPT_0",
+                    "name": "ASYMPT_0"
+                }
+            },
+            {
+                "data": {
+                    "href": "comptrig.html",
+                    "x": 13.08,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "COMPTRIG",
+                    "value": "COMPTRIG",
+                    "name": "COMPTRIG"
+                }
+            },
+            {
+                "data": {
+                    "href": "complex2.html",
+                    "x": 15.64,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "COMPLEX2",
+                    "value": "COMPLEX2",
+                    "name": "COMPLEX2"
+                }
+            },
+            {
+                "data": {
+                    "href": "polyeq_2.html",
+                    "x": 19.740000000000002,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "POLYEQ_2",
+                    "value": "POLYEQ_2",
+                    "name": "POLYEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "polyeq_3.html",
+                    "x": 12.780000000000001,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "POLYEQ_3",
+                    "value": "POLYEQ_3",
+                    "name": "POLYEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "polyeq_4.html",
+                    "x": 19.84,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "POLYEQ_4",
+                    "value": "POLYEQ_4",
+                    "name": "POLYEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "polyeq_5.html",
+                    "x": 12.84,
+                    "y": 83.88,
+                    "is_dummy": false,
+                    "id": "POLYEQ_5",
+                    "value": "POLYEQ_5",
+                    "name": "POLYEQ_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "sin_cos6.html",
+                    "x": 15.64,
+                    "y": 83.88,
+                    "is_dummy": false,
+                    "id": "SIN_COS6",
+                    "value": "SIN_COS6",
+                    "name": "SIN_COS6"
+                }
+            },
+            {
+                "data": {
+                    "href": "euler_1.html",
+                    "x": 25.92,
+                    "y": 76.68,
+                    "is_dummy": false,
+                    "id": "EULER_1",
+                    "value": "EULER_1",
+                    "name": "EULER_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "euler_2.html",
+                    "x": 26.5,
+                    "y": 78.12,
+                    "is_dummy": false,
+                    "id": "EULER_2",
+                    "value": "EULER_2",
+                    "name": "EULER_2"
+                }
+            },
+            {
+                "data": {
+                    "href": "asympt_1.html",
+                    "x": 26.2,
+                    "y": 79.56,
+                    "is_dummy": false,
+                    "id": "ASYMPT_1",
+                    "value": "ASYMPT_1",
+                    "name": "ASYMPT_1"
+                }
+            },
+            {
+                "data": {
+                    "href": "series_3.html",
+                    "x": 24.26,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "SERIES_3",
+                    "value": "SERIES_3",
+                    "name": "SERIES_3"
+                }
+            },
+            {
+                "data": {
+                    "href": "series_4.html",
+                    "x": 24.36,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "SERIES_4",
+                    "value": "SERIES_4",
+                    "name": "SERIES_4"
+                }
+            },
+            {
+                "data": {
+                    "href": "series_5.html",
+                    "x": 27.04,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "SERIES_5",
+                    "value": "SERIES_5",
+                    "name": "SERIES_5"
+                }
+            },
+            {
+                "data": {
+                    "href": "quaterni.html",
+                    "x": 21.6,
+                    "y": 82.44,
+                    "is_dummy": false,
+                    "id": "QUATERNI",
+                    "value": "QUATERNI",
+                    "name": "QUATERNI"
+                }
+            }
+        ],
+        "edges": [
+            {
+                "data": {
+                    "source": "TARSKI",
+                    "target": "TARSKI_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XBOOLE_0",
+                    "target": "TARSKI"
+                }
+            },
+            {
+                "data": {
+                    "source": "BOOLE",
+                    "target": "XBOOLE_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XBOOLE_1",
+                    "target": "BOOLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "ENUMSET1",
+                    "target": "XBOOLE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "XTUPLE_0",
+                    "target": "ENUMSET1"
+                }
+            },
+            {
+                "data": {
+                    "source": "XFAMILY",
+                    "target": "XTUPLE_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XREGULAR",
+                    "target": "XFAMILY"
+                }
+            },
+            {
+                "data": {
+                    "source": "ZFMISC_1",
+                    "target": "XREGULAR"
+                }
+            },
+            {
+                "data": {
+                    "source": "ZFMISC_1",
+                    "target": "TARSKI_A"
+                }
+            },
+            {
+                "data": {
+                    "source": "TARSKI_A",
+                    "target": "TARSKI"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUBSET_1",
+                    "target": "ZFMISC_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUBSET",
+                    "target": "SUBSET_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SETFAM_1",
+                    "target": "SUBSET"
+                }
+            },
+            {
+                "data": {
+                    "source": "RELAT_1",
+                    "target": "SUBSET"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_1",
+                    "target": "RELAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_1",
+                    "target": "SETFAM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GRFUNC_1",
+                    "target": "FUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RELAT_2",
+                    "target": "RELAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDINAL1",
+                    "target": "FUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD1",
+                    "target": "RELAT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD1",
+                    "target": "FUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RELSET_1",
+                    "target": "RELAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PARTFUN1",
+                    "target": "RELSET_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PARTFUN1",
+                    "target": "RELAT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "PARTFUN1",
+                    "target": "GRFUNC_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MCART_1",
+                    "target": "FUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD2",
+                    "target": "ORDINAL1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD2",
+                    "target": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD2",
+                    "target": "WELLORD1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_2",
+                    "target": "PARTFUN1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_2",
+                    "target": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINOP_1",
+                    "target": "FUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "DOMAIN_1",
+                    "target": "PARTFUN1"
+                }
+            },
+            {
+                "data": {
+                    "source": "DOMAIN_1",
+                    "target": "ORDINAL1"
+                }
+            },
+            {
+                "data": {
+                    "source": "DOMAIN_1",
+                    "target": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_3",
+                    "target": "NUMERALS"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_3",
+                    "target": "BINOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_3",
+                    "target": "DOMAIN_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "NUMERALS",
+                    "target": "ORDINAL1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCOP_1",
+                    "target": "WELLORD1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCOP_1",
+                    "target": "FUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "REALSET1",
+                    "target": "FUNCOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_4",
+                    "target": "REALSET1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDINAL2",
+                    "target": "FUNCOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDINAL3",
+                    "target": "ORDINAL2"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLSET1",
+                    "target": "WELLORD1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MULTOP_1",
+                    "target": "FUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MULTOP_1",
+                    "target": "DOMAIN_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SYSREL",
+                    "target": "RELAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSET_1",
+                    "target": "FUNCT_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSET_1",
+                    "target": "ORDINAL3"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_1",
+                    "target": "FINSET_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_1",
+                    "target": "WELLORD2"
+                }
+            },
+            {
+                "data": {
+                    "source": "CLASSES1",
+                    "target": "CARD_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PBOOLE",
+                    "target": "CLASSES1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_1",
+                    "target": "XBOOLE_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_2",
+                    "target": "BOOLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_2",
+                    "target": "GATE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_3",
+                    "target": "GATE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_4",
+                    "target": "GATE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GATE_5",
+                    "target": "GATE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSUB_1",
+                    "target": "FINSET_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDERS_1",
+                    "target": "PBOOLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "SETWISEO",
+                    "target": "FINSUB_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FRAENKEL",
+                    "target": "SETWISEO"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_5",
+                    "target": "CARD_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PARTFUN2",
+                    "target": "FUNCOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_3",
+                    "target": "PBOOLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_3",
+                    "target": "FINSUB_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_3",
+                    "target": "FUNCT_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_6",
+                    "target": "CARD_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARYTM_3",
+                    "target": "ORDINAL3"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARYTM_2",
+                    "target": "ARYTM_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARYTM_1",
+                    "target": "ARYTM_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "NUMBERS",
+                    "target": "CARD_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "NUMBERS",
+                    "target": "ARYTM_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARYTM_0",
+                    "target": "NUMBERS"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARYTM_0",
+                    "target": "ARYTM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "XCMPLX_0",
+                    "target": "ARYTM_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "ARITHM",
+                    "target": "XCMPLX_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XXREAL_0",
+                    "target": "ARYTM_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XREAL_0",
+                    "target": "ARITHM"
+                }
+            },
+            {
+                "data": {
+                    "source": "XREAL_0",
+                    "target": "XXREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "REAL",
+                    "target": "XREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XCMPLX_1",
+                    "target": "XREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "XREAL_1",
+                    "target": "REAL"
+                }
+            },
+            {
+                "data": {
+                    "source": "XREAL_1",
+                    "target": "XCMPLX_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "AXIOMS",
+                    "target": "XREAL_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "REAL_1",
+                    "target": "REAL"
+                }
+            },
+            {
+                "data": {
+                    "source": "SQUARE_1",
+                    "target": "XREAL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SQUARE_1",
+                    "target": "AXIOMS"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_1",
+                    "target": "XREAL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_1",
+                    "target": "AXIOMS"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_1",
+                    "target": "PBOOLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_1",
+                    "target": "REAL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_1",
+                    "target": "NAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RAT_1",
+                    "target": "INT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEMBERED",
+                    "target": "RAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_0",
+                    "target": "MEMBERED"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_0",
+                    "target": "PARTFUN2"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPLEX1",
+                    "target": "SQUARE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPLEX1",
+                    "target": "MEMBERED"
+                }
+            },
+            {
+                "data": {
+                    "source": "ABSVALUE",
+                    "target": "COMPLEX1"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_2",
+                    "target": "ABSVALUE"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_D",
+                    "target": "INT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINOP_2",
+                    "target": "VALUED_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINOP_2",
+                    "target": "SETWISEO"
+                }
+            },
+            {
+                "data": {
+                    "source": "XXREAL_1",
+                    "target": "MEMBERED"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_2",
+                    "target": "NAT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_2",
+                    "target": "FRAENKEL"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_2",
+                    "target": "FUNCT_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "XXREAL_2",
+                    "target": "XXREAL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "XXREAL_2",
+                    "target": "SETWISEO"
+                }
+            },
+            {
+                "data": {
+                    "source": "XXREAL_3",
+                    "target": "XXREAL_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEMBER_1",
+                    "target": "BINOP_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEMBER_1",
+                    "target": "XXREAL_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUPINF_1",
+                    "target": "XXREAL_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "QUIN_1",
+                    "target": "SQUARE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "QUIN_1",
+                    "target": "MEMBERED"
+                }
+            },
+            {
+                "data": {
+                    "source": "CLASSES2",
+                    "target": "CARD_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDINAL4",
+                    "target": "CLASSES2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_1",
+                    "target": "VALUED_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_1",
+                    "target": "CARD_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "RECDEF_1",
+                    "target": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "EQREL_1",
+                    "target": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "EQREL_1",
+                    "target": "ORDERS_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_2",
+                    "target": "SQUARE_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_2",
+                    "target": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQOP",
+                    "target": "EQREL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQOP",
+                    "target": "FINSEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_3",
+                    "target": "FINSEQOP"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_1",
+                    "target": "NAT_D"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_1",
+                    "target": "XXREAL_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_1",
+                    "target": "RECDEF_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_1",
+                    "target": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_1",
+                    "target": "VALUED_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMSEQ_1",
+                    "target": "VALUED_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "XBOOLEAN",
+                    "target": "ARITHM"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMSEQ_2",
+                    "target": "COMSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_2",
+                    "target": "SEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_2",
+                    "target": "COMSEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MARGREL1",
+                    "target": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MARGREL1",
+                    "target": "XBOOLEAN"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOLER_1",
+                    "target": "EQREL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_1",
+                    "target": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_4",
+                    "target": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSOP_1",
+                    "target": "FINSEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "SETWOP_2",
+                    "target": "FINSOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_1",
+                    "target": "SEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "RVSUM_1",
+                    "target": "SETWOP_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "RVSUM_1",
+                    "target": "RFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RVSUM_1",
+                    "target": "BINOP_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "NEWTON",
+                    "target": "RVSUM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_4",
+                    "target": "NEWTON"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_5",
+                    "target": "CARD_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_5",
+                    "target": "ORDINAL4"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_2",
+                    "target": "TREES_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_2",
+                    "target": "RFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQM_3",
+                    "target": "RFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFINSEQ",
+                    "target": "RVSUM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFINSEQ",
+                    "target": "SEQM_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_4",
+                    "target": "RVSUM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_4",
+                    "target": "SEQM_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQ_4",
+                    "target": "MEMBER_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RCOMP_1",
+                    "target": "SEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_2",
+                    "target": "RCOMP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CFUNCT_1",
+                    "target": "RFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FCONT_1",
+                    "target": "RFUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FCONT_2",
+                    "target": "FCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_1",
+                    "target": "FCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ROLLE",
+                    "target": "FDIFF_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PREPOWER",
+                    "target": "NEWTON"
+                }
+            },
+            {
+                "data": {
+                    "source": "PREPOWER",
+                    "target": "RFUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_5",
+                    "target": "RFINSEQ"
+                }
+            },
+            {
+                "data": {
+                    "source": "REWRITE1",
+                    "target": "TREES_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "REWRITE1",
+                    "target": "FINSEQ_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_7",
+                    "target": "REWRITE1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SCHEME1",
+                    "target": "SEQM_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "ABIAN",
+                    "target": "SEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "ABIAN",
+                    "target": "FUNCT_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "ABIAN",
+                    "target": "SCHEME1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POWER",
+                    "target": "PREPOWER"
+                }
+            },
+            {
+                "data": {
+                    "source": "POWER",
+                    "target": "ABIAN"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_1",
+                    "target": "QUIN_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_1",
+                    "target": "POWER"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_1",
+                    "target": "POWER"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMSEQ_3",
+                    "target": "SERIES_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CFCONT_1",
+                    "target": "CFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CFCONT_1",
+                    "target": "COMSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "CFDIFF_1",
+                    "target": "CFCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RPR_1",
+                    "target": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUPINF_2",
+                    "target": "CARD_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUPINF_2",
+                    "target": "MEMBER_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SUPINF_2",
+                    "target": "SUPINF_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_A",
+                    "target": "TREES_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "PRE_FF",
+                    "target": "POWER"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_3",
+                    "target": "TREES_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "PARTIT1",
+                    "target": "FINSEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_4",
+                    "target": "TREES_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_FIL",
+                    "target": "CARD_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_FIL",
+                    "target": "TREES_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINARITH",
+                    "target": "MARGREL1"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINARITH",
+                    "target": "SERIES_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINARITH",
+                    "target": "TREES_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "PRE_CIRC",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "PRE_CIRC",
+                    "target": "TREES_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_6",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "MBOOLEAN",
+                    "target": "PRE_CIRC"
+                }
+            },
+            {
+                "data": {
+                    "source": "WSIERP_1",
+                    "target": "CARD_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "WSIERP_1",
+                    "target": "PRE_FF"
+                }
+            },
+            {
+                "data": {
+                    "source": "WSIERP_1",
+                    "target": "TREES_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "GLIB_000",
+                    "target": "FINSEQ_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "GLIB_000",
+                    "target": "NAT_D"
+                }
+            },
+            {
+                "data": {
+                    "source": "GLIB_000",
+                    "target": "BINOP_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "PZFMISC1",
+                    "target": "MBOOLEAN"
+                }
+            },
+            {
+                "data": {
+                    "source": "GENEALG1",
+                    "target": "FINSEQ_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "BINARI_2",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_9",
+                    "target": "FINSEQ_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_9",
+                    "target": "PRE_CIRC"
+                }
+            },
+            {
+                "data": {
+                    "source": "TREES_9",
+                    "target": "TREES_A"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSSUBFAM",
+                    "target": "PZFMISC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RELSET_2",
+                    "target": "MSSUBFAM"
+                }
+            },
+            {
+                "data": {
+                    "source": "RELSET_2",
+                    "target": "SYSREL"
+                }
+            },
+            {
+                "data": {
+                    "source": "RECDEF_2",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "PROB_1",
+                    "target": "FUNCT_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "PROB_2",
+                    "target": "PROB_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC1",
+                    "target": "PROB_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC1",
+                    "target": "RFUNCT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC2",
+                    "target": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQFUNC",
+                    "target": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SEQFUNC",
+                    "target": "FCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC3",
+                    "target": "LIMFUNC2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FCONT_3",
+                    "target": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FCONT_3",
+                    "target": "FCONT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC4",
+                    "target": "LIMFUNC3"
+                }
+            },
+            {
+                "data": {
+                    "source": "L_HOSPIT",
+                    "target": "LIMFUNC3"
+                }
+            },
+            {
+                "data": {
+                    "source": "L_HOSPIT",
+                    "target": "ROLLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_2",
+                    "target": "FCONT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_2",
+                    "target": "ROLLE"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_2",
+                    "target": "SCHEME1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_3",
+                    "target": "LIMFUNC2"
+                }
+            },
+            {
+                "data": {
+                    "source": "FDIFF_3",
+                    "target": "FDIFF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE1",
+                    "target": "PROB_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE1",
+                    "target": "SUPINF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE2",
+                    "target": "MEASURE1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE3",
+                    "target": "MEASURE2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE4",
+                    "target": "MEASURE3"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_3",
+                    "target": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE5",
+                    "target": "RCOMP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE5",
+                    "target": "SUPINF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "REARRAN1",
+                    "target": "RFUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE6",
+                    "target": "FCONT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE6",
+                    "target": "MEASURE5"
+                }
+            },
+            {
+                "data": {
+                    "source": "EXTREAL1",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "EXTREAL1",
+                    "target": "RFUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "EXTREAL1",
+                    "target": "MEASURE6"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE7",
+                    "target": "MEASURE4"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE7",
+                    "target": "MEASURE6"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_4",
+                    "target": "FCONT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_4",
+                    "target": "RFUNCT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "RFUNCT_4",
+                    "target": "MEASURE5"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC1",
+                    "target": "RELSET_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC1",
+                    "target": "MEASURE3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC1",
+                    "target": "EXTREAL1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS",
+                    "target": "FDIFF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS",
+                    "target": "COMSEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC2",
+                    "target": "MESFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS2",
+                    "target": "SIN_COS"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS3",
+                    "target": "CFUNCT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS3",
+                    "target": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS4",
+                    "target": "SIN_COS"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS5",
+                    "target": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS5",
+                    "target": "SIN_COS4"
+                }
+            },
+            {
+                "data": {
+                    "source": "ASYMPT_0",
+                    "target": "LIMFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ASYMPT_0",
+                    "target": "PRE_FF"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPTRIG",
+                    "target": "BINARITH"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPTRIG",
+                    "target": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPLEX2",
+                    "target": "COMPTRIG"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_2",
+                    "target": "POLYEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_2",
+                    "target": "SERIES_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_3",
+                    "target": "COMPTRIG"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_3",
+                    "target": "POLYEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_4",
+                    "target": "POLYEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_5",
+                    "target": "COMPLEX2"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYEQ_5",
+                    "target": "POLYEQ_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SIN_COS6",
+                    "target": "COMPLEX2"
+                }
+            },
+            {
+                "data": {
+                    "source": "EULER_1",
+                    "target": "PRE_FF"
+                }
+            },
+            {
+                "data": {
+                    "source": "EULER_2",
+                    "target": "WSIERP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "EULER_2",
+                    "target": "EULER_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ASYMPT_1",
+                    "target": "ASYMPT_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "ASYMPT_1",
+                    "target": "EULER_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "ASYMPT_1",
+                    "target": "SERIES_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "POLYEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "ASYMPT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_4",
+                    "target": "SERIES_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_5",
+                    "target": "SERIES_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "QUATERNI",
+                    "target": "SERIES_3"
+                }
+            }
+        ]
+    }
+}
