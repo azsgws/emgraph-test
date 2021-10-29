@@ -348,4 +348,4 @@ def create_graph(node2targets, output_json_file):
 
 if __name__ == '__main__':
     article2ref_articles = retrieve_dependency.make_miz_dependency()
-    create_graph(article2ref_articles, "dot_graph_2003.json")
+    create_graph(article2ref_articles, "dot_graph_2005.json")

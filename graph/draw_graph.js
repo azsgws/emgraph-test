@@ -7,6 +7,7 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph.json'),
         $.getJSON('./graph_attrs/sfdp_graph.json'),
         $.getJSON('./graph_attrs/dot_graph_2003.json'),
+        $.getJSON('./graph_attrs/dot_graph_2005.json'),
     )
     .then((dot_graph, sfdp_graph, dot_graph_2003) => {
         // cytoscapeグラフの作成(初期化)
@@ -25,8 +26,11 @@ $(function(){
         else if(layout==='sfdp'){
             graph = sfdp_graph[0];
         }
-        else {
+        else if(layout==='dot_2003'){
             graph = dot_graph_2003[0];
+        }
+        else {
+            graph = dot_graph_2005[0];
         }
         let nodes = graph["elements"]["nodes"];
         let edges = graph["elements"]["edges"];

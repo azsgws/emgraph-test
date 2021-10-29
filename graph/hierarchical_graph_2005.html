@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>hierarchical-emgraph-2003</title>
+        <title>hierarchical-emgraph-2005</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
-            let layout = "dot_2003";
+            let layout = "dot_2005";
         </script>
         <script src="./draw_graph.js"></script>
+        <script src="https://unpkg.com/browse/popper.js@1.12.8/dist/"></script>
         <script src="https://unpkg.com/cytoscape@3.19.1/dist/cytoscape.min.js"></script>
         <script src="https://unpkg.com/bootstrap@4.2.1/dist/js/bootstrap.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,14 +50,34 @@
                         help
                     </button>
                 </div>
-                <div class="col-md-1 col-sm-1 col-3">
+                <!-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      Version
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="./hierarchical_graph.html">2020</a></li>
+                      <li><a class="dropdown-item" href="./hierarchical_graph_2005.html">2005</a></li>
+                      <li><a class="dropdown-item" href="./hierarchical_graph_2003.html">2003</a></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="col-md-1 col-sm-1 col-3">
                     <label for="clustering_graph">Graph Version</label>
                     <a class="btn btn-link form-control" href="./hierarchical_graph.html" role="button">2020</a>
                     <a class="btn btn-link form-control" href="./hierarchical_graph_2005.html" role="button">2005</a>
                     <a class="btn btn-link form-control" href="./hierarchical_graph_2003.html" role="button">2003</a>
-                </div>
+                </div> -->
             </div>
         </form>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="help_dialog" tabindex="-1" role="dialog" aria-labelledby="graph_usage" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
