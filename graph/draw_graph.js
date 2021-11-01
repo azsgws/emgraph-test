@@ -9,7 +9,7 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph_2003.json'),
         $.getJSON('./graph_attrs/dot_graph_2005.json'),
     )
-    .then((dot_graph, sfdp_graph, dot_graph_2003) => {
+    .then((dot_graph, sfdp_graph, dot_graph_2003, dot_graph_2005) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
