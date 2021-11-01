@@ -60,3 +60,7 @@ button:active{
 #help_page3 {
     display: none;
 }
+
+.dropdown {
+    z-index: 100;
+}
