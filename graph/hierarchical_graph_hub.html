@@ -6,7 +6,9 @@
         <script type="text/javascript">
             let layout = "dot_hub";
         </script>
-        <script src="./draw_graph_change_node_size.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+            <script src="./draw_graph_change_node_size.js"></script>
         <script src="https://unpkg.com/cytoscape@3.19.1/dist/cytoscape.min.js"></script>
         <script src="https://unpkg.com/bootstrap@4.2.1/dist/js/bootstrap.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,23 +51,31 @@
                         help
                     </button>
                 </div>
-                <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">Graph Version</label>
-                    <a class="btn btn-link form-control" href="./hierarchical_graph.html" role="button">2020</a>
-                    <a class="btn btn-link form-control" href="./hierarchical_graph_2003.html" role="button">2003</a>
+                <div class="dropdown">
+                    <label for="version">version</label><br>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="changeMMLVersion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Version
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="btn btn-link form-control" href="./hierarchical_graph.html" role="button">2020</a>
+                        <a class="btn btn-link form-control" href="./hierarchical_graph_2005.html" role="button">2005</a>
+                        <a class="btn btn-link form-control" href="./hierarchical_graph_2003.html" role="button">2003</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <label for="ranking">Ranking</label><br>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="changeMMLVersion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ranking
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="btn btn-link form-control" href="./hierarchical_graph_auth.html" role="button">HITS(auth)</a>
+                        <a class="btn btn-link form-control" href="./hierarchical_graph_hub.html" role="button">HITS(hub)</a>
+                        <a class="btn btn-link form-control" href="./hierarchical_graph_pagerank.html" role="button">PageRank</a>
+                    </div>
                 </div>
                 <div class="col-md-1 col-sm-1 col-3">
                     <label for="clustering_graph">Other Graph Style</label>
                     <a class="btn btn-link form-control" href="./clustering_graph.html" role="button">Clustering Graph</a>
-                </div>
-                <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">HITS Ranking</label>
-                    <a class="btn btn-link form-control" href="./hierarchical_graph_auth.html" role="button">Hits(Authority)</a>
-                    <a class="btn btn-link form-control" href="./hierarchical_graph_hub.html" role="button">Hits(Hub)</a>
-                </div>
-                <div class="col-md-1 col-sm-1 col-3">
-                    <label for="clustering_graph">Pagerank Ranking</label>
-                    <a class="btn btn-link form-control" href="./hierarchical_graph_pagerank.html" role="button">Pagerank</a>
                 </div>
             </div>
         </form>
