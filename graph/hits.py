@@ -93,38 +93,34 @@ sfdp_G = nx.cytoscape_graph(sfdp_graph)
 dot_G = nx.cytoscape_graph(dot_graph)
 
 # 作成したグラフをもとに，hits.authoritiesを計算
-sfdp_hubs, sfdp_authorities = nx.hits(sfdp_G, max_iter = 10000, normalized = True)
-dot_hubs, dot_authorities = nx.hits(dot_G, max_iter = 10000, normalized = True)
+sfdp_node2hub, sfdp_node2authority = nx.hits(sfdp_G, max_iter = 10000, normalized = True)
+dot_node2hub, dot_node2authority = nx.hits(dot_G, max_iter = 10000, normalized = True)
 
-# authorityを順位付け
-sfdp_node2ranking = rank_nodes_with_value(sfdp_authorities)
-dot_node2ranking = rank_nodes_with_value(dot_authorities)
-
-# authoritiesをノードのサイズに適用する
-sfdp_node2authority = dict()
-dot_node2authority = dict()
-
-# 正規化(しない)
-sfdp_node2authority = sfdp_authorities
-dot_node2authority = dot_authorities
-
-sfdp_node_authorities = dict()
+sfdp_node_autority2value = dict()
 for k,v in sfdp_node2authority.items():
-    sfdp_node_authorities[k] = {'authority': v}
+    sfdp_node_autority2value[k] = {'authority': v}
 
-dot_node_authorities = dict()
+dot_node_authority2value = dict()
 for k,v in dot_node2authority.items():
-    dot_node_authorities[k] = {'authority': v}
+    dot_node_authority2value[k] = {'authority': v}
 
 # authorityを順位付け
 sfdp_node2ranking_authority = rank_nodes_with_value(sfdp_node2authority)
 dot_node2ranking_authority = rank_nodes_with_value(dot_node2authority)
 
-# hubを順位付け
-sfdp_node2ranking_hub = rank_nodes_with_value(sfdp_hubs)
-dot_node2ranking_hub = rank_nodes_with_value(dot_hubs)
+sfdp_node_hub2value = dict()
+for k,v in sfdp_node2hub.items():
+    sfdp_node_hub2value[k] = {'hub': v}
 
-# authorityの順位をもとにグループ分け
+dot_node_hub2value = dict()
+for k,v in dot_node2hub.items():
+    dot_node_hub2value[k] = {'hub': v}
+
+# hubを順位付け
+sfdp_node2ranking_hub = rank_nodes_with_value(sfdp_node2hub)
+dot_node2ranking_hub = rank_nodes_with_value(dot_node2hub)
+
+# authority,hubの順位をもとにグループ分け
 args = sys.argv
 
 if args[1] == "authority":
@@ -138,17 +134,24 @@ else:
 
 
 # node_sizeをグラフの属性値として定義する
-nx.set_node_attributes(sfdp_G, sfdp_node_authorities)
-nx.set_node_attributes(dot_G, dot_node_authorities)
-nx.set_node_attributes(sfdp_G, sfdp_node2ranking_authority)
-nx.set_node_attributes(dot_G, dot_node2ranking_authority)
+if args[1]=="authority":
+    nx.set_node_attributes(sfdp_G, sfdp_node_autority2value)
+    nx.set_node_attributes(dot_G, dot_node_authority2value)
+    nx.set_node_attributes(sfdp_G, sfdp_node2ranking_authority)
+    nx.set_node_attributes(dot_G, dot_node2ranking_authority)
+
+else: 
+    nx.set_node_attributes(sfdp_G, sfdp_node_hub2value)
+    nx.set_node_attributes(dot_G, dot_node_hub2value)
+    nx.set_node_attributes(sfdp_G, sfdp_node2ranking_hub)
+    nx.set_node_attributes(dot_G, dot_node2ranking_hub)
+
 nx.set_node_attributes(sfdp_G, sfdp_node2group)
 nx.set_node_attributes(dot_G, dot_node2group)
 
 # グラフの描画
 nx.draw_networkx(sfdp_G)
 nx.draw_networkx(dot_G)
-#fig = plt.savefig("test.png")
 
 sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
 dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
