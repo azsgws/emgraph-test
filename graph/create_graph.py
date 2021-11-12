@@ -304,7 +304,7 @@ def create_dependency_graph(node_list, graph):
             graph.add_edge(source.name, target.name)
 
 
-def create_graph(node2targets, output_json_file):
+def create_graph(node2targets, mml_version):
     """
     依存関係を示すグラフを作る．
     Args:
@@ -342,10 +342,5 @@ def create_graph(node2targets, output_json_file):
     # cytoscape.jsの記述形式(JSON)でグラフを記述
     graph_json = nx.cytoscape_data(graph, attrs=None)
 
-    with open('graph_attrs/' + output_json_file, 'w') as f:
+    with open('graph_attrs/dot_graph_' + mml_version + '.json', 'w') as f:
         f.write(json.dumps(graph_json, indent=4))
-
-
-if __name__ == '__main__':
-    article2ref_articles = retrieve_dependency.make_miz_dependency()
-    create_graph(article2ref_articles, "dot_graph_2005.json")

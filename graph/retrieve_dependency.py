@@ -12,7 +12,7 @@ DIRECTIVES_2003 = ['vocabulary', 'constructors', 'notations', 'clusters',
               'theorems', 'schemes', 'definitions', 'requirements']
 
 
-def make_miz_dependency():
+def make_miz_dependency(mml_version):
     """
     articleが参照しているarticleを取得する．
     参照しているarticle ＝ 環境部に記載されたarticle（ただし，vocabulariesを除く）
@@ -24,14 +24,14 @@ def make_miz_dependency():
     cwd = os.getcwd()
     try:
         article2dependency_articles = dict()
-        os.chdir("mml/2005-05-31/")
+        os.chdir("mml/" + mml_version + "/")
         miz_files = glob.glob("*.miz")  # mmlディレクトリの.mizファイルを取り出す
 
     finally:
         os.chdir(cwd)
 
     for miz_file in miz_files:
-        with open(os.path.join("mml/2005-05-31/", miz_file), 'rt',
+        with open(os.path.join("mml/" + mml_version + "/", miz_file), 'rt',
                   encoding='utf-8', errors="ignore") as f:
             miz_file_contents = f.read()
         directive2articles = extract_articles(miz_file_contents)
