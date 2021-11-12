@@ -8,8 +8,9 @@ $(function(){
         $.getJSON('./graph_attrs/sfdp_graph.json'),
         $.getJSON('./graph_attrs/dot_graph_2003.json'),
         $.getJSON('./graph_attrs/dot_graph_2005.json'),
+        $.getJSON('./graph_attrs/dot_graph_2012-03-05.json'),
     )
-    .then((dot_graph, sfdp_graph, dot_graph_2003, dot_graph_2005) => {
+    .then((dot_graph, sfdp_graph, dot_graph_2003, dot_graph_2005, dot_graph_2012) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -29,8 +30,11 @@ $(function(){
         else if(layout==='dot_2003'){
             graph = dot_graph_2003[0];
         }
-        else {
+        else if(layout==='dot_2005'){
             graph = dot_graph_2005[0];
+        }
+        else {
+            graph = dot_graph_2012[0];
         }
         let nodes = graph["elements"]["nodes"];
         let edges = graph["elements"]["edges"];

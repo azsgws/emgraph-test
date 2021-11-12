@@ -67,65 +67,43 @@ def grouping_for_ranking(node2ranking):
             node2group[k] = {"group": 9}
     return node2group
 
-cwd = os.getcwd()
+def calc_pagerank(mml_version):
+    cwd = os.getcwd()
 
-try:
-    os.chdir("graph_attrs")
-    with open("sfdp_graph.json", "r") as f:
-        sfdp_graph = json.load(f)
-    with open("dot_graph.json", "r") as f:
-        dot_graph = json.load(f)
+    try:
+        os.chdir("graph_attrs")
+        with open("dot_graph_" + mml_version + ".json", "r") as f:
+            dot_graph = json.load(f)
 
-finally:
-    os.chdir(cwd)
+    finally:
+        os.chdir(cwd)
 
-# networkxのグラフを作成
-dot_G = nx.cytoscape_graph(dot_graph)
-sfdp_G = nx.cytoscape_graph(sfdp_graph)
+    # networkxのグラフを作成
+    dot_G = nx.cytoscape_graph(dot_graph)
+    # 作成したグラフをもとに，pagerankを計算
+    dot_node2pagerank = nx.pagerank(dot_G, max_iter=1000)
+    # pagerankに順位付け
+    dot_node2ranking = rank_nodes_with_pagerank(dot_node2pagerank)
+    # pagerankの順位をもとにグループ分け
+    dot_node2group = grouping_for_ranking(dot_node2ranking)
+    # pagerankの値を正規化して，属性値'pagerank'に登録
+    dot_node2pagerank = update_pagerank_for_set_node_attribute(dot_node2pagerank)
+    # pagerankの値，順位をグラフの属性値として定義する
+    nx.set_node_attributes(dot_G, dot_node2ranking)
 
-# 作成したグラフをもとに，pagerankを計算
-dot_node2pagerank = nx.pagerank(dot_G, max_iter=1000)
-sfdp_node2pagerank = nx.pagerank(sfdp_G, max_iter=1000)
+    nx.set_node_attributes(dot_G, dot_node2pagerank)
+    nx.set_node_attributes(dot_G, dot_node2group)
 
-# pagerankに順位付け
-dot_node2ranking = rank_nodes_with_pagerank(dot_node2pagerank)
-sfdp_node2ranking = rank_nodes_with_pagerank(sfdp_node2pagerank)
+    # グラフの描画
+    nx.draw_networkx(dot_G)
 
-# pagerankの順位をもとにグループ分け
-dot_node2group = grouping_for_ranking(dot_node2ranking)
-sfdp_node2group = grouping_for_ranking(sfdp_node2ranking)
+    dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
 
-# pagerankの値を正規化して，属性値'pagerank'に登録
-# dot_node_pagerank = min_max_normalization(dot_node2pagerank, 1.0, 210.0)
-# sfdp_node_pagerank = min_max_normalization(sfdp_node2pagerank, 1.0, 210.0)
-dot_node2pagerank = update_pagerank_for_set_node_attribute(dot_node2pagerank)
-sfdp_node2pagerank = update_pagerank_for_set_node_attribute(sfdp_node2pagerank)
-
-
-# pagerankの値，順位をグラフの属性値として定義する
-nx.set_node_attributes(dot_G, dot_node2ranking)
-nx.set_node_attributes(sfdp_G, sfdp_node2ranking)
-
-nx.set_node_attributes(dot_G, dot_node2pagerank)
-nx.set_node_attributes(sfdp_G, sfdp_node2pagerank)
-
-nx.set_node_attributes(dot_G, dot_node2group)
-nx.set_node_attributes(sfdp_G, sfdp_node2group)
-
-# グラフの描画
-nx.draw_networkx(dot_G)
-nx.draw_networkx(sfdp_G)
-
-dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
-sfdp_graph_json = nx.cytoscape_data(sfdp_G, attrs=None)
-
-try:
-    os.chdir("graph_attrs")
-    with open("dot_graph_pagerank.json", "w") as f:
-        f.write(json.dumps(dot_graph_json, indent=4))
-    with open("sfdp_graph_pagerank.json", "w") as f:
-        f.write(json.dumps(sfdp_graph_json, indent=4))
-
-finally:
-    os.chdir(cwd)
-    
+    try:
+        os.chdir("graph_attrs")
+        with open("dot_graph_" + mml_version + "_pagerank.json", "w") as f:
+            f.write(json.dumps(dot_graph_json, indent=4))
+        
+    finally:
+        os.chdir(cwd)
+        
