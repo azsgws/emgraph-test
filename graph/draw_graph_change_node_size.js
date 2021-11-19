@@ -4,15 +4,15 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph_hits_authority.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_hits_authority.json'),
-        $.getJSON('./graph_attrs/dot_graph_hits_hub.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_hits_hub.json'),
-        $.getJSON('./graph_attrs/dot_graph_pagerank.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_pagerank.json'),
-        $.getJSON('./graph_attrs/dot_graph_2003_hits_authority.json'),
-        $.getJSON('./graph_attrs/dot_graph_2003_hits_hub.json'),
-        $.getJSON('./graph_attrs/dot_graph_2003_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_authority.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_authority.json'),
+        $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_hub.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_hub.json'),
+        $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003-12-24_hits_authority.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003-12-24_hits_hub.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003-12-24_pagerank.json'),
     )
     .then((dot_graph_auth, sfdp_graph_auth, dot_graph_hub, sfdp_graph_hub, dot_graph_pagerank, sfdp_graph_pagerank,
         dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank) => {
