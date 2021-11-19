@@ -4,10 +4,10 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 */
 $(function(){
     $.when(
-        $.getJSON('./graph_attrs/dot_graph.json'),
-        $.getJSON('./graph_attrs/sfdp_graph.json'),
-        $.getJSON('./graph_attrs/dot_graph_2003.json'),
-        $.getJSON('./graph_attrs/dot_graph_2005.json'),
+        $.getJSON('./graph_attrs/dot_graph_2020-06-18.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003-12-24.json'),
+        $.getJSON('./graph_attrs/dot_graph_2005-05-31.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05.json'),
     )
     .then((dot_graph, sfdp_graph, dot_graph_2003, dot_graph_2005, dot_graph_2012) => {
