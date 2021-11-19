@@ -4,6 +4,7 @@ from pagerank import calc_pagerank
 from hits import calc_hits
 from create_table import create_table
 from calc_pagerank_minus_hits import calc_pagerank_minus_hits
+from calc_hub_plus_auth import calc_hub_plus_auth
 import sys
 
 if __name__ == '__main__':
@@ -20,3 +21,5 @@ if __name__ == '__main__':
     create_table(mml_version=mml_version)
     print("Calculate (PageRank Score) - (HITS Authority Score)")
     calc_pagerank_minus_hits(mml_version)
+    print("Calculate (HITS Hub Score) + (HITS Authority Score)")
+    calc_hub_plus_auth(mml_version)
