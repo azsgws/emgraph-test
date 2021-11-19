@@ -79,7 +79,7 @@ def create_hub_auth_table(mml_version):
     plt.scatter(x,y,vmin=0.0, vmax=1.0, s=10)
 
     try:
-        os.chdir("result_hub_plus_authority")
+        os.chdir("result_hub_authority")
         fig.savefig("MML(" + mml_version + ")_hub-authority-table.png")
 
     finally:
