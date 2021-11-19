@@ -29,7 +29,7 @@ def calc_hub_plus_auth(mml_version):
             node2hub[k] + node2authority[k]
 
     try:
-        os.chdir("result_hub_plus_authority")
+        os.chdir("result_hub_authority")
         with open("MML("+ mml_version +")_hub_plus_authority.txt", 'w') as fout:
             for k,v in sorted(node2hub_plus_auth.items(), key=lambda x:x[1], reverse=True):
                 fout.write(f'{k} {v} \n')
