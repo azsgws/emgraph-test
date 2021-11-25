@@ -56,11 +56,10 @@ button:active{
     display: none;
 }
 
-
 #help_page3 {
     display: none;
 }
 
-.dropdown {
-    z-index: 100;
+.dropdown .dropdown-menu li a {
+    z-index: 50;
 }
