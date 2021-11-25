@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import statistics
 import os
 import json
 
@@ -85,7 +86,80 @@ def create_hub_auth_table(mml_version):
     finally:
         os.chdir(cwd)
     
+def create_pagerank_and_auth_coloring_table(mml_version):
+    cwd = os.getcwd()
+    try:
+        os.chdir("graph_attrs")
+        with open("dot_graph_" + mml_version + "_pagerank.json", "r") as f:
+            dot_graph_pagerank = json.load(f)
+        with open("dot_graph_" + mml_version + "_hits_authority.json", "r") as f:
+            dot_graph_authority = json.load(f)
+    finally:
+        os.chdir(cwd)
+    fig = plt.figure()
+
+    node2coordinate = dict()
+    pagerank = list()
+    authority = list()
+
+    for i in dot_graph_pagerank['elements']['nodes']:
+        node2coordinate[i['data']['id']] = dict()
+        node2coordinate[i['data']['id']]["x"] = i['data']['pagerank']
+        pagerank.append(i['data']['pagerank'])
+
+    for i in dot_graph_authority['elements']['nodes']:
+        node2coordinate[i['data']['id']]["y"] = i['data']['authority']
+        authority.append(i['data']['authority'])
+
+    pagerank_median = statistics.median(pagerank)
+    authority_median = statistics.median(authority)
+
+    g1, g2, g3, g4 = list(), list(), list(), list()
+
+    for k, v in node2coordinate.items():
+        if v["x"]>pagerank_median and v["y"]>authority_median:
+            g1.append(k)
+        elif v["x"]<=pagerank_median and v["y"]>authority_median:
+            g2.append(k)
+        elif v["x"]<=pagerank_median and v["y"]<=authority_median:
+            g3.append(k)
+        else:  # v["x"]>pagerank_median and v["y"]<=authority_median:
+            g4.append(k)
+
+    x1, x2, x3, x4 = list(), list(), list(), list()
+    y1, y2, y3, y4 = list(), list(), list(), list()
+
+    for i in g1:
+        x1.append(node2coordinate[i]["x"])
+        y1.append(node2coordinate[i]["y"])
+    for i in g2:
+        x2.append(node2coordinate[i]["x"])
+        y2.append(node2coordinate[i]["y"])
+    for i in g3:
+        x3.append(node2coordinate[i]["x"])
+        y3.append(node2coordinate[i]["y"])
+    for i in g4:
+        x4.append(node2coordinate[i]["x"])
+        y4.append(node2coordinate[i]["y"])
+        
+    plt.title("MML(" + mml_version + ") HITS(Hub)-HITS(Authority)")
+    plt.xlabel("PageRank")
+    plt.ylabel("Authority")
+    plt.grid(True)
+
+    plt.scatter(x1,y1,vmin=0.0, vmax=1.0, s=10, c='red')
+    plt.scatter(x2,y2,vmin=0.0, vmax=1.0, s=10, c='blue')
+    plt.scatter(x3,y3,vmin=0.0, vmax=1.0, s=10, c='yellow')
+    plt.scatter(x4,y4,vmin=0.0, vmax=1.0, s=10, c='green')
+
+    try:
+        os.chdir("result_hub_authority")
+        fig.savefig("MML(" + mml_version + ")_hub-authority-coloring-table.png")
+
+    finally:
+        os.chdir(cwd)
 
 def create_tables(mml_version):
     create_pagerank_and_auth_table(mml_version)
     create_hub_auth_table(mml_version)
+    create_pagerank_and_auth_coloring_table(mml_version=mml_version)
