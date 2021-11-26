@@ -1,7 +1,7 @@
 #graph{
     position: absolute;
-    left: 0;
-    top: 100px;
+    left: 300px;
+    top: 0;
     bottom: 0;
     right: 0;
 }
@@ -56,11 +56,10 @@ button:active{
     display: none;
 }
 
-
 #help_page3 {
     display: none;
 }
 
-.dropdown {
-    z-index: 100;
+.dropdown .dropdown-menu li a {
+    z-index: 50;
 }
