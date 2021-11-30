@@ -142,7 +142,7 @@ def create_pagerank_and_auth_coloring_table(mml_version):
         x4.append(node2coordinate[i]["x"])
         y4.append(node2coordinate[i]["y"])
         
-    plt.title("MML(" + mml_version + ") HITS(Hub)-HITS(Authority)")
+    plt.title("MML(" + mml_version + ") PageRank-HITS(Authority) Coloring by median")
     plt.xlabel("PageRank")
     plt.ylabel("Authority")
     plt.grid(True)
@@ -153,8 +153,8 @@ def create_pagerank_and_auth_coloring_table(mml_version):
     plt.scatter(x4,y4,vmin=0.0, vmax=1.0, s=10, c='green')
 
     try:
-        os.chdir("result_hub_authority")
-        fig.savefig("MML(" + mml_version + ")_hub-authority-coloring-table.png")
+        os.chdir("result_pagerank_hits")
+        fig.savefig("MML(" + mml_version + ")_hub-authority-coloring-table(median).png")
 
     finally:
         os.chdir(cwd)
