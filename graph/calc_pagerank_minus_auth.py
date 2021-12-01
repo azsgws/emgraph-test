@@ -29,7 +29,7 @@ def calc_pagerank_minus_auth(mml_version):
             node2pagerank[k] - node2hits_authority[k]
 
     try:
-        os.chdir("result_pagerank_hits")
+        os.chdir("result_pagerank_auth")
         with open("MML("+ mml_version +")_pagerank_minus_auth.txt", 'w') as fout:
             for k,v in sorted(node2pagerank_minus_auth.items(), key=lambda x:x[1]):
                 fout.write(f'{k} {v} \n')

@@ -72,7 +72,7 @@ def create_pagerank_minus_authority_graph(mml_version):
 
     cwd = os.getcwd()
     try:
-        os.chdir("result_pagerank_hits")
+        os.chdir("result_pagerank_auth")
         with open("MML(" + mml_version + ")_pagerank_minus_auth.txt", "r") as f:
             result_pagerank_minus_auth = f.readlines()
     finally:
