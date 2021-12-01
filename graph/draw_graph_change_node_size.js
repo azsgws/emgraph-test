@@ -5,10 +5,10 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_authority.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_hub.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_authority.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_hub.json'),
         $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_pagerank.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank_minus_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2003-12-24_hits_authority.json'),
@@ -22,7 +22,8 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_pagerank.json'),
     )
-    .then((dot_graph_auth, sfdp_graph_auth, dot_graph_hub, sfdp_graph_hub, dot_graph_pagerank, sfdp_graph_pagerank,
+    .then((dot_graph_auth, dot_graph_hub, dot_graph_pagerank,
+        sfdp_graph_auth, sfdp_graph_hub, sfdp_graph_pagerank,
         dot_2020_pagerank_minus_auth, 
         dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank, dot_2003_pagerank_minus_auth, 
         dot_graph_2005_auth, dot_graph_2005_hub, dot_graph_2005_pagerank,
@@ -40,17 +41,17 @@ $(function(){
         if(layout==='dot_auth'){
             graph = dot_graph_auth[0];
         }
-        else if(layout==='sfdp_auth'){
-            graph = sfdp_graph_auth[0];
-        }
         else if(layout==='dot_hub'){
             graph = dot_graph_hub[0];
         }
-        else if(layout==='sfdp_hub'){
-            graph = sfdp_graph_hub[0];
-        }
         else if(layout==='dot_pagerank'){
             graph = dot_graph_pagerank[0];
+        }
+        else if(layout==='sfdp_auth'){
+            graph = sfdp_graph_auth[0];
+        }
+        else if(layout==='sfdp_hub'){
+            graph = sfdp_graph_hub[0];
         }
         else if(layout==='sfdp_pagerank'){
             graph = sfdp_graph_pagerank[0];
