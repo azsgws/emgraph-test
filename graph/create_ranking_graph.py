@@ -88,18 +88,13 @@ def create_pagerank_minus_authority_graph(mml_version):
 
     # networkxのグラフを作成
     dot_G = nx.cytoscape_graph(dot_graph)
-    
     nx.set_node_attributes(dot_G, node2group)
-
     # グラフの描画
     nx.draw_networkx(dot_G)
-
     dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
-
     try:
         os.chdir("graph_attrs")
         with open("dot_graph_" + mml_version + "_pagerank_minus_authority.json", "w") as f:
             f.write(json.dumps(dot_graph_json, indent=4))
-        
     finally:
         os.chdir(cwd)
