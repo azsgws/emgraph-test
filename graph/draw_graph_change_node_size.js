@@ -5,27 +5,31 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_authority.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_hub.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_authority.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_hits_hub.json'),
         $.getJSON('./graph_attrs/sfdp_graph_2020-06-18_pagerank.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank_minus_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2003-12-24_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2003-12-24_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2003-12-24_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2003-12-24_pagerank_minus_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2005-05-31_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2005-05-31_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2005-05-31_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2005-05-31_pagerank_minus_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2012-03-05_pagerank_minus_authority.json'),
     )
-    .then((dot_graph_auth, sfdp_graph_auth, dot_graph_hub, sfdp_graph_hub, dot_graph_pagerank, sfdp_graph_pagerank,
-        dot_2020_pagerank_minus_auth, 
-        dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank, 
-        dot_graph_2005_auth, dot_graph_2005_hub, dot_graph_2005_pagerank,
-        dot_graph_2012_auth, dot_graph_2012_hub, dot_graph_2012_pagerank, ) => {
+    .then((dot_graph_auth, dot_graph_hub, dot_graph_pagerank,
+        sfdp_graph_auth, sfdp_graph_hub, sfdp_graph_pagerank,
+        dot_2020_pagerank_minus_auth,
+        dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank, dot_2003_pagerank_minus_auth,
+        dot_graph_2005_auth, dot_graph_2005_hub, dot_graph_2005_pagerank, dot_2005_pagerank_minus_auth,
+        dot_graph_2012_auth, dot_graph_2012_hub, dot_graph_2012_pagerank, dot_2012_pagerank_minus_auth,) => {
         // cytoscapeグラフの作成(初期化)
         let cy = window.cy = cytoscape({
             container: document.getElementById('graph'),
@@ -39,17 +43,17 @@ $(function(){
         if(layout==='dot_auth'){
             graph = dot_graph_auth[0];
         }
-        else if(layout==='sfdp_auth'){
-            graph = sfdp_graph_auth[0];
-        }
         else if(layout==='dot_hub'){
             graph = dot_graph_hub[0];
         }
-        else if(layout==='sfdp_hub'){
-            graph = sfdp_graph_hub[0];
-        }
         else if(layout==='dot_pagerank'){
             graph = dot_graph_pagerank[0];
+        }
+        else if(layout==='sfdp_auth'){
+            graph = sfdp_graph_auth[0];
+        }
+        else if(layout==='sfdp_hub'){
+            graph = sfdp_graph_hub[0];
         }
         else if(layout==='sfdp_pagerank'){
             graph = sfdp_graph_pagerank[0];
@@ -66,6 +70,9 @@ $(function(){
         else if(layout==='dot_2003_pagerank'){
             graph = dot_graph_2003_pagerank[0];
         }
+        else if(layout==='dot_2003_pagerank-minus-auth'){
+            graph = dot_2003_pagerank_minus_auth[0]
+        }
         else if(layout==='dot_2005_auth'){
             graph = dot_graph_2005_auth[0];
         }
@@ -75,6 +82,9 @@ $(function(){
         else if(layout==='dot_2005_pagerank'){
             graph = dot_graph_2005_pagerank[0];
         }
+        else if(layout==='dot_2005_pagerank-minus-auth'){
+            graph = dot_2005_pagerank_minus_auth[0]
+        }
         else if(layout==='dot_2012_auth'){
             graph = dot_graph_2012_auth[0];
         }
@@ -83,6 +93,9 @@ $(function(){
         }
         else if(layout==='dot_2012_pagerank'){
             graph = dot_graph_2012_pagerank[0];
+        }
+        else if(layout==='dot_2012_pagerank-minus-auth'){
+            graph = dot_2012_pagerank_minus_auth[0]
         }
 
         let nodes = graph["elements"]["nodes"];
