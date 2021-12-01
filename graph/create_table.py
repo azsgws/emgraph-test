@@ -38,7 +38,7 @@ def create_pagerank_and_auth_table(mml_version):
     plt.scatter(x,y,vmin=0.0, vmax=1.0, s=10)
 
     try:
-        os.chdir("result_pagerank_hits")
+        os.chdir("result_pagerank_auth")
         fig.savefig("MML(" + mml_version + ")_pagerank-authority-table.png")
 
     finally:
@@ -153,7 +153,7 @@ def create_pagerank_and_auth_coloring_table(mml_version):
     plt.scatter(x4,y4,vmin=0.0, vmax=1.0, s=10, c='green')
 
     try:
-        os.chdir("result_pagerank_hits")
+        os.chdir("result_pagerank_auth")
         fig.savefig("MML(" + mml_version + ")_hub-authority-coloring-table(median).png")
 
     finally:
