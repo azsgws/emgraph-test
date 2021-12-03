@@ -63,5 +63,5 @@ def find_article_required_refactoring():
 
 if __name__ == '__main__':
     node2score = find_article_required_refactoring()
-    with open("result.txt", "w") as f:
+    with open("displacement_between_two_version", "w") as f:
         f.write(pprint.pformat(sorted(node2score.items(), key=lambda x:x[1], reverse=False)))
