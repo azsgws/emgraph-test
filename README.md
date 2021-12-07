@@ -2,9 +2,9 @@
 This graph is MML article's dependency graph.
 
 GitHub Pages:
-* Home: https://azsgws.github.io/test-emgraph/
-  * article graph: https://azsgws.github.io/test-emgraph/graph/hierarchical_graph.html
-  * compound graph(developping): https://azsgws.github.io/test-emgraph/compound_graph/hierarchical_graph.html
+* Home: https://seigodev.github.io/test-emgraph/
+  * article graph: https://seigodev.github.io/test-emgraph/graph/hierarchical_graph.html
+  * compound graph(developping): https://seigodev.github.io/test-emgraph/compound_graph/hierarchical_graph.html
 
 ## Create graph (Create JSON file)
 1. Add directory "mml" to "test-emgraph/graph".
