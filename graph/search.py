@@ -79,19 +79,28 @@ def calc_displacement_in_all_version(node2ranking_each_mml_version):
 
     for i in range(len(mml_version)-1):
         current_version = mml_version[i]
-        next_version = mml_version[i+1]
         for k,v in node2ranking_each_mml_version[current_version].items():
             if not k in node2ranking.keys():
                 node2ranking[k] = dict()
-                node2ranking[k]["min"] = 9999999999
-                node2ranking[k]["max"] = 0
-            if k in node2ranking_each_mml_version[next_version].keys():
-                node2ranking[k]["min"] = min(node2ranking[k]["min"], v)
-                node2ranking[k]["max"] = max(node2ranking[k]["max"], v)
+                node2ranking[k][0] = dict()
+                node2ranking[k][0]["min"] = v
+                node2ranking[k][0]["max"] = v
+            else:
+                key_max = max(node2ranking[k].keys())
+                if v < node2ranking[k][key_max]["min"]:
+                    node2ranking[k][key_max + 1] = dict()
+                    node2ranking[k][key_max + 1]["min"] = v
+                    node2ranking[k][key_max + 1]["max"] = v
+                else:
+                    node2ranking[k][key_max]["max"] = max(v, node2ranking[k][key_max]["max"])
     
     for k in node2ranking.keys():
-        node2score[k] = node2ranking[k]["min"] - node2ranking[k]["max"]
-
+        for i in node2ranking[k].keys():
+            for j in range(i, len(node2ranking[k].keys())):
+                if not k in node2score.keys():
+                    node2score[k] = node2ranking[k][i]["min"] - node2ranking[k][j]["max"]
+                else:
+                    node2score[k] = min(node2score[k], node2ranking[k][i]["min"] - node2ranking[k][j]["max"])
     return node2score
 
 
