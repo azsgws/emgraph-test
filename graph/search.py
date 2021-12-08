@@ -73,13 +73,11 @@ def calc_displacement_between_two_version(node2ranking_each_mml_version):
 
 
 def calc_displacement_in_all_version(node2ranking_each_mml_version):
-    mml_version = get_mml_version()
     node2ranking = dict()
     node2score = dict()
 
-    for i in range(len(mml_version)-1):
-        current_version = mml_version[i]
-        for k,v in node2ranking_each_mml_version[current_version].items():
+    for version in node2ranking_each_mml_version.keys():
+        for k,v in node2ranking_each_mml_version[version].items():
             if not k in node2ranking.keys():
                 node2ranking[k] = dict()
                 node2ranking[k][0] = dict()
