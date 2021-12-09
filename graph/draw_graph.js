@@ -138,12 +138,12 @@ $(function(){
             },
             {
                 selector: "node.selected_descendants3",
-                css: {"background-color": "#00ddff", "color": "#000000",
+                css: {"background-color": "#00ddff", "color": "#ffffff",
                 "text-outline-color": "#00ddff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             {
                 selector: "node.selected_descendants4",
-                css: {"background-color": "#00ffff", "color": "#000000",
+                css: {"background-color": "#00ffff", "color": "#ffffff",
                 "text-outline-color": "#00ffff", "text-outline-opacity": 1, "text-outline-width": 10}
             },
             // 強調表示されたノードをつなぐエッジのスタイル
