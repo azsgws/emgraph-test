@@ -18,7 +18,7 @@ def get_mml_version():
     return sorted(mml_version)
 
 
-def get_ranking_pagerank_minus_auth_txt():
+def get_ranking_auth_minus_pagerank_txt():
     cwd = os.getcwd()
     try:
         os.chdir("result_pagerank_auth")
@@ -34,8 +34,8 @@ def get_ranking_pagerank_minus_auth_txt():
 
 def find_article_required_refactoring():
     node2ranking_each_mml_version = dict()
-    ranking_pagerank_minus_auth_txt = get_ranking_pagerank_minus_auth_txt()
-    for txt in ranking_pagerank_minus_auth_txt:
+    ranking_auth_minus_pagerank_txt = get_ranking_auth_minus_pagerank_txt()
+    for txt in ranking_auth_minus_pagerank_txt:
         with open(os.path.join("result_pagerank_auth/", txt), 'rt',
                   encoding='utf-8', errors="ignore") as f:
             node_and_value = f.readlines()
