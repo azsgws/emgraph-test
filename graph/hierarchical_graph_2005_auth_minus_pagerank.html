@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>hierarchical-emgraph(PageRank)</title>
+        <title>hierarchical-emgraph-2005(HITS(Auth)-PageRank)</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
-            let layout = "dot_2020_pagerank-auth";
+            let layout = "dot_2005_pagerank-minus-auth";
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
             integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -69,15 +69,11 @@
                       Ranking
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2020_auth.html" role="button">HITS(auth)</a></li>
-                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2020_hub.html" role="button">HITS(hub)</a></li>
-                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2020_pagerank.html" role="button">PageRank</a></li>
-                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2020_pagerank_minus_auth.html" role="button">PageRank-HITS(Auth)</a></li>
+                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2005_auth.html" role="button">HITS(auth)</a></li>
+                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2005_hub.html" role="button">HITS(hub)</a></li>
+                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2005_pagerank.html" role="button">PageRank</a></li>
+                        <li><a class="btn btn-link form-control" href="./hierarchical_graph_2005_pagerank_minus_auth.html" role="button">HITS(Auth)-PageRank</a></li>
                     </ul>
-                </div>
-                <div class="col-md-1 col-sm-2 col-3">
-                    <label for="clustering_graph">Other Graph Style</label>
-                    <a class="btn btn-link form-control" href="./clustering_graph_2020.html" role="button">Clustering Graph</a>
                 </div>
             </div>
         </form>
@@ -106,7 +102,7 @@
             </div>
         </div>
         <div class="color_index" id="pagerank_coloring_index">
-            <p><b>PageRank - Authority</b></p>
+            <p><b>Authority - PageRank</b></p>
             <table class="color_labels">
                 <tr>
                     <td class="color_row"><span style="background-color: #ff0000;">&emsp;&emsp;</span></td>

@@ -18,24 +18,24 @@ def get_mml_version():
     return sorted(mml_version)
 
 
-def get_ranking_pagerank_minus_auth_txt():
+def get_ranking_auth_minus_pagerank_txt():
     cwd = os.getcwd()
     try:
         os.chdir("result_pagerank_auth")
-        ranking_pagerank_minus_auth_txt = glob.glob('*.txt')
+        ranking_auth_minus_pagerank_txt = glob.glob('*.txt')
     finally:
         os.chdir(cwd)
 
-    ranking_pagerank_minus_auth_txt.remove('MML(2003-12-24)_pagerank_minus_auth.txt')
-    ranking_pagerank_minus_auth_txt.remove('MML(2005-05-31)_pagerank_minus_auth.txt')
+    ranking_auth_minus_pagerank_txt.remove('MML(2003-12-24)_auth_minus_pagerank.txt')
+    ranking_auth_minus_pagerank_txt.remove('MML(2005-05-31)_auth_minus_pagerank.txt')
 
-    return sorted(ranking_pagerank_minus_auth_txt)
+    return sorted(ranking_auth_minus_pagerank_txt)
 
 
 def find_article_required_refactoring():
     node2ranking_each_mml_version = dict()
-    ranking_pagerank_minus_auth_txt = get_ranking_pagerank_minus_auth_txt()
-    for txt in ranking_pagerank_minus_auth_txt:
+    ranking_auth_minus_pagerank_txt = get_ranking_auth_minus_pagerank_txt()
+    for txt in ranking_auth_minus_pagerank_txt:
         with open(os.path.join("result_pagerank_auth/", txt), 'rt',
                   encoding='utf-8', errors="ignore") as f:
             node_and_value = f.readlines()

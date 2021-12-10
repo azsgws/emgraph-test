@@ -61,7 +61,7 @@ def grouping_for_ranking(node2ranking):
             node2group[k] = {"group": 9}
     return node2group
 
-def create_pagerank_minus_authority_graph(mml_version):
+def create_authority_minus_pagerank_graph(mml_version):
     cwd = os.getcwd()
     try:
         os.chdir("graph_attrs")
@@ -73,13 +73,13 @@ def create_pagerank_minus_authority_graph(mml_version):
     cwd = os.getcwd()
     try:
         os.chdir("result_pagerank_auth")
-        with open("MML(" + mml_version + ")_pagerank_minus_auth.txt", "r") as f:
-            result_pagerank_minus_auth = f.readlines()
+        with open("MML(" + mml_version + ")_auth_minus_pagerank.txt", "r") as f:
+            result_auth_minus_pagerank = f.readlines()
     finally:
         os.chdir(cwd)
 
     node2calc_value = dict()
-    for i in result_pagerank_minus_auth:
+    for i in result_auth_minus_pagerank:
         s = re.split(r'\s', i)
         node2calc_value[s[0]] = s[1]
 
@@ -94,7 +94,7 @@ def create_pagerank_minus_authority_graph(mml_version):
     dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
     try:
         os.chdir("graph_attrs")
-        with open("dot_graph_" + mml_version + "_pagerank_minus_authority.json", "w") as f:
+        with open("dot_graph_" + mml_version + "_authority_minus_pagerank.json", "w") as f:
             f.write(json.dumps(dot_graph_json, indent=4))
     finally:
         os.chdir(cwd)
