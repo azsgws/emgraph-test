@@ -22,14 +22,14 @@ def get_ranking_pagerank_minus_auth_txt():
     cwd = os.getcwd()
     try:
         os.chdir("result_pagerank_auth")
-        ranking_pagerank_minus_auth_txt = glob.glob('*.txt')
+        ranking_auth_minus_pagerank_txt = glob.glob('*.txt')
     finally:
         os.chdir(cwd)
 
-    ranking_pagerank_minus_auth_txt.remove('MML(2003-12-24)_pagerank_minus_auth.txt')
-    ranking_pagerank_minus_auth_txt.remove('MML(2005-05-31)_pagerank_minus_auth.txt')
+    ranking_auth_minus_pagerank_txt.remove('MML(2003-12-24)_auth_minus_pagerank.txt')
+    ranking_auth_minus_pagerank_txt.remove('MML(2005-05-31)_auth_minus_pagerank.txt')
 
-    return sorted(ranking_pagerank_minus_auth_txt)
+    return sorted(ranking_auth_minus_pagerank_txt)
 
 
 def find_article_required_refactoring():
