@@ -56,6 +56,11 @@ def find_article_required_refactoring():
     with open("displacement_in_all_version.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version.items(), key=lambda x:x[1], reverse=False)))
 
+    node2displacement_between_two_version_ranking_up = calc_displacement_in_all_version_ranking_upper(node2ranking_each_mml_version)
+    with open("displacement_in_all_version_ranking_up.txt", "w") as f:
+        f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_up.items(),
+                key=lambda x:x[1], reverse=True)))
+
 
 def calc_displacement_between_two_version(node2ranking_each_mml_version):
     mml_version = get_mml_version()
@@ -101,6 +106,35 @@ def calc_displacement_in_all_version(node2ranking_each_mml_version):
                     node2score[k] = min(node2score[k], node2ranking[k][i]["min"] - node2ranking[k][j]["max"])
     return node2score
 
+
+def calc_displacement_in_all_version_ranking_upper(node2ranking_each_mml_version):
+    node2ranking = dict()
+    node2score = dict()
+    mml_version_reversed = sorted(get_mml_version(), reverse=True)
+
+    for version in mml_version_reversed:
+        for k,v in node2ranking_each_mml_version[version].items():
+            if not k in node2ranking.keys():
+                node2ranking[k] = dict()
+                node2ranking[k][0] = dict()
+                node2ranking[k][0]["min"] = v
+                node2ranking[k][0]["max"] = v
+            else:
+                key_max = max(node2ranking[k].keys())
+                if v < node2ranking[k][key_max]["min"]:
+                    node2ranking[k][key_max + 1] = dict()
+                    node2ranking[k][key_max + 1]["min"] = v
+                    node2ranking[k][key_max + 1]["max"] = v
+                else:
+                    node2ranking[k][key_max]["max"] = max(v, node2ranking[k][key_max]["max"])
+    
+    for k in node2ranking.keys():
+        for i in node2ranking[k].keys():
+            if not k in node2score.keys():
+                node2score[k] = node2ranking[k][i]["max"] - node2ranking[k][i]["min"]
+            else:
+                node2score[k] = max(node2score[k], node2ranking[k][i]["max"] - node2ranking[k][i]["min"])
+    return node2score
 
 if __name__ == '__main__':
     node2score = find_article_required_refactoring()
