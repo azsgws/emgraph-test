@@ -1,7 +1,7 @@
 import os
 import json
 
-def calc_pagerank_minus_auth(mml_version):
+def calc_auth_minus_pagerank(mml_version):
     cwd = os.getcwd()
 
     try:
@@ -23,15 +23,15 @@ def calc_pagerank_minus_auth(mml_version):
     for i in dot_graph_authority['elements']['nodes']:
         node2hits_authority[i['data']['id']] = i['data']['authority']
 
-    node2pagerank_minus_auth = dict()
+    node2auth_minus_pagerank = dict()
     for k in node2pagerank.keys():
-        node2pagerank_minus_auth[k] = \
-            node2pagerank[k] - node2hits_authority[k]
+        node2auth_minus_pagerank[k] = \
+            node2hits_authority[k] - node2pagerank[k]
 
     try:
         os.chdir("result_pagerank_auth")
-        with open("MML("+ mml_version +")_pagerank_minus_auth.txt", 'w') as fout:
-            for k,v in sorted(node2pagerank_minus_auth.items(), key=lambda x:x[1]):
+        with open("MML("+ mml_version +")_auth_minus_pagerank.txt", 'w') as fout:
+            for k,v in sorted(node2auth_minus_pagerank.items(), key=lambda x:x[1], reverse=True):
                 fout.write(f'{k} {v} \n')
 
     finally:
