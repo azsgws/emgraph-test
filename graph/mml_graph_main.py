@@ -4,7 +4,7 @@ from pagerank import calc_pagerank
 from hits import calc_hits
 from create_table import create_tables
 from calc_hub_plus_auth import calc_hub_plus_auth
-from create_ranking_graph import create_pagerank_minus_authority_graph
+from create_ranking_graph import create_authority_minus_pagerank_graph
 from calc_auth_minus_pagerank import calc_auth_minus_pagerank
 import sys
 
@@ -20,8 +20,8 @@ if __name__ == '__main__':
     calc_hits(mml_version,auth=False)
     print("Calculate (HITS Authority Score) - (PageRank Score)")
     calc_auth_minus_pagerank(mml_version)
-    print("create PageRank minus HITS(Auth) graph")
-    create_pagerank_minus_authority_graph(mml_version=mml_version)
+    print("create HITS(Auth) minus PageRank graph")
+    create_authority_minus_pagerank_graph(mml_version=mml_version)
     print("create PageRank-HITS(auth) table")
     create_tables(mml_version=mml_version)
     print("Calculate (HITS Hub Score) + (HITS Authority Score)")
