@@ -70,7 +70,7 @@ $(function(){
         else if(layout==='dot_2003_pagerank'){
             graph = dot_graph_2003_pagerank[0];
         }
-        else if(layout==='dot_2003_pagerank-minus-auth'){
+        else if(layout==='dot_2003_auth-minus-pagerank'){
             graph = dot_2003_auth_minus_pagerank[0]
         }
         else if(layout==='dot_2005_auth'){
@@ -82,7 +82,7 @@ $(function(){
         else if(layout==='dot_2005_pagerank'){
             graph = dot_graph_2005_pagerank[0];
         }
-        else if(layout==='dot_2005_pagerank-minus-auth'){
+        else if(layout==='dot_2005_auth-minus-pagerank'){
             graph = dot_2005_auth_minus_pagerank[0]
         }
         else if(layout==='dot_2012_auth'){
@@ -94,7 +94,7 @@ $(function(){
         else if(layout==='dot_2012_pagerank'){
             graph = dot_graph_2012_pagerank[0];
         }
-        else if(layout==='dot_2012_pagerank-minus-auth'){
+        else if(layout==='dot_2012_auth-minus-pagerank'){
             graph = dot_2012_auth_minus_pagerank[0]
         }
 
