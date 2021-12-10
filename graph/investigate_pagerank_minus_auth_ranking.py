@@ -48,21 +48,32 @@ def find_article_required_refactoring():
             version = txt[4:14]
         node2ranking_each_mml_version[version] = node2ranking
 
-    node2displacement_between_two_version = calc_displacement_between_two_version(node2ranking_each_mml_version)
-    with open("displacement_between_two_version.txt", "w") as f:
-        f.write(pprint.pformat(sorted(node2displacement_between_two_version.items(), key=lambda x:x[1], reverse=False)))
+    node2displacement_between_two_version_ranking_down = \
+        calc_displacement_between_two_version_ranking_down(node2ranking_each_mml_version)
+    with open("displacement_between_two_version_ranking_down.txt", "w") as f:
+        f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_down.items(), 
+                                      key=lambda x:x[1], reverse=False)))
 
-    node2displacement_in_all_version = calc_displacement_in_all_version(node2ranking_each_mml_version)
-    with open("displacement_in_all_version.txt", "w") as f:
-        f.write(pprint.pformat(sorted(node2displacement_in_all_version.items(), key=lambda x:x[1], reverse=False)))
+    node2displacement_between_two_version_ranking_up = \
+        calc_displacement_between_two_version_ranking_up(node2ranking_each_mml_version)
+    with open("displacement_between_two_version_ranking_up.txt", "w") as f:
+        f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_up.items(), 
+                                      key=lambda x:x[1], reverse=False)))
 
-    node2displacement_between_two_version_ranking_up = calc_displacement_in_all_version_ranking_upper(node2ranking_each_mml_version)
+    node2displacement_in_all_version_ranking_down = \
+        calc_displacement_in_all_version_ranking_down(node2ranking_each_mml_version)
+    with open("displacement_in_all_version_ranking_down.txt", "w") as f:
+        f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_down.items(),
+                                      key=lambda x:x[1], reverse=False)))
+
+    node2displacement_between_two_version_ranking_up = \
+        calc_displacement_in_all_version_ranking_up(node2ranking_each_mml_version)
     with open("displacement_in_all_version_ranking_up.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_up.items(),
-                key=lambda x:x[1], reverse=True)))
+                                      key=lambda x:x[1], reverse=True)))
 
 
-def calc_displacement_between_two_version(node2ranking_each_mml_version):
+def calc_displacement_between_two_version_ranking_down(node2ranking_each_mml_version):
     mml_version = get_mml_version()
     node2score = dict()
     for i in range(len(mml_version)-1):
@@ -77,7 +88,22 @@ def calc_displacement_between_two_version(node2ranking_each_mml_version):
     return node2score
 
 
-def calc_displacement_in_all_version(node2ranking_each_mml_version):
+def calc_displacement_between_two_version_ranking_up(node2ranking_each_mml_version):
+    mml_version = sorted(get_mml_version(), reverse=True)
+    node2score = dict()
+    for i in range(len(mml_version)-1):
+        current_version = mml_version[i]
+        old_version = mml_version[i+1]
+        for k,v in node2ranking_each_mml_version[current_version].items():
+            if not k in node2score.keys():
+                node2score[k] = 0
+            if k in node2ranking_each_mml_version[old_version].keys():
+                node2score[k] = min(node2score[k], v - node2ranking_each_mml_version[old_version][k])
+
+    return node2score
+
+
+def calc_displacement_in_all_version_ranking_down(node2ranking_each_mml_version):
     node2ranking = dict()
     node2score = dict()
 
@@ -107,7 +133,7 @@ def calc_displacement_in_all_version(node2ranking_each_mml_version):
     return node2score
 
 
-def calc_displacement_in_all_version_ranking_upper(node2ranking_each_mml_version):
+def calc_displacement_in_all_version_ranking_up(node2ranking_each_mml_version):
     node2ranking = dict()
     node2score = dict()
     mml_version_reversed = sorted(get_mml_version(), reverse=True)
