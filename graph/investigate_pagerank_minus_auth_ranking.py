@@ -62,15 +62,25 @@ def find_article_required_refactoring():
 
     node2displacement_in_all_version_ranking_down = \
         calc_displacement_in_all_version_ranking_down(node2ranking_each_mml_version)
+    for k in node2displacement_in_all_version_ranking_down.keys():
+        node2displacement_in_all_version_ranking_down[k]["old_ver"] = node2displacement_in_all_version_ranking_down[k]["min_ver"]
+        node2displacement_in_all_version_ranking_down[k]["new_ver"] = node2displacement_in_all_version_ranking_down[k]["max_ver"]
+        del(node2displacement_in_all_version_ranking_down[k]["min_ver"])
+        del(node2displacement_in_all_version_ranking_down[k]["max_ver"])
     with open("displacement_in_all_version_ranking_down.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_down.items(),
-                                      key=lambda x:x[1], reverse=False)))
+                                      key=lambda x:x[1]["score"], reverse=False)))
 
-    node2displacement_between_two_version_ranking_up = \
+    node2displacement_in_all_version_ranking_up = \
         calc_displacement_in_all_version_ranking_up(node2ranking_each_mml_version)
+    for k in node2displacement_in_all_version_ranking_up.keys():
+        node2displacement_in_all_version_ranking_up[k]["old_ver"] = node2displacement_in_all_version_ranking_up[k]["max_ver"]
+        node2displacement_in_all_version_ranking_up[k]["new_ver"] = node2displacement_in_all_version_ranking_up[k]["min_ver"]
+        del(node2displacement_in_all_version_ranking_up[k]["max_ver"])
+        del(node2displacement_in_all_version_ranking_up[k]["min_ver"])
     with open("displacement_in_all_version_ranking_up.txt", "w") as f:
-        f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_up.items(),
-                                      key=lambda x:x[1], reverse=True)))
+        f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_up.items(),
+                                      key=lambda x:x[1]["score"], reverse=True)))
 
 
 def calc_displacement_between_two_version_ranking_down(node2ranking_each_mml_version):
@@ -113,23 +123,35 @@ def calc_displacement_in_all_version_ranking_down(node2ranking_each_mml_version)
                 node2ranking[k] = dict()
                 node2ranking[k][0] = dict()
                 node2ranking[k][0]["min"] = v
+                node2ranking[k][0]["min_ver"] = version
                 node2ranking[k][0]["max"] = v
+                node2ranking[k][0]["max_ver"] = version
             else:
                 key_max = max(node2ranking[k].keys())
                 if v < node2ranking[k][key_max]["min"]:
                     node2ranking[k][key_max + 1] = dict()
                     node2ranking[k][key_max + 1]["min"] = v
+                    node2ranking[k][key_max + 1]["min_ver"] = version
                     node2ranking[k][key_max + 1]["max"] = v
+                    node2ranking[k][key_max + 1]["max_ver"] = version
                 else:
-                    node2ranking[k][key_max]["max"] = max(v, node2ranking[k][key_max]["max"])
+                    if v > node2ranking[k][key_max]["max"]:
+                        node2ranking[k][key_max]["max"] = v
+                        node2ranking[k][key_max]["max_ver"] = version
     
     for k in node2ranking.keys():
         for i in node2ranking[k].keys():
             for j in range(i, len(node2ranking[k].keys())):
                 if not k in node2score.keys():
-                    node2score[k] = node2ranking[k][i]["min"] - node2ranking[k][j]["max"]
+                    node2score[k] = dict()
+                    node2score[k]["score"] = node2ranking[k][i]["min"] - node2ranking[k][j]["max"]
+                    node2score[k]["min_ver"] = node2ranking[k][i]["min_ver"]
+                    node2score[k]["max_ver"] = node2ranking[k][i]["max_ver"]
                 else:
-                    node2score[k] = min(node2score[k], node2ranking[k][i]["min"] - node2ranking[k][j]["max"])
+                    if node2score[k]["score"] > (node2ranking[k][i]["min"] - node2ranking[k][j]["max"]):
+                        node2score[k]["score"] = node2ranking[k][i]["min"] - node2ranking[k][j]["max"]
+                        node2score[k]["min_ver"] = node2ranking[k][i]["min_ver"]
+                        node2score[k]["max_ver"] = node2ranking[k][j]["max_ver"]
     return node2score
 
 
@@ -144,22 +166,34 @@ def calc_displacement_in_all_version_ranking_up(node2ranking_each_mml_version):
                 node2ranking[k] = dict()
                 node2ranking[k][0] = dict()
                 node2ranking[k][0]["min"] = v
+                node2ranking[k][0]["min_ver"] = version
                 node2ranking[k][0]["max"] = v
+                node2ranking[k][0]["max_ver"] = version
             else:
                 key_max = max(node2ranking[k].keys())
                 if v < node2ranking[k][key_max]["min"]:
                     node2ranking[k][key_max + 1] = dict()
                     node2ranking[k][key_max + 1]["min"] = v
+                    node2ranking[k][key_max + 1]["min_ver"] = version
                     node2ranking[k][key_max + 1]["max"] = v
+                    node2ranking[k][key_max + 1]["max_ver"] = version
                 else:
-                    node2ranking[k][key_max]["max"] = max(v, node2ranking[k][key_max]["max"])
+                    if v > node2ranking[k][key_max]["max"]:
+                        node2ranking[k][key_max]["max"] = v
+                        node2ranking[k][key_max]["max_ver"] = version
     
     for k in node2ranking.keys():
         for i in node2ranking[k].keys():
             if not k in node2score.keys():
-                node2score[k] = node2ranking[k][i]["max"] - node2ranking[k][i]["min"]
+                node2score[k] = dict()
+                node2score[k]["score"] = node2ranking[k][i]["max"] - node2ranking[k][i]["min"]
+                node2score[k]["min_ver"] = node2ranking[k][i]["min_ver"]
+                node2score[k]["max_ver"] = node2ranking[k][i]["max_ver"]
             else:
-                node2score[k] = max(node2score[k], node2ranking[k][i]["max"] - node2ranking[k][i]["min"])
+                if (node2ranking[k][i]["max"] - node2ranking[k][i]["min"]) > node2score[k]["score"]:
+                    node2score[k]["score"] = node2ranking[k][i]["max"] - node2ranking[k][i]["min"]
+                    node2score[k]["min_ver"] = node2ranking[k][i]["min_ver"]
+                    node2score[k]["max_ver"] = node2ranking[k][i]["max_ver"]
     return node2score
 
 if __name__ == '__main__':
