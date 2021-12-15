@@ -3,6 +3,7 @@ import os
 import glob
 import re
 import pprint
+import json
 
 def get_mml_version():
     cwd = os.getcwd()
@@ -70,6 +71,8 @@ def find_article_required_refactoring():
     with open("displacement_in_all_version_ranking_down.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_down.items(),
                                       key=lambda x:x[1]["score"], reverse=False)))
+    with open("displacement_in_all_version_ranking_down.json", "w") as f:
+        f.write(json.dumps(node2displacement_in_all_version_ranking_down, indent=4))
 
     node2displacement_in_all_version_ranking_up = \
         calc_displacement_in_all_version_ranking_up(node2ranking_each_mml_version)
@@ -81,6 +84,8 @@ def find_article_required_refactoring():
     with open("displacement_in_all_version_ranking_up.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_up.items(),
                                       key=lambda x:x[1]["score"], reverse=True)))
+    with open("displacement_in_all_version_ranking_up.json", "w") as f:
+        f.write(json.dumps(node2displacement_in_all_version_ranking_up, indent=4))
 
 
 def calc_displacement_between_two_version_ranking_down(node2ranking_each_mml_version):
