@@ -145,29 +145,37 @@ def count_proof(article):
 
     return proof_counter
 
+
+def main(article, old_ver, new_ver, create_output=False):
+    old_article, new_article = get_diff_ver_article(article, old_ver, new_ver)
+    _, environ_only_old_article, environ_only_new_article = \
+        compare_environ_articles(old_article, new_article)
+    _, theorems_and_labels_only_old_article, theorems_and_labels_only_new_article = \
+        compare_importing_theorems_and_labels(old_article, new_article)
+    number_of_proof_in_old_article, number_of_proof_in_new_article = get_numnber_of_proof(old_article, new_article)
+
+    if create_output:
+        with open("result_comparing-" + article + ".txt", "w") as f:
+            f.write(article + "\n")
+            f.write(old_ver + "\t" + new_ver + "\n")
+            f.write("ENVIRON \n")
+            f.write("only old article \t only new article \n")
+            f.write(str(len(environ_only_old_article)) + "\t" + str(len(environ_only_new_article)) + "\n")
+            f.write(str(environ_only_old_article) + "\t" + str(environ_only_new_article) + "\n\n")
+            f.write("THEOREM & LABEL \n")
+            f.write("only old article \t only new article \n")
+            f.write(str(len(theorems_and_labels_only_old_article)) + "\t" + str(len(theorems_and_labels_only_new_article)) + "\n")
+            f.write(str(theorems_and_labels_only_old_article) + "\t" + str(theorems_and_labels_only_new_article) + "\n\n")
+            f.write("NUMBER OF PROOF\n")
+            f.write("only old article \t only new article \n")
+            f.write(str(number_of_proof_in_old_article) + "\t" + str(number_of_proof_in_new_article) + "\n")
+    
+    return (article, len(environ_only_new_article), environ_only_new_article, len(environ_only_old_article), environ_only_old_article, 
+            len(theorems_and_labels_only_new_article), theorems_and_labels_only_new_article, len(theorems_and_labels_only_old_article), theorems_and_labels_only_old_article,
+            number_of_proof_in_old_article, number_of_proof_in_new_article)
+
 if __name__ == '__main__':
     article = sys.argv[1]
     old_ver = sys.argv[2]
     new_ver = sys.argv[3]
-    old_article, new_article = get_diff_ver_article(article, old_ver, new_ver)
-    environ_intersection, environ_only_old_article, environ_only_new_article = \
-        compare_environ_articles(old_article, new_article)
-    theorems_and_labels_intersection, theorems_and_labels_only_old_article, theorems_and_labels_only_new_article = \
-        compare_importing_theorems_and_labels(old_article, new_article)
-    number_of_proof_in_old_article, number_of_proof_in_new_article = get_numnber_of_proof(old_article, new_article)
-
-    with open("result_comparing-" + article + ".txt", "w") as f:
-        f.write(article + "\n")
-        f.write(old_ver + "\t" + new_ver + "\n")
-        f.write("ENVIRON \n")
-        f.write("only old article \t only new article \n")
-        f.write(str(len(environ_only_old_article)) + "\t" + str(len(environ_only_new_article)) + "\n")
-        f.write(str(environ_only_old_article) + "\t" + str(environ_only_new_article) + "\n\n")
-        f.write("THEOREM & LABEL \n")
-        f.write("only old article \t only new article \n")
-        f.write(str(len(theorems_and_labels_only_old_article)) + "\t" + str(len(theorems_and_labels_only_new_article)) + "\n")
-        f.write(str(theorems_and_labels_only_old_article) + "\t" + str(theorems_and_labels_only_new_article) + "\n\n")
-        f.write("NUMBER OF PROOF\n")
-        f.write("only old article \t only new article \n")
-        f.write(str(number_of_proof_in_old_article) + "\t" + str(number_of_proof_in_new_article) + "\n")
-        
+    main(article, old_ver, new_ver, create_output=True)
