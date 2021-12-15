@@ -85,7 +85,6 @@ def compare_importing_theorems_and_labels(old_article, new_article):
     only_new_article_theorem_and_label = new_article_theoerem_and_label - old_article_theoerem_and_label
     return intersection, only_old_article_theorem_and_label, only_new_article_theorem_and_label
 
-
 def extract_theorems_and_label(article):
     # 単語、改行、::、;で区切ってファイルの内容を取得
     file_words = re.findall(r"\w+:*|\n|::|;|\.=", article)
@@ -122,8 +121,29 @@ def extract_theorems_and_label(article):
         
     return theorem_and_label
 
-def count_proof(old_article, new_article):
-    return old_article.count('proof'), new_article.count('proof')
+def get_numnber_of_proof(old_article, new_article):
+    return count_proof(old_article), count_proof(new_article)
+
+def count_proof(article):
+    # 単語、改行、::、;で区切ってファイルの内容を取得
+    file_words = re.findall(r"\w+|\n|::", article)
+    is_comment = False
+    proof_counter = 0
+
+    # mizファイルからbyで引用するtheorem,labelを取得する
+    for word in file_words:
+        # コメント行の場合
+        if word == "::" and not is_comment:
+            is_comment = True
+            continue
+        # コメント行の終了
+        if re.search(r"\n", word) and is_comment:
+            is_comment = False
+        # コメント外でproofが出現
+        if not is_comment and word == "proof":
+            proof_counter += 1
+
+    return proof_counter
 
 if __name__ == '__main__':
     article = sys.argv[1]
@@ -134,7 +154,7 @@ if __name__ == '__main__':
         compare_environ_articles(old_article, new_article)
     theorems_and_labels_intersection, theorems_and_labels_only_old_article, theorems_and_labels_only_new_article = \
         compare_importing_theorems_and_labels(old_article, new_article)
-    number_of_proof_in_old_article, number_of_proof_in_new_article = count_proof(old_article, new_article)
+    number_of_proof_in_old_article, number_of_proof_in_new_article = get_numnber_of_proof(old_article, new_article)
 
     with open("result_comparing-" + article + ".txt", "w") as f:
         f.write(article + "\n")
