@@ -136,14 +136,16 @@ if __name__ == '__main__':
         compare_importing_theorems_and_labels(old_article, new_article)
     number_of_proof_in_old_article, number_of_proof_in_new_article = count_proof(old_article, new_article)
 
-    with open("result_comparing.txt", "w") as f:
+    with open("result_comparing-" + article + ".txt", "w") as f:
         f.write(article + "\n")
         f.write(old_ver + "\t" + new_ver + "\n")
         f.write("ENVIRON \n")
         f.write("only old article \t only new article \n")
+        f.write(str(len(environ_only_old_article)) + "\t" + str(len(environ_only_new_article)) + "\n")
         f.write(str(environ_only_old_article) + "\t" + str(environ_only_new_article) + "\n\n")
         f.write("THEOREM & LABEL \n")
         f.write("only old article \t only new article \n")
+        f.write(str(len(theorems_and_labels_only_old_article)) + "\t" + str(len(theorems_and_labels_only_new_article)) + "\n")
         f.write(str(theorems_and_labels_only_old_article) + "\t" + str(theorems_and_labels_only_new_article) + "\n\n")
         f.write("NUMBER OF PROOF\n")
         f.write("only old article \t only new article \n")
