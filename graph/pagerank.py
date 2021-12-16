@@ -82,7 +82,7 @@ def calc_pagerank(mml_version):
     # networkxのグラフを作成
     dot_G = nx.cytoscape_graph(dot_graph)
     # 作成したグラフをもとに，pagerankを計算
-    dot_node2pagerank = nx.pagerank(dot_G, max_iter=1000)
+    dot_node2pagerank = nx.pagerank_numpy(dot_G)
     # pagerankに順位付け
     dot_node2ranking = rank_nodes_with_pagerank(dot_node2pagerank)
     # pagerankの順位をもとにグループ分け
@@ -123,10 +123,14 @@ def create_node2pagerank(mml_version, create_file=False):
     # networkxのグラフを作成
     G = nx.cytoscape_graph(dot_graph)
     # 作成したグラフをもとに，pagerankを計算
-    node2pagerank = nx.pagerank(G, max_iter=1000)
+    node2pagerank = nx.pagerank_numpy(G)
 
     if create_file:
-        with open("article2pagerank(" + mml_version +").txt", "w") as f:
+        with open("node2pagerank(" + mml_version +").txt", "w") as f:
             f.write(pprint.pformat(sorted(node2pagerank.items(), key=lambda x:x[1], reverse=True)))
     
     return node2pagerank
+
+
+if __name__ == "__main__":
+    create_node2pagerank("2020-06-18", True)
