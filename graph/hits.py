@@ -79,7 +79,7 @@ def grouping_for_ranking(node2ranking):
     return node2group
 
 
-def calc_hits(mml_version, auth=True):
+def calc_hits(mml_version, auth=True, nx_hits=True):
     cwd = os.getcwd()
 
     try:
@@ -94,7 +94,10 @@ def calc_hits(mml_version, auth=True):
     dot_G = nx.cytoscape_graph(dot_graph)
 
     # 作成したグラフをもとに，hits.authoritiesを計算
-    dot_node2hub, dot_node2authority = nx.hits(dot_G, max_iter = 10000, normalized = True)
+    if nx_hits:
+        dot_node2hub, dot_node2authority = nx.hits(dot_G, max_iter = 10000, normalized = True)
+    else:
+        dot_node2hub, dot_node2authority = hits(mml_version)
 
     dot_node_authority2value = dict()
     for k,v in dot_node2authority.items():
