@@ -244,14 +244,14 @@ def assgin_dot_coordinate(nodes):
     """
     graphvizのdotレイアウトを適用したときの座標を返す
     """
-    G = nx.DiGraph(nodes_to_node2targets(nodes))
+    G = nx.DiGraph(make_node2targets(nodes))
     pos = nx.nx_pydot.pydot_layout(G, prog="dot")
     for n in nodes:
         n.x = pos[n.name][0] * 0.02
         n.y = pos[n.name][1] * 0.02
 
 
-def nodes_to_node2targets(nodes):
+def make_node2targets(nodes):
     node2targets = dict()
     for n in nodes:
         node2targets[n.name] = list()
