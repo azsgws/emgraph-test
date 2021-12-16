@@ -3,6 +3,7 @@ import sys
 import json
 import networkx as nx
 import math
+import pprint
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
@@ -145,3 +146,24 @@ def calc_hits(mml_version, auth=True):
 
     finally:
         os.chdir(cwd)
+
+
+def create_node2authority(mml_version, create_file=False):
+    cwd = os.getcwd()
+    try:
+        os.chdir("graph_attrs")
+        with open("dot_graph_" + mml_version + ".json", "r") as f:
+            dot_graph = json.load(f)
+    finally:
+        os.chdir(cwd)
+
+    # networkxのグラフを作成
+    G = nx.cytoscape_graph(dot_graph)
+    # 作成したグラフをもとに，hits.authoritiesを計算
+    _, node2authority = nx.hits(G, max_iter = 10000, normalized = True)
+
+    if create_file:
+        with open("node2authority(" + mml_version + ").txt", "w") as f:
+            f.write(pprint.pformat(sorted(node2authority.items(), key=lambda x:x[1], reverse=True)))
+
+    return node2authority
