@@ -4,6 +4,8 @@ import json
 import networkx as nx
 import math
 import pprint
+from retrieve_dependency import make_miz_dependency
+from create_graph import create_nodes, remove_cycle, remove_redundant_dependency, restore_removed_cycles
 
 def decide_node_size_from_authority_log(authorities):
     log_val_list = list()
@@ -148,7 +150,49 @@ def calc_hits(mml_version, auth=True):
         os.chdir(cwd)
 
 
-def create_node2authority(mml_version, create_file=False):
+def hits(mml_version):
+    article2ref_articles = make_miz_dependency(mml_version)
+    nodes = create_nodes(article2ref_articles)
+    cycles = remove_cycle(nodes)
+    remove_redundant_dependency(nodes)
+    if cycles:
+        restore_removed_cycles(nodes, cycles)
+
+    old_node2authority = dict()
+    old_node2hub = dict()
+    new_node2authority = dict()
+    new_node2hub = dict()
+
+    for n in nodes:
+        old_node2authority[n] = float(1)
+        old_node2hub[n] = float(1)
+        new_node2authority[n] = float(0)
+        new_node2hub[n] = float(0)
+
+    for _ in range(1000):
+        for n in nodes:
+            for s in n.sources:
+                new_node2authority[n] += old_node2hub[s]
+            for t in n.targets:
+                new_node2hub[n] += old_node2authority[t]
+        total_authority = float(sum(new_node2authority.values()))
+        total_hub = float(sum(new_node2hub.values()))
+        for n in nodes:
+            old_node2authority[n] = new_node2authority[n]/total_authority
+            old_node2hub[n] = new_node2hub[n]/total_hub
+            new_node2authority[n] = float(0)
+            new_node2hub[n] = float(0)
+    
+    for n in nodes:
+        old_node2authority[n.name] = old_node2authority[n]
+        old_node2hub[n.name] = old_node2hub[n]
+        del old_node2authority[n]
+        del old_node2hub[n]
+        
+    return old_node2hub, old_node2authority
+
+
+def create_node2authority(mml_version, is_nx=True, create_file=False):
     cwd = os.getcwd()
     try:
         os.chdir("graph_attrs")
@@ -160,10 +204,18 @@ def create_node2authority(mml_version, create_file=False):
     # networkxのグラフを作成
     G = nx.cytoscape_graph(dot_graph)
     # 作成したグラフをもとに，hits.authoritiesを計算
-    _, node2authority = nx.hits(G, max_iter = 10000, normalized = True)
+    if is_nx:
+        _, node2authority = nx.hits(G)
+        title_tail = "nx_hits"
+    else:
+        _, node2authority = hits(mml_version)
+        title_tail = "my_hits"
 
     if create_file:
-        with open("node2authority(" + mml_version + ").txt", "w") as f:
+        with open("node2authority(" + mml_version + ")_" + title_tail + ".txt", "w") as f:
             f.write(pprint.pformat(sorted(node2authority.items(), key=lambda x:x[1], reverse=True)))
 
     return node2authority
+
+if __name__ == "__main__":
+    create_node2authority("2020-06-18", is_nx=False, create_file=True)
