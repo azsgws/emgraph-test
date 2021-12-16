@@ -1,6 +1,7 @@
 import os
 import json
 import networkx as nx
+import pprint
 
 def min_max_normalization(node2value, max_val, min_val):
     node_size = dict()
@@ -107,3 +108,25 @@ def calc_pagerank(mml_version):
     finally:
         os.chdir(cwd)
         
+
+def create_node2pagerank(mml_version, create_file=False):
+    cwd = os.getcwd()
+
+    try:
+        os.chdir("graph_attrs")
+        with open("dot_graph_" + mml_version + ".json", "r") as f:
+            dot_graph = json.load(f)
+
+    finally:
+        os.chdir(cwd)
+
+    # networkxのグラフを作成
+    G = nx.cytoscape_graph(dot_graph)
+    # 作成したグラフをもとに，pagerankを計算
+    node2pagerank = nx.pagerank(G, max_iter=1000)
+
+    if create_file:
+        with open("article2pagerank(" + mml_version +").txt", "w") as f:
+            f.write(pprint.pformat(sorted(node2pagerank.items(), key=lambda x:x[1], reverse=True)))
+    
+    return node2pagerank
