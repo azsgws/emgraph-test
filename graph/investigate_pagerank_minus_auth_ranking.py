@@ -51,13 +51,13 @@ def find_article_required_refactoring():
 
     node2displacement_between_two_version_ranking_down = \
         calc_displacement_between_two_version_ranking_down(node2ranking_each_mml_version)
-    with open("displacement_between_two_version_ranking_down.txt", "w") as f:
+    with open("research_data/displacement_between_two_version_ranking_down.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_down.items(), 
                                       key=lambda x:x[1], reverse=False)))
 
     node2displacement_between_two_version_ranking_up = \
         calc_displacement_between_two_version_ranking_up(node2ranking_each_mml_version)
-    with open("displacement_between_two_version_ranking_up.txt", "w") as f:
+    with open("research_data/displacement_between_two_version_ranking_up.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_between_two_version_ranking_up.items(), 
                                       key=lambda x:x[1], reverse=False)))
 
@@ -68,10 +68,10 @@ def find_article_required_refactoring():
         node2displacement_in_all_version_ranking_down[k]["new_ver"] = node2displacement_in_all_version_ranking_down[k]["max_ver"]
         del(node2displacement_in_all_version_ranking_down[k]["min_ver"])
         del(node2displacement_in_all_version_ranking_down[k]["max_ver"])
-    with open("displacement_in_all_version_ranking_down.txt", "w") as f:
+    with open("research_data/displacement_in_all_version_ranking_down.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_down.items(),
                                       key=lambda x:x[1]["score"], reverse=False)))
-    with open("displacement_in_all_version_ranking_down.json", "w") as f:
+    with open("research_data/displacement_in_all_version_ranking_down.json", "w") as f:
         f.write(json.dumps(node2displacement_in_all_version_ranking_down, indent=4))
 
     node2displacement_in_all_version_ranking_up = \
@@ -81,10 +81,10 @@ def find_article_required_refactoring():
         node2displacement_in_all_version_ranking_up[k]["new_ver"] = node2displacement_in_all_version_ranking_up[k]["min_ver"]
         del(node2displacement_in_all_version_ranking_up[k]["max_ver"])
         del(node2displacement_in_all_version_ranking_up[k]["min_ver"])
-    with open("displacement_in_all_version_ranking_up.txt", "w") as f:
+    with open("research_data/displacement_in_all_version_ranking_up.txt", "w") as f:
         f.write(pprint.pformat(sorted(node2displacement_in_all_version_ranking_up.items(),
                                       key=lambda x:x[1]["score"], reverse=True)))
-    with open("displacement_in_all_version_ranking_up.json", "w") as f:
+    with open("research_data/displacement_in_all_version_ranking_up.json", "w") as f:
         f.write(json.dumps(node2displacement_in_all_version_ranking_up, indent=4))
 
 
