@@ -68,7 +68,7 @@ def grouping_for_ranking(node2ranking):
             node2group[k] = {"group": 9}
     return node2group
 
-def calc_pagerank(mml_version):
+def make_pagerank_graph(mml_version):
     cwd = os.getcwd()
 
     try:
