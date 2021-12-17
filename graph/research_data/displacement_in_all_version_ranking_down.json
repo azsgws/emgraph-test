@@ -145,12 +145,12 @@
         "new_ver": "2017-11-05"
     },
     "RSSPACE2": {
-        "score": -613,
+        "score": -615,
         "old_ver": "2012-03-05",
         "new_ver": "2012-12-02"
     },
     "TAYLOR_2": {
-        "score": -128,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
@@ -325,7 +325,7 @@
         "new_ver": "2015-02-12"
     },
     "BORSUK_6": {
-        "score": -93,
+        "score": -92,
         "old_ver": "2012-12-02",
         "new_ver": "2018-04-06"
     },
@@ -342,7 +342,7 @@
     "HILBERT3": {
         "score": -84,
         "old_ver": "2012-03-05",
-        "new_ver": "2019-03-29"
+        "new_ver": "2020-06-18"
     },
     "COMPTRIG": {
         "score": -53,
@@ -377,7 +377,7 @@
     "POLYNOM4": {
         "score": -23,
         "old_ver": "2013-12-10",
-        "new_ver": "2015-10-30"
+        "new_ver": "2018-04-06"
     },
     "GLIB_003": {
         "score": -127,
@@ -420,7 +420,7 @@
         "new_ver": "2018-04-06"
     },
     "BCIALG_2": {
-        "score": -168,
+        "score": -169,
         "old_ver": "2012-12-02",
         "new_ver": "2018-05-15"
     },
@@ -449,15 +449,15 @@
         "old_ver": "2012-03-05",
         "new_ver": "2012-12-02"
     },
-    "REAL_3": {
-        "score": -74,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
     "HEYTING3": {
-        "score": -64,
+        "score": -65,
         "old_ver": "2012-03-05",
         "new_ver": "2012-12-02"
+    },
+    "REAL_3": {
+        "score": -73,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
     },
     "JGRAPH_6": {
         "score": -160,
@@ -500,7 +500,7 @@
         "new_ver": "2018-04-06"
     },
     "MATRIX_2": {
-        "score": -28,
+        "score": -27,
         "old_ver": "2012-12-02",
         "new_ver": "2013-01-29"
     },
@@ -510,7 +510,7 @@
         "new_ver": "2020-06-18"
     },
     "MOD_2": {
-        "score": -588,
+        "score": -590,
         "old_ver": "2012-12-02",
         "new_ver": "2018-04-06"
     },
@@ -544,15 +544,15 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "BORSUK_5": {
-        "score": -200,
-        "old_ver": "2012-03-05",
-        "new_ver": "2016-07-24"
-    },
     "VECTSP10": {
         "score": -35,
         "old_ver": "2012-12-02",
         "new_ver": "2013-12-10"
+    },
+    "BORSUK_5": {
+        "score": -199,
+        "old_ver": "2012-03-05",
+        "new_ver": "2016-07-24"
     },
     "FUZZY_4": {
         "score": -146,
@@ -590,12 +590,12 @@
         "new_ver": "2018-04-06"
     },
     "PRALG_2": {
-        "score": -724,
+        "score": -727,
         "old_ver": "2012-12-02",
         "new_ver": "2017-11-05"
     },
     "GRCAT_1": {
-        "score": -1201,
+        "score": -1199,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -604,15 +604,15 @@
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
-    "CIRCCMB3": {
-        "score": -13,
-        "old_ver": "2015-02-12",
-        "new_ver": "2019-03-29"
-    },
     "FREEALG": {
         "score": -14,
         "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
+        "new_ver": "2019-03-29"
+    },
+    "CIRCCMB3": {
+        "score": -12,
+        "old_ver": "2015-02-12",
+        "new_ver": "2018-04-06"
     },
     "GRAPH_5": {
         "score": -202,
@@ -765,7 +765,7 @@
         "new_ver": "2016-07-24"
     },
     "PZFMISC1": {
-        "score": -1054,
+        "score": -1053,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -795,17 +795,17 @@
         "new_ver": "2020-06-18"
     },
     "WAYBEL23": {
-        "score": -120,
+        "score": -121,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "RELSET_2": {
-        "score": -617,
+        "score": -618,
         "old_ver": "2012-03-05",
         "new_ver": "2015-10-30"
     },
     "JORDAN1K": {
-        "score": -247,
+        "score": -248,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -829,15 +829,15 @@
         "old_ver": "2015-02-12",
         "new_ver": "2018-04-06"
     },
+    "JORDAN23": {
+        "score": -163,
+        "old_ver": "2012-03-05",
+        "new_ver": "2012-12-02"
+    },
     "BINARI_3": {
         "score": -27,
         "old_ver": "2015-02-12",
         "new_ver": "2019-03-29"
-    },
-    "JORDAN23": {
-        "score": -162,
-        "old_ver": "2012-03-05",
-        "new_ver": "2012-12-02"
     },
     "METRIC_6": {
         "score": -131,
@@ -895,7 +895,7 @@
         "new_ver": "2012-12-02"
     },
     "TOPREALC": {
-        "score": -446,
+        "score": -445,
         "old_ver": "2012-03-05",
         "new_ver": "2016-07-24"
     },
@@ -940,24 +940,24 @@
         "new_ver": "2013-01-29"
     },
     "PARTFUN3": {
-        "score": -255,
+        "score": -256,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
     "WAYBEL26": {
-        "score": -841,
+        "score": -842,
         "old_ver": "2012-03-05",
+        "new_ver": "2019-03-29"
+    },
+    "C0SP1": {
+        "score": -24,
+        "old_ver": "2015-10-30",
         "new_ver": "2019-03-29"
     },
     "CARD_LAR": {
         "score": -78,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
-    },
-    "C0SP1": {
-        "score": -24,
-        "old_ver": "2015-10-30",
-        "new_ver": "2019-03-29"
     },
     "MATROID0": {
         "score": -94,
@@ -975,7 +975,7 @@
         "new_ver": "2017-11-05"
     },
     "YELLOW16": {
-        "score": -179,
+        "score": -180,
         "old_ver": "2012-12-02",
         "new_ver": "2018-05-15"
     },
@@ -995,7 +995,7 @@
         "new_ver": "2018-04-06"
     },
     "CSSPACE": {
-        "score": -522,
+        "score": -521,
         "old_ver": "2012-03-05",
         "new_ver": "2019-03-29"
     },
@@ -1015,7 +1015,7 @@
         "new_ver": "2018-04-06"
     },
     "SIN_COS5": {
-        "score": -481,
+        "score": -482,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1040,7 +1040,7 @@
         "new_ver": "2020-06-18"
     },
     "COMPL_SP": {
-        "score": -114,
+        "score": -113,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
@@ -1050,7 +1050,7 @@
         "new_ver": "2020-06-18"
     },
     "ALTCAT_3": {
-        "score": -194,
+        "score": -193,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -1080,7 +1080,7 @@
         "new_ver": "2017-11-05"
     },
     "LMOD_7": {
-        "score": -207,
+        "score": -208,
         "old_ver": "2012-12-02",
         "new_ver": "2015-10-30"
     },
@@ -1114,20 +1114,20 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "PRE_POLY": {
-        "score": -59,
-        "old_ver": "2013-01-29",
-        "new_ver": "2018-05-15"
-    },
     "JGRAPH_7": {
-        "score": -434,
+        "score": -435,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "VECTMETR": {
-        "score": -434,
+        "score": -435,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
+    },
+    "PRE_POLY": {
+        "score": -59,
+        "old_ver": "2013-01-29",
+        "new_ver": "2018-05-15"
     },
     "POLYEQ_1": {
         "score": -44,
@@ -1150,9 +1150,9 @@
         "new_ver": "2018-04-06"
     },
     "POLYEQ_2": {
-        "score": -538,
+        "score": -539,
         "old_ver": "2012-03-05",
-        "new_ver": "2015-10-30"
+        "new_ver": "2020-06-18"
     },
     "TOPGEN_3": {
         "score": -22,
@@ -1169,14 +1169,14 @@
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "GLIB_001": {
-        "score": -40,
-        "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
-    },
     "CLOSURE1": {
         "score": -63,
         "old_ver": "2013-01-29",
+        "new_ver": "2020-06-18"
+    },
+    "GLIB_001": {
+        "score": -41,
+        "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "AFF_4": {
@@ -1185,7 +1185,7 @@
         "new_ver": "2020-06-18"
     },
     "JORDAN3": {
-        "score": -402,
+        "score": -401,
         "old_ver": "2012-03-05",
         "new_ver": "2018-04-06"
     },
@@ -1205,7 +1205,7 @@
         "new_ver": "2019-03-29"
     },
     "ASYMPT_0": {
-        "score": -494,
+        "score": -496,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1215,12 +1215,12 @@
         "new_ver": "2015-02-12"
     },
     "OSALG_4": {
-        "score": -585,
+        "score": -584,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MATRTOP1": {
-        "score": -354,
+        "score": -355,
         "old_ver": "2012-03-05",
         "new_ver": "2015-02-12"
     },
@@ -1235,7 +1235,7 @@
         "new_ver": "2018-04-06"
     },
     "GOBOARD8": {
-        "score": -555,
+        "score": -557,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -1250,7 +1250,7 @@
         "new_ver": "2020-06-18"
     },
     "CLOPBAN2": {
-        "score": -50,
+        "score": -49,
         "old_ver": "2015-02-12",
         "new_ver": "2019-03-29"
     },
@@ -1285,7 +1285,7 @@
         "new_ver": "2020-06-18"
     },
     "TRANSGEO": {
-        "score": -479,
+        "score": -478,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -1310,17 +1310,12 @@
         "new_ver": "2020-06-18"
     },
     "REAL_LAT": {
-        "score": -183,
+        "score": -182,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "EUCLID": {
-        "score": -137,
-        "old_ver": "2012-12-02",
-        "new_ver": "2015-10-30"
-    },
     "TOPS_4": {
-        "score": -100,
+        "score": -101,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1329,13 +1324,18 @@
         "old_ver": "2012-12-02",
         "new_ver": "2015-02-12"
     },
+    "EUCLID": {
+        "score": -136,
+        "old_ver": "2012-12-02",
+        "new_ver": "2015-10-30"
+    },
     "EUCLIDLP": {
         "score": -350,
         "old_ver": "2012-03-05",
         "new_ver": "2018-05-15"
     },
     "MOD_4": {
-        "score": -623,
+        "score": -628,
         "old_ver": "2013-01-29",
         "new_ver": "2015-10-30"
     },
@@ -1345,7 +1345,7 @@
         "new_ver": "2018-04-06"
     },
     "JGRAPH_3": {
-        "score": -413,
+        "score": -412,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1355,27 +1355,27 @@
         "new_ver": "2017-11-05"
     },
     "ARROW": {
-        "score": -71,
+        "score": -72,
         "old_ver": "2013-12-10",
         "new_ver": "2017-11-05"
     },
     "QUOFIELD": {
-        "score": -74,
+        "score": -75,
         "old_ver": "2012-12-02",
         "new_ver": "2018-04-06"
     },
     "POLYNOM1": {
-        "score": -615,
+        "score": -617,
         "old_ver": "2012-12-02",
         "new_ver": "2017-11-05"
     },
     "EUCLID_3": {
-        "score": -564,
+        "score": -563,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "RLAFFIN1": {
-        "score": -448,
+        "score": -447,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
@@ -1384,15 +1384,15 @@
         "old_ver": "2012-03-05",
         "new_ver": "2015-10-30"
     },
-    "CIRCCOMB": {
-        "score": -979,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "DIST_1": {
         "score": -17,
         "old_ver": "2015-02-12",
         "new_ver": "2019-03-29"
+    },
+    "CIRCCOMB": {
+        "score": -979,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
     },
     "EUCLID_5": {
         "score": -481,
@@ -1400,7 +1400,7 @@
         "new_ver": "2020-06-18"
     },
     "PRVECT_2": {
-        "score": -511,
+        "score": -512,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1460,7 +1460,7 @@
         "new_ver": "2020-06-18"
     },
     "JORDAN19": {
-        "score": -527,
+        "score": -521,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1485,9 +1485,9 @@
         "new_ver": "2015-10-30"
     },
     "WAYBEL19": {
-        "score": -29,
+        "score": -28,
         "old_ver": "2013-01-29",
-        "new_ver": "2018-04-06"
+        "new_ver": "2015-10-30"
     },
     "EUCLID_9": {
         "score": -275,
@@ -1540,12 +1540,12 @@
         "new_ver": "2020-06-18"
     },
     "NAT_5": {
-        "score": -270,
+        "score": -269,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "TOPALG_6": {
-        "score": -453,
+        "score": -455,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1554,13 +1554,23 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "SCMRING4": {
+        "score": -154,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "AMI_4": {
+        "score": -171,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "LPSPACE2": {
-        "score": -74,
+        "score": -71,
         "old_ver": "2012-03-05",
         "new_ver": "2016-07-24"
     },
     "CONVEX4": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1570,152 +1580,147 @@
         "new_ver": "2019-03-29"
     },
     "INTEGR10": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INTEGR16": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "AFF_3": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SCPQSORT": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CSSPACE4": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "YONEDA_1": {
-        "score": -127,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "INTERVA1": {
-        "score": -128,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "CLVECT_3": {
-        "score": -128,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "WAYBEL35": {
-        "score": -128,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "COMMACAT": {
-        "score": -128,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "OSAFREE": {
         "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "INTERVA1": {
+        "score": -130,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "CLVECT_3": {
+        "score": -130,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "WAYBEL35": {
+        "score": -130,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "COMMACAT": {
+        "score": -130,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "OSAFREE": {
+        "score": -131,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "ISOMICHI": {
-        "score": -256,
+        "score": -254,
         "old_ver": "2012-03-05",
         "new_ver": "2013-12-10"
     },
     "PENCIL_3": {
-        "score": -385,
+        "score": -383,
         "old_ver": "2012-03-05",
         "new_ver": "2019-03-29"
     },
     "POLYEQ_4": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "POLYEQ_5": {
-        "score": -111,
-        "old_ver": "2012-03-05",
-        "new_ver": "2019-03-29"
-    },
-    "MMLQUERY": {
-        "score": -288,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
-    "BCIALG_4": {
-        "score": -125,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "TOPALG_4": {
-        "score": -55,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
-    "RATFUNC1": {
-        "score": -370,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-12-10"
-    },
-    "AMISTD_3": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "PRELAMB": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SCPINVAR": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "GLIB_005": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "GATE_3": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "POLYNOM6": {
-        "score": -123,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SERIES_5": {
         "score": -109,
         "old_ver": "2012-03-05",
         "new_ver": "2019-03-29"
     },
-    "SCMRING4": {
-        "score": -122,
+    "MMLQUERY": {
+        "score": -281,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
+    },
+    "BCIALG_4": {
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "TOPALG_4": {
+        "score": -50,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
+    },
+    "RATFUNC1": {
+        "score": -379,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
+    },
+    "AMISTD_3": {
+        "score": -125,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PRELAMB": {
+        "score": -125,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SCPINVAR": {
+        "score": -125,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "GLIB_005": {
+        "score": -107,
+        "old_ver": "2012-03-05",
+        "new_ver": "2019-03-29"
+    },
+    "GATE_3": {
+        "score": -124,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "POLYNOM6": {
+        "score": -124,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SERIES_5": {
+        "score": -107,
+        "old_ver": "2012-03-05",
+        "new_ver": "2019-03-29"
+    },
     "INTPRO_1": {
-        "score": -383,
+        "score": -380,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INTEGR12": {
-        "score": -121,
+        "score": -123,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FILTER_2": {
-        "score": -311,
+        "score": -310,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1725,37 +1730,37 @@
         "new_ver": "2020-06-18"
     },
     "GATE_2": {
-        "score": -123,
+        "score": -125,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MSSUBLAT": {
-        "score": -123,
+        "score": -125,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ZF_COLLA": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GATE_4": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "KOLMOG01": {
-        "score": -562,
+        "score": -561,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SCHEMS_1": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LFUZZY_1": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1765,87 +1770,82 @@
         "new_ver": "2015-10-30"
     },
     "O_RING_1": {
-        "score": -326,
+        "score": -325,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "COMPOS_2": {
-        "score": -441,
+        "score": -440,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "WAYBEL31": {
-        "score": -122,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "NCFCONT2": {
         "score": -123,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "AMI_4": {
+    "NCFCONT2": {
         "score": -124,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CARDFIN2": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "PROJPL_1": {
-        "score": -377,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "ROBBINS4": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FTACELL1": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FF_SIEC": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "CC0SP2": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MSSCYC_2": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "UNIALG_3": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "INTEGR14": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "BOR_CANT": {
         "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "PROJPL_1": {
+        "score": -376,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "ROBBINS4": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FTACELL1": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FF_SIEC": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "CC0SP2": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MSSCYC_2": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "UNIALG_3": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "INTEGR14": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BOR_CANT": {
+        "score": -128,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "BIRKHOFF": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "DESCIP_1": {
-        "score": -56,
+        "score": -53,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
@@ -1855,12 +1855,12 @@
         "new_ver": "2015-02-12"
     },
     "NUMERAL1": {
-        "score": -55,
+        "score": -52,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "SCMFSA_5": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1870,47 +1870,47 @@
         "new_ver": "2020-06-18"
     },
     "JORDAN20": {
-        "score": -123,
+        "score": -125,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FSM_3": {
-        "score": -123,
+        "score": -125,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CONMETR1": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BCIALG_5": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FSM_2": {
-        "score": -125,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ORTSP_1": {
-        "score": -125,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LATSUBGR": {
-        "score": -125,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ARMSTRNG": {
-        "score": -237,
+        "score": -234,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "TSP_2": {
-        "score": -125,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1920,7 +1920,7 @@
         "new_ver": "2013-12-10"
     },
     "FUNCT_8": {
-        "score": -124,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -1930,67 +1930,67 @@
         "new_ver": "2020-06-18"
     },
     "ISOCAT_2": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "CONVFUN1": {
-        "score": -124,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "GROEB_3": {
-        "score": -125,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "LOPBAN_6": {
-        "score": -203,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
-    "CIRCLED1": {
-        "score": -125,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MODELC_3": {
         "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "WAYBEL22": {
+    "CONVFUN1": {
+        "score": -126,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "GROEB_3": {
         "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "MATRIX17": {
+    "LOPBAN_6": {
+        "score": -202,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
+    },
+    "CIRCLED1": {
+        "score": -127,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MODELC_3": {
+        "score": -128,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "WAYBEL22": {
         "score": -129,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MATRIX17": {
+        "score": -131,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "HELLY": {
-        "score": -100,
+        "score": -99,
         "old_ver": "2012-03-05",
         "new_ver": "2018-05-15"
     },
     "COMPLSP1": {
-        "score": -129,
+        "score": -131,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "RMOD_4": {
-        "score": -129,
+        "score": -131,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LP_SPACE": {
-        "score": -129,
+        "score": -131,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INTEGRA9": {
-        "score": -85,
+        "score": -86,
         "old_ver": "2012-03-05",
         "new_ver": "2016-07-24"
     },
@@ -2005,22 +2005,22 @@
         "new_ver": "2013-12-10"
     },
     "ENDALG": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SCM_COMP": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "QUATERN3": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ALGSTR_3": {
-        "score": -128,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2030,12 +2030,12 @@
         "new_ver": "2013-12-10"
     },
     "BHSP_7": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BVFUNC_3": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2045,67 +2045,67 @@
         "new_ver": "2020-06-18"
     },
     "E_SIEC": {
-        "score": -128,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FUNCT_9": {
-        "score": -128,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "HESSENBE": {
-        "score": -374,
+        "score": -373,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SCMISORT": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SCMPDS_9": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SEMI_AF1": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GOEDELCP": {
-        "score": -461,
+        "score": -462,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PARSP_2": {
-        "score": -126,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LATTICE8": {
-        "score": -126,
-        "old_ver": "2012-03-05",
+        "score": -145,
+        "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "RLVECT_X": {
-        "score": -127,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SINCOS10": {
-        "score": -127,
-        "old_ver": "2012-03-05",
+        "score": -158,
+        "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "MORPH_01": {
-        "score": -127,
+        "score": -112,
         "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
+        "new_ver": "2019-03-29"
     },
     "AFVECT01": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2115,12 +2115,12 @@
         "new_ver": "2015-02-12"
     },
     "DIFF_4": {
-        "score": -89,
+        "score": -147,
         "old_ver": "2012-03-05",
-        "new_ver": "2017-11-05"
+        "new_ver": "2015-02-12"
     },
     "WAYBEL34": {
-        "score": -125,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2130,12 +2130,12 @@
         "new_ver": "2013-12-10"
     },
     "MATRTOP3": {
-        "score": -480,
+        "score": -482,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "EUCLMETR": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2145,47 +2145,47 @@
         "new_ver": "2020-06-18"
     },
     "INTEGR1C": {
-        "score": -125,
+        "score": -126,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FINTOPO6": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CAT_4": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BVFUNC10": {
-        "score": -55,
+        "score": -52,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "SHEFFER2": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "AUTGROUP": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ABCMIZ_A": {
-        "score": -421,
+        "score": -420,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "HOMOTHET": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "COMPACT1": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2195,7 +2195,7 @@
         "new_ver": "2020-06-18"
     },
     "RADIX_6": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2210,42 +2210,42 @@
         "new_ver": "2013-12-10"
     },
     "SFMASTR3": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "HIDDEN": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GRNILP_1": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PDIFF_5": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "WAYBEL33": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PETRI_2": {
-        "score": -269,
+        "score": -267,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FILEREC1": {
-        "score": -126,
+        "score": -127,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LATSUM_1": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2255,12 +2255,12 @@
         "new_ver": "2018-04-06"
     },
     "FOMODEL4": {
-        "score": -127,
+        "score": -128,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "JORDAN22": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2270,62 +2270,62 @@
         "new_ver": "2013-12-10"
     },
     "PENCIL_4": {
-        "score": -128,
+        "score": -129,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "REALSET3": {
-        "score": -129,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GFACIRC2": {
-        "score": -129,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CLOPBAN4": {
-        "score": -129,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "EC_PF_2": {
-        "score": -55,
+        "score": -52,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "METRIC_2": {
-        "score": -129,
+        "score": -130,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CQC_THE3": {
-        "score": -132,
+        "score": -133,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MEASURE8": {
-        "score": -65,
+        "score": -64,
         "old_ver": "2012-03-05",
-        "new_ver": "2015-02-12"
+        "new_ver": "2013-12-10"
     },
     "LIMFUNC4": {
-        "score": -131,
+        "score": -132,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "NTALGO_1": {
-        "score": -100,
+        "score": -99,
         "old_ver": "2012-03-05",
         "new_ver": "2018-05-15"
     },
     "GATE_5": {
-        "score": -131,
+        "score": -132,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "L_HOSPIT": {
-        "score": -133,
+        "score": -134,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2335,7 +2335,7 @@
         "new_ver": "2020-06-18"
     },
     "INTEGR13": {
-        "score": -133,
+        "score": -134,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2345,7 +2345,7 @@
         "new_ver": "2018-05-15"
     },
     "PROJRED2": {
-        "score": -133,
+        "score": -134,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2355,27 +2355,27 @@
         "new_ver": "2020-06-18"
     },
     "DIRORT": {
-        "score": -132,
+        "score": -133,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "REARRAN1": {
-        "score": -132,
+        "score": -133,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PRGCOR_2": {
-        "score": -132,
+        "score": -133,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MODCAT_1": {
-        "score": -134,
+        "score": -135,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CAYLEY": {
-        "score": -134,
+        "score": -135,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2385,37 +2385,37 @@
         "new_ver": "2018-05-15"
     },
     "SIN_COS8": {
-        "score": -134,
+        "score": -135,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MATRIXJ2": {
-        "score": -134,
+        "score": -135,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INTEGR11": {
-        "score": -138,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "ALGSTR_4": {
-        "score": -54,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
-    "FIB_NUM4": {
-        "score": -104,
-        "old_ver": "2012-03-05",
-        "new_ver": "2018-05-15"
-    },
-    "ROBBINS2": {
         "score": -139,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "MSINST_1": {
+    "ALGSTR_4": {
+        "score": -51,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
+    },
+    "FIB_NUM4": {
+        "score": -103,
+        "old_ver": "2012-03-05",
+        "new_ver": "2018-05-15"
+    },
+    "ROBBINS2": {
         "score": -140,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MSINST_1": {
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2425,22 +2425,22 @@
         "new_ver": "2020-06-18"
     },
     "HERMITAN": {
-        "score": -139,
+        "score": -140,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FIB_FUSC": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "JORDAN14": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CLOSURE3": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2450,22 +2450,22 @@
         "new_ver": "2016-07-24"
     },
     "QC_LANG4": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CONLAT_2": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BCIALG_6": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FSCIRC_2": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2480,32 +2480,32 @@
         "new_ver": "2020-06-18"
     },
     "BROUWER2": {
-        "score": -551,
+        "score": -553,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BCIIDEAL": {
-        "score": -139,
+        "score": -140,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SIN_COS3": {
-        "score": -140,
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CFDIFF_2": {
-        "score": -140,
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FLANG_3": {
-        "score": -140,
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "T_1TOPSP": {
-        "score": -140,
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2515,12 +2515,12 @@
         "new_ver": "2020-06-18"
     },
     "FDIFF_11": {
-        "score": -140,
+        "score": -141,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FVALUAT1": {
-        "score": -141,
+        "score": -142,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2530,14 +2530,14 @@
         "new_ver": "2020-06-18"
     },
     "BVFUNC26": {
-        "score": -55,
+        "score": -52,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
     "ZF_FUND2": {
-        "score": -141,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
+        "score": -241,
+        "old_ver": "2015-10-30",
+        "new_ver": "2019-03-29"
     },
     "TOPDIM_2": {
         "score": -250,
@@ -2549,14 +2549,14 @@
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
+    "MSUALG_7": {
+        "score": -552,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
     "WAYBEL29": {
         "score": -431,
         "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MSUALG_7": {
-        "score": -551,
-        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "BHSP_6": {
@@ -2565,7 +2565,7 @@
         "new_ver": "2020-06-18"
     },
     "CONVEX2": {
-        "score": -235,
+        "score": -233,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2585,12 +2585,12 @@
         "new_ver": "2020-06-18"
     },
     "ROUGHS_1": {
-        "score": -265,
+        "score": -268,
         "old_ver": "2012-12-02",
         "new_ver": "2013-01-29"
     },
     "MEASURE4": {
-        "score": -115,
+        "score": -116,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -2600,7 +2600,7 @@
         "new_ver": "2013-01-29"
     },
     "JORDAN15": {
-        "score": -39,
+        "score": -38,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
@@ -2610,7 +2610,7 @@
         "new_ver": "2020-06-18"
     },
     "OPENLATT": {
-        "score": -109,
+        "score": -108,
         "old_ver": "2012-03-05",
         "new_ver": "2015-10-30"
     },
@@ -2660,7 +2660,7 @@
         "new_ver": "2020-06-18"
     },
     "YELLOW13": {
-        "score": -593,
+        "score": -594,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -2679,23 +2679,23 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "BOOLEALG": {
-        "score": -207,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "NFCONT_2": {
-        "score": -149,
+        "score": -148,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ZFREFLE1": {
-        "score": -153,
+        "score": -154,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ZFMODEL2": {
-        "score": -153,
+        "score": -154,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BOOLEALG": {
+        "score": -204,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2710,12 +2710,12 @@
         "new_ver": "2020-06-18"
     },
     "GROUP_11": {
-        "score": -302,
+        "score": -300,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "JORDAN21": {
-        "score": -210,
+        "score": -209,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2729,14 +2729,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2018-04-06"
     },
+    "RMOD_3": {
+        "score": -166,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "TOPALG_3": {
         "score": -101,
         "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "RMOD_3": {
-        "score": -165,
-        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MATRIX14": {
@@ -2774,58 +2774,58 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "AFPROJ": {
-        "score": -177,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "WAYBEL30": {
-        "score": -172,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "YELLOW15": {
-        "score": -170,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "AFVECT0": {
-        "score": -165,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "PDIFF_4": {
-        "score": -166,
+        "score": -168,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "PDIFF_3": {
+    "AFPROJ": {
         "score": -169,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "NDIFF_4": {
-        "score": -202,
+    "WAYBEL30": {
+        "score": -164,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "INTEGR18": {
-        "score": -202,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "EUCLID_6": {
-        "score": -279,
+    "YELLOW15": {
+        "score": -162,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "AMI_WSTD": {
-        "score": -157,
+        "score": -167,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PDIFF_3": {
+        "score": -167,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "NDIFF_4": {
+        "score": -201,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "AFVECT0": {
+        "score": -167,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "INTEGR18": {
+        "score": -200,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "EUCLID_6": {
+        "score": -278,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FSCIRC_1": {
-        "score": -157,
+        "score": -167,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2849,14 +2849,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
-    "BINTREE1": {
-        "score": -36,
-        "old_ver": "2015-10-30",
-        "new_ver": "2020-06-18"
-    },
     "NCFCONT1": {
         "score": -130,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BINTREE1": {
+        "score": -36,
+        "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "DILWORTH": {
@@ -2875,7 +2875,7 @@
         "new_ver": "2020-06-18"
     },
     "MESFUN7C": {
-        "score": -206,
+        "score": -205,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2885,7 +2885,7 @@
         "new_ver": "2018-04-06"
     },
     "MODAL_1": {
-        "score": -94,
+        "score": -95,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -2915,12 +2915,12 @@
         "new_ver": "2020-06-18"
     },
     "NDIFF_2": {
-        "score": -226,
+        "score": -225,
         "old_ver": "2013-12-10",
         "new_ver": "2015-02-12"
     },
     "NDIFF_3": {
-        "score": -226,
+        "score": -225,
         "old_ver": "2013-12-10",
         "new_ver": "2015-02-12"
     },
@@ -2930,17 +2930,17 @@
         "new_ver": "2020-06-18"
     },
     "JGRAPH_8": {
-        "score": -164,
+        "score": -167,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BROUWER": {
-        "score": -164,
+        "score": -163,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "JORDAN24": {
-        "score": -164,
+        "score": -163,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -2949,19 +2949,19 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "FLANG_2": {
+        "score": -76,
+        "old_ver": "2013-12-10",
+        "new_ver": "2020-06-18"
+    },
     "SYSREL": {
         "score": -126,
         "old_ver": "2013-01-29",
         "new_ver": "2018-05-15"
     },
     "EUCLID_2": {
-        "score": -348,
+        "score": -347,
         "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FLANG_2": {
-        "score": -76,
-        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "EXTREAL1": {
@@ -2985,7 +2985,7 @@
         "new_ver": "2018-05-15"
     },
     "TEX_3": {
-        "score": -185,
+        "score": -184,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3020,7 +3020,7 @@
         "new_ver": "2020-06-18"
     },
     "WAYBEL15": {
-        "score": -393,
+        "score": -390,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -3050,34 +3050,34 @@
         "new_ver": "2020-06-18"
     },
     "TSEP_2": {
-        "score": -184,
+        "score": -183,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
+    },
+    "OPOSET_1": {
+        "score": -350,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FINTOPO5": {
+        "score": -170,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BVFUNC_8": {
+        "score": -66,
+        "old_ver": "2012-03-05",
+        "new_ver": "2013-01-29"
     },
     "SCM_HALT": {
         "score": -315,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "BVFUNC_8": {
-        "score": -70,
-        "old_ver": "2012-03-05",
-        "new_ver": "2013-01-29"
-    },
     "BVFUNC_9": {
-        "score": -70,
+        "score": -65,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
-    },
-    "FINTOPO5": {
-        "score": -169,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "OPOSET_1": {
-        "score": -346,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
     },
     "BVFUNC_5": {
         "score": -100,
@@ -3085,12 +3085,12 @@
         "new_ver": "2020-06-18"
     },
     "BVFUNC_6": {
-        "score": -203,
+        "score": -199,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BVFUNC_7": {
-        "score": -70,
+        "score": -68,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
     },
@@ -3110,12 +3110,12 @@
         "new_ver": "2020-06-18"
     },
     "ENS_1": {
-        "score": -370,
+        "score": -371,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "SCMRINGI": {
-        "score": -123,
+        "score": -122,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3134,134 +3134,134 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "YELLOW21": {
-        "score": -194,
+    "LFUZZY_0": {
+        "score": -277,
         "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "RADIX_5": {
-        "score": -203,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "BILINEAR": {
-        "score": -206,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "GROEB_2": {
-        "score": -170,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "PARDEPAP": {
-        "score": -201,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "CQC_THE2": {
-        "score": -190,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "PARSP_1": {
-        "score": -179,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SYMSP_1": {
-        "score": -181,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SFMASTR2": {
-        "score": -58,
-        "old_ver": "2012-03-05",
-        "new_ver": "2012-12-02"
-    },
-    "EC_PF_1": {
-        "score": -790,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "REWRITE3": {
-        "score": -187,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MATHMORP": {
-        "score": -178,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SCMBSORT": {
-        "score": -187,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "BVFUNC25": {
-        "score": -68,
-        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "JORDAN13": {
-        "score": -176,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "PROJDES1": {
-        "score": -270,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MATRIX16": {
-        "score": -185,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "ANALORT": {
-        "score": -163,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SIMPLEX2": {
-        "score": -430,
+        "score": -197,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "POLYEQ_3": {
-        "score": -2,
-        "old_ver": "2015-10-30",
+        "score": -3,
+        "old_ver": "2016-07-24",
         "new_ver": "2018-04-06"
     },
     "GLIB_004": {
-        "score": -162,
+        "score": -202,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "RANDOM_2": {
-        "score": -351,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "VECTSP11": {
-        "score": -381,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "QUATERN2": {
-        "score": -159,
-        "old_ver": "2012-03-05",
-        "new_ver": "2019-03-29"
-    },
-    "LFUZZY_0": {
-        "score": -253,
+    "REWRITE3": {
+        "score": -179,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ROBBINS3": {
-        "score": -348,
+        "score": -368,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MATRIX16": {
+        "score": -196,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SYMSP_1": {
+        "score": -177,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "GROEB_2": {
+        "score": -165,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PROJDES1": {
+        "score": -277,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "VECTSP11": {
+        "score": -393,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PARSP_1": {
+        "score": -189,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "YELLOW21": {
+        "score": -178,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MATHMORP": {
+        "score": -168,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SCMBSORT": {
+        "score": -177,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "QUATERN2": {
+        "score": -178,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "RANDOM_2": {
+        "score": -356,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PARDEPAP": {
+        "score": -177,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "ANALORT": {
+        "score": -186,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "RADIX_5": {
+        "score": -177,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SFMASTR2": {
+        "score": -46,
+        "old_ver": "2012-03-05",
+        "new_ver": "2012-12-02"
+    },
+    "SIMPLEX2": {
+        "score": -427,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "CQC_THE2": {
+        "score": -175,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BILINEAR": {
+        "score": -184,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "EC_PF_1": {
+        "score": -791,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
+    "BVFUNC25": {
+        "score": -70,
+        "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "CSSPACE3": {
@@ -3275,7 +3275,7 @@
         "new_ver": "2020-06-18"
     },
     "METRIZTS": {
-        "score": -282,
+        "score": -281,
         "old_ver": "2012-03-05",
         "new_ver": "2015-10-30"
     },
@@ -3290,7 +3290,7 @@
         "new_ver": "2020-06-18"
     },
     "SCMRING1": {
-        "score": -124,
+        "score": -123,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -3305,12 +3305,12 @@
         "new_ver": "2020-06-18"
     },
     "BCIALG_1": {
-        "score": -363,
+        "score": -362,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "SETLIM_2": {
-        "score": -164,
+        "score": -163,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -3345,7 +3345,7 @@
         "new_ver": "2020-06-18"
     },
     "CAT_5": {
-        "score": -431,
+        "score": -430,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -3390,12 +3390,12 @@
         "new_ver": "2020-06-18"
     },
     "MSUALG_9": {
-        "score": -310,
+        "score": -309,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MATRLIN2": {
-        "score": -364,
+        "score": -366,
         "old_ver": "2015-10-30",
         "new_ver": "2017-11-05"
     },
@@ -3405,7 +3405,7 @@
         "new_ver": "2020-06-18"
     },
     "SCMRING2": {
-        "score": -103,
+        "score": -102,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -3416,8 +3416,8 @@
     },
     "FOMODEL2": {
         "score": -10,
-        "old_ver": "2012-12-02",
-        "new_ver": "2013-01-29"
+        "old_ver": "2016-07-24",
+        "new_ver": "2019-03-29"
     },
     "TOLER_1": {
         "score": -105,
@@ -3434,18 +3434,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SIN_COS6": {
-        "score": -333,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "LANG1": {
         "score": -86,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "NFCONT_4": {
-        "score": -267,
+        "score": -268,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SIN_COS6": {
+        "score": -331,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3465,7 +3465,7 @@
         "new_ver": "2020-06-18"
     },
     "CONMETR": {
-        "score": -195,
+        "score": -194,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3499,23 +3499,23 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "SPRECT_4": {
+        "score": -181,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "RUSUB_4": {
+        "score": -222,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "YELLOW_9": {
         "score": -590,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "SPRECT_4": {
-        "score": -180,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "RUSUB_4": {
-        "score": -221,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "SCMFSA_7": {
-        "score": -292,
+        "score": -293,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3535,7 +3535,7 @@
         "new_ver": "2020-06-18"
     },
     "TOPREAL2": {
-        "score": -211,
+        "score": -212,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3550,7 +3550,7 @@
         "new_ver": "2020-06-18"
     },
     "INTEGRA3": {
-        "score": -460,
+        "score": -459,
         "old_ver": "2013-12-10",
         "new_ver": "2017-11-05"
     },
@@ -3575,32 +3575,32 @@
         "new_ver": "2020-06-18"
     },
     "FUNCTOR3": {
-        "score": -204,
+        "score": -203,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "RINGCAT1": {
+        "score": -370,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FVSUM_1": {
-        "score": -110,
+        "score": -111,
         "old_ver": "2012-12-02",
         "new_ver": "2015-10-30"
-    },
-    "RINGCAT1": {
-        "score": -369,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
     },
     "RINFSUP1": {
         "score": -58,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
-    "JORDAN11": {
-        "score": -300,
+    "PROCAL_1": {
+        "score": -209,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "PROCAL_1": {
-        "score": -209,
+    "JORDAN11": {
+        "score": -299,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3610,7 +3610,7 @@
         "new_ver": "2020-06-18"
     },
     "RADIX_4": {
-        "score": -203,
+        "score": -204,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3619,15 +3619,15 @@
         "old_ver": "2013-12-10",
         "new_ver": "2017-11-05"
     },
+    "JGRAPH_4": {
+        "score": -213,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "ROBBINS1": {
         "score": -154,
         "old_ver": "2012-03-05",
         "new_ver": "2017-11-05"
-    },
-    "JGRAPH_4": {
-        "score": -212,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
     },
     "TREAL_1": {
         "score": -229,
@@ -3635,7 +3635,7 @@
         "new_ver": "2020-06-18"
     },
     "JORDAN16": {
-        "score": -243,
+        "score": -244,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3689,34 +3689,34 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SCPISORT": {
-        "score": -54,
-        "old_ver": "2012-03-05",
-        "new_ver": "2012-12-02"
-    },
     "PROJRED1": {
-        "score": -271,
+        "score": -272,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GFACIRC1": {
-        "score": -173,
+        "score": -174,
         "old_ver": "2012-03-05",
         "new_ver": "2019-03-29"
     },
-    "COMPOS_1": {
-        "score": -712,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
+    "SCPISORT": {
+        "score": -50,
+        "old_ver": "2012-03-05",
+        "new_ver": "2012-12-02"
     },
     "GOBRD14": {
-        "score": -156,
+        "score": -157,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "JORDAN9": {
-        "score": -156,
+        "score": -157,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "COMPOS_1": {
+        "score": -712,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "INCSP_1": {
@@ -3725,7 +3725,7 @@
         "new_ver": "2016-07-24"
     },
     "YELLOW14": {
-        "score": -226,
+        "score": -225,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3750,7 +3750,7 @@
         "new_ver": "2020-06-18"
     },
     "POLYNOM3": {
-        "score": -115,
+        "score": -118,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -3824,14 +3824,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "EXTENS_1": {
-        "score": -505,
-        "old_ver": "2012-12-02",
+    "TDLAT_2": {
+        "score": -221,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "TDLAT_2": {
-        "score": -220,
-        "old_ver": "2012-03-05",
+    "EXTENS_1": {
+        "score": -507,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "JORDAN7": {
@@ -3850,7 +3850,7 @@
         "new_ver": "2020-06-18"
     },
     "TOPREAL3": {
-        "score": -642,
+        "score": -646,
         "old_ver": "2012-12-02",
         "new_ver": "2016-07-24"
     },
@@ -3885,7 +3885,7 @@
         "new_ver": "2020-06-18"
     },
     "RADIX_3": {
-        "score": -224,
+        "score": -225,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3894,14 +3894,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "FUNCTOR0": {
-        "score": -426,
-        "old_ver": "2013-01-29",
+    "SCMPDS_6": {
+        "score": -195,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SCMPDS_6": {
-        "score": -194,
-        "old_ver": "2012-03-05",
+    "FUNCTOR0": {
+        "score": -423,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "HOLDER_1": {
@@ -3915,7 +3915,7 @@
         "new_ver": "2020-06-18"
     },
     "TREES_9": {
-        "score": -98,
+        "score": -99,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -3925,7 +3925,7 @@
         "new_ver": "2020-06-18"
     },
     "SCMPDS_8": {
-        "score": -143,
+        "score": -140,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3945,7 +3945,7 @@
         "new_ver": "2020-06-18"
     },
     "SCMFSA6C": {
-        "score": -207,
+        "score": -208,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3954,28 +3954,28 @@
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
-    "AMISTD_4": {
-        "score": -240,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "TWOSCOMP": {
-        "score": -234,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SCMFSA9A": {
-        "score": -288,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "GRFUNC_1": {
-        "score": -254,
+        "score": -255,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "RELSET_1": {
-        "score": -254,
+        "score": -255,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "AMISTD_4": {
+        "score": -238,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SCMFSA9A": {
+        "score": -287,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "TWOSCOMP": {
+        "score": -231,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -3990,7 +3990,7 @@
         "new_ver": "2020-06-18"
     },
     "MEMSTR_0": {
-        "score": -582,
+        "score": -581,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -4004,15 +4004,15 @@
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "SIN_COS2": {
-        "score": -361,
-        "old_ver": "2013-12-10",
-        "new_ver": "2016-07-24"
-    },
     "FUZZY_2": {
-        "score": -78,
+        "score": -79,
         "old_ver": "2012-03-05",
         "new_ver": "2013-01-29"
+    },
+    "SIN_COS2": {
+        "score": -370,
+        "old_ver": "2013-12-10",
+        "new_ver": "2016-07-24"
     },
     "VECTSP_6": {
         "score": -236,
@@ -4025,17 +4025,17 @@
         "new_ver": "2020-06-18"
     },
     "SPRECT_1": {
-        "score": -263,
+        "score": -264,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "TOPREAL5": {
-        "score": -263,
+        "score": -264,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INSTALG1": {
-        "score": -84,
+        "score": -83,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -4060,7 +4060,7 @@
         "new_ver": "2020-06-18"
     },
     "YELLOW18": {
-        "score": -192,
+        "score": -193,
         "old_ver": "2012-12-02",
         "new_ver": "2019-03-29"
     },
@@ -4095,7 +4095,7 @@
         "new_ver": "2020-06-18"
     },
     "SETLIM_1": {
-        "score": -420,
+        "score": -421,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -4104,43 +4104,43 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "MSUALG_5": {
-        "score": -379,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "SCMPDS_7": {
         "score": -180,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "HILBASIS": {
-        "score": -223,
+        "score": -224,
         "old_ver": "2012-03-05",
         "new_ver": "2017-11-05"
+    },
+    "MSUALG_5": {
+        "score": -379,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
     },
     "YELLOW_1": {
         "score": -210,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "BORSUK_2": {
-        "score": -397,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "EQUATION": {
-        "score": -251,
+        "score": -252,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "BORSUK_2": {
+        "score": -393,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
     "ORDERS_3": {
-        "score": -519,
+        "score": -517,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "RELOC": {
-        "score": -81,
+        "score": -83,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -4150,7 +4150,7 @@
         "new_ver": "2020-06-18"
     },
     "WAYBEL13": {
-        "score": -211,
+        "score": -212,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4184,18 +4184,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "REVROT_1": {
-        "score": -1020,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "TRANSLAC": {
-        "score": -226,
+        "score": -227,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "REVROT_1": {
+        "score": -1019,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
     "SUPINF_1": {
-        "score": -245,
+        "score": -246,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4205,7 +4205,7 @@
         "new_ver": "2020-06-18"
     },
     "JORDAN1J": {
-        "score": -229,
+        "score": -230,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4245,7 +4245,7 @@
         "new_ver": "2020-06-18"
     },
     "T_0TOPSP": {
-        "score": -241,
+        "score": -240,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4254,14 +4254,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2012-12-02"
     },
-    "ORDERS_2": {
-        "score": -458,
-        "old_ver": "2013-01-29",
-        "new_ver": "2018-05-15"
-    },
     "NORMSP_0": {
-        "score": -251,
+        "score": -252,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "ORDERS_2": {
+        "score": -461,
+        "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
     "YELLOW_0": {
@@ -4270,12 +4270,12 @@
         "new_ver": "2020-06-18"
     },
     "YELLOW12": {
-        "score": -335,
+        "score": -334,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "AMI_6": {
-        "score": -118,
+        "score": -117,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -4300,27 +4300,27 @@
         "new_ver": "2020-06-18"
     },
     "FILTER_1": {
-        "score": -380,
+        "score": -379,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "INTEGRA4": {
-        "score": -133,
+        "score": -134,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "WAYBEL21": {
-        "score": -51,
+        "score": -49,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "PRALG_1": {
-        "score": -360,
+        "score": -358,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MSAFREE2": {
-        "score": -574,
+        "score": -573,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -4330,7 +4330,7 @@
         "new_ver": "2020-06-18"
     },
     "ZF_REFLE": {
-        "score": -219,
+        "score": -218,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4339,18 +4339,18 @@
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "RSSPACE": {
-        "score": -382,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "DTCONSTR": {
-        "score": -252,
+        "score": -253,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "RSSPACE": {
+        "score": -378,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
     "UNIFORM1": {
-        "score": -191,
+        "score": -190,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -4360,13 +4360,13 @@
         "new_ver": "2020-06-18"
     },
     "ORDINAL5": {
-        "score": -293,
+        "score": -292,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "TOPMETR": {
         "score": -357,
-        "old_ver": "2013-01-29",
+        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "WAYBEL27": {
@@ -4375,23 +4375,23 @@
         "new_ver": "2020-06-18"
     },
     "ANPROJ_1": {
-        "score": -432,
+        "score": -431,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MSATERM": {
-        "score": -527,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "WAYBEL_3": {
-        "score": -301,
+        "score": -526,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MATRIX_4": {
-        "score": -238,
+        "score": -239,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "WAYBEL_3": {
+        "score": -300,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "ROLLE": {
@@ -4410,12 +4410,12 @@
         "new_ver": "2020-06-18"
     },
     "MATRIX_0": {
-        "score": -312,
+        "score": -313,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MSUALG_2": {
-        "score": -383,
+        "score": -382,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -4424,39 +4424,34 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SCMPDS_3": {
-        "score": -221,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "RUSUB_5": {
-        "score": -241,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "ORDERS_1": {
-        "score": -429,
+        "score": -431,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FUNCT_5": {
-        "score": -190,
+        "score": -188,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
+    "SCMPDS_3": {
+        "score": -219,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "RUSUB_5": {
+        "score": -239,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "WAYBEL_0": {
-        "score": -537,
+        "score": -538,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "TMAP_1": {
         "score": -209,
         "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "WAYBEL_1": {
-        "score": -269,
-        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "FDIFF_7": {
@@ -4467,6 +4462,11 @@
     "FDIFF_5": {
         "score": -237,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "WAYBEL_1": {
+        "score": -269,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "BORSUK_3": {
@@ -4560,7 +4560,7 @@
         "new_ver": "2020-06-18"
     },
     "MATRLIN": {
-        "score": -311,
+        "score": -312,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4625,12 +4625,12 @@
         "new_ver": "2020-06-18"
     },
     "AMISTD_5": {
-        "score": -185,
+        "score": -184,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "WELLSET1": {
-        "score": -658,
+        "score": -660,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
@@ -4640,12 +4640,12 @@
         "new_ver": "2020-06-18"
     },
     "BORSUK_1": {
-        "score": -928,
+        "score": -929,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "FDIFF_1": {
-        "score": -101,
+        "score": -102,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -4684,15 +4684,15 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "NORMSP_1": {
-        "score": -518,
-        "old_ver": "2013-12-10",
-        "new_ver": "2018-04-06"
-    },
     "TEX_2": {
-        "score": -227,
+        "score": -228,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
+    },
+    "NORMSP_1": {
+        "score": -521,
+        "old_ver": "2013-12-10",
+        "new_ver": "2018-04-06"
     },
     "SCMFSA_4": {
         "score": -137,
@@ -4700,7 +4700,7 @@
         "new_ver": "2020-06-18"
     },
     "QUIN_1": {
-        "score": -264,
+        "score": -265,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4720,12 +4720,12 @@
         "new_ver": "2020-06-18"
     },
     "EULER_2": {
-        "score": -453,
+        "score": -454,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "GOBOARD7": {
-        "score": -306,
+        "score": -305,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -4739,8 +4739,13 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "BINOP_1": {
+        "score": -239,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "TOPRNS_1": {
-        "score": -242,
+        "score": -241,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4750,17 +4755,12 @@
         "new_ver": "2020-06-18"
     },
     "TSEP_1": {
-        "score": -234,
+        "score": -233,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "UNIALG_2": {
-        "score": -244,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "BINOP_1": {
-        "score": -237,
+        "score": -242,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4790,7 +4790,7 @@
         "new_ver": "2020-06-18"
     },
     "RLTOPSP1": {
-        "score": -292,
+        "score": -291,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4800,17 +4800,17 @@
         "new_ver": "2020-06-18"
     },
     "BVFUNC_1": {
-        "score": -241,
+        "score": -242,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "LOPBAN_1": {
-        "score": -332,
+        "score": -330,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "MSUALG_3": {
-        "score": -392,
+        "score": -391,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -4820,7 +4820,7 @@
         "new_ver": "2020-06-18"
     },
     "MEASURE5": {
-        "score": -224,
+        "score": -225,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4829,33 +4829,33 @@
         "old_ver": "2013-12-10",
         "new_ver": "2017-11-05"
     },
+    "PRE_FF": {
+        "score": -230,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "NAT_2": {
         "score": -122,
         "old_ver": "2013-12-10",
         "new_ver": "2017-11-05"
     },
-    "PRE_FF": {
-        "score": -229,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "XXREAL_3": {
-        "score": -237,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "MATRIX_3": {
-        "score": -257,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "AMISTD_1": {
-        "score": -216,
+        "score": -236,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PARTFUN1": {
-        "score": -251,
+        "score": -253,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "MATRIX_3": {
+        "score": -256,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "AMISTD_1": {
+        "score": -215,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4864,18 +4864,23 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "RLVECT_2": {
+        "score": -227,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "TOPMETR2": {
         "score": -221,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "RLVECT_2": {
-        "score": -226,
+    "WAYBEL_8": {
+        "score": -241,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "WAYBEL_8": {
-        "score": -240,
+    "XCMPLX_1": {
+        "score": -233,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4885,22 +4890,17 @@
         "new_ver": "2020-06-18"
     },
     "TREES_4": {
-        "score": -244,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "XCMPLX_1": {
-        "score": -234,
+        "score": -243,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "YELLOW_2": {
-        "score": -223,
+        "score": -222,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "TOPREAL6": {
-        "score": -273,
+        "score": -272,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4915,7 +4915,7 @@
         "new_ver": "2020-06-18"
     },
     "JGRAPH_2": {
-        "score": -226,
+        "score": -227,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4965,12 +4965,12 @@
         "new_ver": "2020-06-18"
     },
     "SUPINF_2": {
-        "score": -241,
+        "score": -242,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "AFF_1": {
-        "score": -222,
+        "score": -224,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -4985,7 +4985,7 @@
         "new_ver": "2020-06-18"
     },
     "MEASURE6": {
-        "score": -224,
+        "score": -226,
         "old_ver": "2013-01-29",
         "new_ver": "2017-11-05"
     },
@@ -5000,7 +5000,7 @@
         "new_ver": "2020-06-18"
     },
     "SIN_COS": {
-        "score": -789,
+        "score": -791,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
@@ -5015,17 +5015,17 @@
         "new_ver": "2020-06-18"
     },
     "FUNCT_2": {
-        "score": -245,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "HEINE": {
-        "score": -236,
+        "score": -244,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "DOMAIN_1": {
         "score": -261,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "HEINE": {
+        "score": -235,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5035,88 +5035,53 @@
         "new_ver": "2020-06-18"
     },
     "PCOMPS_1": {
-        "score": -236,
+        "score": -238,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "TREES_3": {
-        "score": -338,
+        "score": -339,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "COMPLEX1": {
         "score": -198,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
+    "SETWISEO": {
+        "score": -329,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "MEASURE1": {
-        "score": -232,
+        "score": -231,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GOBOARD2": {
-        "score": -240,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SETWISEO": {
-        "score": -327,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FCONT_3": {
-        "score": -246,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "SPRECT_3": {
-        "score": -233,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "REALSET1": {
-        "score": -273,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "VECTSP_2": {
-        "score": -327,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "RLSUB_1": {
-        "score": -246,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "DIRAF": {
-        "score": -238,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "ABSVALUE": {
-        "score": -201,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "BVFUNC_2": {
-        "score": -217,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FDIFF_2": {
         "score": -239,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "FRAENKEL": {
-        "score": -223,
+    "REALSET1": {
+        "score": -271,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "INTEGRA1": {
-        "score": -246,
+    "FCONT_3": {
+        "score": -244,
         "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "SPRECT_3": {
+        "score": -231,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "VECTSP_2": {
+        "score": -324,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "NUMERALS": {
@@ -5124,18 +5089,53 @@
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "PRE_CIRC": {
-        "score": -914,
-        "old_ver": "2013-12-10",
-        "new_ver": "2020-06-18"
-    },
-    "FUNCT_4": {
-        "score": -271,
+    "RLSUB_1": {
+        "score": -245,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "DIRAF": {
+        "score": -236,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "ABSVALUE": {
+        "score": -199,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
+    "FRAENKEL": {
+        "score": -222,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "BVFUNC_2": {
+        "score": -215,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FDIFF_2": {
+        "score": -236,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "INTEGRA1": {
+        "score": -243,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FUNCT_4": {
+        "score": -270,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "PRE_CIRC": {
+        "score": -916,
+        "old_ver": "2013-12-10",
+        "new_ver": "2020-06-18"
+    },
     "MCART_1": {
-        "score": -247,
+        "score": -244,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5149,14 +5149,14 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "WAYBEL11": {
-        "score": -234,
-        "old_ver": "2012-03-05",
+    "INT_2": {
+        "score": -199,
+        "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "INT_2": {
-        "score": -200,
-        "old_ver": "2012-12-02",
+    "WAYBEL11": {
+        "score": -233,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "PARTFUN2": {
@@ -5165,7 +5165,7 @@
         "new_ver": "2020-06-18"
     },
     "GOBOARD1": {
-        "score": -216,
+        "score": -215,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5185,27 +5185,27 @@
         "new_ver": "2020-06-18"
     },
     "AMI_3": {
-        "score": -220,
+        "score": -219,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "NAT_D": {
-        "score": -199,
+        "score": -200,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "WELLORD2": {
-        "score": -239,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FILTER_0": {
-        "score": -243,
+        "score": -238,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "RELAT_2": {
-        "score": -265,
+        "score": -266,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "FILTER_0": {
+        "score": -242,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5219,33 +5219,33 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "FUNCT_3": {
+        "score": -278,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "COMSEQ_3": {
-        "score": -229,
+        "score": -228,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "BHSP_1": {
-        "score": -231,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "FUNCT_3": {
-        "score": -277,
+        "score": -229,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FCONT_1": {
-        "score": -234,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "CAT_1": {
-        "score": -219,
+        "score": -235,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ARYTM_1": {
         "score": -243,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "CAT_1": {
+        "score": -217,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5255,7 +5255,7 @@
         "new_ver": "2020-06-18"
     },
     "GOBOARD5": {
-        "score": -240,
+        "score": -242,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5265,27 +5265,27 @@
         "new_ver": "2020-06-18"
     },
     "FINSOP_1": {
-        "score": -224,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "XREGULAR": {
-        "score": -245,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "XTUPLE_0": {
-        "score": -220,
+        "score": -223,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "REALSET2": {
-        "score": -228,
+        "score": -231,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "XREGULAR": {
+        "score": -246,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "XTUPLE_0": {
+        "score": -222,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GRAPH_1": {
-        "score": -228,
+        "score": -229,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5299,23 +5299,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SETWOP_2": {
-        "score": -227,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "NUMBERS": {
         "score": -232,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "TOPS_2": {
-        "score": -234,
+    "ORDINAL1": {
+        "score": -228,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "ORDINAL1": {
-        "score": -226,
+    "SETWOP_2": {
+        "score": -225,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5324,43 +5319,48 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "REAL_1": {
-        "score": -199,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
-    "XREAL_1": {
-        "score": -237,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "AXIOMS": {
-        "score": -237,
+    "TOPS_2": {
+        "score": -234,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "SETFAM_1": {
-        "score": -240,
+        "score": -243,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "REAL_1": {
+        "score": -196,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
+    "XREAL_1": {
+        "score": -236,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "AXIOMS": {
+        "score": -236,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "TOPS_1": {
-        "score": -229,
+        "score": -230,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CONNSP_1": {
-        "score": -231,
+        "score": -230,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CARD_3": {
-        "score": -204,
+        "score": -203,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "LATTICES": {
-        "score": -223,
+        "score": -224,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5370,33 +5370,33 @@
         "new_ver": "2020-06-18"
     },
     "XXREAL_0": {
-        "score": -228,
+        "score": -223,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ARITHM": {
-        "score": -265,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "TARSKI": {
-        "score": -257,
+        "score": -262,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GROUP_4": {
-        "score": -243,
+        "score": -245,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "TOPREAL1": {
-        "score": -233,
+        "score": -234,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FUNCT_6": {
-        "score": -207,
+        "score": -206,
         "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
+    "ARYTM_2": {
+        "score": -240,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "XXREAL_1": {
@@ -5404,13 +5404,13 @@
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "PROB_1": {
-        "score": -237,
+    "TARSKI": {
+        "score": -253,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "ARYTM_2": {
-        "score": -239,
+    "PROB_1": {
+        "score": -236,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5419,28 +5419,28 @@
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
-    "BOOLE": {
-        "score": -179,
-        "old_ver": "2013-12-10",
+    "SQUARE_1": {
+        "score": -248,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "CLASSES2": {
-        "score": -245,
+        "score": -243,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "SQUARE_1": {
-        "score": -246,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "XBOOLE_0": {
-        "score": -181,
-        "old_ver": "2012-03-05",
+    "BOOLE": {
+        "score": -187,
+        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "FINSEQ_4": {
-        "score": -224,
+        "score": -226,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "REAL": {
+        "score": -217,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5449,19 +5449,24 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "REAL": {
-        "score": -215,
-        "old_ver": "2012-03-05",
+    "XBOOLE_0": {
+        "score": -185,
+        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "FUNCSDOM": {
-        "score": -247,
+        "score": -249,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "XBOOLE_1": {
-        "score": -176,
-        "old_ver": "2013-12-10",
+    "CARD_1": {
+        "score": -252,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
+    "ORDINAL2": {
+        "score": -248,
+        "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "RLSUB_2": {
@@ -5470,32 +5475,22 @@
         "new_ver": "2020-06-18"
     },
     "ORDINAL4": {
-        "score": -249,
+        "score": -248,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
-    "CARD_1": {
-        "score": -249,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "BINOP_2": {
-        "score": -228,
+        "score": -227,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "ORDINAL2": {
-        "score": -244,
-        "old_ver": "2012-03-05",
+    "XBOOLE_1": {
+        "score": -184,
+        "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "WELLORD1": {
         "score": -251,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
-    "ABIAN": {
-        "score": -215,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5504,13 +5499,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "ABIAN": {
+        "score": -215,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "PREPOWER": {
-        "score": -213,
+        "score": -214,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "FINSEQ_2": {
-        "score": -251,
+        "score": -253,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5524,19 +5524,19 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "ENUMSET1": {
-        "score": -181,
-        "old_ver": "2013-12-10",
-        "new_ver": "2020-06-18"
-    },
     "ORDINAL3": {
         "score": -241,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "ENUMSET1": {
+        "score": -188,
+        "old_ver": "2013-12-10",
+        "new_ver": "2020-06-18"
+    },
     "CARD_4": {
-        "score": -211,
-        "old_ver": "2012-12-02",
+        "score": -209,
+        "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
     "PRE_TOPC": {
@@ -5555,17 +5555,17 @@
         "new_ver": "2020-06-18"
     },
     "FUNCOP_1": {
-        "score": -263,
+        "score": -262,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "ARYTM_0": {
-        "score": -240,
+        "score": -239,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "GROUP_1": {
-        "score": -224,
+        "score": -225,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5574,23 +5574,23 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "XBOOLEAN": {
-        "score": -207,
-        "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
-    },
     "RELAT_1": {
         "score": -245,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
+    "XBOOLEAN": {
+        "score": -205,
+        "old_ver": "2012-12-02",
+        "new_ver": "2020-06-18"
+    },
     "SEQM_3": {
-        "score": -243,
+        "score": -244,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "NEWTON": {
-        "score": -215,
+        "score": -216,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -5605,12 +5605,12 @@
         "new_ver": "2020-06-18"
     },
     "RFUNCT_2": {
-        "score": -234,
+        "score": -235,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "FUNCT_1": {
-        "score": -244,
+        "score": -243,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5621,7 +5621,7 @@
     },
     "MARGREL1": {
         "score": -213,
-        "old_ver": "2012-12-02",
+        "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
     "SUBSET_1": {
@@ -5630,7 +5630,7 @@
         "new_ver": "2020-06-18"
     },
     "ALGSTR_0": {
-        "score": -225,
+        "score": -226,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5639,18 +5639,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "TREES_2": {
-        "score": -252,
+    "XREAL_0": {
+        "score": -226,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "XREAL_0": {
-        "score": -227,
+    "TREES_2": {
+        "score": -251,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "COMSEQ_2": {
-        "score": -205,
+        "score": -204,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5669,18 +5669,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "RLVECT_1": {
-        "score": -228,
+    "SUBSET": {
+        "score": -241,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "SUBSET": {
-        "score": -240,
+    "RLVECT_1": {
+        "score": -227,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "INT_1": {
-        "score": -204,
+        "score": -203,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5700,7 +5700,7 @@
         "new_ver": "2020-06-18"
     },
     "RAT_1": {
-        "score": -204,
+        "score": -203,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5710,12 +5710,12 @@
         "new_ver": "2020-06-18"
     },
     "RVSUM_1": {
-        "score": -231,
+        "score": -232,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
     "VECTSP_1": {
-        "score": -222,
+        "score": -223,
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
@@ -5734,18 +5734,18 @@
         "old_ver": "2012-03-05",
         "new_ver": "2020-06-18"
     },
-    "BINARITH": {
-        "score": -225,
-        "old_ver": "2012-03-05",
-        "new_ver": "2020-06-18"
-    },
     "NAT_1": {
-        "score": -209,
+        "score": -207,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
+    "BINARITH": {
+        "score": -224,
+        "old_ver": "2012-03-05",
+        "new_ver": "2020-06-18"
+    },
     "SEQ_1": {
-        "score": -205,
+        "score": -204,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5765,7 +5765,7 @@
         "new_ver": "2020-06-18"
     },
     "STRUCT_0": {
-        "score": -249,
+        "score": -248,
         "old_ver": "2013-01-29",
         "new_ver": "2020-06-18"
     },
@@ -5775,22 +5775,22 @@
         "new_ver": "2020-06-18"
     },
     "AOFA_A01": {
-        "score": -500,
+        "score": -502,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "GROUP_14": {
-        "score": -83,
+        "score": -233,
         "old_ver": "2012-12-02",
-        "new_ver": "2020-06-18"
+        "new_ver": "2015-10-30"
     },
     "DIST_2": {
-        "score": -353,
+        "score": -354,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "LPSPACC1": {
-        "score": -83,
+        "score": -87,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5800,12 +5800,12 @@
         "new_ver": "2020-06-18"
     },
     "INT_8": {
-        "score": -81,
+        "score": -83,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "GOEDCPUC": {
-        "score": -80,
+        "score": -82,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5820,7 +5820,7 @@
         "new_ver": "2020-06-18"
     },
     "MMLQUER2": {
-        "score": -80,
+        "score": -82,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5830,12 +5830,12 @@
         "new_ver": "2020-06-18"
     },
     "CKSPACE1": {
-        "score": -83,
+        "score": -84,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
     "CAYLDICK": {
-        "score": -125,
+        "score": -123,
         "old_ver": "2012-12-02",
         "new_ver": "2015-10-30"
     },
@@ -5855,12 +5855,12 @@
         "new_ver": "2020-06-18"
     },
     "QC_TRANS": {
-        "score": -33,
+        "score": -34,
         "old_ver": "2012-12-02",
         "new_ver": "2018-05-15"
     },
     "MSAFREE4": {
-        "score": -248,
+        "score": -247,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5875,7 +5875,7 @@
         "new_ver": "2016-07-24"
     },
     "LTLAXIO3": {
-        "score": -275,
+        "score": -266,
         "old_ver": "2012-12-02",
         "new_ver": "2020-06-18"
     },
@@ -5885,7 +5885,7 @@
         "new_ver": "2020-06-18"
     },
     "HURWITZ2": {
-        "score": -367,
+        "score": -370,
         "old_ver": "2013-01-29",
         "new_ver": "2018-05-15"
     },
@@ -5900,7 +5900,7 @@
         "new_ver": "2020-06-18"
     },
     "INTEGR21": {
-        "score": -406,
+        "score": -395,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
@@ -5925,7 +5925,7 @@
         "new_ver": "2016-07-24"
     },
     "AESCIP_1": {
-        "score": -66,
+        "score": -69,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -5935,42 +5935,42 @@
         "new_ver": "2016-07-24"
     },
     "TOPGEN_6": {
-        "score": -63,
+        "score": -66,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "ALTCAT_6": {
-        "score": -63,
-        "old_ver": "2013-12-10",
+        "score": -66,
+        "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "PETRI_3": {
-        "score": -68,
-        "old_ver": "2013-12-10",
+        "score": -70,
+        "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "HUFFMAN1": {
-        "score": -323,
+        "score": -322,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "NBVECTSP": {
-        "score": -69,
-        "old_ver": "2013-12-10",
+        "score": -71,
+        "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "NDIFF_6": {
-        "score": -225,
+        "score": -224,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "GROUP_18": {
-        "score": -76,
+        "score": -77,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "PREFER_1": {
-        "score": -382,
+        "score": -383,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
@@ -5990,7 +5990,7 @@
         "new_ver": "2016-07-24"
     },
     "INTEGR20": {
-        "score": -352,
+        "score": -351,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
@@ -6000,12 +6000,12 @@
         "new_ver": "2020-06-18"
     },
     "TARSKI_A": {
-        "score": -185,
+        "score": -187,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
     "TARSKI_0": {
-        "score": -186,
+        "score": -191,
         "old_ver": "2013-12-10",
         "new_ver": "2020-06-18"
     },
@@ -6015,27 +6015,27 @@
         "new_ver": "2020-06-18"
     },
     "DUALSP01": {
-        "score": -103,
+        "score": -102,
         "old_ver": "2015-02-12",
         "new_ver": "2018-05-15"
     },
     "CAT_7": {
-        "score": -455,
+        "score": -459,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "VSDIFF_1": {
-        "score": -67,
+        "score": -71,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "DBLSEQ_2": {
-        "score": -421,
+        "score": -422,
         "old_ver": "2015-02-12",
         "new_ver": "2019-03-29"
     },
     "AOFA_L00": {
-        "score": -68,
+        "score": -72,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6060,7 +6060,7 @@
         "new_ver": "2020-06-18"
     },
     "LATTAD_1": {
-        "score": -574,
+        "score": -575,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6080,17 +6080,17 @@
         "new_ver": "2020-06-18"
     },
     "GROUP_19": {
-        "score": -474,
+        "score": -475,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "NDIFF_7": {
-        "score": -159,
+        "score": -160,
         "old_ver": "2015-02-12",
         "new_ver": "2018-05-15"
     },
     "GRAPH_3A": {
-        "score": -66,
+        "score": -69,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6100,12 +6100,12 @@
         "new_ver": "2018-05-15"
     },
     "MFOLD_0": {
-        "score": -479,
+        "score": -481,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "PETRI_DF": {
-        "score": -63,
+        "score": -66,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6115,52 +6115,52 @@
         "new_ver": "2018-04-06"
     },
     "BALLOT_1": {
-        "score": -63,
-        "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
-    },
-    "FUZNUM_1": {
-        "score": -63,
-        "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
-    },
-    "ABSRED_0": {
-        "score": -65,
-        "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
-    },
-    "SRINGS_2": {
-        "score": -199,
-        "old_ver": "2015-02-12",
-        "new_ver": "2020-06-18"
-    },
-    "POSET_2": {
         "score": -66,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
+    "FUZNUM_1": {
+        "score": -66,
+        "old_ver": "2015-02-12",
+        "new_ver": "2020-06-18"
+    },
+    "ABSRED_0": {
+        "score": -68,
+        "old_ver": "2015-02-12",
+        "new_ver": "2020-06-18"
+    },
+    "SRINGS_2": {
+        "score": -202,
+        "old_ver": "2015-02-12",
+        "new_ver": "2020-06-18"
+    },
+    "POSET_2": {
+        "score": -69,
+        "old_ver": "2015-02-12",
+        "new_ver": "2020-06-18"
+    },
     "ZMODUL06": {
-        "score": -533,
+        "score": -535,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "ORDEQ_02": {
-        "score": -72,
+        "score": -75,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "FINANCE2": {
-        "score": -454,
+        "score": -456,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "HILBERT4": {
-        "score": -73,
+        "score": -76,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "BROUWER3": {
-        "score": -414,
+        "score": -413,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6174,18 +6174,18 @@
         "old_ver": "2015-02-12",
         "new_ver": "2016-07-24"
     },
-    "MSAFREE5": {
-        "score": -142,
+    "NORMSP_3": {
+        "score": -347,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
     "ZMODUL05": {
-        "score": -222,
+        "score": -219,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
-    "NORMSP_3": {
-        "score": -323,
+    "MSAFREE5": {
+        "score": -126,
         "old_ver": "2015-02-12",
         "new_ver": "2020-06-18"
     },
@@ -6210,57 +6210,57 @@
         "new_ver": "2019-03-29"
     },
     "DBLSEQ_3": {
-        "score": -23,
+        "score": -22,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
+    "LTLAXIO5": {
+        "score": -344,
+        "old_ver": "2015-10-30",
+        "new_ver": "2020-06-18"
+    },
     "CARDFIL3": {
-        "score": -34,
+        "score": -35,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "MEASURE9": {
-        "score": -401,
+        "score": -400,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "EUCLID11": {
-        "score": -492,
+        "score": -490,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "EULRPART": {
-        "score": -309,
+        "score": -306,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "LATSTONE": {
-        "score": -55,
+        "score": -56,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "ASYMPT_3": {
-        "score": -197,
+        "score": -196,
         "old_ver": "2015-10-30",
         "new_ver": "2019-03-29"
     },
     "DIOPHAN1": {
-        "score": -15,
+        "score": -17,
         "old_ver": "2015-10-30",
         "new_ver": "2017-11-05"
     },
     "GROUP_20": {
-        "score": -321,
-        "old_ver": "2015-10-30",
-        "new_ver": "2020-06-18"
-    },
-    "LTLAXIO5": {
-        "score": -231,
+        "score": -331,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "DUALSP03": {
-        "score": -50,
+        "score": -51,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
@@ -6270,17 +6270,17 @@
         "new_ver": "2020-06-18"
     },
     "DUALSP04": {
-        "score": -53,
+        "score": -54,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "SRINGS_4": {
-        "score": -28,
+        "score": -27,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "RING_3": {
-        "score": -501,
+        "score": -503,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
@@ -6290,17 +6290,17 @@
         "new_ver": "2020-06-18"
     },
     "NEWTON02": {
-        "score": -388,
+        "score": -389,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "NELSON_1": {
-        "score": -61,
+        "score": -62,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "PETERSON": {
-        "score": -59,
+        "score": -60,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
@@ -6310,13 +6310,13 @@
         "new_ver": "2016-07-24"
     },
     "GRZLOG_1": {
-        "score": -58,
+        "score": -59,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
     "CAT_8": {
-        "score": -58,
-        "old_ver": "2015-10-30",
+        "score": -244,
+        "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "FLEXARY1": {
@@ -6324,14 +6324,14 @@
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
-    "POLNOT_1": {
-        "score": -70,
+    "NORMSP_4": {
+        "score": -73,
         "old_ver": "2015-10-30",
         "new_ver": "2020-06-18"
     },
-    "NORMSP_4": {
-        "score": -84,
-        "old_ver": "2015-10-30",
+    "POLNOT_1": {
+        "score": -87,
+        "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "EUCLID12": {
@@ -6340,17 +6340,17 @@
         "new_ver": "2020-06-18"
     },
     "SRINGS_5": {
-        "score": -20,
+        "score": -21,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "UNIFORM2": {
-        "score": -32,
+        "score": -33,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "BAGORD_2": {
-        "score": -48,
+        "score": -51,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
@@ -6360,142 +6360,137 @@
         "new_ver": "2020-06-18"
     },
     "MEASUR10": {
-        "score": -620,
+        "score": -619,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "NEWTON03": {
-        "score": -380,
+        "score": -379,
         "old_ver": "2016-07-24",
         "new_ver": "2017-11-05"
     },
     "ZMODLAT1": {
-        "score": -374,
+        "score": -372,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "GTARSKI2": {
-        "score": -595,
+        "score": -594,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "COUSIN": {
-        "score": -208,
+        "score": -207,
         "old_ver": "2016-07-24",
         "new_ver": "2019-03-29"
     },
     "INTEGR22": {
-        "score": -327,
+        "score": -325,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "ROUGHS_3": {
-        "score": -307,
+        "score": -305,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "FINANCE3": {
-        "score": -540,
+        "score": -539,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "RING_4": {
-        "score": -425,
+        "score": -423,
         "old_ver": "2016-07-24",
         "new_ver": "2019-03-29"
     },
     "GROUP_21": {
-        "score": -42,
-        "old_ver": "2016-07-24",
+        "score": -145,
+        "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "CARDFIL4": {
-        "score": -4,
+        "score": -5,
         "old_ver": "2016-07-24",
         "new_ver": "2017-11-05"
     },
     "EUCLID13": {
-        "score": -43,
+        "score": -44,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "TOPMETR4": {
-        "score": -45,
+        "score": -46,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
     "UNIFORM3": {
-        "score": -48,
+        "score": -49,
         "old_ver": "2016-07-24",
         "new_ver": "2020-06-18"
     },
-    "ORDERS_5": {
-        "score": -242,
-        "old_ver": "2017-11-05",
-        "new_ver": "2019-03-29"
-    },
     "LIOUVIL2": {
-        "score": -306,
+        "score": -302,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "FUZIMPL1": {
-        "score": -344,
+        "score": -341,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "REALALG1": {
-        "score": -239,
+        "score": -236,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "ZMODLAT3": {
-        "score": -38,
+        "score": -37,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "COUSIN2": {
-        "score": -40,
-        "old_ver": "2017-11-05",
-        "new_ver": "2020-06-18"
-    },
-    "NOMIN_1": {
-        "score": -18,
-        "old_ver": "2019-03-29",
-        "new_ver": "2020-06-18"
-    },
-    "BASEL_2": {
-        "score": -40,
-        "old_ver": "2017-11-05",
-        "new_ver": "2020-06-18"
-    },
-    "FINANCE4": {
-        "score": -348,
-        "old_ver": "2017-11-05",
-        "new_ver": "2020-06-18"
-    },
-    "PELLS_EQ": {
-        "score": -234,
-        "old_ver": "2017-11-05",
-        "new_ver": "2019-03-29"
-    },
-    "PL_AXIOM": {
         "score": -39,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
+    "NOMIN_1": {
+        "score": -19,
+        "old_ver": "2019-03-29",
+        "new_ver": "2020-06-18"
+    },
+    "BASEL_2": {
+        "score": -39,
+        "old_ver": "2017-11-05",
+        "new_ver": "2020-06-18"
+    },
+    "FINANCE4": {
+        "score": -337,
+        "old_ver": "2017-11-05",
+        "new_ver": "2020-06-18"
+    },
+    "PELLS_EQ": {
+        "score": -231,
+        "old_ver": "2017-11-05",
+        "new_ver": "2019-03-29"
+    },
+    "PL_AXIOM": {
+        "score": -38,
+        "old_ver": "2017-11-05",
+        "new_ver": "2020-06-18"
+    },
     "RING_5": {
-        "score": -470,
+        "score": -467,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "MESFUN11": {
-        "score": -327,
+        "score": -324,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
     "PASCAL": {
-        "score": -186,
+        "score": -184,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
@@ -6509,18 +6504,23 @@
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
+    "ORDERS_5": {
+        "score": -233,
+        "old_ver": "2018-04-06",
+        "new_ver": "2019-03-29"
+    },
     "LIOUVIL1": {
         "score": -116,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
-    "ALGNUM_1": {
-        "score": -50,
+    "POLYDIFF": {
+        "score": -176,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
-    "POLYDIFF": {
-        "score": -175,
+    "ALGNUM_1": {
+        "score": -48,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
@@ -6545,7 +6545,7 @@
         "new_ver": "2020-06-18"
     },
     "ANPROJ_9": {
-        "score": -116,
+        "score": -115,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
@@ -6555,12 +6555,12 @@
         "new_ver": "2020-06-18"
     },
     "INTEGR23": {
-        "score": -4,
+        "score": -3,
         "old_ver": "2018-04-06",
         "new_ver": "2018-05-15"
     },
     "ZMODLAT2": {
-        "score": -47,
+        "score": -49,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
@@ -6575,22 +6575,17 @@
         "new_ver": "2019-03-29"
     },
     "ANPROJ_8": {
-        "score": -89,
+        "score": -90,
         "old_ver": "2017-11-05",
         "new_ver": "2020-06-18"
     },
-    "NDIFF_8": {
-        "score": -440,
-        "old_ver": "2018-04-06",
-        "new_ver": "2020-06-18"
-    },
     "DIOPHAN2": {
-        "score": -27,
+        "score": -31,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
     "MESFUN12": {
-        "score": -18,
+        "score": -16,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6600,17 +6595,17 @@
         "new_ver": "2020-06-18"
     },
     "HILB10_1": {
-        "score": -209,
+        "score": -211,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
     "GTARSKI3": {
-        "score": -392,
+        "score": -394,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
     "FINANCE5": {
-        "score": -29,
+        "score": -32,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
@@ -6620,12 +6615,12 @@
         "new_ver": "2020-06-18"
     },
     "FINANCE6": {
-        "score": -31,
+        "score": -33,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
     "REALALG2": {
-        "score": -36,
+        "score": -38,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
@@ -6635,17 +6630,22 @@
         "new_ver": "2020-06-18"
     },
     "MOEBIUS3": {
-        "score": -38,
+        "score": -40,
+        "old_ver": "2018-04-06",
+        "new_ver": "2020-06-18"
+    },
+    "NDIFF_8": {
+        "score": -238,
         "old_ver": "2018-04-06",
         "new_ver": "2020-06-18"
     },
     "BKMODEL1": {
-        "score": -124,
+        "score": -125,
         "old_ver": "2018-05-15",
         "new_ver": "2020-06-18"
     },
     "PARTPR_2": {
-        "score": -20,
+        "score": -21,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6660,7 +6660,7 @@
         "new_ver": "2019-03-29"
     },
     "ROBBINS5": {
-        "score": -16,
+        "score": -20,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6670,12 +6670,12 @@
         "new_ver": "2019-03-29"
     },
     "PDIFFEQ1": {
-        "score": -15,
+        "score": 0,
         "old_ver": "2019-03-29",
-        "new_ver": "2020-06-18"
+        "new_ver": "2019-03-29"
     },
     "GTARSKI4": {
-        "score": -15,
+        "score": -17,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6685,12 +6685,12 @@
         "new_ver": "2019-03-29"
     },
     "TOPS_5": {
-        "score": -14,
+        "score": -16,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
     "MUSIC_S1": {
-        "score": -14,
+        "score": -16,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6700,12 +6700,12 @@
         "new_ver": "2020-06-18"
     },
     "MESFUN13": {
-        "score": -14,
+        "score": -16,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
     "ANPROJ10": {
-        "score": -17,
+        "score": -19,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6720,7 +6720,7 @@
         "new_ver": "2019-03-29"
     },
     "FIELD_1": {
-        "score": -167,
+        "score": -166,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6730,7 +6730,7 @@
         "new_ver": "2019-03-29"
     },
     "LOPBAN11": {
-        "score": -19,
+        "score": -20,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
@@ -6745,9 +6745,9 @@
         "new_ver": "2020-06-18"
     },
     "NTALGO_2": {
-        "score": -22,
+        "score": 0,
         "old_ver": "2019-03-29",
-        "new_ver": "2020-06-18"
+        "new_ver": "2019-03-29"
     },
     "NOMIN_3": {
         "score": -194,
@@ -6765,17 +6765,17 @@
         "new_ver": "2020-06-18"
     },
     "LOPBAN_8": {
-        "score": -199,
+        "score": -196,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
     "GLIB_006": {
-        "score": -132,
+        "score": -146,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
     "NOMIN_2": {
-        "score": -111,
+        "score": -114,
         "old_ver": "2019-03-29",
         "new_ver": "2020-06-18"
     },
