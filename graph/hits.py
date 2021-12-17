@@ -79,7 +79,7 @@ def grouping_for_ranking(node2ranking):
     return node2group
 
 
-def calc_hits(mml_version, auth=True, nx_hits=True):
+def make_hits_graph(mml_version, auth=True, nx_hits=True):
     cwd = os.getcwd()
 
     try:
