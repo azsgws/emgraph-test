@@ -30,18 +30,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/dickson.html",
-                    "x": 95.66,
-                    "y": 140.04,
-                    "is_dummy": false,
-                    "id": "DICKSON",
-                    "value": "DICKSON",
-                    "name": "DICKSON",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/jordan23.html",
                     "x": 153.62,
                     "y": 153.0,
@@ -50,6 +38,18 @@
                     "value": "JORDAN23",
                     "name": "JORDAN23",
                     "group": 1
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/dickson.html",
+                    "x": 95.66,
+                    "y": 140.04,
+                    "is_dummy": false,
+                    "id": "DICKSON",
+                    "value": "DICKSON",
+                    "name": "DICKSON",
+                    "group": 0
                 }
             },
             {
@@ -186,6 +186,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/lopban_7.html",
+                    "x": 237.0,
+                    "y": 164.52,
+                    "is_dummy": false,
+                    "id": "LOPBAN_7",
+                    "value": "LOPBAN_7",
+                    "name": "LOPBAN_7",
+                    "group": 2
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/nfcont_2.html",
                     "x": 318.16,
                     "y": 144.36,
@@ -218,18 +230,6 @@
                     "value": "NDIFF_7",
                     "name": "NDIFF_7",
                     "group": 9
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/lopban_7.html",
-                    "x": 237.0,
-                    "y": 164.52,
-                    "is_dummy": false,
-                    "id": "LOPBAN_7",
-                    "value": "LOPBAN_7",
-                    "name": "LOPBAN_7",
-                    "group": 2
                 }
             },
             {
@@ -278,6 +278,18 @@
                     "value": "RANDOM_1",
                     "name": "RANDOM_1",
                     "group": 2
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/prob_4.html",
+                    "x": 325.72,
+                    "y": 138.6,
+                    "is_dummy": false,
+                    "id": "PROB_4",
+                    "value": "PROB_4",
+                    "name": "PROB_4",
+                    "group": 0
                 }
             },
             {
@@ -366,18 +378,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/prob_4.html",
-                    "x": 325.72,
-                    "y": 138.6,
-                    "is_dummy": false,
-                    "id": "PROB_4",
-                    "value": "PROB_4",
-                    "name": "PROB_4",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/group_14.html",
                     "x": 266.58,
                     "y": 164.52,
@@ -450,18 +450,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/niven.html",
-                    "x": 207.16,
-                    "y": 171.72,
-                    "is_dummy": false,
-                    "id": "NIVEN",
-                    "value": "NIVEN",
-                    "name": "NIVEN",
-                    "group": 7
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/liouvil1.html",
                     "x": 312.36,
                     "y": 171.72,
@@ -470,6 +458,18 @@
                     "value": "LIOUVIL1",
                     "name": "LIOUVIL1",
                     "group": 9
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/polydiff.html",
+                    "x": 177.64000000000001,
+                    "y": 164.52,
+                    "is_dummy": false,
+                    "id": "POLYDIFF",
+                    "value": "POLYDIFF",
+                    "name": "POLYDIFF",
+                    "group": 8
                 }
             },
             {
@@ -486,14 +486,14 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/polydiff.html",
-                    "x": 177.64000000000001,
-                    "y": 164.52,
+                    "href": "http://mizar.org/version/current/html/niven.html",
+                    "x": 207.16,
+                    "y": 171.72,
                     "is_dummy": false,
-                    "id": "POLYDIFF",
-                    "value": "POLYDIFF",
-                    "name": "POLYDIFF",
-                    "group": 8
+                    "id": "NIVEN",
+                    "value": "NIVEN",
+                    "name": "NIVEN",
+                    "group": 7
                 }
             },
             {
@@ -726,30 +726,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/lpspace1.html",
-                    "x": 329.72,
-                    "y": 142.92000000000002,
-                    "is_dummy": false,
-                    "id": "LPSPACE1",
-                    "value": "LPSPACE1",
-                    "name": "LPSPACE1",
-                    "group": 1
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/series_3.html",
-                    "x": 383.44,
-                    "y": 141.48,
-                    "is_dummy": false,
-                    "id": "SERIES_3",
-                    "value": "SERIES_3",
-                    "name": "SERIES_3",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/nagata_2.html",
                     "x": 244.98000000000002,
                     "y": 145.8,
@@ -758,6 +734,18 @@
                     "value": "NAGATA_2",
                     "name": "NAGATA_2",
                     "group": 1
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/lpspace1.html",
+                    "x": 329.72,
+                    "y": 142.92000000000002,
+                    "is_dummy": false,
+                    "id": "LPSPACE1",
+                    "value": "LPSPACE1",
+                    "name": "LPSPACE1",
+                    "group": 2
                 }
             },
             {
@@ -781,6 +769,18 @@
                     "id": "LOPBAN_3",
                     "value": "LOPBAN_3",
                     "name": "LOPBAN_3",
+                    "group": 0
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/series_3.html",
+                    "x": 383.44,
+                    "y": 141.48,
+                    "is_dummy": false,
+                    "id": "SERIES_3",
+                    "value": "SERIES_3",
+                    "name": "SERIES_3",
                     "group": 0
                 }
             },
@@ -858,18 +858,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/orders_2.html",
-                    "x": 119.36,
-                    "y": 83.88,
-                    "is_dummy": false,
-                    "id": "ORDERS_2",
-                    "value": "ORDERS_2",
-                    "name": "ORDERS_2",
-                    "group": 9
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/cat_6.html",
                     "x": 62.58,
                     "y": 86.76,
@@ -877,6 +865,18 @@
                     "id": "CAT_6",
                     "value": "CAT_6",
                     "name": "CAT_6",
+                    "group": 9
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/orders_2.html",
+                    "x": 119.36,
+                    "y": 83.88,
+                    "is_dummy": false,
+                    "id": "ORDERS_2",
+                    "value": "ORDERS_2",
+                    "name": "ORDERS_2",
                     "group": 9
                 }
             },
@@ -1290,6 +1290,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/arrow.html",
+                    "x": 67.5,
+                    "y": 63.72,
+                    "is_dummy": false,
+                    "id": "ARROW",
+                    "value": "ARROW",
+                    "name": "ARROW",
+                    "group": 2
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/rfunct_3.html",
                     "x": 308.72,
                     "y": 81.0,
@@ -1302,18 +1314,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/nat_2.html",
-                    "x": 273.82,
-                    "y": 81.0,
-                    "is_dummy": false,
-                    "id": "NAT_2",
-                    "value": "NAT_2",
-                    "name": "NAT_2",
-                    "group": 1
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/wsierp_1.html",
                     "x": 288.62,
                     "y": 81.0,
@@ -1321,6 +1321,18 @@
                     "id": "WSIERP_1",
                     "value": "WSIERP_1",
                     "name": "WSIERP_1",
+                    "group": 1
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/nat_2.html",
+                    "x": 273.82,
+                    "y": 81.0,
+                    "is_dummy": false,
+                    "id": "NAT_2",
+                    "value": "NAT_2",
+                    "name": "NAT_2",
                     "group": 1
                 }
             },
@@ -1370,18 +1382,6 @@
                     "value": "WELLSET1",
                     "name": "WELLSET1",
                     "group": 8
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/arrow.html",
-                    "x": 67.5,
-                    "y": 63.72,
-                    "is_dummy": false,
-                    "id": "ARROW",
-                    "value": "ARROW",
-                    "name": "ARROW",
-                    "group": 2
                 }
             },
             {
@@ -1458,18 +1458,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/limfunc2.html",
-                    "x": 358.0,
-                    "y": 140.04,
-                    "is_dummy": false,
-                    "id": "LIMFUNC2",
-                    "value": "LIMFUNC2",
-                    "name": "LIMFUNC2",
-                    "group": 6
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/integra7.html",
                     "x": 383.3,
                     "y": 142.92000000000002,
@@ -1478,6 +1466,18 @@
                     "value": "INTEGRA7",
                     "name": "INTEGRA7",
                     "group": 8
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/limfunc2.html",
+                    "x": 358.0,
+                    "y": 140.04,
+                    "is_dummy": false,
+                    "id": "LIMFUNC2",
+                    "value": "LIMFUNC2",
+                    "name": "LIMFUNC2",
+                    "group": 6
                 }
             },
             {
@@ -1626,18 +1626,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/lmod_7.html",
-                    "x": 221.68,
-                    "y": 124.2,
-                    "is_dummy": false,
-                    "id": "LMOD_7",
-                    "value": "LMOD_7",
-                    "name": "LMOD_7",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/msualg_9.html",
                     "x": 72.52,
                     "y": 129.96,
@@ -1646,6 +1634,18 @@
                     "value": "MSUALG_9",
                     "name": "MSUALG_9",
                     "group": 8
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/lmod_7.html",
+                    "x": 221.68,
+                    "y": 124.2,
+                    "is_dummy": false,
+                    "id": "LMOD_7",
+                    "value": "LMOD_7",
+                    "name": "LMOD_7",
+                    "group": 0
                 }
             },
             {
@@ -1765,7 +1765,7 @@
                     "id": "BHSP_5",
                     "value": "BHSP_5",
                     "name": "BHSP_5",
-                    "group": 0
+                    "group": 1
                 }
             },
             {
@@ -2094,6 +2094,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/waybel18.html",
+                    "x": 122.58,
+                    "y": 131.4,
+                    "is_dummy": false,
+                    "id": "WAYBEL18",
+                    "value": "WAYBEL18",
+                    "name": "WAYBEL18",
+                    "group": 0
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/topgen_2.html",
                     "x": 166.56,
                     "y": 144.36,
@@ -2101,18 +2113,6 @@
                     "id": "TOPGEN_2",
                     "value": "TOPGEN_2",
                     "name": "TOPGEN_2",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/lattice7.html",
-                    "x": 83.82000000000001,
-                    "y": 128.52,
-                    "is_dummy": false,
-                    "id": "LATTICE7",
-                    "value": "LATTICE7",
-                    "name": "LATTICE7",
                     "group": 0
                 }
             },
@@ -2130,13 +2130,13 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/waybel18.html",
-                    "x": 122.58,
-                    "y": 131.4,
+                    "href": "http://mizar.org/version/current/html/lattice7.html",
+                    "x": 83.82000000000001,
+                    "y": 128.52,
                     "is_dummy": false,
-                    "id": "WAYBEL18",
-                    "value": "WAYBEL18",
-                    "name": "WAYBEL18",
+                    "id": "LATTICE7",
+                    "value": "LATTICE7",
+                    "name": "LATTICE7",
                     "group": 0
                 }
             },
@@ -2166,6 +2166,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/jordan18.html",
+                    "x": 221.38,
+                    "y": 144.36,
+                    "is_dummy": false,
+                    "id": "JORDAN18",
+                    "value": "JORDAN18",
+                    "name": "JORDAN18",
+                    "group": 3
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/jordan1j.html",
                     "x": 150.66,
                     "y": 151.56,
@@ -2186,18 +2198,6 @@
                     "value": "MSUALG_8",
                     "name": "MSUALG_8",
                     "group": 0
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/jordan18.html",
-                    "x": 221.38,
-                    "y": 144.36,
-                    "is_dummy": false,
-                    "id": "JORDAN18",
-                    "value": "JORDAN18",
-                    "name": "JORDAN18",
-                    "group": 3
                 }
             },
             {
@@ -2317,7 +2317,7 @@
                     "id": "MATRIX_8",
                     "value": "MATRIX_8",
                     "name": "MATRIX_8",
-                    "group": 2
+                    "group": 3
                 }
             },
             {
@@ -2550,18 +2550,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/card_fil.html",
-                    "x": 27.32,
-                    "y": 134.28,
-                    "is_dummy": false,
-                    "id": "CARD_FIL",
-                    "value": "CARD_FIL",
-                    "name": "CARD_FIL",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/ranknull.html",
                     "x": 152.32,
                     "y": 141.48,
@@ -2569,6 +2557,18 @@
                     "id": "RANKNULL",
                     "value": "RANKNULL",
                     "name": "RANKNULL",
+                    "group": 0
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/card_fil.html",
+                    "x": 27.32,
+                    "y": 134.28,
+                    "is_dummy": false,
+                    "id": "CARD_FIL",
+                    "value": "CARD_FIL",
+                    "name": "CARD_FIL",
                     "group": 0
                 }
             },
@@ -2670,6 +2670,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/mcart_1.html",
+                    "x": 308.3,
+                    "y": 21.96,
+                    "is_dummy": false,
+                    "id": "MCART_1",
+                    "value": "MCART_1",
+                    "name": "MCART_1",
+                    "group": 4
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/ordinal1.html",
                     "x": 306.3,
                     "y": 23.400000000000002,
@@ -2690,18 +2702,6 @@
                     "value": "PARTFUN1",
                     "name": "PARTFUN1",
                     "group": 5
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/mcart_1.html",
-                    "x": 308.3,
-                    "y": 21.96,
-                    "is_dummy": false,
-                    "id": "MCART_1",
-                    "value": "MCART_1",
-                    "name": "MCART_1",
-                    "group": 4
                 }
             },
             {
@@ -2977,7 +2977,7 @@
                     "id": "SPPOL_2",
                     "value": "SPPOL_2",
                     "name": "SPPOL_2",
-                    "group": 4
+                    "group": 5
                 }
             },
             {
@@ -3001,7 +3001,7 @@
                     "id": "PDIFF_7",
                     "value": "PDIFF_7",
                     "name": "PDIFF_7",
-                    "group": 5
+                    "group": 6
                 }
             },
             {
@@ -3174,6 +3174,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/chain_1.html",
+                    "x": 229.24,
+                    "y": 134.28,
+                    "is_dummy": false,
+                    "id": "CHAIN_1",
+                    "value": "CHAIN_1",
+                    "name": "CHAIN_1",
+                    "group": 2
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/sppol_1.html",
                     "x": 228.76,
                     "y": 118.44,
@@ -3182,18 +3194,6 @@
                     "value": "SPPOL_1",
                     "name": "SPPOL_1",
                     "group": 5
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/chain_1.html",
-                    "x": 229.24,
-                    "y": 134.28,
-                    "is_dummy": false,
-                    "id": "CHAIN_1",
-                    "value": "CHAIN_1",
-                    "name": "CHAIN_1",
-                    "group": 1
                 }
             },
             {
@@ -3294,18 +3294,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/simplex0.html",
-                    "x": 39.86,
-                    "y": 144.36,
-                    "is_dummy": false,
-                    "id": "SIMPLEX0",
-                    "value": "SIMPLEX0",
-                    "name": "SIMPLEX0",
-                    "group": 1
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/fomodel2.html",
                     "x": 96.88,
                     "y": 163.08,
@@ -3313,6 +3301,18 @@
                     "id": "FOMODEL2",
                     "value": "FOMODEL2",
                     "name": "FOMODEL2",
+                    "group": 1
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/simplex0.html",
+                    "x": 39.86,
+                    "y": 144.36,
+                    "is_dummy": false,
+                    "id": "SIMPLEX0",
+                    "value": "SIMPLEX0",
+                    "name": "SIMPLEX0",
                     "group": 1
                 }
             },
@@ -3421,7 +3421,7 @@
                     "id": "FINSET_1",
                     "value": "FINSET_1",
                     "name": "FINSET_1",
-                    "group": 3
+                    "group": 4
                 }
             },
             {
@@ -3522,6 +3522,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/ramsey_1.html",
+                    "x": 205.26,
+                    "y": 158.76,
+                    "is_dummy": false,
+                    "id": "RAMSEY_1",
+                    "value": "RAMSEY_1",
+                    "name": "RAMSEY_1",
+                    "group": 1
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/polyform.html",
                     "x": 174.58,
                     "y": 154.44,
@@ -3554,18 +3566,6 @@
                     "value": "HELLY",
                     "name": "HELLY",
                     "group": 2
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/ramsey_1.html",
-                    "x": 205.26,
-                    "y": 158.76,
-                    "is_dummy": false,
-                    "id": "RAMSEY_1",
-                    "value": "RAMSEY_1",
-                    "name": "RAMSEY_1",
-                    "group": 1
                 }
             },
             {
@@ -3745,18 +3745,6 @@
                     "id": "WAYBEL_6",
                     "value": "WAYBEL_6",
                     "name": "WAYBEL_6",
-                    "group": 5
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/waybel_4.html",
-                    "x": 83.10000000000001,
-                    "y": 96.84,
-                    "is_dummy": false,
-                    "id": "WAYBEL_4",
-                    "value": "WAYBEL_4",
-                    "name": "WAYBEL_4",
                     "group": 6
                 }
             },
@@ -3770,6 +3758,18 @@
                     "value": "YELLOW_7",
                     "name": "YELLOW_7",
                     "group": 5
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/waybel_4.html",
+                    "x": 83.10000000000001,
+                    "y": 96.84,
+                    "is_dummy": false,
+                    "id": "WAYBEL_4",
+                    "value": "WAYBEL_4",
+                    "name": "WAYBEL_4",
+                    "group": 6
                 }
             },
             {
@@ -3949,7 +3949,7 @@
                     "id": "MATRIXJ1",
                     "value": "MATRIXJ1",
                     "name": "MATRIXJ1",
-                    "group": 2
+                    "group": 3
                 }
             },
             {
@@ -4290,13 +4290,13 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/nat_4.html",
-                    "x": 330.88,
-                    "y": 138.6,
+                    "href": "http://mizar.org/version/current/html/hilbert3.html",
+                    "x": 43.64,
+                    "y": 142.92000000000002,
                     "is_dummy": false,
-                    "id": "NAT_4",
-                    "value": "NAT_4",
-                    "name": "NAT_4",
+                    "id": "HILBERT3",
+                    "value": "HILBERT3",
+                    "name": "HILBERT3",
                     "group": 1
                 }
             },
@@ -4314,18 +4314,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/hilbert3.html",
-                    "x": 43.64,
-                    "y": 142.92000000000002,
-                    "is_dummy": false,
-                    "id": "HILBERT3",
-                    "value": "HILBERT3",
-                    "name": "HILBERT3",
-                    "group": 1
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/finseq_7.html",
                     "x": 256.52,
                     "y": 140.04,
@@ -4334,6 +4322,18 @@
                     "value": "FINSEQ_7",
                     "name": "FINSEQ_7",
                     "group": 0
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/nat_4.html",
+                    "x": 330.88,
+                    "y": 138.6,
+                    "is_dummy": false,
+                    "id": "NAT_4",
+                    "value": "NAT_4",
+                    "name": "NAT_4",
+                    "group": 1
                 }
             },
             {
@@ -4554,6 +4554,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/integra5.html",
+                    "x": 345.04,
+                    "y": 137.16,
+                    "is_dummy": false,
+                    "id": "INTEGRA5",
+                    "value": "INTEGRA5",
+                    "name": "INTEGRA5",
+                    "group": 0
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/triang_1.html",
                     "x": 39.14,
                     "y": 134.28,
@@ -4573,18 +4585,6 @@
                     "id": "PARTIT_2",
                     "value": "PARTIT_2",
                     "name": "PARTIT_2",
-                    "group": 0
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/integra5.html",
-                    "x": 345.04,
-                    "y": 137.16,
-                    "is_dummy": false,
-                    "id": "INTEGRA5",
-                    "value": "INTEGRA5",
-                    "name": "INTEGRA5",
                     "group": 0
                 }
             },
@@ -4825,7 +4825,7 @@
                     "id": "LOPBAN_8",
                     "value": "LOPBAN_8",
                     "name": "LOPBAN_8",
-                    "group": 7
+                    "group": 8
                 }
             },
             {
@@ -5449,7 +5449,7 @@
                     "id": "GR_CY_2",
                     "value": "GR_CY_2",
                     "name": "GR_CY_2",
-                    "group": 6
+                    "group": 7
                 }
             },
             {
@@ -5562,18 +5562,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/euclid_7.html",
-                    "x": 277.52,
-                    "y": 145.8,
-                    "is_dummy": false,
-                    "id": "EUCLID_7",
-                    "value": "EUCLID_7",
-                    "name": "EUCLID_7",
-                    "group": 7
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/rlaffin2.html",
                     "x": 99.5,
                     "y": 145.8,
@@ -5582,6 +5570,18 @@
                     "value": "RLAFFIN2",
                     "name": "RLAFFIN2",
                     "group": 6
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/euclid_7.html",
+                    "x": 277.52,
+                    "y": 145.8,
+                    "is_dummy": false,
+                    "id": "EUCLID_7",
+                    "value": "EUCLID_7",
+                    "name": "EUCLID_7",
+                    "group": 7
                 }
             },
             {
@@ -6385,7 +6385,7 @@
                     "id": "LATTAD_1",
                     "value": "LATTAD_1",
                     "name": "LATTAD_1",
-                    "group": 6
+                    "group": 7
                 }
             },
             {
@@ -6450,18 +6450,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/catalan1.html",
-                    "x": 261.44,
-                    "y": 122.76,
-                    "is_dummy": false,
-                    "id": "CATALAN1",
-                    "value": "CATALAN1",
-                    "name": "CATALAN1",
-                    "group": 2
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/rsspace2.html",
                     "x": 309.66,
                     "y": 137.16,
@@ -6481,6 +6469,18 @@
                     "id": "TIETZE",
                     "value": "TIETZE",
                     "name": "TIETZE",
+                    "group": 2
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/catalan1.html",
+                    "x": 261.44,
+                    "y": 122.76,
+                    "is_dummy": false,
+                    "id": "CATALAN1",
+                    "value": "CATALAN1",
+                    "name": "CATALAN1",
                     "group": 2
                 }
             },
@@ -6642,18 +6642,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/functor1.html",
-                    "x": 45.86,
-                    "y": 135.72,
-                    "is_dummy": false,
-                    "id": "FUNCTOR1",
-                    "value": "FUNCTOR1",
-                    "name": "FUNCTOR1",
-                    "group": 1
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/functor2.html",
                     "x": 52.94,
                     "y": 132.84,
@@ -6662,6 +6650,18 @@
                     "value": "FUNCTOR2",
                     "name": "FUNCTOR2",
                     "group": 3
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/functor1.html",
+                    "x": 45.86,
+                    "y": 135.72,
+                    "is_dummy": false,
+                    "id": "FUNCTOR1",
+                    "value": "FUNCTOR1",
+                    "name": "FUNCTOR1",
+                    "group": 1
                 }
             },
             {
@@ -6937,7 +6937,7 @@
                     "id": "FDIFF_7",
                     "value": "FDIFF_7",
                     "name": "FDIFF_7",
-                    "group": 5
+                    "group": 6
                 }
             },
             {
@@ -7566,6 +7566,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/topreal8.html",
+                    "x": 155.82,
+                    "y": 138.6,
+                    "is_dummy": false,
+                    "id": "TOPREAL8",
+                    "value": "TOPREAL8",
+                    "name": "TOPREAL8",
+                    "group": 7
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/jordan1g.html",
                     "x": 153.48,
                     "y": 148.68,
@@ -7585,18 +7597,6 @@
                     "id": "JORDAN1H",
                     "value": "JORDAN1H",
                     "name": "JORDAN1H",
-                    "group": 7
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/topreal8.html",
-                    "x": 155.82,
-                    "y": 138.6,
-                    "is_dummy": false,
-                    "id": "TOPREAL8",
-                    "value": "TOPREAL8",
-                    "name": "TOPREAL8",
                     "group": 7
                 }
             },
@@ -7698,6 +7698,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/aff_4.html",
+                    "x": 173.48,
+                    "y": 137.16,
+                    "is_dummy": false,
+                    "id": "AFF_4",
+                    "value": "AFF_4",
+                    "name": "AFF_4",
+                    "group": 3
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/papdesaf.html",
                     "x": 122.12,
                     "y": 138.6,
@@ -7718,18 +7730,6 @@
                     "value": "INCPROJ",
                     "name": "INCPROJ",
                     "group": 1
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/aff_4.html",
-                    "x": 173.48,
-                    "y": 137.16,
-                    "is_dummy": false,
-                    "id": "AFF_4",
-                    "value": "AFF_4",
-                    "name": "AFF_4",
-                    "group": 3
                 }
             },
             {
@@ -8070,6 +8070,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/toprealc.html",
+                    "x": 169.32,
+                    "y": 160.20000000000002,
+                    "is_dummy": false,
+                    "id": "TOPREALC",
+                    "value": "TOPREALC",
+                    "name": "TOPREALC",
+                    "group": 2
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/lopban_5.html",
                     "x": 303.56,
                     "y": 161.64000000000001,
@@ -8089,18 +8101,6 @@
                     "id": "MATRTOP1",
                     "value": "MATRTOP1",
                     "name": "MATRTOP1",
-                    "group": 2
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/toprealc.html",
-                    "x": 169.32,
-                    "y": 160.20000000000002,
-                    "is_dummy": false,
-                    "id": "TOPREALC",
-                    "value": "TOPREALC",
-                    "name": "TOPREALC",
                     "group": 2
                 }
             },
@@ -8538,6 +8538,18 @@
             },
             {
                 "data": {
+                    "href": "http://mizar.org/version/current/html/vectsp_7.html",
+                    "x": 142.36,
+                    "y": 119.88,
+                    "is_dummy": false,
+                    "id": "VECTSP_7",
+                    "value": "VECTSP_7",
+                    "name": "VECTSP_7",
+                    "group": 5
+                }
+            },
+            {
+                "data": {
                     "href": "http://mizar.org/version/current/html/lattice3.html",
                     "x": 183.42000000000002,
                     "y": 85.32000000000001,
@@ -8558,18 +8570,6 @@
                     "value": "MOD_2",
                     "name": "MOD_2",
                     "group": 9
-                }
-            },
-            {
-                "data": {
-                    "href": "http://mizar.org/version/current/html/vectsp_7.html",
-                    "x": 142.36,
-                    "y": 119.88,
-                    "is_dummy": false,
-                    "id": "VECTSP_7",
-                    "value": "VECTSP_7",
-                    "name": "VECTSP_7",
-                    "group": 5
                 }
             },
             {
@@ -8653,7 +8653,7 @@
                     "id": "TOPALG_6",
                     "value": "TOPALG_6",
                     "name": "TOPALG_6",
-                    "group": 9
+                    "group": 8
                 }
             },
             {
@@ -9097,7 +9097,7 @@
                     "id": "HEINE",
                     "value": "HEINE",
                     "name": "HEINE",
-                    "group": 4
+                    "group": 5
                 }
             },
             {
@@ -9750,18 +9750,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/grcat_1.html",
-                    "x": 101.44,
-                    "y": 88.2,
-                    "is_dummy": false,
-                    "id": "GRCAT_1",
-                    "value": "GRCAT_1",
-                    "name": "GRCAT_1",
-                    "group": 4
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/complfld.html",
                     "x": 221.92000000000002,
                     "y": 135.72,
@@ -9770,6 +9758,18 @@
                     "value": "COMPLFLD",
                     "name": "COMPLFLD",
                     "group": 7
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/grcat_1.html",
+                    "x": 101.44,
+                    "y": 88.2,
+                    "is_dummy": false,
+                    "id": "GRCAT_1",
+                    "value": "GRCAT_1",
+                    "name": "GRCAT_1",
+                    "group": 4
                 }
             },
             {
@@ -9870,18 +9870,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/funct_6.html",
-                    "x": 298.40000000000003,
-                    "y": 49.32,
-                    "is_dummy": false,
-                    "id": "FUNCT_6",
-                    "value": "FUNCT_6",
-                    "name": "FUNCT_6",
-                    "group": 4
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/fraenkel.html",
                     "x": 302.68,
                     "y": 49.32,
@@ -9889,6 +9877,18 @@
                     "id": "FRAENKEL",
                     "value": "FRAENKEL",
                     "name": "FRAENKEL",
+                    "group": 4
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/funct_6.html",
+                    "x": 298.40000000000003,
+                    "y": 49.32,
+                    "is_dummy": false,
+                    "id": "FUNCT_6",
+                    "value": "FUNCT_6",
+                    "name": "FUNCT_6",
                     "group": 4
                 }
             },
@@ -10357,7 +10357,7 @@
                     "id": "SIN_COS",
                     "value": "SIN_COS",
                     "name": "SIN_COS",
-                    "group": 5
+                    "group": 6
                 }
             },
             {
@@ -10381,7 +10381,7 @@
                     "id": "FDIFF_5",
                     "value": "FDIFF_5",
                     "name": "FDIFF_5",
-                    "group": 5
+                    "group": 6
                 }
             },
             {
@@ -10842,18 +10842,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/jordan1d.html",
-                    "x": 147.3,
-                    "y": 144.36,
-                    "is_dummy": false,
-                    "id": "JORDAN1D",
-                    "value": "JORDAN1D",
-                    "name": "JORDAN1D",
-                    "group": 3
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/jordan1b.html",
                     "x": 150.92000000000002,
                     "y": 144.36,
@@ -10861,6 +10849,18 @@
                     "id": "JORDAN1B",
                     "value": "JORDAN1B",
                     "name": "JORDAN1B",
+                    "group": 3
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/jordan1d.html",
+                    "x": 147.3,
+                    "y": 144.36,
+                    "is_dummy": false,
+                    "id": "JORDAN1D",
+                    "value": "JORDAN1D",
+                    "name": "JORDAN1D",
                     "group": 3
                 }
             },
@@ -10902,18 +10902,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/prvect_1.html",
-                    "x": 101.88,
-                    "y": 129.96,
-                    "is_dummy": false,
-                    "id": "PRVECT_1",
-                    "value": "PRVECT_1",
-                    "name": "PRVECT_1",
-                    "group": 2
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/vectsp10.html",
                     "x": 143.24,
                     "y": 140.04,
@@ -10922,6 +10910,18 @@
                     "value": "VECTSP10",
                     "name": "VECTSP10",
                     "group": 1
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/prvect_1.html",
+                    "x": 101.88,
+                    "y": 129.96,
+                    "is_dummy": false,
+                    "id": "PRVECT_1",
+                    "value": "PRVECT_1",
+                    "name": "PRVECT_1",
+                    "group": 2
                 }
             },
             {
@@ -11845,7 +11845,7 @@
                     "id": "YELLOW16",
                     "value": "YELLOW16",
                     "name": "YELLOW16",
-                    "group": 2
+                    "group": 3
                 }
             },
             {
@@ -12133,7 +12133,7 @@
                     "id": "MBOOLEAN",
                     "value": "MBOOLEAN",
                     "name": "MBOOLEAN",
-                    "group": 4
+                    "group": 5
                 }
             },
             {
@@ -12330,18 +12330,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/moebius2.html",
-                    "x": 171.9,
-                    "y": 163.08,
-                    "is_dummy": false,
-                    "id": "MOEBIUS2",
-                    "value": "MOEBIUS2",
-                    "name": "MOEBIUS2",
-                    "group": 2
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/latticea.html",
                     "x": 122.96000000000001,
                     "y": 145.8,
@@ -12350,6 +12338,18 @@
                     "value": "LATTICEA",
                     "name": "LATTICEA",
                     "group": 9
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/moebius2.html",
+                    "x": 171.9,
+                    "y": 163.08,
+                    "is_dummy": false,
+                    "id": "MOEBIUS2",
+                    "value": "MOEBIUS2",
+                    "name": "MOEBIUS2",
+                    "group": 2
                 }
             },
             {
@@ -12649,7 +12649,7 @@
                     "id": "XREAL_0",
                     "value": "XREAL_0",
                     "name": "XREAL_0",
-                    "group": 3
+                    "group": 4
                 }
             },
             {
@@ -13374,18 +13374,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/field_2.html",
-                    "x": 211.56,
-                    "y": 165.96,
-                    "is_dummy": false,
-                    "id": "FIELD_2",
-                    "value": "FIELD_2",
-                    "name": "FIELD_2",
-                    "group": 9
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/field_1.html",
                     "x": 177.28,
                     "y": 174.6,
@@ -13393,6 +13381,18 @@
                     "id": "FIELD_1",
                     "value": "FIELD_1",
                     "name": "FIELD_1",
+                    "group": 9
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/field_2.html",
+                    "x": 211.56,
+                    "y": 165.96,
+                    "is_dummy": false,
+                    "id": "FIELD_2",
+                    "value": "FIELD_2",
+                    "name": "FIELD_2",
                     "group": 9
                 }
             },
@@ -14245,7 +14245,7 @@
                     "id": "FINTOPO4",
                     "value": "FINTOPO4",
                     "name": "FINTOPO4",
-                    "group": 9
+                    "group": 8
                 }
             },
             {
@@ -14430,18 +14430,6 @@
             },
             {
                 "data": {
-                    "href": "http://mizar.org/version/current/html/yellow18.html",
-                    "x": 20.68,
-                    "y": 140.04,
-                    "is_dummy": false,
-                    "id": "YELLOW18",
-                    "value": "YELLOW18",
-                    "name": "YELLOW18",
-                    "group": 9
-                }
-            },
-            {
-                "data": {
                     "href": "http://mizar.org/version/current/html/circtrm1.html",
                     "x": 49.2,
                     "y": 138.6,
@@ -14450,6 +14438,18 @@
                     "value": "CIRCTRM1",
                     "name": "CIRCTRM1",
                     "group": 0
+                }
+            },
+            {
+                "data": {
+                    "href": "http://mizar.org/version/current/html/yellow18.html",
+                    "x": 20.68,
+                    "y": 140.04,
+                    "is_dummy": false,
+                    "id": "YELLOW18",
+                    "value": "YELLOW18",
+                    "name": "YELLOW18",
+                    "group": 9
                 }
             },
             {
@@ -14929,7 +14929,7 @@
                     "id": "RINFSUP1",
                     "value": "RINFSUP1",
                     "name": "RINFSUP1",
-                    "group": 2
+                    "group": 3
                 }
             },
             {
@@ -16635,13 +16635,13 @@
             {
                 "data": {
                     "source": "ORDERS_5",
-                    "target": "DICKSON"
+                    "target": "JORDAN23"
                 }
             },
             {
                 "data": {
                     "source": "ORDERS_5",
-                    "target": "JORDAN23"
+                    "target": "DICKSON"
                 }
             },
             {
@@ -16670,6 +16670,30 @@
             },
             {
                 "data": {
+                    "source": "JORDAN23",
+                    "target": "JORDAN18"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN23",
+                    "target": "JORDAN1J"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN23",
+                    "target": "MSUALG_8"
+                }
+            },
+            {
+                "data": {
+                    "source": "DICKSON",
+                    "target": "WAYBEL18"
+                }
+            },
+            {
+                "data": {
                     "source": "DICKSON",
                     "target": "WAYBEL20"
                 }
@@ -16690,30 +16714,6 @@
                 "data": {
                     "source": "DICKSON",
                     "target": "NORMSP_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "DICKSON",
-                    "target": "WAYBEL18"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN23",
-                    "target": "JORDAN1J"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN23",
-                    "target": "MSUALG_8"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN23",
-                    "target": "JORDAN18"
                 }
             },
             {
@@ -16833,6 +16833,12 @@
             {
                 "data": {
                     "source": "NDIFF_8",
+                    "target": "LOPBAN_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "NDIFF_8",
                     "target": "NFCONT_2"
                 }
             },
@@ -16850,8 +16856,20 @@
             },
             {
                 "data": {
-                    "source": "NDIFF_8",
-                    "target": "LOPBAN_7"
+                    "source": "LOPBAN_7",
+                    "target": "PDIFF_8"
+                }
+            },
+            {
+                "data": {
+                    "source": "LOPBAN_7",
+                    "target": "PRVECT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "LOPBAN_7",
+                    "target": "LOPBAN_6"
                 }
             },
             {
@@ -16894,24 +16912,6 @@
                 "data": {
                     "source": "NDIFF_7",
                     "target": "MAZURULM"
-                }
-            },
-            {
-                "data": {
-                    "source": "LOPBAN_7",
-                    "target": "PDIFF_8"
-                }
-            },
-            {
-                "data": {
-                    "source": "LOPBAN_7",
-                    "target": "PRVECT_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "LOPBAN_7",
-                    "target": "LOPBAN_6"
                 }
             },
             {
@@ -16977,6 +16977,12 @@
             {
                 "data": {
                     "source": "RANDOM_1",
+                    "target": "PROB_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "RANDOM_1",
                     "target": "MESFUN6C"
                 }
             },
@@ -17018,20 +17024,32 @@
             },
             {
                 "data": {
-                    "source": "RANDOM_1",
-                    "target": "PROB_4"
+                    "source": "PROB_4",
+                    "target": "MEASURE3"
                 }
             },
             {
                 "data": {
-                    "source": "MESFUN6C",
-                    "target": "HOLDER_1"
+                    "source": "PROB_4",
+                    "target": "PROB_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "PROB_4",
+                    "target": "DYNKIN"
                 }
             },
             {
                 "data": {
                     "source": "MESFUN6C",
                     "target": "MESFUNC6"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUN6C",
+                    "target": "HOLDER_1"
                 }
             },
             {
@@ -17055,13 +17073,13 @@
             {
                 "data": {
                     "source": "UPROOTS",
-                    "target": "POLYNOM5"
+                    "target": "GRAPH_5"
                 }
             },
             {
                 "data": {
                     "source": "UPROOTS",
-                    "target": "GRAPH_5"
+                    "target": "TREES_9"
                 }
             },
             {
@@ -17073,19 +17091,19 @@
             {
                 "data": {
                     "source": "UPROOTS",
-                    "target": "TREES_9"
-                }
-            },
-            {
-                "data": {
-                    "source": "MESFUNC7",
-                    "target": "HOLDER_1"
+                    "target": "POLYNOM5"
                 }
             },
             {
                 "data": {
                     "source": "MESFUNC7",
                     "target": "MESFUNC6"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC7",
+                    "target": "HOLDER_1"
                 }
             },
             {
@@ -17103,13 +17121,7 @@
             {
                 "data": {
                     "source": "ABCMIZ_1",
-                    "target": "AOFA_000"
-                }
-            },
-            {
-                "data": {
-                    "source": "ABCMIZ_1",
-                    "target": "PARTIT_2"
+                    "target": "MSAFREE3"
                 }
             },
             {
@@ -17121,31 +17133,19 @@
             {
                 "data": {
                     "source": "ABCMIZ_1",
-                    "target": "MSAFREE3"
+                    "target": "AOFA_000"
+                }
+            },
+            {
+                "data": {
+                    "source": "ABCMIZ_1",
+                    "target": "PARTIT_2"
                 }
             },
             {
                 "data": {
                     "source": "RPR_1",
                     "target": "FINSEQ_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "PROB_4",
-                    "target": "PROB_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "PROB_4",
-                    "target": "DYNKIN"
-                }
-            },
-            {
-                "data": {
-                    "source": "PROB_4",
-                    "target": "MEASURE3"
                 }
             },
             {
@@ -17175,7 +17175,7 @@
             {
                 "data": {
                     "source": "NDIFF_5",
-                    "target": "PDIFF_7"
+                    "target": "NDIFF_3"
                 }
             },
             {
@@ -17193,7 +17193,7 @@
             {
                 "data": {
                     "source": "NDIFF_5",
-                    "target": "NDIFF_3"
+                    "target": "PDIFF_7"
                 }
             },
             {
@@ -17241,13 +17241,13 @@
             {
                 "data": {
                     "source": "LIOUVIL2",
-                    "target": "NIVEN"
+                    "target": "LIOUVIL1"
                 }
             },
             {
                 "data": {
                     "source": "LIOUVIL2",
-                    "target": "LIOUVIL1"
+                    "target": "POLYDIFF"
                 }
             },
             {
@@ -17259,31 +17259,7 @@
             {
                 "data": {
                     "source": "LIOUVIL2",
-                    "target": "POLYDIFF"
-                }
-            },
-            {
-                "data": {
-                    "source": "NIVEN",
-                    "target": "RING_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "NIVEN",
-                    "target": "NEWTON04"
-                }
-            },
-            {
-                "data": {
-                    "source": "NIVEN",
-                    "target": "NEWTON03"
-                }
-            },
-            {
-                "data": {
-                    "source": "NIVEN",
-                    "target": "EUCLID10"
+                    "target": "NIVEN"
                 }
             },
             {
@@ -17295,19 +17271,13 @@
             {
                 "data": {
                     "source": "LIOUVIL1",
-                    "target": "NEWTON04"
-                }
-            },
-            {
-                "data": {
-                    "source": "LIOUVIL1",
                     "target": "HOLDER_1"
                 }
             },
             {
                 "data": {
-                    "source": "ALGNUM_1",
-                    "target": "RING_4"
+                    "source": "LIOUVIL1",
+                    "target": "NEWTON04"
                 }
             },
             {
@@ -17326,6 +17296,36 @@
                 "data": {
                     "source": "POLYDIFF",
                     "target": "RATFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "ALGNUM_1",
+                    "target": "RING_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "NIVEN",
+                    "target": "NEWTON04"
+                }
+            },
+            {
+                "data": {
+                    "source": "NIVEN",
+                    "target": "RING_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "NIVEN",
+                    "target": "NEWTON03"
+                }
+            },
+            {
+                "data": {
+                    "source": "NIVEN",
+                    "target": "EUCLID10"
                 }
             },
             {
@@ -17349,13 +17349,19 @@
             {
                 "data": {
                     "source": "MSAFREE4",
-                    "target": "ALGSPEC1"
+                    "target": "CIRCTRM1"
                 }
             },
             {
                 "data": {
                     "source": "MSAFREE4",
                     "target": "MSAFREE3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSAFREE4",
+                    "target": "ALGSPEC1"
                 }
             },
             {
@@ -17378,8 +17384,14 @@
             },
             {
                 "data": {
-                    "source": "MSAFREE4",
-                    "target": "CIRCTRM1"
+                    "source": "BORSUK_7",
+                    "target": "TOPALG_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "BORSUK_7",
+                    "target": "EUCLID_5"
                 }
             },
             {
@@ -17392,18 +17404,6 @@
                 "data": {
                     "source": "BORSUK_7",
                     "target": "SIN_COS4"
-                }
-            },
-            {
-                "data": {
-                    "source": "BORSUK_7",
-                    "target": "TOPALG_6"
-                }
-            },
-            {
-                "data": {
-                    "source": "BORSUK_7",
-                    "target": "EUCLID_5"
                 }
             },
             {
@@ -17421,6 +17421,12 @@
             {
                 "data": {
                     "source": "JORDAN11",
+                    "target": "JORDAN1C"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN11",
                     "target": "JORDAN"
                 }
             },
@@ -17428,12 +17434,6 @@
                 "data": {
                     "source": "JORDAN11",
                     "target": "JORDAN1J"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN11",
-                    "target": "JORDAN1C"
                 }
             },
             {
@@ -17463,13 +17463,13 @@
             {
                 "data": {
                     "source": "FIB_NUM",
-                    "target": "QUIN_1"
+                    "target": "PYTHTRIP"
                 }
             },
             {
                 "data": {
                     "source": "FIB_NUM",
-                    "target": "PYTHTRIP"
+                    "target": "QUIN_1"
                 }
             },
             {
@@ -17613,19 +17613,13 @@
             {
                 "data": {
                     "source": "LPSPACE2",
-                    "target": "LPSPACE1"
-                }
-            },
-            {
-                "data": {
-                    "source": "LPSPACE2",
-                    "target": "SERIES_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "LPSPACE2",
                     "target": "NAGATA_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "LPSPACE2",
+                    "target": "LPSPACE1"
                 }
             },
             {
@@ -17638,6 +17632,30 @@
                 "data": {
                     "source": "LPSPACE2",
                     "target": "LOPBAN_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "LPSPACE2",
+                    "target": "SERIES_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAGATA_2",
+                    "target": "RSSPACE2"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAGATA_2",
+                    "target": "NAGATA_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAGATA_2",
+                    "target": "BHSP_5"
                 }
             },
             {
@@ -17656,42 +17674,6 @@
                 "data": {
                     "source": "LPSPACE1",
                     "target": "RSSPACE3"
-                }
-            },
-            {
-                "data": {
-                    "source": "SERIES_3",
-                    "target": "POLYEQ_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "SERIES_3",
-                    "target": "SIN_COS2"
-                }
-            },
-            {
-                "data": {
-                    "source": "SERIES_3",
-                    "target": "ASYMPT_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAGATA_2",
-                    "target": "NAGATA_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAGATA_2",
-                    "target": "RSSPACE2"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAGATA_2",
-                    "target": "BHSP_5"
                 }
             },
             {
@@ -17722,6 +17704,24 @@
                 "data": {
                     "source": "LOPBAN_3",
                     "target": "GCD_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "POLYEQ_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "SIN_COS2"
+                }
+            },
+            {
+                "data": {
+                    "source": "SERIES_3",
+                    "target": "ASYMPT_1"
                 }
             },
             {
@@ -17787,19 +17787,13 @@
             {
                 "data": {
                     "source": "CAT_7",
-                    "target": "ORDERS_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "CAT_7",
                     "target": "CAT_6"
                 }
             },
             {
                 "data": {
-                    "source": "ORDERS_2",
-                    "target": "PRE_TOPC"
+                    "source": "CAT_7",
+                    "target": "ORDERS_2"
                 }
             },
             {
@@ -17824,6 +17818,12 @@
                 "data": {
                     "source": "CAT_6",
                     "target": "NAT_LAT"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDERS_2",
+                    "target": "PRE_TOPC"
                 }
             },
             {
@@ -17931,6 +17931,12 @@
             {
                 "data": {
                     "source": "TOPMETR",
+                    "target": "BORSUK_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPMETR",
                     "target": "TBSP_1"
                 }
             },
@@ -17938,12 +17944,6 @@
                 "data": {
                     "source": "TOPMETR",
                     "target": "METRIC_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPMETR",
-                    "target": "BORSUK_1"
                 }
             },
             {
@@ -18021,13 +18021,13 @@
             {
                 "data": {
                     "source": "GRAPH_2",
-                    "target": "FINSEQ_6"
+                    "target": "GRAPH_1"
                 }
             },
             {
                 "data": {
                     "source": "GRAPH_2",
-                    "target": "GRAPH_1"
+                    "target": "FINSEQ_6"
                 }
             },
             {
@@ -18189,19 +18189,25 @@
             {
                 "data": {
                     "source": "PRE_POLY",
+                    "target": "ARROW"
+                }
+            },
+            {
+                "data": {
+                    "source": "PRE_POLY",
                     "target": "RFUNCT_3"
                 }
             },
             {
                 "data": {
                     "source": "PRE_POLY",
-                    "target": "NAT_2"
+                    "target": "WSIERP_1"
                 }
             },
             {
                 "data": {
                     "source": "PRE_POLY",
-                    "target": "WSIERP_1"
+                    "target": "NAT_2"
                 }
             },
             {
@@ -18230,20 +18236,14 @@
             },
             {
                 "data": {
-                    "source": "PRE_POLY",
-                    "target": "ARROW"
+                    "source": "ARROW",
+                    "target": "FINSEQ_4"
                 }
             },
             {
                 "data": {
                     "source": "RFUNCT_3",
                     "target": "LIMFUNC1"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAT_2",
-                    "target": "BINARITH"
                 }
             },
             {
@@ -18262,6 +18262,12 @@
                 "data": {
                     "source": "WSIERP_1",
                     "target": "PRE_FF"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_2",
+                    "target": "BINARITH"
                 }
             },
             {
@@ -18292,12 +18298,6 @@
                 "data": {
                     "source": "WELLSET1",
                     "target": "WELLORD1"
-                }
-            },
-            {
-                "data": {
-                    "source": "ARROW",
-                    "target": "FINSEQ_4"
                 }
             },
             {
@@ -18363,19 +18363,13 @@
             {
                 "data": {
                     "source": "INTEGR10",
-                    "target": "LIMFUNC2"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR10",
                     "target": "INTEGRA7"
                 }
             },
             {
                 "data": {
-                    "source": "LIMFUNC2",
-                    "target": "LIMFUNC1"
+                    "source": "INTEGR10",
+                    "target": "LIMFUNC2"
                 }
             },
             {
@@ -18388,6 +18382,12 @@
                 "data": {
                     "source": "INTEGRA7",
                     "target": "INTEGRA6"
+                }
+            },
+            {
+                "data": {
+                    "source": "LIMFUNC2",
+                    "target": "LIMFUNC1"
                 }
             },
             {
@@ -18417,13 +18417,13 @@
             {
                 "data": {
                     "source": "JORDAN2C",
-                    "target": "SPRECT_3"
+                    "target": "JGRAPH_1"
                 }
             },
             {
                 "data": {
                     "source": "JORDAN2C",
-                    "target": "JGRAPH_1"
+                    "target": "SPRECT_3"
                 }
             },
             {
@@ -18495,13 +18495,13 @@
             {
                 "data": {
                     "source": "TAXONOM1",
-                    "target": "LMOD_7"
+                    "target": "MSUALG_9"
                 }
             },
             {
                 "data": {
                     "source": "TAXONOM1",
-                    "target": "MSUALG_9"
+                    "target": "LMOD_7"
                 }
             },
             {
@@ -18514,24 +18514,6 @@
                 "data": {
                     "source": "PARTIT1",
                     "target": "FINSEQ_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "LMOD_7",
-                    "target": "LATTICE2"
-                }
-            },
-            {
-                "data": {
-                    "source": "LMOD_7",
-                    "target": "MULTOP_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "LMOD_7",
-                    "target": "LMOD_6"
                 }
             },
             {
@@ -18562,6 +18544,24 @@
                 "data": {
                     "source": "MSUALG_9",
                     "target": "EXTENS_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "LMOD_7",
+                    "target": "LATTICE2"
+                }
+            },
+            {
+                "data": {
+                    "source": "LMOD_7",
+                    "target": "MULTOP_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "LMOD_7",
+                    "target": "LMOD_6"
                 }
             },
             {
@@ -18657,13 +18657,13 @@
             {
                 "data": {
                     "source": "NORMSP_2",
-                    "target": "KURATO_2"
+                    "target": "HAUSDORF"
                 }
             },
             {
                 "data": {
                     "source": "NORMSP_2",
-                    "target": "HAUSDORF"
+                    "target": "KURATO_2"
                 }
             },
             {
@@ -18723,6 +18723,12 @@
             {
                 "data": {
                     "source": "MESFUNC1",
+                    "target": "MEASURE3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MESFUNC1",
                     "target": "EXTREAL1"
                 }
             },
@@ -18730,12 +18736,6 @@
                 "data": {
                     "source": "MESFUNC1",
                     "target": "RELSET_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "MESFUNC1",
-                    "target": "MEASURE3"
                 }
             },
             {
@@ -18975,7 +18975,19 @@
             {
                 "data": {
                     "source": "EUCLID_9",
+                    "target": "WAYBEL18"
+                }
+            },
+            {
+                "data": {
+                    "source": "EUCLID_9",
                     "target": "TOPGEN_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "EUCLID_9",
+                    "target": "TOPREALB"
                 }
             },
             {
@@ -18998,14 +19010,20 @@
             },
             {
                 "data": {
-                    "source": "EUCLID_9",
-                    "target": "TOPREALB"
+                    "source": "WAYBEL18",
+                    "target": "YELLOW_9"
                 }
             },
             {
                 "data": {
-                    "source": "EUCLID_9",
-                    "target": "WAYBEL18"
+                    "source": "WAYBEL18",
+                    "target": "WAYBEL17"
+                }
+            },
+            {
+                "data": {
+                    "source": "WAYBEL18",
+                    "target": "WAYBEL14"
                 }
             },
             {
@@ -19024,6 +19042,30 @@
                 "data": {
                     "source": "TOPGEN_2",
                     "target": "FRECHET"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALB",
+                    "target": "BORSUK_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALB",
+                    "target": "TOPREALA"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALB",
+                    "target": "SIN_COS6"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALB",
+                    "target": "TOPREAL9"
                 }
             },
             {
@@ -19052,48 +19094,6 @@
             },
             {
                 "data": {
-                    "source": "TOPREALB",
-                    "target": "TOPREALA"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALB",
-                    "target": "SIN_COS6"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALB",
-                    "target": "BORSUK_5"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALB",
-                    "target": "TOPREAL9"
-                }
-            },
-            {
-                "data": {
-                    "source": "WAYBEL18",
-                    "target": "YELLOW_9"
-                }
-            },
-            {
-                "data": {
-                    "source": "WAYBEL18",
-                    "target": "WAYBEL17"
-                }
-            },
-            {
-                "data": {
-                    "source": "WAYBEL18",
-                    "target": "WAYBEL14"
-                }
-            },
-            {
-                "data": {
                     "source": "TIETZE_2",
                     "target": "BROUWER2"
                 }
@@ -19102,24 +19102,6 @@
                 "data": {
                     "source": "BROUWER2",
                     "target": "SIMPLEX2"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1J",
-                    "target": "JORDAN1I"
-                }
-            },
-            {
-                "data": {
-                    "source": "MSUALG_8",
-                    "target": "MSUALG_7"
-                }
-            },
-            {
-                "data": {
-                    "source": "MSUALG_8",
-                    "target": "MSUALG_6"
                 }
             },
             {
@@ -19138,6 +19120,24 @@
                 "data": {
                     "source": "JORDAN18",
                     "target": "JCT_MISC"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1J",
+                    "target": "JORDAN1I"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSUALG_8",
+                    "target": "MSUALG_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSUALG_8",
+                    "target": "MSUALG_7"
                 }
             },
             {
@@ -19161,13 +19161,13 @@
             {
                 "data": {
                     "source": "FINSEQ_1",
-                    "target": "VALUED_0"
+                    "target": "CARD_2"
                 }
             },
             {
                 "data": {
                     "source": "FINSEQ_1",
-                    "target": "CARD_2"
+                    "target": "VALUED_0"
                 }
             },
             {
@@ -19347,13 +19347,13 @@
             {
                 "data": {
                     "source": "PASCAL",
-                    "target": "HESSENBE"
+                    "target": "ANPROJ_9"
                 }
             },
             {
                 "data": {
                     "source": "PASCAL",
-                    "target": "ANPROJ_9"
+                    "target": "HESSENBE"
                 }
             },
             {
@@ -19425,13 +19425,13 @@
             {
                 "data": {
                     "source": "MATROID0",
-                    "target": "CARD_FIL"
+                    "target": "RANKNULL"
                 }
             },
             {
                 "data": {
                     "source": "MATROID0",
-                    "target": "RANKNULL"
+                    "target": "CARD_FIL"
                 }
             },
             {
@@ -19472,18 +19472,6 @@
             },
             {
                 "data": {
-                    "source": "CARD_FIL",
-                    "target": "CARD_5"
-                }
-            },
-            {
-                "data": {
-                    "source": "CARD_FIL",
-                    "target": "TREES_2"
-                }
-            },
-            {
-                "data": {
                     "source": "RANKNULL",
                     "target": "LOPBAN_1"
                 }
@@ -19498,6 +19486,18 @@
                 "data": {
                     "source": "RANKNULL",
                     "target": "VECTSP_9"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_FIL",
+                    "target": "CARD_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARD_FIL",
+                    "target": "TREES_2"
                 }
             },
             {
@@ -19521,13 +19521,13 @@
             {
                 "data": {
                     "source": "HALLMAR1",
-                    "target": "SPPOL_1"
+                    "target": "CHAIN_1"
                 }
             },
             {
                 "data": {
                     "source": "HALLMAR1",
-                    "target": "CHAIN_1"
+                    "target": "SPPOL_1"
                 }
             },
             {
@@ -19599,13 +19599,19 @@
             {
                 "data": {
                     "source": "FOMODEL0",
-                    "target": "MATROID0"
+                    "target": "LEXBFS"
                 }
             },
             {
                 "data": {
                     "source": "FOMODEL0",
-                    "target": "LEXBFS"
+                    "target": "MATROID0"
+                }
+            },
+            {
+                "data": {
+                    "source": "COHSP_1",
+                    "target": "BORSUK_1"
                 }
             },
             {
@@ -19622,8 +19628,8 @@
             },
             {
                 "data": {
-                    "source": "COHSP_1",
-                    "target": "BORSUK_1"
+                    "source": "HEYTING3",
+                    "target": "HEYTING2"
                 }
             },
             {
@@ -19642,12 +19648,6 @@
                 "data": {
                     "source": "HEYTING3",
                     "target": "LMOD_7"
-                }
-            },
-            {
-                "data": {
-                    "source": "HEYTING3",
-                    "target": "HEYTING2"
                 }
             },
             {
@@ -19677,6 +19677,12 @@
             {
                 "data": {
                     "source": "DOMAIN_1",
+                    "target": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "DOMAIN_1",
                     "target": "ORDINAL1"
                 }
             },
@@ -19688,8 +19694,8 @@
             },
             {
                 "data": {
-                    "source": "DOMAIN_1",
-                    "target": "MCART_1"
+                    "source": "MCART_1",
+                    "target": "FUNCT_1"
                 }
             },
             {
@@ -19714,12 +19720,6 @@
                 "data": {
                     "source": "PARTFUN1",
                     "target": "GRFUNC_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "MCART_1",
-                    "target": "FUNCT_1"
                 }
             },
             {
@@ -19965,19 +19965,25 @@
             {
                 "data": {
                     "source": "SPPOL_2",
-                    "target": "SPPOL_1"
+                    "target": "GOBOARD1"
                 }
             },
             {
                 "data": {
                     "source": "SPPOL_2",
-                    "target": "GOBOARD1"
+                    "target": "SPPOL_1"
                 }
             },
             {
                 "data": {
                     "source": "PDIFF_8",
                     "target": "PDIFF_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "PDIFF_7",
+                    "target": "TOPREALC"
                 }
             },
             {
@@ -19990,12 +19996,6 @@
                 "data": {
                     "source": "PDIFF_7",
                     "target": "PDIFF_6"
-                }
-            },
-            {
-                "data": {
-                    "source": "PDIFF_7",
-                    "target": "TOPREALC"
                 }
             },
             {
@@ -20175,13 +20175,13 @@
             {
                 "data": {
                     "source": "PENCIL_1",
-                    "target": "PUA2MSS1"
+                    "target": "WAYBEL18"
                 }
             },
             {
                 "data": {
                     "source": "PENCIL_1",
-                    "target": "YELLOW11"
+                    "target": "PUA2MSS1"
                 }
             },
             {
@@ -20193,13 +20193,7 @@
             {
                 "data": {
                     "source": "PENCIL_1",
-                    "target": "WAYBEL18"
-                }
-            },
-            {
-                "data": {
-                    "source": "SPPOL_1",
-                    "target": "TOPREAL3"
+                    "target": "YELLOW11"
                 }
             },
             {
@@ -20218,6 +20212,12 @@
                 "data": {
                     "source": "CHAIN_1",
                     "target": "LMOD_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "SPPOL_1",
+                    "target": "TOPREAL3"
                 }
             },
             {
@@ -20241,13 +20241,13 @@
             {
                 "data": {
                     "source": "TRANSGEO",
-                    "target": "AFF_1"
+                    "target": "PASCH"
                 }
             },
             {
                 "data": {
                     "source": "TRANSGEO",
-                    "target": "PASCH"
+                    "target": "AFF_1"
                 }
             },
             {
@@ -20313,13 +20313,19 @@
             {
                 "data": {
                     "source": "FOMODEL3",
-                    "target": "SIMPLEX0"
+                    "target": "FOMODEL2"
                 }
             },
             {
                 "data": {
                     "source": "FOMODEL3",
-                    "target": "FOMODEL2"
+                    "target": "SIMPLEX0"
+                }
+            },
+            {
+                "data": {
+                    "source": "FOMODEL2",
+                    "target": "FOMODEL1"
                 }
             },
             {
@@ -20344,12 +20350,6 @@
                 "data": {
                     "source": "SIMPLEX0",
                     "target": "MATROID0"
-                }
-            },
-            {
-                "data": {
-                    "source": "FOMODEL2",
-                    "target": "FOMODEL1"
                 }
             },
             {
@@ -20517,6 +20517,12 @@
             {
                 "data": {
                     "source": "GLIB_006",
+                    "target": "RAMSEY_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "GLIB_006",
                     "target": "POLYFORM"
                 }
             },
@@ -20540,8 +20546,14 @@
             },
             {
                 "data": {
-                    "source": "GLIB_006",
-                    "target": "RAMSEY_1"
+                    "source": "RAMSEY_1",
+                    "target": "RECDEF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "RAMSEY_1",
+                    "target": "GROUP_10"
                 }
             },
             {
@@ -20584,18 +20596,6 @@
                 "data": {
                     "source": "HELLY",
                     "target": "CHORD"
-                }
-            },
-            {
-                "data": {
-                    "source": "RAMSEY_1",
-                    "target": "RECDEF_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "RAMSEY_1",
-                    "target": "GROUP_10"
                 }
             },
             {
@@ -20751,13 +20751,13 @@
             {
                 "data": {
                     "source": "SQUARE_1",
-                    "target": "XREAL_1"
+                    "target": "AXIOMS"
                 }
             },
             {
                 "data": {
                     "source": "SQUARE_1",
-                    "target": "AXIOMS"
+                    "target": "XREAL_1"
                 }
             },
             {
@@ -20787,13 +20787,25 @@
             {
                 "data": {
                     "source": "WAYBEL_6",
-                    "target": "WAYBEL_4"
+                    "target": "YELLOW_7"
                 }
             },
             {
                 "data": {
                     "source": "WAYBEL_6",
-                    "target": "YELLOW_7"
+                    "target": "WAYBEL_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "YELLOW_7",
+                    "target": "YELLOW_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "YELLOW_7",
+                    "target": "WAYBEL_5"
                 }
             },
             {
@@ -20806,18 +20818,6 @@
                 "data": {
                     "source": "WAYBEL_4",
                     "target": "WAYBEL_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "YELLOW_7",
-                    "target": "WAYBEL_5"
-                }
-            },
-            {
-                "data": {
-                    "source": "YELLOW_7",
-                    "target": "YELLOW_5"
                 }
             },
             {
@@ -20937,6 +20937,12 @@
             {
                 "data": {
                     "source": "MSAFREE1",
+                    "target": "CAT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSAFREE1",
                     "target": "MULTOP_1"
                 }
             },
@@ -20944,12 +20950,6 @@
                 "data": {
                     "source": "MSAFREE1",
                     "target": "MSAFREE"
-                }
-            },
-            {
-                "data": {
-                    "source": "MSAFREE1",
-                    "target": "CAT_3"
                 }
             },
             {
@@ -21111,13 +21111,13 @@
             {
                 "data": {
                     "source": "MATRTOP2",
-                    "target": "RLAFFIN1"
+                    "target": "MATRTOP1"
                 }
             },
             {
                 "data": {
                     "source": "MATRTOP2",
-                    "target": "MATRTOP1"
+                    "target": "RLAFFIN1"
                 }
             },
             {
@@ -21207,13 +21207,13 @@
             {
                 "data": {
                     "source": "METRIZTS",
-                    "target": "COMPL_SP"
+                    "target": "NAGATA_2"
                 }
             },
             {
                 "data": {
                     "source": "METRIZTS",
-                    "target": "NAGATA_2"
+                    "target": "COMPL_SP"
                 }
             },
             {
@@ -21237,18 +21237,6 @@
             {
                 "data": {
                     "source": "COMPL_SP",
-                    "target": "STIRL2_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "COMPL_SP",
-                    "target": "DICKSON"
-                }
-            },
-            {
-                "data": {
-                    "source": "COMPL_SP",
                     "target": "KURATO_2"
                 }
             },
@@ -21256,6 +21244,18 @@
                 "data": {
                     "source": "COMPL_SP",
                     "target": "HAUSDORF"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPL_SP",
+                    "target": "STIRL2_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "COMPL_SP",
+                    "target": "DICKSON"
                 }
             },
             {
@@ -21381,6 +21381,12 @@
             {
                 "data": {
                     "source": "MEASURE8",
+                    "target": "MEASURE7"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASURE8",
                     "target": "FUNCTOR1"
                 }
             },
@@ -21404,12 +21410,6 @@
             },
             {
                 "data": {
-                    "source": "MEASURE8",
-                    "target": "MEASURE7"
-                }
-            },
-            {
-                "data": {
                     "source": "INT_5",
                     "target": "CALCUL_2"
                 }
@@ -21423,31 +21423,7 @@
             {
                 "data": {
                     "source": "INT_5",
-                    "target": "SERIES_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_5",
-                    "target": "NAT_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_5",
-                    "target": "INT_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_5",
                     "target": "HILBERT3"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_5",
-                    "target": "TOPREAL7"
                 }
             },
             {
@@ -21459,37 +21435,31 @@
             {
                 "data": {
                     "source": "INT_5",
+                    "target": "SERIES_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_5",
+                    "target": "INT_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_5",
+                    "target": "TOPREAL7"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_5",
                     "target": "FINSEQ_7"
                 }
             },
             {
                 "data": {
-                    "source": "NAT_4",
-                    "target": "PROB_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAT_4",
-                    "target": "NAT_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAT_4",
-                    "target": "COMPTRIG"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAT_4",
-                    "target": "INTEGRA5"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_4",
-                    "target": "MOEBIUS1"
+                    "source": "INT_5",
+                    "target": "NAT_4"
                 }
             },
             {
@@ -21512,14 +21482,44 @@
             },
             {
                 "data": {
-                    "source": "FINSEQ_7",
-                    "target": "NAT_2"
+                    "source": "INT_4",
+                    "target": "MOEBIUS1"
                 }
             },
             {
                 "data": {
                     "source": "FINSEQ_7",
                     "target": "GENEALG1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FINSEQ_7",
+                    "target": "NAT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_4",
+                    "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_4",
+                    "target": "PROB_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_4",
+                    "target": "NAT_3"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_4",
+                    "target": "COMPTRIG"
                 }
             },
             {
@@ -21621,13 +21621,13 @@
             {
                 "data": {
                     "source": "YELLOW17",
-                    "target": "TOPMETR"
+                    "target": "WAYBEL18"
                 }
             },
             {
                 "data": {
                     "source": "YELLOW17",
-                    "target": "WAYBEL18"
+                    "target": "TOPMETR"
                 }
             },
             {
@@ -21729,6 +21729,12 @@
             {
                 "data": {
                     "source": "ORDEQ_01",
+                    "target": "C0SP2"
+                }
+            },
+            {
+                "data": {
+                    "source": "ORDEQ_01",
                     "target": "HOLDER_1"
                 }
             },
@@ -21747,12 +21753,6 @@
             {
                 "data": {
                     "source": "ORDEQ_01",
-                    "target": "C0SP2"
-                }
-            },
-            {
-                "data": {
-                    "source": "ORDEQ_01",
                     "target": "NFCONT_2"
                 }
             },
@@ -21760,6 +21760,12 @@
                 "data": {
                     "source": "ORDEQ_01",
                     "target": "RSSPACE4"
+                }
+            },
+            {
+                "data": {
+                    "source": "BAGORDER",
+                    "target": "INTEGRA5"
                 }
             },
             {
@@ -21782,8 +21788,14 @@
             },
             {
                 "data": {
-                    "source": "BAGORDER",
-                    "target": "INTEGRA5"
+                    "source": "INTEGRA5",
+                    "target": "FDIFF_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "INTEGRA5",
+                    "target": "INTEGRA4"
                 }
             },
             {
@@ -21808,18 +21820,6 @@
                 "data": {
                     "source": "PARTIT_2",
                     "target": "BVFUNC_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGRA5",
-                    "target": "FDIFF_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGRA5",
-                    "target": "INTEGRA4"
                 }
             },
             {
@@ -21981,6 +21981,12 @@
             {
                 "data": {
                     "source": "GLIB_001",
+                    "target": "GRAPH_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "GLIB_001",
                     "target": "JORDAN12"
                 }
             },
@@ -21988,12 +21994,6 @@
                 "data": {
                     "source": "GLIB_001",
                     "target": "GLIB_000"
-                }
-            },
-            {
-                "data": {
-                    "source": "GLIB_001",
-                    "target": "GRAPH_5"
                 }
             },
             {
@@ -22485,19 +22485,19 @@
             {
                 "data": {
                     "source": "BROUWER3",
-                    "target": "TIETZE_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "BROUWER3",
                     "target": "MATRTOP3"
                 }
             },
             {
                 "data": {
+                    "source": "BROUWER3",
+                    "target": "TIETZE_2"
+                }
+            },
+            {
+                "data": {
                     "source": "MATRTOP3",
-                    "target": "POLYNOM8"
+                    "target": "TOPREALC"
                 }
             },
             {
@@ -22509,7 +22509,7 @@
             {
                 "data": {
                     "source": "MATRTOP3",
-                    "target": "TOPREALC"
+                    "target": "POLYNOM8"
                 }
             },
             {
@@ -22731,7 +22731,7 @@
             {
                 "data": {
                     "source": "POLYNOM5",
-                    "target": "CFCONT_1"
+                    "target": "INTEGRA5"
                 }
             },
             {
@@ -22743,19 +22743,19 @@
             {
                 "data": {
                     "source": "POLYNOM5",
-                    "target": "TOPREAL3"
-                }
-            },
-            {
-                "data": {
-                    "source": "POLYNOM5",
-                    "target": "INTEGRA5"
+                    "target": "CFCONT_1"
                 }
             },
             {
                 "data": {
                     "source": "POLYNOM5",
                     "target": "HAHNBAN1"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYNOM5",
+                    "target": "TOPREAL3"
                 }
             },
             {
@@ -22803,12 +22803,6 @@
             {
                 "data": {
                     "source": "RLAFFIN3",
-                    "target": "EUCLID_7"
-                }
-            },
-            {
-                "data": {
-                    "source": "RLAFFIN3",
                     "target": "METRIZTS"
                 }
             },
@@ -22822,6 +22816,24 @@
                 "data": {
                     "source": "RLAFFIN3",
                     "target": "MATRTOP2"
+                }
+            },
+            {
+                "data": {
+                    "source": "RLAFFIN3",
+                    "target": "EUCLID_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "RLAFFIN2",
+                    "target": "RLAFFIN1"
+                }
+            },
+            {
+                "data": {
+                    "source": "RLAFFIN2",
+                    "target": "SIMPLEX0"
                 }
             },
             {
@@ -22846,18 +22858,6 @@
                 "data": {
                     "source": "EUCLID_7",
                     "target": "REAL_NS1"
-                }
-            },
-            {
-                "data": {
-                    "source": "RLAFFIN2",
-                    "target": "RLAFFIN1"
-                }
-            },
-            {
-                "data": {
-                    "source": "RLAFFIN2",
-                    "target": "SIMPLEX0"
                 }
             },
             {
@@ -23295,7 +23295,7 @@
             {
                 "data": {
                     "source": "GLIBPRE0",
-                    "target": "OPOSET_1"
+                    "target": "RVSUM_4"
                 }
             },
             {
@@ -23307,7 +23307,7 @@
             {
                 "data": {
                     "source": "GLIBPRE0",
-                    "target": "RVSUM_4"
+                    "target": "OPOSET_1"
                 }
             },
             {
@@ -23349,6 +23349,12 @@
             {
                 "data": {
                     "source": "NEWTON02",
+                    "target": "TOPREALC"
+                }
+            },
+            {
+                "data": {
+                    "source": "NEWTON02",
                     "target": "NAT_6"
                 }
             },
@@ -23384,20 +23390,8 @@
             },
             {
                 "data": {
-                    "source": "NEWTON02",
-                    "target": "TOPREALC"
-                }
-            },
-            {
-                "data": {
                     "source": "GROUPP_1",
                     "target": "GROUP_11"
-                }
-            },
-            {
-                "data": {
-                    "source": "GROUPP_1",
-                    "target": "NAT_5"
                 }
             },
             {
@@ -23408,8 +23402,20 @@
             },
             {
                 "data": {
+                    "source": "GROUPP_1",
+                    "target": "NAT_5"
+                }
+            },
+            {
+                "data": {
                     "source": "INTPRO_1",
                     "target": "FINSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "DILWORTH",
+                    "target": "RAMSEY_1"
                 }
             },
             {
@@ -23426,14 +23432,14 @@
             },
             {
                 "data": {
-                    "source": "DILWORTH",
-                    "target": "RAMSEY_1"
+                    "source": "RUSUB_1",
+                    "target": "BHSP_1"
                 }
             },
             {
                 "data": {
-                    "source": "RUSUB_1",
-                    "target": "BHSP_1"
+                    "source": "INTEGR12",
+                    "target": "INTEGRA5"
                 }
             },
             {
@@ -23446,12 +23452,6 @@
                 "data": {
                     "source": "INTEGR12",
                     "target": "FDIFF_9"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR12",
-                    "target": "INTEGRA5"
                 }
             },
             {
@@ -23469,13 +23469,13 @@
             {
                 "data": {
                     "source": "FUNCT_1",
-                    "target": "SETFAM_1"
+                    "target": "RELAT_1"
                 }
             },
             {
                 "data": {
                     "source": "FUNCT_1",
-                    "target": "RELAT_1"
+                    "target": "SETFAM_1"
                 }
             },
             {
@@ -23589,13 +23589,13 @@
             {
                 "data": {
                     "source": "NATTRA_1",
-                    "target": "CAT_2"
+                    "target": "CAT_3"
                 }
             },
             {
                 "data": {
                     "source": "NATTRA_1",
-                    "target": "CAT_3"
+                    "target": "CAT_2"
                 }
             },
             {
@@ -23703,12 +23703,6 @@
             {
                 "data": {
                     "source": "CATALAN2",
-                    "target": "CATALAN1"
-                }
-            },
-            {
-                "data": {
-                    "source": "CATALAN2",
                     "target": "SERIES_2"
                 }
             },
@@ -23738,14 +23732,8 @@
             },
             {
                 "data": {
-                    "source": "CATALAN1",
-                    "target": "NAT_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "RSSPACE2",
-                    "target": "BHSP_3"
+                    "source": "CATALAN2",
+                    "target": "CATALAN1"
                 }
             },
             {
@@ -23756,20 +23744,14 @@
             },
             {
                 "data": {
-                    "source": "TIETZE",
-                    "target": "MESFUNC1"
+                    "source": "RSSPACE2",
+                    "target": "BHSP_3"
                 }
             },
             {
                 "data": {
                     "source": "TIETZE",
-                    "target": "PARTFUN4"
-                }
-            },
-            {
-                "data": {
-                    "source": "TIETZE",
-                    "target": "URYSOHN3"
+                    "target": "WAYBEL18"
                 }
             },
             {
@@ -23781,7 +23763,25 @@
             {
                 "data": {
                     "source": "TIETZE",
-                    "target": "WAYBEL18"
+                    "target": "PARTFUN4"
+                }
+            },
+            {
+                "data": {
+                    "source": "TIETZE",
+                    "target": "MESFUNC1"
+                }
+            },
+            {
+                "data": {
+                    "source": "TIETZE",
+                    "target": "URYSOHN3"
+                }
+            },
+            {
+                "data": {
+                    "source": "CATALAN1",
+                    "target": "NAT_2"
                 }
             },
             {
@@ -23853,13 +23853,13 @@
             {
                 "data": {
                     "source": "FUNCT_2",
-                    "target": "PARTFUN1"
+                    "target": "MCART_1"
                 }
             },
             {
                 "data": {
                     "source": "FUNCT_2",
-                    "target": "MCART_1"
+                    "target": "PARTFUN1"
                 }
             },
             {
@@ -23925,6 +23925,12 @@
             {
                 "data": {
                     "source": "ALTCAT_4",
+                    "target": "FUNCTOR2"
+                }
+            },
+            {
+                "data": {
+                    "source": "ALTCAT_4",
                     "target": "ALTCAT_3"
                 }
             },
@@ -23936,19 +23942,13 @@
             },
             {
                 "data": {
-                    "source": "ALTCAT_4",
-                    "target": "FUNCTOR2"
-                }
-            },
-            {
-                "data": {
-                    "source": "FUNCTOR1",
+                    "source": "FUNCTOR2",
                     "target": "FUNCTOR0"
                 }
             },
             {
                 "data": {
-                    "source": "FUNCTOR2",
+                    "source": "FUNCTOR1",
                     "target": "FUNCTOR0"
                 }
             },
@@ -24021,7 +24021,7 @@
             {
                 "data": {
                     "source": "ZMATRLIN",
-                    "target": "ZMODUL05"
+                    "target": "BILINEAR"
                 }
             },
             {
@@ -24033,7 +24033,7 @@
             {
                 "data": {
                     "source": "ZMATRLIN",
-                    "target": "BILINEAR"
+                    "target": "ZMODUL05"
                 }
             },
             {
@@ -24315,25 +24315,25 @@
             {
                 "data": {
                     "source": "UNIROOTS",
-                    "target": "PEPIN"
-                }
-            },
-            {
-                "data": {
-                    "source": "UNIROOTS",
-                    "target": "UPROOTS"
-                }
-            },
-            {
-                "data": {
-                    "source": "UNIROOTS",
                     "target": "COMPLEX2"
                 }
             },
             {
                 "data": {
                     "source": "UNIROOTS",
+                    "target": "PEPIN"
+                }
+            },
+            {
+                "data": {
+                    "source": "UNIROOTS",
                     "target": "COMPUT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "UNIROOTS",
+                    "target": "UPROOTS"
                 }
             },
             {
@@ -24543,13 +24543,13 @@
             {
                 "data": {
                     "source": "JORDAN10",
-                    "target": "JORDAN9"
+                    "target": "GOBRD14"
                 }
             },
             {
                 "data": {
                     "source": "JORDAN10",
-                    "target": "GOBRD14"
+                    "target": "JORDAN9"
                 }
             },
             {
@@ -24633,13 +24633,13 @@
             {
                 "data": {
                     "source": "ZF_MODEL",
-                    "target": "ZF_LANG"
+                    "target": "FUNCT_7"
                 }
             },
             {
                 "data": {
                     "source": "ZF_MODEL",
-                    "target": "FUNCT_7"
+                    "target": "ZF_LANG"
                 }
             },
             {
@@ -24699,13 +24699,13 @@
             {
                 "data": {
                     "source": "MULTOP_1",
-                    "target": "DOMAIN_1"
+                    "target": "FUNCT_2"
                 }
             },
             {
                 "data": {
                     "source": "MULTOP_1",
-                    "target": "FUNCT_2"
+                    "target": "DOMAIN_1"
                 }
             },
             {
@@ -24849,6 +24849,12 @@
             {
                 "data": {
                     "source": "JORDAN1I",
+                    "target": "TOPREAL8"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1I",
                     "target": "JORDAN1G"
                 }
             },
@@ -24856,42 +24862,6 @@
                 "data": {
                     "source": "JORDAN1I",
                     "target": "JORDAN1H"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1I",
-                    "target": "TOPREAL8"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1G",
-                    "target": "JORDAN1F"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1H",
-                    "target": "GENEALG1"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1H",
-                    "target": "JORDAN1D"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1H",
-                    "target": "JORDAN1B"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1H",
-                    "target": "TRIANG_1"
                 }
             },
             {
@@ -24910,6 +24880,36 @@
                 "data": {
                     "source": "TOPREAL8",
                     "target": "REVROT_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1G",
+                    "target": "JORDAN1F"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1H",
+                    "target": "JORDAN1B"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1H",
+                    "target": "GENEALG1"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1H",
+                    "target": "TRIANG_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1H",
+                    "target": "JORDAN1D"
                 }
             },
             {
@@ -24969,6 +24969,12 @@
             {
                 "data": {
                     "source": "AFPROJ",
+                    "target": "AFF_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "AFPROJ",
                     "target": "PAPDESAF"
                 }
             },
@@ -24980,8 +24986,8 @@
             },
             {
                 "data": {
-                    "source": "AFPROJ",
-                    "target": "AFF_4"
+                    "source": "AFF_4",
+                    "target": "AFF_2"
                 }
             },
             {
@@ -25006,12 +25012,6 @@
                 "data": {
                     "source": "INCPROJ",
                     "target": "INCSP_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "AFF_4",
-                    "target": "AFF_2"
                 }
             },
             {
@@ -25155,13 +25155,13 @@
             {
                 "data": {
                     "source": "SCMRINGI",
-                    "target": "SCM_INST"
+                    "target": "COMPOS_1"
                 }
             },
             {
                 "data": {
                     "source": "SCMRINGI",
-                    "target": "COMPOS_1"
+                    "target": "SCM_INST"
                 }
             },
             {
@@ -25305,13 +25305,19 @@
             {
                 "data": {
                     "source": "INT_7",
-                    "target": "GROUP_8"
+                    "target": "PYTHTRIP"
                 }
             },
             {
                 "data": {
                     "source": "INT_7",
-                    "target": "PYTHTRIP"
+                    "target": "HURWITZ"
+                }
+            },
+            {
+                "data": {
+                    "source": "INT_7",
+                    "target": "GROUP_8"
                 }
             },
             {
@@ -25330,12 +25336,6 @@
                 "data": {
                     "source": "INT_7",
                     "target": "NAT_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "INT_7",
-                    "target": "HURWITZ"
                 }
             },
             {
@@ -25377,19 +25377,25 @@
             {
                 "data": {
                     "source": "COUSIN",
+                    "target": "TOPREALC"
+                }
+            },
+            {
+                "data": {
+                    "source": "COUSIN",
                     "target": "LOPBAN_5"
                 }
             },
             {
                 "data": {
                     "source": "COUSIN",
-                    "target": "CGAMES_1"
+                    "target": "COMPL_SP"
                 }
             },
             {
                 "data": {
                     "source": "COUSIN",
-                    "target": "COMPL_SP"
+                    "target": "SRINGS_4"
                 }
             },
             {
@@ -25407,13 +25413,37 @@
             {
                 "data": {
                     "source": "COUSIN",
-                    "target": "SRINGS_4"
+                    "target": "CGAMES_1"
                 }
             },
             {
                 "data": {
-                    "source": "COUSIN",
-                    "target": "TOPREALC"
+                    "source": "TOPREALC",
+                    "target": "YELLOW17"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALC",
+                    "target": "EUCLID_9"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALC",
+                    "target": "PRVECT_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALC",
+                    "target": "TOPS_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "TOPREALC",
+                    "target": "TOPREAL7"
                 }
             },
             {
@@ -25437,6 +25467,12 @@
             {
                 "data": {
                     "source": "MATRTOP1",
+                    "target": "EUCLID_9"
+                }
+            },
+            {
+                "data": {
+                    "source": "MATRTOP1",
                     "target": "MATRLIN2"
                 }
             },
@@ -25448,42 +25484,6 @@
             },
             {
                 "data": {
-                    "source": "MATRTOP1",
-                    "target": "EUCLID_9"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALC",
-                    "target": "YELLOW17"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALC",
-                    "target": "EUCLID_9"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALC",
-                    "target": "TOPS_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALC",
-                    "target": "TOPREAL7"
-                }
-            },
-            {
-                "data": {
-                    "source": "TOPREALC",
-                    "target": "PRVECT_2"
-                }
-            },
-            {
-                "data": {
                     "source": "SEQM_3",
                     "target": "RFUNCT_1"
                 }
@@ -25491,13 +25491,13 @@
             {
                 "data": {
                     "source": "WAYBEL13",
-                    "target": "WAYBEL_8"
+                    "target": "WAYBEL10"
                 }
             },
             {
                 "data": {
                     "source": "WAYBEL13",
-                    "target": "WAYBEL10"
+                    "target": "WAYBEL_8"
                 }
             },
             {
@@ -25515,6 +25515,12 @@
             {
                 "data": {
                     "source": "ENTROPY1",
+                    "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "ENTROPY1",
                     "target": "TAYLOR_1"
                 }
             },
@@ -25522,12 +25528,6 @@
                 "data": {
                     "source": "ENTROPY1",
                     "target": "MATRPROB"
-                }
-            },
-            {
-                "data": {
-                    "source": "ENTROPY1",
-                    "target": "INTEGRA5"
                 }
             },
             {
@@ -25545,13 +25545,13 @@
             {
                 "data": {
                     "source": "GRAPHSP",
-                    "target": "CQC_SIM1"
+                    "target": "GRAPH_5"
                 }
             },
             {
                 "data": {
                     "source": "GRAPHSP",
-                    "target": "GRAPH_5"
+                    "target": "CQC_SIM1"
                 }
             },
             {
@@ -25593,13 +25593,13 @@
             {
                 "data": {
                     "source": "MENELAUS",
-                    "target": "EUCLID_6"
+                    "target": "EUCLID_4"
                 }
             },
             {
                 "data": {
                     "source": "MENELAUS",
-                    "target": "EUCLID_4"
+                    "target": "EUCLID_6"
                 }
             },
             {
@@ -25635,13 +25635,13 @@
             {
                 "data": {
                     "source": "JORDAN15",
-                    "target": "JORDAN1J"
+                    "target": "JORDAN1C"
                 }
             },
             {
                 "data": {
                     "source": "JORDAN15",
-                    "target": "JORDAN1C"
+                    "target": "JORDAN1J"
                 }
             },
             {
@@ -25917,6 +25917,12 @@
             {
                 "data": {
                     "source": "VECTSP_8",
+                    "target": "VECTSP_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "VECTSP_8",
                     "target": "LATTICE3"
                 }
             },
@@ -25924,30 +25930,6 @@
                 "data": {
                     "source": "VECTSP_8",
                     "target": "MOD_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "VECTSP_8",
-                    "target": "VECTSP_7"
-                }
-            },
-            {
-                "data": {
-                    "source": "LATTICE3",
-                    "target": "ORDERS_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "LATTICE3",
-                    "target": "FILTER_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOD_2",
-                    "target": "GRCAT_1"
                 }
             },
             {
@@ -25966,6 +25948,24 @@
                 "data": {
                     "source": "VECTSP_7",
                     "target": "VECTSP_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "LATTICE3",
+                    "target": "ORDERS_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "LATTICE3",
+                    "target": "FILTER_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOD_2",
+                    "target": "GRCAT_1"
                 }
             },
             {
@@ -26031,7 +26031,7 @@
             {
                 "data": {
                     "source": "TOPALG_6",
-                    "target": "CHORD"
+                    "target": "RAMSEY_1"
                 }
             },
             {
@@ -26043,13 +26043,13 @@
             {
                 "data": {
                     "source": "TOPALG_6",
-                    "target": "KNASTER"
+                    "target": "CHORD"
                 }
             },
             {
                 "data": {
                     "source": "TOPALG_6",
-                    "target": "RAMSEY_1"
+                    "target": "KNASTER"
                 }
             },
             {
@@ -26127,13 +26127,13 @@
             {
                 "data": {
                     "source": "SIN_COS7",
-                    "target": "SIN_COS2"
+                    "target": "POLYEQ_1"
                 }
             },
             {
                 "data": {
                     "source": "SIN_COS7",
-                    "target": "POLYEQ_1"
+                    "target": "SIN_COS2"
                 }
             },
             {
@@ -26265,13 +26265,13 @@
             {
                 "data": {
                     "source": "MATRIX14",
-                    "target": "JORDAN3"
+                    "target": "POLYNOM1"
                 }
             },
             {
                 "data": {
                     "source": "MATRIX14",
-                    "target": "POLYNOM1"
+                    "target": "JORDAN3"
                 }
             },
             {
@@ -26289,12 +26289,6 @@
             {
                 "data": {
                     "source": "VALUED_1",
-                    "target": "FINSEQ_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "VALUED_1",
                     "target": "RECDEF_1"
                 }
             },
@@ -26302,6 +26296,12 @@
                 "data": {
                     "source": "VALUED_1",
                     "target": "XXREAL_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "VALUED_1",
+                    "target": "FINSEQ_3"
                 }
             },
             {
@@ -26379,13 +26379,13 @@
             {
                 "data": {
                     "source": "URYSOHN1",
-                    "target": "SCHEME1"
+                    "target": "LIMFUNC1"
                 }
             },
             {
                 "data": {
                     "source": "URYSOHN1",
-                    "target": "LIMFUNC1"
+                    "target": "SCHEME1"
                 }
             },
             {
@@ -26715,6 +26715,12 @@
             {
                 "data": {
                     "source": "INTEGR14",
+                    "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "INTEGR14",
                     "target": "SIN_COS9"
                 }
             },
@@ -26722,12 +26728,6 @@
                 "data": {
                     "source": "INTEGR14",
                     "target": "FDIFF_10"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR14",
-                    "target": "INTEGRA5"
                 }
             },
             {
@@ -26763,13 +26763,13 @@
             {
                 "data": {
                     "source": "GEOMTRAP",
-                    "target": "MIDSP_1"
+                    "target": "ANALMETR"
                 }
             },
             {
                 "data": {
                     "source": "GEOMTRAP",
-                    "target": "ANALMETR"
+                    "target": "MIDSP_1"
                 }
             },
             {
@@ -26865,13 +26865,13 @@
             {
                 "data": {
                     "source": "MARGREL1",
-                    "target": "FINSEQ_3"
+                    "target": "XBOOLEAN"
                 }
             },
             {
                 "data": {
                     "source": "MARGREL1",
-                    "target": "XBOOLEAN"
+                    "target": "FINSEQ_3"
                 }
             },
             {
@@ -26991,6 +26991,12 @@
             {
                 "data": {
                     "source": "POLYNOM2",
+                    "target": "QUOFIELD"
+                }
+            },
+            {
+                "data": {
+                    "source": "POLYNOM2",
                     "target": "YELLOW_1"
                 }
             },
@@ -27004,12 +27010,6 @@
                 "data": {
                     "source": "POLYNOM2",
                     "target": "POLYNOM1"
-                }
-            },
-            {
-                "data": {
-                    "source": "POLYNOM2",
-                    "target": "QUOFIELD"
                 }
             },
             {
@@ -27057,6 +27057,18 @@
             {
                 "data": {
                     "source": "HAHNBAN1",
+                    "target": "COMPLFLD"
+                }
+            },
+            {
+                "data": {
+                    "source": "HAHNBAN1",
+                    "target": "BORSUK_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "HAHNBAN1",
                     "target": "GRCAT_1"
                 }
             },
@@ -27080,14 +27092,14 @@
             },
             {
                 "data": {
-                    "source": "HAHNBAN1",
-                    "target": "BORSUK_1"
+                    "source": "COMPLFLD",
+                    "target": "COMPTRIG"
                 }
             },
             {
                 "data": {
-                    "source": "HAHNBAN1",
-                    "target": "COMPLFLD"
+                    "source": "COMPLFLD",
+                    "target": "VECTSP_1"
                 }
             },
             {
@@ -27128,18 +27140,6 @@
             },
             {
                 "data": {
-                    "source": "COMPLFLD",
-                    "target": "COMPTRIG"
-                }
-            },
-            {
-                "data": {
-                    "source": "COMPLFLD",
-                    "target": "VECTSP_1"
-                }
-            },
-            {
-                "data": {
                     "source": "BIRKHOFF",
                     "target": "EQUATION"
                 }
@@ -27165,19 +27165,25 @@
             {
                 "data": {
                     "source": "RSSPACE4",
-                    "target": "INTEGRA2"
+                    "target": "LOPBAN_1"
                 }
             },
             {
                 "data": {
                     "source": "RSSPACE4",
-                    "target": "LOPBAN_1"
+                    "target": "INTEGRA2"
                 }
             },
             {
                 "data": {
                     "source": "OPENLATT",
                     "target": "LATTICE4"
+                }
+            },
+            {
+                "data": {
+                    "source": "MATRLIN",
+                    "target": "VECTSP_7"
                 }
             },
             {
@@ -27194,20 +27200,8 @@
             },
             {
                 "data": {
-                    "source": "MATRLIN",
-                    "target": "VECTSP_7"
-                }
-            },
-            {
-                "data": {
                     "source": "MATRIX_3",
                     "target": "FVSUM_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "CQC_LANG",
-                    "target": "FINSEQ_3"
                 }
             },
             {
@@ -27218,8 +27212,14 @@
             },
             {
                 "data": {
+                    "source": "CQC_LANG",
+                    "target": "FINSEQ_3"
+                }
+            },
+            {
+                "data": {
                     "source": "CARD_2",
-                    "target": "NAT_1"
+                    "target": "FRAENKEL"
                 }
             },
             {
@@ -27231,19 +27231,19 @@
             {
                 "data": {
                     "source": "CARD_2",
-                    "target": "FRAENKEL"
-                }
-            },
-            {
-                "data": {
-                    "source": "FUNCT_6",
-                    "target": "CARD_3"
+                    "target": "NAT_1"
                 }
             },
             {
                 "data": {
                     "source": "FRAENKEL",
                     "target": "SETWISEO"
+                }
+            },
+            {
+                "data": {
+                    "source": "FUNCT_6",
+                    "target": "CARD_3"
                 }
             },
             {
@@ -27651,13 +27651,13 @@
             {
                 "data": {
                     "source": "SPRECT_1",
-                    "target": "JORDAN5A"
+                    "target": "GOBRD12"
                 }
             },
             {
                 "data": {
                     "source": "SPRECT_1",
-                    "target": "GOBRD12"
+                    "target": "JORDAN5A"
                 }
             },
             {
@@ -27849,13 +27849,13 @@
             {
                 "data": {
                     "source": "CONVEX3",
-                    "target": "CONVEX2"
+                    "target": "GRAPH_5"
                 }
             },
             {
                 "data": {
                     "source": "CONVEX3",
-                    "target": "GRAPH_5"
+                    "target": "CONVEX2"
                 }
             },
             {
@@ -27879,13 +27879,13 @@
             {
                 "data": {
                     "source": "LATTICE6",
-                    "target": "WAYBEL_6"
+                    "target": "KNASTER"
                 }
             },
             {
                 "data": {
                     "source": "LATTICE6",
-                    "target": "KNASTER"
+                    "target": "WAYBEL_6"
                 }
             },
             {
@@ -28077,7 +28077,7 @@
             {
                 "data": {
                     "source": "NAT_5",
-                    "target": "MESFUNC3"
+                    "target": "IDEA_1"
                 }
             },
             {
@@ -28101,7 +28101,13 @@
             {
                 "data": {
                     "source": "NAT_5",
-                    "target": "IDEA_1"
+                    "target": "BHSP_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "NAT_5",
+                    "target": "MESFUNC3"
                 }
             },
             {
@@ -28114,12 +28120,6 @@
                 "data": {
                     "source": "NAT_5",
                     "target": "MONOID_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "NAT_5",
-                    "target": "BHSP_5"
                 }
             },
             {
@@ -28208,8 +28208,14 @@
             },
             {
                 "data": {
-                    "source": "JORDAN1D",
+                    "source": "JORDAN1B",
                     "target": "JORDAN1A"
+                }
+            },
+            {
+                "data": {
+                    "source": "JORDAN1B",
+                    "target": "BOOLMARK"
                 }
             },
             {
@@ -28220,14 +28226,8 @@
             },
             {
                 "data": {
-                    "source": "JORDAN1B",
+                    "source": "JORDAN1D",
                     "target": "JORDAN1A"
-                }
-            },
-            {
-                "data": {
-                    "source": "JORDAN1B",
-                    "target": "BOOLMARK"
                 }
             },
             {
@@ -28263,7 +28263,7 @@
             {
                 "data": {
                     "source": "MATRIX13",
-                    "target": "PRVECT_1"
+                    "target": "VECTSP_9"
                 }
             },
             {
@@ -28287,7 +28287,7 @@
             {
                 "data": {
                     "source": "MATRIX13",
-                    "target": "VECTSP_9"
+                    "target": "PRVECT_1"
                 }
             },
             {
@@ -28298,14 +28298,8 @@
             },
             {
                 "data": {
-                    "source": "PRVECT_1",
-                    "target": "FVSUM_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "PRVECT_1",
-                    "target": "YELLOW_6"
+                    "source": "VECTSP10",
+                    "target": "VECTSP_7"
                 }
             },
             {
@@ -28322,8 +28316,14 @@
             },
             {
                 "data": {
-                    "source": "VECTSP10",
-                    "target": "VECTSP_7"
+                    "source": "PRVECT_1",
+                    "target": "FVSUM_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "PRVECT_1",
+                    "target": "YELLOW_6"
                 }
             },
             {
@@ -28485,6 +28485,12 @@
             {
                 "data": {
                     "source": "CONVEX2",
+                    "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "CONVEX2",
                     "target": "FVSUM_1"
                 }
             },
@@ -28492,12 +28498,6 @@
                 "data": {
                     "source": "CONVEX2",
                     "target": "CONVEX1"
-                }
-            },
-            {
-                "data": {
-                    "source": "CONVEX2",
-                    "target": "INTEGRA5"
                 }
             },
             {
@@ -28677,13 +28677,13 @@
             {
                 "data": {
                     "source": "WAYBEL_2",
-                    "target": "WAYBEL_1"
+                    "target": "YELLOW_4"
                 }
             },
             {
                 "data": {
                     "source": "WAYBEL_2",
-                    "target": "YELLOW_4"
+                    "target": "WAYBEL_1"
                 }
             },
             {
@@ -28845,13 +28845,13 @@
             {
                 "data": {
                     "source": "BVFUNC_6",
-                    "target": "BVFUNC_4"
+                    "target": "BVFUNC_5"
                 }
             },
             {
                 "data": {
                     "source": "BVFUNC_6",
-                    "target": "BVFUNC_5"
+                    "target": "BVFUNC_4"
                 }
             },
             {
@@ -28864,6 +28864,12 @@
                 "data": {
                     "source": "ZFMISC_1",
                     "target": "XREGULAR"
+                }
+            },
+            {
+                "data": {
+                    "source": "YELLOW14",
+                    "target": "WAYBEL18"
                 }
             },
             {
@@ -28882,12 +28888,6 @@
                 "data": {
                     "source": "YELLOW14",
                     "target": "WAYBEL24"
-                }
-            },
-            {
-                "data": {
-                    "source": "YELLOW14",
-                    "target": "WAYBEL18"
                 }
             },
             {
@@ -28911,6 +28911,12 @@
             {
                 "data": {
                     "source": "CARDFIL4",
+                    "target": "DBLSEQ_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "CARDFIL4",
                     "target": "CARDFIL3"
                 }
             },
@@ -28918,12 +28924,6 @@
                 "data": {
                     "source": "CARDFIL4",
                     "target": "SRINGS_5"
-                }
-            },
-            {
-                "data": {
-                    "source": "CARDFIL4",
-                    "target": "DBLSEQ_1"
                 }
             },
             {
@@ -29055,19 +29055,25 @@
             {
                 "data": {
                     "source": "BASEL_2",
-                    "target": "POLYVIE1"
-                }
-            },
-            {
-                "data": {
-                    "source": "BASEL_2",
                     "target": "HURWITZ2"
                 }
             },
             {
                 "data": {
                     "source": "BASEL_2",
+                    "target": "POLYVIE1"
+                }
+            },
+            {
+                "data": {
+                    "source": "BASEL_2",
                     "target": "BASEL_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "BASEL_1",
+                    "target": "INTEGRA7"
                 }
             },
             {
@@ -29086,12 +29092,6 @@
                 "data": {
                     "source": "BASEL_1",
                     "target": "LEIBNIZ1"
-                }
-            },
-            {
-                "data": {
-                    "source": "BASEL_1",
-                    "target": "INTEGRA7"
                 }
             },
             {
@@ -29133,13 +29133,13 @@
             {
                 "data": {
                     "source": "WAYBEL10",
-                    "target": "TMAP_1"
+                    "target": "YELLOW_7"
                 }
             },
             {
                 "data": {
                     "source": "WAYBEL10",
-                    "target": "YELLOW_7"
+                    "target": "TMAP_1"
                 }
             },
             {
@@ -29223,13 +29223,13 @@
             {
                 "data": {
                     "source": "FOMODEL1",
-                    "target": "ORDERS_4"
+                    "target": "RAMSEY_1"
                 }
             },
             {
                 "data": {
                     "source": "FOMODEL1",
-                    "target": "RAMSEY_1"
+                    "target": "ORDERS_4"
                 }
             },
             {
@@ -29451,6 +29451,12 @@
             {
                 "data": {
                     "source": "JGRAPH_1",
+                    "target": "GRAPH_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "JGRAPH_1",
                     "target": "JORDAN7"
                 }
             },
@@ -29463,25 +29469,19 @@
             {
                 "data": {
                     "source": "JGRAPH_1",
-                    "target": "GRAPH_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "JGRAPH_1",
                     "target": "TOPRNS_1"
                 }
             },
             {
                 "data": {
                     "source": "AOFA_I00",
-                    "target": "FIB_NUM2"
+                    "target": "AOFA_000"
                 }
             },
             {
                 "data": {
                     "source": "AOFA_I00",
-                    "target": "AOFA_000"
+                    "target": "FIB_NUM2"
                 }
             },
             {
@@ -29559,6 +29559,12 @@
             {
                 "data": {
                     "source": "MIDSP_2",
+                    "target": "PRE_TOPC"
+                }
+            },
+            {
+                "data": {
+                    "source": "MIDSP_2",
                     "target": "VECTSP_1"
                 }
             },
@@ -29566,12 +29572,6 @@
                 "data": {
                     "source": "MIDSP_2",
                     "target": "MIDSP_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "MIDSP_2",
-                    "target": "PRE_TOPC"
                 }
             },
             {
@@ -29595,6 +29595,12 @@
             {
                 "data": {
                     "source": "LATSTONE",
+                    "target": "LATTICEA"
+                }
+            },
+            {
+                "data": {
+                    "source": "LATSTONE",
                     "target": "MOEBIUS2"
                 }
             },
@@ -29602,30 +29608,6 @@
                 "data": {
                     "source": "LATSTONE",
                     "target": "LATTICE6"
-                }
-            },
-            {
-                "data": {
-                    "source": "LATSTONE",
-                    "target": "LATTICEA"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOEBIUS2",
-                    "target": "NUMPOLY1"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOEBIUS2",
-                    "target": "CAYLDICK"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOEBIUS2",
-                    "target": "MATRIX13"
                 }
             },
             {
@@ -29656,6 +29638,24 @@
                 "data": {
                     "source": "LATTICEA",
                     "target": "FILTER_2"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOEBIUS2",
+                    "target": "NUMPOLY1"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOEBIUS2",
+                    "target": "CAYLDICK"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOEBIUS2",
+                    "target": "MATRIX13"
                 }
             },
             {
@@ -29703,18 +29703,6 @@
             {
                 "data": {
                     "source": "SRINGS_5",
-                    "target": "SCMYCIEL"
-                }
-            },
-            {
-                "data": {
-                    "source": "SRINGS_5",
-                    "target": "EUCLID_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "SRINGS_5",
                     "target": "MFOLD_0"
                 }
             },
@@ -29722,6 +29710,18 @@
                 "data": {
                     "source": "SRINGS_5",
                     "target": "SRINGS_4"
+                }
+            },
+            {
+                "data": {
+                    "source": "SRINGS_5",
+                    "target": "SCMYCIEL"
+                }
+            },
+            {
+                "data": {
+                    "source": "SRINGS_5",
+                    "target": "EUCLID_3"
                 }
             },
             {
@@ -29745,13 +29745,13 @@
             {
                 "data": {
                     "source": "OSALG_3",
-                    "target": "OSALG_2"
+                    "target": "MSAFREE3"
                 }
             },
             {
                 "data": {
                     "source": "OSALG_3",
-                    "target": "MSAFREE3"
+                    "target": "OSALG_2"
                 }
             },
             {
@@ -29823,6 +29823,12 @@
             {
                 "data": {
                     "source": "WELLORD2",
+                    "target": "MCART_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WELLORD2",
                     "target": "ORDINAL1"
                 }
             },
@@ -29830,12 +29836,6 @@
                 "data": {
                     "source": "WELLORD2",
                     "target": "WELLORD1"
-                }
-            },
-            {
-                "data": {
-                    "source": "WELLORD2",
-                    "target": "MCART_1"
                 }
             },
             {
@@ -29889,13 +29889,13 @@
             {
                 "data": {
                     "source": "GROUP_17",
-                    "target": "TOPALG_4"
+                    "target": "PRVECT_3"
                 }
             },
             {
                 "data": {
                     "source": "GROUP_17",
-                    "target": "PRVECT_3"
+                    "target": "TOPALG_4"
                 }
             },
             {
@@ -30075,13 +30075,13 @@
             {
                 "data": {
                     "source": "TOPGEN_5",
-                    "target": "DICKSON"
+                    "target": "TOPGEN_3"
                 }
             },
             {
                 "data": {
                     "source": "TOPGEN_5",
-                    "target": "TOPGEN_1"
+                    "target": "DICKSON"
                 }
             },
             {
@@ -30093,13 +30093,13 @@
             {
                 "data": {
                     "source": "TOPGEN_5",
-                    "target": "TOPGEN_3"
+                    "target": "BOOLMARK"
                 }
             },
             {
                 "data": {
                     "source": "TOPGEN_5",
-                    "target": "BOOLMARK"
+                    "target": "TOPGEN_1"
                 }
             },
             {
@@ -30111,13 +30111,13 @@
             {
                 "data": {
                     "source": "MATRIX_5",
-                    "target": "MATRIX_4"
+                    "target": "COMPLFLD"
                 }
             },
             {
                 "data": {
                     "source": "MATRIX_5",
-                    "target": "COMPLFLD"
+                    "target": "MATRIX_4"
                 }
             },
             {
@@ -30351,13 +30351,13 @@
             {
                 "data": {
                     "source": "INTEGRA8",
-                    "target": "FDIFF_8"
+                    "target": "INTEGRA5"
                 }
             },
             {
                 "data": {
                     "source": "INTEGRA8",
-                    "target": "INTEGRA5"
+                    "target": "FDIFF_8"
                 }
             },
             {
@@ -30369,13 +30369,13 @@
             {
                 "data": {
                     "source": "JORDAN",
-                    "target": "JGRAPH_8"
+                    "target": "JORDAN21"
                 }
             },
             {
                 "data": {
                     "source": "JORDAN",
-                    "target": "JORDAN21"
+                    "target": "JGRAPH_8"
                 }
             },
             {
@@ -30477,13 +30477,13 @@
             {
                 "data": {
                     "source": "SEQ_2",
-                    "target": "COMSEQ_2"
+                    "target": "SEQ_1"
                 }
             },
             {
                 "data": {
                     "source": "SEQ_2",
-                    "target": "SEQ_1"
+                    "target": "COMSEQ_2"
                 }
             },
             {
@@ -30507,13 +30507,13 @@
             {
                 "data": {
                     "source": "PL_AXIOM",
-                    "target": "INTPRO_1"
+                    "target": "LTLAXIO5"
                 }
             },
             {
                 "data": {
                     "source": "PL_AXIOM",
-                    "target": "LTLAXIO5"
+                    "target": "INTPRO_1"
                 }
             },
             {
@@ -30633,6 +30633,12 @@
             {
                 "data": {
                     "source": "RANDOM_2",
+                    "target": "BHSP_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "RANDOM_2",
                     "target": "C0SP1"
                 }
             },
@@ -30640,12 +30646,6 @@
                 "data": {
                     "source": "RANDOM_2",
                     "target": "FIB_NUM3"
-                }
-            },
-            {
-                "data": {
-                    "source": "RANDOM_2",
-                    "target": "BHSP_5"
                 }
             },
             {
@@ -30663,6 +30663,12 @@
             {
                 "data": {
                     "source": "FIELD_4",
+                    "target": "FIELD_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FIELD_4",
                     "target": "FIELD_3"
                 }
             },
@@ -30675,25 +30681,7 @@
             {
                 "data": {
                     "source": "FIELD_4",
-                    "target": "FIELD_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "FIELD_4",
                     "target": "LIOUVIL2"
-                }
-            },
-            {
-                "data": {
-                    "source": "FIELD_2",
-                    "target": "RING_3"
-                }
-            },
-            {
-                "data": {
-                    "source": "FIELD_1",
-                    "target": "POLYDIFF"
                 }
             },
             {
@@ -30704,14 +30692,26 @@
             },
             {
                 "data": {
-                    "source": "E_SIEC",
-                    "target": "SYSREL"
+                    "source": "FIELD_1",
+                    "target": "POLYDIFF"
+                }
+            },
+            {
+                "data": {
+                    "source": "FIELD_2",
+                    "target": "RING_3"
                 }
             },
             {
                 "data": {
                     "source": "E_SIEC",
                     "target": "STRUCT_0"
+                }
+            },
+            {
+                "data": {
+                    "source": "E_SIEC",
+                    "target": "SYSREL"
                 }
             },
             {
@@ -30849,13 +30849,13 @@
             {
                 "data": {
                     "source": "MESFUNC8",
-                    "target": "RINFSUP2"
+                    "target": "PROB_4"
                 }
             },
             {
                 "data": {
                     "source": "MESFUNC8",
-                    "target": "PROB_4"
+                    "target": "RINFSUP2"
                 }
             },
             {
@@ -30927,12 +30927,6 @@
             {
                 "data": {
                     "source": "JGRAPH_6",
-                    "target": "JGRAPH_5"
-                }
-            },
-            {
-                "data": {
-                    "source": "JGRAPH_6",
                     "target": "JORDAN17"
                 }
             },
@@ -30944,6 +30938,12 @@
             },
             {
                 "data": {
+                    "source": "JGRAPH_6",
+                    "target": "JGRAPH_5"
+                }
+            },
+            {
+                "data": {
                     "source": "JORDAN17",
                     "target": "JORDAN16"
                 }
@@ -30951,13 +30951,13 @@
             {
                 "data": {
                     "source": "CAYLDICK",
-                    "target": "GROEB_2"
+                    "target": "TOPREALC"
                 }
             },
             {
                 "data": {
                     "source": "CAYLDICK",
-                    "target": "TOPREALC"
+                    "target": "GROEB_2"
                 }
             },
             {
@@ -31071,13 +31071,13 @@
             {
                 "data": {
                     "source": "AFVECT01",
-                    "target": "AFVECT0"
+                    "target": "DIRAF"
                 }
             },
             {
                 "data": {
                     "source": "AFVECT01",
-                    "target": "DIRAF"
+                    "target": "AFVECT0"
                 }
             },
             {
@@ -31173,7 +31173,7 @@
             {
                 "data": {
                     "source": "JORDAN_A",
-                    "target": "JORDAN1K"
+                    "target": "JORDAN17"
                 }
             },
             {
@@ -31185,7 +31185,7 @@
             {
                 "data": {
                     "source": "JORDAN_A",
-                    "target": "JORDAN17"
+                    "target": "JORDAN1K"
                 }
             },
             {
@@ -31197,13 +31197,13 @@
             {
                 "data": {
                     "source": "WAYBEL25",
-                    "target": "WAYBEL21"
+                    "target": "EQUATION"
                 }
             },
             {
                 "data": {
                     "source": "WAYBEL25",
-                    "target": "EQUATION"
+                    "target": "WAYBEL21"
                 }
             },
             {
@@ -31407,13 +31407,13 @@
             {
                 "data": {
                     "source": "COMPLEX3",
-                    "target": "SERIES_5"
+                    "target": "NEWTON04"
                 }
             },
             {
                 "data": {
                     "source": "COMPLEX3",
-                    "target": "NEWTON04"
+                    "target": "SERIES_5"
                 }
             },
             {
@@ -31443,6 +31443,12 @@
             {
                 "data": {
                     "source": "NECKLA_3",
+                    "target": "MSUALG_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "NECKLA_3",
                     "target": "GROUP_6"
                 }
             },
@@ -31450,12 +31456,6 @@
                 "data": {
                     "source": "NECKLA_3",
                     "target": "NECKLA_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "NECKLA_3",
-                    "target": "MSUALG_6"
                 }
             },
             {
@@ -31491,13 +31491,13 @@
             {
                 "data": {
                     "source": "CAT_4",
-                    "target": "ALGSTR_1"
+                    "target": "CAT_3"
                 }
             },
             {
                 "data": {
                     "source": "CAT_4",
-                    "target": "CAT_3"
+                    "target": "ALGSTR_1"
                 }
             },
             {
@@ -31563,25 +31563,25 @@
             {
                 "data": {
                     "source": "BKMODEL3",
-                    "target": "GTARSKI2"
-                }
-            },
-            {
-                "data": {
-                    "source": "BKMODEL3",
                     "target": "BKMODEL2"
                 }
             },
             {
                 "data": {
-                    "source": "GROUP_9",
-                    "target": "GROUP_6"
+                    "source": "BKMODEL3",
+                    "target": "GTARSKI2"
                 }
             },
             {
                 "data": {
                     "source": "GROUP_9",
                     "target": "MATRIX_7"
+                }
+            },
+            {
+                "data": {
+                    "source": "GROUP_9",
+                    "target": "GROUP_6"
                 }
             },
             {
@@ -31616,18 +31616,6 @@
             },
             {
                 "data": {
-                    "source": "YELLOW18",
-                    "target": "ZF_FUND1"
-                }
-            },
-            {
-                "data": {
-                    "source": "YELLOW18",
-                    "target": "FUNCTOR3"
-                }
-            },
-            {
-                "data": {
                     "source": "CIRCTRM1",
                     "target": "FACIRC_1"
                 }
@@ -31636,6 +31624,18 @@
                 "data": {
                     "source": "CIRCTRM1",
                     "target": "INSTALG1"
+                }
+            },
+            {
+                "data": {
+                    "source": "YELLOW18",
+                    "target": "ZF_FUND1"
+                }
+            },
+            {
+                "data": {
+                    "source": "YELLOW18",
+                    "target": "FUNCTOR3"
                 }
             },
             {
@@ -31701,25 +31701,25 @@
             {
                 "data": {
                     "source": "INTEGR19",
-                    "target": "NDIFF_4"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR19",
                     "target": "INTEGR18"
                 }
             },
             {
                 "data": {
-                    "source": "INTEGR18",
-                    "target": "BINOM"
+                    "source": "INTEGR19",
+                    "target": "NDIFF_4"
                 }
             },
             {
                 "data": {
                     "source": "INTEGR18",
                     "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "INTEGR18",
+                    "target": "BINOM"
                 }
             },
             {
@@ -31785,12 +31785,6 @@
             {
                 "data": {
                     "source": "MEASUR12",
-                    "target": "EXCHSORT"
-                }
-            },
-            {
-                "data": {
-                    "source": "MEASUR12",
                     "target": "LIOUVIL1"
                 }
             },
@@ -31798,6 +31792,12 @@
                 "data": {
                     "source": "MEASUR12",
                     "target": "MEASUR11"
+                }
+            },
+            {
+                "data": {
+                    "source": "MEASUR12",
+                    "target": "EXCHSORT"
                 }
             },
             {
@@ -32025,13 +32025,13 @@
             {
                 "data": {
                     "source": "ORDINAL7",
-                    "target": "ORDERS_5"
+                    "target": "MSAFREE5"
                 }
             },
             {
                 "data": {
                     "source": "ORDINAL7",
-                    "target": "MSAFREE5"
+                    "target": "ORDERS_5"
                 }
             },
             {
@@ -32085,6 +32085,12 @@
             {
                 "data": {
                     "source": "FILEREC1",
+                    "target": "GENEALG1"
+                }
+            },
+            {
+                "data": {
+                    "source": "FILEREC1",
                     "target": "FINSEQ_8"
                 }
             },
@@ -32098,12 +32104,6 @@
                 "data": {
                     "source": "FILEREC1",
                     "target": "CALCUL_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "FILEREC1",
-                    "target": "GENEALG1"
                 }
             },
             {
@@ -32265,13 +32265,13 @@
             {
                 "data": {
                     "source": "HILB10_5",
-                    "target": "REWRITE2"
+                    "target": "NEWTON05"
                 }
             },
             {
                 "data": {
                     "source": "HILB10_5",
-                    "target": "NEWTON05"
+                    "target": "HILB10_4"
                 }
             },
             {
@@ -32283,7 +32283,7 @@
             {
                 "data": {
                     "source": "HILB10_5",
-                    "target": "HILB10_4"
+                    "target": "REWRITE2"
                 }
             },
             {
@@ -32331,13 +32331,13 @@
             {
                 "data": {
                     "source": "PRVECT_2",
-                    "target": "REAL_NS1"
+                    "target": "PRVECT_1"
                 }
             },
             {
                 "data": {
                     "source": "PRVECT_2",
-                    "target": "PRVECT_1"
+                    "target": "REAL_NS1"
                 }
             },
             {
@@ -32397,13 +32397,13 @@
             {
                 "data": {
                     "source": "SIMPLEX2",
-                    "target": "RLAFFIN3"
+                    "target": "TOPREALC"
                 }
             },
             {
                 "data": {
                     "source": "SIMPLEX2",
-                    "target": "SIMPLEX1"
+                    "target": "RLAFFIN3"
                 }
             },
             {
@@ -32415,7 +32415,7 @@
             {
                 "data": {
                     "source": "SIMPLEX2",
-                    "target": "TOPREALC"
+                    "target": "SIMPLEX1"
                 }
             },
             {
@@ -32547,13 +32547,13 @@
             {
                 "data": {
                     "source": "MSUALG_7",
-                    "target": "REAL_LAT"
+                    "target": "MSUALG_5"
                 }
             },
             {
                 "data": {
                     "source": "MSUALG_7",
-                    "target": "MSUALG_5"
+                    "target": "REAL_LAT"
                 }
             },
             {
@@ -32685,6 +32685,12 @@
             {
                 "data": {
                     "source": "INTEGR13",
+                    "target": "INTEGRA5"
+                }
+            },
+            {
+                "data": {
+                    "source": "INTEGR13",
                     "target": "SIN_COS9"
                 }
             },
@@ -32692,12 +32698,6 @@
                 "data": {
                     "source": "INTEGR13",
                     "target": "FDIFF_8"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR13",
-                    "target": "INTEGRA5"
                 }
             },
             {
@@ -32805,13 +32805,13 @@
             {
                 "data": {
                     "source": "FUZIMPL2",
-                    "target": "FUZIMPL1"
+                    "target": "INTEGRA7"
                 }
             },
             {
                 "data": {
                     "source": "FUZIMPL2",
-                    "target": "INTEGRA7"
+                    "target": "FUZIMPL1"
                 }
             },
             {
@@ -32877,13 +32877,13 @@
             {
                 "data": {
                     "source": "UNIFORM3",
-                    "target": "UNIFORM2"
+                    "target": "GROUP_1A"
                 }
             },
             {
                 "data": {
                     "source": "UNIFORM3",
-                    "target": "GROUP_1A"
+                    "target": "UNIFORM2"
                 }
             },
             {
@@ -32955,6 +32955,12 @@
             {
                 "data": {
                     "source": "REALALG2",
+                    "target": "RING_5"
+                }
+            },
+            {
+                "data": {
+                    "source": "REALALG2",
                     "target": "REALALG1"
                 }
             },
@@ -32962,12 +32968,6 @@
                 "data": {
                     "source": "REALALG2",
                     "target": "GROEB_2"
-                }
-            },
-            {
-                "data": {
-                    "source": "REALALG2",
-                    "target": "RING_5"
                 }
             },
             {
@@ -33135,13 +33135,19 @@
             {
                 "data": {
                     "source": "DUALSP05",
-                    "target": "INTEGR23"
+                    "target": "DUALSP01"
                 }
             },
             {
                 "data": {
                     "source": "DUALSP05",
-                    "target": "DUALSP01"
+                    "target": "INTEGR23"
+                }
+            },
+            {
+                "data": {
+                    "source": "INTEGR11",
+                    "target": "TOPREALB"
                 }
             },
             {
@@ -33166,12 +33172,6 @@
                 "data": {
                     "source": "INTEGR11",
                     "target": "INTEGRA8"
-                }
-            },
-            {
-                "data": {
-                    "source": "INTEGR11",
-                    "target": "TOPREALB"
                 }
             },
             {
@@ -33315,6 +33315,12 @@
             {
                 "data": {
                     "source": "MSINST_1",
+                    "target": "MSUALG_6"
+                }
+            },
+            {
+                "data": {
+                    "source": "MSINST_1",
                     "target": "MSALIMIT"
                 }
             },
@@ -33334,12 +33340,6 @@
                 "data": {
                     "source": "MSINST_1",
                     "target": "AUTALG_1"
-                }
-            },
-            {
-                "data": {
-                    "source": "MSINST_1",
-                    "target": "MSUALG_6"
                 }
             },
             {
@@ -33417,6 +33417,12 @@
             {
                 "data": {
                     "source": "WAYBEL_5",
+                    "target": "BORSUK_1"
+                }
+            },
+            {
+                "data": {
+                    "source": "WAYBEL_5",
                     "target": "MSUALG_3"
                 }
             },
@@ -33424,12 +33430,6 @@
                 "data": {
                     "source": "WAYBEL_5",
                     "target": "YELLOW_6"
-                }
-            },
-            {
-                "data": {
-                    "source": "WAYBEL_5",
-                    "target": "BORSUK_1"
                 }
             },
             {
@@ -33495,18 +33495,6 @@
             {
                 "data": {
                     "source": "MOEBIUS3",
-                    "target": "NEWTON03"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOEBIUS3",
-                    "target": "CATALAN2"
-                }
-            },
-            {
-                "data": {
-                    "source": "MOEBIUS3",
                     "target": "MOEBIUS2"
                 }
             },
@@ -33520,6 +33508,18 @@
                 "data": {
                     "source": "MOEBIUS3",
                     "target": "CARDFIL4"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOEBIUS3",
+                    "target": "NEWTON03"
+                }
+            },
+            {
+                "data": {
+                    "source": "MOEBIUS3",
+                    "target": "CATALAN2"
                 }
             },
             {
@@ -33579,13 +33579,13 @@
             {
                 "data": {
                     "source": "BCIALG_6",
-                    "target": "BCIALG_2"
+                    "target": "GROUP_6"
                 }
             },
             {
                 "data": {
                     "source": "BCIALG_6",
-                    "target": "GROUP_6"
+                    "target": "BCIALG_2"
                 }
             },
             {
@@ -33687,13 +33687,13 @@
             {
                 "data": {
                     "source": "T_1TOPSP",
-                    "target": "URYSOHN1"
+                    "target": "BORSUK_1"
                 }
             },
             {
                 "data": {
                     "source": "T_1TOPSP",
-                    "target": "BORSUK_1"
+                    "target": "URYSOHN1"
                 }
             },
             {
@@ -33801,13 +33801,13 @@
             {
                 "data": {
                     "source": "ZF_FUND2",
-                    "target": "ZFMODEL2"
+                    "target": "ZFREFLE1"
                 }
             },
             {
                 "data": {
                     "source": "ZF_FUND2",
-                    "target": "ZFREFLE1"
+                    "target": "ZFMODEL2"
                 }
             }
         ]
