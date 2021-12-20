@@ -115,7 +115,9 @@ def extract_theorem_definition_and_label(article):
                     theorem_and_label[-1] = theorem_and_label[-1] + word
                     continue
                 elif re.match(r"\d+", word):
-                    theorem_and_label.append(theorem_and_label[-1] + word)
+                    if re.search(r":def\d+$|:\d+$", theorem_and_label[-1]):
+                        new_theorem = theorem_and_label[-1]
+                        theorem_and_label.append(re.sub(r"\d+$", word, new_theorem))
                     continue
             theorem_and_label.append(word)
         
