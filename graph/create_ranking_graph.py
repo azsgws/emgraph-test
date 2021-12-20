@@ -110,8 +110,3 @@ def create_authority_minus_pagerank_graph(mml_version):
             f.write(json.dumps(dot_graph_json, indent=4))
     finally:
         os.chdir(cwd)
-
-if __name__=="__main__":
-    import sys
-    mml_version = sys.argv[1]
-    create_authority_minus_pagerank_graph(mml_version)
