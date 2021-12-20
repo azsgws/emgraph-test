@@ -73,19 +73,19 @@ def compare_environ_articles(article_old_ver, article_new_ver):
     return intersection, only_old_article, only_new_article
     
 def count_importing_theorems(old_article, new_article):
-    old_article_theoerem_and_label = extract_theorems_and_label(old_article)
-    new_article_theoerem_and_label = extract_theorems_and_label(new_article)
+    old_article_theoerem_and_label = extract_theorem_definition_and_label(old_article)
+    new_article_theoerem_and_label = extract_theorem_definition_and_label(new_article)
     return len(old_article_theoerem_and_label), len(new_article_theoerem_and_label)
 
 def compare_importing_theorems_and_labels(old_article, new_article):
-    old_article_theoerem_and_label = set(extract_theorems_and_label(old_article))
-    new_article_theoerem_and_label = set(extract_theorems_and_label(new_article))
+    old_article_theoerem_and_label = set(extract_theorem_definition_and_label(old_article))
+    new_article_theoerem_and_label = set(extract_theorem_definition_and_label(new_article))
     intersection = old_article_theoerem_and_label & new_article_theoerem_and_label
     only_old_article_theorem_and_label = old_article_theoerem_and_label - new_article_theoerem_and_label
     only_new_article_theorem_and_label = new_article_theoerem_and_label - old_article_theoerem_and_label
     return intersection, only_old_article_theorem_and_label, only_new_article_theorem_and_label
 
-def extract_theorems_and_label(article):
+def extract_theorem_definition_and_label(article):
     # 単語、改行、::、;で区切ってファイルの内容を取得
     file_words = re.findall(r"\w+:*|\n|::|;|\.=", article)
     is_comment = False
