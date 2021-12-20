@@ -15,6 +15,13 @@ def min_max_normalization(node2value, max_val, min_val):
     return node_size
 
 
+def make_node_to_value4nx_set_node_attributes(node2value, attribute_name):
+    node2value4nx_set_node_attributes = dict()
+    for k, v in node2value.items():
+        node2value4nx_set_node_attributes[k] = {attribute_name: v}
+    return node2value4nx_set_node_attributes
+
+
 def rank_nodes_with_value(node2value):
     values = list(set(node2value.values()))
     values_sorted = sorted(values, reverse=True)
@@ -78,23 +85,33 @@ def create_authority_minus_pagerank_graph(mml_version):
     finally:
         os.chdir(cwd)
 
-    node2calc_value = dict()
-    for i in result_auth_minus_pagerank:
-        s = re.split(r'\s', i)
-        node2calc_value[s[0]] = s[1]
-
-    node2ranking = rank_nodes_with_value(node2calc_value)
-    node2group = grouping_for_ranking(node2ranking)
-
     # networkxのグラフを作成
     dot_G = nx.cytoscape_graph(dot_graph)
+
+    node2auth_minus_pagerank = dict()
+    for i in result_auth_minus_pagerank:
+        s = re.split(r'\s', i)
+        node2auth_minus_pagerank[s[0]] = s[1]
+
+    # ノードにauth - pagerankの値を割り当て
+    node2auth_minus_pagerank4nx_set_node_attributes = \
+        make_node_to_value4nx_set_node_attributes(node2auth_minus_pagerank, 'auth_minus_pagerank')
+    nx.set_node_attributes(dot_G, node2auth_minus_pagerank4nx_set_node_attributes)
+    # ノードにauth - pagerankのランキングを割り当て
+    node2ranking = rank_nodes_with_value(node2auth_minus_pagerank)
+    node2group = grouping_for_ranking(node2ranking)
     nx.set_node_attributes(dot_G, node2group)
-    # グラフの描画
-    nx.draw_networkx(dot_G)
+    
     dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
+
     try:
         os.chdir("graph_attrs")
         with open("dot_graph_" + mml_version + "_authority_minus_pagerank.json", "w") as f:
             f.write(json.dumps(dot_graph_json, indent=4))
     finally:
         os.chdir(cwd)
+
+if __name__=="__main__":
+    import sys
+    mml_version = sys.argv[1]
+    create_authority_minus_pagerank_graph(mml_version)
