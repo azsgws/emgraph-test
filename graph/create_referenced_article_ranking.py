@@ -88,7 +88,7 @@ def create_article2pagerank_authority_referenced_ranking(mml_ver):
     article2number_of_referenced = sorted(article2number_of_referenced.items(), key=lambda x:x[1], reverse=True)
     article2authority = sorted(make_article2authority_from_graph_attrs(mml_ver).items(), key=lambda x:x[1], reverse=True)
     article2pagerank = sorted(make_article2pagerank_from_graph_attrs(mml_ver).items(), key=lambda x:x[1], reverse=True)
-    article2authortiy_minus_pagerank = sorted(make_article2authority_minus_pagerank(mml_ver).items(), key=lambda x:x[1], reverse=False)
+    article2authortiy_minus_pagerank = sorted(make_article2authority_minus_pagerank(mml_ver).items(), key=lambda x:x[1], reverse=True)
 
     article2number_of_referenced_ranking = dict()
     article2authority_ranking = dict()
@@ -107,7 +107,7 @@ def create_article2pagerank_authority_referenced_ranking(mml_ver):
 
     with open("research_data/article2pagerank_authority_number_of_articles_ranking.md", "w") as f:
         f.write("## article to ranking\n")
-        f.write("| article | referenced articles | pagerank | authority | Authority - PageRank(ascending) | \n")
+        f.write("| article | referenced articles | pagerank | authority | Authority - PageRank | \n")
         f.write("| ------- | ------------------- | -------- | --------- |-------------------------------- | \n")
         for k in article2number_of_referenced_ranking.keys():
             f.write("| " + str(k) + 
