@@ -46,6 +46,25 @@ def count_theorem_and_definition(miz_file_context):
             thoerem_or_definition2number[i] += 1
     return thoerem_or_definition2number
 
+def count_label(miz_file_context):
+    label2number = dict()
+    theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_context)
+    labels, _ = make_labels_and_non_labels(theorems_definitions_and_labels)
+    for i in labels:
+        if not i in label2number.keys():
+            label2number[i] = 1
+        else:
+            label2number[i] += 1
+    return label2number
+
+def calc_average_of_labels_num(miz_file2label):
+    total_label = make_total_or_definition2number(miz_file2label)
+    total_miz_file = len(miz_file2label.keys())
+    total = 0
+    for num in total_label.values():
+        total += num
+    return total / total_miz_file
+
 def make_total_or_definition2number(miz_file2theorem_or_definition2number):
     total_theorem_or_definition2number = dict()
     for k1 in miz_file2theorem_or_definition2number.keys():
@@ -66,6 +85,7 @@ def calc_average_of_theorems_and_definitions(miz_file2theorems_and_definitions):
 
 def main(mml_version):
     miz_file2theorem_or_definition2number = dict()
+    miz_file2label2number = dict()
     mizar_file_path = make_mizar_file_path(mml_version)
     for mizar_file in mizar_file_path:
         with open(os.path.join("mml/" + mml_version + "/", mizar_file), 'rt',
@@ -73,6 +93,8 @@ def main(mml_version):
             context = f.read()
         miz_file2theorem_or_definition2number[mizar_file] = dict()
         miz_file2theorem_or_definition2number[mizar_file] = count_theorem_and_definition(context)
+        miz_file2label2number[mizar_file] = dict()
+        miz_file2label2number[mizar_file] = count_label(context)
     with open("article_referenced_theorems_and_definitions.json", "w") as f:
         f.write(json.dumps(miz_file2theorem_or_definition2number, indent=4))
     total_theorem_or_definition2number = make_total_or_definition2number(miz_file2theorem_or_definition2number)
@@ -82,6 +104,10 @@ def main(mml_version):
         f.write("\n average: " + str(calc_average_of_theorems_and_definitions(miz_file2theorem_or_definition2number)))
     with open("th_or_def2num.json", "w") as f:
         f.write(json.dumps(total_theorem_or_definition2number, indent=4))
+    with open("label_average.txt", "w") as f:
+        f.write("average: " + str(calc_average_of_labels_num(miz_file2label2number)))
+    with open("article_referenced_labels.json", "w") as f:
+        f.write(json.dumps(miz_file2label2number, indent=4))
 
 
 if __name__ == "__main__":
