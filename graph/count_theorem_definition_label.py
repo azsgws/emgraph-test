@@ -35,9 +35,9 @@ def make_labels_and_non_labels(theorems_definitions_and_labels):
             labels.append(word)
     return labels, non_labels
     
-def count_theorem_and_definition(miz_file_context):
+def count_theorem_and_definition(miz_file_contents):
     thoerem_or_definition2number = dict()
-    theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_context)
+    theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_contents)
     _, non_labels = make_labels_and_non_labels(theorems_definitions_and_labels)
     for i in non_labels:
         if not i in thoerem_or_definition2number.keys():
@@ -46,9 +46,9 @@ def count_theorem_and_definition(miz_file_context):
             thoerem_or_definition2number[i] += 1
     return thoerem_or_definition2number
 
-def count_label(miz_file_context):
+def count_label(miz_file_contents):
     label2number = dict()
-    theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_context)
+    theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_contents)
     labels, _ = make_labels_and_non_labels(theorems_definitions_and_labels)
     for i in labels:
         if not i in label2number.keys():
@@ -90,11 +90,11 @@ def main(mml_version):
     for mizar_file in mizar_file_path:
         with open(os.path.join("mml/" + mml_version + "/", mizar_file), 'rt',
                   encoding='utf-8', errors="ignore") as f:
-            context = f.read()
+            contents = f.read()
         miz_file2theorem_or_definition2number[mizar_file] = dict()
-        miz_file2theorem_or_definition2number[mizar_file] = count_theorem_and_definition(context)
+        miz_file2theorem_or_definition2number[mizar_file] = count_theorem_and_definition(contents)
         miz_file2label2number[mizar_file] = dict()
-        miz_file2label2number[mizar_file] = count_label(context)
+        miz_file2label2number[mizar_file] = count_label(contents)
     with open("article_referenced_theorems_and_definitions.json", "w") as f:
         f.write(json.dumps(miz_file2theorem_or_definition2number, indent=4))
     total_theorem_or_definition2number = make_total_or_definition2number(miz_file2theorem_or_definition2number)
