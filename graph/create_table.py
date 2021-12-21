@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import statistics
 import os
 import json
-
+from create_referenced_article_ranking import make_article2authority_from_graph_attrs, make_article2authority_minus_pagerank, make_article2pagerank_from_graph_attrs
 def create_pagerank_and_auth_table(mml_version):
     cwd = os.getcwd()
 
@@ -155,6 +155,98 @@ def create_pagerank_and_auth_coloring_table(mml_version):
     try:
         os.chdir("result_pagerank_auth")
         fig.savefig("MML(" + mml_version + ")_hub-authority-coloring-table(median).png")
+
+    finally:
+        os.chdir(cwd)
+
+def make_article2number_of_referenced():
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data")
+        with open("article2number_of_referenced(2020-06-18).json", "r") as f:
+            article2number_of_referenced = json.load(f)
+    finally:
+        os.chdir(cwd)
+    
+    return article2number_of_referenced
+
+def create_scattter_plot_of_number_of_referenced_and_pagerank():
+    article2number_of_referenced = make_article2number_of_referenced()
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_referenced.items():
+        x.append(float(v))
+        y.append(float(article2pagerank[k]))
+        # x: number of referenced, y: PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of referenced - PageRank")
+    plt.xlabel("number of referenced")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_referenced-PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scattter_plot_of_number_of_referenced_and_authority():
+    article2number_of_referenced = make_article2number_of_referenced()
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_referenced.items():
+        x.append(float(v))
+        y.append(float(article2authority[k]))
+        # x: number of referenced, y: authority
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of referenced - Authority")
+    plt.xlabel("number of referenced")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_referenced-authority.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scattter_plot_of_number_of_referenced_and_authority_minus_pagerank():
+    article2number_of_referenced = make_article2number_of_referenced()
+    article2authortiy_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_referenced.items():
+        x.append(float(v))
+        y.append(float(article2authortiy_minus_pagerank[k]))
+        # x: number of referenced, y: authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of referenced & authority minus PageRank")
+    plt.xlabel("number of referenced")
+    plt.ylabel("Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_referenced-authority_minus_PageRank.png")
 
     finally:
         os.chdir(cwd)
