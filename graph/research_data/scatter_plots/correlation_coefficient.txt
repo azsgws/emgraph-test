@@ -1,0 +1,3 @@
+<number_of_referenced> - <authority_minus_pagerank>: -0.2587197593264957
+<number_of_referenced> - <pagerank>: 0.4706963047329715
+<number_of_referenced> - <authority>: -0.03072699351829427
