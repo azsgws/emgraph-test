@@ -8,6 +8,7 @@ import sys
 import os
 import re
 from retrieve_dependency import extract_articles, merge_values
+from count_theorem_definition_label import extract_theorem_definition_and_label, get_numnber_of_proof
 
 def get_diff_ver_article(article, old_ver, new_ver):
     """Get aticle's text in 2-versions.
@@ -84,69 +85,6 @@ def compare_importing_theorems_and_labels(old_article, new_article):
     only_old_article_theorem_and_label = old_article_theoerem_and_label - new_article_theoerem_and_label
     only_new_article_theorem_and_label = new_article_theoerem_and_label - old_article_theoerem_and_label
     return intersection, only_old_article_theorem_and_label, only_new_article_theorem_and_label
-
-def extract_theorem_definition_and_label(article):
-    # 単語、改行、::、;で区切ってファイルの内容を取得
-    file_words = re.findall(r"\w+:*|\n|::|;|\.=", article)
-    is_comment = False
-    is_theorem_or_label = False
-    theorem_and_label = list()
-
-    # mizファイルからbyで引用するtheorem,labelを取得する
-    for word in file_words:
-        # コメント行の場合
-        if word == "::" and not is_comment:
-            is_comment = True
-            continue
-        # コメント行の終了
-        if re.search(r"\n", word) and is_comment:
-            is_comment = False
-        # byの検索
-        if word == "by" and not is_comment:
-            is_theorem_or_label = True
-            continue
-        # byで引用する構文の終了
-        if (re.search(r";", word) or re.search(r"\.=", word)) and is_theorem_or_label:
-            is_theorem_or_label = False
-        # byで引用するtheorem, labelを取得
-        if is_theorem_or_label and word != "\n":
-            if theorem_and_label:
-                if re.search(r":$|def$", theorem_and_label[-1]):
-                    theorem_and_label[-1] = theorem_and_label[-1] + word
-                    continue
-                elif re.match(r"\d+", word):
-                    if re.search(r":def\d+$|:\d+$", theorem_and_label[-1]):
-                        new_theorem = theorem_and_label[-1]
-                        theorem_and_label.append(re.sub(r"\d+$", word, new_theorem))
-                    continue
-            theorem_and_label.append(word)
-        
-    return theorem_and_label
-
-def get_numnber_of_proof(old_article, new_article):
-    return count_proof(old_article), count_proof(new_article)
-
-def count_proof(article):
-    # 単語、改行、::、;で区切ってファイルの内容を取得
-    file_words = re.findall(r"\w+|\n|::", article)
-    is_comment = False
-    proof_counter = 0
-
-    # mizファイルからbyで引用するtheorem,labelを取得する
-    for word in file_words:
-        # コメント行の場合
-        if word == "::" and not is_comment:
-            is_comment = True
-            continue
-        # コメント行の終了
-        if re.search(r"\n", word) and is_comment:
-            is_comment = False
-        # コメント外でproofが出現
-        if not is_comment and word == "proof":
-            proof_counter += 1
-
-    return proof_counter
-
 
 def main(article, old_ver, new_ver, create_output=False):
     old_article, new_article = get_diff_ver_article(article, old_ver, new_ver)
