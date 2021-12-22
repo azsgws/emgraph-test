@@ -87,7 +87,7 @@ def extract_theorem_definition_and_label(article):
     file_words = re.findall(r"\w+:*|\n|::|;|\.=|:\w+", article)
     is_comment = False
     is_theorem_or_label = False
-    theorem_and_label = list()
+    theorem_definition_and_label = list()
 
     # mizファイルからbyで引用するtheorem,labelを取得する
     for word in file_words:
@@ -109,25 +109,25 @@ def extract_theorem_definition_and_label(article):
             continue
         # byで引用するtheorem, labelを取得
         if is_theorem_or_label and word != "\n":
-            if theorem_and_label:
-                if re.search(r":$|:def$", theorem_and_label[-1]):
-                    theorem_and_label[-1] = theorem_and_label[-1] + word
+            if theorem_definition_and_label:
+                if re.search(r":$|:def$", theorem_definition_and_label[-1]):
+                    theorem_definition_and_label[-1] = theorem_definition_and_label[-1] + word
                     continue
                 elif re.match(r"\d+", word):
-                    if re.search(r":def\d+$|:\d+$", theorem_and_label[-1]):
-                        new_theorem = theorem_and_label[-1]
-                        theorem_and_label.append(re.sub(r"\d+$", word, new_theorem))
+                    if re.search(r":def\d+$|:\d+$", theorem_definition_and_label[-1]):
+                        new_theorem = theorem_definition_and_label[-1]
+                        theorem_definition_and_label.append(re.sub(r"\d+$", word, new_theorem))
                     continue
-                elif re.match(r".+:.+", theorem_and_label[-1]) and re.match(r"def", word):
-                    new_definition = theorem_and_label[-1]
-                    theorem_and_label.append(re.sub(r":.+$", ":def", new_definition))
+                elif re.match(r".+:.+", theorem_definition_and_label[-1]) and re.match(r"def", word):
+                    new_definition = theorem_definition_and_label[-1]
+                    theorem_definition_and_label.append(re.sub(r":.+$", ":def", new_definition))
                     continue
                 elif re.match(r":def", word):
-                    theorem_and_label[-1] = theorem_and_label[-1] + word
+                    theorem_definition_and_label[-1] = theorem_definition_and_label[-1] + word
                     continue
-            theorem_and_label.append(word)
+            theorem_definition_and_label.append(word)
         
-    return theorem_and_label
+    return theorem_definition_and_label
 
 def get_numnber_of_proof(old_article, new_article):
     return count_proof(old_article), count_proof(new_article)
