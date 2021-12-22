@@ -153,6 +153,22 @@ def count_proof(article):
 
     return proof_counter
 
+def make_article2number_of_labels(article2label2number):
+    article2number_of_labels = dict()
+    for article, labels in article2label2number.items():
+        article2number_of_labels[article] = 0
+        for n in labels.values():
+            article2number_of_labels[article] += n
+    return article2number_of_labels
+
+def make_article2number_of_theorems_or_definitions(article2thorems_and_definition2number):
+    article2number_of_theorems_and_definitions = dict()
+    for article, labels in article2thorems_and_definition2number.items():
+        article2number_of_theorems_and_definitions[article] = 0
+        for n in labels.values():
+            article2number_of_theorems_and_definitions[article] += n
+    return article2number_of_theorems_and_definitions
+
 def main(mml_version):
     miz_file2theorem_or_definition2number = dict()
     miz_file2label2number = dict()
@@ -178,6 +194,12 @@ def main(mml_version):
         f.write("average: " + str(calc_average_of_labels_num(miz_file2label2number)))
     with open("article_referenced_labels.json", "w") as f:
         f.write(json.dumps(miz_file2label2number, indent=4))
+    with open("research_data/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
+        f.write(pprint.pformat(sorted(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number).items(),
+                key=lambda x:x[1], reverse=True)))
+    with open("research_data/most_number_of_labels_ranking.txt", "w") as f:
+        f.write(pprint.pformat(sorted(make_article2number_of_labels(miz_file2label2number).items(),
+                key=lambda x:x[1], reverse=True)))
 
 
 if __name__ == "__main__":
