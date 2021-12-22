@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import statistics
 import os
 import json
+import re
 from create_referenced_article_ranking import make_article2authority_from_graph_attrs, make_article2authority_minus_pagerank, make_article2pagerank_from_graph_attrs
 def create_pagerank_and_auth_table(mml_version):
     cwd = os.getcwd()
@@ -251,7 +252,185 @@ def create_scattter_plot_of_number_of_referenced_and_authority_minus_pagerank():
     finally:
         os.chdir(cwd)
 
+def create_scatter_plot_number_of_labels_and_authority_minus_pagerank():
+    with open("article2number_of_labels.json", "r") as f:
+        article2number_of_labels = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_labels.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority_minus_pagerank[key]))
+        # x: number of label y: authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of labels & authority minus PageRank")
+    plt.xlabel("number of labels")
+    plt.ylabel("Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_labels-authority_minus_PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_number_of_labels_and_pagerank():
+    with open("article2number_of_labels.json", "r") as f:
+        article2number_of_labels = json.load(f)
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_labels.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2pagerank[key]))
+        # x: number of label y: PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of labels & PageRank")
+    plt.xlabel("number of labels")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_labels-PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_number_of_labels_and_authority():
+    with open("article2number_of_labels.json", "r") as f:
+        article2number_of_labels = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_labels.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority[key]))
+        # x: number of label y: Authority
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): number of labels & Authority")
+    plt.xlabel("number of labels")
+    plt.ylabel("Authority")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_labels-Authority.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pagerank():
+    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+        article2number_of_theorems_or_definitons = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_theorems_or_definitons.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority_minus_pagerank[key]))
+        # x: number of theorems and defintions y: authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nnumber of theorems and definitions & authority minus PageRank")
+    plt.xlabel("number of theorems and definitions")
+    plt.ylabel("Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_theorems_and_definitions-authority_minus_PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_number_of_theorems_definitions_and_pagerank():
+    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+        article2number_of_theorems_or_definitons = json.load(f)
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_theorems_or_definitons.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2pagerank[key]))
+        # x: number of theorems and defintions y: PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nnumber of theorems and definitions & PageRank")
+    plt.xlabel("number of theorems and definitions")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_theorems_and_definitions-PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_number_of_theorems_definitions_and_authority():
+    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+        article2number_of_theorems_or_definitons = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2number_of_theorems_or_definitons.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority[key]))
+        # x: number of theorems and defintions y: Authority
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nnumber of theorems and definitions & Authority")
+    plt.xlabel("number of theorems and definitions")
+    plt.ylabel("Authority")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_number_of_theorems_and_definitions-Authority.png")
+
+    finally:
+        os.chdir(cwd)
+
+
 def create_tables(mml_version):
     create_pagerank_and_auth_table(mml_version)
     create_hub_auth_table(mml_version)
     create_pagerank_and_auth_coloring_table(mml_version=mml_version)
+
+if __name__=="__main__":
+    create_scatter_plot_number_of_theorems_definitions_and_authority()
