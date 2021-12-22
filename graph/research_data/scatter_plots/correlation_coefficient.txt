@@ -1,3 +1,6 @@
 <number_of_referenced> - <authority_minus_pagerank>: -0.2587197593264957
 <number_of_referenced> - <pagerank>: 0.4706963047329715
 <number_of_referenced> - <authority>: -0.03072699351829427
+<number_of_labels> - <authority_minus_pagerank>: 0.08439276333806109
+<number_of_labels> - <pagerank>: -0.0938021554362031
+<number_of_labels> - <authority>: 0.04339457023374315
