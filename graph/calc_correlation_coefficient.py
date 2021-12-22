@@ -6,15 +6,15 @@ from create_table import make_article2number_of_referenced
 from create_referenced_article_ranking import make_article2authority_minus_pagerank, \
     make_article2pagerank_from_graph_attrs, make_article2authority_from_graph_attrs
 
-def calc_correlation_coefficient_number_of_referenced_and_authortiy_minus_pagerank():
+def calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank():
     article2number_of_referenced = make_article2number_of_referenced()
-    article2authortiy_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     
     number_of_referenced = list()
     authority_minus_pagerank = list()
     for k, v in article2number_of_referenced.items():
         number_of_referenced.append(float(v))
-        authority_minus_pagerank.append(float(article2authortiy_minus_pagerank[k]))
+        authority_minus_pagerank.append(float(article2authority_minus_pagerank[k]))
         
     s1 = pd.Series(number_of_referenced)
     s2 = pd.Series(authority_minus_pagerank)
@@ -59,16 +59,16 @@ def calc_correlation_coefficient_number_of_referenced_and_authority():
 
     return res
 
-def calc_correlation_coefficient_number_of_labels_and_authortiy_minus_pagerank():
+def calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank():
     with open("article2number_of_labels.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
-    article2authortiy_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     number_of_labels = list()
     authority_minus_pagerank = list()
     for k, v in article2number_of_theorems_or_definitons.items():
         key = re.sub(r"\.miz", "", k).upper()
         number_of_labels.append(float(v))
-        authority_minus_pagerank.append(float(article2authortiy_minus_pagerank[key]))
+        authority_minus_pagerank.append(float(article2authority_minus_pagerank[key]))
         
     s1 = pd.Series(number_of_labels)
     s2 = pd.Series(authority_minus_pagerank)
@@ -80,13 +80,13 @@ def calc_correlation_coefficient_number_of_labels_and_authortiy_minus_pagerank()
 def calc_correlation_coefficient_number_of_labels_and_pagerank():
     with open("article2number_of_labels.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
-    article2authortiy_minus_pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    article2authority_minus_pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     number_of_labels = list()
     pagerank = list()
     for k, v in article2number_of_theorems_or_definitons.items():
         key = re.sub(r"\.miz", "", k).upper()
         number_of_labels.append(float(v))
-        pagerank.append(float(article2authortiy_minus_pagerank[key]))
+        pagerank.append(float(article2authority_minus_pagerank[key]))
         
     s1 = pd.Series(number_of_labels)
     s2 = pd.Series(pagerank)
@@ -95,16 +95,16 @@ def calc_correlation_coefficient_number_of_labels_and_pagerank():
 
     return res
 
-def calc_correlation_coefficient_number_of_labels_and_authortiy():
+def calc_correlation_coefficient_number_of_labels_and_authority():
     with open("article2number_of_labels.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
-    article2authortiy = make_article2authority_from_graph_attrs("2020-06-18")
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     number_of_labels = list()
     authority = list()
     for k, v in article2number_of_theorems_or_definitons.items():
         key = re.sub(r"\.miz", "", k).upper()
         number_of_labels.append(float(v))
-        authority.append(float(article2authortiy[key]))
+        authority.append(float(article2authority[key]))
         
     s1 = pd.Series(number_of_labels)
     s2 = pd.Series(authority)
@@ -116,13 +116,13 @@ def calc_correlation_coefficient_number_of_labels_and_authortiy():
 def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy_minus_pagerank():
     with open("article2number_of_theorems_or_defintions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
-    article2authortiy_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     number_of_theorems_and_definitions = list()
     authority_minus_pagerank = list()
     for k, v in article2number_of_theorems_or_definitons.items():
         key = re.sub(r"\.miz", "", k).upper()
         number_of_theorems_and_definitions.append(float(v))
-        authority_minus_pagerank.append(float(article2authortiy_minus_pagerank[key]))
+        authority_minus_pagerank.append(float(article2authority_minus_pagerank[key]))
         
     s1 = pd.Series(number_of_theorems_and_definitions)
     s2 = pd.Series(authority_minus_pagerank)
@@ -152,13 +152,13 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_pageran
 def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy():
     with open("article2number_of_theorems_or_defintions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
-    article2authortiy = make_article2authority_from_graph_attrs("2020-06-18")
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     number_of_theorems_and_definitions = list()
     authority = list()
     for k, v in article2number_of_theorems_or_definitons.items():
         key = re.sub(r"\.miz", "", k).upper()
         number_of_theorems_and_definitions.append(float(v))
-        authority.append(float(article2authortiy[key]))
+        authority.append(float(article2authority[key]))
         
     s1 = pd.Series(number_of_theorems_and_definitions)
     s2 = pd.Series(authority)
@@ -168,13 +168,13 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authori
     return res
 
 if __name__ == '__main__':
-    res1 = calc_correlation_coefficient_number_of_referenced_and_authortiy_minus_pagerank()
+    res1 = calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank()
     res2 = calc_correlation_coefficient_number_of_referenced_and_pagerank()
     res3 = calc_correlation_coefficient_number_of_referenced_and_authority()
 
-    res4 = calc_correlation_coefficient_number_of_labels_and_authortiy_minus_pagerank()
+    res4 = calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank()
     res5 = calc_correlation_coefficient_number_of_labels_and_pagerank()
-    res6 = calc_correlation_coefficient_number_of_labels_and_authortiy()
+    res6 = calc_correlation_coefficient_number_of_labels_and_authority()
 
     res7 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy_minus_pagerank()
     res8 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_pagerank()
