@@ -197,9 +197,13 @@ def main(mml_version):
     with open("research_data/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number).items(),
                 key=lambda x:x[1], reverse=True)))
+    with open("article2number_of_theorems_or_defintions.json", "w") as f:
+        f.write(json.dumps(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number), indent=4))
     with open("research_data/most_number_of_labels_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_labels(miz_file2label2number).items(),
                 key=lambda x:x[1], reverse=True)))
+    with open("article2number_of_labels.json", "w") as f:
+        f.write(json.dumps(make_article2number_of_labels(miz_file2label2number), indent=4))
 
 
 if __name__ == "__main__":
