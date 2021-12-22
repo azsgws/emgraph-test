@@ -84,8 +84,7 @@ def calc_average_of_theorems_and_definitions(miz_file2theorems_and_definitions):
     return total / total_miz_file
 
 def extract_theorem_definition_and_label(article):
-    # 単語、改行、::、;で区切ってファイルの内容を取得
-    file_words = re.findall(r"\w+:*|\n|::|;|\.=", article)
+    file_words = re.findall(r"\w+:*|\n|::|;|\.=|:\w+", article)
     is_comment = False
     is_theorem_or_label = False
     theorem_and_label = list()
@@ -99,6 +98,7 @@ def extract_theorem_definition_and_label(article):
         # コメント行の終了
         if re.search(r"\n", word) and is_comment:
             is_comment = False
+            continue
         # byの検索
         if word == "by" and not is_comment:
             is_theorem_or_label = True
@@ -106,16 +106,24 @@ def extract_theorem_definition_and_label(article):
         # byで引用する構文の終了
         if (re.search(r";", word) or re.search(r"\.=", word)) and is_theorem_or_label:
             is_theorem_or_label = False
+            continue
         # byで引用するtheorem, labelを取得
         if is_theorem_or_label and word != "\n":
             if theorem_and_label:
-                if re.search(r":$|def$", theorem_and_label[-1]):
+                if re.search(r":$|:def$", theorem_and_label[-1]):
                     theorem_and_label[-1] = theorem_and_label[-1] + word
                     continue
                 elif re.match(r"\d+", word):
                     if re.search(r":def\d+$|:\d+$", theorem_and_label[-1]):
                         new_theorem = theorem_and_label[-1]
                         theorem_and_label.append(re.sub(r"\d+$", word, new_theorem))
+                    continue
+                elif re.match(r".+:.+", theorem_and_label[-1]) and re.match(r"def", word):
+                    new_definition = theorem_and_label[-1]
+                    theorem_and_label.append(re.sub(r":.+$", ":def", new_definition))
+                    continue
+                elif re.match(r":def", word):
+                    theorem_and_label[-1] = theorem_and_label[-1] + word
                     continue
             theorem_and_label.append(word)
         
