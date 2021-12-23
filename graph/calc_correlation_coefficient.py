@@ -60,7 +60,7 @@ def calc_correlation_coefficient_number_of_referenced_and_authority():
     return res
 
 def calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank():
-    with open("article2number_of_labels.json", "r") as f:
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     number_of_labels = list()
@@ -78,7 +78,7 @@ def calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank()
     return res
 
 def calc_correlation_coefficient_number_of_labels_and_pagerank():
-    with open("article2number_of_labels.json", "r") as f:
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     number_of_labels = list()
@@ -96,7 +96,7 @@ def calc_correlation_coefficient_number_of_labels_and_pagerank():
     return res
 
 def calc_correlation_coefficient_number_of_labels_and_authority():
-    with open("article2number_of_labels.json", "r") as f:
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     number_of_labels = list()
@@ -114,7 +114,7 @@ def calc_correlation_coefficient_number_of_labels_and_authority():
     return res
 
 def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy_minus_pagerank():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     number_of_theorems_and_definitions = list()
@@ -132,7 +132,7 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authori
     return res
 
 def calc_correlation_coefficient_number_of_theorem_and_definiton_between_pagerank():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     number_of_theorems_and_definitions = list()
@@ -150,7 +150,7 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_pageran
     return res
 
 def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     number_of_theorems_and_definitions = list()

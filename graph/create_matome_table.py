@@ -1,7 +1,7 @@
 import json
 from os import write
 import pprint
-import invest_diff_ver_article
+import investigate_difference_version_articles
 
 
 
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         f.write("|         | 比較したバージョン        | 環境部のアーティクルの種類の数 | byで引用するtheorem, label | proofの数 | \n")
         f.write("|---------|-------------------------|------------------------------|---------------------------|-----------| \n")
         for t in sorted_node2displacement_in_all_version_ranking_up:
-            row = invest_diff_ver_article.main(t[0].lower(), t[1]["old_ver"], t[1]["new_ver"], create_output=False)
+            row = investigate_difference_version_articles.main(t[0].lower(), t[1]["old_ver"], t[1]["new_ver"], create_output=False)
             f.write("| " + row[0] + 
                     " | " + t[1]["old_ver"] + " and " + t[1]["new_ver"] + 
                     " | +" + str(row[1]) + ", -"+ str(row[3]) + 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
         f.write("|         | 比較したバージョン        | 環境部のアーティクルの種類の数 | byで引用するtheorem, label | proofの数 | \n")
         f.write("|---------|-------------------------|------------------------------|---------------------------|-----------| \n")
         for t in sorted_node2displacement_in_all_version_ranking_down:
-            row = invest_diff_ver_article.main(t[0].lower(), t[1]["old_ver"], t[1]["new_ver"], create_output=False)
+            row = investigate_difference_version_articles.main(t[0].lower(), t[1]["old_ver"], t[1]["new_ver"], create_output=False)
             f.write("| " + row[0] + 
                     " | " + t[1]["old_ver"] + " and " + t[1]["new_ver"] + 
                     " | +" + str(row[1]) + ", -"+ str(row[3]) + 

@@ -253,14 +253,14 @@ def create_scattter_plot_of_number_of_referenced_and_authority_minus_pagerank():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_labels_and_authority_minus_pagerank():
-    with open("article2number_of_labels.json", "r") as f:
-        article2number_of_labels = json.load(f)
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
+        article2number_of_inner_theorems_and_definitions = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     fig = plt.figure()
 
     x = list()
     y = list()
-    for k, v in article2number_of_labels.items():
+    for k, v in article2number_of_inner_theorems_and_definitions.items():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority_minus_pagerank[key]))
@@ -282,14 +282,14 @@ def create_scatter_plot_number_of_labels_and_authority_minus_pagerank():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_labels_and_pagerank():
-    with open("article2number_of_labels.json", "r") as f:
-        article2number_of_labels = json.load(f)
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
+        article2number_of_inner_theorems_and_definitions = json.load(f)
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     fig = plt.figure()
 
     x = list()
     y = list()
-    for k, v in article2number_of_labels.items():
+    for k, v in article2number_of_inner_theorems_and_definitions.items():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2pagerank[key]))
@@ -311,14 +311,14 @@ def create_scatter_plot_number_of_labels_and_pagerank():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_labels_and_authority():
-    with open("article2number_of_labels.json", "r") as f:
-        article2number_of_labels = json.load(f)
+    with open("article2number_of_inner_theorems_and_definitions.json", "r") as f:
+        article2number_of_inner_theorems_and_definitions = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     fig = plt.figure()
 
     x = list()
     y = list()
-    for k, v in article2number_of_labels.items():
+    for k, v in article2number_of_inner_theorems_and_definitions.items():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority[key]))
@@ -340,7 +340,7 @@ def create_scatter_plot_number_of_labels_and_authority():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pagerank():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     fig = plt.figure()
@@ -369,7 +369,7 @@ def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pager
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_pagerank():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     fig = plt.figure()
@@ -398,7 +398,7 @@ def create_scatter_plot_number_of_theorems_definitions_and_pagerank():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_authority():
-    with open("article2number_of_theorems_or_defintions.json", "r") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     fig = plt.figure()

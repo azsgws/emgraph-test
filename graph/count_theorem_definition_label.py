@@ -163,13 +163,13 @@ def count_proof(article):
 
     return proof_counter
 
-def make_article2number_of_labels(article2label2number):
-    article2number_of_labels = dict()
+def make_article2number_of_inner_theorems_and_definitions(article2label2number):
+    article2number_of_inner_theorems_and_definitions = dict()
     for article, labels in article2label2number.items():
-        article2number_of_labels[article] = 0
+        article2number_of_inner_theorems_and_definitions[article] = 0
         for n in labels.values():
-            article2number_of_labels[article] += n
-    return article2number_of_labels
+            article2number_of_inner_theorems_and_definitions[article] += n
+    return article2number_of_inner_theorems_and_definitions
 
 def make_article2number_of_theorems_or_definitions(article2thorems_and_definition2number):
     article2number_of_theorems_and_definitions = dict()
@@ -196,7 +196,7 @@ def main(mml_version):
         miz_file2other_label2number[mizar_file] = count_label(contents, only_theorem_and_definition=False)
         for k in miz_file2label2number[mizar_file].keys():
             del miz_file2other_label2number[mizar_file][k]
-    with open("article_referenced_theorems_and_definitions.json", "w") as f:
+    with open("article2outer_theorems_and_definitions.json", "w") as f:
         f.write(json.dumps(miz_file2theorem_or_definition2number, indent=4))
     total_theorem_or_definition2number = make_total_or_definition2number(miz_file2theorem_or_definition2number)
     with open("th_or_def2num.txt", "w") as f:
@@ -212,13 +212,13 @@ def main(mml_version):
     with open("research_data/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number).items(),
                 key=lambda x:x[1], reverse=True)))
-    with open("article2number_of_theorems_or_defintions.json", "w") as f:
+    with open("article2number_of_outer_theorems_and_definitons.json", "w") as f:
         f.write(json.dumps(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number), indent=4))
     with open("research_data/most_number_of_labels_ranking.txt", "w") as f:
-        f.write(pprint.pformat(sorted(make_article2number_of_labels(miz_file2label2number).items(),
+        f.write(pprint.pformat(sorted(make_article2number_of_inner_theorems_and_definitions(miz_file2label2number).items(),
                 key=lambda x:x[1], reverse=True)))
-    with open("article2number_of_labels.json", "w") as f:
-        f.write(json.dumps(make_article2number_of_labels(miz_file2label2number), indent=4))
+    with open("article2number_of_inner_theorems_and_definitions.json", "w") as f:
+        f.write(json.dumps(make_article2number_of_inner_theorems_and_definitions(miz_file2label2number), indent=4))
     with open("article2other_labels.json", "w") as f:
         f.write(json.dumps(miz_file2other_label2number, indent=4))
 
