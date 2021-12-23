@@ -207,7 +207,7 @@ def main(mml_version):
         f.write(json.dumps(total_theorem_or_definition2number, indent=4))
     with open("label_average.txt", "w") as f:
         f.write("average: " + str(calc_average_of_labels_num(miz_file2label2number)))
-    with open("article_referenced_labels.json", "w") as f:
+    with open("article2inner_theorem_definition_labels.json", "w") as f:
         f.write(json.dumps(miz_file2label2number, indent=4))
     with open("research_data/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number).items(),
