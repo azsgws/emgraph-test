@@ -433,4 +433,4 @@ def create_tables(mml_version):
     create_pagerank_and_auth_coloring_table(mml_version=mml_version)
 
 if __name__=="__main__":
-    create_scatter_plot_number_of_theorems_definitions_and_authority()
+    create_scatter_plot_number_of_labels_and_pagerank()
