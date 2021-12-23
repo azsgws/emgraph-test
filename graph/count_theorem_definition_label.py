@@ -27,7 +27,7 @@ def classify_theorem_definition_and_other_label(inner_labels):
     inner_theorems_and_definitions = list()
     not_inner_theorems_and_definitions = list()
     for label in inner_labels:
-        if re.match(r"[A-Z]\d*", label):
+        if re.fullmatch(r"[a-zA-Z]?\d*", label) or re.fullmatch(r"Lm\d*", label) or re.fullmatch(r"[a-zA-Z][a-zA-Z]", label):
             not_inner_theorems_and_definitions.append(label)
         else:
             inner_theorems_and_definitions.append(label)
@@ -54,10 +54,12 @@ def count_theorem_and_definition(miz_file_contents):
             thoerem_or_definition2number[i] += 1
     return thoerem_or_definition2number
 
-def count_label(miz_file_contents):
+def count_label(miz_file_contents, only_theorem_and_definition=True):
     label2number = dict()
     theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_contents)
     labels, _ = classify_inner_label_and_outer_label(theorems_definitions_and_labels)
+    if only_theorem_and_definition:
+        labels, _ = classify_theorem_definition_and_other_label(labels)
     for i in labels:
         if not i in label2number.keys():
             label2number[i] = 1
@@ -188,7 +190,7 @@ def main(mml_version):
         miz_file2theorem_or_definition2number[mizar_file] = dict()
         miz_file2theorem_or_definition2number[mizar_file] = count_theorem_and_definition(contents)
         miz_file2label2number[mizar_file] = dict()
-        miz_file2label2number[mizar_file] = count_label(contents)
+        miz_file2label2number[mizar_file] = count_label(contents, only_theorem_and_definition=True)
     with open("article_referenced_theorems_and_definitions.json", "w") as f:
         f.write(json.dumps(miz_file2theorem_or_definition2number, indent=4))
     total_theorem_or_definition2number = make_total_or_definition2number(miz_file2theorem_or_definition2number)
