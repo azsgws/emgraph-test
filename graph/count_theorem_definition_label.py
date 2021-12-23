@@ -15,8 +15,8 @@ def make_mizar_file_path(mml_version):
     
     return miz_files
 
-def classify_inner_labels(inner_labels):
-    """theorem, definitionではないlabelを取り除く．
+def classify_theorem_definition_and_other_label(inner_labels):
+    """article内を参照するlabelをtheorem,definitionとそれ以外に分ける．
 
     Args:
         inner_labels ([type]): [description]
@@ -27,17 +27,13 @@ def classify_inner_labels(inner_labels):
     inner_theorems_and_definitions = list()
     not_inner_theorems_and_definitions = list()
     for label in inner_labels:
-        # if re.match(r"Th", label) or re.match(r"Def", label) or re.match(r"Lm", label):
-        #     not_inner_theorems_and_definitions.append(label)
-        # else:
-        #     inner_theorems_and_definitions.append(label)
         if re.match(r"[A-Z]\d*", label):
             not_inner_theorems_and_definitions.append(label)
         else:
             inner_theorems_and_definitions.append(label)
     return inner_theorems_and_definitions, not_inner_theorems_and_definitions
 
-def make_labels_and_non_labels(theorems_definitions_and_labels):
+def classify_inner_label_and_outer_label(theorems_definitions_and_labels):
     labels = list()
     non_labels = list()
     for word in theorems_definitions_and_labels:
@@ -50,7 +46,7 @@ def make_labels_and_non_labels(theorems_definitions_and_labels):
 def count_theorem_and_definition(miz_file_contents):
     thoerem_or_definition2number = dict()
     theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_contents)
-    _, non_labels = make_labels_and_non_labels(theorems_definitions_and_labels)
+    _, non_labels = classify_inner_label_and_outer_label(theorems_definitions_and_labels)
     for i in non_labels:
         if not i in thoerem_or_definition2number.keys():
             thoerem_or_definition2number[i] = 1
@@ -61,7 +57,7 @@ def count_theorem_and_definition(miz_file_contents):
 def count_label(miz_file_contents):
     label2number = dict()
     theorems_definitions_and_labels = extract_theorem_definition_and_label(miz_file_contents)
-    labels, _ = make_labels_and_non_labels(theorems_definitions_and_labels)
+    labels, _ = classify_inner_label_and_outer_label(theorems_definitions_and_labels)
     for i in labels:
         if not i in label2number.keys():
             label2number[i] = 1
