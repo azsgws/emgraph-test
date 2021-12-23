@@ -15,15 +15,27 @@ def make_mizar_file_path(mml_version):
     
     return miz_files
 
-def remove_label(theorem_definition_and_labels):
-    label = list()
-    not_label = list()
-    for word in theorem_definition_and_labels:
-        if ":" in word:
-            not_label.append(word)
+def classify_inner_labels(inner_labels):
+    """theorem, definitionではないlabelを取り除く．
+
+    Args:
+        inner_labels ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
+    inner_theorems_and_definitions = list()
+    not_inner_theorems_and_definitions = list()
+    for label in inner_labels:
+        # if re.match(r"Th", label) or re.match(r"Def", label) or re.match(r"Lm", label):
+        #     not_inner_theorems_and_definitions.append(label)
+        # else:
+        #     inner_theorems_and_definitions.append(label)
+        if re.match(r"[A-Z]\d*", label):
+            not_inner_theorems_and_definitions.append(label)
         else:
-            label.append(word)
-    return label, not_label
+            inner_theorems_and_definitions.append(label)
+    return inner_theorems_and_definitions, not_inner_theorems_and_definitions
 
 def make_labels_and_non_labels(theorems_definitions_and_labels):
     labels = list()
