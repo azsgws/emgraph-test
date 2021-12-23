@@ -6,9 +6,9 @@ import investigate_difference_version_articles
 
 
 if __name__ == '__main__':
-    with open("research_data/displacement_in_all_version_ranking_up.json") as f:
+    with open("research_data/displacement/displacement_in_all_version_ranking_up.json") as f:
         node2displacement_in_all_version_ranking_up = json.load(f)
-    with open("research_data/displacement_in_all_version_ranking_down.json") as f:
+    with open("research_data/displacement/displacement_in_all_version_ranking_down.json") as f:
         node2displacement_in_all_version_ranking_down = json.load(f)
 
     # ranking up
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     total_environ_displacement = 0
     total_theorem_and_label_displacement = 0
     total_number_of_proof = 0
-    with open("research_data/ranking-up.md", "w") as f:
+    with open("research_data/ranking/ranking-up.md", "w") as f:
         f.write("|         | 比較したバージョン        | 環境部のアーティクルの種類の数 | byで引用するtheorem, label | proofの数 | \n")
         f.write("|---------|-------------------------|------------------------------|---------------------------|-----------| \n")
         for t in sorted_node2displacement_in_all_version_ranking_up:
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     total_environ_displacement = 0
     total_theorem_and_label_displacement = 0
     total_number_of_proof = 0
-    with open("research_data/ranking-down.md", "w") as f:
+    with open("research_data/ranking/ranking-down.md", "w") as f:
         f.write("|         | 比較したバージョン        | 環境部のアーティクルの種類の数 | byで引用するtheorem, label | proofの数 | \n")
         f.write("|---------|-------------------------|------------------------------|---------------------------|-----------| \n")
         for t in sorted_node2displacement_in_all_version_ranking_down:

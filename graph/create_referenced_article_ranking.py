@@ -17,9 +17,9 @@ def create_article2number_of_referenced(mizar_ver, create_file=False):
                 article2number_of_referenced[v] += 1
 
     if create_file:
-        with open("research_data/article2number_of_referenced("+ mizar_ver +").txt", "w") as f:
+        with open("research_data/article2values/article2number_of_referenced("+ mizar_ver +").txt", "w") as f:
             f.write(pprint.pformat(sorted(article2number_of_referenced.items(), key=lambda x:x[1], reverse=True)))
-        with open("research_data/article2number_of_referenced("+ mizar_ver +").json", "w") as f:
+        with open("research_data/article2values/article2number_of_referenced("+ mizar_ver +").json", "w") as f:
             f.write(json.dumps(article2number_of_referenced, indent=4))
 
     return article2number_of_referenced
@@ -54,13 +54,13 @@ def make_article2authority_from_graph_attrs(mml_version):
 
 
 def create_table_pagerank_auth_referenced_articles(mizar_ver):
-    with open("research_data/article2number_of_referenced("+ mizar_ver +").json", "r") as f:
+    with open("research_data/article2values/article2number_of_referenced("+ mizar_ver +").json", "r") as f:
         article2number_of_referenced = json.load(f)
     article2number_of_referenced = sorted(article2number_of_referenced.items(), key=lambda x:x[1], reverse=True)
     article2authority = sorted(make_article2authority_from_graph_attrs(mizar_ver).items(), key=lambda x:x[1], reverse=True)
     article2pagerank = sorted(make_article2pagerank_from_graph_attrs(mizar_ver).items(), key=lambda x:x[1], reverse=True)
 
-    with open("research_data/table_pagerank_authority_referenced_articles.md", "w") as f:
+    with open("research_data/ranking/table_pagerank_authority_referenced_articles.md", "w") as f:
         f.write("| pagerank | authority | referenced articles |\n")
         f.write("| -------- | --------- | ------------------- |\n")
         for i in range(len(article2authority)):
@@ -83,7 +83,7 @@ def make_article2authority_minus_pagerank(mml_ver):
     
 
 def create_article2pagerank_authority_referenced_ranking(mml_ver):
-    with open("research_data/article2number_of_referenced("+ mml_ver +").json", "r") as f:
+    with open("research_data/article2values/article2number_of_referenced("+ mml_ver +").json", "r") as f:
         article2number_of_referenced = json.load(f)
     article2number_of_referenced = sorted(article2number_of_referenced.items(), key=lambda x:x[1], reverse=True)
     article2authority = sorted(make_article2authority_from_graph_attrs(mml_ver).items(), key=lambda x:x[1], reverse=True)
@@ -105,7 +105,7 @@ def create_article2pagerank_authority_referenced_ranking(mml_ver):
         article2authortiy_minus_pagerank_ranking[article2authortiy_minus_pagerank[i][0]] = i + 1
 
 
-    with open("research_data/article2pagerank_authority_number_of_articles_ranking.md", "w") as f:
+    with open("research_data/ranking/article2pagerank_authority_number_of_articles_ranking.md", "w") as f:
         f.write("## article to ranking\n")
         f.write("| article | referenced articles | pagerank | authority | Authority - PageRank | \n")
         f.write("| ------- | ------------------- | -------- | --------- |-------------------------------- | \n")
