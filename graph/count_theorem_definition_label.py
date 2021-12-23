@@ -209,12 +209,12 @@ def main(mml_version):
         f.write("average: " + str(calc_average_of_labels_num(miz_file2label2number)))
     with open("research_data/article2values/article2inner_theorem_definition_labels.json", "w") as f:
         f.write(json.dumps(miz_file2label2number, indent=4))
-    with open("research_data/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
+    with open("research_data/ranking/most_number_of_theorem_and_definition_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number).items(),
                 key=lambda x:x[1], reverse=True)))
     with open("research_data/article2values/article2number_of_outer_theorems_and_definitons.json", "w") as f:
         f.write(json.dumps(make_article2number_of_theorems_or_definitions(miz_file2theorem_or_definition2number), indent=4))
-    with open("research_data/most_number_of_labels_ranking.txt", "w") as f:
+    with open("research_data/ranking/most_number_of_labels_ranking.txt", "w") as f:
         f.write(pprint.pformat(sorted(make_article2number_of_inner_theorems_and_definitions(miz_file2label2number).items(),
                 key=lambda x:x[1], reverse=True)))
     with open("research_data/article2values/article2number_of_inner_theorems_and_definitions.json", "w") as f:

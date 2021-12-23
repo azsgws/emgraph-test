@@ -60,7 +60,7 @@ def create_table_pagerank_auth_referenced_articles(mizar_ver):
     article2authority = sorted(make_article2authority_from_graph_attrs(mizar_ver).items(), key=lambda x:x[1], reverse=True)
     article2pagerank = sorted(make_article2pagerank_from_graph_attrs(mizar_ver).items(), key=lambda x:x[1], reverse=True)
 
-    with open("research_data/table_pagerank_authority_referenced_articles.md", "w") as f:
+    with open("research_data/ranking/table_pagerank_authority_referenced_articles.md", "w") as f:
         f.write("| pagerank | authority | referenced articles |\n")
         f.write("| -------- | --------- | ------------------- |\n")
         for i in range(len(article2authority)):
@@ -105,7 +105,7 @@ def create_article2pagerank_authority_referenced_ranking(mml_ver):
         article2authortiy_minus_pagerank_ranking[article2authortiy_minus_pagerank[i][0]] = i + 1
 
 
-    with open("research_data/article2pagerank_authority_number_of_articles_ranking.md", "w") as f:
+    with open("research_data/ranking/article2pagerank_authority_number_of_articles_ranking.md", "w") as f:
         f.write("## article to ranking\n")
         f.write("| article | referenced articles | pagerank | authority | Authority - PageRank | \n")
         f.write("| ------- | ------------------- | -------- | --------- |-------------------------------- | \n")
