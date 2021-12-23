@@ -27,7 +27,7 @@ def classify_theorem_definition_and_other_label(inner_labels):
     inner_theorems_and_definitions = list()
     not_inner_theorems_and_definitions = list()
     for label in inner_labels:
-        if re.fullmatch(r"[a-zA-Z]?\d*", label) or re.fullmatch(r"Lm\d*", label) or re.fullmatch(r"[a-zA-Z][a-zA-Z]", label):
+        if re.fullmatch(r"[a-zA-Z]\d*|Lm\d*|lm\d*|[a-zA-Z]\d?[a-zA-Z]", label):
             not_inner_theorems_and_definitions.append(label)
         else:
             inner_theorems_and_definitions.append(label)
@@ -182,6 +182,7 @@ def make_article2number_of_theorems_or_definitions(article2thorems_and_definitio
 def main(mml_version):
     miz_file2theorem_or_definition2number = dict()
     miz_file2label2number = dict()
+    miz_file2other_label2number = dict()
     mizar_file_path = make_mizar_file_path(mml_version)
     for mizar_file in mizar_file_path:
         with open(os.path.join("mml/" + mml_version + "/", mizar_file), 'rt',
@@ -191,6 +192,10 @@ def main(mml_version):
         miz_file2theorem_or_definition2number[mizar_file] = count_theorem_and_definition(contents)
         miz_file2label2number[mizar_file] = dict()
         miz_file2label2number[mizar_file] = count_label(contents, only_theorem_and_definition=True)
+        miz_file2other_label2number[mizar_file] = dict()
+        miz_file2other_label2number[mizar_file] = count_label(contents, only_theorem_and_definition=False)
+        for k in miz_file2label2number[mizar_file].keys():
+            del miz_file2other_label2number[mizar_file][k]
     with open("article_referenced_theorems_and_definitions.json", "w") as f:
         f.write(json.dumps(miz_file2theorem_or_definition2number, indent=4))
     total_theorem_or_definition2number = make_total_or_definition2number(miz_file2theorem_or_definition2number)
@@ -214,7 +219,8 @@ def main(mml_version):
                 key=lambda x:x[1], reverse=True)))
     with open("article2number_of_labels.json", "w") as f:
         f.write(json.dumps(make_article2number_of_labels(miz_file2label2number), indent=4))
-
+    with open("article2other_labels.json", "w") as f:
+        f.write(json.dumps(miz_file2other_label2number, indent=4))
 
 if __name__ == "__main__":
     main("2020-06-18")
