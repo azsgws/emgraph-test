@@ -6,9 +6,9 @@ import investigate_difference_version_articles
 
 
 if __name__ == '__main__':
-    with open("research_data/displacement_in_all_version_ranking_up.json") as f:
+    with open("research_data/displacement/displacement_in_all_version_ranking_up.json") as f:
         node2displacement_in_all_version_ranking_up = json.load(f)
-    with open("research_data/displacement_in_all_version_ranking_down.json") as f:
+    with open("research_data/displacement/displacement_in_all_version_ranking_down.json") as f:
         node2displacement_in_all_version_ranking_down = json.load(f)
 
     # ranking up
