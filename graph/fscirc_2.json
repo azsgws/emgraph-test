@@ -1,0 +1,27 @@
+{
+    "aofa_a01": [
+        "CIRCCMB2:sch9",
+        "CIRCCMB2:sch8(A1)",
+        "CIRCCMB2:sch21(A1)",
+        "CIRCCMB2:sch19(A2,A5,A4,A3)",
+        "NAT_1:sch15(A7,A8,A9,A10,A11,A12)",
+        "NAT_1:sch2(A17,A18)",
+        "CIRCCMB2:sch2(A24,A16,A25)",
+        "CIRCCMB2:sch14(A10,A11,A3,A9,A12)",
+        "CIRCCMB2:sch15(A1,A3,A12)",
+        "CIRCCMB2:sch3(A14,A13)",
+        "NAT_1:sch15(A16,A17,A18,A22,A23,A24)",
+        "CIRCCMB2:sch13(A26,A6,A27,A28)",
+        "NAT_1:sch2(A13,A14)",
+        "NAT_1:sch2(A3,A4)",
+        "NAT_1:sch2(A1,A2)",
+        "NAT_1:sch2(A2,A3)",
+        "NAT_1:sch2(A2,A3)",
+        "PBOOLE:sch5",
+        "CIRCCMB2:sch11(A4,A5,A6,A7\n  ,A12,\n  A17)",
+        "NAT_1:sch2(A1,A2)",
+        "PBOOLE:sch5",
+        "CIRCCMB2:sch22(A4,A5,A7,A18,A19,A21,A22,A23,A31)",
+        ""
+    ]
+}
