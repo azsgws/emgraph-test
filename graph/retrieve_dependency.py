@@ -12,6 +12,16 @@ DIRECTIVES_2003 = ['vocabulary', 'constructors', 'notations', 'clusters',
               'theorems', 'schemes', 'definitions', 'requirements']
 
 
+def get_miz_files(mml_version):
+    cwd = os.getcwd()
+    try:
+        os.chdir("mml/" + mml_version + "/")
+        miz_files = glob.glob("*.miz")  # mmlディレクトリの.mizファイルを取り出す
+    finally:
+        os.chdir(cwd)
+
+    return miz_files
+
 def make_miz_dependency(mml_version):
     """
     articleが参照しているarticleを取得する．
