@@ -4,7 +4,7 @@ import json
 from retrieve_dependency import get_miz_files
 
 def make_schemes(article_contents):
-    file_words = re.findall(r"\w+:*|\([\w+\s*\,*\s*]+\)|\(|\)|\n|::|;|\.=|", article_contents)
+    file_words = re.findall(r"[\n\s]*from[\n\s]*|\w+:*|\([\w+\s*\,*\s*]+\)|\(|\)|\n|::|;|\.=|", article_contents)
     is_comment = False
     is_scheme = False
     schemes = str()
@@ -20,7 +20,7 @@ def make_schemes(article_contents):
             is_comment = False
             continue
         # fromの検索
-        if re.fullmatch(r"from", word) and not is_comment:
+        if re.fullmatch(r"[\n\s]+from[\n\s]+", word) and not is_comment:
             is_scheme = True
             continue
         # fromで引用している箇所を取得
@@ -45,36 +45,18 @@ def separate_shemes(schemes_str):
 def separate_label(schemes):
     new_schemes = list()
     for scheme in schemes:
-        if re.search(r"\([\s\n]*.+[\s\n]*,[[\s\n]*.+[\s\n]*]+\)", scheme):
-        # if re.search(r",", scheme):
-            # print(scheme)
-            label = re.findall(r"\([\s\n]*.+[\s\n]*,[[\s\n]*.+[\s\n]*]+\)", scheme)
-            labels = label[0].split(',')
-            scheme_title = re.sub(r"\([\s\n]*.+[\s\n]*,[[\s\n]*.+[\s\n]*]+\)", "", scheme)
-            for i in labels:
-                new_i = i.strip()
-                new_i = new_i.strip('(')
-                new_i = new_i.strip(')')
-                new_i = new_i.strip(',')
-                new_i = new_i.strip()
-                new_schemes.append(scheme_title + "(" + new_i + ")")
-        elif re.search(r"\([\s\n]+\w+[\s\n]*\)", scheme):
-            label = re.findall(r"\([\s\n]+\w+[\s\n]*\)", scheme)
-            new_label = label[0].strip()
-            new_label = new_label.strip('(')
-            new_label = new_label.strip(')')
-            new_label = new_label.strip()
-            scheme_title = re.sub(r"\([\s\n]+\w+[\s\n]*\)", "", scheme)
-            new_schemes.append(scheme_title + "(" + new_label + ")")
-        elif re.search(r"\([\s\n]*\w+[\s\n]+\)", scheme):
-            label = re.findall(r"\([\s\n]*\w+[\s\n]+\)", scheme)
-            new_label = label[0].strip()
-            new_label = new_label.strip('(')
-            new_label = new_label.strip(')')
-            new_label = new_label.strip()
-            scheme_title = re.sub(r"\([\s\n]*\w+[\s\n]+\)", "", scheme)
-            new_schemes.append(scheme_title + "(" + new_label + ")")
-
+        if "(" in scheme:
+            separated_scheme = scheme.split('(')
+            scheme_title = separated_scheme.pop(0)
+            separated_schemes = separated_scheme.pop(0)
+            separated_schemes = separated_schemes.split(',')
+            for new_scheme in separated_schemes:
+                new_scheme = new_scheme.strip()
+                new_scheme = new_scheme.strip(')')
+                new_scheme = new_scheme.strip()
+                new_schemes.append(scheme_title + "(" + new_scheme + ")")
+        elif scheme == "":
+            pass
         else:
             new_schemes.append(scheme)
     return new_schemes
@@ -87,15 +69,15 @@ def extract_schemes(article_contents):
 if __name__ == "__main__":
     article2schemes = dict()
     articles = get_miz_files("2020-06-18")
-    # for article in articles:
-    #     with open("mml/2020-06-18/" + article, "r", encoding="utf-8", errors="ignore") as f:
-    #         contents = f.read()
-    #     article2schemes[article] = extract_schemes(contents)
-    with open("mml/2020-06-18/fscirc_2.miz", "r", encoding="utf-8", errors="ignore") as f:
-        contents = f.read()
-    article2schemes["aofa_a01"] = extract_schemes(contents)
+    for article in articles:
+        with open("mml/2020-06-18/" + article, "r", encoding="utf-8", errors="ignore") as f:
+            contents = f.read()
+        article2schemes[article] = extract_schemes(contents)
+    # with open("mml/2020-06-18/fscirc_2.miz", "r", encoding="utf-8", errors="ignore") as f:
+    #     contents = f.read()
+    # article2schemes["fscirc_2"] = extract_schemes(contents)
     
-    with open("fscirc_2.json", "w") as f:
+    with open("research_data/article2values/article2schemes.json", "w") as f:
         f.write(json.dumps(article2schemes, indent=4))
-    with open("fscirc_2.txt", "w") as f:
+    with open("research_data/article2values/article2schemes.txt", "w") as f:
         f.write(pprint.pformat(article2schemes))
