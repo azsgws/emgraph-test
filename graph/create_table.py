@@ -340,7 +340,7 @@ def create_scatter_plot_number_of_labels_and_authority():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pagerank():
-    with open("research_data/article2values/article2number_of_outer_theorems_and_definitons.json", "r") as f:
+    with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     fig = plt.figure()
@@ -369,7 +369,7 @@ def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pager
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_pagerank():
-    with open("research_data/article2values/article2number_of_outer_theorems_and_definitons.json", "r") as f:
+    with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     fig = plt.figure()
@@ -398,7 +398,7 @@ def create_scatter_plot_number_of_theorems_definitions_and_pagerank():
         os.chdir(cwd)
 
 def create_scatter_plot_number_of_theorems_definitions_and_authority():
-    with open("research_data/article2values/article2number_of_outer_theorems_and_definitons.json", "r") as f:
+    with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     fig = plt.figure()
