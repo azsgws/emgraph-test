@@ -72,6 +72,12 @@ def make_article2scheme2number(article2schemes):
                 article2scheme2number[k][scheme] += 1
     return article2scheme2number
 
+def make_article2number_of_schemes(article2schemes):
+    article2number_of_schemes = dict()
+    for article, schemes in article2schemes.items():
+        article2number_of_schemes[article] = len(schemes)
+    return article2number_of_schemes
+
 def extract_schemes(article_contents):
     schemes = make_schemes(article_contents)
     schemes = separate_label(schemes)
@@ -96,4 +102,7 @@ if __name__ == "__main__":
         f.write(json.dumps(article2scheme2number, indent=4))
     with open("research_data/article2values/article2scheme2number.txt", "w") as f:
         f.write(pprint.pformat(article2scheme2number))
-    
+    with open("research_data/article2values/article2number_of_schemes.json", "w") as f:
+        f.write(json.dumps(make_article2number_of_schemes(article2schemes), indent=4))
+    with open("research_data/article2values/article2number_of_schemes.txt", "w") as f:
+        f.write(pprint.pformat(make_article2number_of_schemes(article2schemes)))
