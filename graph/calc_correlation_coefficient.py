@@ -6,7 +6,7 @@ from create_table import make_article2number_of_referenced
 from create_referenced_article_ranking import make_article2authority_minus_pagerank, \
     make_article2pagerank_from_graph_attrs, make_article2authority_from_graph_attrs
 
-def calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank():
+def calc_correlation_coefficient_between_number_of_referenced_and_authority_minus_pagerank():
     article2number_of_referenced = make_article2number_of_referenced()
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
     
@@ -24,7 +24,7 @@ def calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagera
     return res
 
 
-def calc_correlation_coefficient_number_of_referenced_and_pagerank():
+def calc_correlation_coefficient_between_number_of_referenced_and_pagerank():
     article2number_of_referenced = make_article2number_of_referenced()
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     
@@ -42,7 +42,7 @@ def calc_correlation_coefficient_number_of_referenced_and_pagerank():
     return res
 
 
-def calc_correlation_coefficient_number_of_referenced_and_authority():
+def calc_correlation_coefficient_between_number_of_referenced_and_authority():
     article2number_of_referenced = make_article2number_of_referenced()
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
     
@@ -59,7 +59,7 @@ def calc_correlation_coefficient_number_of_referenced_and_authority():
 
     return res
 
-def calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank():
+def calc_correlation_coefficient_between_number_of_labels_and_authority_minus_pagerank():
     with open("research_data/article2values/article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
@@ -77,7 +77,7 @@ def calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank()
 
     return res
 
-def calc_correlation_coefficient_number_of_labels_and_pagerank():
+def calc_correlation_coefficient_between_number_of_labels_and_pagerank():
     with open("research_data/article2values/article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
@@ -95,7 +95,7 @@ def calc_correlation_coefficient_number_of_labels_and_pagerank():
 
     return res
 
-def calc_correlation_coefficient_number_of_labels_and_authority():
+def calc_correlation_coefficient_between_number_of_labels_and_authority():
     with open("research_data/article2values/article2number_of_inner_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
@@ -113,7 +113,7 @@ def calc_correlation_coefficient_number_of_labels_and_authority():
 
     return res
 
-def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy_minus_pagerank():
+def calc_correlation_coefficient_between_number_of_theorem_definiton_and_authoritiy_minus_pagerank():
     with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
@@ -131,7 +131,7 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authori
 
     return res
 
-def calc_correlation_coefficient_number_of_theorem_and_definiton_between_pagerank():
+def calc_correlation_coefficient_between_number_of_theorem_definiton_and_pagerank():
     with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
@@ -149,7 +149,7 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_pageran
 
     return res
 
-def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy():
+def calc_correlation_coefficient_between_number_of_theorem_definiton_and_authoritiy():
     with open("research_data/article2values/article2number_of_outer_theorems_and_definitions.json", "r") as f:
         article2number_of_theorems_or_definitons = json.load(f)
     article2authority = make_article2authority_from_graph_attrs("2020-06-18")
@@ -270,17 +270,17 @@ def calc_correlation_coefficient_between_coupling_and_authority():
     return res
 
 if __name__ == '__main__':
-    res1 = calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank()
-    res2 = calc_correlation_coefficient_number_of_referenced_and_pagerank()
-    res3 = calc_correlation_coefficient_number_of_referenced_and_authority()
+    res1 = calc_correlation_coefficient_between_number_of_referenced_and_authority_minus_pagerank()
+    res2 = calc_correlation_coefficient_between_number_of_referenced_and_pagerank()
+    res3 = calc_correlation_coefficient_between_number_of_referenced_and_authority()
 
-    res4 = calc_correlation_coefficient_number_of_labels_and_authority_minus_pagerank()
-    res5 = calc_correlation_coefficient_number_of_labels_and_pagerank()
-    res6 = calc_correlation_coefficient_number_of_labels_and_authority()
+    res4 = calc_correlation_coefficient_between_number_of_labels_and_authority_minus_pagerank()
+    res5 = calc_correlation_coefficient_between_number_of_labels_and_pagerank()
+    res6 = calc_correlation_coefficient_between_number_of_labels_and_authority()
 
-    res7 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy_minus_pagerank()
-    res8 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_pagerank()
-    res9 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy()
+    res7 = calc_correlation_coefficient_between_number_of_theorem_definiton_and_authoritiy_minus_pagerank()
+    res8 = calc_correlation_coefficient_between_number_of_theorem_definiton_and_pagerank()
+    res9 = calc_correlation_coefficient_between_number_of_theorem_definiton_and_authoritiy()
 
     res10 = calc_correlation_coefficient_between_cohesion_and_authority_minus_pagerank()
     res11 = calc_correlation_coefficient_between_cohesion_and_pagerank()
