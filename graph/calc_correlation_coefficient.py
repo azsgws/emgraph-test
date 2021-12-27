@@ -167,6 +167,58 @@ def calc_correlation_coefficient_number_of_theorem_and_definiton_between_authori
 
     return res
 
+def calc_correlation_coefficient_between_cohesion_and_authority_minus_pagerank():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    cohesion = list()
+    authority_minus_pagerank = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        cohesion.append(float(v))
+        authority_minus_pagerank.append(float(article2authority_minus_pagerank[key]))
+        
+    s1 = pd.Series(cohesion)
+    s2 = pd.Series(authority_minus_pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_cohesion_and_pagerank():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    cohesion = list()
+    pagerank = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        cohesion.append(float(v))
+        pagerank.append(float(article2pagerank[key]))
+        
+    s1 = pd.Series(cohesion)
+    s2 = pd.Series(pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_cohesion_and_authority():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    cohesion = list()
+    authority = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        cohesion.append(float(v))
+        authority.append(float(article2authority[key]))
+        
+    s1 = pd.Series(cohesion)
+    s2 = pd.Series(authority)
+    res = s1.corr(s2)
+
+    return res
+
+
 if __name__ == '__main__':
     res1 = calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank()
     res2 = calc_correlation_coefficient_number_of_referenced_and_pagerank()
@@ -180,6 +232,11 @@ if __name__ == '__main__':
     res8 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_pagerank()
     res9 = calc_correlation_coefficient_number_of_theorem_and_definiton_between_authoritiy()
 
+    res10 = calc_correlation_coefficient_between_cohesion_and_authority_minus_pagerank()
+    res11 = calc_correlation_coefficient_between_cohesion_and_pagerank()
+    res12 = calc_correlation_coefficient_between_cohesion_and_authority()
+
+
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
@@ -192,6 +249,9 @@ if __name__ == '__main__':
                     + "<number_of_labels> - <authority>: " + str(res6) + "\n"
                     + "<number_of_theorems_and_definitions> - <authority_minus_pagerank>: " + str(res7) + "\n"
                     + "<number_of_theorems_and_definitions> - <pagerank>: " + str(res8) + "\n"
-                    + "<number_of_theorems_and_definitions> - <authority>: " + str(res9) + "\n")
+                    + "<number_of_theorems_and_definitions> - <authority>: " + str(res9) + "\n"
+                    + "<cohesion> - <authority_minus_pagerank>: " + str(res10) + "\n"
+                    + "<cohesion> - <pagerank>: " + str(res11) + "\n"
+                    + "<cohesion> - <authority>: " + str(res12) + "\n")
     finally:
         os.chdir(cwd)
