@@ -21,10 +21,10 @@ def make_article2cohesion():
     article2cohesion = dict()
     article2number_of_inner_theorems_and_difinitions = \
         make_article2number_of_inner_theorems_and_difinitions_from_json()
-    article2number_of_schemes = make_article2number_of_inner_schemes_from_json()
+    article2number_of_inner_schemes = make_article2number_of_inner_schemes_from_json()
     for article in article2number_of_inner_theorems_and_difinitions.keys():
         article2cohesion[article] = \
-            article2number_of_inner_theorems_and_difinitions[article] + article2number_of_schemes[article]
+            article2number_of_inner_theorems_and_difinitions[article] + article2number_of_inner_schemes[article]
     return article2cohesion
 
 if __name__ == "__main__":
