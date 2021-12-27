@@ -10,3 +10,7 @@
 <cohesion> - <authority_minus_pagerank>: -0.003571836032262538
 <cohesion> - <pagerank>: -0.003571836032262538
 <cohesion> - <authority>: 0.010976896395369916
+
+<coupling> - <authority_minus_pagerank>: 0.0863581705888651
+<coupling> - <pagerank>: 0.0863581705888651
+<coupling> - <authority>: 0.04637297758241352

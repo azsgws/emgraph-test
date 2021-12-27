@@ -218,6 +218,56 @@ def calc_correlation_coefficient_between_cohesion_and_authority():
 
     return res
 
+def calc_correlation_coefficient_between_coupling_and_authority_minus_pagerank():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    coupling = list()
+    authority_minus_pagerank = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling.append(float(v))
+        authority_minus_pagerank.append(float(article2authority_minus_pagerank[key]))
+        
+    s1 = pd.Series(coupling)
+    s2 = pd.Series(authority_minus_pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_coupling_and_pagerank():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    coupling = list()
+    pagerank = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling.append(float(v))
+        pagerank.append(float(article2pagerank[key]))
+        
+    s1 = pd.Series(coupling)
+    s2 = pd.Series(pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_coupling_and_authority():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    coupling = list()
+    authority = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling.append(float(v))
+        authority.append(float(article2authority[key]))
+        
+    s1 = pd.Series(coupling)
+    s2 = pd.Series(authority)
+    res = s1.corr(s2)
+
+    return res
 
 if __name__ == '__main__':
     res1 = calc_correlation_coefficient_number_of_referenced_and_authority_minus_pagerank()
@@ -236,6 +286,9 @@ if __name__ == '__main__':
     res11 = calc_correlation_coefficient_between_cohesion_and_pagerank()
     res12 = calc_correlation_coefficient_between_cohesion_and_authority()
 
+    res13 = calc_correlation_coefficient_between_coupling_and_authority_minus_pagerank()
+    res14 = calc_correlation_coefficient_between_coupling_and_pagerank()
+    res15 = calc_correlation_coefficient_between_coupling_and_authority()
 
     cwd = os.getcwd()
     try:
@@ -252,6 +305,9 @@ if __name__ == '__main__':
                     + "<number_of_theorems_and_definitions> - <authority>: " + str(res9) + "\n"
                     + "<cohesion> - <authority_minus_pagerank>: " + str(res10) + "\n"
                     + "<cohesion> - <pagerank>: " + str(res11) + "\n"
-                    + "<cohesion> - <authority>: " + str(res12) + "\n")
+                    + "<cohesion> - <authority>: " + str(res12) + "\n\n"
+                    + "<coupling> - <authority_minus_pagerank>: " + str(res13) + "\n"
+                    + "<coupling> - <pagerank>: " + str(res14) + "\n"
+                    + "<coupling> - <authority>: " + str(res15) + "\n")
     finally:
         os.chdir(cwd)
