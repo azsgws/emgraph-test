@@ -426,6 +426,179 @@ def create_scatter_plot_number_of_theorems_definitions_and_authority():
     finally:
         os.chdir(cwd)
 
+def create_scatter_plot_coupling_and_authority_minus_pagerank():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority_minus_pagerank[key]))
+        # x: coupoing y: Authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCoupling & Authority minus PageRank")
+    plt.xlabel("Coupling")
+    plt.ylabel("Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_coupling-Authority_minus_PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_coupling_and_pagerank():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2pagerank[key]))
+        # x: coupoing y: PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCoupling & PageRank")
+    plt.xlabel("Coupling")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_coupling-PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_coupling_and_authority():
+    with open("research_data/article2values/article2coupling.json", "r") as f:
+        article2coupling = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2coupling.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority[key]))
+        # x: coupoing y: Authority
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCoupling & Authority")
+    plt.xlabel("Coupling")
+    plt.ylabel("Authority")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_coupling-Authority.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_cohesion_and_authority_minus_pagerank():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority_minus_pagerank[key]))
+        # x: coupoing y: Authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCohesion & Authority minus PageRank")
+    plt.xlabel("Cohesion")
+    plt.ylabel("Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_cohesion-Authority_minus_PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_cohesion_and_pagerank():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2pagerank[key]))
+        # x: coupoing y: PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCohesion & PageRank")
+    plt.xlabel("Cohesion")
+    plt.ylabel("PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_cohesion-PageRank.png")
+
+    finally:
+        os.chdir(cwd)
+
+def create_scatter_plot_cohesion_and_authority():
+    with open("research_data/article2values/article2cohesion.json", "r") as f:
+        article2cohesion = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority[key]))
+        # x: coupoing y: Authority
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCohesion & Authority")
+    plt.xlabel("Cohesion")
+    plt.ylabel("Authority")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_cohesion-Authority.png")
+
+    finally:
+        os.chdir(cwd)
 
 def create_tables(mml_version):
     create_pagerank_and_auth_table(mml_version)
@@ -433,4 +606,9 @@ def create_tables(mml_version):
     create_pagerank_and_auth_coloring_table(mml_version=mml_version)
 
 if __name__=="__main__":
-    create_scatter_plot_number_of_labels_and_pagerank()
+    create_scatter_plot_coupling_and_authority_minus_pagerank()
+    create_scatter_plot_coupling_and_pagerank()
+    create_scatter_plot_coupling_and_authority()
+    create_scatter_plot_cohesion_and_authority_minus_pagerank()
+    create_scatter_plot_cohesion_and_pagerank()
+    create_scatter_plot_cohesion_and_authority()
