@@ -90,9 +90,6 @@ if __name__ == "__main__":
         with open("mml/2020-06-18/" + article, "r", encoding="utf-8", errors="ignore") as f:
             contents = f.read()
         article2schemes[article] = extract_schemes(contents)
-    # with open("mml/2020-06-18/fscirc_2.miz", "r", encoding="utf-8", errors="ignore") as f:
-    #     contents = f.read()
-    # article2schemes["fscirc_2"] = extract_schemes(contents)
     with open("research_data/article2values/article2schemes.json", "w") as f:
         f.write(json.dumps(article2schemes, indent=4))
     with open("research_data/article2values/article2schemes.txt", "w") as f:
