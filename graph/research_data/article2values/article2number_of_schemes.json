@@ -1,0 +1,5542 @@
+{
+    "orders_5.miz": {
+        "outer_reference": 27,
+        "inner_reference": 3
+    },
+    "jgraph_8.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "finseq_3.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "circcomb.miz": {
+        "outer_reference": 1,
+        "inner_reference": 4
+    },
+    "ndiff_8.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "aofa_a01.miz": {
+        "outer_reference": 48,
+        "inner_reference": 3
+    },
+    "random_1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "group_14.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "liouvil2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "aofa_a00.miz": {
+        "outer_reference": 21,
+        "inner_reference": 7
+    },
+    "jordan13.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "real_3.miz": {
+        "outer_reference": 118,
+        "inner_reference": 0
+    },
+    "hilbasis.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "yellow_8.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "lpspace2.miz": {
+        "outer_reference": 33,
+        "inner_reference": 0
+    },
+    "convex4.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "scmfsa_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cat_7.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "algspec1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "pre_topc.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "xxreal_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fuznorm1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "projdes1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "real_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "prob_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "euclid_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "extpro_1.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "sysrel.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "newton05.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jordan2b.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "anproj_9.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "pre_poly.miz": {
+        "outer_reference": 36,
+        "inner_reference": 0
+    },
+    "yellow_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "msafree5.miz": {
+        "outer_reference": 46,
+        "inner_reference": 63
+    },
+    "integr10.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "aff_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "topreal6.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "integr16.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "tex_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "taxonom1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "aff_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "series_2.miz": {
+        "outer_reference": 78,
+        "inner_reference": 0
+    },
+    "cardfil3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "scpqsort.miz": {
+        "outer_reference": 23,
+        "inner_reference": 0
+    },
+    "dist_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "csspace4.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "taylor_1.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "matrixr2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "decomp_1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "euler_2.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "hurwitz2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "robbins5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "matrix_0.miz": {
+        "outer_reference": 8,
+        "inner_reference": 2
+    },
+    "mfold_2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "euclid_9.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "tietze_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "jordan23.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "goboard8.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "recdef_1.miz": {
+        "outer_reference": 40,
+        "inner_reference": 24
+    },
+    "yoneda_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "lpspacc1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "matrix_8.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "interva1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "clvect_3.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "bkmodel1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "flang_2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "hahnban.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "matroid0.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "fomodel0.miz": {
+        "outer_reference": 36,
+        "inner_reference": 5
+    },
+    "domain_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 10
+    },
+    "nomin_5.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "nomin_2.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "rewrite1.miz": {
+        "outer_reference": 32,
+        "inner_reference": 5
+    },
+    "graph_5.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "waybel35.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "commacat.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "fuzimpl1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "rsspace.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "goboard5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pdiff_8.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "struct_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bagord_2.miz": {
+        "outer_reference": 39,
+        "inner_reference": 3
+    },
+    "waybel19.miz": {
+        "outer_reference": 9,
+        "inner_reference": 8
+    },
+    "topgen_2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "osafree.miz": {
+        "outer_reference": 48,
+        "inner_reference": 0
+    },
+    "isomichi.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmfsa_7.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "hallmar1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 4
+    },
+    "pencil_3.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "polyeq_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "calcul_2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "fomodel3.miz": {
+        "outer_reference": 44,
+        "inner_reference": 0
+    },
+    "cfuncdom.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "pencil_2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 2
+    },
+    "srings_3.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "zf_fund1.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "finsub_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "ordinal4.miz": {
+        "outer_reference": 55,
+        "inner_reference": 0
+    },
+    "pencil_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "polyeq_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "glib_006.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "asympt_1.miz": {
+        "outer_reference": 64,
+        "inner_reference": 0
+    },
+    "nagata_1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "limfunc1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "sprect_3.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "quin_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "srings_1.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "waybel_6.miz": {
+        "outer_reference": 15,
+        "inner_reference": 3
+    },
+    "equation.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "mmlquery.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "msafree2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "waybel27.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "valued_2.miz": {
+        "outer_reference": 48,
+        "inner_reference": 0
+    },
+    "group_1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 1
+    },
+    "matrixj1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 1
+    },
+    "bcialg_4.miz": {
+        "outer_reference": 11,
+        "inner_reference": 1
+    },
+    "anproj_8.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "osalg_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "xregular.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "lfuzzy_0.miz": {
+        "outer_reference": 8,
+        "inner_reference": 6
+    },
+    "euclid_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "metrizts.miz": {
+        "outer_reference": 23,
+        "inner_reference": 1
+    },
+    "funcop_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "measure9.miz": {
+        "outer_reference": 91,
+        "inner_reference": 0
+    },
+    "int_5.miz": {
+        "outer_reference": 32,
+        "inner_reference": 0
+    },
+    "polyeq_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "circuit2.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "integra1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "altcat_5.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "funct_7.miz": {
+        "outer_reference": 49,
+        "inner_reference": 22
+    },
+    "tbsp_1.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "topalg_4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "glib_003.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "integr20.miz": {
+        "outer_reference": 30,
+        "inner_reference": 2
+    },
+    "bagorder.miz": {
+        "outer_reference": 52,
+        "inner_reference": 0
+    },
+    "int_6.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "ratfunc1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "laplace.miz": {
+        "outer_reference": 17,
+        "inner_reference": 1
+    },
+    "real_lat.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "zmodul04.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "glib_001.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "vectsp11.miz": {
+        "outer_reference": 29,
+        "inner_reference": 0
+    },
+    "jct_misc.miz": {
+        "outer_reference": 5,
+        "inner_reference": 1
+    },
+    "lopban13.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "monoid_0.miz": {
+        "outer_reference": 4,
+        "inner_reference": 4
+    },
+    "glib_007.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "complex2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "henmodel.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "amistd_3.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "compl_sp.miz": {
+        "outer_reference": 46,
+        "inner_reference": 2
+    },
+    "prelamb.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "leibniz1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "scpinvar.miz": {
+        "outer_reference": 24,
+        "inner_reference": 26
+    },
+    "filter_0.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "relat_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmpds_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "matrix_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "tarski_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pcomps_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "fcont_3.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "parsp_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "brouwer3.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "integra7.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "waybel21.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "bvfunc11.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fvsum_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "bhsp_2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "vectsp_6.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "group_8.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "polyalg1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "waybel28.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "cfcont_1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 2
+    },
+    "roughs_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "glib_005.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "rlaffin3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "euclid_3.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "zmodul08.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "radix_3.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "mesfunc3.miz": {
+        "outer_reference": 41,
+        "inner_reference": 0
+    },
+    "measur10.miz": {
+        "outer_reference": 34,
+        "inner_reference": 0
+    },
+    "rfunct_4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "algseq_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 2
+    },
+    "gate_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "xboole_0.miz": {
+        "outer_reference": 1,
+        "inner_reference": 5
+    },
+    "int_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 10
+    },
+    "jordan1k.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "convex1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "scm_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "power.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "polynom6.miz": {
+        "outer_reference": 19,
+        "inner_reference": 1
+    },
+    "series_5.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "scmring4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "real_ns1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "rmod_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "glibpre0.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "newton03.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "intpro_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "dilworth.miz": {
+        "outer_reference": 23,
+        "inner_reference": 1
+    },
+    "rusub_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "integr12.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "grfunc_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow_3.miz": {
+        "outer_reference": 4,
+        "inner_reference": 2
+    },
+    "filter_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan5b.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "graph_1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "partfun3.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "euclid11.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "isocat_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "msaterm.miz": {
+        "outer_reference": 7,
+        "inner_reference": 15
+    },
+    "vsdiff_1.miz": {
+        "outer_reference": 50,
+        "inner_reference": 0
+    },
+    "scmpds_8.miz": {
+        "outer_reference": 11,
+        "inner_reference": 23
+    },
+    "latquasi.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "int_3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "tex_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fcont_1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "catalan2.miz": {
+        "outer_reference": 42,
+        "inner_reference": 0
+    },
+    "polynom8.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "gobrd13.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "facirc_2.miz": {
+        "outer_reference": 67,
+        "inner_reference": 0
+    },
+    "binop_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 7
+    },
+    "ami_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rewrite3.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "altcat_4.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "pdiff_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "waybel11.miz": {
+        "outer_reference": 14,
+        "inner_reference": 1
+    },
+    "mcart_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "dynkin.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "zmodlat1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "lopban12.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "xxreal_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "t_0topsp.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "valued_0.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jgraph_3.miz": {
+        "outer_reference": 8,
+        "inner_reference": 8
+    },
+    "dblseq_2.miz": {
+        "outer_reference": 85,
+        "inner_reference": 4
+    },
+    "knaster.miz": {
+        "outer_reference": 77,
+        "inner_reference": 0
+    },
+    "fdiff_7.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "afinsq_2.miz": {
+        "outer_reference": 48,
+        "inner_reference": 2
+    },
+    "diophan2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "uniroots.miz": {
+        "outer_reference": 35,
+        "inner_reference": 1
+    },
+    "scmfsa6a.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "vectsp_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "waybel_8.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "eulrpart.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "topreal3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "complex1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "gate_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "mesfunc6.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "jordan1a.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "mssublat.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "sgraph1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 3
+    },
+    "substut1.miz": {
+        "outer_reference": 20,
+        "inner_reference": 25
+    },
+    "pscomp_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "topreala.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "aofa_l00.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "matrix_6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "zf_colla.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "boolealg.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "group_2.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "metric_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "pralg_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "pepin.miz": {
+        "outer_reference": 31,
+        "inner_reference": 0
+    },
+    "bintree1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 5
+    },
+    "aofa_000.miz": {
+        "outer_reference": 83,
+        "inner_reference": 15
+    },
+    "gtarski2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "binari_3.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "jordan3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bvfunc_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan1i.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rfunct_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "gate_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fuzzy_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "lopban_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "arytm_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "card_fin.miz": {
+        "outer_reference": 47,
+        "inner_reference": 0
+    },
+    "flang_1.miz": {
+        "outer_reference": 37,
+        "inner_reference": 0
+    },
+    "kolmog01.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "afproj.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "orders_3.miz": {
+        "outer_reference": 7,
+        "inner_reference": 3
+    },
+    "scmpds_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "number01.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "waybel24.miz": {
+        "outer_reference": 1,
+        "inner_reference": 7
+    },
+    "zmodul05.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "schems_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 2
+    },
+    "scmring1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "lfuzzy_1.miz": {
+        "outer_reference": 29,
+        "inner_reference": 0
+    },
+    "ordinal5.miz": {
+        "outer_reference": 100,
+        "inner_reference": 10
+    },
+    "mesfunc4.miz": {
+        "outer_reference": 31,
+        "inner_reference": 0
+    },
+    "jordan18.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cat_6.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "series_3.miz": {
+        "outer_reference": 49,
+        "inner_reference": 0
+    },
+    "realalg1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "weddwitt.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "gr_cy_3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "fdiff_3.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "cgames_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 12
+    },
+    "cousin.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "seqm_3.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "waybel15.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jordan8.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "tarski_a.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "o_ring_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "dist_1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "polyvie1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "goboard4.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "euclid10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "compos_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "arytm_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan19.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "fdiff_9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pdiffeq1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "csspace2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "waybel31.miz": {
+        "outer_reference": 12,
+        "inner_reference": 1
+    },
+    "nat_3.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "msualg_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "lopban_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "integra6.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "glib_004.miz": {
+        "outer_reference": 53,
+        "inner_reference": 2
+    },
+    "gtarski4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "binom.miz": {
+        "outer_reference": 38,
+        "inner_reference": 0
+    },
+    "ncfcont2.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "topzari1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "integr21.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "integr15.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "vectsp_8.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "topmetr.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "jgraph_5.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "holder_1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "connsp_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "lattice7.miz": {
+        "outer_reference": 9,
+        "inner_reference": 1
+    },
+    "tops_5.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "ami_4.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "measur11.miz": {
+        "outer_reference": 76,
+        "inner_reference": 0
+    },
+    "ami_6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan1j.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "taylor_2.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "xfamily.miz": {
+        "outer_reference": 1,
+        "inner_reference": 2
+    },
+    "euler_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "cardfin2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 1
+    },
+    "projpl_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "partfun4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "orders_1.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "fdiff_6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "zmodlat3.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "topdim_2.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "jordan16.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fib_num.miz": {
+        "outer_reference": 15,
+        "inner_reference": 11
+    },
+    "matrtop1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "comseq_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "neckla_2.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "tex_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 1
+    },
+    "mesfun12.miz": {
+        "outer_reference": 44,
+        "inner_reference": 0
+    },
+    "borsuk_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 1
+    },
+    "int_4.miz": {
+        "outer_reference": 18,
+        "inner_reference": 1
+    },
+    "anproj_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "goboard1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "boolmark.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "robbins4.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "waybel29.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "heine.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "ftacell1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmpds_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "sppol_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "lopban_3.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "frechet2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 3
+    },
+    "gtarski1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "zfrefle1.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "ff_siec.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "compts_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "trees_3.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "vectsp_7.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "cc0sp2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tarski.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "msscyc_2.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "gobrd10.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "prepower.miz": {
+        "outer_reference": 42,
+        "inner_reference": 0
+    },
+    "gate_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "connsp_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "unialg_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "recdef_2.miz": {
+        "outer_reference": 27,
+        "inner_reference": 22
+    },
+    "rlvect_5.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "integr14.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "music_s1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "cfdiff_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "papdesaf.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "relset_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 3
+    },
+    "sin_cos7.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "lopban_9.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "ndiff_9.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "bor_cant.miz": {
+        "outer_reference": 48,
+        "inner_reference": 0
+    },
+    "fdiff_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "waybel32.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "kurato_0.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "enumset1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "pboole.miz": {
+        "outer_reference": 15,
+        "inner_reference": 9
+    },
+    "unialg_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "finseq_7.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "card_5.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "seq_4.miz": {
+        "outer_reference": 56,
+        "inner_reference": 0
+    },
+    "diff_3.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "gcd_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "combgras.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "polynom7.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "member_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "euclidlp.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "int_8.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "msualg_4.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "hahnban1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "birkhoff.miz": {
+        "outer_reference": 5,
+        "inner_reference": 43
+    },
+    "descip_1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "rsspace4.miz": {
+        "outer_reference": 9,
+        "inner_reference": 1
+    },
+    "openlatt.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "matrlin.miz": {
+        "outer_reference": 23,
+        "inner_reference": 1
+    },
+    "cqc_sim1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 32
+    },
+    "card_2.miz": {
+        "outer_reference": 35,
+        "inner_reference": 7
+    },
+    "msafree3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "yellow_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "matrlin2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "scpisort.miz": {
+        "outer_reference": 11,
+        "inner_reference": 17
+    },
+    "integr23.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "nat_d.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "numeral1.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "scmfsa_5.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "aff_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "zmodlat2.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "funct_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 10
+    },
+    "amistd_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "scmyciel.miz": {
+        "outer_reference": 41,
+        "inner_reference": 0
+    },
+    "realset2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "ordinal1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 8
+    },
+    "topreal4.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "partfun1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 4
+    },
+    "simplex1.miz": {
+        "outer_reference": 29,
+        "inner_reference": 0
+    },
+    "finseq_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 2
+    },
+    "limfunc2.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "subset.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "realset1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "measure2.miz": {
+        "outer_reference": 23,
+        "inner_reference": 0
+    },
+    "jordan20.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "finseqop.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "scheme1.miz": {
+        "outer_reference": 50,
+        "inner_reference": 5
+    },
+    "oposet_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bvfunc_1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 2
+    },
+    "abcmiz_1.miz": {
+        "outer_reference": 42,
+        "inner_reference": 24
+    },
+    "cat_5.miz": {
+        "outer_reference": 8,
+        "inner_reference": 11
+    },
+    "dualsp02.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "xxreal_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 3
+    },
+    "fsm_3.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "arytm_3.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "sprect_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cousin2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "wellset1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 1
+    },
+    "sin_cos4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ami_wstd.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "fdiff_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "sin_cos6.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "seq_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 1
+    },
+    "conmetr1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bcialg_5.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "topalg_7.miz": {
+        "outer_reference": 2,
+        "inner_reference": 5
+    },
+    "prob_2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "mesfun13.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "flexary1.miz": {
+        "outer_reference": 37,
+        "inner_reference": 0
+    },
+    "fsm_2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "bhsp_4.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "twoscomp.miz": {
+        "outer_reference": 40,
+        "inner_reference": 0
+    },
+    "card_fil.miz": {
+        "outer_reference": 16,
+        "inner_reference": 9
+    },
+    "rlaffin1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "rlvect_4.miz": {
+        "outer_reference": 5,
+        "inner_reference": 9
+    },
+    "mesfunc5.miz": {
+        "outer_reference": 52,
+        "inner_reference": 0
+    },
+    "matrix11.miz": {
+        "outer_reference": 43,
+        "inner_reference": 1
+    },
+    "projred1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "lattice6.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "ortsp_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "matrix14.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "polynom5.miz": {
+        "outer_reference": 46,
+        "inner_reference": 0
+    },
+    "msalimit.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "lmod_6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "uproots.miz": {
+        "outer_reference": 31,
+        "inner_reference": 0
+    },
+    "borsuk_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 1
+    },
+    "latsubgr.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "bspace.miz": {
+        "outer_reference": 9,
+        "inner_reference": 2
+    },
+    "integr22.miz": {
+        "outer_reference": 32,
+        "inner_reference": 0
+    },
+    "roughs_4.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "nat_5.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "nomin_1.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "topmetr3.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "topgen_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "robbins3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan1h.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "ltlaxio2.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "matrix13.miz": {
+        "outer_reference": 33,
+        "inner_reference": 0
+    },
+    "int_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "rlsub_2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 1
+    },
+    "goedcpuc.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "rolle.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "armstrng.miz": {
+        "outer_reference": 22,
+        "inner_reference": 3
+    },
+    "group_7.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "tsp_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "gobrd14.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ndiff_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "functor1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "partpr_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "treal_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "convex3.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "msuhom_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hilb10_1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "kurato_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pralg_3.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "funct_8.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "rcomp_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "c0sp1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "classes1.miz": {
+        "outer_reference": 55,
+        "inner_reference": 2
+    },
+    "lattices.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "brouwer.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "multop_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 6
+    },
+    "ideal_1.miz": {
+        "outer_reference": 46,
+        "inner_reference": 0
+    },
+    "finseq_8.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "lopban_4.miz": {
+        "outer_reference": 38,
+        "inner_reference": 4
+    },
+    "xboolean.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pcomps_2.miz": {
+        "outer_reference": 18,
+        "inner_reference": 4
+    },
+    "scm_halt.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "binari_4.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "rcomp_3.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "topreal7.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "integra2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "aimloop.miz": {
+        "outer_reference": 24,
+        "inner_reference": 16
+    },
+    "waybel_2.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "scmfsa_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "substlat.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "isocat_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "lattad_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "convfun1.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "rusub_3.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "zfmodel2.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "topmetr2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "yellow11.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "lopban_7.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "scmring2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fib_num3.miz": {
+        "outer_reference": 98,
+        "inner_reference": 0
+    },
+    "finseq_9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "group_3.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "bvfunc_6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "algstr_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "subset_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "yellow14.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "qmax_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "roughif2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "topreal9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "comput_1.miz": {
+        "outer_reference": 69,
+        "inner_reference": 5
+    },
+    "borsuk_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "nfcont_2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "rvsum_3.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "pdiff_3.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "groeb_3.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "eqrel_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 3
+    },
+    "roughs_3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 4
+    },
+    "cqc_the1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "polnot_1.miz": {
+        "outer_reference": 57,
+        "inner_reference": 0
+    },
+    "topgen_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 1
+    },
+    "toprns_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "nomin_3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "basel_2.miz": {
+        "outer_reference": 37,
+        "inner_reference": 0
+    },
+    "goboard6.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "qc_lang2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "group_4.miz": {
+        "outer_reference": 35,
+        "inner_reference": 3
+    },
+    "chain_1.miz": {
+        "outer_reference": 38,
+        "inner_reference": 16
+    },
+    "scmfsa_i.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "waybel13.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "quaterni.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow21.miz": {
+        "outer_reference": 42,
+        "inner_reference": 17
+    },
+    "numbers.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "basel_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "xreal_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "qc_lang1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 17
+    },
+    "integra3.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "lexbfs.miz": {
+        "outer_reference": 66,
+        "inner_reference": 1
+    },
+    "valuat_1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "fomodel2.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "pre_ff.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "necklace.miz": {
+        "outer_reference": 8,
+        "inner_reference": 2
+    },
+    "lopban_6.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "fraenkel.miz": {
+        "outer_reference": 9,
+        "inner_reference": 15
+    },
+    "circled1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "uniform2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "bhsp_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "numpoly1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 3
+    },
+    "random_3.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "topgrp_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "classes3.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "metric_6.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "modelc_3.miz": {
+        "outer_reference": 50,
+        "inner_reference": 0
+    },
+    "mathmorp.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "sf_mastr.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "polyform.miz": {
+        "outer_reference": 9,
+        "inner_reference": 1
+    },
+    "mmlquer2.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "waybel22.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "symsp_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "bvfunc_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "mboolean.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "scmbsort.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "finance4.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "jordan2c.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "aofa_i00.miz": {
+        "outer_reference": 54,
+        "inner_reference": 15
+    },
+    "bcialg_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmfsa6b.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "sprect_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "trees_2.miz": {
+        "outer_reference": 38,
+        "inner_reference": 10
+    },
+    "pells_eq.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "liouvil1.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "pythtrip.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "setfam_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "tietze.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "radix_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "newton01.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "midsp_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "lagra4sq.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "irrat_1.miz": {
+        "outer_reference": 22,
+        "inner_reference": 5
+    },
+    "latstone.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "binari_6.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "fin_topo.miz": {
+        "outer_reference": 20,
+        "inner_reference": 3
+    },
+    "dblseq_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "anproj10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "goboard7.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "scmfsa8b.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "zfmisc_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "goboard3.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "gfacirc1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 4
+    },
+    "osalg_4.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "supinf_2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "coh_sp.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "rusub_2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 1
+    },
+    "conaffm.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan5d.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "asympt_3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "nat_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "wellord2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "group_19.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "scmpds_5.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "csspace3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "connsp_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "card_lar.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "jgraph_4.miz": {
+        "outer_reference": 61,
+        "inner_reference": 8
+    },
+    "robbins1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "heyting1.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "axioms.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "stirl2_1.miz": {
+        "outer_reference": 27,
+        "inner_reference": 32
+    },
+    "matrix17.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "dickson.miz": {
+        "outer_reference": 33,
+        "inner_reference": 0
+    },
+    "funct_3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 5
+    },
+    "xxreal_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "helly.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "polynom4.miz": {
+        "outer_reference": 4,
+        "inner_reference": 1
+    },
+    "net_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "topalg_5.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "glib_008.miz": {
+        "outer_reference": 56,
+        "inner_reference": 0
+    },
+    "qc_trans.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "vfunct_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "memstr_0.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "ndiff_7.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "graph_3a.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tops_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "complsp2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bhsp_6.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "complsp1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "catalan1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "roughs_5.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "latticea.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "comseq_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "facirc_1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 4
+    },
+    "gtarski3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rmod_4.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "scmfsa8a.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "rusub_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "lp_space.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "finance3.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "gaussint.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "rfinseq2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "ndiff_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "osalg_2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "tops_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tdgroup.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "integra9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "algstr_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "lopclset.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "topgen_5.miz": {
+        "outer_reference": 15,
+        "inner_reference": 4
+    },
+    "ring_4.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "msualg_2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "procal_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "stacks_1.miz": {
+        "outer_reference": 37,
+        "inner_reference": 26
+    },
+    "finance5.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "clvect_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "functor0.miz": {
+        "outer_reference": 6,
+        "inner_reference": 2
+    },
+    "field_3.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "endalg.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "srings_5.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "finseq_4.miz": {
+        "outer_reference": 12,
+        "inner_reference": 1
+    },
+    "prvect_1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 3
+    },
+    "scm_comp.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "orders_4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rfunct_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "tsp_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "quatern3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pl_axiom.miz": {
+        "outer_reference": 17,
+        "inner_reference": 9
+    },
+    "borsuk_6.miz": {
+        "outer_reference": 19,
+        "inner_reference": 2
+    },
+    "mod_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "algstr_3.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "mazurulm.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "measure3.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "bkmodel2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bhsp_7.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "bvfunc_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "aescip_1.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "group_5.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "finance1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "reloc.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "field_4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rfunct_3.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "e_siec.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "amistd_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "funct_9.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "diophan1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "binarith.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "analoaf.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "hessenbe.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "incproj.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "scmisort.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "cat_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "waybel30.miz": {
+        "outer_reference": 5,
+        "inner_reference": 2
+    },
+    "fuzzy_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "nat_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 50
+    },
+    "glib_012.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "matrprob.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "cfunct_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "scmpds_9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "diff_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "semi_af1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ring_2.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "goedelcp.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "fdiff_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "comptrig.miz": {
+        "outer_reference": 4,
+        "inner_reference": 2
+    },
+    "nat_4.miz": {
+        "outer_reference": 31,
+        "inner_reference": 16
+    },
+    "setwop_2.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "partpr_2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 2
+    },
+    "mesfunc9.miz": {
+        "outer_reference": 77,
+        "inner_reference": 1
+    },
+    "group_20.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "parsp_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rfinseq.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "jgraph_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "convex2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "ring_5.miz": {
+        "outer_reference": 33,
+        "inner_reference": 0
+    },
+    "normsp_4.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "analort.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jgraph_6.miz": {
+        "outer_reference": 31,
+        "inner_reference": 0
+    },
+    "moebius2.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "modelc_1.miz": {
+        "outer_reference": 37,
+        "inner_reference": 17
+    },
+    "hilbert2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 28
+    },
+    "xtuple_0.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jordan15.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "termord.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "clopban1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "xcmplx_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "measure1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "lattice2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "ami_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "topgen_3.miz": {
+        "outer_reference": 16,
+        "inner_reference": 11
+    },
+    "lattice8.miz": {
+        "outer_reference": 69,
+        "inner_reference": 0
+    },
+    "group_21.miz": {
+        "outer_reference": 21,
+        "inner_reference": 1
+    },
+    "rlvect_x.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "bhsp_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "sincos10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "zfmodel1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "jordan1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan17.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "funcsdom.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "matrix_9.miz": {
+        "outer_reference": 8,
+        "inner_reference": 4
+    },
+    "mod_3.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "cqc_lang.miz": {
+        "outer_reference": 20,
+        "inner_reference": 17
+    },
+    "gr_cy_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "finseq_6.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "morph_01.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "afvect01.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "glib_010.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "matrix_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "lukasi_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "pcs_0.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "compos_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "diff_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "waybel34.miz": {
+        "outer_reference": 57,
+        "inner_reference": 0
+    },
+    "calcul_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "vectsp_9.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "jgraph_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 18
+    },
+    "ltlaxio5.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "wallace1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cardfil4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "boole.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rvsum_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "mfold_0.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "normform.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "c0sp2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "triang_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "dualsp03.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "yellow16.miz": {
+        "outer_reference": 3,
+        "inner_reference": 8
+    },
+    "vectsp_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rlvect_1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "ordinal6.miz": {
+        "outer_reference": 61,
+        "inner_reference": 4
+    },
+    "matrtop3.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "catalg_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 3
+    },
+    "pdiff_6.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "bhsp_5.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "gobrd11.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "series_1.miz": {
+        "outer_reference": 43,
+        "inner_reference": 0
+    },
+    "trees_a.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "revrot_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "metric_3.miz": {
+        "outer_reference": 3,
+        "inner_reference": 9
+    },
+    "polydiff.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "rvsum_4.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "topgen_6.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "sfmastr1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "zf_model.miz": {
+        "outer_reference": 12,
+        "inner_reference": 19
+    },
+    "ami_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan10.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rlvect_2.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "euclmetr.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "urysohn1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "absvalue.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "waybel26.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "polynom2.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "waybel14.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "setlim_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "trees_9.miz": {
+        "outer_reference": 23,
+        "inner_reference": 3
+    },
+    "ltlaxio1.miz": {
+        "outer_reference": 34,
+        "inner_reference": 0
+    },
+    "integr1c.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "petri_df.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "complex3.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "algstr_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "topreal1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 11
+    },
+    "nat_6.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "rlaffin2.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "fintopo6.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "neckla_3.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "rusub_5.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "field_1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "ballot_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "cat_4.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "polyeq_3.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "sheffer2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "taxonom2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "diff_1.miz": {
+        "outer_reference": 48,
+        "inner_reference": 0
+    },
+    "altcat_6.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "xcmplx_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "autgroup.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "geomtrap.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "abcmiz_a.miz": {
+        "outer_reference": 12,
+        "inner_reference": 5
+    },
+    "closure1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 3
+    },
+    "funct_6.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "bkmodel3.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "group_9.miz": {
+        "outer_reference": 34,
+        "inner_reference": 2
+    },
+    "functor3.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "xboole_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "abian.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "lattice5.miz": {
+        "outer_reference": 73,
+        "inner_reference": 0
+    },
+    "euclid.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "matrix_3.miz": {
+        "outer_reference": 18,
+        "inner_reference": 5
+    },
+    "funct_5.miz": {
+        "outer_reference": 15,
+        "inner_reference": 7
+    },
+    "nattra_1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 2
+    },
+    "msafree4.miz": {
+        "outer_reference": 51,
+        "inner_reference": 25
+    },
+    "fuznum_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "xreal_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow18.miz": {
+        "outer_reference": 18,
+        "inner_reference": 70
+    },
+    "scmpds_6.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "simplex0.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "homothet.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "matrtop2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "vectsp_5.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "compact1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "seq_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "quofield.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "compos_0.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "petri.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "tsep_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "integr19.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "finseq_1.miz": {
+        "outer_reference": 20,
+        "inner_reference": 10
+    },
+    "nfcont_4.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "yellow15.miz": {
+        "outer_reference": 6,
+        "inner_reference": 2
+    },
+    "clvect_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "scmfsa8c.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "ens_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 2
+    },
+    "zmatrlin.miz": {
+        "outer_reference": 36,
+        "inner_reference": 0
+    },
+    "sprect_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "waybel23.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "monoid_1.miz": {
+        "outer_reference": 17,
+        "inner_reference": 2
+    },
+    "radix_6.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "pardepap.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "measur12.miz": {
+        "outer_reference": 54,
+        "inner_reference": 0
+    },
+    "borsuk_7.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "waybel_9.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "newton.miz": {
+        "outer_reference": 43,
+        "inner_reference": 0
+    },
+    "pasch.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "nfcont_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "rsspace3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "frechet.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "arytm_2.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "real.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "group_10.miz": {
+        "outer_reference": 12,
+        "inner_reference": 10
+    },
+    "glib_002.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "uniform1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "random_2.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "series_4.miz": {
+        "outer_reference": 42,
+        "inner_reference": 0
+    },
+    "diraf.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "scmpds_7.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "normsp_0.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "integra8.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "zf_refle.miz": {
+        "outer_reference": 16,
+        "inner_reference": 9
+    },
+    "sfmastr3.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "gobrd12.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "scmringi.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow_6.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "waybel18.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "aff_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan1b.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "grcat_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "topreal2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmfsa7b.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "hidden.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hilb10_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 114
+    },
+    "bintree2.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "sin_cos9.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmfsa_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "rsspace2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "grnilp_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "moebius1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "seqfunc.miz": {
+        "outer_reference": 4,
+        "inner_reference": 5
+    },
+    "pdiff_5.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "mesfun10.miz": {
+        "outer_reference": 8,
+        "inner_reference": 1
+    },
+    "polynom3.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "waybel33.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "fomodel1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "pnproc_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 1
+    },
+    "ordinal7.miz": {
+        "outer_reference": 42,
+        "inner_reference": 4
+    },
+    "circcmb2.miz": {
+        "outer_reference": 39,
+        "inner_reference": 100
+    },
+    "finance6.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "petri_2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "hilbert3.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "bilinear.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "rinfsup2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "circuit1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "jordan11.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "sin_cos.miz": {
+        "outer_reference": 83,
+        "inner_reference": 7
+    },
+    "glib_009.miz": {
+        "outer_reference": 24,
+        "inner_reference": 2
+    },
+    "kurato_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "classes2.miz": {
+        "outer_reference": 36,
+        "inner_reference": 0
+    },
+    "altcat_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 9
+    },
+    "lmod_7.miz": {
+        "outer_reference": 6,
+        "inner_reference": 4
+    },
+    "cardfil2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "filerec1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ltlaxio4.miz": {
+        "outer_reference": 47,
+        "inner_reference": 0
+    },
+    "hausdorf.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "euclid13.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "idea_1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "latsum_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ckspace1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "yellow12.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cat_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "cohsp_1.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "group_12.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "fomodel4.miz": {
+        "outer_reference": 71,
+        "inner_reference": 0
+    },
+    "absred_0.miz": {
+        "outer_reference": 10,
+        "inner_reference": 37
+    },
+    "jordan22.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jgraph_7.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "dualsp04.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "mssubfam.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "hilb10_4.miz": {
+        "outer_reference": 121,
+        "inner_reference": 0
+    },
+    "srings_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "bcialg_2.miz": {
+        "outer_reference": 53,
+        "inner_reference": 0
+    },
+    "graphsp.miz": {
+        "outer_reference": 26,
+        "inner_reference": 0
+    },
+    "pencil_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "midsp_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "hilb10_5.miz": {
+        "outer_reference": 84,
+        "inner_reference": 6
+    },
+    "rvsum_1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "matrix10.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "realset3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "mesfunc7.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "jordan1c.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "amistd_4.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "gfacirc2.miz": {
+        "outer_reference": 134,
+        "inner_reference": 0
+    },
+    "clopban4.miz": {
+        "outer_reference": 33,
+        "inner_reference": 4
+    },
+    "pua2mss1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 13
+    },
+    "card_4.miz": {
+        "outer_reference": 17,
+        "inner_reference": 1
+    },
+    "asympt_2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "bkmodel4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tops_2.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "ec_pf_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "relat_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 5
+    },
+    "srings_4.miz": {
+        "outer_reference": 12,
+        "inner_reference": 1
+    },
+    "prvect_2.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "metric_2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "topreal5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "poset_2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "nat_lat.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "ordinal2.miz": {
+        "outer_reference": 16,
+        "inner_reference": 110
+    },
+    "topmetr4.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "functor2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "toprealc.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "group_1a.miz": {
+        "outer_reference": 47,
+        "inner_reference": 2
+    },
+    "waybel25.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "ring_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "binop_2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 48
+    },
+    "roughs_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "simplex2.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "lopban10.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "normsp_3.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "mesfun11.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "pascal.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "wellfnd1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 9
+    },
+    "asympt_0.miz": {
+        "outer_reference": 14,
+        "inner_reference": 7
+    },
+    "int_7.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "matrix12.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "vectsp_4.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "numerals.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "msualg_3.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "topalg_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "glib_011.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "bvfunc25.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "prgcor_1.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "lattice3.miz": {
+        "outer_reference": 9,
+        "inner_reference": 3
+    },
+    "alg_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "scmpds_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "cqc_the3.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "euclid_8.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "urysohn3.miz": {
+        "outer_reference": 17,
+        "inner_reference": 1
+    },
+    "ndiff_1.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "arithm.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "newton04.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmfsa_m.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "msafree1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 8
+    },
+    "rmod_3.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "measure8.miz": {
+        "outer_reference": 33,
+        "inner_reference": 2
+    },
+    "limfunc4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "finset_1.miz": {
+        "outer_reference": 20,
+        "inner_reference": 13
+    },
+    "scmfsa9a.miz": {
+        "outer_reference": 44,
+        "inner_reference": 0
+    },
+    "topreal8.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "ntalgo_1.miz": {
+        "outer_reference": 36,
+        "inner_reference": 2
+    },
+    "prsubset.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "gate_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "genealg1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "matrix16.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cayldick.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "midsp_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 2
+    },
+    "lattice4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 2
+    },
+    "msualg_8.miz": {
+        "outer_reference": 2,
+        "inner_reference": 1
+    },
+    "groeb_2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 1
+    },
+    "freealg.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "field_5.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "ranknull.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "topalg_6.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "transgeo.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "prvect_3.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "group_6.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "euclid_6.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "pralg_1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "petri_3.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "l_hospit.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "lopban11.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "tdlat_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "waybel16.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "fsm_1.miz": {
+        "outer_reference": 51,
+        "inner_reference": 0
+    },
+    "sfmastr2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "groupp_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "group_11.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "integr13.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hilbert1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "wellord1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "nomin_7.miz": {
+        "outer_reference": 30,
+        "inner_reference": 0
+    },
+    "conlat_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "waybel_3.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "nomin_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 5
+    },
+    "waybel_0.miz": {
+        "outer_reference": 10,
+        "inner_reference": 2
+    },
+    "partit1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "fdiff_2.miz": {
+        "outer_reference": 20,
+        "inner_reference": 2
+    },
+    "huffman1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "waybel_4.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "fintopo2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "fcont_2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "quantal1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 8
+    },
+    "prob_4.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "measure7.miz": {
+        "outer_reference": 35,
+        "inner_reference": 2
+    },
+    "circtrm1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 1
+    },
+    "measure5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "csspace.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "projred2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "sublemma.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "ring_3.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "fintopo4.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "zmodul06.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "yellow_9.miz": {
+        "outer_reference": 5,
+        "inner_reference": 3
+    },
+    "setwiseo.miz": {
+        "outer_reference": 12,
+        "inner_reference": 24
+    },
+    "pre_circ.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "unialg_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "weierstr.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "sin_cos2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "lang1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "topalg_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "pdiff_9.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "fuzimpl2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "afinsq_1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 3
+    },
+    "nfcont_3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "dirort.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fdiff_10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "rearran1.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "dblseq_3.miz": {
+        "outer_reference": 96,
+        "inner_reference": 0
+    },
+    "group_17.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "jordan12.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "prgcor_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "nbvectsp.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "roughif1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 3
+    },
+    "jordan1g.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "clopban3.miz": {
+        "outer_reference": 23,
+        "inner_reference": 0
+    },
+    "tmap_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "finseq_5.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "uniform3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "bcialg_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "incsp_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "amistd_5.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "trees_1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "rltopsp1.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "modcat_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "vfunct_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "graph_3.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "cat_3.miz": {
+        "outer_reference": 3,
+        "inner_reference": 10
+    },
+    "matrixc1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "cayley.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "matrix_5.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "pzfmisc1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "realalg2.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "ndiff_5.miz": {
+        "outer_reference": 31,
+        "inner_reference": 0
+    },
+    "tops_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "card_1.miz": {
+        "outer_reference": 42,
+        "inner_reference": 0
+    },
+    "goboard2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "lopban_8.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "fintopo7.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "afvect0.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "tex_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "newton02.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "index_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "yellow_0.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "fib_num2.miz": {
+        "outer_reference": 35,
+        "inner_reference": 6
+    },
+    "fintopo5.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "sin_cos8.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "yellow13.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "borsuk_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "algnum_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "sprect_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fscirc_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "radix_1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "circcmb3.miz": {
+        "outer_reference": 10,
+        "inner_reference": 8
+    },
+    "scmfsa10.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan_a.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "matrixj2.miz": {
+        "outer_reference": 29,
+        "inner_reference": 0
+    },
+    "scmfsa_x.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "oppcat_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "conmetr.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "toler_1.miz": {
+        "outer_reference": 9,
+        "inner_reference": 2
+    },
+    "ec_pf_3.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "yellow19.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "ringfrac.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "euclid_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "polynom1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "ordeq_02.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "jordan1f.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "borsuk_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "waybel10.miz": {
+        "outer_reference": 6,
+        "inner_reference": 26
+    },
+    "pdiff_2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "normsp_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "jordan9.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "ringcat1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "ordeq_01.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "jordan4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "nagata_2.miz": {
+        "outer_reference": 42,
+        "inner_reference": 0
+    },
+    "cc0sp1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "mfold_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "ndiff_6.miz": {
+        "outer_reference": 27,
+        "inner_reference": 0
+    },
+    "dualsp05.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "integr18.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "integr11.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hilb10_2.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "grsolv_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "ndiff_3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "vectsp12.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "limfunc3.miz": {
+        "outer_reference": 55,
+        "inner_reference": 0
+    },
+    "algstr_4.miz": {
+        "outer_reference": 28,
+        "inner_reference": 7
+    },
+    "normsp_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "graph_4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "mesfun9c.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "setlim_2.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "sppol_1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 1
+    },
+    "glib_013.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "glib_000.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "mesfunc2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "fuzimpl3.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "extens_1.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "glib_014.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "topalg_3.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "fib_num4.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "zmodul02.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "robbins2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scm_inst.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "trees_4.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "group_18.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "gr_cy_1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "msinst_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "yellow20.miz": {
+        "outer_reference": 22,
+        "inner_reference": 4
+    },
+    "ramsey_1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 2
+    },
+    "integra5.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "binari_2.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "turing_1.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "ncfcont1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "waybel_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 2
+    },
+    "abcmiz_0.miz": {
+        "outer_reference": 31,
+        "inner_reference": 7
+    },
+    "hermitan.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "ali2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "heyting3.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "jordan6.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "wsierp_1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "rat_1.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "waybel17.miz": {
+        "outer_reference": 6,
+        "inner_reference": 7
+    },
+    "prefer_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "funct_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 18
+    },
+    "bvfunc14.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "waybel_7.miz": {
+        "outer_reference": 10,
+        "inner_reference": 0
+    },
+    "glunir00.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "square_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 1
+    },
+    "orders_2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "radix_2.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "nelson_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "quatern2.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "hurwitz.miz": {
+        "outer_reference": 25,
+        "inner_reference": 0
+    },
+    "mod_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "waybel_5.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "fib_fusc.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "partit_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "zf_lang1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 20
+    },
+    "jordan14.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "closure2.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "polyred.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "yellow_2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "msafree.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "ec_pf_1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "mesfunc8.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "sheffer1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "zmodul03.miz": {
+        "outer_reference": 22,
+        "inner_reference": 0
+    },
+    "modelc_2.miz": {
+        "outer_reference": 40,
+        "inner_reference": 0
+    },
+    "toprealb.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "closure3.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "msualg_6.miz": {
+        "outer_reference": 23,
+        "inner_reference": 19
+    },
+    "yellow_5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "altcat_3.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "moebius3.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "scmfsa_4.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "euclid12.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hfdiff_1.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "rinfsup1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "waybel12.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "translac.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "mesfunc1.miz": {
+        "outer_reference": 34,
+        "inner_reference": 0
+    },
+    "numeral2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "membered.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "ltlaxio3.miz": {
+        "outer_reference": 51,
+        "inner_reference": 0
+    },
+    "polyeq_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan24.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "valued_1.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "altcat_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 1
+    },
+    "msualg_5.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "jordan1e.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "lpspace1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "finance2.miz": {
+        "outer_reference": 49,
+        "inner_reference": 0
+    },
+    "prob_3.miz": {
+        "outer_reference": 30,
+        "inner_reference": 0
+    },
+    "friends1.miz": {
+        "outer_reference": 18,
+        "inner_reference": 2
+    },
+    "cantor_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "topdim_1.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "fintopo3.miz": {
+        "outer_reference": 33,
+        "inner_reference": 0
+    },
+    "dtconstr.miz": {
+        "outer_reference": 40,
+        "inner_reference": 55
+    },
+    "fdiff_8.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "qc_lang4.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "goboard9.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "card_3.miz": {
+        "outer_reference": 35,
+        "inner_reference": 2
+    },
+    "yellow17.miz": {
+        "outer_reference": 3,
+        "inner_reference": 1
+    },
+    "scmpds_i.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "scmp_gcd.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "pdiff_1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "conlat_2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "ordinal3.miz": {
+        "outer_reference": 43,
+        "inner_reference": 0
+    },
+    "bcialg_6.miz": {
+        "outer_reference": 35,
+        "inner_reference": 0
+    },
+    "filter_1.miz": {
+        "outer_reference": 5,
+        "inner_reference": 14
+    },
+    "fscirc_2.miz": {
+        "outer_reference": 67,
+        "inner_reference": 0
+    },
+    "clopban2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "complfld.miz": {
+        "outer_reference": 4,
+        "inner_reference": 2
+    },
+    "analmetr.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "comseq_3.miz": {
+        "outer_reference": 43,
+        "inner_reference": 0
+    },
+    "entropy1.miz": {
+        "outer_reference": 18,
+        "inner_reference": 0
+    },
+    "lopban_5.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "poset_1.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "zmodul01.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "msscyc_1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "vectmetr.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "rlvect_3.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "jordan7.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "waybel20.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "peterson.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "vectsp10.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "brouwer2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "dualsp01.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "zmodul07.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "jordan5a.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "bciideal.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "jordan21.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "supinf_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "graph_2.miz": {
+        "outer_reference": 17,
+        "inner_reference": 0
+    },
+    "jordan1d.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "osalg_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tdlat_3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "modal_1.miz": {
+        "outer_reference": 10,
+        "inner_reference": 10
+    },
+    "sin_cos3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "margrel1.miz": {
+        "outer_reference": 7,
+        "inner_reference": 1
+    },
+    "cfdiff_2.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "flang_3.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "anproj_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "t_1topsp.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "jordan.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "qc_lang3.miz": {
+        "outer_reference": 6,
+        "inner_reference": 21
+    },
+    "menelaus.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "hilbert4.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "funct_4.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "measure6.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "nomin_6.miz": {
+        "outer_reference": 6,
+        "inner_reference": 0
+    },
+    "matrix_7.miz": {
+        "outer_reference": 28,
+        "inner_reference": 0
+    },
+    "substut2.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "scmfsa6c.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "heyting2.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "arrow.miz": {
+        "outer_reference": 14,
+        "inner_reference": 0
+    },
+    "scmfsa_9.miz": {
+        "outer_reference": 24,
+        "inner_reference": 0
+    },
+    "scmring3.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "fdiff_11.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "partfun2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 1
+    },
+    "instalg1.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "urysohn2.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rlsub_1.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "msualg_7.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    },
+    "chord.miz": {
+        "outer_reference": 10,
+        "inner_reference": 2
+    },
+    "mesfun7c.miz": {
+        "outer_reference": 9,
+        "inner_reference": 0
+    },
+    "bvfunc_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "mesfun6c.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "grzlog_1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 6
+    },
+    "fvaluat1.miz": {
+        "outer_reference": 16,
+        "inner_reference": 0
+    },
+    "pdiff_7.miz": {
+        "outer_reference": 21,
+        "inner_reference": 0
+    },
+    "extreal1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "mycielsk.miz": {
+        "outer_reference": 30,
+        "inner_reference": 0
+    },
+    "groeb_1.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "tdlat_1.miz": {
+        "outer_reference": 12,
+        "inner_reference": 0
+    },
+    "relset_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "zf_lang.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "measure4.miz": {
+        "outer_reference": 15,
+        "inner_reference": 0
+    },
+    "matrix15.miz": {
+        "outer_reference": 12,
+        "inner_reference": 8
+    },
+    "niven.miz": {
+        "outer_reference": 11,
+        "inner_reference": 0
+    },
+    "radix_5.miz": {
+        "outer_reference": 20,
+        "inner_reference": 0
+    },
+    "exchsort.miz": {
+        "outer_reference": 21,
+        "inner_reference": 5
+    },
+    "autalg_1.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "jordan5c.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rewrite2.miz": {
+        "outer_reference": 6,
+        "inner_reference": 1
+    },
+    "sin_cos5.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "tsep_2.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "field_2.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "cat_8.miz": {
+        "outer_reference": 7,
+        "inner_reference": 0
+    },
+    "msualg_9.miz": {
+        "outer_reference": 8,
+        "inner_reference": 0
+    },
+    "ntalgo_2.miz": {
+        "outer_reference": 13,
+        "inner_reference": 0
+    },
+    "fuzzy_2.miz": {
+        "outer_reference": 4,
+        "inner_reference": 0
+    },
+    "zf_fund2.miz": {
+        "outer_reference": 5,
+        "inner_reference": 0
+    },
+    "matrixr1.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "integra4.miz": {
+        "outer_reference": 2,
+        "inner_reference": 0
+    },
+    "rpr_1.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "euclid_7.miz": {
+        "outer_reference": 53,
+        "inner_reference": 0
+    },
+    "yellow_7.miz": {
+        "outer_reference": 3,
+        "inner_reference": 0
+    },
+    "finsop_1.miz": {
+        "outer_reference": 19,
+        "inner_reference": 0
+    },
+    "collsp.miz": {
+        "outer_reference": 0,
+        "inner_reference": 0
+    },
+    "cqc_the2.miz": {
+        "outer_reference": 1,
+        "inner_reference": 0
+    }
+}

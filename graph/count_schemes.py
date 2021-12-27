@@ -61,6 +61,30 @@ def separate_label(schemes):
             new_schemes.append(scheme)
     return new_schemes
 
+def make_article2scheme2number(article2schemes):
+    article2scheme2number = dict()
+    for k,schemes in article2schemes.items():
+        article2scheme2number[k] = dict()
+        for scheme in schemes:
+            if not scheme in article2scheme2number[k].keys():
+                article2scheme2number[k][scheme] = 1
+            else:
+                article2scheme2number[k][scheme] += 1
+    return article2scheme2number
+
+def make_article2number_of_schemes(article2schemes):
+    article2number_of_schemes = dict()
+    for article, schemes in article2schemes.items():
+        article2number_of_schemes[article] = dict()
+        article2number_of_schemes[article]["outer_reference"] = 0
+        article2number_of_schemes[article]["inner_reference"] = 0
+        for scheme in schemes:
+            if ":" in scheme:
+                article2number_of_schemes[article]["outer_reference"] += 1
+            else:
+                article2number_of_schemes[article]["inner_reference"] += 1
+    return article2number_of_schemes
+
 def extract_schemes(article_contents):
     schemes = make_schemes(article_contents)
     schemes = separate_label(schemes)
@@ -73,11 +97,16 @@ if __name__ == "__main__":
         with open("mml/2020-06-18/" + article, "r", encoding="utf-8", errors="ignore") as f:
             contents = f.read()
         article2schemes[article] = extract_schemes(contents)
-    # with open("mml/2020-06-18/fscirc_2.miz", "r", encoding="utf-8", errors="ignore") as f:
-    #     contents = f.read()
-    # article2schemes["fscirc_2"] = extract_schemes(contents)
-    
     with open("research_data/article2values/article2schemes.json", "w") as f:
         f.write(json.dumps(article2schemes, indent=4))
     with open("research_data/article2values/article2schemes.txt", "w") as f:
         f.write(pprint.pformat(article2schemes))
+    article2scheme2number = make_article2scheme2number(article2schemes=article2schemes)
+    with open("research_data/article2values/article2scheme2number.json", "w") as f:
+        f.write(json.dumps(article2scheme2number, indent=4))
+    with open("research_data/article2values/article2scheme2number.txt", "w") as f:
+        f.write(pprint.pformat(article2scheme2number))
+    with open("research_data/article2values/article2number_of_schemes.json", "w") as f:
+        f.write(json.dumps(make_article2number_of_schemes(article2schemes), indent=4))
+    with open("research_data/article2values/article2number_of_schemes.txt", "w") as f:
+        f.write(pprint.pformat(make_article2number_of_schemes(article2schemes)))
