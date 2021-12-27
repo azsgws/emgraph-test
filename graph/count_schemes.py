@@ -75,7 +75,14 @@ def make_article2scheme2number(article2schemes):
 def make_article2number_of_schemes(article2schemes):
     article2number_of_schemes = dict()
     for article, schemes in article2schemes.items():
-        article2number_of_schemes[article] = len(schemes)
+        article2number_of_schemes[article] = dict()
+        article2number_of_schemes[article]["outer_reference"] = 0
+        article2number_of_schemes[article]["inner_reference"] = 0
+        for scheme in schemes:
+            if ":" in scheme:
+                article2number_of_schemes[article]["outer_reference"] += 1
+            else:
+                article2number_of_schemes[article]["inner_reference"] += 1
     return article2number_of_schemes
 
 def extract_schemes(article_contents):
