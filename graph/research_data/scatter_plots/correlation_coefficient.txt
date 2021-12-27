@@ -1,5 +1,5 @@
 <number_of_referenced> - <authority_minus_pagerank>: -0.2587197593264957
-<number_of_referenced> - <pagerank>: 0.4706963047329715
+<number_of_referenced> - <pagerank>: 0.4706963047329713
 <number_of_referenced> - <authority>: -0.03072699351829427
 <number_of_labels> - <authority_minus_pagerank>: -0.002666549113419622
 <number_of_labels> - <pagerank>: 0.02276814374401446
@@ -7,3 +7,10 @@
 <number_of_theorems_and_definitions> - <authority_minus_pagerank>: 0.08439276333806109
 <number_of_theorems_and_definitions> - <pagerank>: -0.0938021554362031
 <number_of_theorems_and_definitions> - <authority>: 0.04339457023374315
+<cohesion> - <authority_minus_pagerank>: -0.003571836032262538
+<cohesion> - <pagerank>: -0.003571836032262538
+<cohesion> - <authority>: 0.010976896395369916
+
+<coupling> - <authority_minus_pagerank>: 0.0863581705888651
+<coupling> - <pagerank>: 0.0863581705888651
+<coupling> - <authority>: 0.04637297758241352
