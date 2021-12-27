@@ -61,6 +61,17 @@ def separate_label(schemes):
             new_schemes.append(scheme)
     return new_schemes
 
+def make_article2scheme2number(article2schemes):
+    article2scheme2number = dict()
+    for k,schemes in article2schemes.items():
+        article2scheme2number[k] = dict()
+        for scheme in schemes:
+            if not scheme in article2scheme2number[k].keys():
+                article2scheme2number[k][scheme] = 1
+            else:
+                article2scheme2number[k][scheme] += 1
+    return article2scheme2number
+
 def extract_schemes(article_contents):
     schemes = make_schemes(article_contents)
     schemes = separate_label(schemes)
@@ -76,8 +87,13 @@ if __name__ == "__main__":
     # with open("mml/2020-06-18/fscirc_2.miz", "r", encoding="utf-8", errors="ignore") as f:
     #     contents = f.read()
     # article2schemes["fscirc_2"] = extract_schemes(contents)
-    
     with open("research_data/article2values/article2schemes.json", "w") as f:
         f.write(json.dumps(article2schemes, indent=4))
     with open("research_data/article2values/article2schemes.txt", "w") as f:
         f.write(pprint.pformat(article2schemes))
+    article2scheme2number = make_article2scheme2number(article2schemes=article2schemes)
+    with open("research_data/article2values/article2scheme2number.json", "w") as f:
+        f.write(json.dumps(article2scheme2number, indent=4))
+    with open("research_data/article2values/article2scheme2number.txt", "w") as f:
+        f.write(pprint.pformat(article2scheme2number))
+    
