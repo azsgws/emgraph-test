@@ -362,7 +362,6 @@ $(function(){
             contextMenu.showMenuItem('highlight')
         })
 
-
         // resetボタンでグラフを初期状態に戻す
         $(document).ready(function(){
             $("#reset").click(function(){
