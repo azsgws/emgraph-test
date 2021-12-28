@@ -204,6 +204,41 @@ $(function(){
                 css: {"opacity": 0.15, "z-index": 0}
             }
         ]);
+        
+        let contextMenu = cy.contextMenus({
+            evtType: ["cxttap"], 
+            menuItems: [
+                {
+                    id: 'highlight',
+                    content: 'highlight',
+                    tooltipText: 'highlight',
+                    selector: 'node',
+                    onClickFunction: (event) => {
+                        reset_elements_style(cy);
+                        let clicked_node = event.target;
+                        highlight_select_elements(cy, clicked_node, ancestor_generations, descendant_generations);
+                        let clicked_node_name = clicked_node.data("name");
+                        $("#select_article").text("SELECT: " + clicked_node_name);
+                        $(".color_index").removeClass("hidden_show");
+                    },
+                    hasTrailingDivider: true,
+                },
+                {
+                    id: 'link',
+                    content: 'link',
+                    tooltipText: 'link',
+                    selector: 'node',
+                    hasTrailingDivider: true,
+                    onClickFunction: (event) => {
+                        try {  // your browser may block popups
+                            window.open(event.target.data("href"));
+                        } catch(e){  // fall back on url change
+                            window.location.href = event.data("href");
+                        }
+                    },
+                }
+            ],
+        });
 
         /* 初期状態の設定 */
         all_nodes_positions = cy.nodes().positions();  //ノードの位置を記録　今のところ使ってない
@@ -298,19 +333,6 @@ $(function(){
             })
         });
 
-
-        // ノードをクリックした場合、リンクに飛ぶ(htmlリンクの設定)
-        // faded状態ならば反応しない
-        cy.nodes().on("cxttap", function(event){
-            let clicked_node = event.target;
-            try {  // your browser may block popups
-                window.open(this.data("href"));
-            } catch(e){  // fall back on url change
-                window.location.href = this.data("href");
-            }
-        });
-
-
         // クリックしたノードの親と子、自身を色変更
         cy.nodes().on("tap", function(e){
             // 全ノードをクラスから除外
@@ -321,7 +343,6 @@ $(function(){
             let clicked_node_name = clicked_node.data("name");
             $("#select_article").text("SELECT: " + clicked_node_name);
         });
-        
 
         // re-highlightボタンで再度ハイライトする
         $("#re-highlight").click(function() {
@@ -334,6 +355,10 @@ $(function(){
             }
         });
 
+        cy.on('cxttap', 'node', function(e){
+            contextMenu.showMenuItem('link');
+            contextMenu.showMenuItem('highlight')
+        })
 
         // resetボタンでリロードにする
         $(document).ready(function(){
