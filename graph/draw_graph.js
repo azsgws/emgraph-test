@@ -358,6 +358,7 @@ $(function(){
         });
 
         cy.on('cxttap', 'node', function(e){
+            document.getElementById("name-plate").textContent = "";
             contextMenu.showMenuItem('link');
             contextMenu.showMenuItem('highlight')
         })
