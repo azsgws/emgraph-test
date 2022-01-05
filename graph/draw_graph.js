@@ -229,7 +229,7 @@ $(function(){
         // searchボタンをクリックしたら検索開始
         $("#search").click(function() {
             // dropdownで選択したノード名、または記述したノード名を取得
-            let select_node_name = $("#article_name").val();
+            let select_node_name = $("#article_name").val().toUpperCase();
             let select_node = cy.nodes().filter(function(ele){
                 return ele.data("name") == select_node_name;
             });
@@ -248,7 +248,7 @@ $(function(){
         // 入力が終わった時も検索を開始する
         $("#article_name").change(function() {
             // dropdownで選択したノード名、または記述したノード名を取得
-            let select_node_name = $("#article_name").val();
+            let select_node_name = $("#article_name").val().toUpperCase();
             let select_node = cy.nodes().filter(function(ele){
                 return ele.data("name") == select_node_name;
             });
