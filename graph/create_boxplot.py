@@ -56,6 +56,7 @@ def get_node_random_from_sfdp_graph(mml_version, sample_num=10):
         os.chdir(cwd)
     
     Graph = nx.cytoscape_graph(sfdp_graph) # networkxのグラフを作成
+    random.seed(0)
     return random.sample(Graph.nodes(), sample_num)
 
     
@@ -93,6 +94,40 @@ def make_generation2distance_node_to_ancestors(mml_version, node_name):
 
     return generation2distance_node_to_ancestors
 
+def make_generation2distance_node_to_descendants(mml_version, node_name):
+    """ノードと祖先ノードとの距離を測定する．nodeとnodeの祖先ノード(1~5世代)を取得し，
+    世代別に距離を取得する．
+
+    Args:
+        node ([type]): 祖先ノードとの距離を測定したいノード
+    """
+    generation2distance_node_to_descendants = dict()
+    
+    cwd = os.getcwd()
+
+    try:
+        os.chdir("graph_attrs")
+        with open("sfdp_graph_" + mml_version + ".json", "r") as f:
+            sfdp_graph = json.load(f)
+
+    finally:
+        os.chdir(cwd)
+
+    Graph = nx.cytoscape_graph(sfdp_graph) # networkxのグラフを作成
+    generation2descendants = make_generation2descendants_from_networkx_graph(Graph, node_name, generation=5)
+    
+    start_node_x, start_node_y = get_node_x_and_y_from_graph_attrs(sfdp_graph, node_name)
+    for k,v in generation2descendants.items():
+        generation2distance_node_to_descendants[k] = list()
+        for n in v:
+            end_node_x, end_node_y = get_node_x_and_y_from_graph_attrs(sfdp_graph, n)
+            generation2distance_node_to_descendants[k].append(
+                calc_distance_for_node_to_node(start_node_x, start_node_y, end_node_x, end_node_y)
+            )
+    del generation2distance_node_to_descendants[0]
+
+    return generation2distance_node_to_descendants
+
 def create_distance_boxplot(generation2distance, file_name="generation_and_distance"):
     plt.figure(figsize=(10,6))
     plt.boxplot(generation2distance.values(), labels=generation2distance.keys(), sym="+")
@@ -101,6 +136,7 @@ def create_distance_boxplot(generation2distance, file_name="generation_and_dista
 
 if __name__ == "__main__":
     node_names = get_node_random_from_sfdp_graph("2019_03_29", sample_num=135)
+    # 子孫との距離を測定
     generation2distance = dict()
     for n in node_names:
         d = make_generation2distance_node_to_ancestors("2019_03_29", n)
@@ -110,6 +146,17 @@ if __name__ == "__main__":
             else:
                 generation2distance[k] += v
     create_distance_boxplot(generation2distance, file_name="generation_and_distance_from_node_to_ancestors")
-    with open("research_data/box_plot/sampling_articles.txt", "w") as f:
-        f.write(str(node_names))
+    # 祖先との距離を測定
+    generation2distance = dict()
+    for n in node_names:
+        d = make_generation2distance_node_to_descendants("2019_03_29", n)
+        for k,v in d.items():
+            if not k in generation2distance.keys():
+                generation2distance[k] = v
+            else:
+                generation2distance[k] += v
+    create_distance_boxplot(generation2distance, file_name="generation_and_distance_from_node_to_descendants")
+    
+    with open("research_data/box_plot/sampling_articles.json", "w") as f:
+        f.write(json.dumps(node_names, indent=4))
     
