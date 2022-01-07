@@ -261,6 +261,20 @@ def make_node2targets(nodes):
 
 
 """
+クラスタリングレイアウト(graphviz sfdp layout)
+"""
+def assgin_sfdp_coordinate(nodes):
+    """
+    graphvizのsfdpレイアウトを適用したときの座標を返す
+    """
+    G = nx.DiGraph(make_node2targets(nodes))
+    pos = nx.nx_pydot.pydot_layout(G, prog="sfdp")
+    for n in nodes:
+        n.x = pos[n.name][0] * 0.12
+        n.y = pos[n.name][1] * 0.12
+
+
+"""
 仕上げ
 """
 
@@ -304,7 +318,7 @@ def create_dependency_graph(node_list, graph):
             graph.add_edge(source.name, target.name)
 
 
-def create_graph(node2targets, mml_version):
+def create_graph(node2targets, mml_version, style="dot"):
     """
     依存関係を示すグラフを作る．
     Args:
@@ -324,7 +338,13 @@ def create_graph(node2targets, mml_version):
         restore_removed_cycles(nodes, cycles)
 
     # レイアウト
-    assgin_dot_coordinate(nodes)
+    if style == "dot":
+        assgin_dot_coordinate(nodes)
+    elif style == "sfdp":
+        assgin_sfdp_coordinate(nodes)
+    else:
+        print("Warning: '" + style + "' style is not supported. This process create 'dot' style graph.")
+        assgin_dot_coordinate(nodes)
 
     node_attributes = node_list2node_dict(nodes)
 
@@ -342,5 +362,9 @@ def create_graph(node2targets, mml_version):
     # cytoscape.jsの記述形式(JSON)でグラフを記述
     graph_json = nx.cytoscape_data(graph, attrs=None)
 
-    with open('graph_attrs/dot_graph_' + mml_version + '.json', 'w') as f:
-        f.write(json.dumps(graph_json, indent=4))
+    if style == "sfdp":
+        with open('graph_attrs/sfdp_graph_' + mml_version + '.json', 'w') as f:
+            f.write(json.dumps(graph_json, indent=4))
+    else:
+        with open('graph_attrs/dot_graph_' + mml_version + '.json', 'w') as f:
+            f.write(json.dumps(graph_json, indent=4))

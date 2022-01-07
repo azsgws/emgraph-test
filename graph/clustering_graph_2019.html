@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>clustering-emgraph(HITS-hub)</title>
+        <title>clustering-emgraph</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
-            let layout = "sfdp_hub";
+            let layout = "sfdp_2019";
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
             integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="./draw_graph_change_node_size.js"></script>
+        <script src="./draw_graph.js"></script>
         <script src="https://unpkg.com/cytoscape@3.19.1/dist/cytoscape.min.js"></script>
         <script src="https://unpkg.com/cytoscape-context-menus@4.1.0/cytoscape-context-menus.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -58,9 +58,9 @@
                       Ranking
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="btn btn-link form-control" href="./clustering_graph_2020_auth.html" role="button">HITS(auth)</a></li>
-                        <li><a class="btn btn-link form-control" href="./clustering_graph_2020_hub.html" role="button">HITS(hub)</a></li>
-                        <li><a class="btn btn-link form-control" href="./clustering_graph_2020_pagerank.html" role="button">PageRank</a></li>
+                        <li><a class="btn btn-link form-control" href="./clustering_graph_2019_auth.html" role="button">HITS(auth)</a></li>
+                        <li><a class="btn btn-link form-control" href="./clustering_graph_2019_hub.html" role="button">HITS(hub)</a></li>
+                        <li><a class="btn btn-link form-control" href="./clustering_graph_2019_pagerank.html" role="button">PageRank</a></li>
                     </ul>
                 </div>
                 <div class="col-md-1 col-sm-2 col-3">
@@ -92,44 +92,64 @@
                 </div>
             </div>
         </div>
-        <div class="color_index" id="pagerank_coloring_index">
-            <p><b>Hits Hub Score</b></p>
+        
+        <div class="color_index hidden_show" id="highlight_coloring_index">
+            <p><b>Highlight Coloring</b></p>
             <table class="color_labels">
                 <tr>
+                    <td class="generation_param_row">Ancestors</td>
+                    <td class="color_row"><span style="background-color: #ffbb00;">&emsp;&emsp;</span></td>
+                    <td class="number_row">5~</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #ff9900;">&emsp;&emsp;</span></td>
+                    <td class="number_row">4</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #ff7700;">&emsp;&emsp;</span></td>
+                    <td class="number_row">3</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #ff4400;">&emsp;&emsp;</span></td>
+                    <td class="number_row">2</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
                     <td class="color_row"><span style="background-color: #ff0000;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row">HIGH</td>
+                    <td class="number_row">1</td>
                 </tr>
                 <tr>
-                    <td class="color_row"><span style="background-color: #ff7777;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
+                    <td class="generation_param_row">Selecting</td>
+                    <td class="color_row"><span style="background-color: #99ff00;">&emsp;&emsp;</span></td>
+                    <td class="number_row">0</td>
                 </tr>
                 <tr>
-                    <td class="color_row"><span style="background-color: #ff9999;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #ffdddd;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #ddffff;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #bbffff;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #99bbff;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
-                    <td class="color_row"><span style="background-color: #4477ff;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row"></td>
-                </tr>
-                <tr>
+                    <td class="generation_param_row"></td>
                     <td class="color_row"><span style="background-color: #0000ff;">&emsp;&emsp;</span></td>
-                    <td class="node_size_param_row">LOW</td>
+                    <td class="number_row">1</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #0077ff;">&emsp;&emsp;</span></td>
+                    <td class="number_row">2</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #00bbff;">&emsp;&emsp;</span></td>
+                    <td class="number_row">3</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row"></td>
+                    <td class="color_row"><span style="background-color: #00ddff;">&emsp;&emsp;</span></td>
+                    <td class="number_row">4</td>
+                </tr>
+                <tr>
+                    <td class="generation_param_row">Descendants</td>
+                    <td class="color_row"><span style="background-color: #00ffff;">&emsp;&emsp;</span></td>
+                    <td class="number_row">5~</td>
                 </tr>
             </table>
         </div>
