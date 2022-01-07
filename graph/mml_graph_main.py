@@ -12,7 +12,8 @@ if __name__ == '__main__':
     mml_version = sys.argv[1]
     print("create graph")
     article2ref_articles = make_miz_dependency(mml_version)
-    create_graph(article2ref_articles, mml_version)
+    create_graph(article2ref_articles, mml_version, style="dot")
+    create_graph(article2ref_articles, mml_version, style="sfdp")
     print("Make PageRank graph")
     make_pagerank_graph(mml_version)
     print("Make HITS graph")
