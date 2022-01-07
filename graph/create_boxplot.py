@@ -4,6 +4,7 @@ import os
 import json
 import random
 from networkx.algorithms.cluster import generalized_degree
+import math
 
 from networkx.classes import graph
 
@@ -38,7 +39,8 @@ def make_generation2descendants_from_networkx_graph(Graph_nx, node, generation=1
     return generation2descendants
 
 def calc_distance_for_node_to_node(start_node_x, start_node_y, end_node_x, end_node_y):
-    return pow(start_node_x-end_node_x, 2) + pow(start_node_y-end_node_y, 2)
+    d = pow(start_node_x-end_node_x, 2) + pow(start_node_y-end_node_y, 2)
+    return math.sqrt(d)
 
 def get_node_x_and_y_from_graph_attrs(graph_json, node_name):
     for v in graph_json["elements"]["nodes"]:
@@ -130,16 +132,16 @@ def make_generation2distance_node_to_descendants(mml_version, node_name):
 
 def create_distance_boxplot(generation2distance, file_name="generation_and_distance"):
     plt.figure(figsize=(10,6))
-    plt.boxplot(generation2distance.values(), labels=generation2distance.keys(), sym="+")
+    plt.boxplot(generation2distance.values(), labels=generation2distance.keys(), sym="+", showmeans=True)
     plt.savefig("research_data/box_plot/" + file_name + ".png")
 
 
 if __name__ == "__main__":
-    node_names = get_node_random_from_sfdp_graph("2019_03_29", sample_num=135)
+    node_names = get_node_random_from_sfdp_graph("2020-06-18", sample_num=135)
     # 子孫との距離を測定
     generation2distance = dict()
     for n in node_names:
-        d = make_generation2distance_node_to_ancestors("2019_03_29", n)
+        d = make_generation2distance_node_to_ancestors("2020-06-18", n)
         for k,v in d.items():
             if not k in generation2distance.keys():
                 generation2distance[k] = v
@@ -149,7 +151,7 @@ if __name__ == "__main__":
     # 祖先との距離を測定
     generation2distance = dict()
     for n in node_names:
-        d = make_generation2distance_node_to_descendants("2019_03_29", n)
+        d = make_generation2distance_node_to_descendants("2020-06-18", n)
         for k,v in d.items():
             if not k in generation2distance.keys():
                 generation2distance[k] = v
