@@ -5,7 +5,7 @@ createGraph.pyで出力されたファイルとcytoscape.jsを使って
 $(function(){
     $.when(
         $.getJSON('./graph_attrs/dot_graph_2020-06-18.json'),
-        $.getJSON('./graph_attrs/sfdp_graph_2019_03_29.json'),
+        $.getJSON('./graph_attrs/sfdp_graph_2019-03-29.json'),
         $.getJSON('./graph_attrs/dot_graph_2003-12-24.json'),
         $.getJSON('./graph_attrs/dot_graph_2005-05-31.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05.json'),
@@ -291,15 +291,17 @@ $(function(){
         });
 
         // ノードの上にカーソルが来たとき，ノード名を表示する
-        $(window).on("mousemove", function(window_event){ 
-            cy.nodes().on("mouseover", function(cy_event){
+        cy.nodes().on("mouseover", function(mouseover_event){ 
+            $(window).on("mousemove", function(window_event){
                 document.getElementById("name-plate").style.top = window_event.clientY + (10) + "px";
                 document.getElementById("name-plate").style.left = window_event.clientX + (10) +"px";
-                document.getElementById("name-plate").textContent = cy_event.target.data("name");
+                document.getElementById("name-plate").textContent = mouseover_event.target.data("name");
             });
-            cy.nodes().on("mouseout", function(){
+        });
+        cy.nodes().on("mouseout", function(){
+            $(window).on("mousemove", function(e){
                 document.getElementById("name-plate").textContent = "";
-            })
+            });
         });
 
         // クリックしたノードの親と子、自身を色変更
