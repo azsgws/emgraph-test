@@ -25,7 +25,7 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_authority_minus_pagerank.json'),
     )
     .then((dot_graph_auth, dot_graph_hub, dot_graph_pagerank,
-        sfdp_graph_auth, sfdp_graph_hub, sfdp_graph_pagerank,
+        sfdp_graph_2019_auth, sfdp_graph_2019_hub, sfdp_graph_2019_pagerank,
         dot_2020_auth_minus_pagerank,
         dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank, dot_2003_auth_minus_pagerank,
         dot_graph_2005_auth, dot_graph_2005_hub, dot_graph_2005_pagerank, dot_2005_auth_minus_pagerank,
@@ -49,14 +49,14 @@ $(function(){
         else if(layout==='dot_pagerank'){
             graph = dot_graph_pagerank[0];
         }
-        else if(layout==='sfdp_auth'){
-            graph = sfdp_graph_auth[0];
+        else if(layout==='sfdp_2019_auth'){
+            graph = sfdp_graph_2019_auth[0];
         }
-        else if(layout==='sfdp_hub'){
-            graph = sfdp_graph_hub[0];
+        else if(layout==='sfdp_2019_hub'){
+            graph = sfdp_graph_2019_hub[0];
         }
-        else if(layout==='sfdp_pagerank'){
-            graph = sfdp_graph_pagerank[0];
+        else if(layout==='sfdp_2019_pagerank'){
+            graph = sfdp_graph_2019_pagerank[0];
         }
         else if(layout==='dot_2020_pagerank-auth'){
             graph = dot_2020_auth_minus_pagerank[0]
