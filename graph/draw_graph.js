@@ -317,7 +317,7 @@ $(function(){
             $(".color_index").removeClass("hidden_show");
             const endTime = Date.now();
             console.log(endTime - startTime);
-            console.log(cy.nodes(".highlight").length - 1);
+            console.log(cy.nodes(".highlight").length);
         });
 
         // re-highlightボタンで再度ハイライトする
