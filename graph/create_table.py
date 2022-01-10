@@ -235,13 +235,13 @@ def create_scattter_plot_of_number_of_referenced_and_authority_minus_pagerank():
     for k, v in article2number_of_referenced.items():
         x.append(float(v))
         y.append(float(article2authortiy_minus_pagerank[k]))
-        # x: number of referenced, y: authority minus PageRank
+        # x: number of referenced, y:  HITS-Authority minus PageRank-Authority
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): number of referenced & authority minus PageRank")
+    plt.title("MML(2020-06-18): number of referenced & HITS-Authority minus PageRank-Authority")
     plt.xlabel("number of referenced")
-    plt.ylabel("Authority minus PageRank")
+    plt.ylabel("HITS-Authority minus HITS-PageRank")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -264,13 +264,13 @@ def create_scatter_plot_number_of_labels_and_authority_minus_pagerank():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority_minus_pagerank[key]))
-        # x: number of label y: authority minus PageRank
+        # x: number of label y:  HITS-Authority minus PageRank-Authority
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): number of labels & authority minus PageRank")
+    plt.title("MML(2020-06-18): number of labels &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("number of labels")
-    plt.ylabel("Authority minus PageRank")
+    plt.ylabel(" HITS-Authority minus PageRank-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -351,13 +351,13 @@ def create_scatter_plot_number_of_theorems_definitions_and_authority_minus_pager
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority_minus_pagerank[key]))
-        # x: number of theorems and defintions y: authority minus PageRank
+        # x: number of theorems and defintions y:  HITS-Authority minus PageRank-Authority
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nnumber of theorems and definitions & authority minus PageRank")
+    plt.title("MML(2020-06-18): \nnumber of theorems and definitions &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("number of theorems and definitions")
-    plt.ylabel("Authority minus PageRank")
+    plt.ylabel(" HITS-Authority minus PageRank-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -438,13 +438,13 @@ def create_scatter_plot_coupling_and_authority_minus_pagerank():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority_minus_pagerank[key]))
-        # x: coupoing y: Authority minus PageRank
+        # x: coupoing y:  HITS-Authority minus PageRank-Authority
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCoupling & Authority minus PageRank")
+    plt.title("MML(2020-06-18): \nCoupling &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("Coupling")
-    plt.ylabel("Authority minus PageRank")
+    plt.ylabel(" HITS-Authority minus PageRank-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -471,9 +471,9 @@ def create_scatter_plot_coupling_and_pagerank():
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCoupling & PageRank")
+    plt.title("MML(2020-06-18): \nCoupling & PageRank-Authority")
     plt.xlabel("Coupling")
-    plt.ylabel("PageRank")
+    plt.ylabel("PageRank-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -500,15 +500,15 @@ def create_scatter_plot_coupling_and_authority():
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCoupling & Authority")
+    plt.title("MML(2020-06-18): \nCoupling & HITS-Authority")
     plt.xlabel("Coupling")
-    plt.ylabel("Authority")
+    plt.ylabel("HITS-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_coupling-Authority.png")
+        fig.savefig("MML(2020-06-18)_coupling_and_HITS-Authority.png")
 
     finally:
         os.chdir(cwd)
@@ -525,13 +525,13 @@ def create_scatter_plot_cohesion_and_authority_minus_pagerank():
         key = re.sub(r"\.miz", "", k).upper()
         x.append(float(v))
         y.append(float(article2authority_minus_pagerank[key]))
-        # x: coupoing y: Authority minus PageRank
+        # x: coupoing y:  HITS-Authority minus PageRank-Authority
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCohesion & Authority minus PageRank")
+    plt.title("MML(2020-06-18): \nCohesion &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("Cohesion")
-    plt.ylabel("Authority minus PageRank")
+    plt.ylabel("HITS-Authority minus PageRank-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -558,9 +558,9 @@ def create_scatter_plot_cohesion_and_pagerank():
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCohesion & PageRank")
+    plt.title("MML(2020-06-18): \nCohesion & PageRank-Authority")
     plt.xlabel("Cohesion")
-    plt.ylabel("PageRank")
+    plt.ylabel("PageRank-Authorituy")
     plt.grid(True)
 
     cwd = os.getcwd()
@@ -587,15 +587,15 @@ def create_scatter_plot_cohesion_and_authority():
     
     plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
 
-    plt.title("MML(2020-06-18): \nCohesion & Authority")
+    plt.title("MML(2020-06-18): \nCohesion & HITS-Authority")
     plt.xlabel("Cohesion")
-    plt.ylabel("Authority")
+    plt.ylabel("HITS-Authority")
     plt.grid(True)
 
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_cohesion-Authority.png")
+        fig.savefig("MML(2020-06-18)_cohesion_and_HITS-Authority.png")
 
     finally:
         os.chdir(cwd)
