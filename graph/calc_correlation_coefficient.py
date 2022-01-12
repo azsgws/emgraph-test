@@ -187,7 +187,7 @@ def calc_correlation_coefficient_between_cohesion_and_authority_minus_pagerank()
 def calc_correlation_coefficient_between_cohesion_and_pagerank():
     with open("research_data/article2values/article2cohesion.json", "r") as f:
         article2cohesion = json.load(f)
-    article2pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     cohesion = list()
     pagerank = list()
     for k, v in article2cohesion.items():
@@ -238,7 +238,7 @@ def calc_correlation_coefficient_between_coupling_and_authority_minus_pagerank()
 def calc_correlation_coefficient_between_coupling_and_pagerank():
     with open("research_data/article2values/article2coupling.json", "r") as f:
         article2coupling = json.load(f)
-    article2pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
     coupling = list()
     pagerank = list()
     for k, v in article2coupling.items():
@@ -296,13 +296,13 @@ if __name__ == '__main__':
         with open("correlation_coefficient.txt", "w") as f:
             f.write("<number_of_referenced> - <authority_minus_pagerank>: " + str(res1) + "\n"
                     + "<number_of_referenced> - <pagerank>: " + str(res2) + "\n"
-                    + "<number_of_referenced> - <authority>: " + str(res3) + "\n"
+                    + "<number_of_referenced> - <authority>: " + str(res3) + "\n\n"
                     + "<number_of_labels> - <authority_minus_pagerank>: " + str(res4) + "\n"
                     + "<number_of_labels> - <pagerank>: " + str(res5) + "\n"
-                    + "<number_of_labels> - <authority>: " + str(res6) + "\n"
+                    + "<number_of_labels> - <authority>: " + str(res6) + "\n\n"
                     + "<number_of_theorems_and_definitions> - <authority_minus_pagerank>: " + str(res7) + "\n"
                     + "<number_of_theorems_and_definitions> - <pagerank>: " + str(res8) + "\n"
-                    + "<number_of_theorems_and_definitions> - <authority>: " + str(res9) + "\n"
+                    + "<number_of_theorems_and_definitions> - <authority>: " + str(res9) + "\n\n"
                     + "<cohesion> - <authority_minus_pagerank>: " + str(res10) + "\n"
                     + "<cohesion> - <pagerank>: " + str(res11) + "\n"
                     + "<cohesion> - <authority>: " + str(res12) + "\n\n"
