@@ -450,7 +450,7 @@ def create_scatter_plot_coupling_and_authority_minus_pagerank():
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_coupling-Authority_minus_PageRank.png")
+        fig.savefig("MML(2020-06-18)_coupling_and_Authority_minus_PageRank.png")
 
     finally:
         os.chdir(cwd)
@@ -479,7 +479,7 @@ def create_scatter_plot_coupling_and_pagerank():
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_coupling-PageRank.png")
+        fig.savefig("MML(2020-06-18)_coupling_and_PageRank.png")
 
     finally:
         os.chdir(cwd)
@@ -537,7 +537,7 @@ def create_scatter_plot_cohesion_and_authority_minus_pagerank():
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_cohesion-Authority_minus_PageRank.png")
+        fig.savefig("MML(2020-06-18)_cohesion_and_Authority_minus_PageRank.png")
 
     finally:
         os.chdir(cwd)
@@ -566,7 +566,7 @@ def create_scatter_plot_cohesion_and_pagerank():
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
-        fig.savefig("MML(2020-06-18)_cohesion-PageRank.png")
+        fig.savefig("MML(2020-06-18)_cohesion_and_PageRank.png")
 
     finally:
         os.chdir(cwd)
