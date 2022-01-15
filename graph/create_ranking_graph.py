@@ -68,12 +68,12 @@ def grouping_for_ranking(node2ranking):
             node2group[k] = {"group": 9}
     return node2group
 
-def create_authority_minus_pagerank_graph(mml_version):
+def create_authority_minus_pagerank_graph(mml_version, style="dot"):
     cwd = os.getcwd()
     try:
         os.chdir("graph_attrs")
-        with open("dot_graph_" + mml_version + ".json", "r") as f:
-            dot_graph = json.load(f)
+        with open(style + "_graph_" + mml_version + ".json", "r") as f:
+            graph = json.load(f)
     finally:
         os.chdir(cwd)
 
@@ -86,7 +86,7 @@ def create_authority_minus_pagerank_graph(mml_version):
         os.chdir(cwd)
 
     # networkxのグラフを作成
-    dot_G = nx.cytoscape_graph(dot_graph)
+    G = nx.cytoscape_graph(graph)
 
     node2auth_minus_pagerank = dict()
     for i in result_auth_minus_pagerank:
@@ -96,17 +96,17 @@ def create_authority_minus_pagerank_graph(mml_version):
     # ノードにauth - pagerankの値を割り当て
     node2auth_minus_pagerank4nx_set_node_attributes = \
         make_node_to_value4nx_set_node_attributes(node2auth_minus_pagerank, 'auth_minus_pagerank')
-    nx.set_node_attributes(dot_G, node2auth_minus_pagerank4nx_set_node_attributes)
+    nx.set_node_attributes(G, node2auth_minus_pagerank4nx_set_node_attributes)
     # ノードにauth - pagerankのランキングを割り当て
     node2ranking = rank_nodes_with_value(node2auth_minus_pagerank)
     node2group = grouping_for_ranking(node2ranking)
-    nx.set_node_attributes(dot_G, node2group)
+    nx.set_node_attributes(G, node2group)
     
-    dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
+    graph_json = nx.cytoscape_data(G, attrs=None)
 
     try:
         os.chdir("graph_attrs")
-        with open("dot_graph_" + mml_version + "_authority_minus_pagerank.json", "w") as f:
-            f.write(json.dumps(dot_graph_json, indent=4))
+        with open(style + "_graph_" + mml_version + "_authority_minus_pagerank.json", "w") as f:
+            f.write(json.dumps(graph_json, indent=4))
     finally:
         os.chdir(cwd)

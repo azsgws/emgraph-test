@@ -79,75 +79,75 @@ def grouping_for_ranking(node2ranking):
     return node2group
 
 
-def make_hits_graph(mml_version, auth=True, nx_hits=True):
+def make_hits_graph(mml_version, auth=True, nx_hits=True, style="dot"):
     cwd = os.getcwd()
 
     try:
         os.chdir("graph_attrs")
-        with open("dot_graph_" + mml_version + ".json", "r") as f:
-            dot_graph = json.load(f)
+        with open(style + "_graph_" + mml_version + ".json", "r") as f:
+            graph = json.load(f)
 
     finally:
         os.chdir(cwd)
 
     # networkxのグラフを作成
-    dot_G = nx.cytoscape_graph(dot_graph)
+    G = nx.cytoscape_graph(graph)
 
     # 作成したグラフをもとに，hits.authoritiesを計算
     if nx_hits:
-        dot_node2hub, dot_node2authority = nx.hits(dot_G, max_iter = 10000, normalized = True)
+        node2hub, node2authority = nx.hits(G, max_iter = 10000, normalized = True)
     else:
-        dot_node2hub, dot_node2authority = hits(mml_version)
+        node2hub, node2authority = hits(mml_version)
 
-    dot_node_authority2value = dict()
-    for k,v in dot_node2authority.items():
-        dot_node_authority2value[k] = {'authority': v}
+    node_authority2value = dict()
+    for k,v in node2authority.items():
+        node_authority2value[k] = {'authority': v}
 
     # authorityを順位付け
-    dot_node2ranking_authority = rank_nodes_with_value(dot_node2authority)
+    node2ranking_authority = rank_nodes_with_value(node2authority)
 
-    dot_node_hub2value = dict()
-    for k,v in dot_node2hub.items():
-        dot_node_hub2value[k] = {'hub': v}
+    node_hub2value = dict()
+    for k,v in node2hub.items():
+        node_hub2value[k] = {'hub': v}
 
     # hubを順位付け
-    dot_node2ranking_hub = rank_nodes_with_value(dot_node2hub)
+    node2ranking_hub = rank_nodes_with_value(node2hub)
 
     # authority,hubの順位をもとにグループ分け
     args = sys.argv
 
     if auth:
         print("Rank for authority")
-        dot_node2group = grouping_for_ranking(dot_node2ranking_authority)
+        node2group = grouping_for_ranking(node2ranking_authority)
     else:
         print("Rank for hub")
-        dot_node2group = grouping_for_ranking(dot_node2ranking_hub)
+        node2group = grouping_for_ranking(node2ranking_hub)
 
 
     # node_sizeをグラフの属性値として定義する
     if auth:
-        nx.set_node_attributes(dot_G, dot_node_authority2value)
-        nx.set_node_attributes(dot_G, dot_node2ranking_authority)
+        nx.set_node_attributes(G, node_authority2value)
+        nx.set_node_attributes(G, node2ranking_authority)
 
     else: 
-        nx.set_node_attributes(dot_G, dot_node_hub2value)
-        nx.set_node_attributes(dot_G, dot_node2ranking_hub)
+        nx.set_node_attributes(G, node_hub2value)
+        nx.set_node_attributes(G, node2ranking_hub)
 
-    nx.set_node_attributes(dot_G, dot_node2group)
+    nx.set_node_attributes(G, node2group)
 
     # グラフの描画
-    nx.draw_networkx(dot_G)
+    nx.draw_networkx(G)
 
-    dot_graph_json = nx.cytoscape_data(dot_G, attrs=None)
+    graph_json = nx.cytoscape_data(G, attrs=None)
 
     try:
         os.chdir("graph_attrs")
         if auth:
-            with open("dot_graph_" + mml_version + "_hits_authority.json", "w") as f:
-                f.write(json.dumps(dot_graph_json, indent=4))
+            with open(style + "_graph_" + mml_version + "_hits_authority.json", "w") as f:
+                f.write(json.dumps(graph_json, indent=4))
         else:
-            with open("dot_graph_" + mml_version + "_hits_hub.json", "w") as f:
-                f.write(json.dumps(dot_graph_json, indent=4))
+            with open(style + "_graph_" + mml_version + "_hits_hub.json", "w") as f:
+                f.write(json.dumps(graph_json, indent=4))
 
     finally:
         os.chdir(cwd)
