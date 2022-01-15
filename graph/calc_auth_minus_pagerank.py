@@ -6,9 +6,9 @@ def calc_auth_minus_pagerank(mml_version, style="dot"):
 
     try:
         os.chdir("graph_attrs")
-        with open(style + "_graph_"+ mml_version +"_pagerank.json", "r") as f:
+        with open(style + "_graph_" + mml_version +"_pagerank.json", "r") as f:
             graph_pagerank = json.load(f)
-        with open(style+ "_graph_"+ mml_version +"_hits_authority.json", "r") as f:
+        with open(style + "_graph_" + mml_version +"_hits_authority.json", "r") as f:
             graph_authority = json.load(f)
 
     finally:

@@ -84,7 +84,7 @@ def make_hits_graph(mml_version, auth=True, nx_hits=True, style="dot"):
 
     try:
         os.chdir("graph_attrs")
-        with open(style + "_graph" + mml_version + ".json", "r") as f:
+        with open(style + "_graph_" + mml_version + ".json", "r") as f:
             graph = json.load(f)
 
     finally:
