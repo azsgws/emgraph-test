@@ -1,15 +1,15 @@
 import os
 import json
 
-def calc_auth_minus_pagerank(mml_version):
+def calc_auth_minus_pagerank(mml_version, style="dot"):
     cwd = os.getcwd()
 
     try:
         os.chdir("graph_attrs")
-        with open("dot_graph_"+ mml_version +"_pagerank.json", "r") as f:
-            dot_graph_pagerank = json.load(f)
-        with open("dot_graph_"+ mml_version +"_hits_authority.json", "r") as f:
-            dot_graph_authority = json.load(f)
+        with open(style + "_graph_"+ mml_version +"_pagerank.json", "r") as f:
+            graph_pagerank = json.load(f)
+        with open(style+ "_graph_"+ mml_version +"_hits_authority.json", "r") as f:
+            graph_authority = json.load(f)
 
     finally:
         os.chdir(cwd)
@@ -17,10 +17,10 @@ def calc_auth_minus_pagerank(mml_version):
     node2pagerank = dict()
     node2hits_authority = dict()
 
-    for i in dot_graph_pagerank['elements']['nodes']:
+    for i in graph_pagerank['elements']['nodes']:
         node2pagerank[i['data']['id']] = i['data']['pagerank']
 
-    for i in dot_graph_authority['elements']['nodes']:
+    for i in graph_authority['elements']['nodes']:
         node2hits_authority[i['data']['id']] = i['data']['authority']
 
     node2auth_minus_pagerank = dict()
