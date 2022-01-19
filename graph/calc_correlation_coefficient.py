@@ -269,6 +269,57 @@ def calc_correlation_coefficient_between_coupling_and_authority():
 
     return res
 
+def calc_correlation_coefficient_between_coupling_minus_cohesion_and_hits_authority_minus_pagerank():
+    with open("research_data/article2values/article2coupling_minus_cohesion.json", "r") as f:
+        article2coupling_minus_cohesion = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    coupling_minus_cohesion = list()
+    hits_authority_minus_pagerank = list()
+    for k, v in article2coupling_minus_cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling_minus_cohesion.append(float(v))
+        hits_authority_minus_pagerank.append(float(article2authority_minus_pagerank[key]))
+        
+    s1 = pd.Series(coupling_minus_cohesion)
+    s2 = pd.Series(hits_authority_minus_pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_coupling_minus_cohesion_and_pagerank():
+    with open("research_data/article2values/article2coupling_minus_cohesion.json", "r") as f:
+        article2coupling_minus_cohesion = json.load(f)
+    article2pagerank = make_article2pagerank_from_graph_attrs("2020-06-18")
+    coupling_minus_cohesion = list()
+    pagerank = list()
+    for k, v in article2coupling_minus_cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling_minus_cohesion.append(float(v))
+        pagerank.append(float(article2pagerank[key]))
+        
+    s1 = pd.Series(coupling_minus_cohesion)
+    s2 = pd.Series(pagerank)
+    res = s1.corr(s2)
+
+    return res
+
+def calc_correlation_coefficient_between_coupling_minus_cohesion_and_hits_authority():
+    with open("research_data/article2values/article2coupling_minus_cohesion.json", "r") as f:
+        article2coupling_minus_cohesion = json.load(f)
+    article2authority = make_article2authority_from_graph_attrs("2020-06-18")
+    coupling_minus_cohesion = list()
+    hits_authority = list()
+    for k, v in article2coupling_minus_cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        coupling_minus_cohesion.append(float(v))
+        hits_authority.append(float(article2authority[key]))
+        
+    s1 = pd.Series(coupling_minus_cohesion)
+    s2 = pd.Series(hits_authority)
+    res = s1.corr(s2)
+
+    return res
+
 if __name__ == '__main__':
     res1 = calc_correlation_coefficient_between_number_of_referenced_and_authority_minus_pagerank()
     res2 = calc_correlation_coefficient_between_number_of_referenced_and_pagerank()
@@ -290,6 +341,10 @@ if __name__ == '__main__':
     res14 = calc_correlation_coefficient_between_coupling_and_pagerank()
     res15 = calc_correlation_coefficient_between_coupling_and_authority()
 
+    res16 = calc_correlation_coefficient_between_coupling_minus_cohesion_and_hits_authority_minus_pagerank()
+    res17 = calc_correlation_coefficient_between_coupling_minus_cohesion_and_pagerank()
+    res18 = calc_correlation_coefficient_between_coupling_minus_cohesion_and_hits_authority()
+
     cwd = os.getcwd()
     try:
         os.chdir("research_data/scatter_plots")
@@ -308,6 +363,10 @@ if __name__ == '__main__':
                     + "<cohesion> - <authority>: " + str(res12) + "\n\n"
                     + "<coupling> - <authority_minus_pagerank>: " + str(res13) + "\n"
                     + "<coupling> - <pagerank>: " + str(res14) + "\n"
-                    + "<coupling> - <authority>: " + str(res15) + "\n")
+                    + "<coupling> - <authority>: " + str(res15) + "\n\n"
+                    + "<coupling_minus_cohesion> - <hits_authority_minus_pagerank>: " + str(res16) + "\n"
+                    + "<coupling_minus_cohesion> - <pagerank>: " + str(res17) + "\n"
+                    + "<coupling_minus_cohesion> - <hits_authority>: " + str(res18) + "\n"
+                    )
     finally:
         os.chdir(cwd)
