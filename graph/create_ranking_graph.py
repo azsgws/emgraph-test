@@ -2,6 +2,7 @@ import os
 import json
 import networkx as nx
 import re
+from retrieve_dependency import format_mizfile_name_to_import_style
 
 def min_max_normalization(node2value, max_val, min_val):
     node_size = dict()
@@ -68,7 +69,7 @@ def grouping_for_ranking(node2ranking):
             node2group[k] = {"group": 9}
     return node2group
 
-def create_authority_minus_pagerank_graph(mml_version, style="dot"):
+def get_graph_from_graph_attrs(mml_version, style):
     cwd = os.getcwd()
     try:
         os.chdir("graph_attrs")
@@ -76,6 +77,10 @@ def create_authority_minus_pagerank_graph(mml_version, style="dot"):
             graph = json.load(f)
     finally:
         os.chdir(cwd)
+    return graph
+
+def create_authority_minus_pagerank_graph(mml_version, style="dot"):
+    graph = get_graph_from_graph_attrs(mml_version, style)
 
     cwd = os.getcwd()
     try:
@@ -110,3 +115,43 @@ def create_authority_minus_pagerank_graph(mml_version, style="dot"):
             f.write(json.dumps(graph_json, indent=4))
     finally:
         os.chdir(cwd)
+
+
+def create_coupling_minus_cohesion_graph(mml_version, style="dot"):
+    graph = get_graph_from_graph_attrs(mml_version, style)
+        
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/article2values")
+        with open("article2coupling_minus_cohesion.json", "r") as f:
+            article2coupling_minus_cohesion = json.load(f)
+    finally:
+        os.chdir(cwd)
+
+    # networkxのグラフを作成
+    G = nx.cytoscape_graph(graph)
+
+    new_article2coupling_minus_cohesion = dict()
+    for k,v in article2coupling_minus_cohesion.items():
+        new_article2coupling_minus_cohesion[format_mizfile_name_to_import_style(k)] = v
+    article2coupling_minus_cohesion = new_article2coupling_minus_cohesion
+    # ノードにcoupling - cohesionの値を割り当て
+    node2coupling_minus_cohesion4nx_set_node_attributes = \
+        make_node_to_value4nx_set_node_attributes(article2coupling_minus_cohesion, 'coupling_minus_cohesion')
+    nx.set_node_attributes(G, node2coupling_minus_cohesion4nx_set_node_attributes)
+    # ノードにcoupling - cohesionのランキングを割り当て
+    node2ranking = rank_nodes_with_value(article2coupling_minus_cohesion)
+    node2group = grouping_for_ranking(node2ranking)
+    nx.set_node_attributes(G, node2group)
+
+    graph_json = nx.cytoscape_data(G, attrs=None)
+
+    try:
+        os.chdir("graph_attrs")
+        with open(style + "_graph_" + mml_version + "_coupling_minus_cohesion.json", "w") as f:
+            f.write(json.dumps(graph_json, indent=4))
+    finally:
+        os.chdir(cwd)
+
+if __name__=="__main__":
+    create_coupling_minus_cohesion_graph("2020-06-18", style="dot")
