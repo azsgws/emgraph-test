@@ -17,3 +17,7 @@
 <coupling> - <authority_minus_pagerank>: 0.0863581705888651
 <coupling> - <pagerank>: -0.09246428636295226
 <coupling> - <authority>: 0.04637297758241352
+
+<coupling_minus_cohesion> - <hits_authority_minus_pagerank>: 0.09178318482477518
+<coupling_minus_cohesion> - <pagerank>: -0.10518696000912026
+<coupling_minus_cohesion> - <hits_authority>: 0.04542356764162346
