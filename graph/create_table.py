@@ -600,6 +600,35 @@ def create_scatter_plot_cohesion_and_authority():
     finally:
         os.chdir(cwd)
 
+def create_scatter_plot_coupling_minus_cohesion_and_hits_authority_minus_pagerank():
+    with open("research_data/article2values/article2coupling_minus_cohesion.json", "r") as f:
+        article2coupling_minus_cohesion = json.load(f)
+    article2authority_minus_pagerank = make_article2authority_minus_pagerank("2020-06-18")
+    fig = plt.figure()
+
+    x = list()
+    y = list()
+    for k, v in article2coupling_minus_cohesion.items():
+        key = re.sub(r"\.miz", "", k).upper()
+        x.append(float(v))
+        y.append(float(article2authority_minus_pagerank[key]))
+        # x: coupoing minus cohesion y: HITS Authority minus PageRank
+    
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+
+    plt.title("MML(2020-06-18): \nCoupling minus Cohesion & HITS-Authority minus PageRank")
+    plt.xlabel("Coupling minus Cohesion")
+    plt.ylabel("HITS-Authority minus PageRank")
+    plt.grid(True)
+
+    cwd = os.getcwd()
+    try:
+        os.chdir("research_data/scatter_plots")
+        fig.savefig("MML(2020-06-18)_coupling_minus_cohesion_and_HITS-Authority_minus_pagerank.png")
+
+    finally:
+        os.chdir(cwd)
+
 def create_tables(mml_version):
     create_pagerank_and_auth_table(mml_version)
     create_hub_auth_table(mml_version)
@@ -612,3 +641,4 @@ if __name__=="__main__":
     create_scatter_plot_cohesion_and_authority_minus_pagerank()
     create_scatter_plot_cohesion_and_pagerank()
     create_scatter_plot_cohesion_and_authority()
+    create_scatter_plot_coupling_minus_cohesion_and_hits_authority_minus_pagerank()
