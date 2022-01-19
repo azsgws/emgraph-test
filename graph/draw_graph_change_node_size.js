@@ -7,6 +7,7 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_authority.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_hits_hub.json'),
         $.getJSON('./graph_attrs/dot_graph_2020-06-18_pagerank.json'),
+        $.getJSON('./graph_attrs/dot_graph_2020-06-18_coupling_minus_cohesion.json'),
         $.getJSON('./graph_attrs/sfdp_graph_2019-03-29_hits_authority.json'),
         $.getJSON('./graph_attrs/sfdp_graph_2019-03-29_hits_hub.json'),
         $.getJSON('./graph_attrs/sfdp_graph_2019-03-29_pagerank.json'),
@@ -24,7 +25,7 @@ $(function(){
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_pagerank.json'),
         $.getJSON('./graph_attrs/dot_graph_2012-03-05_authority_minus_pagerank.json'),
     )
-    .then((dot_graph_auth, dot_graph_hub, dot_graph_pagerank,
+    .then((dot_graph_auth, dot_graph_hub, dot_graph_pagerank, dot_graph_coupling_minus_cohesion,
         sfdp_graph_2019_auth, sfdp_graph_2019_hub, sfdp_graph_2019_pagerank,
         dot_2020_auth_minus_pagerank,
         dot_graph_2003_auth, dot_graph_2003_hub, dot_graph_2003_pagerank, dot_2003_auth_minus_pagerank,
@@ -48,6 +49,9 @@ $(function(){
         }
         else if(layout==='dot_pagerank'){
             graph = dot_graph_pagerank[0];
+        }
+        else if(layout==='dot_2020_coupling_minus_cohesion'){
+            graph = dot_graph_coupling_minus_cohesion[0];
         }
         else if(layout==='sfdp_2019_auth'){
             graph = sfdp_graph_2019_auth[0];
