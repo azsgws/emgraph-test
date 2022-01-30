@@ -440,12 +440,12 @@ def create_scatter_plot_coupling_and_authority_minus_pagerank():
         y.append(float(article2authority_minus_pagerank[key]))
         # x: coupoing y:  HITS-Authority minus PageRank-Authority
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("Coupling")
     plt.ylabel(" HITS-Authority minus PageRank-Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -469,12 +469,12 @@ def create_scatter_plot_coupling_and_pagerank():
         y.append(float(article2pagerank[key]))
         # x: coupoing y: PageRank
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling & PageRank-Authority")
     plt.xlabel("Coupling")
     plt.ylabel("PageRank-Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -498,12 +498,12 @@ def create_scatter_plot_coupling_and_authority():
         y.append(float(article2authority[key]))
         # x: coupoing y: Authority
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling & HITS-Authority")
     plt.xlabel("Coupling")
     plt.ylabel("HITS-Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -527,12 +527,12 @@ def create_scatter_plot_cohesion_and_authority_minus_pagerank():
         y.append(float(article2authority_minus_pagerank[key]))
         # x: coupoing y:  HITS-Authority minus PageRank-Authority
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCohesion &  HITS-Authority minus PageRank-Authority")
     plt.xlabel("Cohesion")
     plt.ylabel("HITS-Authority minus PageRank-Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -556,12 +556,12 @@ def create_scatter_plot_cohesion_and_pagerank():
         y.append(float(article2pagerank[key]))
         # x: coupoing y: PageRank
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCohesion & PageRank-Authority")
     plt.xlabel("Cohesion")
     plt.ylabel("PageRank-Authorituy")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -585,12 +585,12 @@ def create_scatter_plot_cohesion_and_authority():
         y.append(float(article2authority[key]))
         # x: coupoing y: Authority
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCohesion & HITS-Authority")
     plt.xlabel("Cohesion")
     plt.ylabel("HITS-Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -614,12 +614,12 @@ def create_scatter_plot_coupling_minus_cohesion_and_hits_authority_minus_pageran
         y.append(float(article2authority_minus_pagerank[key]))
         # x: coupoing minus cohesion y: HITS Authority minus PageRank
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling minus Cohesion & HITS-Authority minus PageRank")
     plt.xlabel("Coupling minus Cohesion")
     plt.ylabel("HITS-Authority minus PageRank")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -643,12 +643,12 @@ def create_scatter_plot_coupling_minus_cohesion_and_pagerank():
         y.append(float(article2pagerank[key]))
         # x: coupoing minus cohesion y: PageRank
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling minus Cohesion & PageRank")
     plt.xlabel("Coupling minus Cohesion")
     plt.ylabel("PageRank")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -673,12 +673,12 @@ def create_scatter_plot_coupling_minus_cohesion_and_hits_authority():
         y.append(float(article2authority[key]))
         # x: coupoing minus cohesion y: HITS Authority
     
-    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='red')
+    plt.scatter(x, y, s=10,vmin=0.00, vmax=1.00, c='blue')
 
     plt.title("MML(2020-06-18): \nCoupling minus Cohesion & HITS(Authority)")
     plt.xlabel("Coupling minus Cohesion")
     plt.ylabel("HITS Authority")
-    plt.grid(True)
+    plt.grid(False)
 
     cwd = os.getcwd()
     try:
@@ -695,12 +695,12 @@ def create_tables(mml_version):
     create_pagerank_and_auth_coloring_table(mml_version=mml_version)
 
 if __name__=="__main__":
-    # create_scatter_plot_coupling_and_authority_minus_pagerank()
-    # create_scatter_plot_coupling_and_pagerank()
-    # create_scatter_plot_coupling_and_authority()
-    # create_scatter_plot_cohesion_and_authority_minus_pagerank()
-    # create_scatter_plot_cohesion_and_pagerank()
-    # create_scatter_plot_cohesion_and_authority()
+    create_scatter_plot_coupling_and_authority_minus_pagerank()
+    create_scatter_plot_coupling_and_pagerank()
+    create_scatter_plot_coupling_and_authority()
+    create_scatter_plot_cohesion_and_authority_minus_pagerank()
+    create_scatter_plot_cohesion_and_pagerank()
+    create_scatter_plot_cohesion_and_authority()
     create_scatter_plot_coupling_minus_cohesion_and_hits_authority_minus_pagerank()
     create_scatter_plot_coupling_minus_cohesion_and_pagerank()
     create_scatter_plot_coupling_minus_cohesion_and_hits_authority()
